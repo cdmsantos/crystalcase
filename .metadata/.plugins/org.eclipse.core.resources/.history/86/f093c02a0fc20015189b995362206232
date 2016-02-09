@@ -1,0 +1,105 @@
+/**
+ */
+package crystal;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Transition</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link crystal.Transition#getName <em>Name</em>}</li>
+ *   <li>{@link crystal.Transition#getStart <em>Start</em>}</li>
+ *   <li>{@link crystal.Transition#getEnd <em>End</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see crystal.CrystalPackage#getTransition()
+ * @model annotation="gmf.link source='start' target='end' incoming='true' target.decoration='arrow' color='0,0,0' width='1'"
+ * @generated
+ */
+public interface Transition extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The default value is <code>"Connection"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see crystal.CrystalPackage#getTransition_Name()
+	 * @model default="Connection"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link crystal.Transition#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Start</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Start</em>' reference.
+	 * @see #setStart(Objects)
+	 * @see crystal.CrystalPackage#getTransition_Start()
+	 * @model
+	 * @generated
+	 */
+	Objects getStart();
+
+	/**
+	 * Sets the value of the '{@link crystal.Transition#getStart <em>Start</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Start</em>' reference.
+	 * @see #getStart()
+	 * @generated
+	 */
+	void setStart(Objects value);
+
+	/**
+	 * Returns the value of the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>End</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>End</em>' reference.
+	 * @see #setEnd(Objects)
+	 * @see crystal.CrystalPackage#getTransition_End()
+	 * @model
+	 * @generated
+	 */
+	Objects getEnd();
+
+	/**
+	 * Sets the value of the '{@link crystal.Transition#getEnd <em>End</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>End</em>' reference.
+	 * @see #getEnd()
+	 * @generated
+	 */
+	void setEnd(Objects value);
+
+} // Transition

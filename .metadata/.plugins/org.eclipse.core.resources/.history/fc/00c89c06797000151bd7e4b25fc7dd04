@@ -1,0 +1,17 @@
+/**
+ */
+package filesystem;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Data Type</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see filesystem.FilesystemPackage#getData_Type()
+ * @model
+ * @generated
+ */
+public interface Data_Type extends Return, DeclarativePart {
+} // Data_Type

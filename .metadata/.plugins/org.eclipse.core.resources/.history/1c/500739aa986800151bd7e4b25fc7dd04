@@ -1,0 +1,516 @@
+/**
+ */
+package filesystem.util;
+
+import filesystem.*;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notifier;
+
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Adapter Factory</b> for the model.
+ * It provides an adapter <code>createXXX</code> method for each class of the model.
+ * <!-- end-user-doc -->
+ * @see filesystem.FilesystemPackage
+ * @generated
+ */
+public class FilesystemAdapterFactory extends AdapterFactoryImpl {
+	/**
+	 * The cached model package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static FilesystemPackage modelPackage;
+
+	/**
+	 * Creates an instance of the adapter factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FilesystemAdapterFactory() {
+		if (modelPackage == null) {
+			modelPackage = FilesystemPackage.eINSTANCE;
+		}
+	}
+
+	/**
+	 * Returns whether this factory is applicable for the type of the object.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+	 * <!-- end-user-doc -->
+	 * @return whether this factory is applicable for the type of the object.
+	 * @generated
+	 */
+	@Override
+	public boolean isFactoryForType(Object object) {
+		if (object == modelPackage) {
+			return true;
+		}
+		if (object instanceof EObject) {
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
+		}
+		return false;
+	}
+
+	/**
+	 * The switch that delegates to the <code>createXXX</code> methods.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FilesystemSwitch<Adapter> modelSwitch =
+		new FilesystemSwitch<Adapter>() {
+			@Override
+			public Adapter caseFilesystem(Filesystem object) {
+				return createFilesystemAdapter();
+			}
+			@Override
+			public Adapter caseParameters(Parameters object) {
+				return createParametersAdapter();
+			}
+			@Override
+			public Adapter caseReturn(Return object) {
+				return createReturnAdapter();
+			}
+			@Override
+			public Adapter caseDeclarativePart(DeclarativePart object) {
+				return createDeclarativePartAdapter();
+			}
+			@Override
+			public Adapter caseExecutablePart(ExecutablePart object) {
+				return createExecutablePartAdapter();
+			}
+			@Override
+			public Adapter caseExceptionPart(ExceptionPart object) {
+				return createExceptionPartAdapter();
+			}
+			@Override
+			public Adapter caseData_Type(Data_Type object) {
+				return createData_TypeAdapter();
+			}
+			@Override
+			public Adapter caseParameterIn(ParameterIn object) {
+				return createParameterInAdapter();
+			}
+			@Override
+			public Adapter caseParameterOut(ParameterOut object) {
+				return createParameterOutAdapter();
+			}
+			@Override
+			public Adapter caseParameterInOut(ParameterInOut object) {
+				return createParameterInOutAdapter();
+			}
+			@Override
+			public Adapter caseExceptionCommand(ExceptionCommand object) {
+				return createExceptionCommandAdapter();
+			}
+			@Override
+			public Adapter caseIf(If object) {
+				return createIfAdapter();
+			}
+			@Override
+			public Adapter caseCase(Case object) {
+				return createCaseAdapter();
+			}
+			@Override
+			public Adapter caseInsert(Insert object) {
+				return createInsertAdapter();
+			}
+			@Override
+			public Adapter caseUpdate(Update object) {
+				return createUpdateAdapter();
+			}
+			@Override
+			public Adapter caseDelete(Delete object) {
+				return createDeleteAdapter();
+			}
+			@Override
+			public Adapter caseOutput(Output object) {
+				return createOutputAdapter();
+			}
+			@Override
+			public Adapter caseSelect(Select object) {
+				return createSelectAdapter();
+			}
+			@Override
+			public Adapter caseCursor(Cursor object) {
+				return createCursorAdapter();
+			}
+			@Override
+			public Adapter caseWhile(While object) {
+				return createWhileAdapter();
+			}
+			@Override
+			public Adapter caseFor(For object) {
+				return createForAdapter();
+			}
+			@Override
+			public Adapter caseLoop(Loop object) {
+				return createLoopAdapter();
+			}
+			@Override
+			public Adapter caseSync(Sync object) {
+				return createSyncAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
+
+	/**
+	 * Creates an adapter for the <code>target</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param target the object to adapt.
+	 * @return the adapter for the <code>target</code>.
+	 * @generated
+	 */
+	@Override
+	public Adapter createAdapter(Notifier target) {
+		return modelSwitch.doSwitch((EObject)target);
+	}
+
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Filesystem <em>Filesystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Filesystem
+	 * @generated
+	 */
+	public Adapter createFilesystemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Parameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Parameters
+	 * @generated
+	 */
+	public Adapter createParametersAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Return <em>Return</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Return
+	 * @generated
+	 */
+	public Adapter createReturnAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.DeclarativePart <em>Declarative Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.DeclarativePart
+	 * @generated
+	 */
+	public Adapter createDeclarativePartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.ExecutablePart <em>Executable Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.ExecutablePart
+	 * @generated
+	 */
+	public Adapter createExecutablePartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.ExceptionPart <em>Exception Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.ExceptionPart
+	 * @generated
+	 */
+	public Adapter createExceptionPartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Data_Type <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Data_Type
+	 * @generated
+	 */
+	public Adapter createData_TypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.ParameterIn <em>Parameter In</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.ParameterIn
+	 * @generated
+	 */
+	public Adapter createParameterInAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.ParameterOut <em>Parameter Out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.ParameterOut
+	 * @generated
+	 */
+	public Adapter createParameterOutAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.ParameterInOut <em>Parameter In Out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.ParameterInOut
+	 * @generated
+	 */
+	public Adapter createParameterInOutAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.ExceptionCommand <em>Exception Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.ExceptionCommand
+	 * @generated
+	 */
+	public Adapter createExceptionCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.If <em>If</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.If
+	 * @generated
+	 */
+	public Adapter createIfAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Case <em>Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Case
+	 * @generated
+	 */
+	public Adapter createCaseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Insert <em>Insert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Insert
+	 * @generated
+	 */
+	public Adapter createInsertAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Update <em>Update</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Update
+	 * @generated
+	 */
+	public Adapter createUpdateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Delete <em>Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Delete
+	 * @generated
+	 */
+	public Adapter createDeleteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Output <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Output
+	 * @generated
+	 */
+	public Adapter createOutputAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Select <em>Select</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Select
+	 * @generated
+	 */
+	public Adapter createSelectAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Cursor <em>Cursor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Cursor
+	 * @generated
+	 */
+	public Adapter createCursorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.While <em>While</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.While
+	 * @generated
+	 */
+	public Adapter createWhileAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.For <em>For</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.For
+	 * @generated
+	 */
+	public Adapter createForAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Loop <em>Loop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Loop
+	 * @generated
+	 */
+	public Adapter createLoopAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link filesystem.Sync <em>Sync</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see filesystem.Sync
+	 * @generated
+	 */
+	public Adapter createSyncAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for the default case.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @generated
+	 */
+	public Adapter createEObjectAdapter() {
+		return null;
+	}
+
+} //FilesystemAdapterFactory

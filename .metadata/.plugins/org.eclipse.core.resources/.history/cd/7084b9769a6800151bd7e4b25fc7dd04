@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class FilesystemModelingAssistantProviderOfLoop2EditPart extends filesystem.diagram.providers.FilesystemModelingAssistantProvider {
+
+					
+	
+
+	}

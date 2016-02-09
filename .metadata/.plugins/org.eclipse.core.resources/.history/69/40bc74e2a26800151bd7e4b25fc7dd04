@@ -1,0 +1,41 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.FilesystemPackage;
+import filesystem.ParameterInOut;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Parameter In Out</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+public class ParameterInOutImpl extends EObjectImpl implements ParameterInOut {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ParameterInOutImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.PARAMETER_IN_OUT;
+	}
+
+} //ParameterInOutImpl

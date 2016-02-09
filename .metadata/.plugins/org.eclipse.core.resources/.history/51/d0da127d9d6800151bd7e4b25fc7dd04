@@ -1,0 +1,21 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers;
+
+/**
+ * @generated
+ */
+public class FilesystemEditPartProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider {
+
+	
+	/**
+ * @generated
+ */
+	public FilesystemEditPartProvider() {
+		super(new filesystem.diagram.edit.parts.FilesystemEditPartFactory(), 			filesystem.diagram.part.FilesystemVisualIDRegistry.TYPED_INSTANCE, 			filesystem.diagram.edit.parts.FilesystemEditPart.MODEL_ID			
+		);
+	}
+
+
+	}

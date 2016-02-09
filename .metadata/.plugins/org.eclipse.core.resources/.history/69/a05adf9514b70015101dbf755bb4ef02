@@ -1,0 +1,2017 @@
+	/*
+ * 
+ */
+package master.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class MasterNavigatorLabelProvider extends org.eclipse.jface.viewers.LabelProvider implements org.eclipse.ui.navigator.ICommonLabelProvider, org.eclipse.jface.viewers.ITreePathLabelProvider {
+
+		/**
+ * @generated
+ */
+static {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?UnknownElement", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?ImageNotFound", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+public void updateLabel(org.eclipse.jface.viewers.ViewerLabel label, org.eclipse.jface.viewers.TreePath elementPath) {
+	Object element = elementPath.getLastSegment();
+	if (element instanceof master.diagram.navigator.MasterNavigatorItem && !isOwnView(((master.diagram.navigator.MasterNavigatorItem) element).getView())) {
+		return;
+	}
+	label.setText(getText(element));
+	label.setImage(getImage(element));
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(Object element) {
+	if (element instanceof master.diagram.navigator.MasterNavigatorGroup) {
+	master.diagram.navigator.MasterNavigatorGroup group = (master.diagram.navigator.MasterNavigatorGroup) element;
+	return master.diagram.part.MasterDiagramEditorPlugin.getInstance().getBundledImage(group.getIcon());
+}
+
+	if (element instanceof master.diagram.navigator.MasterNavigatorItem) {
+	master.diagram.navigator.MasterNavigatorItem navigatorItem = (master.diagram.navigator.MasterNavigatorItem) element;
+	if (!isOwnView(navigatorItem.getView())) {
+		return super.getImage(element);
+	}
+	return getImage(navigatorItem.getView());
+}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getImage(view);
+	}
+}
+
+		return super.getImage(element);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(org.eclipse.gmf.runtime.notation.View view) {
+		switch (master.diagram.part.MasterVisualIDRegistry.getVisualID(view)) {
+		case master.diagram.edit.parts.MasterEditPart.VISUAL_ID:
+	return getImage("Navigator?Diagram?master?Master", master.diagram.providers.MasterElementTypes.Master_1000); //$NON-NLS-1$
+case master.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?master?Parameters", master.diagram.providers.MasterElementTypes.Parameters_2001); //$NON-NLS-1$
+case master.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?master?Return", master.diagram.providers.MasterElementTypes.Return_2002); //$NON-NLS-1$
+case master.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?master?DeclarativePart", master.diagram.providers.MasterElementTypes.DeclarativePart_2003); //$NON-NLS-1$
+case master.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?master?ExecutablePart", master.diagram.providers.MasterElementTypes.ExecutablePart_2004); //$NON-NLS-1$
+case master.diagram.edit.parts.DataTypeEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?DataType", master.diagram.providers.MasterElementTypes.DataType_3001); //$NON-NLS-1$
+case master.diagram.edit.parts.CollectionsEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Collections", master.diagram.providers.MasterElementTypes.Collections_3002); //$NON-NLS-1$
+case master.diagram.edit.parts.RecordsEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Records", master.diagram.providers.MasterElementTypes.Records_3003); //$NON-NLS-1$
+case master.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Cursor", master.diagram.providers.MasterElementTypes.Cursor_3004); //$NON-NLS-1$
+case master.diagram.edit.parts.DataType2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?DataType", master.diagram.providers.MasterElementTypes.DataType_3005); //$NON-NLS-1$
+case master.diagram.edit.parts.Collections2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Collections", master.diagram.providers.MasterElementTypes.Collections_3006); //$NON-NLS-1$
+case master.diagram.edit.parts.Records2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Records", master.diagram.providers.MasterElementTypes.Records_3007); //$NON-NLS-1$
+case master.diagram.edit.parts.Cursor2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Cursor", master.diagram.providers.MasterElementTypes.Cursor_3008); //$NON-NLS-1$
+case master.diagram.edit.parts.DataType3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?DataType", master.diagram.providers.MasterElementTypes.DataType_3009); //$NON-NLS-1$
+case master.diagram.edit.parts.Collections3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Collections", master.diagram.providers.MasterElementTypes.Collections_3010); //$NON-NLS-1$
+case master.diagram.edit.parts.Records3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Records", master.diagram.providers.MasterElementTypes.Records_3011); //$NON-NLS-1$
+case master.diagram.edit.parts.Cursor3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Cursor", master.diagram.providers.MasterElementTypes.Cursor_3012); //$NON-NLS-1$
+case master.diagram.edit.parts.ExpressionsEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Expressions", master.diagram.providers.MasterElementTypes.Expressions_3013); //$NON-NLS-1$
+case master.diagram.edit.parts.ExceptionEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Exception", master.diagram.providers.MasterElementTypes.Exception_3014); //$NON-NLS-1$
+case master.diagram.edit.parts.IfEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?If", master.diagram.providers.MasterElementTypes.If_3015); //$NON-NLS-1$
+case master.diagram.edit.parts.Expressions2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Expressions", master.diagram.providers.MasterElementTypes.Expressions_3016); //$NON-NLS-1$
+case master.diagram.edit.parts.Exception2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Exception", master.diagram.providers.MasterElementTypes.Exception_3017); //$NON-NLS-1$
+case master.diagram.edit.parts.If2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?If", master.diagram.providers.MasterElementTypes.If_3018); //$NON-NLS-1$
+case master.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Case", master.diagram.providers.MasterElementTypes.Case_3019); //$NON-NLS-1$
+case master.diagram.edit.parts.Expressions3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Expressions", master.diagram.providers.MasterElementTypes.Expressions_3020); //$NON-NLS-1$
+case master.diagram.edit.parts.Exception3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Exception", master.diagram.providers.MasterElementTypes.Exception_3021); //$NON-NLS-1$
+case master.diagram.edit.parts.If3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?If", master.diagram.providers.MasterElementTypes.If_3022); //$NON-NLS-1$
+case master.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Insert", master.diagram.providers.MasterElementTypes.Insert_3023); //$NON-NLS-1$
+case master.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Update", master.diagram.providers.MasterElementTypes.Update_3024); //$NON-NLS-1$
+case master.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Delete", master.diagram.providers.MasterElementTypes.Delete_3025); //$NON-NLS-1$
+case master.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Select", master.diagram.providers.MasterElementTypes.Select_3026); //$NON-NLS-1$
+case master.diagram.edit.parts.Expressions4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Expressions", master.diagram.providers.MasterElementTypes.Expressions_3027); //$NON-NLS-1$
+case master.diagram.edit.parts.Exception4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Exception", master.diagram.providers.MasterElementTypes.Exception_3028); //$NON-NLS-1$
+case master.diagram.edit.parts.If4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?If", master.diagram.providers.MasterElementTypes.If_3029); //$NON-NLS-1$
+case master.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?While", master.diagram.providers.MasterElementTypes.While_3030); //$NON-NLS-1$
+case master.diagram.edit.parts.Expressions5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Expressions", master.diagram.providers.MasterElementTypes.Expressions_3031); //$NON-NLS-1$
+case master.diagram.edit.parts.Exception5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Exception", master.diagram.providers.MasterElementTypes.Exception_3032); //$NON-NLS-1$
+case master.diagram.edit.parts.If5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?If", master.diagram.providers.MasterElementTypes.If_3033); //$NON-NLS-1$
+case master.diagram.edit.parts.ForEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?For", master.diagram.providers.MasterElementTypes.For_3034); //$NON-NLS-1$
+case master.diagram.edit.parts.Expressions6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Expressions", master.diagram.providers.MasterElementTypes.Expressions_3035); //$NON-NLS-1$
+case master.diagram.edit.parts.Exception6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Exception", master.diagram.providers.MasterElementTypes.Exception_3036); //$NON-NLS-1$
+case master.diagram.edit.parts.If6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?If", master.diagram.providers.MasterElementTypes.If_3037); //$NON-NLS-1$
+case master.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Loop", master.diagram.providers.MasterElementTypes.Loop_3038); //$NON-NLS-1$
+case master.diagram.edit.parts.Expressions7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Expressions", master.diagram.providers.MasterElementTypes.Expressions_3039); //$NON-NLS-1$
+case master.diagram.edit.parts.Exception7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Exception", master.diagram.providers.MasterElementTypes.Exception_3040); //$NON-NLS-1$
+case master.diagram.edit.parts.If7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?If", master.diagram.providers.MasterElementTypes.If_3041); //$NON-NLS-1$
+case master.diagram.edit.parts.OpenEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Open", master.diagram.providers.MasterElementTypes.Open_3042); //$NON-NLS-1$
+case master.diagram.edit.parts.FetchEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Fetch", master.diagram.providers.MasterElementTypes.Fetch_3043); //$NON-NLS-1$
+case master.diagram.edit.parts.CloseEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Close", master.diagram.providers.MasterElementTypes.Close_3044); //$NON-NLS-1$
+case master.diagram.edit.parts.Case2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Case", master.diagram.providers.MasterElementTypes.Case_3045); //$NON-NLS-1$
+case master.diagram.edit.parts.Case3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Case", master.diagram.providers.MasterElementTypes.Case_3046); //$NON-NLS-1$
+case master.diagram.edit.parts.Insert2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Insert", master.diagram.providers.MasterElementTypes.Insert_3047); //$NON-NLS-1$
+case master.diagram.edit.parts.Update2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Update", master.diagram.providers.MasterElementTypes.Update_3048); //$NON-NLS-1$
+case master.diagram.edit.parts.Delete2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Delete", master.diagram.providers.MasterElementTypes.Delete_3049); //$NON-NLS-1$
+case master.diagram.edit.parts.Select2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Select", master.diagram.providers.MasterElementTypes.Select_3050); //$NON-NLS-1$
+case master.diagram.edit.parts.Case4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Case", master.diagram.providers.MasterElementTypes.Case_3051); //$NON-NLS-1$
+case master.diagram.edit.parts.While2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?While", master.diagram.providers.MasterElementTypes.While_3052); //$NON-NLS-1$
+case master.diagram.edit.parts.Case5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Case", master.diagram.providers.MasterElementTypes.Case_3053); //$NON-NLS-1$
+case master.diagram.edit.parts.For2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?For", master.diagram.providers.MasterElementTypes.For_3054); //$NON-NLS-1$
+case master.diagram.edit.parts.Case6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Case", master.diagram.providers.MasterElementTypes.Case_3055); //$NON-NLS-1$
+case master.diagram.edit.parts.Loop2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Loop", master.diagram.providers.MasterElementTypes.Loop_3056); //$NON-NLS-1$
+case master.diagram.edit.parts.Insert3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Insert", master.diagram.providers.MasterElementTypes.Insert_3057); //$NON-NLS-1$
+case master.diagram.edit.parts.Update3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Update", master.diagram.providers.MasterElementTypes.Update_3058); //$NON-NLS-1$
+case master.diagram.edit.parts.Delete3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Delete", master.diagram.providers.MasterElementTypes.Delete_3059); //$NON-NLS-1$
+case master.diagram.edit.parts.Select3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Select", master.diagram.providers.MasterElementTypes.Select_3060); //$NON-NLS-1$
+case master.diagram.edit.parts.Insert4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Insert", master.diagram.providers.MasterElementTypes.Insert_3061); //$NON-NLS-1$
+case master.diagram.edit.parts.Update4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Update", master.diagram.providers.MasterElementTypes.Update_3062); //$NON-NLS-1$
+case master.diagram.edit.parts.Delete4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Delete", master.diagram.providers.MasterElementTypes.Delete_3063); //$NON-NLS-1$
+case master.diagram.edit.parts.Select4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Select", master.diagram.providers.MasterElementTypes.Select_3064); //$NON-NLS-1$
+case master.diagram.edit.parts.While3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?While", master.diagram.providers.MasterElementTypes.While_3065); //$NON-NLS-1$
+case master.diagram.edit.parts.Insert5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Insert", master.diagram.providers.MasterElementTypes.Insert_3066); //$NON-NLS-1$
+case master.diagram.edit.parts.Update5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Update", master.diagram.providers.MasterElementTypes.Update_3067); //$NON-NLS-1$
+case master.diagram.edit.parts.Delete5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Delete", master.diagram.providers.MasterElementTypes.Delete_3068); //$NON-NLS-1$
+case master.diagram.edit.parts.Select5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Select", master.diagram.providers.MasterElementTypes.Select_3069); //$NON-NLS-1$
+case master.diagram.edit.parts.For3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?For", master.diagram.providers.MasterElementTypes.For_3070); //$NON-NLS-1$
+case master.diagram.edit.parts.Insert6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Insert", master.diagram.providers.MasterElementTypes.Insert_3071); //$NON-NLS-1$
+case master.diagram.edit.parts.Update6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Update", master.diagram.providers.MasterElementTypes.Update_3072); //$NON-NLS-1$
+case master.diagram.edit.parts.Delete6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Delete", master.diagram.providers.MasterElementTypes.Delete_3073); //$NON-NLS-1$
+case master.diagram.edit.parts.Select6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Select", master.diagram.providers.MasterElementTypes.Select_3074); //$NON-NLS-1$
+case master.diagram.edit.parts.Loop3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Loop", master.diagram.providers.MasterElementTypes.Loop_3075); //$NON-NLS-1$
+case master.diagram.edit.parts.While4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?While", master.diagram.providers.MasterElementTypes.While_3076); //$NON-NLS-1$
+case master.diagram.edit.parts.While5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?While", master.diagram.providers.MasterElementTypes.While_3077); //$NON-NLS-1$
+case master.diagram.edit.parts.For4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?For", master.diagram.providers.MasterElementTypes.For_3078); //$NON-NLS-1$
+case master.diagram.edit.parts.While6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?While", master.diagram.providers.MasterElementTypes.While_3079); //$NON-NLS-1$
+case master.diagram.edit.parts.Loop4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Loop", master.diagram.providers.MasterElementTypes.Loop_3080); //$NON-NLS-1$
+case master.diagram.edit.parts.For5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?For", master.diagram.providers.MasterElementTypes.For_3081); //$NON-NLS-1$
+case master.diagram.edit.parts.For6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?For", master.diagram.providers.MasterElementTypes.For_3082); //$NON-NLS-1$
+case master.diagram.edit.parts.Loop5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Loop", master.diagram.providers.MasterElementTypes.Loop_3083); //$NON-NLS-1$
+case master.diagram.edit.parts.Loop6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Loop", master.diagram.providers.MasterElementTypes.Loop_3084); //$NON-NLS-1$
+case master.diagram.edit.parts.Open2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Open", master.diagram.providers.MasterElementTypes.Open_3085); //$NON-NLS-1$
+case master.diagram.edit.parts.Fetch2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Fetch", master.diagram.providers.MasterElementTypes.Fetch_3086); //$NON-NLS-1$
+case master.diagram.edit.parts.Close2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Close", master.diagram.providers.MasterElementTypes.Close_3087); //$NON-NLS-1$
+case master.diagram.edit.parts.Open3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Open", master.diagram.providers.MasterElementTypes.Open_3088); //$NON-NLS-1$
+case master.diagram.edit.parts.Fetch3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Fetch", master.diagram.providers.MasterElementTypes.Fetch_3089); //$NON-NLS-1$
+case master.diagram.edit.parts.Close3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Close", master.diagram.providers.MasterElementTypes.Close_3090); //$NON-NLS-1$
+case master.diagram.edit.parts.Open4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Open", master.diagram.providers.MasterElementTypes.Open_3091); //$NON-NLS-1$
+case master.diagram.edit.parts.Fetch4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Fetch", master.diagram.providers.MasterElementTypes.Fetch_3092); //$NON-NLS-1$
+case master.diagram.edit.parts.Close4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Close", master.diagram.providers.MasterElementTypes.Close_3093); //$NON-NLS-1$
+case master.diagram.edit.parts.Open5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Open", master.diagram.providers.MasterElementTypes.Open_3094); //$NON-NLS-1$
+case master.diagram.edit.parts.Fetch5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Fetch", master.diagram.providers.MasterElementTypes.Fetch_3095); //$NON-NLS-1$
+case master.diagram.edit.parts.Close5EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Close", master.diagram.providers.MasterElementTypes.Close_3096); //$NON-NLS-1$
+case master.diagram.edit.parts.Open6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Open", master.diagram.providers.MasterElementTypes.Open_3097); //$NON-NLS-1$
+case master.diagram.edit.parts.Fetch6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Fetch", master.diagram.providers.MasterElementTypes.Fetch_3098); //$NON-NLS-1$
+case master.diagram.edit.parts.Close6EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Close", master.diagram.providers.MasterElementTypes.Close_3099); //$NON-NLS-1$
+case master.diagram.edit.parts.Case7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Case", master.diagram.providers.MasterElementTypes.Case_3100); //$NON-NLS-1$
+case master.diagram.edit.parts.Insert7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Insert", master.diagram.providers.MasterElementTypes.Insert_3101); //$NON-NLS-1$
+case master.diagram.edit.parts.Update7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Update", master.diagram.providers.MasterElementTypes.Update_3102); //$NON-NLS-1$
+case master.diagram.edit.parts.Delete7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Delete", master.diagram.providers.MasterElementTypes.Delete_3103); //$NON-NLS-1$
+case master.diagram.edit.parts.Select7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Select", master.diagram.providers.MasterElementTypes.Select_3104); //$NON-NLS-1$
+case master.diagram.edit.parts.While7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?While", master.diagram.providers.MasterElementTypes.While_3105); //$NON-NLS-1$
+case master.diagram.edit.parts.For7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?For", master.diagram.providers.MasterElementTypes.For_3106); //$NON-NLS-1$
+case master.diagram.edit.parts.Loop7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Loop", master.diagram.providers.MasterElementTypes.Loop_3107); //$NON-NLS-1$
+case master.diagram.edit.parts.Open7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Open", master.diagram.providers.MasterElementTypes.Open_3108); //$NON-NLS-1$
+case master.diagram.edit.parts.Fetch7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Fetch", master.diagram.providers.MasterElementTypes.Fetch_3109); //$NON-NLS-1$
+case master.diagram.edit.parts.Close7EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?master?Close", master.diagram.providers.MasterElementTypes.Close_3110); //$NON-NLS-1$
+case master.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?master?Transition", master.diagram.providers.MasterElementTypes.Transition_4001); //$NON-NLS-1$
+	}
+		return getImage("Navigator?UnknownElement", null);  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+private org.eclipse.swt.graphics.Image getImage(String key, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	org.eclipse.jface.resource.ImageRegistry imageRegistry = master.diagram.part.MasterDiagramEditorPlugin.getInstance().getImageRegistry();
+	org.eclipse.swt.graphics.Image image = imageRegistry.get(key);
+	if (image == null && elementType != null && master.diagram.providers.MasterElementTypes.isKnownElementType(elementType)) {
+		image = master.diagram.providers.MasterElementTypes.getImage(elementType);
+		imageRegistry.put(key, image);
+	}
+			
+	if (image == null) {
+		image = imageRegistry.get("Navigator?ImageNotFound");  //$NON-NLS-1$
+		imageRegistry.put(key, image);
+	}
+	return image;
+}
+	
+		/**
+ * @generated
+ */
+public String getText(Object element) {
+	if (element instanceof master.diagram.navigator.MasterNavigatorGroup) {
+	master.diagram.navigator.MasterNavigatorGroup group = (master.diagram.navigator.MasterNavigatorGroup) element;
+	return group.getGroupName();
+}
+
+	if (element instanceof master.diagram.navigator.MasterNavigatorItem) {
+	master.diagram.navigator.MasterNavigatorItem navigatorItem = (master.diagram.navigator.MasterNavigatorItem) element;
+   		if (!isOwnView(navigatorItem.getView())) {
+   			return null;
+   		}
+   		return getText(navigatorItem.getView());
+	}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getText(view);
+	}
+}
+
+		return super.getText(element);
+}
+	
+		/**
+ * @generated
+ */
+public String getText(org.eclipse.gmf.runtime.notation.View view) {
+	if (view.getElement() != null && view.getElement().eIsProxy()) {
+		return getUnresolvedDomainElementProxyText(view);
+	}
+		switch (master.diagram.part.MasterVisualIDRegistry.getVisualID(view)) {
+		case master.diagram.edit.parts.MasterEditPart.VISUAL_ID:
+	return getMaster_1000Text(view);
+case master.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+	return getParameters_2001Text(view);
+case master.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+	return getReturn_2002Text(view);
+case master.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:
+	return getDeclarativePart_2003Text(view);
+case master.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:
+	return getExecutablePart_2004Text(view);
+case master.diagram.edit.parts.DataTypeEditPart.VISUAL_ID:
+	return getDataType_3001Text(view);
+case master.diagram.edit.parts.CollectionsEditPart.VISUAL_ID:
+	return getCollections_3002Text(view);
+case master.diagram.edit.parts.RecordsEditPart.VISUAL_ID:
+	return getRecords_3003Text(view);
+case master.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+	return getCursor_3004Text(view);
+case master.diagram.edit.parts.DataType2EditPart.VISUAL_ID:
+	return getDataType_3005Text(view);
+case master.diagram.edit.parts.Collections2EditPart.VISUAL_ID:
+	return getCollections_3006Text(view);
+case master.diagram.edit.parts.Records2EditPart.VISUAL_ID:
+	return getRecords_3007Text(view);
+case master.diagram.edit.parts.Cursor2EditPart.VISUAL_ID:
+	return getCursor_3008Text(view);
+case master.diagram.edit.parts.DataType3EditPart.VISUAL_ID:
+	return getDataType_3009Text(view);
+case master.diagram.edit.parts.Collections3EditPart.VISUAL_ID:
+	return getCollections_3010Text(view);
+case master.diagram.edit.parts.Records3EditPart.VISUAL_ID:
+	return getRecords_3011Text(view);
+case master.diagram.edit.parts.Cursor3EditPart.VISUAL_ID:
+	return getCursor_3012Text(view);
+case master.diagram.edit.parts.ExpressionsEditPart.VISUAL_ID:
+	return getExpressions_3013Text(view);
+case master.diagram.edit.parts.ExceptionEditPart.VISUAL_ID:
+	return getException_3014Text(view);
+case master.diagram.edit.parts.IfEditPart.VISUAL_ID:
+	return getIf_3015Text(view);
+case master.diagram.edit.parts.Expressions2EditPart.VISUAL_ID:
+	return getExpressions_3016Text(view);
+case master.diagram.edit.parts.Exception2EditPart.VISUAL_ID:
+	return getException_3017Text(view);
+case master.diagram.edit.parts.If2EditPart.VISUAL_ID:
+	return getIf_3018Text(view);
+case master.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+	return getCase_3019Text(view);
+case master.diagram.edit.parts.Expressions3EditPart.VISUAL_ID:
+	return getExpressions_3020Text(view);
+case master.diagram.edit.parts.Exception3EditPart.VISUAL_ID:
+	return getException_3021Text(view);
+case master.diagram.edit.parts.If3EditPart.VISUAL_ID:
+	return getIf_3022Text(view);
+case master.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+	return getInsert_3023Text(view);
+case master.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+	return getUpdate_3024Text(view);
+case master.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+	return getDelete_3025Text(view);
+case master.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+	return getSelect_3026Text(view);
+case master.diagram.edit.parts.Expressions4EditPart.VISUAL_ID:
+	return getExpressions_3027Text(view);
+case master.diagram.edit.parts.Exception4EditPart.VISUAL_ID:
+	return getException_3028Text(view);
+case master.diagram.edit.parts.If4EditPart.VISUAL_ID:
+	return getIf_3029Text(view);
+case master.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+	return getWhile_3030Text(view);
+case master.diagram.edit.parts.Expressions5EditPart.VISUAL_ID:
+	return getExpressions_3031Text(view);
+case master.diagram.edit.parts.Exception5EditPart.VISUAL_ID:
+	return getException_3032Text(view);
+case master.diagram.edit.parts.If5EditPart.VISUAL_ID:
+	return getIf_3033Text(view);
+case master.diagram.edit.parts.ForEditPart.VISUAL_ID:
+	return getFor_3034Text(view);
+case master.diagram.edit.parts.Expressions6EditPart.VISUAL_ID:
+	return getExpressions_3035Text(view);
+case master.diagram.edit.parts.Exception6EditPart.VISUAL_ID:
+	return getException_3036Text(view);
+case master.diagram.edit.parts.If6EditPart.VISUAL_ID:
+	return getIf_3037Text(view);
+case master.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+	return getLoop_3038Text(view);
+case master.diagram.edit.parts.Expressions7EditPart.VISUAL_ID:
+	return getExpressions_3039Text(view);
+case master.diagram.edit.parts.Exception7EditPart.VISUAL_ID:
+	return getException_3040Text(view);
+case master.diagram.edit.parts.If7EditPart.VISUAL_ID:
+	return getIf_3041Text(view);
+case master.diagram.edit.parts.OpenEditPart.VISUAL_ID:
+	return getOpen_3042Text(view);
+case master.diagram.edit.parts.FetchEditPart.VISUAL_ID:
+	return getFetch_3043Text(view);
+case master.diagram.edit.parts.CloseEditPart.VISUAL_ID:
+	return getClose_3044Text(view);
+case master.diagram.edit.parts.Case2EditPart.VISUAL_ID:
+	return getCase_3045Text(view);
+case master.diagram.edit.parts.Case3EditPart.VISUAL_ID:
+	return getCase_3046Text(view);
+case master.diagram.edit.parts.Insert2EditPart.VISUAL_ID:
+	return getInsert_3047Text(view);
+case master.diagram.edit.parts.Update2EditPart.VISUAL_ID:
+	return getUpdate_3048Text(view);
+case master.diagram.edit.parts.Delete2EditPart.VISUAL_ID:
+	return getDelete_3049Text(view);
+case master.diagram.edit.parts.Select2EditPart.VISUAL_ID:
+	return getSelect_3050Text(view);
+case master.diagram.edit.parts.Case4EditPart.VISUAL_ID:
+	return getCase_3051Text(view);
+case master.diagram.edit.parts.While2EditPart.VISUAL_ID:
+	return getWhile_3052Text(view);
+case master.diagram.edit.parts.Case5EditPart.VISUAL_ID:
+	return getCase_3053Text(view);
+case master.diagram.edit.parts.For2EditPart.VISUAL_ID:
+	return getFor_3054Text(view);
+case master.diagram.edit.parts.Case6EditPart.VISUAL_ID:
+	return getCase_3055Text(view);
+case master.diagram.edit.parts.Loop2EditPart.VISUAL_ID:
+	return getLoop_3056Text(view);
+case master.diagram.edit.parts.Insert3EditPart.VISUAL_ID:
+	return getInsert_3057Text(view);
+case master.diagram.edit.parts.Update3EditPart.VISUAL_ID:
+	return getUpdate_3058Text(view);
+case master.diagram.edit.parts.Delete3EditPart.VISUAL_ID:
+	return getDelete_3059Text(view);
+case master.diagram.edit.parts.Select3EditPart.VISUAL_ID:
+	return getSelect_3060Text(view);
+case master.diagram.edit.parts.Insert4EditPart.VISUAL_ID:
+	return getInsert_3061Text(view);
+case master.diagram.edit.parts.Update4EditPart.VISUAL_ID:
+	return getUpdate_3062Text(view);
+case master.diagram.edit.parts.Delete4EditPart.VISUAL_ID:
+	return getDelete_3063Text(view);
+case master.diagram.edit.parts.Select4EditPart.VISUAL_ID:
+	return getSelect_3064Text(view);
+case master.diagram.edit.parts.While3EditPart.VISUAL_ID:
+	return getWhile_3065Text(view);
+case master.diagram.edit.parts.Insert5EditPart.VISUAL_ID:
+	return getInsert_3066Text(view);
+case master.diagram.edit.parts.Update5EditPart.VISUAL_ID:
+	return getUpdate_3067Text(view);
+case master.diagram.edit.parts.Delete5EditPart.VISUAL_ID:
+	return getDelete_3068Text(view);
+case master.diagram.edit.parts.Select5EditPart.VISUAL_ID:
+	return getSelect_3069Text(view);
+case master.diagram.edit.parts.For3EditPart.VISUAL_ID:
+	return getFor_3070Text(view);
+case master.diagram.edit.parts.Insert6EditPart.VISUAL_ID:
+	return getInsert_3071Text(view);
+case master.diagram.edit.parts.Update6EditPart.VISUAL_ID:
+	return getUpdate_3072Text(view);
+case master.diagram.edit.parts.Delete6EditPart.VISUAL_ID:
+	return getDelete_3073Text(view);
+case master.diagram.edit.parts.Select6EditPart.VISUAL_ID:
+	return getSelect_3074Text(view);
+case master.diagram.edit.parts.Loop3EditPart.VISUAL_ID:
+	return getLoop_3075Text(view);
+case master.diagram.edit.parts.While4EditPart.VISUAL_ID:
+	return getWhile_3076Text(view);
+case master.diagram.edit.parts.While5EditPart.VISUAL_ID:
+	return getWhile_3077Text(view);
+case master.diagram.edit.parts.For4EditPart.VISUAL_ID:
+	return getFor_3078Text(view);
+case master.diagram.edit.parts.While6EditPart.VISUAL_ID:
+	return getWhile_3079Text(view);
+case master.diagram.edit.parts.Loop4EditPart.VISUAL_ID:
+	return getLoop_3080Text(view);
+case master.diagram.edit.parts.For5EditPart.VISUAL_ID:
+	return getFor_3081Text(view);
+case master.diagram.edit.parts.For6EditPart.VISUAL_ID:
+	return getFor_3082Text(view);
+case master.diagram.edit.parts.Loop5EditPart.VISUAL_ID:
+	return getLoop_3083Text(view);
+case master.diagram.edit.parts.Loop6EditPart.VISUAL_ID:
+	return getLoop_3084Text(view);
+case master.diagram.edit.parts.Open2EditPart.VISUAL_ID:
+	return getOpen_3085Text(view);
+case master.diagram.edit.parts.Fetch2EditPart.VISUAL_ID:
+	return getFetch_3086Text(view);
+case master.diagram.edit.parts.Close2EditPart.VISUAL_ID:
+	return getClose_3087Text(view);
+case master.diagram.edit.parts.Open3EditPart.VISUAL_ID:
+	return getOpen_3088Text(view);
+case master.diagram.edit.parts.Fetch3EditPart.VISUAL_ID:
+	return getFetch_3089Text(view);
+case master.diagram.edit.parts.Close3EditPart.VISUAL_ID:
+	return getClose_3090Text(view);
+case master.diagram.edit.parts.Open4EditPart.VISUAL_ID:
+	return getOpen_3091Text(view);
+case master.diagram.edit.parts.Fetch4EditPart.VISUAL_ID:
+	return getFetch_3092Text(view);
+case master.diagram.edit.parts.Close4EditPart.VISUAL_ID:
+	return getClose_3093Text(view);
+case master.diagram.edit.parts.Open5EditPart.VISUAL_ID:
+	return getOpen_3094Text(view);
+case master.diagram.edit.parts.Fetch5EditPart.VISUAL_ID:
+	return getFetch_3095Text(view);
+case master.diagram.edit.parts.Close5EditPart.VISUAL_ID:
+	return getClose_3096Text(view);
+case master.diagram.edit.parts.Open6EditPart.VISUAL_ID:
+	return getOpen_3097Text(view);
+case master.diagram.edit.parts.Fetch6EditPart.VISUAL_ID:
+	return getFetch_3098Text(view);
+case master.diagram.edit.parts.Close6EditPart.VISUAL_ID:
+	return getClose_3099Text(view);
+case master.diagram.edit.parts.Case7EditPart.VISUAL_ID:
+	return getCase_3100Text(view);
+case master.diagram.edit.parts.Insert7EditPart.VISUAL_ID:
+	return getInsert_3101Text(view);
+case master.diagram.edit.parts.Update7EditPart.VISUAL_ID:
+	return getUpdate_3102Text(view);
+case master.diagram.edit.parts.Delete7EditPart.VISUAL_ID:
+	return getDelete_3103Text(view);
+case master.diagram.edit.parts.Select7EditPart.VISUAL_ID:
+	return getSelect_3104Text(view);
+case master.diagram.edit.parts.While7EditPart.VISUAL_ID:
+	return getWhile_3105Text(view);
+case master.diagram.edit.parts.For7EditPart.VISUAL_ID:
+	return getFor_3106Text(view);
+case master.diagram.edit.parts.Loop7EditPart.VISUAL_ID:
+	return getLoop_3107Text(view);
+case master.diagram.edit.parts.Open7EditPart.VISUAL_ID:
+	return getOpen_3108Text(view);
+case master.diagram.edit.parts.Fetch7EditPart.VISUAL_ID:
+	return getFetch_3109Text(view);
+case master.diagram.edit.parts.Close7EditPart.VISUAL_ID:
+	return getClose_3110Text(view);
+case master.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+	return getTransition_4001Text(view);
+	}
+		return getUnknownElementText(view);
+}
+	
+		/**
+ * @generated
+ */
+private String getMaster_1000Text(org.eclipse.gmf.runtime.notation.View view) {
+					return "";  //$NON-NLS-1$
+	}
+	/**
+ * @generated
+ */
+private String getParameters_2001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.Parameters_2001, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.ParametersNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getReturn_2002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.Return_2002, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.ReturnNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDeclarativePart_2003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.DeclarativePart_2003, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.DeclarativePartNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5003); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getExecutablePart_2004Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.ExecutablePart_2004, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.ExecutablePartNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5011); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDataType_3001Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.DataType domainModelElement = (master.DataType) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3001);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCollections_3002Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Collections domainModelElement = (master.Collections) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3002);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getRecords_3003Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Records domainModelElement = (master.Records) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3003);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCursor_3004Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Cursor domainModelElement = (master.Cursor) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3004);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getDataType_3005Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.DataType domainModelElement = (master.DataType) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3005);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCollections_3006Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Collections domainModelElement = (master.Collections) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3006);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getRecords_3007Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Records domainModelElement = (master.Records) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3007);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCursor_3008Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Cursor domainModelElement = (master.Cursor) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3008);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getDataType_3009Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.DataType domainModelElement = (master.DataType) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3009);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCollections_3010Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Collections domainModelElement = (master.Collections) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3010);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getRecords_3011Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Records domainModelElement = (master.Records) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3011);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCursor_3012Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Cursor domainModelElement = (master.Cursor) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3012);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getExpressions_3013Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Expressions domainModelElement = (master.Expressions) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3013);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getException_3014Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Exception domainModelElement = (master.Exception) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3014);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getIf_3015Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.If_3015, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.IfNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5010); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getExpressions_3016Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Expressions domainModelElement = (master.Expressions) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3016);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getException_3017Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Exception domainModelElement = (master.Exception) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3017);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getIf_3018Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.If_3018, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.IfName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5009); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCase_3019Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Case domainModelElement = (master.Case) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3019);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getExpressions_3020Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Expressions domainModelElement = (master.Expressions) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3020);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getException_3021Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Exception domainModelElement = (master.Exception) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3021);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getIf_3022Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.If_3022, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.IfName3EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5008); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getInsert_3023Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Insert domainModelElement = (master.Insert) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3023);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getUpdate_3024Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Update domainModelElement = (master.Update) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3024);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getDelete_3025Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Delete domainModelElement = (master.Delete) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3025);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getSelect_3026Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Select domainModelElement = (master.Select) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3026);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getExpressions_3027Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Expressions domainModelElement = (master.Expressions) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3027);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getException_3028Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Exception domainModelElement = (master.Exception) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3028);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getIf_3029Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.If_3029, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.IfName4EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5007); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getWhile_3030Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.While domainModelElement = (master.While) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3030);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getExpressions_3031Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Expressions domainModelElement = (master.Expressions) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3031);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getException_3032Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Exception domainModelElement = (master.Exception) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3032);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getIf_3033Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.If_3033, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.IfName5EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5006); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getFor_3034Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.For domainModelElement = (master.For) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3034);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getExpressions_3035Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Expressions domainModelElement = (master.Expressions) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3035);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getException_3036Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Exception domainModelElement = (master.Exception) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3036);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getIf_3037Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.If_3037, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.IfName6EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5005); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getLoop_3038Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Loop domainModelElement = (master.Loop) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3038);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getExpressions_3039Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Expressions domainModelElement = (master.Expressions) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3039);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getException_3040Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Exception domainModelElement = (master.Exception) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3040);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getIf_3041Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = master.diagram.providers.MasterParserProvider.getParser(master.diagram.providers.MasterElementTypes.If_3041, view.getElement() != null ? view.getElement() : view, master.diagram.part.MasterVisualIDRegistry.getType(master.diagram.edit.parts.IfName7EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5004); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getOpen_3042Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Open domainModelElement = (master.Open) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3042);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFetch_3043Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Fetch domainModelElement = (master.Fetch) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3043);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getClose_3044Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Close domainModelElement = (master.Close) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3044);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCase_3045Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Case domainModelElement = (master.Case) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3045);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCase_3046Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Case domainModelElement = (master.Case) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3046);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getInsert_3047Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Insert domainModelElement = (master.Insert) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3047);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getUpdate_3048Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Update domainModelElement = (master.Update) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3048);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getDelete_3049Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Delete domainModelElement = (master.Delete) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3049);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getSelect_3050Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Select domainModelElement = (master.Select) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3050);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCase_3051Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Case domainModelElement = (master.Case) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3051);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getWhile_3052Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.While domainModelElement = (master.While) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3052);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCase_3053Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Case domainModelElement = (master.Case) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3053);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFor_3054Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.For domainModelElement = (master.For) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3054);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCase_3055Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Case domainModelElement = (master.Case) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3055);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getLoop_3056Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Loop domainModelElement = (master.Loop) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3056);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getInsert_3057Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Insert domainModelElement = (master.Insert) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3057);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getUpdate_3058Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Update domainModelElement = (master.Update) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3058);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getDelete_3059Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Delete domainModelElement = (master.Delete) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3059);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getSelect_3060Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Select domainModelElement = (master.Select) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3060);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getInsert_3061Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Insert domainModelElement = (master.Insert) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3061);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getUpdate_3062Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Update domainModelElement = (master.Update) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3062);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getDelete_3063Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Delete domainModelElement = (master.Delete) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3063);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getSelect_3064Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Select domainModelElement = (master.Select) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3064);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getWhile_3065Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.While domainModelElement = (master.While) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3065);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getInsert_3066Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Insert domainModelElement = (master.Insert) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3066);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getUpdate_3067Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Update domainModelElement = (master.Update) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3067);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getDelete_3068Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Delete domainModelElement = (master.Delete) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3068);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getSelect_3069Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Select domainModelElement = (master.Select) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3069);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFor_3070Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.For domainModelElement = (master.For) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3070);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getInsert_3071Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Insert domainModelElement = (master.Insert) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3071);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getUpdate_3072Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Update domainModelElement = (master.Update) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3072);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getDelete_3073Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Delete domainModelElement = (master.Delete) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3073);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getSelect_3074Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Select domainModelElement = (master.Select) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3074);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getLoop_3075Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Loop domainModelElement = (master.Loop) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3075);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getWhile_3076Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.While domainModelElement = (master.While) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3076);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getWhile_3077Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.While domainModelElement = (master.While) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3077);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFor_3078Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.For domainModelElement = (master.For) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3078);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getWhile_3079Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.While domainModelElement = (master.While) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3079);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getLoop_3080Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Loop domainModelElement = (master.Loop) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3080);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFor_3081Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.For domainModelElement = (master.For) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3081);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFor_3082Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.For domainModelElement = (master.For) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3082);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getLoop_3083Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Loop domainModelElement = (master.Loop) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3083);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getLoop_3084Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Loop domainModelElement = (master.Loop) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3084);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getOpen_3085Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Open domainModelElement = (master.Open) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3085);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFetch_3086Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Fetch domainModelElement = (master.Fetch) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3086);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getClose_3087Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Close domainModelElement = (master.Close) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3087);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getOpen_3088Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Open domainModelElement = (master.Open) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3088);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFetch_3089Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Fetch domainModelElement = (master.Fetch) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3089);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getClose_3090Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Close domainModelElement = (master.Close) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3090);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getOpen_3091Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Open domainModelElement = (master.Open) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3091);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFetch_3092Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Fetch domainModelElement = (master.Fetch) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3092);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getClose_3093Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Close domainModelElement = (master.Close) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3093);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getOpen_3094Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Open domainModelElement = (master.Open) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3094);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFetch_3095Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Fetch domainModelElement = (master.Fetch) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3095);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getClose_3096Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Close domainModelElement = (master.Close) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3096);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getOpen_3097Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Open domainModelElement = (master.Open) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3097);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFetch_3098Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Fetch domainModelElement = (master.Fetch) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3098);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getClose_3099Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Close domainModelElement = (master.Close) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3099);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getCase_3100Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Case domainModelElement = (master.Case) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3100);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getInsert_3101Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Insert domainModelElement = (master.Insert) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3101);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getUpdate_3102Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Update domainModelElement = (master.Update) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3102);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getDelete_3103Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Delete domainModelElement = (master.Delete) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3103);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getSelect_3104Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Select domainModelElement = (master.Select) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3104);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getWhile_3105Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.While domainModelElement = (master.While) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3105);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFor_3106Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.For domainModelElement = (master.For) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3106);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getLoop_3107Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Loop domainModelElement = (master.Loop) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3107);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getOpen_3108Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Open domainModelElement = (master.Open) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3108);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getFetch_3109Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Fetch domainModelElement = (master.Fetch) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3109);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getClose_3110Text(org.eclipse.gmf.runtime.notation.View view) {
+					master.Close domainModelElement = (master.Close) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	master.diagram.part.MasterDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3110);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	/**
+ * @generated
+ */
+private String getTransition_4001Text(org.eclipse.gmf.runtime.notation.View view) {
+								return "";  //$NON-NLS-1$
+		}
+	
+		/**
+ * @generated
+ */
+private String getUnknownElementText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<UnknownElement Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+private String getUnresolvedDomainElementProxyText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<Unresolved domain element Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+
+		/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+		/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+	
+		/**
+ * @generated
+ */
+public String getDescription(Object anElement) {
+	return null;
+}
+	
+		/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return master.diagram.edit.parts.MasterEditPart.MODEL_ID.equals(master.diagram.part.MasterVisualIDRegistry.getModelID(view));
+}
+
+	}

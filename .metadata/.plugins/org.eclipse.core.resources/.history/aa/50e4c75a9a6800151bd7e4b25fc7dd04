@@ -1,0 +1,135 @@
+@namespace(uri="filesystem", prefix="filesystem")
+@gmf
+
+package filesystem;
+
+@gmf.diagram
+class Filesystem {
+    val Sync[*] syncs;
+    
+    //só pode desenhar um de cada desses objetos na área de desenho
+    val DeclarativePart[1] declarative;
+    val ExecutablePart[1] executable;
+    val ExceptionPart[1] exception;
+    val Return[1] return;
+    val Parameters[1] parameters;
+}
+
+//Crystal's Nodes
+//Sections
+
+@gmf.node(label="nameParameters")	
+class Parameters{
+	@gmf.compartment
+	val ParameterIn[*] parametros_in;
+	val ParameterInOut[*] parametros_in_out;
+	val ParameterOut[*] parametros_out;
+    attr String nameParameters;
+}
+
+@gmf.node(label="nameReturn")	
+class Return{
+	@gmf.compartment
+	val Data_Type[1] tipo_retorno;
+    attr String nameReturn;
+}
+
+@gmf.node(label="nameDeclarativePart")	
+class DeclarativePart {
+	@gmf.compartment
+	val Data_Type[*] tipos_dados;
+    attr String nameDeclarativePart;
+}
+
+@gmf.node(label="nameExecutablePart")	
+class ExecutablePart {
+	@gmf.compartment
+	val If[*] ifs, val Case[*] cases;
+	@gmf.compartment
+	val Case[*] cases;
+	@gmf.compartment
+	val Insert[*] inserts;
+	@gmf.compartment
+	val Update[*] updates;
+	@gmf.compartment
+	val Delete[*] deletes;
+	@gmf.compartment
+	val Select[*] selects;
+	@gmf.compartment
+	val Output[*] outuputs;
+	@gmf.compartment
+	val Cursor[*] cursors;
+	@gmf.compartment
+	val While[*] whiles;
+	@gmf.compartment
+	val For[*] fors;
+	val Loop[*] loops;
+    attr String nameExecutablePart;
+}
+
+@gmf.node(label="nameExceptionPart")	
+class ExceptionPart {
+	@gmf.compartment
+	val ExceptionCommand[*] excecoes;
+    attr String nameExceptionPart;
+}
+
+//Crystal's Nodes
+//Objects
+
+class Data_Type extends Return, DeclarativePart{
+}
+
+class ParameterIn extends Parameters{
+}
+
+class ParameterOut extends Parameters{
+}
+
+class ParameterInOut extends Parameters{
+}
+
+class ExceptionCommand extends ExceptionPart{
+}
+
+class If extends ExecutablePart{
+}
+
+class Case extends ExecutablePart{
+}
+
+class Insert extends ExecutablePart{
+}
+
+class Update extends ExecutablePart{
+}
+
+class Delete extends ExecutablePart{
+}
+
+class Select extends ExecutablePart{
+}
+
+class Output extends ExecutablePart{
+}
+
+class Cursor extends ExecutablePart{
+}
+
+class While extends ExecutablePart{
+}
+
+class For extends ExecutablePart{
+}
+
+class Loop extends ExecutablePart{
+}
+
+//Links
+@gmf.link(source="source", target="target", style="dot", width="2")
+class Sync {
+    ref Select source;
+    ref Output target;
+}
+
+

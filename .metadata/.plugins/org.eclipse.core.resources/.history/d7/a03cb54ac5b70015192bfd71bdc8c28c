@@ -1,0 +1,38 @@
+	/*
+ * 
+ */
+package master.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class ReturnReturnVariablesCompartmentItemSemanticEditPolicy extends master.diagram.edit.policies.MasterBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public ReturnReturnVariablesCompartmentItemSemanticEditPolicy() {
+				super(master.diagram.providers.MasterElementTypes.Return_2002);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (master.diagram.providers.MasterElementTypes.DataType_3005 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.DataType2CreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Collections_3006 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.Collections2CreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Records_3007 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.Records2CreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Cursor_3008 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.Cursor2CreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

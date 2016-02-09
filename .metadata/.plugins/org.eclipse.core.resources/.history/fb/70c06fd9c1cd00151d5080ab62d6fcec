@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package crystal.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class CrystalModelingAssistantProviderOfCursor3EditPart extends crystal.diagram.providers.CrystalModelingAssistantProvider {
+
+					
+	
+
+	}

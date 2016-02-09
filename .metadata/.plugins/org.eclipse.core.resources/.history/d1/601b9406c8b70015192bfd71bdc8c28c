@@ -1,0 +1,421 @@
+/*
+ * 
+ */
+package master.diagram.providers;
+
+/**
+ * @generated
+ */
+public class MasterElementTypes {
+
+		/**
+ * @generated
+ */
+private MasterElementTypes() {
+}
+	
+		/**
+ * @generated
+ */
+private static java.util.Map<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement> elements;
+
+	/**
+ * @generated
+ */
+private static org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages elementTypeImages = new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages(	master.diagram.part.MasterDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
+
+	/**
+ * @generated
+ */
+private static java.util.Set<org.eclipse.gmf.runtime.emf.type.core.IElementType> KNOWN_ELEMENT_TYPES;
+	
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Master_1000 = getElementType("masterproject.diagram.Master_1000");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Parameters_2001 = getElementType("masterproject.diagram.Parameters_2001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Return_2002 = getElementType("masterproject.diagram.Return_2002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DeclarativePart_2003 = getElementType("masterproject.diagram.DeclarativePart_2003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ExecutablePart_2004 = getElementType("masterproject.diagram.ExecutablePart_2004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DataType_3001 = getElementType("masterproject.diagram.DataType_3001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Collections_3002 = getElementType("masterproject.diagram.Collections_3002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Records_3003 = getElementType("masterproject.diagram.Records_3003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Cursor_3004 = getElementType("masterproject.diagram.Cursor_3004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DataType_3005 = getElementType("masterproject.diagram.DataType_3005");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Collections_3006 = getElementType("masterproject.diagram.Collections_3006");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Records_3007 = getElementType("masterproject.diagram.Records_3007");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Cursor_3008 = getElementType("masterproject.diagram.Cursor_3008");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DataType_3009 = getElementType("masterproject.diagram.DataType_3009");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Collections_3010 = getElementType("masterproject.diagram.Collections_3010");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Records_3011 = getElementType("masterproject.diagram.Records_3011");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Cursor_3012 = getElementType("masterproject.diagram.Cursor_3012");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Expressions_3013 = getElementType("masterproject.diagram.Expressions_3013");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Exception_3014 = getElementType("masterproject.diagram.Exception_3014");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType If_3015 = getElementType("masterproject.diagram.If_3015");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Case_3016 = getElementType("masterproject.diagram.Case_3016");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Insert_3017 = getElementType("masterproject.diagram.Insert_3017");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Update_3018 = getElementType("masterproject.diagram.Update_3018");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Delete_3019 = getElementType("masterproject.diagram.Delete_3019");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Select_3020 = getElementType("masterproject.diagram.Select_3020");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType While_3021 = getElementType("masterproject.diagram.While_3021");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType For_3022 = getElementType("masterproject.diagram.For_3022");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Loop_3023 = getElementType("masterproject.diagram.Loop_3023");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Open_3024 = getElementType("masterproject.diagram.Open_3024");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Fetch_3025 = getElementType("masterproject.diagram.Fetch_3025");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Close_3026 = getElementType("masterproject.diagram.Close_3026");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Transition_4001 = getElementType("masterproject.diagram.Transition_4001");  //$NON-NLS-1$
+		
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImageDescriptor(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImage(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImageDescriptor(getElement(hint));
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImage(getElement(hint));
+}
+
+		/**
+ * Returns 'type' of the ecore object associated with the hint.
+ * 
+ * @generated
+ */
+public static org.eclipse.emf.ecore.ENamedElement getElement(org.eclipse.core.runtime.IAdaptable hint) {
+	Object type = hint.getAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType.class);
+	if (elements == null) {
+		elements = new java.util.IdentityHashMap<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement>();
+		
+	elements.put(Master_1000, master.MasterPackage.eINSTANCE.getMaster());
+					
+	
+	elements.put(Parameters_2001, master.MasterPackage.eINSTANCE.getParameters());
+					
+	
+	elements.put(Return_2002, master.MasterPackage.eINSTANCE.getReturn());
+					
+	
+	elements.put(DeclarativePart_2003, master.MasterPackage.eINSTANCE.getDeclarativePart());
+					
+	
+	elements.put(ExecutablePart_2004, master.MasterPackage.eINSTANCE.getExecutablePart());
+					
+	
+	elements.put(DataType_3001, master.MasterPackage.eINSTANCE.getDataType());
+					
+	
+	elements.put(Collections_3002, master.MasterPackage.eINSTANCE.getCollections());
+					
+	
+	elements.put(Records_3003, master.MasterPackage.eINSTANCE.getRecords());
+					
+	
+	elements.put(Cursor_3004, master.MasterPackage.eINSTANCE.getCursor());
+					
+	
+	elements.put(DataType_3005, master.MasterPackage.eINSTANCE.getDataType());
+					
+	
+	elements.put(Collections_3006, master.MasterPackage.eINSTANCE.getCollections());
+					
+	
+	elements.put(Records_3007, master.MasterPackage.eINSTANCE.getRecords());
+					
+	
+	elements.put(Cursor_3008, master.MasterPackage.eINSTANCE.getCursor());
+					
+	
+	elements.put(DataType_3009, master.MasterPackage.eINSTANCE.getDataType());
+					
+	
+	elements.put(Collections_3010, master.MasterPackage.eINSTANCE.getCollections());
+					
+	
+	elements.put(Records_3011, master.MasterPackage.eINSTANCE.getRecords());
+					
+	
+	elements.put(Cursor_3012, master.MasterPackage.eINSTANCE.getCursor());
+					
+	
+	elements.put(Expressions_3013, master.MasterPackage.eINSTANCE.getExpressions());
+					
+	
+	elements.put(Exception_3014, master.MasterPackage.eINSTANCE.getException());
+					
+	
+	elements.put(If_3015, master.MasterPackage.eINSTANCE.getIf());
+					
+	
+	elements.put(Case_3016, master.MasterPackage.eINSTANCE.getCase());
+					
+	
+	elements.put(Insert_3017, master.MasterPackage.eINSTANCE.getInsert());
+					
+	
+	elements.put(Update_3018, master.MasterPackage.eINSTANCE.getUpdate());
+					
+	
+	elements.put(Delete_3019, master.MasterPackage.eINSTANCE.getDelete());
+					
+	
+	elements.put(Select_3020, master.MasterPackage.eINSTANCE.getSelect());
+					
+	
+	elements.put(While_3021, master.MasterPackage.eINSTANCE.getWhile());
+					
+	
+	elements.put(For_3022, master.MasterPackage.eINSTANCE.getFor());
+					
+	
+	elements.put(Loop_3023, master.MasterPackage.eINSTANCE.getLoop());
+					
+	
+	elements.put(Open_3024, master.MasterPackage.eINSTANCE.getOpen());
+					
+	
+	elements.put(Fetch_3025, master.MasterPackage.eINSTANCE.getFetch());
+					
+	
+	elements.put(Close_3026, master.MasterPackage.eINSTANCE.getClose());
+							
+	
+	elements.put(Transition_4001, master.MasterPackage.eINSTANCE.getTransition());
+			}
+	return (org.eclipse.emf.ecore.ENamedElement) elements.get(type);
+}
+
+		/**
+ * @generated
+ */
+private static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(String id) {
+	return org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry.getInstance().getType(id);
+}
+
+		/**
+ * @generated
+ */
+public static boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	if (KNOWN_ELEMENT_TYPES == null) {
+		KNOWN_ELEMENT_TYPES = new java.util.HashSet<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+			KNOWN_ELEMENT_TYPES.add(Master_1000);
+		KNOWN_ELEMENT_TYPES.add(Parameters_2001);
+		KNOWN_ELEMENT_TYPES.add(Return_2002);
+		KNOWN_ELEMENT_TYPES.add(DeclarativePart_2003);
+		KNOWN_ELEMENT_TYPES.add(ExecutablePart_2004);
+		KNOWN_ELEMENT_TYPES.add(DataType_3001);
+		KNOWN_ELEMENT_TYPES.add(Collections_3002);
+		KNOWN_ELEMENT_TYPES.add(Records_3003);
+		KNOWN_ELEMENT_TYPES.add(Cursor_3004);
+		KNOWN_ELEMENT_TYPES.add(DataType_3005);
+		KNOWN_ELEMENT_TYPES.add(Collections_3006);
+		KNOWN_ELEMENT_TYPES.add(Records_3007);
+		KNOWN_ELEMENT_TYPES.add(Cursor_3008);
+		KNOWN_ELEMENT_TYPES.add(DataType_3009);
+		KNOWN_ELEMENT_TYPES.add(Collections_3010);
+		KNOWN_ELEMENT_TYPES.add(Records_3011);
+		KNOWN_ELEMENT_TYPES.add(Cursor_3012);
+		KNOWN_ELEMENT_TYPES.add(Expressions_3013);
+		KNOWN_ELEMENT_TYPES.add(Exception_3014);
+		KNOWN_ELEMENT_TYPES.add(If_3015);
+		KNOWN_ELEMENT_TYPES.add(Case_3016);
+		KNOWN_ELEMENT_TYPES.add(Insert_3017);
+		KNOWN_ELEMENT_TYPES.add(Update_3018);
+		KNOWN_ELEMENT_TYPES.add(Delete_3019);
+		KNOWN_ELEMENT_TYPES.add(Select_3020);
+		KNOWN_ELEMENT_TYPES.add(While_3021);
+		KNOWN_ELEMENT_TYPES.add(For_3022);
+		KNOWN_ELEMENT_TYPES.add(Loop_3023);
+		KNOWN_ELEMENT_TYPES.add(Open_3024);
+		KNOWN_ELEMENT_TYPES.add(Fetch_3025);
+		KNOWN_ELEMENT_TYPES.add(Close_3026);
+		KNOWN_ELEMENT_TYPES.add(Transition_4001);
+		}
+	return KNOWN_ELEMENT_TYPES.contains(elementType);
+}
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(int visualID) {
+		switch (visualID) {
+				case master.diagram.edit.parts.MasterEditPart.VISUAL_ID:		return Master_1000;
+	case master.diagram.edit.parts.ParametersEditPart.VISUAL_ID:		return Parameters_2001;
+	case master.diagram.edit.parts.ReturnEditPart.VISUAL_ID:		return Return_2002;
+	case master.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:		return DeclarativePart_2003;
+	case master.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:		return ExecutablePart_2004;
+	case master.diagram.edit.parts.DataTypeEditPart.VISUAL_ID:		return DataType_3001;
+	case master.diagram.edit.parts.CollectionsEditPart.VISUAL_ID:		return Collections_3002;
+	case master.diagram.edit.parts.RecordsEditPart.VISUAL_ID:		return Records_3003;
+	case master.diagram.edit.parts.CursorEditPart.VISUAL_ID:		return Cursor_3004;
+	case master.diagram.edit.parts.DataType2EditPart.VISUAL_ID:		return DataType_3005;
+	case master.diagram.edit.parts.Collections2EditPart.VISUAL_ID:		return Collections_3006;
+	case master.diagram.edit.parts.Records2EditPart.VISUAL_ID:		return Records_3007;
+	case master.diagram.edit.parts.Cursor2EditPart.VISUAL_ID:		return Cursor_3008;
+	case master.diagram.edit.parts.DataType3EditPart.VISUAL_ID:		return DataType_3009;
+	case master.diagram.edit.parts.Collections3EditPart.VISUAL_ID:		return Collections_3010;
+	case master.diagram.edit.parts.Records3EditPart.VISUAL_ID:		return Records_3011;
+	case master.diagram.edit.parts.Cursor3EditPart.VISUAL_ID:		return Cursor_3012;
+	case master.diagram.edit.parts.ExpressionsEditPart.VISUAL_ID:		return Expressions_3013;
+	case master.diagram.edit.parts.ExceptionEditPart.VISUAL_ID:		return Exception_3014;
+	case master.diagram.edit.parts.IfEditPart.VISUAL_ID:		return If_3015;
+	case master.diagram.edit.parts.CaseEditPart.VISUAL_ID:		return Case_3016;
+	case master.diagram.edit.parts.InsertEditPart.VISUAL_ID:		return Insert_3017;
+	case master.diagram.edit.parts.UpdateEditPart.VISUAL_ID:		return Update_3018;
+	case master.diagram.edit.parts.DeleteEditPart.VISUAL_ID:		return Delete_3019;
+	case master.diagram.edit.parts.SelectEditPart.VISUAL_ID:		return Select_3020;
+	case master.diagram.edit.parts.WhileEditPart.VISUAL_ID:		return While_3021;
+	case master.diagram.edit.parts.ForEditPart.VISUAL_ID:		return For_3022;
+	case master.diagram.edit.parts.LoopEditPart.VISUAL_ID:		return Loop_3023;
+	case master.diagram.edit.parts.OpenEditPart.VISUAL_ID:		return Open_3024;
+	case master.diagram.edit.parts.FetchEditPart.VISUAL_ID:		return Fetch_3025;
+	case master.diagram.edit.parts.CloseEditPart.VISUAL_ID:		return Close_3026;
+	case master.diagram.edit.parts.TransitionEditPart.VISUAL_ID:		return Transition_4001;
+		}
+		return null;
+	}
+	
+		/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes TYPED_INSTANCE 
+		= new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes(elementTypeImages) {
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+			return master.diagram.providers.MasterElementTypes.isKnownElementType(elementType);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.gmf.runtime.emf.type.core.IElementType getElementTypeForVisualId(int visualID) {
+			return master.diagram.providers.MasterElementTypes.getElementType(visualID);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.emf.ecore.ENamedElement getDefiningNamedElement(org.eclipse.core.runtime.IAdaptable elementTypeAdapter) {
+			return master.diagram.providers.MasterElementTypes.getElement(elementTypeAdapter);
+		}
+	}; 
+
+	}

@@ -1,0 +1,153 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class FilesystemModelingAssistantProviderOfFileEditPart extends filesystem.diagram.providers.FilesystemModelingAssistantProvider {
+
+					
+			/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnSource(org.eclipse.core.runtime.IAdaptable source) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnSource((filesystem.diagram.edit.parts.FileEditPart) sourceEditPart);
+	}
+	
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnSource(filesystem.diagram.edit.parts.FileEditPart source) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+				types.add(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001);
+				return types;
+	}
+	
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnSourceAndTarget(
+			org.eclipse.core.runtime.IAdaptable source, org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnSourceAndTarget((filesystem.diagram.edit.parts.FileEditPart) sourceEditPart, targetEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnSourceAndTarget(filesystem.diagram.edit.parts.FileEditPart source, org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+							if (targetEditPart instanceof filesystem.diagram.edit.parts.DriveEditPart) {
+			types.add(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001);
+		}
+					if (targetEditPart instanceof filesystem.diagram.edit.parts.Drive2EditPart) {
+			types.add(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001);
+		}
+					if (targetEditPart instanceof filesystem.diagram.edit.parts.FolderEditPart) {
+			types.add(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001);
+		}
+					if (targetEditPart instanceof filesystem.diagram.edit.parts.ShortcutEditPart) {
+			types.add(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001);
+		}
+					if (targetEditPart instanceof filesystem.diagram.edit.parts.FileEditPart) {
+			types.add(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001);
+		}
+							return types;
+	}
+
+			/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForTarget(org.eclipse.core.runtime.IAdaptable source,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetTypesForTarget((filesystem.diagram.edit.parts.FileEditPart) sourceEditPart, relationshipType);
+	}
+	
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetTypesForTarget(filesystem.diagram.edit.parts.FileEditPart source, org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == filesystem.diagram.providers.FilesystemElementTypes.Sync_4001) {
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.Drive_2001);
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.Drive_3001);
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.Folder_3002);
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.Shortcut_3003);
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.File_3004);
+					}
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnTarget(org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnTarget((filesystem.diagram.edit.parts.FileEditPart) targetEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnTarget(filesystem.diagram.edit.parts.FileEditPart target) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+				types.add(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001);
+				types.add(filesystem.diagram.providers.FilesystemElementTypes.ShortcutTarget_4002);
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForSource(org.eclipse.core.runtime.IAdaptable target,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetTypesForSource((filesystem.diagram.edit.parts.FileEditPart) targetEditPart, relationshipType);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetTypesForSource(filesystem.diagram.edit.parts.FileEditPart target, org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == filesystem.diagram.providers.FilesystemElementTypes.Sync_4001) {
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.Drive_2001);
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.Drive_3001);
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.Folder_3002);
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.Shortcut_3003);
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.File_3004);
+					}
+		 else 		if (relationshipType == filesystem.diagram.providers.FilesystemElementTypes.ShortcutTarget_4002) {
+						types.add(filesystem.diagram.providers.FilesystemElementTypes.Shortcut_3003);
+					}
+				return types;
+	}
+
+	}

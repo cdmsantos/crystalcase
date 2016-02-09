@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package crystal.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class CrystalModelingAssistantProviderOfDataType3EditPart extends crystal.diagram.providers.CrystalModelingAssistantProvider {
+
+					
+	
+
+	}

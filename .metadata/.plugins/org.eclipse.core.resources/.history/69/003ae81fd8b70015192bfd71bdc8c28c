@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package master.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPrintingPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.PrintingPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramPrintingPreferencePage() {
+		setPreferenceStore(master.diagram.part.MasterDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

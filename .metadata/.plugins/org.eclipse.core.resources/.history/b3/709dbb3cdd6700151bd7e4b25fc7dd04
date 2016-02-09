@@ -1,0 +1,497 @@
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+import org.eclipse.gef.palette.PaletteContainer;
+import org.eclipse.gef.palette.PaletteDrawer;
+import org.eclipse.gef.palette.PaletteRoot;
+import org.eclipse.gef.palette.ToolEntry;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry;
+import org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry;
+
+import filesystem.diagram.providers.FilesystemElementTypes;
+
+/**
+ * @generated
+ */
+public class FilesystemPaletteFactory {
+
+	/**
+	 * @generated
+	 */
+	public void fillPalette(PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+		paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+	 * Creates "Objects" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createObjects1Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				Messages.Objects1Group_title);
+		paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+		paletteContainer.add(createCase1CreationTool());
+		paletteContainer.add(createCursor2CreationTool());
+		paletteContainer.add(createDatatype3CreationTool());
+		paletteContainer.add(createDeclarativePart4CreationTool());
+		paletteContainer.add(createDelete5CreationTool());
+		paletteContainer.add(createDrive6CreationTool());
+		paletteContainer.add(createException7CreationTool());
+		paletteContainer.add(createExceptionPart8CreationTool());
+		paletteContainer.add(createExecutablePart9CreationTool());
+		paletteContainer.add(createFile10CreationTool());
+		paletteContainer.add(createFolder11CreationTool());
+		paletteContainer.add(createFor12CreationTool());
+		paletteContainer.add(createIf13CreationTool());
+		paletteContainer.add(createInsert14CreationTool());
+		paletteContainer.add(createLoop15CreationTool());
+		paletteContainer.add(createOutput16CreationTool());
+		paletteContainer.add(createParameterIn17CreationTool());
+		paletteContainer.add(createParameterInOut18CreationTool());
+		paletteContainer.add(createParameterOut19CreationTool());
+		paletteContainer.add(createParameters20CreationTool());
+		paletteContainer.add(createReturn21CreationTool());
+		paletteContainer.add(createSelect22CreationTool());
+		paletteContainer.add(createShortcut23CreationTool());
+		paletteContainer.add(createUpdate24CreationTool());
+		paletteContainer.add(createWhile25CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * Creates "Connections" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createConnections2Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				Messages.Connections2Group_title);
+		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+		paletteContainer.add(createSync1CreationTool());
+		paletteContainer.add(createTarget2CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCase1CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Case1CreationTool_title,
+				Messages.Case1CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Case_2007));
+		entry.setId("createCase1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Case_2007));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCursor2CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Cursor2CreationTool_title,
+				Messages.Cursor2CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Cursor_2013));
+		entry.setId("createCursor2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Cursor_2013));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDatatype3CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Datatype3CreationTool_title,
+				Messages.Datatype3CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Datatype_2005));
+		entry.setId("createDatatype3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Datatype_2005));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDeclarativePart4CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.DeclarativePart4CreationTool_title,
+				Messages.DeclarativePart4CreationTool_desc,
+				Collections
+						.singletonList(FilesystemElementTypes.DeclarativePart_2002));
+		entry.setId("createDeclarativePart4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.DeclarativePart_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDelete5CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Delete5CreationTool_title,
+				Messages.Delete5CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Delete_2010));
+		entry.setId("createDelete5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Delete_2010));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDrive6CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(FilesystemElementTypes.Drive_2001);
+		types.add(FilesystemElementTypes.Drive_3001);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Drive6CreationTool_title,
+				Messages.Drive6CreationTool_desc, types);
+		entry.setId("createDrive6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Drive_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createException7CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Exception7CreationTool_title,
+				Messages.Exception7CreationTool_desc,
+				Collections
+						.singletonList(FilesystemElementTypes.Exception_2017));
+		entry.setId("createException7CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Exception_2017));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createExceptionPart8CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.ExceptionPart8CreationTool_title,
+				Messages.ExceptionPart8CreationTool_desc,
+				Collections
+						.singletonList(FilesystemElementTypes.ExceptionPart_2004));
+		entry.setId("createExceptionPart8CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.ExceptionPart_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createExecutablePart9CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.ExecutablePart9CreationTool_title,
+				Messages.ExecutablePart9CreationTool_desc,
+				Collections
+						.singletonList(FilesystemElementTypes.ExecutablePart_2003));
+		entry.setId("createExecutablePart9CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.ExecutablePart_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createFile10CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.File10CreationTool_title,
+				Messages.File10CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.File_3004));
+		entry.setId("createFile10CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.File_3004));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createFolder11CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Folder11CreationTool_title,
+				Messages.Folder11CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Folder_3002));
+		entry.setId("createFolder11CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Folder_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createFor12CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.For12CreationTool_title,
+				Messages.For12CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.For_2015));
+		entry.setId("createFor12CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.For_2015));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createIf13CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.If13CreationTool_title,
+				Messages.If13CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.If_2006));
+		entry.setId("createIf13CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.If_2006));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createInsert14CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Insert14CreationTool_title,
+				Messages.Insert14CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Insert_2008));
+		entry.setId("createInsert14CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Insert_2008));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createLoop15CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Loop15CreationTool_title,
+				Messages.Loop15CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Loop_2016));
+		entry.setId("createLoop15CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Loop_2016));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createOutput16CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Output16CreationTool_title,
+				Messages.Output16CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Output_2011));
+		entry.setId("createOutput16CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Output_2011));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createParameterIn17CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.ParameterIn17CreationTool_title,
+				Messages.ParameterIn17CreationTool_desc,
+				Collections
+						.singletonList(FilesystemElementTypes.ParameterIn_2018));
+		entry.setId("createParameterIn17CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.ParameterIn_2018));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createParameterInOut18CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.ParameterInOut18CreationTool_title,
+				Messages.ParameterInOut18CreationTool_desc,
+				Collections
+						.singletonList(FilesystemElementTypes.ParameterInOut_2020));
+		entry.setId("createParameterInOut18CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.ParameterInOut_2020));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createParameterOut19CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.ParameterOut19CreationTool_title,
+				Messages.ParameterOut19CreationTool_desc,
+				Collections
+						.singletonList(FilesystemElementTypes.ParameterOut_2019));
+		entry.setId("createParameterOut19CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.ParameterOut_2019));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createParameters20CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Parameters20CreationTool_title,
+				Messages.Parameters20CreationTool_desc,
+				Collections
+						.singletonList(FilesystemElementTypes.Parameters_2021));
+		entry.setId("createParameters20CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Parameters_2021));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createReturn21CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Return21CreationTool_title,
+				Messages.Return21CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Return_2022));
+		entry.setId("createReturn21CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Return_2022));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createSelect22CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Select22CreationTool_title,
+				Messages.Select22CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Select_2012));
+		entry.setId("createSelect22CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Select_2012));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createShortcut23CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Shortcut23CreationTool_title,
+				Messages.Shortcut23CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Shortcut_3005));
+		entry.setId("createShortcut23CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Shortcut_3005));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createUpdate24CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Update24CreationTool_title,
+				Messages.Update24CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Update_2009));
+		entry.setId("createUpdate24CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Update_2009));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createWhile25CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.While25CreationTool_title,
+				Messages.While25CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.While_2014));
+		entry.setId("createWhile25CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.While_2014));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createSync1CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
+				Messages.Sync1CreationTool_title,
+				Messages.Sync1CreationTool_desc,
+				Collections.singletonList(FilesystemElementTypes.Sync_4001));
+		entry.setId("createSync1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.Sync_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createTarget2CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
+				Messages.Target2CreationTool_title,
+				Messages.Target2CreationTool_desc,
+				Collections
+						.singletonList(FilesystemElementTypes.ShortcutTarget_4002));
+		entry.setId("createTarget2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FilesystemElementTypes
+				.getImageDescriptor(FilesystemElementTypes.ShortcutTarget_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+}

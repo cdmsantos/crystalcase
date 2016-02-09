@@ -1,0 +1,68 @@
+/**
+ */
+package master;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>If</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link master.If#getName <em>Name</em>}</li>
+ *   <li>{@link master.If#getObjects <em>Objects</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see master.MasterPackage#getIf()
+ * @model annotation="gmf.node label='name' figure='rounded' label.icon='false' label.placement='internal' size='70,70' border.color='158,25,191' border.style='dash'"
+ * @generated
+ */
+public interface If extends Objects {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The default value is <code>"if"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see master.MasterPackage#getIf_Name()
+	 * @model default="if" required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link master.If#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Objects</b></em>' containment reference list.
+	 * The list contents are of type {@link master.Objects}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Objects</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Objects</em>' containment reference list.
+	 * @see master.MasterPackage#getIf_Objects()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Objects> getObjects();
+
+} // If

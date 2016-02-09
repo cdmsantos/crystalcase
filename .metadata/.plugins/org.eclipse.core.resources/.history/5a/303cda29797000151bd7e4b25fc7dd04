@@ -1,0 +1,170 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.parts;
+
+import org.eclipse.gef.EditPart;
+import org.eclipse.gef.EditPartFactory;
+import org.eclipse.gef.tools.CellEditorLocator;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess;
+
+import filesystem.diagram.part.FilesystemVisualIDRegistry;
+
+/**
+ * @generated
+ */
+public class FilesystemEditPartFactory implements EditPartFactory {
+
+	/**
+	 * @generated
+	 */
+	public EditPart createEditPart(EditPart context, Object model) {
+		if (model instanceof View) {
+			View view = (View) model;
+			switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+
+			case FilesystemEditPart.VISUAL_ID:
+				return new FilesystemEditPart(view);
+
+			case ExceptionEditPart.VISUAL_ID:
+				return new ExceptionEditPart(view);
+
+			case ExceptionNameExecutablePartEditPart.VISUAL_ID:
+				return new ExceptionNameExecutablePartEditPart(view);
+
+			case IfEditPart.VISUAL_ID:
+				return new IfEditPart(view);
+
+			case IfNameExecutablePartEditPart.VISUAL_ID:
+				return new IfNameExecutablePartEditPart(view);
+
+			case CaseEditPart.VISUAL_ID:
+				return new CaseEditPart(view);
+
+			case CaseNameExecutablePartEditPart.VISUAL_ID:
+				return new CaseNameExecutablePartEditPart(view);
+
+			case InsertEditPart.VISUAL_ID:
+				return new InsertEditPart(view);
+
+			case InsertNameExecutablePartEditPart.VISUAL_ID:
+				return new InsertNameExecutablePartEditPart(view);
+
+			case UpdateEditPart.VISUAL_ID:
+				return new UpdateEditPart(view);
+
+			case UpdateNameExecutablePartEditPart.VISUAL_ID:
+				return new UpdateNameExecutablePartEditPart(view);
+
+			case DeleteEditPart.VISUAL_ID:
+				return new DeleteEditPart(view);
+
+			case DeleteNameExecutablePartEditPart.VISUAL_ID:
+				return new DeleteNameExecutablePartEditPart(view);
+
+			case SelectEditPart.VISUAL_ID:
+				return new SelectEditPart(view);
+
+			case SelectNameExecutablePartEditPart.VISUAL_ID:
+				return new SelectNameExecutablePartEditPart(view);
+
+			case OutputEditPart.VISUAL_ID:
+				return new OutputEditPart(view);
+
+			case OutputNameExecutablePartEditPart.VISUAL_ID:
+				return new OutputNameExecutablePartEditPart(view);
+
+			case CursorEditPart.VISUAL_ID:
+				return new CursorEditPart(view);
+
+			case CursorNameExecutablePartEditPart.VISUAL_ID:
+				return new CursorNameExecutablePartEditPart(view);
+
+			case WhileEditPart.VISUAL_ID:
+				return new WhileEditPart(view);
+
+			case WhileNameExecutablePartEditPart.VISUAL_ID:
+				return new WhileNameExecutablePartEditPart(view);
+
+			case ForEditPart.VISUAL_ID:
+				return new ForEditPart(view);
+
+			case ForNameExecutablePartEditPart.VISUAL_ID:
+				return new ForNameExecutablePartEditPart(view);
+
+			case LoopEditPart.VISUAL_ID:
+				return new LoopEditPart(view);
+
+			case LoopNameExecutablePartEditPart.VISUAL_ID:
+				return new LoopNameExecutablePartEditPart(view);
+
+			case ParameterInEditPart.VISUAL_ID:
+				return new ParameterInEditPart(view);
+
+			case ParameterInNameParametersEditPart.VISUAL_ID:
+				return new ParameterInNameParametersEditPart(view);
+
+			case ParameterOutEditPart.VISUAL_ID:
+				return new ParameterOutEditPart(view);
+
+			case ParameterOutNameParametersEditPart.VISUAL_ID:
+				return new ParameterOutNameParametersEditPart(view);
+
+			case ParameterInOutEditPart.VISUAL_ID:
+				return new ParameterInOutEditPart(view);
+
+			case ParameterInOutNameParametersEditPart.VISUAL_ID:
+				return new ParameterInOutNameParametersEditPart(view);
+
+			case DeclarativePartEditPart.VISUAL_ID:
+				return new DeclarativePartEditPart(view);
+
+			case DeclarativePartNameDeclarativePartEditPart.VISUAL_ID:
+				return new DeclarativePartNameDeclarativePartEditPart(view);
+
+			case ExecutablePartEditPart.VISUAL_ID:
+				return new ExecutablePartEditPart(view);
+
+			case ExecutablePartNameExecutablePartEditPart.VISUAL_ID:
+				return new ExecutablePartNameExecutablePartEditPart(view);
+
+			case ReturnEditPart.VISUAL_ID:
+				return new ReturnEditPart(view);
+
+			case ReturnNameReturnEditPart.VISUAL_ID:
+				return new ReturnNameReturnEditPart(view);
+
+			case ParametersEditPart.VISUAL_ID:
+				return new ParametersEditPart(view);
+
+			case ParametersNameParametersEditPart.VISUAL_ID:
+				return new ParametersNameParametersEditPart(view);
+
+			case SyncEditPart.VISUAL_ID:
+				return new SyncEditPart(view);
+
+			}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+
+	/**
+	 * @generated
+	 */
+	private EditPart createUnrecognizedEditPart(EditPart context, Object model) {
+		// Handle creation of unrecognized child node EditParts here
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static CellEditorLocator getTextCellEditorLocator(
+			ITextAwareEditPart source) {
+		return CellEditorLocatorAccess.INSTANCE
+				.getTextCellEditorLocator(source);
+	}
+
+}

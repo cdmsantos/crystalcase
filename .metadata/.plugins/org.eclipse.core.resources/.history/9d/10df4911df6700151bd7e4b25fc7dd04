@@ -1,0 +1,1801 @@
+/**
+ */
+package filesystem;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see filesystem.FilesystemFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface FilesystemPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "filesystem";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "filesystem";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "filesystem";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	FilesystemPackage eINSTANCE = filesystem.impl.FilesystemPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.FilesystemImpl <em>Filesystem</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.FilesystemImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getFilesystem()
+	 * @generated
+	 */
+	int FILESYSTEM = 0;
+
+	/**
+	 * The feature id for the '<em><b>Drives</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__DRIVES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Syncs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__SYNCS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Declarative</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__DECLARATIVE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Executable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__EXECUTABLE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Exception</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__EXCEPTION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__PARAMETERS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Return</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__RETURN = 6;
+
+	/**
+	 * The number of structural features of the '<em>Filesystem</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM_FEATURE_COUNT = 7;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.FileImpl <em>File</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.FileImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getFile()
+	 * @generated
+	 */
+	int FILE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>File</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.FolderImpl <em>Folder</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.FolderImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getFolder()
+	 * @generated
+	 */
+	int FOLDER = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__NAME = FILE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__CONTENTS = FILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Folder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER_FEATURE_COUNT = FILE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.DriveImpl <em>Drive</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.DriveImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getDrive()
+	 * @generated
+	 */
+	int DRIVE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRIVE__NAME = FOLDER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRIVE__CONTENTS = FOLDER__CONTENTS;
+
+	/**
+	 * The number of structural features of the '<em>Drive</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRIVE_FEATURE_COUNT = FOLDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ParametersImpl <em>Parameters</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ParametersImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getParameters()
+	 * @generated
+	 */
+	int PARAMETERS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETERS__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Parameters</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETERS_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ReturnImpl <em>Return</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ReturnImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getReturn()
+	 * @generated
+	 */
+	int RETURN = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Return</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.DeclarativePartImpl <em>Declarative Part</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.DeclarativePartImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getDeclarativePart()
+	 * @generated
+	 */
+	int DECLARATIVE_PART = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECLARATIVE_PART__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Declarative Part</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECLARATIVE_PART_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ExecutablePartImpl <em>Executable Part</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ExecutablePartImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getExecutablePart()
+	 * @generated
+	 */
+	int EXECUTABLE_PART = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Executable Part</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ExceptionPartImpl <em>Exception Part</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ExceptionPartImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getExceptionPart()
+	 * @generated
+	 */
+	int EXCEPTION_PART = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_PART__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Exception Part</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_PART_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.Data_TypeImpl <em>Data Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.Data_TypeImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getData_Type()
+	 * @generated
+	 */
+	int DATA_TYPE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__NAME = RETURN__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__NAME = RETURN_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Data Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FEATURE_COUNT = RETURN_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ParameterInImpl <em>Parameter In</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ParameterInImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getParameterIn()
+	 * @generated
+	 */
+	int PARAMETER_IN = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_IN__NAME = PARAMETERS__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Parameter In</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_IN_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ParameterOutImpl <em>Parameter Out</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ParameterOutImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getParameterOut()
+	 * @generated
+	 */
+	int PARAMETER_OUT = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_OUT__NAME = PARAMETERS__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Parameter Out</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_OUT_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ParameterInOutImpl <em>Parameter In Out</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ParameterInOutImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getParameterInOut()
+	 * @generated
+	 */
+	int PARAMETER_IN_OUT = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_IN_OUT__NAME = PARAMETERS__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Parameter In Out</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_IN_OUT_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ExceptionCommandImpl <em>Exception Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ExceptionCommandImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getExceptionCommand()
+	 * @generated
+	 */
+	int EXCEPTION_COMMAND = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_COMMAND__NAME = EXCEPTION_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Exception Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_COMMAND_FEATURE_COUNT = EXCEPTION_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.IfImpl <em>If</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.IfImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getIf()
+	 * @generated
+	 */
+	int IF = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>If</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.CaseImpl <em>Case</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.CaseImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getCase()
+	 * @generated
+	 */
+	int CASE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.InsertImpl <em>Insert</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.InsertImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getInsert()
+	 * @generated
+	 */
+	int INSERT = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Insert</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.UpdateImpl <em>Update</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.UpdateImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getUpdate()
+	 * @generated
+	 */
+	int UPDATE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Update</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.DeleteImpl <em>Delete</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.DeleteImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getDelete()
+	 * @generated
+	 */
+	int DELETE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Delete</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.OutputImpl <em>Output</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.OutputImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getOutput()
+	 * @generated
+	 */
+	int OUTPUT = 19;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Output</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.SelectImpl <em>Select</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.SelectImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getSelect()
+	 * @generated
+	 */
+	int SELECT = 20;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Select</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.CursorImpl <em>Cursor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.CursorImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getCursor()
+	 * @generated
+	 */
+	int CURSOR = 21;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Cursor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.WhileImpl <em>While</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.WhileImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getWhile()
+	 * @generated
+	 */
+	int WHILE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>While</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ForImpl <em>For</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ForImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getFor()
+	 * @generated
+	 */
+	int FOR = 23;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>For</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.LoopImpl <em>Loop</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.LoopImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getLoop()
+	 * @generated
+	 */
+	int LOOP = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__NAME = EXECUTABLE_PART__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Loop</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.SyncImpl <em>Sync</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.SyncImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getSync()
+	 * @generated
+	 */
+	int SYNC = 25;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNC__SOURCE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNC__TARGET = 1;
+
+	/**
+	 * The number of structural features of the '<em>Sync</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNC_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ShortcutImpl <em>Shortcut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ShortcutImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getShortcut()
+	 * @generated
+	 */
+	int SHORTCUT = 26;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHORTCUT__NAME = FILE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHORTCUT__TARGET = FILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Shortcut</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHORTCUT_FEATURE_COUNT = FILE_FEATURE_COUNT + 1;
+
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Filesystem <em>Filesystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Filesystem</em>'.
+	 * @see filesystem.Filesystem
+	 * @generated
+	 */
+	EClass getFilesystem();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Filesystem#getDrives <em>Drives</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Drives</em>'.
+	 * @see filesystem.Filesystem#getDrives()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Drives();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Filesystem#getSyncs <em>Syncs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Syncs</em>'.
+	 * @see filesystem.Filesystem#getSyncs()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Syncs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Filesystem#getDeclarative <em>Declarative</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Declarative</em>'.
+	 * @see filesystem.Filesystem#getDeclarative()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Declarative();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Filesystem#getExecutable <em>Executable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Executable</em>'.
+	 * @see filesystem.Filesystem#getExecutable()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Executable();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Filesystem#getException <em>Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Exception</em>'.
+	 * @see filesystem.Filesystem#getException()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Exception();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Filesystem#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
+	 * @see filesystem.Filesystem#getParameters()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Parameters();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Filesystem#getReturn <em>Return</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Return</em>'.
+	 * @see filesystem.Filesystem#getReturn()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Return();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Drive <em>Drive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Drive</em>'.
+	 * @see filesystem.Drive
+	 * @generated
+	 */
+	EClass getDrive();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.File <em>File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>File</em>'.
+	 * @see filesystem.File
+	 * @generated
+	 */
+	EClass getFile();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.File#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see filesystem.File#getName()
+	 * @see #getFile()
+	 * @generated
+	 */
+	EAttribute getFile_Name();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Folder <em>Folder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Folder</em>'.
+	 * @see filesystem.Folder
+	 * @generated
+	 */
+	EClass getFolder();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Folder#getContents <em>Contents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Contents</em>'.
+	 * @see filesystem.Folder#getContents()
+	 * @see #getFolder()
+	 * @generated
+	 */
+	EReference getFolder_Contents();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Parameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameters</em>'.
+	 * @see filesystem.Parameters
+	 * @generated
+	 */
+	EClass getParameters();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.Parameters#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see filesystem.Parameters#getName()
+	 * @see #getParameters()
+	 * @generated
+	 */
+	EAttribute getParameters_Name();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Return <em>Return</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Return</em>'.
+	 * @see filesystem.Return
+	 * @generated
+	 */
+	EClass getReturn();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.Return#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see filesystem.Return#getName()
+	 * @see #getReturn()
+	 * @generated
+	 */
+	EAttribute getReturn_Name();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.DeclarativePart <em>Declarative Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Declarative Part</em>'.
+	 * @see filesystem.DeclarativePart
+	 * @generated
+	 */
+	EClass getDeclarativePart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.DeclarativePart#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see filesystem.DeclarativePart#getName()
+	 * @see #getDeclarativePart()
+	 * @generated
+	 */
+	EAttribute getDeclarativePart_Name();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ExecutablePart <em>Executable Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Executable Part</em>'.
+	 * @see filesystem.ExecutablePart
+	 * @generated
+	 */
+	EClass getExecutablePart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.ExecutablePart#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see filesystem.ExecutablePart#getName()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EAttribute getExecutablePart_Name();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ExceptionPart <em>Exception Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exception Part</em>'.
+	 * @see filesystem.ExceptionPart
+	 * @generated
+	 */
+	EClass getExceptionPart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.ExceptionPart#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see filesystem.ExceptionPart#getName()
+	 * @see #getExceptionPart()
+	 * @generated
+	 */
+	EAttribute getExceptionPart_Name();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Data_Type <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Type</em>'.
+	 * @see filesystem.Data_Type
+	 * @generated
+	 */
+	EClass getData_Type();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ParameterIn <em>Parameter In</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter In</em>'.
+	 * @see filesystem.ParameterIn
+	 * @generated
+	 */
+	EClass getParameterIn();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ParameterOut <em>Parameter Out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter Out</em>'.
+	 * @see filesystem.ParameterOut
+	 * @generated
+	 */
+	EClass getParameterOut();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ParameterInOut <em>Parameter In Out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter In Out</em>'.
+	 * @see filesystem.ParameterInOut
+	 * @generated
+	 */
+	EClass getParameterInOut();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ExceptionCommand <em>Exception Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exception Command</em>'.
+	 * @see filesystem.ExceptionCommand
+	 * @generated
+	 */
+	EClass getExceptionCommand();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.If <em>If</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>If</em>'.
+	 * @see filesystem.If
+	 * @generated
+	 */
+	EClass getIf();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Case <em>Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Case</em>'.
+	 * @see filesystem.Case
+	 * @generated
+	 */
+	EClass getCase();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Insert <em>Insert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Insert</em>'.
+	 * @see filesystem.Insert
+	 * @generated
+	 */
+	EClass getInsert();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Update <em>Update</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update</em>'.
+	 * @see filesystem.Update
+	 * @generated
+	 */
+	EClass getUpdate();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Delete <em>Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete</em>'.
+	 * @see filesystem.Delete
+	 * @generated
+	 */
+	EClass getDelete();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Output <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output</em>'.
+	 * @see filesystem.Output
+	 * @generated
+	 */
+	EClass getOutput();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Select <em>Select</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Select</em>'.
+	 * @see filesystem.Select
+	 * @generated
+	 */
+	EClass getSelect();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Cursor <em>Cursor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cursor</em>'.
+	 * @see filesystem.Cursor
+	 * @generated
+	 */
+	EClass getCursor();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.While <em>While</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>While</em>'.
+	 * @see filesystem.While
+	 * @generated
+	 */
+	EClass getWhile();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.For <em>For</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>For</em>'.
+	 * @see filesystem.For
+	 * @generated
+	 */
+	EClass getFor();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Loop <em>Loop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Loop</em>'.
+	 * @see filesystem.Loop
+	 * @generated
+	 */
+	EClass getLoop();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Sync <em>Sync</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sync</em>'.
+	 * @see filesystem.Sync
+	 * @generated
+	 */
+	EClass getSync();
+
+	/**
+	 * Returns the meta object for the reference '{@link filesystem.Sync#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see filesystem.Sync#getSource()
+	 * @see #getSync()
+	 * @generated
+	 */
+	EReference getSync_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link filesystem.Sync#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see filesystem.Sync#getTarget()
+	 * @see #getSync()
+	 * @generated
+	 */
+	EReference getSync_Target();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Shortcut <em>Shortcut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Shortcut</em>'.
+	 * @see filesystem.Shortcut
+	 * @generated
+	 */
+	EClass getShortcut();
+
+	/**
+	 * Returns the meta object for the reference '{@link filesystem.Shortcut#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see filesystem.Shortcut#getTarget()
+	 * @see #getShortcut()
+	 * @generated
+	 */
+	EReference getShortcut_Target();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	FilesystemFactory getFilesystemFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.FilesystemImpl <em>Filesystem</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.FilesystemImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getFilesystem()
+		 * @generated
+		 */
+		EClass FILESYSTEM = eINSTANCE.getFilesystem();
+
+		/**
+		 * The meta object literal for the '<em><b>Drives</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__DRIVES = eINSTANCE.getFilesystem_Drives();
+
+		/**
+		 * The meta object literal for the '<em><b>Syncs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__SYNCS = eINSTANCE.getFilesystem_Syncs();
+
+		/**
+		 * The meta object literal for the '<em><b>Declarative</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__DECLARATIVE = eINSTANCE.getFilesystem_Declarative();
+
+		/**
+		 * The meta object literal for the '<em><b>Executable</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__EXECUTABLE = eINSTANCE.getFilesystem_Executable();
+
+		/**
+		 * The meta object literal for the '<em><b>Exception</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__EXCEPTION = eINSTANCE.getFilesystem_Exception();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__PARAMETERS = eINSTANCE.getFilesystem_Parameters();
+
+		/**
+		 * The meta object literal for the '<em><b>Return</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__RETURN = eINSTANCE.getFilesystem_Return();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.DriveImpl <em>Drive</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.DriveImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getDrive()
+		 * @generated
+		 */
+		EClass DRIVE = eINSTANCE.getDrive();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.FileImpl <em>File</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.FileImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getFile()
+		 * @generated
+		 */
+		EClass FILE = eINSTANCE.getFile();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FILE__NAME = eINSTANCE.getFile_Name();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.FolderImpl <em>Folder</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.FolderImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getFolder()
+		 * @generated
+		 */
+		EClass FOLDER = eINSTANCE.getFolder();
+
+		/**
+		 * The meta object literal for the '<em><b>Contents</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FOLDER__CONTENTS = eINSTANCE.getFolder_Contents();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ParametersImpl <em>Parameters</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ParametersImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getParameters()
+		 * @generated
+		 */
+		EClass PARAMETERS = eINSTANCE.getParameters();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETERS__NAME = eINSTANCE.getParameters_Name();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ReturnImpl <em>Return</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ReturnImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getReturn()
+		 * @generated
+		 */
+		EClass RETURN = eINSTANCE.getReturn();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RETURN__NAME = eINSTANCE.getReturn_Name();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.DeclarativePartImpl <em>Declarative Part</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.DeclarativePartImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getDeclarativePart()
+		 * @generated
+		 */
+		EClass DECLARATIVE_PART = eINSTANCE.getDeclarativePart();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DECLARATIVE_PART__NAME = eINSTANCE.getDeclarativePart_Name();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ExecutablePartImpl <em>Executable Part</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ExecutablePartImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getExecutablePart()
+		 * @generated
+		 */
+		EClass EXECUTABLE_PART = eINSTANCE.getExecutablePart();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXECUTABLE_PART__NAME = eINSTANCE.getExecutablePart_Name();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ExceptionPartImpl <em>Exception Part</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ExceptionPartImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getExceptionPart()
+		 * @generated
+		 */
+		EClass EXCEPTION_PART = eINSTANCE.getExceptionPart();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXCEPTION_PART__NAME = eINSTANCE.getExceptionPart_Name();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.Data_TypeImpl <em>Data Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.Data_TypeImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getData_Type()
+		 * @generated
+		 */
+		EClass DATA_TYPE = eINSTANCE.getData_Type();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ParameterInImpl <em>Parameter In</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ParameterInImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getParameterIn()
+		 * @generated
+		 */
+		EClass PARAMETER_IN = eINSTANCE.getParameterIn();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ParameterOutImpl <em>Parameter Out</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ParameterOutImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getParameterOut()
+		 * @generated
+		 */
+		EClass PARAMETER_OUT = eINSTANCE.getParameterOut();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ParameterInOutImpl <em>Parameter In Out</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ParameterInOutImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getParameterInOut()
+		 * @generated
+		 */
+		EClass PARAMETER_IN_OUT = eINSTANCE.getParameterInOut();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ExceptionCommandImpl <em>Exception Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ExceptionCommandImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getExceptionCommand()
+		 * @generated
+		 */
+		EClass EXCEPTION_COMMAND = eINSTANCE.getExceptionCommand();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.IfImpl <em>If</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.IfImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getIf()
+		 * @generated
+		 */
+		EClass IF = eINSTANCE.getIf();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.CaseImpl <em>Case</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.CaseImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getCase()
+		 * @generated
+		 */
+		EClass CASE = eINSTANCE.getCase();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.InsertImpl <em>Insert</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.InsertImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getInsert()
+		 * @generated
+		 */
+		EClass INSERT = eINSTANCE.getInsert();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.UpdateImpl <em>Update</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.UpdateImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getUpdate()
+		 * @generated
+		 */
+		EClass UPDATE = eINSTANCE.getUpdate();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.DeleteImpl <em>Delete</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.DeleteImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getDelete()
+		 * @generated
+		 */
+		EClass DELETE = eINSTANCE.getDelete();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.OutputImpl <em>Output</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.OutputImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getOutput()
+		 * @generated
+		 */
+		EClass OUTPUT = eINSTANCE.getOutput();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.SelectImpl <em>Select</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.SelectImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getSelect()
+		 * @generated
+		 */
+		EClass SELECT = eINSTANCE.getSelect();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.CursorImpl <em>Cursor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.CursorImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getCursor()
+		 * @generated
+		 */
+		EClass CURSOR = eINSTANCE.getCursor();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.WhileImpl <em>While</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.WhileImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getWhile()
+		 * @generated
+		 */
+		EClass WHILE = eINSTANCE.getWhile();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ForImpl <em>For</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ForImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getFor()
+		 * @generated
+		 */
+		EClass FOR = eINSTANCE.getFor();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.LoopImpl <em>Loop</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.LoopImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getLoop()
+		 * @generated
+		 */
+		EClass LOOP = eINSTANCE.getLoop();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.SyncImpl <em>Sync</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.SyncImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getSync()
+		 * @generated
+		 */
+		EClass SYNC = eINSTANCE.getSync();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYNC__SOURCE = eINSTANCE.getSync_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYNC__TARGET = eINSTANCE.getSync_Target();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ShortcutImpl <em>Shortcut</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ShortcutImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getShortcut()
+		 * @generated
+		 */
+		EClass SHORTCUT = eINSTANCE.getShortcut();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SHORTCUT__TARGET = eINSTANCE.getShortcut_Target();
+
+	}
+
+} //FilesystemPackage

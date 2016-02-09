@@ -1,0 +1,106 @@
+@namespace(uri="filesystem", prefix="filesystem")
+@gmf
+
+package filesystem;
+
+@gmf.diagram
+class Filesystem {
+    val Sync[*] syncs;
+    
+    val DeclarativePart[*] declarative;
+    val ExecutablePart[*] executable;
+    val ExceptionPart[*] exception;
+    val Parameters[*] parameters;
+    val Return[*] return;
+}
+
+//Crystal's Nodes
+//Sections
+
+@gmf.node(label="name")	
+class Parameters{
+    attr String name;
+}
+
+@gmf.node(label="name")	
+class Return{
+    attr String name;
+}
+
+@gmf.node(label="name")	
+class DeclarativePart {
+    attr String name;
+}
+
+@gmf.node(label="name")	
+class ExecutablePart {
+    attr String name;
+}
+
+@gmf.node(label="name")	
+class ExceptionPart {
+    attr String name;
+}
+
+//Crystal's Nodes
+//Objects
+
+class ParameterReturnType extends Return{
+}
+
+class ParameterDeclarativeType extends DeclarativePart{
+}
+
+class ParameterIn extends Parameters{
+}
+
+class ParameterOut extends Parameters{
+}
+
+class ParameterInOut extends Parameters{
+}
+
+class ExceptionCommand extends ExceptionPart{
+}
+
+class If extends ExecutablePart{
+}
+
+class Case extends ExecutablePart{
+}
+
+class Insert extends ExecutablePart{
+}
+
+class Update extends ExecutablePart{
+}
+
+class Delete extends ExecutablePart{
+}
+
+class Output extends ExecutablePart{
+}
+
+class Select extends ExecutablePart{
+}
+
+class Cursor extends ExecutablePart{
+}
+
+class While extends ExecutablePart{
+}
+
+class For extends ExecutablePart{
+}
+
+class Loop extends ExecutablePart{
+}
+
+//Links
+@gmf.link(source="source", target="target", style="dot", width="2")
+class Sync {
+    ref File source;
+    ref File target;
+}
+
+

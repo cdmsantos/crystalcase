@@ -1,0 +1,90 @@
+
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+/**
+ * @generated
+ */
+public class FilesystemPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(filesystem.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createData_Type1CreationTool());
+paletteContainer.add(createParameterIn2CreationTool());
+paletteContainer.add(createParameterInOut3CreationTool());
+paletteContainer.add(createParameterOut4CreationTool());
+paletteContainer.add(createParameters5CreationTool());
+paletteContainer.add(createReturn6CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createData_Type1CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(filesystem.diagram.part.Messages.Data_Type1CreationTool_title, filesystem.diagram.part.Messages.Data_Type1CreationTool_desc, null, null) {};
+				 entry.setId("createData_Type1CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createParameterIn2CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(filesystem.diagram.part.Messages.ParameterIn2CreationTool_title, filesystem.diagram.part.Messages.ParameterIn2CreationTool_desc, null, null) {};
+				 entry.setId("createParameterIn2CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createParameterInOut3CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(filesystem.diagram.part.Messages.ParameterInOut3CreationTool_title, filesystem.diagram.part.Messages.ParameterInOut3CreationTool_desc, null, null) {};
+				 entry.setId("createParameterInOut3CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createParameterOut4CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(filesystem.diagram.part.Messages.ParameterOut4CreationTool_title, filesystem.diagram.part.Messages.ParameterOut4CreationTool_desc, null, null) {};
+				 entry.setId("createParameterOut4CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createParameters5CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(filesystem.diagram.part.Messages.Parameters5CreationTool_title, filesystem.diagram.part.Messages.Parameters5CreationTool_desc, java.util.Collections.singletonList(filesystem.diagram.providers.FilesystemElementTypes.Parameters_2001));
+				 entry.setId("createParameters5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(filesystem.diagram.providers.FilesystemElementTypes.getImageDescriptor(filesystem.diagram.providers.FilesystemElementTypes.Parameters_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createReturn6CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(filesystem.diagram.part.Messages.Return6CreationTool_title, filesystem.diagram.part.Messages.Return6CreationTool_desc, java.util.Collections.singletonList(filesystem.diagram.providers.FilesystemElementTypes.Return_2002));
+				 entry.setId("createReturn6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(filesystem.diagram.providers.FilesystemElementTypes.getImageDescriptor(filesystem.diagram.providers.FilesystemElementTypes.Return_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

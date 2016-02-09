@@ -1,0 +1,25 @@
+	/*
+ * 
+ */
+package filesystem.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class SyncItemSemanticEditPolicy extends filesystem.diagram.edit.policies.FilesystemBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public SyncItemSemanticEditPolicy() {
+				super(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001);
+	}
+
+			/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getDestroyElementCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest req) {
+		return getGEFWrapper(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(req));
+	}
+					
+	}

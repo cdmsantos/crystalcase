@@ -1,0 +1,17 @@
+/**
+ */
+package crystal;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Open</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see crystal.CrystalPackage#getOpen()
+ * @model
+ * @generated
+ */
+public interface Open extends Objects {
+} // Open

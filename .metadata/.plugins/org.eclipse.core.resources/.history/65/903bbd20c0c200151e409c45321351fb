@@ -1,0 +1,466 @@
+/*
+ * 
+ */
+package crystal.diagram.providers.assistants;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+
+import crystal.diagram.edit.parts.Case2EditPart;
+import crystal.diagram.edit.parts.Case3EditPart;
+import crystal.diagram.edit.parts.Case4EditPart;
+import crystal.diagram.edit.parts.CaseEditPart;
+import crystal.diagram.edit.parts.Close2EditPart;
+import crystal.diagram.edit.parts.Close3EditPart;
+import crystal.diagram.edit.parts.Close4EditPart;
+import crystal.diagram.edit.parts.CloseEditPart;
+import crystal.diagram.edit.parts.Delete2EditPart;
+import crystal.diagram.edit.parts.Delete3EditPart;
+import crystal.diagram.edit.parts.Delete4EditPart;
+import crystal.diagram.edit.parts.DeleteEditPart;
+import crystal.diagram.edit.parts.Exception2EditPart;
+import crystal.diagram.edit.parts.Exception3EditPart;
+import crystal.diagram.edit.parts.Exception4EditPart;
+import crystal.diagram.edit.parts.ExceptionEditPart;
+import crystal.diagram.edit.parts.Expressions2EditPart;
+import crystal.diagram.edit.parts.Expressions3EditPart;
+import crystal.diagram.edit.parts.Expressions4EditPart;
+import crystal.diagram.edit.parts.ExpressionsEditPart;
+import crystal.diagram.edit.parts.Fetch2EditPart;
+import crystal.diagram.edit.parts.Fetch3EditPart;
+import crystal.diagram.edit.parts.Fetch4EditPart;
+import crystal.diagram.edit.parts.FetchEditPart;
+import crystal.diagram.edit.parts.For2EditPart;
+import crystal.diagram.edit.parts.For3EditPart;
+import crystal.diagram.edit.parts.For4EditPart;
+import crystal.diagram.edit.parts.ForEditPart;
+import crystal.diagram.edit.parts.If2EditPart;
+import crystal.diagram.edit.parts.If3EditPart;
+import crystal.diagram.edit.parts.If4EditPart;
+import crystal.diagram.edit.parts.IfEditPart;
+import crystal.diagram.edit.parts.Insert2EditPart;
+import crystal.diagram.edit.parts.Insert3EditPart;
+import crystal.diagram.edit.parts.Insert4EditPart;
+import crystal.diagram.edit.parts.InsertEditPart;
+import crystal.diagram.edit.parts.Loop2EditPart;
+import crystal.diagram.edit.parts.Loop3EditPart;
+import crystal.diagram.edit.parts.Loop4EditPart;
+import crystal.diagram.edit.parts.LoopEditPart;
+import crystal.diagram.edit.parts.Open2EditPart;
+import crystal.diagram.edit.parts.Open3EditPart;
+import crystal.diagram.edit.parts.Open4EditPart;
+import crystal.diagram.edit.parts.OpenEditPart;
+import crystal.diagram.edit.parts.Select2EditPart;
+import crystal.diagram.edit.parts.Select3EditPart;
+import crystal.diagram.edit.parts.Select4EditPart;
+import crystal.diagram.edit.parts.SelectEditPart;
+import crystal.diagram.edit.parts.Update2EditPart;
+import crystal.diagram.edit.parts.Update3EditPart;
+import crystal.diagram.edit.parts.Update4EditPart;
+import crystal.diagram.edit.parts.UpdateEditPart;
+import crystal.diagram.edit.parts.While2EditPart;
+import crystal.diagram.edit.parts.While3EditPart;
+import crystal.diagram.edit.parts.While4EditPart;
+import crystal.diagram.edit.parts.WhileEditPart;
+import crystal.diagram.providers.CrystalElementTypes;
+import crystal.diagram.providers.CrystalModelingAssistantProvider;
+
+/**
+ * @generated
+ */
+public class CrystalModelingAssistantProviderOfOpenEditPart extends
+		CrystalModelingAssistantProvider {
+
+	/**
+	 * @generated
+	 */
+	@Override
+	public List<IElementType> getRelTypesOnSource(IAdaptable source) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
+				.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnSource((OpenEditPart) sourceEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> doGetRelTypesOnSource(OpenEditPart source) {
+		List<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(CrystalElementTypes.Transition_4001);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	@Override
+	public List<IElementType> getRelTypesOnSourceAndTarget(IAdaptable source,
+			IAdaptable target) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
+				.getAdapter(IGraphicalEditPart.class);
+		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
+				.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnSourceAndTarget((OpenEditPart) sourceEditPart,
+				targetEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> doGetRelTypesOnSourceAndTarget(
+			OpenEditPart source, IGraphicalEditPart targetEditPart) {
+		List<IElementType> types = new LinkedList<IElementType>();
+		if (targetEditPart instanceof ExpressionsEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof ExceptionEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof IfEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof CaseEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof InsertEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof UpdateEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof DeleteEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof SelectEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof WhileEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof ForEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof LoopEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof OpenEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof FetchEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof CloseEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Expressions2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Exception2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof If2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Case2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Insert2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Update2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Delete2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Select2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof While2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof For2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Loop2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Open2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Fetch2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Close2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Expressions3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Exception3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof If3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Case3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Insert3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Update3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Delete3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Select3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof While3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof For3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Loop3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Open3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Fetch3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Close3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Expressions4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Exception4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof If4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Case4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Insert4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Update4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Delete4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Select4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof While4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof For4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Loop4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Open4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Fetch4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Close4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	@Override
+	public List<IElementType> getTypesForTarget(IAdaptable source,
+			IElementType relationshipType) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
+				.getAdapter(IGraphicalEditPart.class);
+		return doGetTypesForTarget((OpenEditPart) sourceEditPart,
+				relationshipType);
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> doGetTypesForTarget(OpenEditPart source,
+			IElementType relationshipType) {
+		List<IElementType> types = new ArrayList<IElementType>();
+		if (relationshipType == CrystalElementTypes.Transition_4001) {
+			types.add(CrystalElementTypes.Expressions_3013);
+			types.add(CrystalElementTypes.Exception_3014);
+			types.add(CrystalElementTypes.If_3015);
+			types.add(CrystalElementTypes.Case_3016);
+			types.add(CrystalElementTypes.Insert_3017);
+			types.add(CrystalElementTypes.Update_3018);
+			types.add(CrystalElementTypes.Delete_3019);
+			types.add(CrystalElementTypes.Select_3020);
+			types.add(CrystalElementTypes.While_3021);
+			types.add(CrystalElementTypes.For_3022);
+			types.add(CrystalElementTypes.Loop_3023);
+			types.add(CrystalElementTypes.Open_3024);
+			types.add(CrystalElementTypes.Fetch_3025);
+			types.add(CrystalElementTypes.Close_3026);
+			types.add(CrystalElementTypes.Expressions_3035);
+			types.add(CrystalElementTypes.Exception_3036);
+			types.add(CrystalElementTypes.If_3037);
+			types.add(CrystalElementTypes.Case_3038);
+			types.add(CrystalElementTypes.Insert_3039);
+			types.add(CrystalElementTypes.Update_3040);
+			types.add(CrystalElementTypes.Delete_3041);
+			types.add(CrystalElementTypes.Select_3042);
+			types.add(CrystalElementTypes.While_3043);
+			types.add(CrystalElementTypes.For_3044);
+			types.add(CrystalElementTypes.Loop_3045);
+			types.add(CrystalElementTypes.Open_3046);
+			types.add(CrystalElementTypes.Fetch_3047);
+			types.add(CrystalElementTypes.Close_3048);
+			types.add(CrystalElementTypes.Expressions_3057);
+			types.add(CrystalElementTypes.Exception_3058);
+			types.add(CrystalElementTypes.If_3059);
+			types.add(CrystalElementTypes.Case_3060);
+			types.add(CrystalElementTypes.Insert_3061);
+			types.add(CrystalElementTypes.Update_3062);
+			types.add(CrystalElementTypes.Delete_3063);
+			types.add(CrystalElementTypes.Select_3064);
+			types.add(CrystalElementTypes.While_3065);
+			types.add(CrystalElementTypes.For_3066);
+			types.add(CrystalElementTypes.Loop_3067);
+			types.add(CrystalElementTypes.Open_3068);
+			types.add(CrystalElementTypes.Fetch_3069);
+			types.add(CrystalElementTypes.Close_3070);
+			types.add(CrystalElementTypes.Expressions_3079);
+			types.add(CrystalElementTypes.Exception_3080);
+			types.add(CrystalElementTypes.If_3081);
+			types.add(CrystalElementTypes.Case_3082);
+			types.add(CrystalElementTypes.Insert_3083);
+			types.add(CrystalElementTypes.Update_3084);
+			types.add(CrystalElementTypes.Delete_3085);
+			types.add(CrystalElementTypes.Select_3086);
+			types.add(CrystalElementTypes.While_3087);
+			types.add(CrystalElementTypes.For_3088);
+			types.add(CrystalElementTypes.Loop_3089);
+			types.add(CrystalElementTypes.Open_3090);
+			types.add(CrystalElementTypes.Fetch_3091);
+			types.add(CrystalElementTypes.Close_3092);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	@Override
+	public List<IElementType> getRelTypesOnTarget(IAdaptable target) {
+		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
+				.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnTarget((OpenEditPart) targetEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> doGetRelTypesOnTarget(OpenEditPart target) {
+		List<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(CrystalElementTypes.Transition_4001);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	@Override
+	public List<IElementType> getTypesForSource(IAdaptable target,
+			IElementType relationshipType) {
+		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
+				.getAdapter(IGraphicalEditPart.class);
+		return doGetTypesForSource((OpenEditPart) targetEditPart,
+				relationshipType);
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> doGetTypesForSource(OpenEditPart target,
+			IElementType relationshipType) {
+		List<IElementType> types = new ArrayList<IElementType>();
+		if (relationshipType == CrystalElementTypes.Transition_4001) {
+			types.add(CrystalElementTypes.Expressions_3013);
+			types.add(CrystalElementTypes.Exception_3014);
+			types.add(CrystalElementTypes.If_3015);
+			types.add(CrystalElementTypes.Case_3016);
+			types.add(CrystalElementTypes.Insert_3017);
+			types.add(CrystalElementTypes.Update_3018);
+			types.add(CrystalElementTypes.Delete_3019);
+			types.add(CrystalElementTypes.Select_3020);
+			types.add(CrystalElementTypes.While_3021);
+			types.add(CrystalElementTypes.For_3022);
+			types.add(CrystalElementTypes.Loop_3023);
+			types.add(CrystalElementTypes.Open_3024);
+			types.add(CrystalElementTypes.Fetch_3025);
+			types.add(CrystalElementTypes.Close_3026);
+			types.add(CrystalElementTypes.Expressions_3035);
+			types.add(CrystalElementTypes.Exception_3036);
+			types.add(CrystalElementTypes.If_3037);
+			types.add(CrystalElementTypes.Case_3038);
+			types.add(CrystalElementTypes.Insert_3039);
+			types.add(CrystalElementTypes.Update_3040);
+			types.add(CrystalElementTypes.Delete_3041);
+			types.add(CrystalElementTypes.Select_3042);
+			types.add(CrystalElementTypes.While_3043);
+			types.add(CrystalElementTypes.For_3044);
+			types.add(CrystalElementTypes.Loop_3045);
+			types.add(CrystalElementTypes.Open_3046);
+			types.add(CrystalElementTypes.Fetch_3047);
+			types.add(CrystalElementTypes.Close_3048);
+			types.add(CrystalElementTypes.Expressions_3057);
+			types.add(CrystalElementTypes.Exception_3058);
+			types.add(CrystalElementTypes.If_3059);
+			types.add(CrystalElementTypes.Case_3060);
+			types.add(CrystalElementTypes.Insert_3061);
+			types.add(CrystalElementTypes.Update_3062);
+			types.add(CrystalElementTypes.Delete_3063);
+			types.add(CrystalElementTypes.Select_3064);
+			types.add(CrystalElementTypes.While_3065);
+			types.add(CrystalElementTypes.For_3066);
+			types.add(CrystalElementTypes.Loop_3067);
+			types.add(CrystalElementTypes.Open_3068);
+			types.add(CrystalElementTypes.Fetch_3069);
+			types.add(CrystalElementTypes.Close_3070);
+			types.add(CrystalElementTypes.Expressions_3079);
+			types.add(CrystalElementTypes.Exception_3080);
+			types.add(CrystalElementTypes.If_3081);
+			types.add(CrystalElementTypes.Case_3082);
+			types.add(CrystalElementTypes.Insert_3083);
+			types.add(CrystalElementTypes.Update_3084);
+			types.add(CrystalElementTypes.Delete_3085);
+			types.add(CrystalElementTypes.Select_3086);
+			types.add(CrystalElementTypes.While_3087);
+			types.add(CrystalElementTypes.For_3088);
+			types.add(CrystalElementTypes.Loop_3089);
+			types.add(CrystalElementTypes.Open_3090);
+			types.add(CrystalElementTypes.Fetch_3091);
+			types.add(CrystalElementTypes.Close_3092);
+		}
+		return types;
+	}
+
+}

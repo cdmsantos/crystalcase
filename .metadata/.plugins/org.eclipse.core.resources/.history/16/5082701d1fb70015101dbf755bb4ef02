@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="master" nsURI="master" nsPrefix="master">
+  <eAnnotations source="gmf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Master">
+    <eAnnotations source="gmf.diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
+        eType="#//Transition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" lowerBound="1"
+        eType="#//Parameters" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="return" lowerBound="1"
+        eType="#//Return" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declarativePart" lowerBound="1"
+        eType="#//DeclarativePart" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executablePart" lowerBound="1"
+        eType="#//ExecutablePart" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sections"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameters" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="rounded"/>
+      <details key="size" value="150,200"/>
+      <details key="border.color" value="255,13,13"/>
+      <details key="border.style" value="dash"/>
+      <details key="label.readOnly" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Parameters"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Return" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="size" value="150,200"/>
+      <details key="border.color" value="25,191,108"/>
+      <details key="border.style" value="dash"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Return"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclarativePart" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="size" value="150,200"/>
+      <details key="border.color" value="43,106,215"/>
+      <details key="border.style" value="dash"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Declarative Part"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutablePart" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="size" value="450,450"/>
+      <details key="figure" value="rectangle"/>
+      <details key="border.color" value="158,25,191"/>
+      <details key="border.style" value="dash"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Executable Part"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Objects" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variables"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Variables">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/datatype.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="data type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Collections" eSuperTypes="#//Variables">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/collections.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="collections"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Records" eSuperTypes="#//Variables">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/records.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="records"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cursor" eSuperTypes="#//Variables">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/cursor.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="cursor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expressions" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/expression.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="expressions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exception" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/exception.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="exception"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="rounded"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="internal"/>
+      <details key="size" value="70,70"/>
+      <details key="border.color" value="158,25,191"/>
+      <details key="border.style" value="dash"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="if"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Objects" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Case" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/case.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="case"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Objects" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/insert.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="insert"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/update.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="update"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/delete.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="delete"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/select.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="select"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Objects" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="While" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/while.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="while"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Objects" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="For" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/for.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="for"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Objects" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/loop.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="loop"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Objects" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Open" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/open.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="open"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fetch" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/fetch.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="fetch"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Close" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/CINproject/icons/close.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="close"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="start"/>
+      <details key="target" value="end"/>
+      <details key="target.decoration" value="arrow"/>
+      <details key="color" value="0,0,0"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="start" eType="#//Objects"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="end" eType="#//Objects"/>
+  </eClassifiers>
+</ecore:EPackage>

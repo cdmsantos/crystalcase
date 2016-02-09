@@ -1,0 +1,35 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.policies;
+
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
+
+import filesystem.diagram.edit.commands.If2CreateCommand;
+import filesystem.diagram.providers.FilesystemElementTypes;
+
+/**
+ * @generated
+ */
+public class LoopLoopIfsCompartmentItemSemanticEditPolicy extends
+		FilesystemBaseItemSemanticEditPolicy {
+
+	/**
+	 * @generated
+	 */
+	public LoopLoopIfsCompartmentItemSemanticEditPolicy() {
+		super(FilesystemElementTypes.Loop_2012);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getCreateCommand(CreateElementRequest req) {
+		if (FilesystemElementTypes.If_3004 == req.getElementType()) {
+			return getGEFWrapper(new If2CreateCommand(req));
+		}
+		return super.getCreateCommand(req);
+	}
+
+}

@@ -1,0 +1,10 @@
+@namespace(uri="test_function", prefix="test_function")
+@gmf
+
+package test_function;
+
+@gmf.diagram(model.extension="test_function")
+class Test_Function {
+	//val Sections[*] sections;
+}
+

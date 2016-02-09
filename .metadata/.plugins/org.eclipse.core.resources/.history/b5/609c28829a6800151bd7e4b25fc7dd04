@@ -1,0 +1,35 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.policies;
+
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
+
+import filesystem.diagram.edit.commands.ParameterIn2CreateCommand;
+import filesystem.diagram.providers.FilesystemElementTypes;
+
+/**
+ * @generated
+ */
+public class ParameterInOutParameterInOutParametros_inCompartmentItemSemanticEditPolicy
+		extends FilesystemBaseItemSemanticEditPolicy {
+
+	/**
+	 * @generated
+	 */
+	public ParameterInOutParameterInOutParametros_inCompartmentItemSemanticEditPolicy() {
+		super(FilesystemElementTypes.ParameterInOut_2019);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getCreateCommand(CreateElementRequest req) {
+		if (FilesystemElementTypes.ParameterIn_3005 == req.getElementType()) {
+			return getGEFWrapper(new ParameterIn2CreateCommand(req));
+		}
+		return super.getCreateCommand(req);
+	}
+
+}

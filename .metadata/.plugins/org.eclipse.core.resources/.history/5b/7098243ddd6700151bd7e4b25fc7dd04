@@ -1,0 +1,1422 @@
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
+
+import filesystem.DeclarativePart;
+import filesystem.Drive;
+import filesystem.ExceptionPart;
+import filesystem.ExecutablePart;
+import filesystem.File;
+import filesystem.Filesystem;
+import filesystem.FilesystemPackage;
+import filesystem.Folder;
+import filesystem.Parameters;
+import filesystem.Return;
+import filesystem.Shortcut;
+import filesystem.Sync;
+import filesystem.diagram.edit.parts.CaseEditPart;
+import filesystem.diagram.edit.parts.CursorEditPart;
+import filesystem.diagram.edit.parts.DatatypeEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartEditPart;
+import filesystem.diagram.edit.parts.DeleteEditPart;
+import filesystem.diagram.edit.parts.Drive2EditPart;
+import filesystem.diagram.edit.parts.DriveDriveContentsCompartment2EditPart;
+import filesystem.diagram.edit.parts.DriveDriveContentsCompartmentEditPart;
+import filesystem.diagram.edit.parts.DriveEditPart;
+import filesystem.diagram.edit.parts.ExceptionEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartEditPart;
+import filesystem.diagram.edit.parts.FileEditPart;
+import filesystem.diagram.edit.parts.FilesystemEditPart;
+import filesystem.diagram.edit.parts.FolderEditPart;
+import filesystem.diagram.edit.parts.FolderFolderContentsCompartmentEditPart;
+import filesystem.diagram.edit.parts.ForEditPart;
+import filesystem.diagram.edit.parts.IfEditPart;
+import filesystem.diagram.edit.parts.InsertEditPart;
+import filesystem.diagram.edit.parts.LoopEditPart;
+import filesystem.diagram.edit.parts.OutputEditPart;
+import filesystem.diagram.edit.parts.ParameterInEditPart;
+import filesystem.diagram.edit.parts.ParameterInOutEditPart;
+import filesystem.diagram.edit.parts.ParameterOutEditPart;
+import filesystem.diagram.edit.parts.ParametersEditPart;
+import filesystem.diagram.edit.parts.ReturnEditPart;
+import filesystem.diagram.edit.parts.SelectEditPart;
+import filesystem.diagram.edit.parts.ShortcutEditPart;
+import filesystem.diagram.edit.parts.ShortcutTargetEditPart;
+import filesystem.diagram.edit.parts.SyncEditPart;
+import filesystem.diagram.edit.parts.UpdateEditPart;
+import filesystem.diagram.edit.parts.WhileEditPart;
+import filesystem.diagram.providers.FilesystemElementTypes;
+
+/**
+ * @generated
+ */
+public class FilesystemDiagramUpdater {
+
+	/**
+	 * @generated
+	 */
+	public static boolean isShortcutOrphaned(View view) {
+		return !view.isSetElement() || view.getElement() == null
+				|| view.getElement().eIsProxy();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000SemanticChildren(view);
+		case DriveDriveContentsCompartmentEditPart.VISUAL_ID:
+			return getDriveDriveContentsCompartment_7001SemanticChildren(view);
+		case DriveDriveContentsCompartment2EditPart.VISUAL_ID:
+			return getDriveDriveContentsCompartment_7002SemanticChildren(view);
+		case FolderFolderContentsCompartmentEditPart.VISUAL_ID:
+			return getFolderFolderContentsCompartment_7003SemanticChildren(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getFilesystem_1000SemanticChildren(
+			View view) {
+		if (!view.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Filesystem modelElement = (Filesystem) view.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getDrives().iterator(); it.hasNext();) {
+			Drive childElement = (Drive) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DriveEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getDeclarative().iterator(); it
+				.hasNext();) {
+			DeclarativePart childElement = (DeclarativePart) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DatatypeEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeclarativePartEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getExecutable().iterator(); it
+				.hasNext();) {
+			ExecutablePart childElement = (ExecutablePart) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == IfEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CaseEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == InsertEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == UpdateEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeleteEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == OutputEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SelectEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CursorEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == WhileEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ForEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == LoopEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ExecutablePartEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getException().iterator(); it
+				.hasNext();) {
+			ExceptionPart childElement = (ExceptionPart) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ExceptionEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ExceptionPartEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getParameters().iterator(); it
+				.hasNext();) {
+			Parameters childElement = (Parameters) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ParameterInEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ParameterOutEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ParameterInOutEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ParametersEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getReturn().iterator(); it.hasNext();) {
+			Return childElement = (Return) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ReturnEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getDriveDriveContentsCompartment_7001SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Drive modelElement = (Drive) containerView.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getContents().iterator(); it
+				.hasNext();) {
+			File childElement = (File) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Drive2EditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FolderEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ShortcutEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FileEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getDriveDriveContentsCompartment_7002SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Drive modelElement = (Drive) containerView.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getContents().iterator(); it
+				.hasNext();) {
+			File childElement = (File) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Drive2EditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FolderEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ShortcutEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FileEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getFolderFolderContentsCompartment_7003SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Folder modelElement = (Folder) containerView.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getContents().iterator(); it
+				.hasNext();) {
+			File childElement = (File) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Drive2EditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FolderEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ShortcutEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FileEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000ContainedLinks(view);
+		case DriveEditPart.VISUAL_ID:
+			return getDrive_2001ContainedLinks(view);
+		case DatatypeEditPart.VISUAL_ID:
+			return getDatatype_2005ContainedLinks(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_2006ContainedLinks(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_2007ContainedLinks(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_2008ContainedLinks(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_2009ContainedLinks(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_2010ContainedLinks(view);
+		case OutputEditPart.VISUAL_ID:
+			return getOutput_2011ContainedLinks(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_2012ContainedLinks(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_2013ContainedLinks(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_2014ContainedLinks(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_2015ContainedLinks(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_2016ContainedLinks(view);
+		case ExceptionEditPart.VISUAL_ID:
+			return getException_2017ContainedLinks(view);
+		case ParameterInEditPart.VISUAL_ID:
+			return getParameterIn_2018ContainedLinks(view);
+		case ParameterOutEditPart.VISUAL_ID:
+			return getParameterOut_2019ContainedLinks(view);
+		case ParameterInOutEditPart.VISUAL_ID:
+			return getParameterInOut_2020ContainedLinks(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2002ContainedLinks(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2003ContainedLinks(view);
+		case ExceptionPartEditPart.VISUAL_ID:
+			return getExceptionPart_2004ContainedLinks(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2021ContainedLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2022ContainedLinks(view);
+		case Drive2EditPart.VISUAL_ID:
+			return getDrive_3001ContainedLinks(view);
+		case FolderEditPart.VISUAL_ID:
+			return getFolder_3002ContainedLinks(view);
+		case ShortcutEditPart.VISUAL_ID:
+			return getShortcut_3005ContainedLinks(view);
+		case FileEditPart.VISUAL_ID:
+			return getFile_3004ContainedLinks(view);
+		case SyncEditPart.VISUAL_ID:
+			return getSync_4001ContainedLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case DriveEditPart.VISUAL_ID:
+			return getDrive_2001IncomingLinks(view);
+		case DatatypeEditPart.VISUAL_ID:
+			return getDatatype_2005IncomingLinks(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_2006IncomingLinks(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_2007IncomingLinks(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_2008IncomingLinks(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_2009IncomingLinks(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_2010IncomingLinks(view);
+		case OutputEditPart.VISUAL_ID:
+			return getOutput_2011IncomingLinks(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_2012IncomingLinks(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_2013IncomingLinks(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_2014IncomingLinks(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_2015IncomingLinks(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_2016IncomingLinks(view);
+		case ExceptionEditPart.VISUAL_ID:
+			return getException_2017IncomingLinks(view);
+		case ParameterInEditPart.VISUAL_ID:
+			return getParameterIn_2018IncomingLinks(view);
+		case ParameterOutEditPart.VISUAL_ID:
+			return getParameterOut_2019IncomingLinks(view);
+		case ParameterInOutEditPart.VISUAL_ID:
+			return getParameterInOut_2020IncomingLinks(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2002IncomingLinks(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2003IncomingLinks(view);
+		case ExceptionPartEditPart.VISUAL_ID:
+			return getExceptionPart_2004IncomingLinks(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2021IncomingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2022IncomingLinks(view);
+		case Drive2EditPart.VISUAL_ID:
+			return getDrive_3001IncomingLinks(view);
+		case FolderEditPart.VISUAL_ID:
+			return getFolder_3002IncomingLinks(view);
+		case ShortcutEditPart.VISUAL_ID:
+			return getShortcut_3005IncomingLinks(view);
+		case FileEditPart.VISUAL_ID:
+			return getFile_3004IncomingLinks(view);
+		case SyncEditPart.VISUAL_ID:
+			return getSync_4001IncomingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case DriveEditPart.VISUAL_ID:
+			return getDrive_2001OutgoingLinks(view);
+		case DatatypeEditPart.VISUAL_ID:
+			return getDatatype_2005OutgoingLinks(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_2006OutgoingLinks(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_2007OutgoingLinks(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_2008OutgoingLinks(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_2009OutgoingLinks(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_2010OutgoingLinks(view);
+		case OutputEditPart.VISUAL_ID:
+			return getOutput_2011OutgoingLinks(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_2012OutgoingLinks(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_2013OutgoingLinks(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_2014OutgoingLinks(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_2015OutgoingLinks(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_2016OutgoingLinks(view);
+		case ExceptionEditPart.VISUAL_ID:
+			return getException_2017OutgoingLinks(view);
+		case ParameterInEditPart.VISUAL_ID:
+			return getParameterIn_2018OutgoingLinks(view);
+		case ParameterOutEditPart.VISUAL_ID:
+			return getParameterOut_2019OutgoingLinks(view);
+		case ParameterInOutEditPart.VISUAL_ID:
+			return getParameterInOut_2020OutgoingLinks(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2002OutgoingLinks(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2003OutgoingLinks(view);
+		case ExceptionPartEditPart.VISUAL_ID:
+			return getExceptionPart_2004OutgoingLinks(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2021OutgoingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2022OutgoingLinks(view);
+		case Drive2EditPart.VISUAL_ID:
+			return getDrive_3001OutgoingLinks(view);
+		case FolderEditPart.VISUAL_ID:
+			return getFolder_3002OutgoingLinks(view);
+		case ShortcutEditPart.VISUAL_ID:
+			return getShortcut_3005OutgoingLinks(view);
+		case FileEditPart.VISUAL_ID:
+			return getFile_3004OutgoingLinks(view);
+		case SyncEditPart.VISUAL_ID:
+			return getSync_4001OutgoingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFilesystem_1000ContainedLinks(
+			View view) {
+		Filesystem modelElement = (Filesystem) view.getElement();
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Sync_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDrive_2001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDatatype_2005ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIf_2006ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCase_2007ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getInsert_2008ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getUpdate_2009ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDelete_2010ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutput_2011ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSelect_2012ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCursor_2013ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getWhile_2014ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFor_2015ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getLoop_2016ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getException_2017ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterIn_2018ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterOut_2019ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterInOut_2020ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDeclarativePart_2002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExecutablePart_2003ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExceptionPart_2004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2021ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2022ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDrive_3001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFolder_3002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getShortcut_3005ContainedLinks(
+			View view) {
+		Shortcut modelElement = (Shortcut) view.getElement();
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Shortcut_Target_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFile_3004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSync_4001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDrive_2001IncomingLinks(
+			View view) {
+		Drive modelElement = (Drive) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Sync_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Shortcut_Target_4002(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDatatype_2005IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIf_2006IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCase_2007IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getInsert_2008IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getUpdate_2009IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDelete_2010IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutput_2011IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSelect_2012IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCursor_2013IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getWhile_2014IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFor_2015IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getLoop_2016IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getException_2017IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterIn_2018IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterOut_2019IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterInOut_2020IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDeclarativePart_2002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExecutablePart_2003IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExceptionPart_2004IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2021IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2022IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDrive_3001IncomingLinks(
+			View view) {
+		Drive modelElement = (Drive) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Sync_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Shortcut_Target_4002(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFolder_3002IncomingLinks(
+			View view) {
+		Folder modelElement = (Folder) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Sync_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Shortcut_Target_4002(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getShortcut_3005IncomingLinks(
+			View view) {
+		Shortcut modelElement = (Shortcut) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Sync_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Shortcut_Target_4002(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFile_3004IncomingLinks(
+			View view) {
+		File modelElement = (File) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Sync_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Shortcut_Target_4002(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSync_4001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDrive_2001OutgoingLinks(
+			View view) {
+		Drive modelElement = (Drive) view.getElement();
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Sync_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDatatype_2005OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIf_2006OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCase_2007OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getInsert_2008OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getUpdate_2009OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDelete_2010OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutput_2011OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSelect_2012OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCursor_2013OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getWhile_2014OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFor_2015OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getLoop_2016OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getException_2017OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterIn_2018OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterOut_2019OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterInOut_2020OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDeclarativePart_2002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExecutablePart_2003OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExceptionPart_2004OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2021OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2022OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDrive_3001OutgoingLinks(
+			View view) {
+		Drive modelElement = (Drive) view.getElement();
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Sync_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFolder_3002OutgoingLinks(
+			View view) {
+		Folder modelElement = (Folder) view.getElement();
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Sync_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getShortcut_3005OutgoingLinks(
+			View view) {
+		Shortcut modelElement = (Shortcut) view.getElement();
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Sync_4001(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Shortcut_Target_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFile_3004OutgoingLinks(
+			View view) {
+		File modelElement = (File) view.getElement();
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Sync_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSync_4001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FilesystemLinkDescriptor> getContainedTypeModelFacetLinks_Sync_4001(
+			Filesystem container) {
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		for (Iterator<?> links = container.getSyncs().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Sync) {
+				continue;
+			}
+			Sync link = (Sync) linkObject;
+			if (SyncEditPart.VISUAL_ID != FilesystemVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			File dst = link.getTarget();
+			File src = link.getSource();
+			result.add(new FilesystemLinkDescriptor(src, dst, link,
+					FilesystemElementTypes.Sync_4001, SyncEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FilesystemLinkDescriptor> getIncomingTypeModelFacetLinks_Sync_4001(
+			File target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != FilesystemPackage.eINSTANCE
+					.getSync_Target()
+					|| false == setting.getEObject() instanceof Sync) {
+				continue;
+			}
+			Sync link = (Sync) setting.getEObject();
+			if (SyncEditPart.VISUAL_ID != FilesystemVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			File src = link.getSource();
+			result.add(new FilesystemLinkDescriptor(src, target, link,
+					FilesystemElementTypes.Sync_4001, SyncEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FilesystemLinkDescriptor> getIncomingFeatureModelFacetLinks_Shortcut_Target_4002(
+			File target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() == FilesystemPackage.eINSTANCE
+					.getShortcut_Target()) {
+				result.add(new FilesystemLinkDescriptor(setting.getEObject(),
+						target, FilesystemElementTypes.ShortcutTarget_4002,
+						ShortcutTargetEditPart.VISUAL_ID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FilesystemLinkDescriptor> getOutgoingTypeModelFacetLinks_Sync_4001(
+			File source) {
+		Filesystem container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element
+				.eContainer()) {
+			if (element instanceof Filesystem) {
+				container = (Filesystem) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		for (Iterator<?> links = container.getSyncs().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Sync) {
+				continue;
+			}
+			Sync link = (Sync) linkObject;
+			if (SyncEditPart.VISUAL_ID != FilesystemVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			File dst = link.getTarget();
+			File src = link.getSource();
+			if (src != source) {
+				continue;
+			}
+			result.add(new FilesystemLinkDescriptor(src, dst, link,
+					FilesystemElementTypes.Sync_4001, SyncEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FilesystemLinkDescriptor> getOutgoingFeatureModelFacetLinks_Shortcut_Target_4002(
+			Shortcut source) {
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		File destination = source.getTarget();
+		if (destination == null) {
+			return result;
+		}
+		result.add(new FilesystemLinkDescriptor(source, destination,
+				FilesystemElementTypes.ShortcutTarget_4002,
+				ShortcutTargetEditPart.VISUAL_ID));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramUpdater TYPED_INSTANCE = new DiagramUpdater() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+			return FilesystemDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+			return FilesystemDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+			return FilesystemDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+			return FilesystemDiagramUpdater.getOutgoingLinks(view);
+		}
+	};
+
+}

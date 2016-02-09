@@ -1,0 +1,180 @@
+/*
+ * 
+ */
+package master.diagram.providers;
+
+/**
+ * @generated
+ */
+public class MasterParserProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider implements org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider {
+	
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser parametersName_5001Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParametersName_5001Parser() {
+		if (parametersName_5001Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				master.MasterPackage.eINSTANCE.getParameters_Name()
+			};
+				master.diagram.parsers.MessageFormatParser parser = new master.diagram.parsers.MessageFormatParser(features);
+								parametersName_5001Parser = parser;
+		}
+		return parametersName_5001Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser returnName_5002Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getReturnName_5002Parser() {
+		if (returnName_5002Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				master.MasterPackage.eINSTANCE.getReturn_Name()
+			};
+				master.diagram.parsers.MessageFormatParser parser = new master.diagram.parsers.MessageFormatParser(features);
+								returnName_5002Parser = parser;
+		}
+		return returnName_5002Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser declarativePartName_5003Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDeclarativePartName_5003Parser() {
+		if (declarativePartName_5003Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				master.MasterPackage.eINSTANCE.getDeclarativePart_Name()
+			};
+				master.diagram.parsers.MessageFormatParser parser = new master.diagram.parsers.MessageFormatParser(features);
+								declarativePartName_5003Parser = parser;
+		}
+		return declarativePartName_5003Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser executablePartName_5004Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getExecutablePartName_5004Parser() {
+		if (executablePartName_5004Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				master.MasterPackage.eINSTANCE.getExecutablePart_Name()
+			};
+				master.diagram.parsers.MessageFormatParser parser = new master.diagram.parsers.MessageFormatParser(features);
+								executablePartName_5004Parser = parser;
+		}
+		return executablePartName_5004Parser;
+	}
+
+
+	
+	
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(int visualID) {
+		switch (visualID) {
+				case master.diagram.edit.parts.ParametersNameEditPart.VISUAL_ID: return getParametersName_5001Parser();
+		case master.diagram.edit.parts.ReturnNameEditPart.VISUAL_ID: return getReturnName_5002Parser();
+		case master.diagram.edit.parts.DeclarativePartNameEditPart.VISUAL_ID: return getDeclarativePartName_5003Parser();
+		case master.diagram.edit.parts.ExecutablePartNameEditPart.VISUAL_ID: return getExecutablePartName_5004Parser();
+						}
+		return null;
+	}
+		/**
+ * Utility method that consults ParserService
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(org.eclipse.gmf.runtime.emf.type.core.IElementType type, org.eclipse.emf.ecore.EObject object, String parserHint) {
+		return org.eclipse.gmf.runtime.common.ui.services.parser.ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
+	}
+		/**
+ * @generated
+ */
+	public org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(
+			org.eclipse.core.runtime.IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(master.diagram.part.MasterVisualIDRegistry.getVisualID(vid));
+		}
+		org.eclipse.gmf.runtime.notation.View view =
+				(org.eclipse.gmf.runtime.notation.View) hint.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+		if (view != null) {
+			return getParser(master.diagram.part.MasterVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+		/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (operation instanceof org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) {
+			org.eclipse.core.runtime.IAdaptable hint =
+					((org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) operation).getHint();
+			if (master.diagram.providers.MasterElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	private static class HintAdapter extends org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter {
+
+		/**
+ * @generated
+ */
+		private final org.eclipse.gmf.runtime.emf.type.core.IElementType elementType;
+
+		/**
+ * @generated
+ */
+		public HintAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType type,
+				org.eclipse.emf.ecore.EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+ * @generated
+ */
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+	}

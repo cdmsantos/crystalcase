@@ -1,0 +1,40 @@
+/**
+ */
+package crystal;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Declarative Part</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link crystal.DeclarativePart#getVariables <em>Variables</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see crystal.CrystalPackage#getDeclarativePart()
+ * @model annotation="gmf.node label='name' label.text='Declarative Part' size='150,200' border.color='43,106,215'"
+ * @generated
+ */
+public interface DeclarativePart extends Sections {
+	/**
+	 * Returns the value of the '<em><b>Variables</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.Variables}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Variables</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Variables</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getDeclarativePart_Variables()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Variables> getVariables();
+
+} // DeclarativePart

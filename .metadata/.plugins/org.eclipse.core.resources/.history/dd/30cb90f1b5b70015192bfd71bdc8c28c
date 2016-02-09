@@ -1,0 +1,538 @@
+/*
+ * 
+ */
+package master.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class MasterEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (master.diagram.part.MasterVisualIDRegistry.getVisualID(view)) {
+				
+	case master.diagram.edit.parts.MasterEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.MasterEditPart(view);
+									
+	case master.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ParametersEditPart(view);
+					
+	case master.diagram.edit.parts.ParametersNameEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ParametersNameEditPart(view);
+									
+	case master.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ReturnEditPart(view);
+					
+	case master.diagram.edit.parts.ReturnNameEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ReturnNameEditPart(view);
+									
+	case master.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.DeclarativePartEditPart(view);
+					
+	case master.diagram.edit.parts.DeclarativePartNameEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.DeclarativePartNameEditPart(view);
+									
+	case master.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ExecutablePartEditPart(view);
+					
+	case master.diagram.edit.parts.ExecutablePartNameEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ExecutablePartNameEditPart(view);
+									
+	case master.diagram.edit.parts.DataTypeEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.DataTypeEditPart(view);
+														
+	case master.diagram.edit.parts.CollectionsEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CollectionsEditPart(view);
+														
+	case master.diagram.edit.parts.RecordsEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.RecordsEditPart(view);
+														
+	case master.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CursorEditPart(view);
+														
+	case master.diagram.edit.parts.DataType2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.DataType2EditPart(view);
+														
+	case master.diagram.edit.parts.Collections2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Collections2EditPart(view);
+														
+	case master.diagram.edit.parts.Records2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Records2EditPart(view);
+														
+	case master.diagram.edit.parts.Cursor2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Cursor2EditPart(view);
+														
+	case master.diagram.edit.parts.DataType3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.DataType3EditPart(view);
+														
+	case master.diagram.edit.parts.Collections3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Collections3EditPart(view);
+														
+	case master.diagram.edit.parts.Records3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Records3EditPart(view);
+														
+	case master.diagram.edit.parts.Cursor3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Cursor3EditPart(view);
+														
+	case master.diagram.edit.parts.ExpressionsEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ExpressionsEditPart(view);
+														
+	case master.diagram.edit.parts.ExceptionEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ExceptionEditPart(view);
+														
+	case master.diagram.edit.parts.IfEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.IfEditPart(view);
+														
+	case master.diagram.edit.parts.Expressions2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Expressions2EditPart(view);
+														
+	case master.diagram.edit.parts.Exception2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Exception2EditPart(view);
+														
+	case master.diagram.edit.parts.If2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.If2EditPart(view);
+														
+	case master.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CaseEditPart(view);
+														
+	case master.diagram.edit.parts.Expressions3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Expressions3EditPart(view);
+														
+	case master.diagram.edit.parts.Exception3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Exception3EditPart(view);
+														
+	case master.diagram.edit.parts.If3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.If3EditPart(view);
+														
+	case master.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.InsertEditPart(view);
+														
+	case master.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.UpdateEditPart(view);
+														
+	case master.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.DeleteEditPart(view);
+														
+	case master.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.SelectEditPart(view);
+														
+	case master.diagram.edit.parts.Expressions4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Expressions4EditPart(view);
+														
+	case master.diagram.edit.parts.Exception4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Exception4EditPart(view);
+														
+	case master.diagram.edit.parts.If4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.If4EditPart(view);
+														
+	case master.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.WhileEditPart(view);
+														
+	case master.diagram.edit.parts.Expressions5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Expressions5EditPart(view);
+														
+	case master.diagram.edit.parts.Exception5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Exception5EditPart(view);
+														
+	case master.diagram.edit.parts.If5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.If5EditPart(view);
+														
+	case master.diagram.edit.parts.ForEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ForEditPart(view);
+														
+	case master.diagram.edit.parts.Expressions6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Expressions6EditPart(view);
+														
+	case master.diagram.edit.parts.Exception6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Exception6EditPart(view);
+														
+	case master.diagram.edit.parts.If6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.If6EditPart(view);
+														
+	case master.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.LoopEditPart(view);
+														
+	case master.diagram.edit.parts.Expressions7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Expressions7EditPart(view);
+														
+	case master.diagram.edit.parts.Exception7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Exception7EditPart(view);
+														
+	case master.diagram.edit.parts.If7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.If7EditPart(view);
+														
+	case master.diagram.edit.parts.OpenEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.OpenEditPart(view);
+														
+	case master.diagram.edit.parts.FetchEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.FetchEditPart(view);
+														
+	case master.diagram.edit.parts.CloseEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CloseEditPart(view);
+														
+	case master.diagram.edit.parts.Case2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Case2EditPart(view);
+														
+	case master.diagram.edit.parts.Case3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Case3EditPart(view);
+														
+	case master.diagram.edit.parts.Insert2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Insert2EditPart(view);
+														
+	case master.diagram.edit.parts.Update2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Update2EditPart(view);
+														
+	case master.diagram.edit.parts.Delete2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Delete2EditPart(view);
+														
+	case master.diagram.edit.parts.Select2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Select2EditPart(view);
+														
+	case master.diagram.edit.parts.Case4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Case4EditPart(view);
+														
+	case master.diagram.edit.parts.While2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.While2EditPart(view);
+														
+	case master.diagram.edit.parts.Case5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Case5EditPart(view);
+														
+	case master.diagram.edit.parts.For2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.For2EditPart(view);
+														
+	case master.diagram.edit.parts.Case6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Case6EditPart(view);
+														
+	case master.diagram.edit.parts.Loop2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Loop2EditPart(view);
+														
+	case master.diagram.edit.parts.Insert3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Insert3EditPart(view);
+														
+	case master.diagram.edit.parts.Update3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Update3EditPart(view);
+														
+	case master.diagram.edit.parts.Delete3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Delete3EditPart(view);
+														
+	case master.diagram.edit.parts.Select3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Select3EditPart(view);
+														
+	case master.diagram.edit.parts.Insert4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Insert4EditPart(view);
+														
+	case master.diagram.edit.parts.Update4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Update4EditPart(view);
+														
+	case master.diagram.edit.parts.Delete4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Delete4EditPart(view);
+														
+	case master.diagram.edit.parts.Select4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Select4EditPart(view);
+														
+	case master.diagram.edit.parts.While3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.While3EditPart(view);
+														
+	case master.diagram.edit.parts.Insert5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Insert5EditPart(view);
+														
+	case master.diagram.edit.parts.Update5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Update5EditPart(view);
+														
+	case master.diagram.edit.parts.Delete5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Delete5EditPart(view);
+														
+	case master.diagram.edit.parts.Select5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Select5EditPart(view);
+														
+	case master.diagram.edit.parts.For3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.For3EditPart(view);
+														
+	case master.diagram.edit.parts.Insert6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Insert6EditPart(view);
+														
+	case master.diagram.edit.parts.Update6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Update6EditPart(view);
+														
+	case master.diagram.edit.parts.Delete6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Delete6EditPart(view);
+														
+	case master.diagram.edit.parts.Select6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Select6EditPart(view);
+														
+	case master.diagram.edit.parts.Loop3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Loop3EditPart(view);
+														
+	case master.diagram.edit.parts.While4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.While4EditPart(view);
+														
+	case master.diagram.edit.parts.While5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.While5EditPart(view);
+														
+	case master.diagram.edit.parts.For4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.For4EditPart(view);
+														
+	case master.diagram.edit.parts.While6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.While6EditPart(view);
+														
+	case master.diagram.edit.parts.Loop4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Loop4EditPart(view);
+														
+	case master.diagram.edit.parts.For5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.For5EditPart(view);
+														
+	case master.diagram.edit.parts.For6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.For6EditPart(view);
+														
+	case master.diagram.edit.parts.Loop5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Loop5EditPart(view);
+														
+	case master.diagram.edit.parts.Loop6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Loop6EditPart(view);
+														
+	case master.diagram.edit.parts.Open2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Open2EditPart(view);
+														
+	case master.diagram.edit.parts.Fetch2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Fetch2EditPart(view);
+														
+	case master.diagram.edit.parts.Close2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Close2EditPart(view);
+														
+	case master.diagram.edit.parts.Open3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Open3EditPart(view);
+														
+	case master.diagram.edit.parts.Fetch3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Fetch3EditPart(view);
+														
+	case master.diagram.edit.parts.Close3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Close3EditPart(view);
+														
+	case master.diagram.edit.parts.Open4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Open4EditPart(view);
+														
+	case master.diagram.edit.parts.Fetch4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Fetch4EditPart(view);
+														
+	case master.diagram.edit.parts.Close4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Close4EditPart(view);
+														
+	case master.diagram.edit.parts.Open5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Open5EditPart(view);
+														
+	case master.diagram.edit.parts.Fetch5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Fetch5EditPart(view);
+														
+	case master.diagram.edit.parts.Close5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Close5EditPart(view);
+														
+	case master.diagram.edit.parts.Open6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Open6EditPart(view);
+														
+	case master.diagram.edit.parts.Fetch6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Fetch6EditPart(view);
+														
+	case master.diagram.edit.parts.Close6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Close6EditPart(view);
+														
+	case master.diagram.edit.parts.Case7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Case7EditPart(view);
+														
+	case master.diagram.edit.parts.Insert7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Insert7EditPart(view);
+														
+	case master.diagram.edit.parts.Update7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Update7EditPart(view);
+														
+	case master.diagram.edit.parts.Delete7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Delete7EditPart(view);
+														
+	case master.diagram.edit.parts.Select7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Select7EditPart(view);
+														
+	case master.diagram.edit.parts.While7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.While7EditPart(view);
+														
+	case master.diagram.edit.parts.For7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.For7EditPart(view);
+														
+	case master.diagram.edit.parts.Loop7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Loop7EditPart(view);
+														
+	case master.diagram.edit.parts.Open7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Open7EditPart(view);
+														
+	case master.diagram.edit.parts.Fetch7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Fetch7EditPart(view);
+														
+	case master.diagram.edit.parts.Close7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.Close7EditPart(view);
+													
+	case master.diagram.edit.parts.ParametersParametersVariablesCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ParametersParametersVariablesCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.ReturnReturnVariablesCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ReturnReturnVariablesCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.DeclarativePartDeclarativePartVariablesCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.DeclarativePartDeclarativePartVariablesCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.ExecutablePartExecutablePartObjectsCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ExecutablePartExecutablePartObjectsCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.IfIfObjectsCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.IfIfObjectsCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.IfIfObjectsCompartment2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.IfIfObjectsCompartment2EditPart(view);
+
+	case master.diagram.edit.parts.CaseCaseObjectsCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CaseCaseObjectsCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.IfIfObjectsCompartment3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.IfIfObjectsCompartment3EditPart(view);
+
+	case master.diagram.edit.parts.SelectSelectObjectsCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.SelectSelectObjectsCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.IfIfObjectsCompartment4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.IfIfObjectsCompartment4EditPart(view);
+
+	case master.diagram.edit.parts.WhileWhileObjectsCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.WhileWhileObjectsCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.IfIfObjectsCompartment5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.IfIfObjectsCompartment5EditPart(view);
+
+	case master.diagram.edit.parts.ForForObjectsCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ForForObjectsCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.IfIfObjectsCompartment6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.IfIfObjectsCompartment6EditPart(view);
+
+	case master.diagram.edit.parts.LoopLoopObjectsCompartmentEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.LoopLoopObjectsCompartmentEditPart(view);
+
+	case master.diagram.edit.parts.IfIfObjectsCompartment7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.IfIfObjectsCompartment7EditPart(view);
+
+	case master.diagram.edit.parts.CaseCaseObjectsCompartment2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CaseCaseObjectsCompartment2EditPart(view);
+
+	case master.diagram.edit.parts.CaseCaseObjectsCompartment3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CaseCaseObjectsCompartment3EditPart(view);
+
+	case master.diagram.edit.parts.SelectSelectObjectsCompartment2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.SelectSelectObjectsCompartment2EditPart(view);
+
+	case master.diagram.edit.parts.CaseCaseObjectsCompartment4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CaseCaseObjectsCompartment4EditPart(view);
+
+	case master.diagram.edit.parts.WhileWhileObjectsCompartment2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.WhileWhileObjectsCompartment2EditPart(view);
+
+	case master.diagram.edit.parts.CaseCaseObjectsCompartment5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CaseCaseObjectsCompartment5EditPart(view);
+
+	case master.diagram.edit.parts.ForForObjectsCompartment2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ForForObjectsCompartment2EditPart(view);
+
+	case master.diagram.edit.parts.CaseCaseObjectsCompartment6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CaseCaseObjectsCompartment6EditPart(view);
+
+	case master.diagram.edit.parts.LoopLoopObjectsCompartment2EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.LoopLoopObjectsCompartment2EditPart(view);
+
+	case master.diagram.edit.parts.SelectSelectObjectsCompartment3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.SelectSelectObjectsCompartment3EditPart(view);
+
+	case master.diagram.edit.parts.SelectSelectObjectsCompartment4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.SelectSelectObjectsCompartment4EditPart(view);
+
+	case master.diagram.edit.parts.WhileWhileObjectsCompartment3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.WhileWhileObjectsCompartment3EditPart(view);
+
+	case master.diagram.edit.parts.SelectSelectObjectsCompartment5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.SelectSelectObjectsCompartment5EditPart(view);
+
+	case master.diagram.edit.parts.ForForObjectsCompartment3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ForForObjectsCompartment3EditPart(view);
+
+	case master.diagram.edit.parts.SelectSelectObjectsCompartment6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.SelectSelectObjectsCompartment6EditPart(view);
+
+	case master.diagram.edit.parts.LoopLoopObjectsCompartment3EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.LoopLoopObjectsCompartment3EditPart(view);
+
+	case master.diagram.edit.parts.WhileWhileObjectsCompartment4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.WhileWhileObjectsCompartment4EditPart(view);
+
+	case master.diagram.edit.parts.WhileWhileObjectsCompartment5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.WhileWhileObjectsCompartment5EditPart(view);
+
+	case master.diagram.edit.parts.ForForObjectsCompartment4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ForForObjectsCompartment4EditPart(view);
+
+	case master.diagram.edit.parts.WhileWhileObjectsCompartment6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.WhileWhileObjectsCompartment6EditPart(view);
+
+	case master.diagram.edit.parts.LoopLoopObjectsCompartment4EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.LoopLoopObjectsCompartment4EditPart(view);
+
+	case master.diagram.edit.parts.ForForObjectsCompartment5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ForForObjectsCompartment5EditPart(view);
+
+	case master.diagram.edit.parts.ForForObjectsCompartment6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ForForObjectsCompartment6EditPart(view);
+
+	case master.diagram.edit.parts.LoopLoopObjectsCompartment5EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.LoopLoopObjectsCompartment5EditPart(view);
+
+	case master.diagram.edit.parts.LoopLoopObjectsCompartment6EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.LoopLoopObjectsCompartment6EditPart(view);
+
+	case master.diagram.edit.parts.CaseCaseObjectsCompartment7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.CaseCaseObjectsCompartment7EditPart(view);
+
+	case master.diagram.edit.parts.SelectSelectObjectsCompartment7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.SelectSelectObjectsCompartment7EditPart(view);
+
+	case master.diagram.edit.parts.WhileWhileObjectsCompartment7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.WhileWhileObjectsCompartment7EditPart(view);
+
+	case master.diagram.edit.parts.ForForObjectsCompartment7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.ForForObjectsCompartment7EditPart(view);
+
+	case master.diagram.edit.parts.LoopLoopObjectsCompartment7EditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.LoopLoopObjectsCompartment7EditPart(view);
+									
+	case master.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+		return new master.diagram.edit.parts.TransitionEditPart(view);
+					
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

@@ -1,0 +1,25 @@
+context Subprograms {
+	constraint ElementHasName {
+		check{
+			if(not(self.eclass().name ="AssociativeEntity") and not(self.name.isDefined())){
+				return false;
+			}
+			return true;
+		}
+		message : '(RG01) An element of '+self.eclass().name + ' type must have a name,\n because an element with no name results in a "well-formed"\n problem since it is  not possible to identify it.'
+		fix {
+			title : 'Enter the name of ' + self.eClass().name + '.'
+			do {
+				var nome : String;
+				nome = UserInput.prompt('Enter the name:');
+				if (nome.isDefined()) self.name := nome;
+			}
+		}
+	}
+	
+	constraint NameIsValid {
+		guard : self.satisfies('ElementHasName')
+		check : not(("#")->isSubstringOf(self.name)) or not(("-")->isSubstringOf(self.name)) or not(("$")->isSubstringOf(self.name))
+		message : '(RG02) An element of '+self.eclass().name + ' type must have a name started by a letter followed by\n other letters, numbers or underlines, because an element with special characters\n can result in a "well-formed" problem since it is can yield grammar conflicts.'
+	}
+}

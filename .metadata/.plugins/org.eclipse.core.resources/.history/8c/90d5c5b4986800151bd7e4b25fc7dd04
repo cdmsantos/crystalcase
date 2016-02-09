@@ -1,0 +1,373 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers;
+
+import java.util.HashSet;
+import java.util.IdentityHashMap;
+import java.util.Map;
+import java.util.Set;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.emf.ecore.ENamedElement;
+import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages;
+import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.graphics.Image;
+
+import filesystem.FilesystemPackage;
+import filesystem.diagram.edit.parts.CaseEditPart;
+import filesystem.diagram.edit.parts.CursorEditPart;
+import filesystem.diagram.edit.parts.Data_Type2EditPart;
+import filesystem.diagram.edit.parts.Data_Type3EditPart;
+import filesystem.diagram.edit.parts.Data_TypeEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartEditPart;
+import filesystem.diagram.edit.parts.DeleteEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommand2EditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartEditPart;
+import filesystem.diagram.edit.parts.FilesystemEditPart;
+import filesystem.diagram.edit.parts.ForEditPart;
+import filesystem.diagram.edit.parts.IfEditPart;
+import filesystem.diagram.edit.parts.InsertEditPart;
+import filesystem.diagram.edit.parts.LoopEditPart;
+import filesystem.diagram.edit.parts.OutputEditPart;
+import filesystem.diagram.edit.parts.SelectEditPart;
+import filesystem.diagram.edit.parts.SyncEditPart;
+import filesystem.diagram.edit.parts.UpdateEditPart;
+import filesystem.diagram.edit.parts.WhileEditPart;
+import filesystem.diagram.part.FilesystemDiagramEditorPlugin;
+
+/**
+ * @generated
+ */
+public class FilesystemElementTypes {
+
+	/**
+	 * @generated
+	 */
+	private FilesystemElementTypes() {
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Map<IElementType, ENamedElement> elements;
+
+	/**
+	 * @generated
+	 */
+	private static DiagramElementTypeImages elementTypeImages = new DiagramElementTypeImages(
+			FilesystemDiagramEditorPlugin.getInstance()
+					.getItemProvidersAdapterFactory());
+
+	/**
+	 * @generated
+	 */
+	private static Set<IElementType> KNOWN_ELEMENT_TYPES;
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Filesystem_1000 = getElementType("master.project.diagram.Filesystem_1000"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Data_Type_2001 = getElementType("master.project.diagram.Data_Type_2001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType If_2002 = getElementType("master.project.diagram.If_2002"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Case_2003 = getElementType("master.project.diagram.Case_2003"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Insert_2004 = getElementType("master.project.diagram.Insert_2004"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Update_2005 = getElementType("master.project.diagram.Update_2005"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Delete_2006 = getElementType("master.project.diagram.Delete_2006"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Output_2007 = getElementType("master.project.diagram.Output_2007"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Select_2008 = getElementType("master.project.diagram.Select_2008"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_2009 = getElementType("master.project.diagram.Cursor_2009"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType While_2010 = getElementType("master.project.diagram.While_2010"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType For_2011 = getElementType("master.project.diagram.For_2011"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Loop_2012 = getElementType("master.project.diagram.Loop_2012"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType ExceptionCommand_2013 = getElementType("master.project.diagram.ExceptionCommand_2013"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType DeclarativePart_2014 = getElementType("master.project.diagram.DeclarativePart_2014"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType ExecutablePart_2015 = getElementType("master.project.diagram.ExecutablePart_2015"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType ExceptionPart_2016 = getElementType("master.project.diagram.ExceptionPart_2016"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Data_Type_3001 = getElementType("master.project.diagram.Data_Type_3001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Data_Type_3002 = getElementType("master.project.diagram.Data_Type_3002"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType ExceptionCommand_3003 = getElementType("master.project.diagram.ExceptionCommand_3003"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Sync_4001 = getElementType("master.project.diagram.Sync_4001"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static ImageDescriptor getImageDescriptor(ENamedElement element) {
+		return elementTypeImages.getImageDescriptor(element);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static Image getImage(ENamedElement element) {
+		return elementTypeImages.getImage(element);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static ImageDescriptor getImageDescriptor(IAdaptable hint) {
+		return getImageDescriptor(getElement(hint));
+	}
+
+	/**
+	 * @generated
+	 */
+	public static Image getImage(IAdaptable hint) {
+		return getImage(getElement(hint));
+	}
+
+	/**
+	 * Returns 'type' of the ecore object associated with the hint.
+	 * 
+	 * @generated
+	 */
+	public static ENamedElement getElement(IAdaptable hint) {
+		Object type = hint.getAdapter(IElementType.class);
+		if (elements == null) {
+			elements = new IdentityHashMap<IElementType, ENamedElement>();
+
+			elements.put(Filesystem_1000,
+					FilesystemPackage.eINSTANCE.getFilesystem());
+
+			elements.put(Data_Type_2001,
+					FilesystemPackage.eINSTANCE.getData_Type());
+
+			elements.put(If_2002, FilesystemPackage.eINSTANCE.getIf());
+
+			elements.put(Case_2003, FilesystemPackage.eINSTANCE.getCase());
+
+			elements.put(Insert_2004, FilesystemPackage.eINSTANCE.getInsert());
+
+			elements.put(Update_2005, FilesystemPackage.eINSTANCE.getUpdate());
+
+			elements.put(Delete_2006, FilesystemPackage.eINSTANCE.getDelete());
+
+			elements.put(Output_2007, FilesystemPackage.eINSTANCE.getOutput());
+
+			elements.put(Select_2008, FilesystemPackage.eINSTANCE.getSelect());
+
+			elements.put(Cursor_2009, FilesystemPackage.eINSTANCE.getCursor());
+
+			elements.put(While_2010, FilesystemPackage.eINSTANCE.getWhile());
+
+			elements.put(For_2011, FilesystemPackage.eINSTANCE.getFor());
+
+			elements.put(Loop_2012, FilesystemPackage.eINSTANCE.getLoop());
+
+			elements.put(ExceptionCommand_2013,
+					FilesystemPackage.eINSTANCE.getExceptionCommand());
+
+			elements.put(DeclarativePart_2014,
+					FilesystemPackage.eINSTANCE.getDeclarativePart());
+
+			elements.put(ExecutablePart_2015,
+					FilesystemPackage.eINSTANCE.getExecutablePart());
+
+			elements.put(ExceptionPart_2016,
+					FilesystemPackage.eINSTANCE.getExceptionPart());
+
+			elements.put(Data_Type_3001,
+					FilesystemPackage.eINSTANCE.getData_Type());
+
+			elements.put(Data_Type_3002,
+					FilesystemPackage.eINSTANCE.getData_Type());
+
+			elements.put(ExceptionCommand_3003,
+					FilesystemPackage.eINSTANCE.getExceptionCommand());
+
+			elements.put(Sync_4001, FilesystemPackage.eINSTANCE.getSync());
+		}
+		return (ENamedElement) elements.get(type);
+	}
+
+	/**
+	 * @generated
+	 */
+	private static IElementType getElementType(String id) {
+		return ElementTypeRegistry.getInstance().getType(id);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static boolean isKnownElementType(IElementType elementType) {
+		if (KNOWN_ELEMENT_TYPES == null) {
+			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
+			KNOWN_ELEMENT_TYPES.add(Filesystem_1000);
+			KNOWN_ELEMENT_TYPES.add(Data_Type_2001);
+			KNOWN_ELEMENT_TYPES.add(If_2002);
+			KNOWN_ELEMENT_TYPES.add(Case_2003);
+			KNOWN_ELEMENT_TYPES.add(Insert_2004);
+			KNOWN_ELEMENT_TYPES.add(Update_2005);
+			KNOWN_ELEMENT_TYPES.add(Delete_2006);
+			KNOWN_ELEMENT_TYPES.add(Output_2007);
+			KNOWN_ELEMENT_TYPES.add(Select_2008);
+			KNOWN_ELEMENT_TYPES.add(Cursor_2009);
+			KNOWN_ELEMENT_TYPES.add(While_2010);
+			KNOWN_ELEMENT_TYPES.add(For_2011);
+			KNOWN_ELEMENT_TYPES.add(Loop_2012);
+			KNOWN_ELEMENT_TYPES.add(ExceptionCommand_2013);
+			KNOWN_ELEMENT_TYPES.add(DeclarativePart_2014);
+			KNOWN_ELEMENT_TYPES.add(ExecutablePart_2015);
+			KNOWN_ELEMENT_TYPES.add(ExceptionPart_2016);
+			KNOWN_ELEMENT_TYPES.add(Data_Type_3001);
+			KNOWN_ELEMENT_TYPES.add(Data_Type_3002);
+			KNOWN_ELEMENT_TYPES.add(ExceptionCommand_3003);
+			KNOWN_ELEMENT_TYPES.add(Sync_4001);
+		}
+		return KNOWN_ELEMENT_TYPES.contains(elementType);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static IElementType getElementType(int visualID) {
+		switch (visualID) {
+		case FilesystemEditPart.VISUAL_ID:
+			return Filesystem_1000;
+		case Data_TypeEditPart.VISUAL_ID:
+			return Data_Type_2001;
+		case IfEditPart.VISUAL_ID:
+			return If_2002;
+		case CaseEditPart.VISUAL_ID:
+			return Case_2003;
+		case InsertEditPart.VISUAL_ID:
+			return Insert_2004;
+		case UpdateEditPart.VISUAL_ID:
+			return Update_2005;
+		case DeleteEditPart.VISUAL_ID:
+			return Delete_2006;
+		case OutputEditPart.VISUAL_ID:
+			return Output_2007;
+		case SelectEditPart.VISUAL_ID:
+			return Select_2008;
+		case CursorEditPart.VISUAL_ID:
+			return Cursor_2009;
+		case WhileEditPart.VISUAL_ID:
+			return While_2010;
+		case ForEditPart.VISUAL_ID:
+			return For_2011;
+		case LoopEditPart.VISUAL_ID:
+			return Loop_2012;
+		case ExceptionCommandEditPart.VISUAL_ID:
+			return ExceptionCommand_2013;
+		case DeclarativePartEditPart.VISUAL_ID:
+			return DeclarativePart_2014;
+		case ExecutablePartEditPart.VISUAL_ID:
+			return ExecutablePart_2015;
+		case ExceptionPartEditPart.VISUAL_ID:
+			return ExceptionPart_2016;
+		case Data_Type2EditPart.VISUAL_ID:
+			return Data_Type_3001;
+		case Data_Type3EditPart.VISUAL_ID:
+			return Data_Type_3002;
+		case ExceptionCommand2EditPart.VISUAL_ID:
+			return ExceptionCommand_3003;
+		case SyncEditPart.VISUAL_ID:
+			return Sync_4001;
+		}
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramElementTypes TYPED_INSTANCE = new DiagramElementTypes(
+			elementTypeImages) {
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public boolean isKnownElementType(IElementType elementType) {
+			return filesystem.diagram.providers.FilesystemElementTypes
+					.isKnownElementType(elementType);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public IElementType getElementTypeForVisualId(int visualID) {
+			return filesystem.diagram.providers.FilesystemElementTypes
+					.getElementType(visualID);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public ENamedElement getDefiningNamedElement(
+				IAdaptable elementTypeAdapter) {
+			return filesystem.diagram.providers.FilesystemElementTypes
+					.getElement(elementTypeAdapter);
+		}
+	};
+
+}

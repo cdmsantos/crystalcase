@@ -1,0 +1,256 @@
+/**
+ */
+package filesystem;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Executable Part</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link filesystem.ExecutablePart#getIfs <em>Ifs</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getCases <em>Cases</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getInserts <em>Inserts</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getUpdates <em>Updates</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getDeletes <em>Deletes</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getSelects <em>Selects</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getOutuputs <em>Outuputs</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getCursors <em>Cursors</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getWhiles <em>Whiles</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getFors <em>Fors</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getLoops <em>Loops</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getExceptions <em>Exceptions</em>}</li>
+ *   <li>{@link filesystem.ExecutablePart#getNameExecutablePart <em>Name Executable Part</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see filesystem.FilesystemPackage#getExecutablePart()
+ * @model annotation="gmf.node label='nameExecutablePart' size='450,450' figure='rectangle' border.color='158,25,191' border.style='dash'"
+ * @generated
+ */
+public interface ExecutablePart extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Ifs</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.If}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ifs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ifs</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Ifs()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<If> getIfs();
+
+	/**
+	 * Returns the value of the '<em><b>Cases</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Case}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cases</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cases</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Cases()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Case> getCases();
+
+	/**
+	 * Returns the value of the '<em><b>Inserts</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Insert}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Inserts</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inserts</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Inserts()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Insert> getInserts();
+
+	/**
+	 * Returns the value of the '<em><b>Updates</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Update}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Updates</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Updates</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Updates()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Update> getUpdates();
+
+	/**
+	 * Returns the value of the '<em><b>Deletes</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Delete}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Deletes</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Deletes</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Deletes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Delete> getDeletes();
+
+	/**
+	 * Returns the value of the '<em><b>Selects</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Select}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Selects</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Selects</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Selects()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Select> getSelects();
+
+	/**
+	 * Returns the value of the '<em><b>Outuputs</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Output}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Outuputs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Outuputs</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Outuputs()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Output> getOutuputs();
+
+	/**
+	 * Returns the value of the '<em><b>Cursors</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Cursor}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cursors</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cursors</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Cursors()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Cursor> getCursors();
+
+	/**
+	 * Returns the value of the '<em><b>Whiles</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.While}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Whiles</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Whiles</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Whiles()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<While> getWhiles();
+
+	/**
+	 * Returns the value of the '<em><b>Fors</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.For}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fors</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fors</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Fors()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<For> getFors();
+
+	/**
+	 * Returns the value of the '<em><b>Loops</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Loop}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Loops</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Loops</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Loops()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Loop> getLoops();
+
+	/**
+	 * Returns the value of the '<em><b>Exceptions</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Exception}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Exceptions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exceptions</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getExecutablePart_Exceptions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<filesystem.Exception> getExceptions();
+
+	/**
+	 * Returns the value of the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name Executable Part</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name Executable Part</em>' attribute.
+	 * @see #setNameExecutablePart(String)
+	 * @see filesystem.FilesystemPackage#getExecutablePart_NameExecutablePart()
+	 * @model
+	 * @generated
+	 */
+	String getNameExecutablePart();
+
+	/**
+	 * Sets the value of the '{@link filesystem.ExecutablePart#getNameExecutablePart <em>Name Executable Part</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Executable Part</em>' attribute.
+	 * @see #getNameExecutablePart()
+	 * @generated
+	 */
+	void setNameExecutablePart(String value);
+
+} // ExecutablePart

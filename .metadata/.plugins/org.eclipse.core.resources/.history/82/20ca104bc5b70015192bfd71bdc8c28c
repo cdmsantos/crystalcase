@@ -1,0 +1,28 @@
+/*
+ * 
+ */
+package master.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ElementInitializers {
+
+	protected ElementInitializers() {
+		// use #getInstance to access cached instance
+	} 
+
+			
+	
+	
+	/**
+ * @generated
+ */
+	public static ElementInitializers getInstance() {
+		ElementInitializers cached = master.diagram.part.MasterDiagramEditorPlugin.getInstance().getElementInitializers();
+		if (cached == null) {
+			master.diagram.part.MasterDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
+		}
+		return cached;
+	}
+}

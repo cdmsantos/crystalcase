@@ -1,0 +1,170 @@
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
+
+import filesystem.Filesystem;
+import filesystem.Sections;
+import filesystem.diagram.edit.parts.FilesystemEditPart;
+import filesystem.diagram.edit.parts.SectionsEditPart;
+
+/**
+ * @generated
+ */
+public class FilesystemDiagramUpdater {
+
+	/**
+	 * @generated
+	 */
+	public static boolean isShortcutOrphaned(View view) {
+		return !view.isSetElement() || view.getElement() == null
+				|| view.getElement().eIsProxy();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000SemanticChildren(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getFilesystem_1000SemanticChildren(
+			View view) {
+		if (!view.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Filesystem modelElement = (Filesystem) view.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getSections().iterator(); it
+				.hasNext();) {
+			Sections childElement = (Sections) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == SectionsEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000ContainedLinks(view);
+		case SectionsEditPart.VISUAL_ID:
+			return getSections_2001ContainedLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case SectionsEditPart.VISUAL_ID:
+			return getSections_2001IncomingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case SectionsEditPart.VISUAL_ID:
+			return getSections_2001OutgoingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFilesystem_1000ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSections_2001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSections_2001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSections_2001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramUpdater TYPED_INSTANCE = new DiagramUpdater() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+			return FilesystemDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+			return FilesystemDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+			return FilesystemDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+			return FilesystemDiagramUpdater.getOutgoingLinks(view);
+		}
+	};
+
+}

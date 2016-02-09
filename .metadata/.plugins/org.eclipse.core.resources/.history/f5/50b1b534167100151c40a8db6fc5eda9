@@ -1,0 +1,25 @@
+	/*
+ * 
+ */
+package filesystem.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class ShortcutTargetItemSemanticEditPolicy extends filesystem.diagram.edit.policies.FilesystemBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public ShortcutTargetItemSemanticEditPolicy() {
+				super(filesystem.diagram.providers.FilesystemElementTypes.ShortcutTarget_4002);
+	}
+
+			/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getDestroyReferenceCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest req) {
+		return getGEFWrapper(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(req));
+	}
+		
+	}

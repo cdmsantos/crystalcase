@@ -1,0 +1,44 @@
+package Product;
+
+/**
+ * Class ProductInterface is the interface of the Product class.
+ **/
+public class ProductVariables {
+	
+	//method for check every word in the product description
+	//to see if it's an exempt or not.
+	public static boolean CheckIfIsExempt(String[] product) {
+		for(int i = 0; i < product.length; i++) {
+			if(product[i].toString().equals(ExemptedProducts.BOOK) || 
+			   product[i].toString().equals(ExemptedProducts.BOOKS) ||
+			   product[i].toString().equals(ExemptedProducts.CHOCOLATE) ||
+			   product[i].toString().equals(ExemptedProducts.CHOCOLATES) ||
+			   product[i].toString().equals(ExemptedProducts.FOOD) ||
+			   product[i].toString().equals(ExemptedProducts.MEDICAL) ||
+			   product[i].toString().equals(ExemptedProducts.PILLS))
+				return true;
+		}
+		return false;
+	}
+	
+	//method to check if the word 'imported' is present
+	//in the product description to see if it's an imported product
+	public static boolean CheckIfIsImported(String[] product) {
+		for(int i = 0; i < product.length; i++) {
+			if(product[i].toString().equals("imported"))
+				return true;
+		}
+		return false;
+	}
+	
+	//method to get the description without the quantity and the price
+	public static String GetDescription(String[] product) {
+		String description = new String();
+		for(int i = 1; i < product.length-2; i++) {
+			description += product[i] + " ";
+		}
+		
+		return description;
+	}
+
+}

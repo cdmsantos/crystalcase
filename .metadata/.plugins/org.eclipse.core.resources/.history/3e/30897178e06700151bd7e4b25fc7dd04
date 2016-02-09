@@ -1,0 +1,485 @@
+	/*
+ * 
+ */
+package filesystem.diagram.part;
+
+	/**
+ * This registry is used to determine which type of visual object should be
+ * created for the corresponding Diagram, Node, ChildNode or Link represented
+ * by a domain model object.
+ * 
+ * @generated
+ */
+public class FilesystemVisualIDRegistry {
+
+		/**
+ * @generated
+ */
+	private static final String DEBUG_KEY = "master.project.diagram/debug/visualID";  //$NON-NLS-1$
+
+		/**
+ * @generated
+ */
+public static int getVisualID(org.eclipse.gmf.runtime.notation.View view) {
+	if (view instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+		if (filesystem.diagram.edit.parts.FilesystemEditPart.MODEL_ID.equals(view.getType())) {
+			return filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID;
+		} else {
+			return -1;
+		}
+	}
+	return filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view.getType());
+}
+	
+		/**
+ * @generated
+ */
+public static String getModelID(org.eclipse.gmf.runtime.notation.View view) {
+	org.eclipse.gmf.runtime.notation.View diagram = view.getDiagram();
+	while (view != diagram) {
+		org.eclipse.emf.ecore.EAnnotation annotation = view.getEAnnotation("Shortcut");  //$NON-NLS-1$
+		if (annotation != null) {
+			return (String) annotation.getDetails().get("modelID");  //$NON-NLS-1$
+		}
+		view = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+	}
+	return diagram != null ? diagram.getType() : null;
+}
+	
+		/**
+ * @generated
+ */
+public static int getVisualID(String type) {
+	try {
+		return Integer.parseInt(type);
+	} catch (NumberFormatException e) {
+		if (Boolean.TRUE.toString().equalsIgnoreCase(org.eclipse.core.runtime.Platform.getDebugOption(DEBUG_KEY))) {
+			filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Unable to parse view type as a visualID number: " + type);
+		}
+	}
+	return -1;
+}
+
+	/**
+ * @generated
+ */
+public static String getType(int visualID) {
+	return Integer.toString(visualID);
+}
+	
+		/**
+ * @generated
+ */
+public static int getDiagramVisualID(org.eclipse.emf.ecore.EObject domainElement) {
+	if (domainElement == null) {
+		return -1;
+	}
+	if (filesystem.FilesystemPackage.eINSTANCE.getFilesystem().isSuperTypeOf(domainElement.eClass()) && isDiagram((filesystem.Filesystem) domainElement)) {
+	return filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID;
+}
+	return -1;
+}
+	
+		/**
+ * @generated
+ */
+public static int getNodeVisualID(org.eclipse.gmf.runtime.notation.View containerView, org.eclipse.emf.ecore.EObject domainElement) {
+	if (domainElement == null) {
+		return -1;
+	}
+	String containerModelID = filesystem.diagram.part.FilesystemVisualIDRegistry.getModelID(containerView);
+	if (!filesystem.diagram.edit.parts.FilesystemEditPart.MODEL_ID.equals(containerModelID) && !"filesystem".equals(containerModelID)) {  //$NON-NLS-1$
+		return -1;
+	}
+	int containerVisualID;
+	if (filesystem.diagram.edit.parts.FilesystemEditPart.MODEL_ID.equals(containerModelID)) {
+		containerVisualID = filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(containerView);
+	} else {
+		if (containerView instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+			containerVisualID = filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID;		
+		} else {
+			return -1;
+		}
+	}
+	switch (containerVisualID) {
+			case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:
+	if (filesystem.FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.Data_TypeEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.IfEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.CaseEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.InsertEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.UpdateEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.DeleteEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.CursorEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.WhileEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.ForEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.LoopEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getExceptionCommand().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.ExceptionCommandEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getParameterIn().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getParameterOut().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getParameterInOut().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getDeclarativePart().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getExecutablePart().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getExceptionPart().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.ExceptionPartEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getParameters().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID;
+}
+if (filesystem.FilesystemPackage.eINSTANCE.getReturn().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID;
+}
+	break;
+																							}
+	return -1;
+}
+	
+		/**
+ * @generated
+ */
+public static boolean canCreateNode(org.eclipse.gmf.runtime.notation.View containerView, int nodeVisualID) {
+	String containerModelID = filesystem.diagram.part.FilesystemVisualIDRegistry.getModelID(containerView);
+	if (!filesystem.diagram.edit.parts.FilesystemEditPart.MODEL_ID.equals(containerModelID) && !"filesystem".equals(containerModelID)) {  //$NON-NLS-1$
+		return false;
+	}
+	int containerVisualID;
+	if (filesystem.diagram.edit.parts.FilesystemEditPart.MODEL_ID.equals(containerModelID)) {
+		containerVisualID = filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(containerView);
+	} else {
+		if (containerView instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+			containerVisualID = filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID;		
+		} else {
+			return false;
+		}
+	}
+	switch (containerVisualID) {
+		case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.Data_TypeEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.IfEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.CaseEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.InsertEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.UpdateEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.DeleteEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.CursorEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.WhileEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.ForEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.LoopEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.ExceptionCommandEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.ExceptionPartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.Data_TypeEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.Data_TypeNameReturnEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.IfEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.IfNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.CaseNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.InsertNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.UpdateNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.DeleteNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.OutputNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.SelectNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.CursorNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.WhileNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.ForEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.ForNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.LoopNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.ExceptionCommandEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.ExceptionCommandNameExceptionPartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.ParameterInNameParametersEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.ParameterOutNameParametersEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.ParameterInOutNameParametersEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.DeclarativePartNameDeclarativePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.ExecutablePartNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.ExceptionPartEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.ExceptionPartNameExceptionPartEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.ParametersNameParametersEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+	if (filesystem.diagram.edit.parts.ReturnNameReturnEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+			}
+	return false;
+}
+	
+		/**
+ * @generated
+ */
+public static int getLinkWithClassVisualID(org.eclipse.emf.ecore.EObject domainElement) {
+	if (domainElement == null) {
+		return -1;
+	}
+	if (filesystem.FilesystemPackage.eINSTANCE.getSync().isSuperTypeOf(domainElement.eClass())) {
+	return filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID;
+}
+	return -1;
+}
+	
+				/**
+ * User can change implementation of this method to handle some specific
+ * situations not covered by default logic.
+ * 
+ * @generated
+ */
+private static boolean isDiagram(filesystem.Filesystem element) {
+	return true;
+}
+	
+		
+	
+	/**
+ * @generated
+ */
+	public static boolean checkNodeVisualID(org.eclipse.gmf.runtime.notation.View containerView, org.eclipse.emf.ecore.EObject domainElement, int candidate) {
+		if (candidate == -1){
+			//unrecognized id is always bad
+			return false;
+		}
+				int basic = getNodeVisualID(containerView, domainElement);
+		return basic == candidate;
+	}
+
+		/**
+ * @generated
+ */
+	public static boolean isCompartmentVisualID(int visualID) {
+				return false;
+	}
+
+		/**
+ * @generated
+ */
+	public static boolean isSemanticLeafVisualID(int visualID) {
+		switch (visualID) {
+						case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:
+				return false;
+									case filesystem.diagram.edit.parts.Data_TypeEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.IfEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.CaseEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.InsertEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.UpdateEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.DeleteEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.CursorEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.WhileEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.ForEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.LoopEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.ExceptionCommandEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.ExceptionPartEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID:case filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+				return true;
+									default:
+				break;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.structure.DiagramStructure TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.structure.DiagramStructure() {
+		/**
+ * @generated
+ */
+		@Override
+
+		public int getVisualID(org.eclipse.gmf.runtime.notation.View view) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public String getModelID(org.eclipse.gmf.runtime.notation.View view) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry.getModelID(view);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public int getNodeVisualID(org.eclipse.gmf.runtime.notation.View containerView, org.eclipse.emf.ecore.EObject domainElement) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry.getNodeVisualID(containerView, domainElement);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean checkNodeVisualID(org.eclipse.gmf.runtime.notation.View containerView, org.eclipse.emf.ecore.EObject domainElement, int candidate) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry.checkNodeVisualID(containerView, domainElement, candidate);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isCompartmentVisualID(int visualID) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry.isCompartmentVisualID(visualID);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isSemanticLeafVisualID(int visualID) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry.isSemanticLeafVisualID(visualID);
+		}
+	};
+
+	}

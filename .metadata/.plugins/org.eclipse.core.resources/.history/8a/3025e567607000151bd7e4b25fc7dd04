@@ -1,0 +1,92 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class FilesystemEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view)) {
+				
+	case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FilesystemEditPart(view);
+									
+	case filesystem.diagram.edit.parts.DriveEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveEditPart(view);
+					
+	case filesystem.diagram.edit.parts.DriveNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.Drive2EditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.Drive2EditPart(view);
+					
+	case filesystem.diagram.edit.parts.DriveName2EditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveName2EditPart(view);
+									
+	case filesystem.diagram.edit.parts.FolderEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FolderEditPart(view);
+					
+	case filesystem.diagram.edit.parts.FolderNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FolderNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ShortcutEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ShortcutEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ShortcutNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ShortcutNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.FileEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FileEditPart(view);
+					
+	case filesystem.diagram.edit.parts.FileNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FileNameEditPart(view);
+								
+	case filesystem.diagram.edit.parts.DriveDriveContentsCompartmentEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveDriveContentsCompartmentEditPart(view);
+
+	case filesystem.diagram.edit.parts.DriveDriveContentsCompartment2EditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveDriveContentsCompartment2EditPart(view);
+
+	case filesystem.diagram.edit.parts.FolderFolderContentsCompartmentEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FolderFolderContentsCompartmentEditPart(view);
+									
+	case filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.SyncEditPart(view);
+					
+									
+	case filesystem.diagram.edit.parts.ShortcutTargetEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ShortcutTargetEditPart(view);
+					
+	case filesystem.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.WrappingLabelEditPart(view);
+
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

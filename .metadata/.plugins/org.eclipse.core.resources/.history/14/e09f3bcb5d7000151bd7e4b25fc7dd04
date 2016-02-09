@@ -1,0 +1,332 @@
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
+
+import filesystem.Data_Type;
+import filesystem.Filesystem;
+import filesystem.Parameters;
+import filesystem.Return;
+import filesystem.diagram.edit.parts.Data_TypeEditPart;
+import filesystem.diagram.edit.parts.FilesystemEditPart;
+import filesystem.diagram.edit.parts.ParametersEditPart;
+import filesystem.diagram.edit.parts.Return2EditPart;
+import filesystem.diagram.edit.parts.ReturnEditPart;
+import filesystem.diagram.edit.parts.ReturnReturnTipo_retornoCompartment2EditPart;
+import filesystem.diagram.edit.parts.ReturnReturnTipo_retornoCompartmentEditPart;
+
+/**
+ * @generated
+ */
+public class FilesystemDiagramUpdater {
+
+	/**
+	 * @generated
+	 */
+	public static boolean isShortcutOrphaned(View view) {
+		return !view.isSetElement() || view.getElement() == null
+				|| view.getElement().eIsProxy();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000SemanticChildren(view);
+		case ReturnReturnTipo_retornoCompartmentEditPart.VISUAL_ID:
+			return getReturnReturnTipo_retornoCompartment_7001SemanticChildren(view);
+		case ReturnReturnTipo_retornoCompartment2EditPart.VISUAL_ID:
+			return getReturnReturnTipo_retornoCompartment_7002SemanticChildren(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getFilesystem_1000SemanticChildren(
+			View view) {
+		if (!view.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Filesystem modelElement = (Filesystem) view.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		{
+			Parameters childElement = modelElement.getParameters();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ParametersEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+			}
+		}
+		{
+			Return childElement = modelElement.getReturn();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ReturnEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getReturnReturnTipo_retornoCompartment_7001SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Return modelElement = (Return) containerView.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		{
+			Data_Type childElement = modelElement.getTipo_retorno();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Return2EditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+			}
+			if (visualID == Data_TypeEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getReturnReturnTipo_retornoCompartment_7002SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Return modelElement = (Return) containerView.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		{
+			Data_Type childElement = modelElement.getTipo_retorno();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Return2EditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+			}
+			if (visualID == Data_TypeEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000ContainedLinks(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001ContainedLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2002ContainedLinks(view);
+		case Return2EditPart.VISUAL_ID:
+			return getReturn_3001ContainedLinks(view);
+		case Data_TypeEditPart.VISUAL_ID:
+			return getData_Type_3002ContainedLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001IncomingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2002IncomingLinks(view);
+		case Return2EditPart.VISUAL_ID:
+			return getReturn_3001IncomingLinks(view);
+		case Data_TypeEditPart.VISUAL_ID:
+			return getData_Type_3002IncomingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001OutgoingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2002OutgoingLinks(view);
+		case Return2EditPart.VISUAL_ID:
+			return getReturn_3001OutgoingLinks(view);
+		case Data_TypeEditPart.VISUAL_ID:
+			return getData_Type_3002OutgoingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFilesystem_1000ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_3001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getData_Type_3002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_3001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getData_Type_3002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_3001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getData_Type_3002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramUpdater TYPED_INSTANCE = new DiagramUpdater() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+			return FilesystemDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+			return FilesystemDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+			return FilesystemDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+			return FilesystemDiagramUpdater.getOutgoingLinks(view);
+		}
+	};
+
+}

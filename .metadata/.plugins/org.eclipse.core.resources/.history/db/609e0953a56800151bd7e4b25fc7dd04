@@ -1,0 +1,550 @@
+	/*
+ * 
+ */
+package filesystem.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class FilesystemNavigatorContentProvider implements org.eclipse.ui.navigator.ICommonContentProvider {
+
+		/**
+ * @generated
+ */
+private static final Object[] EMPTY_ARRAY = new Object[0];
+
+	/**
+ * @generated
+ */
+private org.eclipse.jface.viewers.Viewer myViewer;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain myEditingDomain;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.workspace.util.WorkspaceSynchronizer myWorkspaceSynchronizer;
+
+	/**
+ * @generated
+ */
+private Runnable myViewerRefreshRunnable;
+	
+	/**
+ * @generated
+ */
+@SuppressWarnings({ "unchecked", "serial", "rawtypes" })
+public FilesystemNavigatorContentProvider() {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory.INSTANCE.createEditingDomain();
+myEditingDomain = (org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain) editingDomain;
+myEditingDomain.setResourceToReadOnlyMap(new java.util.HashMap() {
+	public Object get(Object key) {
+		if (!containsKey(key)) {
+			put(key, Boolean.TRUE);
+		}
+		return super.get(key);
+	}
+});
+myViewerRefreshRunnable = new Runnable() {
+	public void run() {
+		if (myViewer != null) {
+			myViewer.refresh();
+		}
+	}
+};
+myWorkspaceSynchronizer = new org.eclipse.emf.workspace.util.WorkspaceSynchronizer(editingDomain, new org.eclipse.emf.workspace.util.WorkspaceSynchronizer.Delegate() {
+	public void dispose() {
+	}
+
+	public boolean handleResourceChanged(final org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceDeleted(org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceMoved(org.eclipse.emf.ecore.resource.Resource resource, final org.eclipse.emf.common.util.URI newURI) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+});
+}
+
+		/**
+ * @generated
+ */
+public void dispose() {
+	myWorkspaceSynchronizer.dispose();
+	myWorkspaceSynchronizer = null;
+	myViewerRefreshRunnable = null;
+	myViewer = null;
+	unloadAllResources();
+	((org.eclipse.emf.transaction.TransactionalEditingDomain) myEditingDomain).dispose();
+	myEditingDomain = null;
+}
+	
+		/**
+ * @generated
+ */
+public void inputChanged(org.eclipse.jface.viewers.Viewer viewer, Object oldInput, Object newInput) {
+	myViewer = viewer;
+}
+	
+	
+	/**
+ * @generated
+ */
+	void unloadAllResources() {
+		for (org.eclipse.emf.ecore.resource.Resource nextResource : myEditingDomain.getResourceSet().getResources()) {
+			nextResource.unload();
+		}
+	}
+	
+	/**
+ * @generated
+ */
+	void asyncRefresh() {
+		if (myViewer != null && !myViewer.getControl().isDisposed()) {
+			myViewer.getControl().getDisplay().asyncExec(myViewerRefreshRunnable);
+		}
+	}
+	
+	/**
+ * @generated
+ */
+public Object[] getElements(Object inputElement) {
+	return getChildren(inputElement);
+}
+	
+	/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+    
+    /**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+    
+    	/**
+ * @generated
+ */
+public Object[] getChildren(Object parentElement) {
+	if (parentElement instanceof org.eclipse.core.resources.IFile) {
+		org.eclipse.core.resources.IFile file = (org.eclipse.core.resources.IFile) parentElement;
+org.eclipse.emf.common.util.URI fileURI = org.eclipse.emf.common.util.URI.createPlatformResourceURI(file.getFullPath().toString(), true);
+org.eclipse.emf.ecore.resource.Resource resource = myEditingDomain.getResourceSet().getResource(fileURI, true);
+	java.util.ArrayList<filesystem.diagram.navigator.FilesystemNavigatorItem> result = new java.util.ArrayList<filesystem.diagram.navigator.FilesystemNavigatorItem>();
+					java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> topViews = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>(resource.getContents().size());
+		for (org.eclipse.emf.ecore.EObject o : resource.getContents()) {
+			if (o instanceof org.eclipse.gmf.runtime.notation.View) {
+				topViews.add((org.eclipse.gmf.runtime.notation.View) o);
+			}
+		}
+					result.addAll(createNavigatorItems(selectViewsByType(topViews, filesystem.diagram.edit.parts.FilesystemEditPart.MODEL_ID), file, false));
+						return result.toArray();
+   	} 
+    	
+   	if (parentElement instanceof filesystem.diagram.navigator.FilesystemNavigatorGroup) {
+	filesystem.diagram.navigator.FilesystemNavigatorGroup group = (filesystem.diagram.navigator.FilesystemNavigatorGroup) parentElement;
+return group.getChildren();
+	} 
+		
+	if (parentElement instanceof filesystem.diagram.navigator.FilesystemNavigatorItem) {
+	filesystem.diagram.navigator.FilesystemNavigatorItem navigatorItem = (filesystem.diagram.navigator.FilesystemNavigatorItem) parentElement;
+if (navigatorItem.isLeaf() || !isOwnView(navigatorItem.getView())) {
+	return EMPTY_ARRAY;
+}
+return getViewChildren(navigatorItem.getView(), parentElement);
+	}
+		
+			/*
+ * Due to plugin.xml restrictions this code will be called only for views representing
+ * shortcuts to this diagram elements created on other diagrams. 
+*/ 
+if (parentElement instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) parentElement).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null) {
+		return getViewChildren(view, parentElement);
+	}
+}
+
+		return EMPTY_ARRAY;
+}
+    
+	/**
+ * @generated
+ */
+private Object[] getViewChildren(org.eclipse.gmf.runtime.notation.View view, Object parentElement) {
+   	switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view)) {
+	
+case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+	result.addAll(getForeignShortcuts((org.eclipse.gmf.runtime.notation.Diagram) view, parentElement));
+	org.eclipse.gmf.runtime.notation.Diagram sv = (org.eclipse.gmf.runtime.notation.Diagram) view;
+				filesystem.diagram.navigator.FilesystemNavigatorGroup links = new filesystem.diagram.navigator.FilesystemNavigatorGroup(
+	filesystem.diagram.part.Messages.NavigatorGroupName_Filesystem_1000_links,
+	"icons/linksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.Data_TypeEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.IfEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.CaseEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.InsertEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.UpdateEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.DeleteEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.CursorEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.WhileEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ForEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.LoopEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ExceptionCommandEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ExceptionPartEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+															if (!links.isEmpty()) {		result.add(links);
+					}			return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				filesystem.diagram.navigator.FilesystemNavigatorGroup outgoinglinks = new filesystem.diagram.navigator.FilesystemNavigatorGroup(
+	filesystem.diagram.part.Messages.NavigatorGroupName_Select_2007_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				filesystem.diagram.navigator.FilesystemNavigatorGroup incominglinks = new filesystem.diagram.navigator.FilesystemNavigatorGroup(
+	filesystem.diagram.part.Messages.NavigatorGroupName_Output_2008_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInParameterInParametros_inCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInParameterInParametros_in_outCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInParameterInParametros_outCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOutParameterOutParametros_inCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOutParameterOutParametros_in_outCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOutParameterOutParametros_outCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOutParameterInOutParametros_inCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOutParameterInOutParametros_in_outCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOutParameterInOutParametros_outCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParametersParametersParametros_inCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParametersParametersParametros_in_outCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParametersParametersParametros_outCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInParameterInParametros_inCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInParameterInParametros_in_outCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInParameterInParametros_outCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOutParameterInOutParametros_inCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOutParameterInOutParametros_in_outCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOutParameterInOutParametros_outCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOutParameterOutParametros_inCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOutParameterOutParametros_in_outCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOutParameterOutParametros_outCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID: {
+	java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem> result = new java.util.LinkedList<filesystem.diagram.navigator.FilesystemAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				filesystem.diagram.navigator.FilesystemNavigatorGroup target = new filesystem.diagram.navigator.FilesystemNavigatorGroup(
+	filesystem.diagram.part.Messages.NavigatorGroupName_Sync_4001_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	filesystem.diagram.navigator.FilesystemNavigatorGroup source = new filesystem.diagram.navigator.FilesystemNavigatorGroup(
+	filesystem.diagram.part.Messages.NavigatorGroupName_Sync_4001_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+	}
+	return EMPTY_ARRAY;
+}
+    
+    /**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksSourceByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeSource = nextEdge.getSource();
+ 		if (type.equals(nextEdgeSource.getType()) && isOwnView(nextEdgeSource)) {
+ 			result.add(nextEdgeSource);
+ 		}
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksTargetByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeTarget = nextEdge.getTarget();
+ 		if (type.equals(nextEdgeTarget.getType()) && isOwnView(nextEdgeTarget)) {
+ 			result.add(nextEdgeTarget);
+ 		}
+ 	}
+ 	return result;
+}
+
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getOutgoingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getSourceEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getIncomingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getTargetEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getChildrenByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getChildren(), type));
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getDiagramLinksByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Diagram> diagrams, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.Diagram nextDiagram : diagrams) {
+		result.addAll(selectViewsByType(nextDiagram.getEdges(), type));
+	}
+	return result;
+}
+
+// TODO refactor as static method
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> selectViewsByType(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		if (type.equals(nextView.getType()) && isOwnView(nextView)) {
+			result.add(nextView);
+		}
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return filesystem.diagram.edit.parts.FilesystemEditPart.MODEL_ID.equals(filesystem.diagram.part.FilesystemVisualIDRegistry.getModelID(view));
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<filesystem.diagram.navigator.FilesystemNavigatorItem> createNavigatorItems(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, Object parent, boolean isLeafs) {
+	java.util.ArrayList<filesystem.diagram.navigator.FilesystemNavigatorItem> result = new java.util.ArrayList<filesystem.diagram.navigator.FilesystemNavigatorItem>(views.size());
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		result.add(new filesystem.diagram.navigator.FilesystemNavigatorItem(nextView, parent, isLeafs));
+	}
+	return result;
+}
+		
+/**
+ * @generated
+ */
+private java.util.Collection<filesystem.diagram.navigator.FilesystemNavigatorItem> getForeignShortcuts(org.eclipse.gmf.runtime.notation.Diagram diagram, Object parent) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+	for (java.util.Iterator<org.eclipse.gmf.runtime.notation.View> it = diagram.getChildren().iterator(); it.hasNext();) {
+	org.eclipse.gmf.runtime.notation.View nextView = it.next();
+		if (!isOwnView(nextView) && nextView.getEAnnotation("Shortcut") != null) { //$NON-NLS-1$
+			result.add(nextView);
+		}
+	}
+	return createNavigatorItems(result, parent, false);
+}
+		
+	/**
+ * @generated
+ */
+public Object getParent(Object element) {
+	if (element instanceof filesystem.diagram.navigator.FilesystemAbstractNavigatorItem) {
+    	filesystem.diagram.navigator.FilesystemAbstractNavigatorItem abstractNavigatorItem = (filesystem.diagram.navigator.FilesystemAbstractNavigatorItem) element;
+		return abstractNavigatorItem.getParent();
+	}
+	return null;
+}
+	
+	/**
+ * @generated
+ */
+public boolean hasChildren(Object element) {
+	return element instanceof org.eclipse.core.resources.IFile || getChildren(element).length > 0;
+}
+    
+    }

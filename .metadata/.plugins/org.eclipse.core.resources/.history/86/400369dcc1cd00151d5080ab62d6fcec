@@ -1,0 +1,1654 @@
+	/*
+ * 
+ */
+package crystal.diagram.part;
+
+	/**
+ * @generated
+ */
+public class CrystalDiagramUpdater {
+		
+	/**
+ * @generated
+ */
+public static boolean isShortcutOrphaned(org.eclipse.gmf.runtime.notation.View view) {
+	return !view.isSetElement() || view.getElement() == null || view.getElement().eIsProxy();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (crystal.diagram.part.CrystalVisualIDRegistry.getVisualID(view)) {
+		case crystal.diagram.edit.parts.CrystalEditPart.VISUAL_ID:
+	return getCrystal_1000SemanticChildren(view);
+case crystal.diagram.edit.parts.ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID:
+	return getProcedureProcedureDeclarativePartCompartment_7001SemanticChildren(view);
+case crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID:
+	return getProcedureProcedureExecutablePartCompartment_7002SemanticChildren(view);
+case crystal.diagram.edit.parts.ProcedureProcedureParametersCompartmentEditPart.VISUAL_ID:
+	return getProcedureProcedureParametersCompartment_7003SemanticChildren(view);
+case crystal.diagram.edit.parts.FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
+	return getFunctionFunctionDeclarativePartCompartment_7004SemanticChildren(view);
+case crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
+	return getFunctionFunctionExecutablePartCompartment_7005SemanticChildren(view);
+case crystal.diagram.edit.parts.FunctionFunctionParametersCompartmentEditPart.VISUAL_ID:
+	return getFunctionFunctionParametersCompartment_7006SemanticChildren(view);
+case crystal.diagram.edit.parts.FunctionFunctionReturnPartCompartmentEditPart.VISUAL_ID:
+	return getFunctionFunctionReturnPartCompartment_7007SemanticChildren(view);
+case crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
+	return getAnonymousBlockAnonymousBlockDeclarativePartCompartment_7008SemanticChildren(view);
+case crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
+	return getAnonymousBlockAnonymousBlockExecutablePartCompartment_7009SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getCrystal_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.Crystal modelElement = (crystal.Crystal) view.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getProcedures().iterator(); it.hasNext();) {
+		crystal.Procedure childElement = (crystal.Procedure) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.ProcedureEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						for (java.util.Iterator<?> it = modelElement.getFunctions().iterator(); it.hasNext();) {
+		crystal.Function childElement = (crystal.Function) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.FunctionEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						for (java.util.Iterator<?> it = modelElement.getBlocks().iterator(); it.hasNext();) {
+		crystal.AnonymousBlock childElement = (crystal.AnonymousBlock) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.AnonymousBlockEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getProcedureProcedureDeclarativePartCompartment_7001SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.Procedure modelElement = (crystal.Procedure) containerView.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getDeclarativePart().iterator(); it.hasNext();) {
+		crystal.Parameters childElement = (crystal.Parameters) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getProcedureProcedureExecutablePartCompartment_7002SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.Procedure modelElement = (crystal.Procedure) containerView.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getExecutablePart().iterator(); it.hasNext();) {
+		crystal.Statements childElement = (crystal.Statements) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.IfEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.ForEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getProcedureProcedureParametersCompartment_7003SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.Procedure modelElement = (crystal.Procedure) containerView.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getParameters().iterator(); it.hasNext();) {
+		crystal.Parameters childElement = (crystal.Parameters) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.DataType2EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.Collections2EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.Records2EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.Cursor2EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getFunctionFunctionDeclarativePartCompartment_7004SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.Function modelElement = (crystal.Function) containerView.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getDeclarativePart().iterator(); it.hasNext();) {
+		crystal.Parameters childElement = (crystal.Parameters) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getFunctionFunctionExecutablePartCompartment_7005SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.Function modelElement = (crystal.Function) containerView.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getExecutablePart().iterator(); it.hasNext();) {
+		crystal.Statements childElement = (crystal.Statements) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.IfEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.ForEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getFunctionFunctionParametersCompartment_7006SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.Function modelElement = (crystal.Function) containerView.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getParameters().iterator(); it.hasNext();) {
+		crystal.Parameters childElement = (crystal.Parameters) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.DataType3EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.Collections3EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.Records3EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.Cursor3EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getFunctionFunctionReturnPartCompartment_7007SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.Function modelElement = (crystal.Function) containerView.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getReturnPart().iterator(); it.hasNext();) {
+		crystal.Parameters childElement = (crystal.Parameters) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.DataType4EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.Collections4EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.Records4EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.Cursor4EditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getAnonymousBlockAnonymousBlockDeclarativePartCompartment_7008SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.AnonymousBlock modelElement = (crystal.AnonymousBlock) containerView.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getDeclarativePart().iterator(); it.hasNext();) {
+		crystal.Parameters childElement = (crystal.Parameters) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getAnonymousBlockAnonymousBlockExecutablePartCompartment_7009SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+crystal.AnonymousBlock modelElement = (crystal.AnonymousBlock) containerView.getElement();
+	java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getExecutablePart().iterator(); it.hasNext();) {
+		crystal.Statements childElement = (crystal.Statements) it.next();
+					int visualID = crystal.diagram.part.CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.IfEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.ForEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID) {
+	result.add(new crystal.diagram.part.CrystalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (crystal.diagram.part.CrystalVisualIDRegistry.getVisualID(view)) {
+		case crystal.diagram.edit.parts.CrystalEditPart.VISUAL_ID:
+	return getCrystal_1000ContainedLinks(view);
+case crystal.diagram.edit.parts.ProcedureEditPart.VISUAL_ID:
+	return getProcedure_2001ContainedLinks(view);
+case crystal.diagram.edit.parts.FunctionEditPart.VISUAL_ID:
+	return getFunction_2002ContainedLinks(view);
+case crystal.diagram.edit.parts.AnonymousBlockEditPart.VISUAL_ID:
+	return getAnonymousBlock_2003ContainedLinks(view);
+case crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID:
+	return getDataType_3001ContainedLinks(view);
+case crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID:
+	return getCollections_3002ContainedLinks(view);
+case crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID:
+	return getRecords_3003ContainedLinks(view);
+case crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+	return getCursor_3004ContainedLinks(view);
+case crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID:
+	return getException_3005ContainedLinks(view);
+case crystal.diagram.edit.parts.IfEditPart.VISUAL_ID:
+	return getIf_3006ContainedLinks(view);
+case crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+	return getCase_3007ContainedLinks(view);
+case crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+	return getInsert_3008ContainedLinks(view);
+case crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+	return getUpdate_3009ContainedLinks(view);
+case crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+	return getDelete_3010ContainedLinks(view);
+case crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+	return getSelect_3011ContainedLinks(view);
+case crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+	return getWhile_3012ContainedLinks(view);
+case crystal.diagram.edit.parts.ForEditPart.VISUAL_ID:
+	return getFor_3013ContainedLinks(view);
+case crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+	return getLoop_3014ContainedLinks(view);
+case crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID:
+	return getOpen_3015ContainedLinks(view);
+case crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID:
+	return getFetch_3016ContainedLinks(view);
+case crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID:
+	return getClose_3017ContainedLinks(view);
+case crystal.diagram.edit.parts.DataType2EditPart.VISUAL_ID:
+	return getDataType_3018ContainedLinks(view);
+case crystal.diagram.edit.parts.Collections2EditPart.VISUAL_ID:
+	return getCollections_3019ContainedLinks(view);
+case crystal.diagram.edit.parts.Records2EditPart.VISUAL_ID:
+	return getRecords_3020ContainedLinks(view);
+case crystal.diagram.edit.parts.Cursor2EditPart.VISUAL_ID:
+	return getCursor_3021ContainedLinks(view);
+case crystal.diagram.edit.parts.DataType3EditPart.VISUAL_ID:
+	return getDataType_3022ContainedLinks(view);
+case crystal.diagram.edit.parts.Collections3EditPart.VISUAL_ID:
+	return getCollections_3023ContainedLinks(view);
+case crystal.diagram.edit.parts.Records3EditPart.VISUAL_ID:
+	return getRecords_3024ContainedLinks(view);
+case crystal.diagram.edit.parts.Cursor3EditPart.VISUAL_ID:
+	return getCursor_3025ContainedLinks(view);
+case crystal.diagram.edit.parts.DataType4EditPart.VISUAL_ID:
+	return getDataType_3026ContainedLinks(view);
+case crystal.diagram.edit.parts.Collections4EditPart.VISUAL_ID:
+	return getCollections_3027ContainedLinks(view);
+case crystal.diagram.edit.parts.Records4EditPart.VISUAL_ID:
+	return getRecords_3028ContainedLinks(view);
+case crystal.diagram.edit.parts.Cursor4EditPart.VISUAL_ID:
+	return getCursor_3029ContainedLinks(view);
+case crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+	return getTransition_4001ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (crystal.diagram.part.CrystalVisualIDRegistry.getVisualID(view)) {
+		case crystal.diagram.edit.parts.ProcedureEditPart.VISUAL_ID:
+	return getProcedure_2001IncomingLinks(view);
+case crystal.diagram.edit.parts.FunctionEditPart.VISUAL_ID:
+	return getFunction_2002IncomingLinks(view);
+case crystal.diagram.edit.parts.AnonymousBlockEditPart.VISUAL_ID:
+	return getAnonymousBlock_2003IncomingLinks(view);
+case crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID:
+	return getDataType_3001IncomingLinks(view);
+case crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID:
+	return getCollections_3002IncomingLinks(view);
+case crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID:
+	return getRecords_3003IncomingLinks(view);
+case crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+	return getCursor_3004IncomingLinks(view);
+case crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID:
+	return getException_3005IncomingLinks(view);
+case crystal.diagram.edit.parts.IfEditPart.VISUAL_ID:
+	return getIf_3006IncomingLinks(view);
+case crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+	return getCase_3007IncomingLinks(view);
+case crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+	return getInsert_3008IncomingLinks(view);
+case crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+	return getUpdate_3009IncomingLinks(view);
+case crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+	return getDelete_3010IncomingLinks(view);
+case crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+	return getSelect_3011IncomingLinks(view);
+case crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+	return getWhile_3012IncomingLinks(view);
+case crystal.diagram.edit.parts.ForEditPart.VISUAL_ID:
+	return getFor_3013IncomingLinks(view);
+case crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+	return getLoop_3014IncomingLinks(view);
+case crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID:
+	return getOpen_3015IncomingLinks(view);
+case crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID:
+	return getFetch_3016IncomingLinks(view);
+case crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID:
+	return getClose_3017IncomingLinks(view);
+case crystal.diagram.edit.parts.DataType2EditPart.VISUAL_ID:
+	return getDataType_3018IncomingLinks(view);
+case crystal.diagram.edit.parts.Collections2EditPart.VISUAL_ID:
+	return getCollections_3019IncomingLinks(view);
+case crystal.diagram.edit.parts.Records2EditPart.VISUAL_ID:
+	return getRecords_3020IncomingLinks(view);
+case crystal.diagram.edit.parts.Cursor2EditPart.VISUAL_ID:
+	return getCursor_3021IncomingLinks(view);
+case crystal.diagram.edit.parts.DataType3EditPart.VISUAL_ID:
+	return getDataType_3022IncomingLinks(view);
+case crystal.diagram.edit.parts.Collections3EditPart.VISUAL_ID:
+	return getCollections_3023IncomingLinks(view);
+case crystal.diagram.edit.parts.Records3EditPart.VISUAL_ID:
+	return getRecords_3024IncomingLinks(view);
+case crystal.diagram.edit.parts.Cursor3EditPart.VISUAL_ID:
+	return getCursor_3025IncomingLinks(view);
+case crystal.diagram.edit.parts.DataType4EditPart.VISUAL_ID:
+	return getDataType_3026IncomingLinks(view);
+case crystal.diagram.edit.parts.Collections4EditPart.VISUAL_ID:
+	return getCollections_3027IncomingLinks(view);
+case crystal.diagram.edit.parts.Records4EditPart.VISUAL_ID:
+	return getRecords_3028IncomingLinks(view);
+case crystal.diagram.edit.parts.Cursor4EditPart.VISUAL_ID:
+	return getCursor_3029IncomingLinks(view);
+case crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+	return getTransition_4001IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (crystal.diagram.part.CrystalVisualIDRegistry.getVisualID(view)) {
+		case crystal.diagram.edit.parts.ProcedureEditPart.VISUAL_ID:
+	return getProcedure_2001OutgoingLinks(view);
+case crystal.diagram.edit.parts.FunctionEditPart.VISUAL_ID:
+	return getFunction_2002OutgoingLinks(view);
+case crystal.diagram.edit.parts.AnonymousBlockEditPart.VISUAL_ID:
+	return getAnonymousBlock_2003OutgoingLinks(view);
+case crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID:
+	return getDataType_3001OutgoingLinks(view);
+case crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID:
+	return getCollections_3002OutgoingLinks(view);
+case crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID:
+	return getRecords_3003OutgoingLinks(view);
+case crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+	return getCursor_3004OutgoingLinks(view);
+case crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID:
+	return getException_3005OutgoingLinks(view);
+case crystal.diagram.edit.parts.IfEditPart.VISUAL_ID:
+	return getIf_3006OutgoingLinks(view);
+case crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+	return getCase_3007OutgoingLinks(view);
+case crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+	return getInsert_3008OutgoingLinks(view);
+case crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+	return getUpdate_3009OutgoingLinks(view);
+case crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+	return getDelete_3010OutgoingLinks(view);
+case crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+	return getSelect_3011OutgoingLinks(view);
+case crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+	return getWhile_3012OutgoingLinks(view);
+case crystal.diagram.edit.parts.ForEditPart.VISUAL_ID:
+	return getFor_3013OutgoingLinks(view);
+case crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+	return getLoop_3014OutgoingLinks(view);
+case crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID:
+	return getOpen_3015OutgoingLinks(view);
+case crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID:
+	return getFetch_3016OutgoingLinks(view);
+case crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID:
+	return getClose_3017OutgoingLinks(view);
+case crystal.diagram.edit.parts.DataType2EditPart.VISUAL_ID:
+	return getDataType_3018OutgoingLinks(view);
+case crystal.diagram.edit.parts.Collections2EditPart.VISUAL_ID:
+	return getCollections_3019OutgoingLinks(view);
+case crystal.diagram.edit.parts.Records2EditPart.VISUAL_ID:
+	return getRecords_3020OutgoingLinks(view);
+case crystal.diagram.edit.parts.Cursor2EditPart.VISUAL_ID:
+	return getCursor_3021OutgoingLinks(view);
+case crystal.diagram.edit.parts.DataType3EditPart.VISUAL_ID:
+	return getDataType_3022OutgoingLinks(view);
+case crystal.diagram.edit.parts.Collections3EditPart.VISUAL_ID:
+	return getCollections_3023OutgoingLinks(view);
+case crystal.diagram.edit.parts.Records3EditPart.VISUAL_ID:
+	return getRecords_3024OutgoingLinks(view);
+case crystal.diagram.edit.parts.Cursor3EditPart.VISUAL_ID:
+	return getCursor_3025OutgoingLinks(view);
+case crystal.diagram.edit.parts.DataType4EditPart.VISUAL_ID:
+	return getDataType_3026OutgoingLinks(view);
+case crystal.diagram.edit.parts.Collections4EditPart.VISUAL_ID:
+	return getCollections_3027OutgoingLinks(view);
+case crystal.diagram.edit.parts.Records4EditPart.VISUAL_ID:
+	return getRecords_3028OutgoingLinks(view);
+case crystal.diagram.edit.parts.Cursor4EditPart.VISUAL_ID:
+	return getCursor_3029OutgoingLinks(view);
+case crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+	return getTransition_4001OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCrystal_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Crystal modelElement = (crystal.Crystal) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getProcedure_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getFunction_2002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getAnonymousBlock_2003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getException_3005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getIf_3006ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCase_3007ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getInsert_3008ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getUpdate_3009ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDelete_3010ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getSelect_3011ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getWhile_3012ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getFor_3013ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getLoop_3014ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getOpen_3015ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getFetch_3016ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getClose_3017ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3018ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3019ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3020ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3021ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3022ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3023ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3024ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3025ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3026ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3027ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3028ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3029ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getTransition_4001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getProcedure_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getFunction_2002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getAnonymousBlock_2003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getException_3005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Exception modelElement = (crystal.Exception) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getIf_3006IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.If modelElement = (crystal.If) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCase_3007IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Case modelElement = (crystal.Case) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getInsert_3008IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Insert modelElement = (crystal.Insert) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getUpdate_3009IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Update modelElement = (crystal.Update) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDelete_3010IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Delete modelElement = (crystal.Delete) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getSelect_3011IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Select modelElement = (crystal.Select) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getWhile_3012IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.While modelElement = (crystal.While) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getFor_3013IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.For modelElement = (crystal.For) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getLoop_3014IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Loop modelElement = (crystal.Loop) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getOpen_3015IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Open modelElement = (crystal.Open) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getFetch_3016IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Fetch modelElement = (crystal.Fetch) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getClose_3017IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Close modelElement = (crystal.Close) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3018IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3019IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3020IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3021IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3022IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3023IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3024IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3025IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3026IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3027IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3028IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3029IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getTransition_4001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getProcedure_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getFunction_2002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getAnonymousBlock_2003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getException_3005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Exception modelElement = (crystal.Exception) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getIf_3006OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.If modelElement = (crystal.If) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCase_3007OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Case modelElement = (crystal.Case) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getInsert_3008OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Insert modelElement = (crystal.Insert) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getUpdate_3009OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Update modelElement = (crystal.Update) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDelete_3010OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Delete modelElement = (crystal.Delete) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getSelect_3011OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Select modelElement = (crystal.Select) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getWhile_3012OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.While modelElement = (crystal.While) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getFor_3013OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.For modelElement = (crystal.For) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getLoop_3014OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Loop modelElement = (crystal.Loop) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getOpen_3015OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Open modelElement = (crystal.Open) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getFetch_3016OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Fetch modelElement = (crystal.Fetch) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getClose_3017OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	crystal.Close modelElement = (crystal.Close) view.getElement();
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3018OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3019OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3020OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3021OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3022OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3023OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3024OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3025OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getDataType_3026OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCollections_3027OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getRecords_3028OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getCursor_3029OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getTransition_4001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<crystal.diagram.part.CrystalLinkDescriptor> getContainedTypeModelFacetLinks_Transition_4001(crystal.Crystal container) {
+	java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getTransitions().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof crystal.Transition) {
+		continue;
+	}
+	crystal.Transition link = (crystal.Transition) linkObject;
+		if (crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID != crystal.diagram.part.CrystalVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			crystal.Statements dst = link.getTarget();
+							crystal.Statements src = link.getSource();
+							result.add(new crystal.diagram.part.CrystalLinkDescriptor(src, dst, link, crystal.diagram.providers.CrystalElementTypes.Transition_4001, crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+	
+/**
+ * @generated
+ */
+private static java.util.Collection<crystal.diagram.part.CrystalLinkDescriptor> getIncomingTypeModelFacetLinks_Transition_4001(crystal.Statements target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() != crystal.CrystalPackage.eINSTANCE.getTransition_Target() || false == setting.getEObject() instanceof crystal.Transition) {
+	continue;
+}
+crystal.Transition link = (crystal.Transition) setting.getEObject();
+	if (crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID != crystal.diagram.part.CrystalVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+				crystal.Statements src = link.getSource();
+			result.add(new crystal.diagram.part.CrystalLinkDescriptor(src, target, link, crystal.diagram.providers.CrystalElementTypes.Transition_4001, crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+				
+		/**
+ * @generated
+ */
+private static java.util.Collection<crystal.diagram.part.CrystalLinkDescriptor> getOutgoingTypeModelFacetLinks_Transition_4001(crystal.Statements source) {
+	crystal.Crystal container = null;
+	// Find container element for the link.
+	// Climb up by containment hierarchy starting from the source
+	// and return the first element that is instance of the container class.
+	for (org.eclipse.emf.ecore.EObject element = source; element != null && container == null; element = element.eContainer()) {
+		if (element instanceof crystal.Crystal) {
+			container = (crystal.Crystal) element;
+		}
+	}
+	if (container == null) {
+		return java.util.Collections.emptyList();
+	}
+		java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor> result = new java.util.LinkedList<crystal.diagram.part.CrystalLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getTransitions().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof crystal.Transition) {
+		continue;
+	}
+	crystal.Transition link = (crystal.Transition) linkObject;
+		if (crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID != crystal.diagram.part.CrystalVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			crystal.Statements dst = link.getTarget();
+							crystal.Statements src = link.getSource();
+								if (src != source) {
+	continue;
+}
+						result.add(new crystal.diagram.part.CrystalLinkDescriptor(src, dst, link, crystal.diagram.providers.CrystalElementTypes.Transition_4001, crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+		}
+	return result;	
+}		
+		
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<crystal.diagram.part.CrystalNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return CrystalDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return CrystalDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return CrystalDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<crystal.diagram.part.CrystalLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return CrystalDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

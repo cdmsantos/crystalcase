@@ -1,0 +1,589 @@
+/*
+ * 
+ */
+package crystal.diagram.part;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+import org.eclipse.gef.palette.PaletteContainer;
+import org.eclipse.gef.palette.PaletteDrawer;
+import org.eclipse.gef.palette.PaletteRoot;
+import org.eclipse.gef.palette.ToolEntry;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry;
+import org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry;
+
+import crystal.diagram.providers.CrystalElementTypes;
+
+/**
+ * @generated
+ */
+public class CrystalPaletteFactory {
+
+	/**
+	 * @generated
+	 */
+	public void fillPalette(PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+		paletteRoot.add(createConnections2Group());
+		paletteRoot.add(createSections3Group());
+		paletteRoot.add(createVariables4Group());
+	}
+
+	/**
+	 * Creates "Objects" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createObjects1Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				Messages.Objects1Group_title);
+		paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+		paletteContainer.add(createCase1CreationTool());
+		paletteContainer.add(createClose2CreationTool());
+		paletteContainer.add(createDeclarativePart3CreationTool());
+		paletteContainer.add(createDelete4CreationTool());
+		paletteContainer.add(createException5CreationTool());
+		paletteContainer.add(createExecutablePart6CreationTool());
+		paletteContainer.add(createExpressions7CreationTool());
+		paletteContainer.add(createFetch8CreationTool());
+		paletteContainer.add(createFor9CreationTool());
+		paletteContainer.add(createIf10CreationTool());
+		paletteContainer.add(createInsert11CreationTool());
+		paletteContainer.add(createLoop12CreationTool());
+		paletteContainer.add(createOpen13CreationTool());
+		paletteContainer.add(createParameters14CreationTool());
+		paletteContainer.add(createReturn15CreationTool());
+		paletteContainer.add(createSelect16CreationTool());
+		paletteContainer.add(createUpdate17CreationTool());
+		paletteContainer.add(createWhile18CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * Creates "Connections" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createConnections2Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				Messages.Connections2Group_title);
+		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+		paletteContainer.add(createTransition1CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * Creates "Sections" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createSections3Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				Messages.Sections3Group_title);
+		paletteContainer.setId("createSections3Group"); //$NON-NLS-1$
+		paletteContainer.add(createProcedure1CreationTool());
+		paletteContainer.add(createFunction2CreationTool());
+		paletteContainer.add(createAnonymousBlock3CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * Creates "Variables" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createVariables4Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				Messages.Variables4Group_title);
+		paletteContainer.setId("createVariables4Group"); //$NON-NLS-1$
+		paletteContainer.add(createDataType1CreationTool());
+		paletteContainer.add(createCollections2CreationTool());
+		paletteContainer.add(createRecords3CreationTool());
+		paletteContainer.add(createCursor4CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCase1CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Case_3016);
+		types.add(CrystalElementTypes.Case_3038);
+		types.add(CrystalElementTypes.Case_3060);
+		types.add(CrystalElementTypes.Case_3082);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Case1CreationTool_title,
+				Messages.Case1CreationTool_desc, types);
+		entry.setId("createCase1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Case_3016));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createClose2CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Close_3026);
+		types.add(CrystalElementTypes.Close_3048);
+		types.add(CrystalElementTypes.Close_3070);
+		types.add(CrystalElementTypes.Close_3092);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Close2CreationTool_title,
+				Messages.Close2CreationTool_desc, types);
+		entry.setId("createClose2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Close_3026));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDeclarativePart3CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.DeclarativePart3CreationTool_title,
+				Messages.DeclarativePart3CreationTool_desc,
+				Collections
+						.singletonList(CrystalElementTypes.DeclarativePart_2003));
+		entry.setId("createDeclarativePart3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.DeclarativePart_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDelete4CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Delete_3019);
+		types.add(CrystalElementTypes.Delete_3041);
+		types.add(CrystalElementTypes.Delete_3063);
+		types.add(CrystalElementTypes.Delete_3085);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Delete4CreationTool_title,
+				Messages.Delete4CreationTool_desc, types);
+		entry.setId("createDelete4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Delete_3019));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createException5CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Exception_3014);
+		types.add(CrystalElementTypes.Exception_3036);
+		types.add(CrystalElementTypes.Exception_3058);
+		types.add(CrystalElementTypes.Exception_3080);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Exception5CreationTool_title,
+				Messages.Exception5CreationTool_desc, types);
+		entry.setId("createException5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Exception_3014));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createExecutablePart6CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.ExecutablePart6CreationTool_title,
+				Messages.ExecutablePart6CreationTool_desc,
+				Collections
+						.singletonList(CrystalElementTypes.ExecutablePart_2004));
+		entry.setId("createExecutablePart6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.ExecutablePart_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createExpressions7CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Expressions_3013);
+		types.add(CrystalElementTypes.Expressions_3035);
+		types.add(CrystalElementTypes.Expressions_3057);
+		types.add(CrystalElementTypes.Expressions_3079);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Expressions7CreationTool_title,
+				Messages.Expressions7CreationTool_desc, types);
+		entry.setId("createExpressions7CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Expressions_3013));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createFetch8CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Fetch_3025);
+		types.add(CrystalElementTypes.Fetch_3047);
+		types.add(CrystalElementTypes.Fetch_3069);
+		types.add(CrystalElementTypes.Fetch_3091);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Fetch8CreationTool_title,
+				Messages.Fetch8CreationTool_desc, types);
+		entry.setId("createFetch8CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Fetch_3025));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createFor9CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.For_3022);
+		types.add(CrystalElementTypes.For_3044);
+		types.add(CrystalElementTypes.For_3066);
+		types.add(CrystalElementTypes.For_3088);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.For9CreationTool_title,
+				Messages.For9CreationTool_desc, types);
+		entry.setId("createFor9CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.For_3022));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createIf10CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.If_3015);
+		types.add(CrystalElementTypes.If_3037);
+		types.add(CrystalElementTypes.If_3059);
+		types.add(CrystalElementTypes.If_3081);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.If10CreationTool_title,
+				Messages.If10CreationTool_desc, types);
+		entry.setId("createIf10CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.If_3015));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createInsert11CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Insert_3017);
+		types.add(CrystalElementTypes.Insert_3039);
+		types.add(CrystalElementTypes.Insert_3061);
+		types.add(CrystalElementTypes.Insert_3083);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Insert11CreationTool_title,
+				Messages.Insert11CreationTool_desc, types);
+		entry.setId("createInsert11CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Insert_3017));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createLoop12CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Loop_3023);
+		types.add(CrystalElementTypes.Loop_3045);
+		types.add(CrystalElementTypes.Loop_3067);
+		types.add(CrystalElementTypes.Loop_3089);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Loop12CreationTool_title,
+				Messages.Loop12CreationTool_desc, types);
+		entry.setId("createLoop12CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Loop_3023));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createOpen13CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Open_3024);
+		types.add(CrystalElementTypes.Open_3046);
+		types.add(CrystalElementTypes.Open_3068);
+		types.add(CrystalElementTypes.Open_3090);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Open13CreationTool_title,
+				Messages.Open13CreationTool_desc, types);
+		entry.setId("createOpen13CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Open_3024));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createParameters14CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Parameters14CreationTool_title,
+				Messages.Parameters14CreationTool_desc,
+				Collections.singletonList(CrystalElementTypes.Parameters_2001));
+		entry.setId("createParameters14CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Parameters_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createReturn15CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Return15CreationTool_title,
+				Messages.Return15CreationTool_desc,
+				Collections.singletonList(CrystalElementTypes.Return_2002));
+		entry.setId("createReturn15CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Return_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createSelect16CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Select_3020);
+		types.add(CrystalElementTypes.Select_3042);
+		types.add(CrystalElementTypes.Select_3064);
+		types.add(CrystalElementTypes.Select_3086);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Select16CreationTool_title,
+				Messages.Select16CreationTool_desc, types);
+		entry.setId("createSelect16CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Select_3020));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createUpdate17CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.Update_3018);
+		types.add(CrystalElementTypes.Update_3040);
+		types.add(CrystalElementTypes.Update_3062);
+		types.add(CrystalElementTypes.Update_3084);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Update17CreationTool_title,
+				Messages.Update17CreationTool_desc, types);
+		entry.setId("createUpdate17CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Update_3018));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createWhile18CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(CrystalElementTypes.While_3021);
+		types.add(CrystalElementTypes.While_3043);
+		types.add(CrystalElementTypes.While_3065);
+		types.add(CrystalElementTypes.While_3087);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.While18CreationTool_title,
+				Messages.While18CreationTool_desc, types);
+		entry.setId("createWhile18CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.While_3021));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createTransition1CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
+				Messages.Transition1CreationTool_title,
+				Messages.Transition1CreationTool_desc,
+				Collections.singletonList(CrystalElementTypes.Transition_4001));
+		entry.setId("createTransition1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Transition_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createProcedure1CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Procedure1CreationTool_title,
+				Messages.Procedure1CreationTool_desc,
+				Collections.singletonList(CrystalElementTypes.Procedure_2005));
+		entry.setId("createProcedure1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Procedure_2005));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createFunction2CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Function2CreationTool_title,
+				Messages.Function2CreationTool_desc,
+				Collections.singletonList(CrystalElementTypes.Function_2006));
+		entry.setId("createFunction2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Function_2006));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createAnonymousBlock3CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.AnonymousBlock3CreationTool_title,
+				Messages.AnonymousBlock3CreationTool_desc,
+				Collections
+						.singletonList(CrystalElementTypes.AnonymousBlock_2007));
+		entry.setId("createAnonymousBlock3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.AnonymousBlock_2007));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDataType1CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		types.add(CrystalElementTypes.DataType_3001);
+		types.add(CrystalElementTypes.DataType_3005);
+		types.add(CrystalElementTypes.DataType_3009);
+		types.add(CrystalElementTypes.DataType_3027);
+		types.add(CrystalElementTypes.DataType_3031);
+		types.add(CrystalElementTypes.DataType_3049);
+		types.add(CrystalElementTypes.DataType_3053);
+		types.add(CrystalElementTypes.DataType_3071);
+		types.add(CrystalElementTypes.DataType_3075);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.DataType1CreationTool_title,
+				Messages.DataType1CreationTool_desc, types);
+		entry.setId("createDataType1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.DataType_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCollections2CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		types.add(CrystalElementTypes.Collections_3002);
+		types.add(CrystalElementTypes.Collections_3006);
+		types.add(CrystalElementTypes.Collections_3010);
+		types.add(CrystalElementTypes.Collections_3028);
+		types.add(CrystalElementTypes.Collections_3032);
+		types.add(CrystalElementTypes.Collections_3050);
+		types.add(CrystalElementTypes.Collections_3054);
+		types.add(CrystalElementTypes.Collections_3072);
+		types.add(CrystalElementTypes.Collections_3076);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Collections2CreationTool_title,
+				Messages.Collections2CreationTool_desc, types);
+		entry.setId("createCollections2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Collections_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createRecords3CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		types.add(CrystalElementTypes.Records_3003);
+		types.add(CrystalElementTypes.Records_3007);
+		types.add(CrystalElementTypes.Records_3011);
+		types.add(CrystalElementTypes.Records_3029);
+		types.add(CrystalElementTypes.Records_3033);
+		types.add(CrystalElementTypes.Records_3051);
+		types.add(CrystalElementTypes.Records_3055);
+		types.add(CrystalElementTypes.Records_3073);
+		types.add(CrystalElementTypes.Records_3077);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Records3CreationTool_title,
+				Messages.Records3CreationTool_desc, types);
+		entry.setId("createRecords3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Records_3003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCursor4CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		types.add(CrystalElementTypes.Cursor_3004);
+		types.add(CrystalElementTypes.Cursor_3008);
+		types.add(CrystalElementTypes.Cursor_3012);
+		types.add(CrystalElementTypes.Cursor_3030);
+		types.add(CrystalElementTypes.Cursor_3034);
+		types.add(CrystalElementTypes.Cursor_3052);
+		types.add(CrystalElementTypes.Cursor_3056);
+		types.add(CrystalElementTypes.Cursor_3074);
+		types.add(CrystalElementTypes.Cursor_3078);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.Cursor4CreationTool_title,
+				Messages.Cursor4CreationTool_desc, types);
+		entry.setId("createCursor4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes
+				.getImageDescriptor(CrystalElementTypes.Cursor_3004));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+}

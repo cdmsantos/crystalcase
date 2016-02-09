@@ -1,0 +1,4562 @@
+/*
+ * 
+ */
+package crystal.diagram.part;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
+
+import crystal.AnonymousBlock;
+import crystal.Case;
+import crystal.Close;
+import crystal.Crystal;
+import crystal.CrystalPackage;
+import crystal.DeclarativePart;
+import crystal.Delete;
+import crystal.Exception;
+import crystal.ExecutablePart;
+import crystal.Expressions;
+import crystal.Fetch;
+import crystal.For;
+import crystal.Function;
+import crystal.If;
+import crystal.Insert;
+import crystal.Loop;
+import crystal.Objects;
+import crystal.Open;
+import crystal.Parameters;
+import crystal.Procedure;
+import crystal.Return;
+import crystal.Select;
+import crystal.Transition;
+import crystal.Update;
+import crystal.Variables;
+import crystal.While;
+import crystal.diagram.edit.parts.*;
+import crystal.diagram.edit.parts.Case2EditPart;
+import crystal.diagram.edit.parts.CaseEditPart;
+import crystal.diagram.edit.parts.Close2EditPart;
+import crystal.diagram.edit.parts.CloseEditPart;
+import crystal.diagram.edit.parts.Collections2EditPart;
+import crystal.diagram.edit.parts.Collections3EditPart;
+import crystal.diagram.edit.parts.Collections4EditPart;
+import crystal.diagram.edit.parts.Collections5EditPart;
+import crystal.diagram.edit.parts.CollectionsEditPart;
+import crystal.diagram.edit.parts.CrystalEditPart;
+import crystal.diagram.edit.parts.Cursor2EditPart;
+import crystal.diagram.edit.parts.Cursor3EditPart;
+import crystal.diagram.edit.parts.Cursor4EditPart;
+import crystal.diagram.edit.parts.Cursor5EditPart;
+import crystal.diagram.edit.parts.CursorEditPart;
+import crystal.diagram.edit.parts.DataType2EditPart;
+import crystal.diagram.edit.parts.DataType3EditPart;
+import crystal.diagram.edit.parts.DataType4EditPart;
+import crystal.diagram.edit.parts.DataType5EditPart;
+import crystal.diagram.edit.parts.DataTypeEditPart;
+import crystal.diagram.edit.parts.DeclarativePartDeclarativePartVariablesCompartmentEditPart;
+import crystal.diagram.edit.parts.DeclarativePartEditPart;
+import crystal.diagram.edit.parts.Delete2EditPart;
+import crystal.diagram.edit.parts.DeleteEditPart;
+import crystal.diagram.edit.parts.Exception2EditPart;
+import crystal.diagram.edit.parts.ExceptionEditPart;
+import crystal.diagram.edit.parts.ExecutablePartEditPart;
+import crystal.diagram.edit.parts.ExecutablePartExecutablePartObjectsCompartmentEditPart;
+import crystal.diagram.edit.parts.Expressions2EditPart;
+import crystal.diagram.edit.parts.ExpressionsEditPart;
+import crystal.diagram.edit.parts.Fetch2EditPart;
+import crystal.diagram.edit.parts.FetchEditPart;
+import crystal.diagram.edit.parts.For2EditPart;
+import crystal.diagram.edit.parts.ForEditPart;
+import crystal.diagram.edit.parts.If2EditPart;
+import crystal.diagram.edit.parts.IfEditPart;
+import crystal.diagram.edit.parts.Insert2EditPart;
+import crystal.diagram.edit.parts.InsertEditPart;
+import crystal.diagram.edit.parts.Loop2EditPart;
+import crystal.diagram.edit.parts.LoopEditPart;
+import crystal.diagram.edit.parts.Open2EditPart;
+import crystal.diagram.edit.parts.OpenEditPart;
+import crystal.diagram.edit.parts.ParametersEditPart;
+import crystal.diagram.edit.parts.ParametersParametersVariablesCompartmentEditPart;
+import crystal.diagram.edit.parts.ProcedureEditPart;
+import crystal.diagram.edit.parts.ProcedureProcedureDeclarativePartCompartmentEditPart;
+import crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart;
+import crystal.diagram.edit.parts.ProcedureProcedureParametersCompartmentEditPart;
+import crystal.diagram.edit.parts.Records2EditPart;
+import crystal.diagram.edit.parts.Records3EditPart;
+import crystal.diagram.edit.parts.Records4EditPart;
+import crystal.diagram.edit.parts.Records5EditPart;
+import crystal.diagram.edit.parts.RecordsEditPart;
+import crystal.diagram.edit.parts.ReturnEditPart;
+import crystal.diagram.edit.parts.ReturnReturnVariablesCompartmentEditPart;
+import crystal.diagram.edit.parts.Select2EditPart;
+import crystal.diagram.edit.parts.SelectEditPart;
+import crystal.diagram.edit.parts.TransitionEditPart;
+import crystal.diagram.edit.parts.Update2EditPart;
+import crystal.diagram.edit.parts.UpdateEditPart;
+import crystal.diagram.edit.parts.While2EditPart;
+import crystal.diagram.edit.parts.WhileEditPart;
+import crystal.diagram.providers.CrystalElementTypes;
+
+/**
+ * @generated
+ */
+public class CrystalDiagramUpdater {
+
+	/**
+	 * @generated
+	 */
+	public static boolean isShortcutOrphaned(View view) {
+		return !view.isSetElement() || view.getElement() == null
+				|| view.getElement().eIsProxy();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getSemanticChildren(View view) {
+		switch (CrystalVisualIDRegistry.getVisualID(view)) {
+		case CrystalEditPart.VISUAL_ID:
+			return getCrystal_1000SemanticChildren(view);
+		case ParametersParametersVariablesCompartmentEditPart.VISUAL_ID:
+			return getParametersParametersVariablesCompartment_7001SemanticChildren(view);
+		case ReturnReturnVariablesCompartmentEditPart.VISUAL_ID:
+			return getReturnReturnVariablesCompartment_7002SemanticChildren(view);
+		case DeclarativePartDeclarativePartVariablesCompartmentEditPart.VISUAL_ID:
+			return getDeclarativePartDeclarativePartVariablesCompartment_7003SemanticChildren(view);
+		case ExecutablePartExecutablePartObjectsCompartmentEditPart.VISUAL_ID:
+			return getExecutablePartExecutablePartObjectsCompartment_7004SemanticChildren(view);
+		case ProcedureProcedureParametersCompartmentEditPart.VISUAL_ID:
+			return getProcedureProcedureParametersCompartment_7005SemanticChildren(view);
+		case ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID:
+			return getProcedureProcedureDeclarativePartCompartment_7006SemanticChildren(view);
+		case ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID:
+			return getProcedureProcedureExecutablePartCompartment_7007SemanticChildren(view);
+		case FunctionFunctionParametersCompartmentEditPart.VISUAL_ID:
+			return getFunctionFunctionParametersCompartment_7008SemanticChildren(view);
+		case FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
+			return getFunctionFunctionDeclarativePartCompartment_7009SemanticChildren(view);
+		case FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
+			return getFunctionFunctionExecutablePartCompartment_7010SemanticChildren(view);
+		case FunctionFunctionReturnPartCompartmentEditPart.VISUAL_ID:
+			return getFunctionFunctionReturnPartCompartment_7011SemanticChildren(view);
+		case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
+			return getAnonymousBlockAnonymousBlockDeclarativePartCompartment_7012SemanticChildren(view);
+		case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
+			return getAnonymousBlockAnonymousBlockExecutablePartCompartment_7013SemanticChildren(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getCrystal_1000SemanticChildren(
+			View view) {
+		if (!view.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Crystal modelElement = (Crystal) view.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		{
+			Parameters childElement = modelElement.getParameters();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ParametersEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+			}
+		}
+		{
+			Return childElement = modelElement.getReturn();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ReturnEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+			}
+		}
+		{
+			DeclarativePart childElement = modelElement.getDeclarativePart();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DeclarativePartEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+			}
+		}
+		{
+			ExecutablePart childElement = modelElement.getExecutablePart();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ExecutablePartEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+			}
+		}
+		for (Iterator<?> it = modelElement.getProcedures().iterator(); it
+				.hasNext();) {
+			Procedure childElement = (Procedure) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ProcedureEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getFunctions().iterator(); it
+				.hasNext();) {
+			Function childElement = (Function) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == FunctionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getBlocks().iterator(); it.hasNext();) {
+			AnonymousBlock childElement = (AnonymousBlock) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == AnonymousBlockEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getParametersParametersVariablesCompartment_7001SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Parameters modelElement = (Parameters) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getVariables().iterator(); it
+				.hasNext();) {
+			Variables childElement = (Variables) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DataTypeEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CollectionsEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == RecordsEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CursorEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getReturnReturnVariablesCompartment_7002SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Return modelElement = (Return) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getVariables().iterator(); it
+				.hasNext();) {
+			Variables childElement = (Variables) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DataType2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Collections2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Records2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Cursor2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getDeclarativePartDeclarativePartVariablesCompartment_7003SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		DeclarativePart modelElement = (DeclarativePart) containerView
+				.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getVariables().iterator(); it
+				.hasNext();) {
+			Variables childElement = (Variables) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DataType3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Collections3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Records3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Cursor3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getExecutablePartExecutablePartObjectsCompartment_7004SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		ExecutablePart modelElement = (ExecutablePart) containerView
+				.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getObjects().iterator(); it
+				.hasNext();) {
+			Objects childElement = (Objects) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ExpressionsEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ExceptionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == IfEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CaseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == InsertEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == UpdateEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeleteEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SelectEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == WhileEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ForEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == LoopEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == OpenEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FetchEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CloseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getProcedureProcedureParametersCompartment_7005SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Procedure modelElement = (Procedure) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getParameters().iterator(); it
+				.hasNext();) {
+			Variables childElement = (Variables) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DataType4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Collections4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Records4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Cursor4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getProcedureProcedureDeclarativePartCompartment_7006SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Procedure modelElement = (Procedure) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getDeclarativePart().iterator(); it
+				.hasNext();) {
+			Variables childElement = (Variables) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DataType5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Collections5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Records5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Cursor5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getProcedureProcedureExecutablePartCompartment_7007SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Procedure modelElement = (Procedure) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getExecutablePart().iterator(); it
+				.hasNext();) {
+			Objects childElement = (Objects) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Expressions2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getFunctionFunctionParametersCompartment_7008SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Function modelElement = (Function) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getParameters().iterator(); it
+				.hasNext();) {
+			Variables childElement = (Variables) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DataType6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Collections6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Records6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Cursor6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getFunctionFunctionDeclarativePartCompartment_7009SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Function modelElement = (Function) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getDeclarativePart().iterator(); it
+				.hasNext();) {
+			Variables childElement = (Variables) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DataType7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Collections7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Records7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Cursor7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getFunctionFunctionExecutablePartCompartment_7010SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Function modelElement = (Function) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getExecutablePart().iterator(); it
+				.hasNext();) {
+			Objects childElement = (Objects) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Expressions3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getFunctionFunctionReturnPartCompartment_7011SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Function modelElement = (Function) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getReturnPart().iterator(); it
+				.hasNext();) {
+			Variables childElement = (Variables) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DataType8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Collections8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Records8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Cursor8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getAnonymousBlockAnonymousBlockDeclarativePartCompartment_7012SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		AnonymousBlock modelElement = (AnonymousBlock) containerView
+				.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getDeclarativePart().iterator(); it
+				.hasNext();) {
+			Variables childElement = (Variables) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DataType9EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Collections9EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Records9EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Cursor9EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalNodeDescriptor> getAnonymousBlockAnonymousBlockExecutablePartCompartment_7013SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		AnonymousBlock modelElement = (AnonymousBlock) containerView
+				.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getExecutablePart().iterator(); it
+				.hasNext();) {
+			Objects childElement = (Objects) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Expressions4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getContainedLinks(View view) {
+		switch (CrystalVisualIDRegistry.getVisualID(view)) {
+		case CrystalEditPart.VISUAL_ID:
+			return getCrystal_1000ContainedLinks(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001ContainedLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2002ContainedLinks(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2003ContainedLinks(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2004ContainedLinks(view);
+		case ProcedureEditPart.VISUAL_ID:
+			return getProcedure_2005ContainedLinks(view);
+		case FunctionEditPart.VISUAL_ID:
+			return getFunction_2006ContainedLinks(view);
+		case AnonymousBlockEditPart.VISUAL_ID:
+			return getAnonymousBlock_2007ContainedLinks(view);
+		case DataTypeEditPart.VISUAL_ID:
+			return getDataType_3001ContainedLinks(view);
+		case CollectionsEditPart.VISUAL_ID:
+			return getCollections_3002ContainedLinks(view);
+		case RecordsEditPart.VISUAL_ID:
+			return getRecords_3003ContainedLinks(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_3004ContainedLinks(view);
+		case DataType2EditPart.VISUAL_ID:
+			return getDataType_3005ContainedLinks(view);
+		case Collections2EditPart.VISUAL_ID:
+			return getCollections_3006ContainedLinks(view);
+		case Records2EditPart.VISUAL_ID:
+			return getRecords_3007ContainedLinks(view);
+		case Cursor2EditPart.VISUAL_ID:
+			return getCursor_3008ContainedLinks(view);
+		case DataType3EditPart.VISUAL_ID:
+			return getDataType_3009ContainedLinks(view);
+		case Collections3EditPart.VISUAL_ID:
+			return getCollections_3010ContainedLinks(view);
+		case Records3EditPart.VISUAL_ID:
+			return getRecords_3011ContainedLinks(view);
+		case Cursor3EditPart.VISUAL_ID:
+			return getCursor_3012ContainedLinks(view);
+		case ExpressionsEditPart.VISUAL_ID:
+			return getExpressions_3013ContainedLinks(view);
+		case ExceptionEditPart.VISUAL_ID:
+			return getException_3014ContainedLinks(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_3015ContainedLinks(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_3016ContainedLinks(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_3017ContainedLinks(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_3018ContainedLinks(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_3019ContainedLinks(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_3020ContainedLinks(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_3021ContainedLinks(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_3022ContainedLinks(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_3023ContainedLinks(view);
+		case OpenEditPart.VISUAL_ID:
+			return getOpen_3024ContainedLinks(view);
+		case FetchEditPart.VISUAL_ID:
+			return getFetch_3025ContainedLinks(view);
+		case CloseEditPart.VISUAL_ID:
+			return getClose_3026ContainedLinks(view);
+		case DataType4EditPart.VISUAL_ID:
+			return getDataType_3027ContainedLinks(view);
+		case Collections4EditPart.VISUAL_ID:
+			return getCollections_3028ContainedLinks(view);
+		case Records4EditPart.VISUAL_ID:
+			return getRecords_3029ContainedLinks(view);
+		case Cursor4EditPart.VISUAL_ID:
+			return getCursor_3030ContainedLinks(view);
+		case DataType5EditPart.VISUAL_ID:
+			return getDataType_3031ContainedLinks(view);
+		case Collections5EditPart.VISUAL_ID:
+			return getCollections_3032ContainedLinks(view);
+		case Records5EditPart.VISUAL_ID:
+			return getRecords_3033ContainedLinks(view);
+		case Cursor5EditPart.VISUAL_ID:
+			return getCursor_3034ContainedLinks(view);
+		case Expressions2EditPart.VISUAL_ID:
+			return getExpressions_3035ContainedLinks(view);
+		case Exception2EditPart.VISUAL_ID:
+			return getException_3036ContainedLinks(view);
+		case If2EditPart.VISUAL_ID:
+			return getIf_3037ContainedLinks(view);
+		case Case2EditPart.VISUAL_ID:
+			return getCase_3038ContainedLinks(view);
+		case Insert2EditPart.VISUAL_ID:
+			return getInsert_3039ContainedLinks(view);
+		case Update2EditPart.VISUAL_ID:
+			return getUpdate_3040ContainedLinks(view);
+		case Delete2EditPart.VISUAL_ID:
+			return getDelete_3041ContainedLinks(view);
+		case Select2EditPart.VISUAL_ID:
+			return getSelect_3042ContainedLinks(view);
+		case While2EditPart.VISUAL_ID:
+			return getWhile_3043ContainedLinks(view);
+		case For2EditPart.VISUAL_ID:
+			return getFor_3044ContainedLinks(view);
+		case Loop2EditPart.VISUAL_ID:
+			return getLoop_3045ContainedLinks(view);
+		case Open2EditPart.VISUAL_ID:
+			return getOpen_3046ContainedLinks(view);
+		case Fetch2EditPart.VISUAL_ID:
+			return getFetch_3047ContainedLinks(view);
+		case Close2EditPart.VISUAL_ID:
+			return getClose_3048ContainedLinks(view);
+		case DataType6EditPart.VISUAL_ID:
+			return getDataType_3049ContainedLinks(view);
+		case Collections6EditPart.VISUAL_ID:
+			return getCollections_3050ContainedLinks(view);
+		case Records6EditPart.VISUAL_ID:
+			return getRecords_3051ContainedLinks(view);
+		case Cursor6EditPart.VISUAL_ID:
+			return getCursor_3052ContainedLinks(view);
+		case DataType7EditPart.VISUAL_ID:
+			return getDataType_3053ContainedLinks(view);
+		case Collections7EditPart.VISUAL_ID:
+			return getCollections_3054ContainedLinks(view);
+		case Records7EditPart.VISUAL_ID:
+			return getRecords_3055ContainedLinks(view);
+		case Cursor7EditPart.VISUAL_ID:
+			return getCursor_3056ContainedLinks(view);
+		case Expressions3EditPart.VISUAL_ID:
+			return getExpressions_3057ContainedLinks(view);
+		case Exception3EditPart.VISUAL_ID:
+			return getException_3058ContainedLinks(view);
+		case If3EditPart.VISUAL_ID:
+			return getIf_3059ContainedLinks(view);
+		case Case3EditPart.VISUAL_ID:
+			return getCase_3060ContainedLinks(view);
+		case Insert3EditPart.VISUAL_ID:
+			return getInsert_3061ContainedLinks(view);
+		case Update3EditPart.VISUAL_ID:
+			return getUpdate_3062ContainedLinks(view);
+		case Delete3EditPart.VISUAL_ID:
+			return getDelete_3063ContainedLinks(view);
+		case Select3EditPart.VISUAL_ID:
+			return getSelect_3064ContainedLinks(view);
+		case While3EditPart.VISUAL_ID:
+			return getWhile_3065ContainedLinks(view);
+		case For3EditPart.VISUAL_ID:
+			return getFor_3066ContainedLinks(view);
+		case Loop3EditPart.VISUAL_ID:
+			return getLoop_3067ContainedLinks(view);
+		case Open3EditPart.VISUAL_ID:
+			return getOpen_3068ContainedLinks(view);
+		case Fetch3EditPart.VISUAL_ID:
+			return getFetch_3069ContainedLinks(view);
+		case Close3EditPart.VISUAL_ID:
+			return getClose_3070ContainedLinks(view);
+		case DataType8EditPart.VISUAL_ID:
+			return getDataType_3071ContainedLinks(view);
+		case Collections8EditPart.VISUAL_ID:
+			return getCollections_3072ContainedLinks(view);
+		case Records8EditPart.VISUAL_ID:
+			return getRecords_3073ContainedLinks(view);
+		case Cursor8EditPart.VISUAL_ID:
+			return getCursor_3074ContainedLinks(view);
+		case DataType9EditPart.VISUAL_ID:
+			return getDataType_3075ContainedLinks(view);
+		case Collections9EditPart.VISUAL_ID:
+			return getCollections_3076ContainedLinks(view);
+		case Records9EditPart.VISUAL_ID:
+			return getRecords_3077ContainedLinks(view);
+		case Cursor9EditPart.VISUAL_ID:
+			return getCursor_3078ContainedLinks(view);
+		case Expressions4EditPart.VISUAL_ID:
+			return getExpressions_3079ContainedLinks(view);
+		case Exception4EditPart.VISUAL_ID:
+			return getException_3080ContainedLinks(view);
+		case If4EditPart.VISUAL_ID:
+			return getIf_3081ContainedLinks(view);
+		case Case4EditPart.VISUAL_ID:
+			return getCase_3082ContainedLinks(view);
+		case Insert4EditPart.VISUAL_ID:
+			return getInsert_3083ContainedLinks(view);
+		case Update4EditPart.VISUAL_ID:
+			return getUpdate_3084ContainedLinks(view);
+		case Delete4EditPart.VISUAL_ID:
+			return getDelete_3085ContainedLinks(view);
+		case Select4EditPart.VISUAL_ID:
+			return getSelect_3086ContainedLinks(view);
+		case While4EditPart.VISUAL_ID:
+			return getWhile_3087ContainedLinks(view);
+		case For4EditPart.VISUAL_ID:
+			return getFor_3088ContainedLinks(view);
+		case Loop4EditPart.VISUAL_ID:
+			return getLoop_3089ContainedLinks(view);
+		case Open4EditPart.VISUAL_ID:
+			return getOpen_3090ContainedLinks(view);
+		case Fetch4EditPart.VISUAL_ID:
+			return getFetch_3091ContainedLinks(view);
+		case Close4EditPart.VISUAL_ID:
+			return getClose_3092ContainedLinks(view);
+		case TransitionEditPart.VISUAL_ID:
+			return getTransition_4001ContainedLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIncomingLinks(View view) {
+		switch (CrystalVisualIDRegistry.getVisualID(view)) {
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001IncomingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2002IncomingLinks(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2003IncomingLinks(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2004IncomingLinks(view);
+		case ProcedureEditPart.VISUAL_ID:
+			return getProcedure_2005IncomingLinks(view);
+		case FunctionEditPart.VISUAL_ID:
+			return getFunction_2006IncomingLinks(view);
+		case AnonymousBlockEditPart.VISUAL_ID:
+			return getAnonymousBlock_2007IncomingLinks(view);
+		case DataTypeEditPart.VISUAL_ID:
+			return getDataType_3001IncomingLinks(view);
+		case CollectionsEditPart.VISUAL_ID:
+			return getCollections_3002IncomingLinks(view);
+		case RecordsEditPart.VISUAL_ID:
+			return getRecords_3003IncomingLinks(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_3004IncomingLinks(view);
+		case DataType2EditPart.VISUAL_ID:
+			return getDataType_3005IncomingLinks(view);
+		case Collections2EditPart.VISUAL_ID:
+			return getCollections_3006IncomingLinks(view);
+		case Records2EditPart.VISUAL_ID:
+			return getRecords_3007IncomingLinks(view);
+		case Cursor2EditPart.VISUAL_ID:
+			return getCursor_3008IncomingLinks(view);
+		case DataType3EditPart.VISUAL_ID:
+			return getDataType_3009IncomingLinks(view);
+		case Collections3EditPart.VISUAL_ID:
+			return getCollections_3010IncomingLinks(view);
+		case Records3EditPart.VISUAL_ID:
+			return getRecords_3011IncomingLinks(view);
+		case Cursor3EditPart.VISUAL_ID:
+			return getCursor_3012IncomingLinks(view);
+		case ExpressionsEditPart.VISUAL_ID:
+			return getExpressions_3013IncomingLinks(view);
+		case ExceptionEditPart.VISUAL_ID:
+			return getException_3014IncomingLinks(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_3015IncomingLinks(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_3016IncomingLinks(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_3017IncomingLinks(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_3018IncomingLinks(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_3019IncomingLinks(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_3020IncomingLinks(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_3021IncomingLinks(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_3022IncomingLinks(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_3023IncomingLinks(view);
+		case OpenEditPart.VISUAL_ID:
+			return getOpen_3024IncomingLinks(view);
+		case FetchEditPart.VISUAL_ID:
+			return getFetch_3025IncomingLinks(view);
+		case CloseEditPart.VISUAL_ID:
+			return getClose_3026IncomingLinks(view);
+		case DataType4EditPart.VISUAL_ID:
+			return getDataType_3027IncomingLinks(view);
+		case Collections4EditPart.VISUAL_ID:
+			return getCollections_3028IncomingLinks(view);
+		case Records4EditPart.VISUAL_ID:
+			return getRecords_3029IncomingLinks(view);
+		case Cursor4EditPart.VISUAL_ID:
+			return getCursor_3030IncomingLinks(view);
+		case DataType5EditPart.VISUAL_ID:
+			return getDataType_3031IncomingLinks(view);
+		case Collections5EditPart.VISUAL_ID:
+			return getCollections_3032IncomingLinks(view);
+		case Records5EditPart.VISUAL_ID:
+			return getRecords_3033IncomingLinks(view);
+		case Cursor5EditPart.VISUAL_ID:
+			return getCursor_3034IncomingLinks(view);
+		case Expressions2EditPart.VISUAL_ID:
+			return getExpressions_3035IncomingLinks(view);
+		case Exception2EditPart.VISUAL_ID:
+			return getException_3036IncomingLinks(view);
+		case If2EditPart.VISUAL_ID:
+			return getIf_3037IncomingLinks(view);
+		case Case2EditPart.VISUAL_ID:
+			return getCase_3038IncomingLinks(view);
+		case Insert2EditPart.VISUAL_ID:
+			return getInsert_3039IncomingLinks(view);
+		case Update2EditPart.VISUAL_ID:
+			return getUpdate_3040IncomingLinks(view);
+		case Delete2EditPart.VISUAL_ID:
+			return getDelete_3041IncomingLinks(view);
+		case Select2EditPart.VISUAL_ID:
+			return getSelect_3042IncomingLinks(view);
+		case While2EditPart.VISUAL_ID:
+			return getWhile_3043IncomingLinks(view);
+		case For2EditPart.VISUAL_ID:
+			return getFor_3044IncomingLinks(view);
+		case Loop2EditPart.VISUAL_ID:
+			return getLoop_3045IncomingLinks(view);
+		case Open2EditPart.VISUAL_ID:
+			return getOpen_3046IncomingLinks(view);
+		case Fetch2EditPart.VISUAL_ID:
+			return getFetch_3047IncomingLinks(view);
+		case Close2EditPart.VISUAL_ID:
+			return getClose_3048IncomingLinks(view);
+		case DataType6EditPart.VISUAL_ID:
+			return getDataType_3049IncomingLinks(view);
+		case Collections6EditPart.VISUAL_ID:
+			return getCollections_3050IncomingLinks(view);
+		case Records6EditPart.VISUAL_ID:
+			return getRecords_3051IncomingLinks(view);
+		case Cursor6EditPart.VISUAL_ID:
+			return getCursor_3052IncomingLinks(view);
+		case DataType7EditPart.VISUAL_ID:
+			return getDataType_3053IncomingLinks(view);
+		case Collections7EditPart.VISUAL_ID:
+			return getCollections_3054IncomingLinks(view);
+		case Records7EditPart.VISUAL_ID:
+			return getRecords_3055IncomingLinks(view);
+		case Cursor7EditPart.VISUAL_ID:
+			return getCursor_3056IncomingLinks(view);
+		case Expressions3EditPart.VISUAL_ID:
+			return getExpressions_3057IncomingLinks(view);
+		case Exception3EditPart.VISUAL_ID:
+			return getException_3058IncomingLinks(view);
+		case If3EditPart.VISUAL_ID:
+			return getIf_3059IncomingLinks(view);
+		case Case3EditPart.VISUAL_ID:
+			return getCase_3060IncomingLinks(view);
+		case Insert3EditPart.VISUAL_ID:
+			return getInsert_3061IncomingLinks(view);
+		case Update3EditPart.VISUAL_ID:
+			return getUpdate_3062IncomingLinks(view);
+		case Delete3EditPart.VISUAL_ID:
+			return getDelete_3063IncomingLinks(view);
+		case Select3EditPart.VISUAL_ID:
+			return getSelect_3064IncomingLinks(view);
+		case While3EditPart.VISUAL_ID:
+			return getWhile_3065IncomingLinks(view);
+		case For3EditPart.VISUAL_ID:
+			return getFor_3066IncomingLinks(view);
+		case Loop3EditPart.VISUAL_ID:
+			return getLoop_3067IncomingLinks(view);
+		case Open3EditPart.VISUAL_ID:
+			return getOpen_3068IncomingLinks(view);
+		case Fetch3EditPart.VISUAL_ID:
+			return getFetch_3069IncomingLinks(view);
+		case Close3EditPart.VISUAL_ID:
+			return getClose_3070IncomingLinks(view);
+		case DataType8EditPart.VISUAL_ID:
+			return getDataType_3071IncomingLinks(view);
+		case Collections8EditPart.VISUAL_ID:
+			return getCollections_3072IncomingLinks(view);
+		case Records8EditPart.VISUAL_ID:
+			return getRecords_3073IncomingLinks(view);
+		case Cursor8EditPart.VISUAL_ID:
+			return getCursor_3074IncomingLinks(view);
+		case DataType9EditPart.VISUAL_ID:
+			return getDataType_3075IncomingLinks(view);
+		case Collections9EditPart.VISUAL_ID:
+			return getCollections_3076IncomingLinks(view);
+		case Records9EditPart.VISUAL_ID:
+			return getRecords_3077IncomingLinks(view);
+		case Cursor9EditPart.VISUAL_ID:
+			return getCursor_3078IncomingLinks(view);
+		case Expressions4EditPart.VISUAL_ID:
+			return getExpressions_3079IncomingLinks(view);
+		case Exception4EditPart.VISUAL_ID:
+			return getException_3080IncomingLinks(view);
+		case If4EditPart.VISUAL_ID:
+			return getIf_3081IncomingLinks(view);
+		case Case4EditPart.VISUAL_ID:
+			return getCase_3082IncomingLinks(view);
+		case Insert4EditPart.VISUAL_ID:
+			return getInsert_3083IncomingLinks(view);
+		case Update4EditPart.VISUAL_ID:
+			return getUpdate_3084IncomingLinks(view);
+		case Delete4EditPart.VISUAL_ID:
+			return getDelete_3085IncomingLinks(view);
+		case Select4EditPart.VISUAL_ID:
+			return getSelect_3086IncomingLinks(view);
+		case While4EditPart.VISUAL_ID:
+			return getWhile_3087IncomingLinks(view);
+		case For4EditPart.VISUAL_ID:
+			return getFor_3088IncomingLinks(view);
+		case Loop4EditPart.VISUAL_ID:
+			return getLoop_3089IncomingLinks(view);
+		case Open4EditPart.VISUAL_ID:
+			return getOpen_3090IncomingLinks(view);
+		case Fetch4EditPart.VISUAL_ID:
+			return getFetch_3091IncomingLinks(view);
+		case Close4EditPart.VISUAL_ID:
+			return getClose_3092IncomingLinks(view);
+		case TransitionEditPart.VISUAL_ID:
+			return getTransition_4001IncomingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOutgoingLinks(View view) {
+		switch (CrystalVisualIDRegistry.getVisualID(view)) {
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001OutgoingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2002OutgoingLinks(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2003OutgoingLinks(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2004OutgoingLinks(view);
+		case ProcedureEditPart.VISUAL_ID:
+			return getProcedure_2005OutgoingLinks(view);
+		case FunctionEditPart.VISUAL_ID:
+			return getFunction_2006OutgoingLinks(view);
+		case AnonymousBlockEditPart.VISUAL_ID:
+			return getAnonymousBlock_2007OutgoingLinks(view);
+		case DataTypeEditPart.VISUAL_ID:
+			return getDataType_3001OutgoingLinks(view);
+		case CollectionsEditPart.VISUAL_ID:
+			return getCollections_3002OutgoingLinks(view);
+		case RecordsEditPart.VISUAL_ID:
+			return getRecords_3003OutgoingLinks(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_3004OutgoingLinks(view);
+		case DataType2EditPart.VISUAL_ID:
+			return getDataType_3005OutgoingLinks(view);
+		case Collections2EditPart.VISUAL_ID:
+			return getCollections_3006OutgoingLinks(view);
+		case Records2EditPart.VISUAL_ID:
+			return getRecords_3007OutgoingLinks(view);
+		case Cursor2EditPart.VISUAL_ID:
+			return getCursor_3008OutgoingLinks(view);
+		case DataType3EditPart.VISUAL_ID:
+			return getDataType_3009OutgoingLinks(view);
+		case Collections3EditPart.VISUAL_ID:
+			return getCollections_3010OutgoingLinks(view);
+		case Records3EditPart.VISUAL_ID:
+			return getRecords_3011OutgoingLinks(view);
+		case Cursor3EditPart.VISUAL_ID:
+			return getCursor_3012OutgoingLinks(view);
+		case ExpressionsEditPart.VISUAL_ID:
+			return getExpressions_3013OutgoingLinks(view);
+		case ExceptionEditPart.VISUAL_ID:
+			return getException_3014OutgoingLinks(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_3015OutgoingLinks(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_3016OutgoingLinks(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_3017OutgoingLinks(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_3018OutgoingLinks(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_3019OutgoingLinks(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_3020OutgoingLinks(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_3021OutgoingLinks(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_3022OutgoingLinks(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_3023OutgoingLinks(view);
+		case OpenEditPart.VISUAL_ID:
+			return getOpen_3024OutgoingLinks(view);
+		case FetchEditPart.VISUAL_ID:
+			return getFetch_3025OutgoingLinks(view);
+		case CloseEditPart.VISUAL_ID:
+			return getClose_3026OutgoingLinks(view);
+		case DataType4EditPart.VISUAL_ID:
+			return getDataType_3027OutgoingLinks(view);
+		case Collections4EditPart.VISUAL_ID:
+			return getCollections_3028OutgoingLinks(view);
+		case Records4EditPart.VISUAL_ID:
+			return getRecords_3029OutgoingLinks(view);
+		case Cursor4EditPart.VISUAL_ID:
+			return getCursor_3030OutgoingLinks(view);
+		case DataType5EditPart.VISUAL_ID:
+			return getDataType_3031OutgoingLinks(view);
+		case Collections5EditPart.VISUAL_ID:
+			return getCollections_3032OutgoingLinks(view);
+		case Records5EditPart.VISUAL_ID:
+			return getRecords_3033OutgoingLinks(view);
+		case Cursor5EditPart.VISUAL_ID:
+			return getCursor_3034OutgoingLinks(view);
+		case Expressions2EditPart.VISUAL_ID:
+			return getExpressions_3035OutgoingLinks(view);
+		case Exception2EditPart.VISUAL_ID:
+			return getException_3036OutgoingLinks(view);
+		case If2EditPart.VISUAL_ID:
+			return getIf_3037OutgoingLinks(view);
+		case Case2EditPart.VISUAL_ID:
+			return getCase_3038OutgoingLinks(view);
+		case Insert2EditPart.VISUAL_ID:
+			return getInsert_3039OutgoingLinks(view);
+		case Update2EditPart.VISUAL_ID:
+			return getUpdate_3040OutgoingLinks(view);
+		case Delete2EditPart.VISUAL_ID:
+			return getDelete_3041OutgoingLinks(view);
+		case Select2EditPart.VISUAL_ID:
+			return getSelect_3042OutgoingLinks(view);
+		case While2EditPart.VISUAL_ID:
+			return getWhile_3043OutgoingLinks(view);
+		case For2EditPart.VISUAL_ID:
+			return getFor_3044OutgoingLinks(view);
+		case Loop2EditPart.VISUAL_ID:
+			return getLoop_3045OutgoingLinks(view);
+		case Open2EditPart.VISUAL_ID:
+			return getOpen_3046OutgoingLinks(view);
+		case Fetch2EditPart.VISUAL_ID:
+			return getFetch_3047OutgoingLinks(view);
+		case Close2EditPart.VISUAL_ID:
+			return getClose_3048OutgoingLinks(view);
+		case DataType6EditPart.VISUAL_ID:
+			return getDataType_3049OutgoingLinks(view);
+		case Collections6EditPart.VISUAL_ID:
+			return getCollections_3050OutgoingLinks(view);
+		case Records6EditPart.VISUAL_ID:
+			return getRecords_3051OutgoingLinks(view);
+		case Cursor6EditPart.VISUAL_ID:
+			return getCursor_3052OutgoingLinks(view);
+		case DataType7EditPart.VISUAL_ID:
+			return getDataType_3053OutgoingLinks(view);
+		case Collections7EditPart.VISUAL_ID:
+			return getCollections_3054OutgoingLinks(view);
+		case Records7EditPart.VISUAL_ID:
+			return getRecords_3055OutgoingLinks(view);
+		case Cursor7EditPart.VISUAL_ID:
+			return getCursor_3056OutgoingLinks(view);
+		case Expressions3EditPart.VISUAL_ID:
+			return getExpressions_3057OutgoingLinks(view);
+		case Exception3EditPart.VISUAL_ID:
+			return getException_3058OutgoingLinks(view);
+		case If3EditPart.VISUAL_ID:
+			return getIf_3059OutgoingLinks(view);
+		case Case3EditPart.VISUAL_ID:
+			return getCase_3060OutgoingLinks(view);
+		case Insert3EditPart.VISUAL_ID:
+			return getInsert_3061OutgoingLinks(view);
+		case Update3EditPart.VISUAL_ID:
+			return getUpdate_3062OutgoingLinks(view);
+		case Delete3EditPart.VISUAL_ID:
+			return getDelete_3063OutgoingLinks(view);
+		case Select3EditPart.VISUAL_ID:
+			return getSelect_3064OutgoingLinks(view);
+		case While3EditPart.VISUAL_ID:
+			return getWhile_3065OutgoingLinks(view);
+		case For3EditPart.VISUAL_ID:
+			return getFor_3066OutgoingLinks(view);
+		case Loop3EditPart.VISUAL_ID:
+			return getLoop_3067OutgoingLinks(view);
+		case Open3EditPart.VISUAL_ID:
+			return getOpen_3068OutgoingLinks(view);
+		case Fetch3EditPart.VISUAL_ID:
+			return getFetch_3069OutgoingLinks(view);
+		case Close3EditPart.VISUAL_ID:
+			return getClose_3070OutgoingLinks(view);
+		case DataType8EditPart.VISUAL_ID:
+			return getDataType_3071OutgoingLinks(view);
+		case Collections8EditPart.VISUAL_ID:
+			return getCollections_3072OutgoingLinks(view);
+		case Records8EditPart.VISUAL_ID:
+			return getRecords_3073OutgoingLinks(view);
+		case Cursor8EditPart.VISUAL_ID:
+			return getCursor_3074OutgoingLinks(view);
+		case DataType9EditPart.VISUAL_ID:
+			return getDataType_3075OutgoingLinks(view);
+		case Collections9EditPart.VISUAL_ID:
+			return getCollections_3076OutgoingLinks(view);
+		case Records9EditPart.VISUAL_ID:
+			return getRecords_3077OutgoingLinks(view);
+		case Cursor9EditPart.VISUAL_ID:
+			return getCursor_3078OutgoingLinks(view);
+		case Expressions4EditPart.VISUAL_ID:
+			return getExpressions_3079OutgoingLinks(view);
+		case Exception4EditPart.VISUAL_ID:
+			return getException_3080OutgoingLinks(view);
+		case If4EditPart.VISUAL_ID:
+			return getIf_3081OutgoingLinks(view);
+		case Case4EditPart.VISUAL_ID:
+			return getCase_3082OutgoingLinks(view);
+		case Insert4EditPart.VISUAL_ID:
+			return getInsert_3083OutgoingLinks(view);
+		case Update4EditPart.VISUAL_ID:
+			return getUpdate_3084OutgoingLinks(view);
+		case Delete4EditPart.VISUAL_ID:
+			return getDelete_3085OutgoingLinks(view);
+		case Select4EditPart.VISUAL_ID:
+			return getSelect_3086OutgoingLinks(view);
+		case While4EditPart.VISUAL_ID:
+			return getWhile_3087OutgoingLinks(view);
+		case For4EditPart.VISUAL_ID:
+			return getFor_3088OutgoingLinks(view);
+		case Loop4EditPart.VISUAL_ID:
+			return getLoop_3089OutgoingLinks(view);
+		case Open4EditPart.VISUAL_ID:
+			return getOpen_3090OutgoingLinks(view);
+		case Fetch4EditPart.VISUAL_ID:
+			return getFetch_3091OutgoingLinks(view);
+		case Close4EditPart.VISUAL_ID:
+			return getClose_3092OutgoingLinks(view);
+		case TransitionEditPart.VISUAL_ID:
+			return getTransition_4001OutgoingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCrystal_1000ContainedLinks(
+			View view) {
+		Crystal modelElement = (Crystal) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getParameters_2001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getReturn_2002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDeclarativePart_2003ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExecutablePart_2004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getProcedure_2005ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFunction_2006ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getAnonymousBlock_2007ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3003ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3005ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3006ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3007ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3008ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3009ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3010ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3011ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3012ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3013ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3014ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3015ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3016ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3017ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3018ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3019ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3020ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3021ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3022ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3023ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3024ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3025ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3026ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3027ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3028ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3029ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3030ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3031ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3032ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3033ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3034ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3035ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3036ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3037ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3038ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3039ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3040ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3041ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3042ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3043ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3044ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3045ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3046ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3047ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3048ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3049ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3050ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3051ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3052ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3053ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3054ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3055ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3056ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3057ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3058ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3059ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3060ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3061ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3062ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3063ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3064ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3065ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3066ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3067ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3068ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3069ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3070ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3071ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3072ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3073ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3074ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3075ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3076ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3077ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3078ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3079ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3080ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3081ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3082ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3083ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3084ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3085ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3086ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3087ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3088ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3089ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3090ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3091ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3092ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getTransition_4001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getParameters_2001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getReturn_2002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDeclarativePart_2003IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExecutablePart_2004IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getProcedure_2005IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFunction_2006IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getAnonymousBlock_2007IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3003IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3004IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3005IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3006IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3007IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3008IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3009IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3010IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3011IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3012IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3013IncomingLinks(
+			View view) {
+		Expressions modelElement = (Expressions) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3014IncomingLinks(
+			View view) {
+		Exception modelElement = (Exception) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3015IncomingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3016IncomingLinks(
+			View view) {
+		Case modelElement = (Case) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3017IncomingLinks(
+			View view) {
+		Insert modelElement = (Insert) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3018IncomingLinks(
+			View view) {
+		Update modelElement = (Update) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3019IncomingLinks(
+			View view) {
+		Delete modelElement = (Delete) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3020IncomingLinks(
+			View view) {
+		Select modelElement = (Select) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3021IncomingLinks(
+			View view) {
+		While modelElement = (While) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3022IncomingLinks(View view) {
+		For modelElement = (For) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3023IncomingLinks(
+			View view) {
+		Loop modelElement = (Loop) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3024IncomingLinks(
+			View view) {
+		Open modelElement = (Open) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3025IncomingLinks(
+			View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3026IncomingLinks(
+			View view) {
+		Close modelElement = (Close) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3027IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3028IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3029IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3030IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3031IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3032IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3033IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3034IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3035IncomingLinks(
+			View view) {
+		Expressions modelElement = (Expressions) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3036IncomingLinks(
+			View view) {
+		Exception modelElement = (Exception) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3037IncomingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3038IncomingLinks(
+			View view) {
+		Case modelElement = (Case) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3039IncomingLinks(
+			View view) {
+		Insert modelElement = (Insert) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3040IncomingLinks(
+			View view) {
+		Update modelElement = (Update) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3041IncomingLinks(
+			View view) {
+		Delete modelElement = (Delete) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3042IncomingLinks(
+			View view) {
+		Select modelElement = (Select) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3043IncomingLinks(
+			View view) {
+		While modelElement = (While) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3044IncomingLinks(View view) {
+		For modelElement = (For) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3045IncomingLinks(
+			View view) {
+		Loop modelElement = (Loop) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3046IncomingLinks(
+			View view) {
+		Open modelElement = (Open) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3047IncomingLinks(
+			View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3048IncomingLinks(
+			View view) {
+		Close modelElement = (Close) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3049IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3050IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3051IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3052IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3053IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3054IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3055IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3056IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3057IncomingLinks(
+			View view) {
+		Expressions modelElement = (Expressions) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3058IncomingLinks(
+			View view) {
+		Exception modelElement = (Exception) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3059IncomingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3060IncomingLinks(
+			View view) {
+		Case modelElement = (Case) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3061IncomingLinks(
+			View view) {
+		Insert modelElement = (Insert) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3062IncomingLinks(
+			View view) {
+		Update modelElement = (Update) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3063IncomingLinks(
+			View view) {
+		Delete modelElement = (Delete) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3064IncomingLinks(
+			View view) {
+		Select modelElement = (Select) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3065IncomingLinks(
+			View view) {
+		While modelElement = (While) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3066IncomingLinks(View view) {
+		For modelElement = (For) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3067IncomingLinks(
+			View view) {
+		Loop modelElement = (Loop) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3068IncomingLinks(
+			View view) {
+		Open modelElement = (Open) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3069IncomingLinks(
+			View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3070IncomingLinks(
+			View view) {
+		Close modelElement = (Close) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3071IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3072IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3073IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3074IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3075IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3076IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3077IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3078IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3079IncomingLinks(
+			View view) {
+		Expressions modelElement = (Expressions) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3080IncomingLinks(
+			View view) {
+		Exception modelElement = (Exception) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3081IncomingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3082IncomingLinks(
+			View view) {
+		Case modelElement = (Case) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3083IncomingLinks(
+			View view) {
+		Insert modelElement = (Insert) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3084IncomingLinks(
+			View view) {
+		Update modelElement = (Update) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3085IncomingLinks(
+			View view) {
+		Delete modelElement = (Delete) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3086IncomingLinks(
+			View view) {
+		Select modelElement = (Select) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3087IncomingLinks(
+			View view) {
+		While modelElement = (While) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3088IncomingLinks(View view) {
+		For modelElement = (For) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3089IncomingLinks(
+			View view) {
+		Loop modelElement = (Loop) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3090IncomingLinks(
+			View view) {
+		Open modelElement = (Open) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3091IncomingLinks(
+			View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3092IncomingLinks(
+			View view) {
+		Close modelElement = (Close) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getTransition_4001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getParameters_2001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getReturn_2002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDeclarativePart_2003OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExecutablePart_2004OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getProcedure_2005OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFunction_2006OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getAnonymousBlock_2007OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3003OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3004OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3005OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3006OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3007OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3008OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3009OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3010OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3011OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3012OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3013OutgoingLinks(
+			View view) {
+		Expressions modelElement = (Expressions) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3014OutgoingLinks(
+			View view) {
+		Exception modelElement = (Exception) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3015OutgoingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3016OutgoingLinks(
+			View view) {
+		Case modelElement = (Case) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3017OutgoingLinks(
+			View view) {
+		Insert modelElement = (Insert) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3018OutgoingLinks(
+			View view) {
+		Update modelElement = (Update) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3019OutgoingLinks(
+			View view) {
+		Delete modelElement = (Delete) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3020OutgoingLinks(
+			View view) {
+		Select modelElement = (Select) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3021OutgoingLinks(
+			View view) {
+		While modelElement = (While) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3022OutgoingLinks(View view) {
+		For modelElement = (For) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3023OutgoingLinks(
+			View view) {
+		Loop modelElement = (Loop) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3024OutgoingLinks(
+			View view) {
+		Open modelElement = (Open) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3025OutgoingLinks(
+			View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3026OutgoingLinks(
+			View view) {
+		Close modelElement = (Close) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3027OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3028OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3029OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3030OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3031OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3032OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3033OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3034OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3035OutgoingLinks(
+			View view) {
+		Expressions modelElement = (Expressions) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3036OutgoingLinks(
+			View view) {
+		Exception modelElement = (Exception) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3037OutgoingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3038OutgoingLinks(
+			View view) {
+		Case modelElement = (Case) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3039OutgoingLinks(
+			View view) {
+		Insert modelElement = (Insert) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3040OutgoingLinks(
+			View view) {
+		Update modelElement = (Update) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3041OutgoingLinks(
+			View view) {
+		Delete modelElement = (Delete) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3042OutgoingLinks(
+			View view) {
+		Select modelElement = (Select) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3043OutgoingLinks(
+			View view) {
+		While modelElement = (While) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3044OutgoingLinks(View view) {
+		For modelElement = (For) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3045OutgoingLinks(
+			View view) {
+		Loop modelElement = (Loop) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3046OutgoingLinks(
+			View view) {
+		Open modelElement = (Open) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3047OutgoingLinks(
+			View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3048OutgoingLinks(
+			View view) {
+		Close modelElement = (Close) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3049OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3050OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3051OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3052OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3053OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3054OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3055OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3056OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3057OutgoingLinks(
+			View view) {
+		Expressions modelElement = (Expressions) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3058OutgoingLinks(
+			View view) {
+		Exception modelElement = (Exception) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3059OutgoingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3060OutgoingLinks(
+			View view) {
+		Case modelElement = (Case) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3061OutgoingLinks(
+			View view) {
+		Insert modelElement = (Insert) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3062OutgoingLinks(
+			View view) {
+		Update modelElement = (Update) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3063OutgoingLinks(
+			View view) {
+		Delete modelElement = (Delete) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3064OutgoingLinks(
+			View view) {
+		Select modelElement = (Select) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3065OutgoingLinks(
+			View view) {
+		While modelElement = (While) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3066OutgoingLinks(View view) {
+		For modelElement = (For) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3067OutgoingLinks(
+			View view) {
+		Loop modelElement = (Loop) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3068OutgoingLinks(
+			View view) {
+		Open modelElement = (Open) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3069OutgoingLinks(
+			View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3070OutgoingLinks(
+			View view) {
+		Close modelElement = (Close) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3071OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3072OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3073OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3074OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDataType_3075OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCollections_3076OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getRecords_3077OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCursor_3078OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getExpressions_3079OutgoingLinks(
+			View view) {
+		Expressions modelElement = (Expressions) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getException_3080OutgoingLinks(
+			View view) {
+		Exception modelElement = (Exception) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getIf_3081OutgoingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getCase_3082OutgoingLinks(
+			View view) {
+		Case modelElement = (Case) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getInsert_3083OutgoingLinks(
+			View view) {
+		Insert modelElement = (Insert) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getUpdate_3084OutgoingLinks(
+			View view) {
+		Update modelElement = (Update) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getDelete_3085OutgoingLinks(
+			View view) {
+		Delete modelElement = (Delete) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getSelect_3086OutgoingLinks(
+			View view) {
+		Select modelElement = (Select) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getWhile_3087OutgoingLinks(
+			View view) {
+		While modelElement = (While) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFor_3088OutgoingLinks(View view) {
+		For modelElement = (For) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getLoop_3089OutgoingLinks(
+			View view) {
+		Loop modelElement = (Loop) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getOpen_3090OutgoingLinks(
+			View view) {
+		Open modelElement = (Open) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getFetch_3091OutgoingLinks(
+			View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getClose_3092OutgoingLinks(
+			View view) {
+		Close modelElement = (Close) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CrystalLinkDescriptor> getTransition_4001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<CrystalLinkDescriptor> getContainedTypeModelFacetLinks_Transition_4001(
+			Crystal container) {
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		for (Iterator<?> links = container.getTransitions().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Transition) {
+				continue;
+			}
+			Transition link = (Transition) linkObject;
+			if (TransitionEditPart.VISUAL_ID != CrystalVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Objects dst = link.getEnd();
+			Objects src = link.getStart();
+			result.add(new CrystalLinkDescriptor(src, dst, link,
+					CrystalElementTypes.Transition_4001,
+					TransitionEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<CrystalLinkDescriptor> getIncomingTypeModelFacetLinks_Transition_4001(
+			Objects target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != CrystalPackage.eINSTANCE
+					.getTransition_End()
+					|| false == setting.getEObject() instanceof Transition) {
+				continue;
+			}
+			Transition link = (Transition) setting.getEObject();
+			if (TransitionEditPart.VISUAL_ID != CrystalVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Objects src = link.getStart();
+			result.add(new CrystalLinkDescriptor(src, target, link,
+					CrystalElementTypes.Transition_4001,
+					TransitionEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<CrystalLinkDescriptor> getOutgoingTypeModelFacetLinks_Transition_4001(
+			Objects source) {
+		Crystal container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element
+				.eContainer()) {
+			if (element instanceof Crystal) {
+				container = (Crystal) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		for (Iterator<?> links = container.getTransitions().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Transition) {
+				continue;
+			}
+			Transition link = (Transition) linkObject;
+			if (TransitionEditPart.VISUAL_ID != CrystalVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Objects dst = link.getEnd();
+			Objects src = link.getStart();
+			if (src != source) {
+				continue;
+			}
+			result.add(new CrystalLinkDescriptor(src, dst, link,
+					CrystalElementTypes.Transition_4001,
+					TransitionEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramUpdater TYPED_INSTANCE = new DiagramUpdater() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<CrystalNodeDescriptor> getSemanticChildren(View view) {
+			return CrystalDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<CrystalLinkDescriptor> getContainedLinks(View view) {
+			return CrystalDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<CrystalLinkDescriptor> getIncomingLinks(View view) {
+			return CrystalDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<CrystalLinkDescriptor> getOutgoingLinks(View view) {
+			return CrystalDiagramUpdater.getOutgoingLinks(view);
+		}
+	};
+
+}

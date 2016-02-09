@@ -1,0 +1,3798 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers;
+
+import java.util.ArrayList;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EcoreFactory;
+import org.eclipse.emf.transaction.util.TransactionUtil;
+import org.eclipse.gmf.runtime.common.core.service.AbstractProvider;
+import org.eclipse.gmf.runtime.common.core.service.IOperation;
+import org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint;
+import org.eclipse.gmf.runtime.diagram.core.providers.IViewProvider;
+import org.eclipse.gmf.runtime.diagram.core.services.view.CreateDiagramViewOperation;
+import org.eclipse.gmf.runtime.diagram.core.services.view.CreateEdgeViewOperation;
+import org.eclipse.gmf.runtime.diagram.core.services.view.CreateNodeViewOperation;
+import org.eclipse.gmf.runtime.diagram.core.services.view.CreateViewForKindOperation;
+import org.eclipse.gmf.runtime.diagram.core.services.view.CreateViewOperation;
+import org.eclipse.gmf.runtime.diagram.core.util.ViewUtil;
+import org.eclipse.gmf.runtime.diagram.ui.preferences.IPreferenceConstants;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.FigureUtilities;
+import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.runtime.emf.type.core.IHintedType;
+import org.eclipse.gmf.runtime.notation.Connector;
+import org.eclipse.gmf.runtime.notation.DecorationNode;
+import org.eclipse.gmf.runtime.notation.Diagram;
+import org.eclipse.gmf.runtime.notation.Edge;
+import org.eclipse.gmf.runtime.notation.FontStyle;
+import org.eclipse.gmf.runtime.notation.MeasurementUnit;
+import org.eclipse.gmf.runtime.notation.Node;
+import org.eclipse.gmf.runtime.notation.NotationFactory;
+import org.eclipse.gmf.runtime.notation.NotationPackage;
+import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
+import org.eclipse.gmf.runtime.notation.Routing;
+import org.eclipse.gmf.runtime.notation.Shape;
+import org.eclipse.gmf.runtime.notation.TitleStyle;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.preference.PreferenceConverter;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.FontData;
+
+import filesystem.diagram.edit.parts.*;
+import filesystem.diagram.edit.parts.CaseCaseIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.CaseEditPart;
+import filesystem.diagram.edit.parts.CaseNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.CursorCursorIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.CursorEditPart;
+import filesystem.diagram.edit.parts.CursorNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.Data_Type2EditPart;
+import filesystem.diagram.edit.parts.Data_Type3EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipo_retornoCompartment2EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipo_retornoCompartment3EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipo_retornoCompartmentEditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipos_dadosCompartment2EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipos_dadosCompartment3EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipos_dadosCompartmentEditPart;
+import filesystem.diagram.edit.parts.Data_TypeEditPart;
+import filesystem.diagram.edit.parts.Data_TypeNameReturn2EditPart;
+import filesystem.diagram.edit.parts.Data_TypeNameReturn3EditPart;
+import filesystem.diagram.edit.parts.Data_TypeNameReturnEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartNameDeclarativePartEditPart;
+import filesystem.diagram.edit.parts.DeleteDeleteIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.DeleteEditPart;
+import filesystem.diagram.edit.parts.DeleteNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommand2EditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandExceptionCommandExcecoesCompartment2EditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandExceptionCommandExcecoesCompartmentEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandNameExceptionPart2EditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandNameExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartExceptionPartExcecoesCompartmentEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartNameExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartExecutablePartIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.FilesystemEditPart;
+import filesystem.diagram.edit.parts.ForEditPart;
+import filesystem.diagram.edit.parts.ForForIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.ForNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.If2EditPart;
+import filesystem.diagram.edit.parts.IfEditPart;
+import filesystem.diagram.edit.parts.IfIfIfsCompartment2EditPart;
+import filesystem.diagram.edit.parts.IfIfIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.IfNameExecutablePart2EditPart;
+import filesystem.diagram.edit.parts.IfNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.InsertEditPart;
+import filesystem.diagram.edit.parts.InsertInsertIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.InsertNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.LoopEditPart;
+import filesystem.diagram.edit.parts.LoopLoopIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.LoopNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.OutputEditPart;
+import filesystem.diagram.edit.parts.OutputNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.OutputOutputIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.ParameterIn2EditPart;
+import filesystem.diagram.edit.parts.ParameterInEditPart;
+import filesystem.diagram.edit.parts.ParameterInNameParameters2EditPart;
+import filesystem.diagram.edit.parts.ParameterInNameParametersEditPart;
+import filesystem.diagram.edit.parts.ParameterInOutEditPart;
+import filesystem.diagram.edit.parts.ParameterInOutNameParametersEditPart;
+import filesystem.diagram.edit.parts.ParameterInOutParameterInOutParametros_inCompartmentEditPart;
+import filesystem.diagram.edit.parts.ParameterInParameterInParametros_inCompartment2EditPart;
+import filesystem.diagram.edit.parts.ParameterInParameterInParametros_inCompartmentEditPart;
+import filesystem.diagram.edit.parts.ParameterOutEditPart;
+import filesystem.diagram.edit.parts.ParameterOutNameParametersEditPart;
+import filesystem.diagram.edit.parts.ParameterOutParameterOutParametros_inCompartmentEditPart;
+import filesystem.diagram.edit.parts.ParametersEditPart;
+import filesystem.diagram.edit.parts.ParametersNameParametersEditPart;
+import filesystem.diagram.edit.parts.ParametersParametersParametros_inCompartmentEditPart;
+import filesystem.diagram.edit.parts.ReturnEditPart;
+import filesystem.diagram.edit.parts.ReturnNameReturnEditPart;
+import filesystem.diagram.edit.parts.ReturnReturnTipo_retornoCompartmentEditPart;
+import filesystem.diagram.edit.parts.SelectEditPart;
+import filesystem.diagram.edit.parts.SelectNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.SelectSelectIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.SyncEditPart;
+import filesystem.diagram.edit.parts.UpdateEditPart;
+import filesystem.diagram.edit.parts.UpdateNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.UpdateUpdateIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.WhileEditPart;
+import filesystem.diagram.edit.parts.WhileNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.WhileWhileIfsCompartmentEditPart;
+import filesystem.diagram.part.FilesystemVisualIDRegistry;
+
+/**
+ * @generated
+ */
+public class FilesystemViewProvider extends AbstractProvider implements
+		IViewProvider {
+
+	/**
+	 * @generated
+	 */
+	public final boolean provides(IOperation operation) {
+		if (operation instanceof CreateViewForKindOperation) {
+			return provides((CreateViewForKindOperation) operation);
+		}
+		assert operation instanceof CreateViewOperation;
+		if (operation instanceof CreateDiagramViewOperation) {
+			return provides((CreateDiagramViewOperation) operation);
+		} else if (operation instanceof CreateEdgeViewOperation) {
+			return provides((CreateEdgeViewOperation) operation);
+		} else if (operation instanceof CreateNodeViewOperation) {
+			return provides((CreateNodeViewOperation) operation);
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean provides(CreateViewForKindOperation op) {
+		/*
+		 if (op.getViewKind() == Node.class)
+		 return getNodeViewClass(op.getSemanticAdapter(), op.getContainerView(), op.getSemanticHint()) != null;
+		 if (op.getViewKind() == Edge.class)
+		 return getEdgeViewClass(op.getSemanticAdapter(), op.getContainerView(), op.getSemanticHint()) != null;
+		 */
+		return true;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean provides(CreateDiagramViewOperation op) {
+		return FilesystemEditPart.MODEL_ID.equals(op.getSemanticHint())
+				&& FilesystemVisualIDRegistry
+						.getDiagramVisualID(getSemanticElement(op
+								.getSemanticAdapter())) != -1;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean provides(CreateNodeViewOperation op) {
+		if (op.getContainerView() == null) {
+			return false;
+		}
+		IElementType elementType = getSemanticElementType(op
+				.getSemanticAdapter());
+		EObject domainElement = getSemanticElement(op.getSemanticAdapter());
+		int visualID;
+		if (op.getSemanticHint() == null) {
+			// Semantic hint is not specified. Can be a result of call from CanonicalEditPolicy.
+			// In this situation there should be NO elementType, visualID will be determined
+			// by VisualIDRegistry.getNodeVisualID() for domainElement.
+			if (elementType != null || domainElement == null) {
+				return false;
+			}
+			visualID = FilesystemVisualIDRegistry.getNodeVisualID(
+					op.getContainerView(), domainElement);
+		} else {
+			visualID = FilesystemVisualIDRegistry.getVisualID(op
+					.getSemanticHint());
+			if (elementType != null) {
+				if (!FilesystemElementTypes.isKnownElementType(elementType)
+						|| (!(elementType instanceof IHintedType))) {
+					return false; // foreign element type
+				}
+				String elementTypeHint = ((IHintedType) elementType)
+						.getSemanticHint();
+				if (!op.getSemanticHint().equals(elementTypeHint)) {
+					return false; // if semantic hint is specified it should be the same as in element type
+				}
+				if (domainElement != null
+						&& visualID != FilesystemVisualIDRegistry
+								.getNodeVisualID(op.getContainerView(),
+										domainElement)) {
+					return false; // visual id for node EClass should match visual id from element type
+				}
+			} else {
+				if (!FilesystemEditPart.MODEL_ID
+						.equals(FilesystemVisualIDRegistry.getModelID(op
+								.getContainerView()))) {
+					return false; // foreign diagram
+				}
+				switch (visualID) {
+				case Data_TypeEditPart.VISUAL_ID:
+				case IfEditPart.VISUAL_ID:
+				case ExceptionCommandEditPart.VISUAL_ID:
+				case ParameterInEditPart.VISUAL_ID:
+				case DeclarativePartEditPart.VISUAL_ID:
+				case ExecutablePartEditPart.VISUAL_ID:
+				case ExceptionPartEditPart.VISUAL_ID:
+				case ReturnEditPart.VISUAL_ID:
+				case ParametersEditPart.VISUAL_ID:
+				case Case2EditPart.VISUAL_ID:
+				case Insert2EditPart.VISUAL_ID:
+				case Update2EditPart.VISUAL_ID:
+				case Delete2EditPart.VISUAL_ID:
+				case Select2EditPart.VISUAL_ID:
+				case Output2EditPart.VISUAL_ID:
+				case Cursor2EditPart.VISUAL_ID:
+				case While2EditPart.VISUAL_ID:
+				case For2EditPart.VISUAL_ID:
+				case Loop2EditPart.VISUAL_ID:
+				case ParameterInOut2EditPart.VISUAL_ID:
+				case ParameterOut2EditPart.VISUAL_ID:
+				case CaseEditPart.VISUAL_ID:
+				case InsertEditPart.VISUAL_ID:
+				case UpdateEditPart.VISUAL_ID:
+				case DeleteEditPart.VISUAL_ID:
+				case SelectEditPart.VISUAL_ID:
+				case OutputEditPart.VISUAL_ID:
+				case CursorEditPart.VISUAL_ID:
+				case WhileEditPart.VISUAL_ID:
+				case ForEditPart.VISUAL_ID:
+				case LoopEditPart.VISUAL_ID:
+				case ParameterOutEditPart.VISUAL_ID:
+				case ParameterInOutEditPart.VISUAL_ID:
+				case Data_Type2EditPart.VISUAL_ID:
+				case Data_Type3EditPart.VISUAL_ID:
+				case If2EditPart.VISUAL_ID:
+				case ExceptionCommand2EditPart.VISUAL_ID:
+				case ParameterIn2EditPart.VISUAL_ID:
+					if (domainElement == null
+							|| visualID != FilesystemVisualIDRegistry
+									.getNodeVisualID(op.getContainerView(),
+											domainElement)) {
+						return false; // visual id in semantic hint should match visual id for domain element
+					}
+					break;
+				default:
+					return false;
+				}
+			}
+		}
+		return Data_TypeEditPart.VISUAL_ID == visualID
+				|| IfEditPart.VISUAL_ID == visualID
+				|| CaseEditPart.VISUAL_ID == visualID
+				|| InsertEditPart.VISUAL_ID == visualID
+				|| UpdateEditPart.VISUAL_ID == visualID
+				|| DeleteEditPart.VISUAL_ID == visualID
+				|| SelectEditPart.VISUAL_ID == visualID
+				|| OutputEditPart.VISUAL_ID == visualID
+				|| CursorEditPart.VISUAL_ID == visualID
+				|| WhileEditPart.VISUAL_ID == visualID
+				|| ForEditPart.VISUAL_ID == visualID
+				|| LoopEditPart.VISUAL_ID == visualID
+				|| ExceptionCommandEditPart.VISUAL_ID == visualID
+				|| ParameterInEditPart.VISUAL_ID == visualID
+				|| ParameterOutEditPart.VISUAL_ID == visualID
+				|| ParameterInOutEditPart.VISUAL_ID == visualID
+				|| DeclarativePartEditPart.VISUAL_ID == visualID
+				|| ExecutablePartEditPart.VISUAL_ID == visualID
+				|| ExceptionPartEditPart.VISUAL_ID == visualID
+				|| ReturnEditPart.VISUAL_ID == visualID
+				|| ParametersEditPart.VISUAL_ID == visualID
+				|| Data_Type2EditPart.VISUAL_ID == visualID
+				|| Data_Type3EditPart.VISUAL_ID == visualID
+				|| If2EditPart.VISUAL_ID == visualID
+				|| Case2EditPart.VISUAL_ID == visualID
+				|| Insert2EditPart.VISUAL_ID == visualID
+				|| Update2EditPart.VISUAL_ID == visualID
+				|| Delete2EditPart.VISUAL_ID == visualID
+				|| Select2EditPart.VISUAL_ID == visualID
+				|| Output2EditPart.VISUAL_ID == visualID
+				|| Cursor2EditPart.VISUAL_ID == visualID
+				|| While2EditPart.VISUAL_ID == visualID
+				|| For2EditPart.VISUAL_ID == visualID
+				|| Loop2EditPart.VISUAL_ID == visualID
+				|| ExceptionCommand2EditPart.VISUAL_ID == visualID
+				|| ParameterIn2EditPart.VISUAL_ID == visualID
+				|| ParameterInOut2EditPart.VISUAL_ID == visualID
+				|| ParameterOut2EditPart.VISUAL_ID == visualID;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean provides(CreateEdgeViewOperation op) {
+		IElementType elementType = getSemanticElementType(op
+				.getSemanticAdapter());
+		if (!FilesystemElementTypes.isKnownElementType(elementType)
+				|| (!(elementType instanceof IHintedType))) {
+			return false; // foreign element type
+		}
+		String elementTypeHint = ((IHintedType) elementType).getSemanticHint();
+		if (elementTypeHint == null
+				|| (op.getSemanticHint() != null && !elementTypeHint.equals(op
+						.getSemanticHint()))) {
+			return false; // our hint is visual id and must be specified, and it should be the same as in element type
+		}
+		int visualID = FilesystemVisualIDRegistry.getVisualID(elementTypeHint);
+		EObject domainElement = getSemanticElement(op.getSemanticAdapter());
+		if (domainElement != null
+				&& visualID != FilesystemVisualIDRegistry
+						.getLinkWithClassVisualID(domainElement)) {
+			return false; // visual id for link EClass should match visual id from element type
+		}
+		return true;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Diagram createDiagram(IAdaptable semanticAdapter,
+			String diagramKind, PreferencesHint preferencesHint) {
+		Diagram diagram = NotationFactory.eINSTANCE.createDiagram();
+		diagram.getStyles().add(NotationFactory.eINSTANCE.createDiagramStyle());
+		diagram.setType(FilesystemEditPart.MODEL_ID);
+		diagram.setElement(getSemanticElement(semanticAdapter));
+		diagram.setMeasurementUnit(MeasurementUnit.PIXEL_LITERAL);
+		return diagram;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createNode(IAdaptable semanticAdapter, View containerView,
+			String semanticHint, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		final EObject domainElement = getSemanticElement(semanticAdapter);
+		final int visualID;
+		if (semanticHint == null) {
+			visualID = FilesystemVisualIDRegistry.getNodeVisualID(
+					containerView, domainElement);
+		} else {
+			visualID = FilesystemVisualIDRegistry.getVisualID(semanticHint);
+		}
+		switch (visualID) {
+		case Data_TypeEditPart.VISUAL_ID:
+			return createData_Type_2001(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case IfEditPart.VISUAL_ID:
+			return createIf_2002(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case CaseEditPart.VISUAL_ID:
+			return createCase_2003(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case InsertEditPart.VISUAL_ID:
+			return createInsert_2004(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case UpdateEditPart.VISUAL_ID:
+			return createUpdate_2005(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case DeleteEditPart.VISUAL_ID:
+			return createDelete_2006(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case SelectEditPart.VISUAL_ID:
+			return createSelect_2008(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case OutputEditPart.VISUAL_ID:
+			return createOutput_2007(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case CursorEditPart.VISUAL_ID:
+			return createCursor_2009(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case WhileEditPart.VISUAL_ID:
+			return createWhile_2010(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case ForEditPart.VISUAL_ID:
+			return createFor_2011(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case LoopEditPart.VISUAL_ID:
+			return createLoop_2012(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case ExceptionCommandEditPart.VISUAL_ID:
+			return createExceptionCommand_2013(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case ParameterInEditPart.VISUAL_ID:
+			return createParameterIn_2017(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case ParameterOutEditPart.VISUAL_ID:
+			return createParameterOut_2018(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case ParameterInOutEditPart.VISUAL_ID:
+			return createParameterInOut_2019(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return createDeclarativePart_2014(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return createExecutablePart_2015(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case ExceptionPartEditPart.VISUAL_ID:
+			return createExceptionPart_2016(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case ReturnEditPart.VISUAL_ID:
+			return createReturn_2020(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case ParametersEditPart.VISUAL_ID:
+			return createParameters_2021(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Data_Type2EditPart.VISUAL_ID:
+			return createData_Type_3001(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Data_Type3EditPart.VISUAL_ID:
+			return createData_Type_3002(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case If2EditPart.VISUAL_ID:
+			return createIf_3004(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Case2EditPart.VISUAL_ID:
+			return createCase_3006(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Insert2EditPart.VISUAL_ID:
+			return createInsert_3007(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Update2EditPart.VISUAL_ID:
+			return createUpdate_3008(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Delete2EditPart.VISUAL_ID:
+			return createDelete_3009(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Select2EditPart.VISUAL_ID:
+			return createSelect_3010(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Output2EditPart.VISUAL_ID:
+			return createOutput_3011(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Cursor2EditPart.VISUAL_ID:
+			return createCursor_3012(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case While2EditPart.VISUAL_ID:
+			return createWhile_3013(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case For2EditPart.VISUAL_ID:
+			return createFor_3014(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case Loop2EditPart.VISUAL_ID:
+			return createLoop_3015(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case ExceptionCommand2EditPart.VISUAL_ID:
+			return createExceptionCommand_3003(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case ParameterIn2EditPart.VISUAL_ID:
+			return createParameterIn_3005(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case ParameterInOut2EditPart.VISUAL_ID:
+			return createParameterInOut_3016(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case ParameterOut2EditPart.VISUAL_ID:
+			return createParameterOut_3017(domainElement, containerView, index,
+					persisted, preferencesHint);
+		}
+		// can't happen, provided #provides(CreateNodeViewOperation) is correct
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createEdge(IAdaptable semanticAdapter, View containerView,
+			String semanticHint, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		IElementType elementType = getSemanticElementType(semanticAdapter);
+		String elementTypeHint = ((IHintedType) elementType).getSemanticHint();
+		switch (FilesystemVisualIDRegistry.getVisualID(elementTypeHint)) {
+		case SyncEditPart.VISUAL_ID:
+			return createSync_4001(getSemanticElement(semanticAdapter),
+					containerView, index, persisted, preferencesHint);
+		}
+		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createData_Type_2001(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Data_TypeEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5003 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeNameReturnEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeData_TypeTipo_retornoCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeData_TypeTipos_dadosCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createIf_2002(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry.getType(IfEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5004 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(IfNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfIfsCompartmentEditPart.VISUAL_ID), true,
+				false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfCasesCompartmentEditPart.VISUAL_ID), true,
+				false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfForsCompartmentEditPart.VISUAL_ID), true,
+				false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfLoopsCompartmentEditPart.VISUAL_ID), true,
+				false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createCase_2003(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry.getType(CaseEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5005 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createInsert_2004(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(InsertEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5006 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(InsertNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createUpdate_2005(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(UpdateEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5007 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createDelete_2006(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(DeleteEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5008 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createOutput_2007(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(OutputEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5009 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(OutputNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createSelect_2008(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(SelectEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5010 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(SelectNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createCursor_2009(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(CursorEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5011 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(CursorNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createWhile_2010(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(WhileEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5012 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(WhileNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createFor_2011(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry.getType(ForEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5013 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(ForNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createLoop_2012(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry.getType(LoopEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5014 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopIfsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopForsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createExceptionCommand_2013(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ExceptionCommandEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5016 = createLabel(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExceptionCommandNameExceptionPartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExceptionCommandExceptionCommandExcecoesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createParameterIn_2017(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ParameterInEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5022 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInNameParametersEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInParameterInParametros_inCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInParameterInParametros_in_outCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInParameterInParametros_outCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createParameterOut_2018(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ParameterOutEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5023 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterOutNameParametersEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterOutParameterOutParametros_inCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterOutParameterOutParametros_in_outCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterOutParameterOutParametros_outCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createParameterInOut_2019(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ParameterInOutEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5024 = createLabel(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInOutNameParametersEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInOutParameterInOutParametros_inCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInOutParameterInOutParametros_in_outCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInOutParameterInOutParametros_outCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createDeclarativePart_2014(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(DeclarativePartEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5017 = createLabel(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeclarativePartNameDeclarativePartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createExecutablePart_2015(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ExecutablePartEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5018 = createLabel(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartNameExecutablePartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExecutablePartExecutablePartLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createExceptionPart_2016(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ExceptionPartEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5019 = createLabel(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExceptionPartNameExceptionPartEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExceptionPartExceptionPartExcecoesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createReturn_2020(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ReturnEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5025 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(ReturnNameReturnEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ReturnReturnTipo_retornoCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createParameters_2021(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ParametersEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5026 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(ParametersNameParametersEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParametersParametersParametros_inCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParametersParametersParametros_in_outCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParametersParametersParametros_outCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createData_Type_3001(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Data_Type2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5002 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeNameReturn2EditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeData_TypeTipo_retornoCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeData_TypeTipos_dadosCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createData_Type_3002(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Data_Type3EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5001 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeNameReturn3EditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeData_TypeTipo_retornoCompartment3EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeData_TypeTipos_dadosCompartment3EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createIf_3004(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry.getType(If2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5020 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(IfNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfIfsCompartment2EditPart.VISUAL_ID), true,
+				false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfCasesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfInsertsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfUpdatesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfDeletesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfSelectsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfOutuputsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfCursorsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfWhilesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfForsCompartment2EditPart.VISUAL_ID), true,
+				false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(IfIfLoopsCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createCase_3006(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Case2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5036 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CaseCaseLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createInsert_3007(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Insert2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5035 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(InsertNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(InsertInsertLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createUpdate_3008(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Update2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5034 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(UpdateUpdateLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createDelete_3009(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Delete2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5033 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(DeleteDeleteLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createSelect_3010(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Select2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5032 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(SelectNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(SelectSelectLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createOutput_3011(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Output2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5031 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(OutputNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(OutputOutputLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createCursor_3012(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Cursor2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5030 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(CursorNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(CursorCursorLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createWhile_3013(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(While2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5029 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(WhileNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(WhileWhileLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createFor_3014(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry.getType(For2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5028 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(ForNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForIfsCompartmentEditPart.VISUAL_ID), true,
+				false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(ForForLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createLoop_3015(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(Loop2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5027 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopNameExecutablePart2EditPart.VISUAL_ID));
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopIfsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopCasesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopInsertsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopUpdatesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopDeletesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopSelectsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopOutuputsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopCursorsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopWhilesCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopForsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(node,
+				FilesystemVisualIDRegistry
+						.getType(LoopLoopLoopsCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createExceptionCommand_3003(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ExceptionCommand2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5015 = createLabel(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExceptionCommandNameExceptionPart2EditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ExceptionCommandExceptionCommandExcecoesCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createParameterIn_3005(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ParameterIn2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5021 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInNameParameters2EditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInParameterInParametros_inCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInParameterInParametros_in_outCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInParameterInParametros_outCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createParameterInOut_3016(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ParameterInOut2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5038 = createLabel(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInOutNameParameters2EditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInOutParameterInOutParametros_inCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInOutParameterInOutParametros_in_outCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInOutParameterInOutParametros_outCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createParameterOut_3017(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FilesystemVisualIDRegistry
+				.getType(ParameterOut2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5037 = createLabel(node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterOutNameParameters2EditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterOutParameterOutParametros_inCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterOutParameterOutParametros_in_outCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				FilesystemVisualIDRegistry
+						.getType(ParameterOutParameterOutParametros_outCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createSync_4001(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(FilesystemVisualIDRegistry.getType(SyncEditPart.VISUAL_ID));
+		edge.setElement(domainElement);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(edge,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		return edge;
+	}
+
+	/**
+	 * @generated
+	 */
+	private void stampShortcut(View containerView, Node target) {
+		if (!FilesystemEditPart.MODEL_ID.equals(FilesystemVisualIDRegistry
+				.getModelID(containerView))) {
+			EAnnotation shortcutAnnotation = EcoreFactory.eINSTANCE
+					.createEAnnotation();
+			shortcutAnnotation.setSource("Shortcut"); //$NON-NLS-1$
+			shortcutAnnotation.getDetails().put(
+					"modelID", FilesystemEditPart.MODEL_ID); //$NON-NLS-1$
+			target.getEAnnotations().add(shortcutAnnotation);
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private Node createLabel(View owner, String hint) {
+		DecorationNode rv = NotationFactory.eINSTANCE.createDecorationNode();
+		rv.setType(hint);
+		ViewUtil.insertChildView(owner, rv, ViewUtil.APPEND, true);
+		return rv;
+	}
+
+	/**
+	 * @generated
+	 */
+	private Node createCompartment(View owner, String hint,
+			boolean canCollapse, boolean hasTitle, boolean canSort,
+			boolean canFilter) {
+		//SemanticListCompartment rv = NotationFactory.eINSTANCE.createSemanticListCompartment();
+		//rv.setShowTitle(showTitle);
+		//rv.setCollapsed(isCollapsed);
+		Node rv;
+		if (canCollapse) {
+			rv = NotationFactory.eINSTANCE.createBasicCompartment();
+		} else {
+			rv = NotationFactory.eINSTANCE.createDecorationNode();
+		}
+		if (hasTitle) {
+			TitleStyle ts = NotationFactory.eINSTANCE.createTitleStyle();
+			ts.setShowTitle(true);
+			rv.getStyles().add(ts);
+		}
+		if (canSort) {
+			rv.getStyles().add(NotationFactory.eINSTANCE.createSortingStyle());
+		}
+		if (canFilter) {
+			rv.getStyles()
+					.add(NotationFactory.eINSTANCE.createFilteringStyle());
+		}
+		rv.setType(hint);
+		ViewUtil.insertChildView(owner, rv, ViewUtil.APPEND, true);
+		return rv;
+	}
+
+	/**
+	 * @generated
+	 */
+	private EObject getSemanticElement(IAdaptable semanticAdapter) {
+		if (semanticAdapter == null) {
+			return null;
+		}
+		EObject eObject = (EObject) semanticAdapter.getAdapter(EObject.class);
+		if (eObject != null) {
+			return EMFCoreUtil.resolve(
+					TransactionUtil.getEditingDomain(eObject), eObject);
+		}
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IElementType getSemanticElementType(IAdaptable semanticAdapter) {
+		if (semanticAdapter == null) {
+			return null;
+		}
+		return (IElementType) semanticAdapter.getAdapter(IElementType.class);
+	}
+}

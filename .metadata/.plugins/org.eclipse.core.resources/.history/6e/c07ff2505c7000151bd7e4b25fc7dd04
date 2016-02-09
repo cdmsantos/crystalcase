@@ -1,0 +1,40 @@
+pluginName=Filesystem Plugin
+providerName=Sample Plugin Provider, Inc
+
+editorName=Filesystem Diagram Editing
+context.description=Filesystem Diagram Editing
+context.name=In Filesystem Diagram Editor
+newWizardName=Filesystem Diagram
+newWizardDesc=Creates Filesystem diagram.
+
+initDiagramActionLabel=Initialize filesystem_diagram diagram file
+
+
+navigatorContentName=*.filesystem_diagram diagram contents
+domainNavigatorContentName=*.filesystem model contents
+update.diagram.name=Update Filesystem diagram
+update.diagram.description=Perform Filesystem diagram update
+
+
+# Property Sheet
+tab.appearance=Appearance
+tab.diagram=Rulers & Grid
+tab.domain=Core
+
+# Preferences
+prefpage.master.project.diagram.general=Filesystem Diagram
+prefpage.master.project.diagram.appearance=Appearance
+prefpage.master.project.diagram.connections=Connections
+prefpage.master.project.diagram.printing=Printing
+prefpage.master.project.diagram.rulersAndGrid=Rulers And Grid
+
+
+# Providers
+metatype.name.Filesystem_1000=Undefined
+metatype.name.Parameters_2001=Parameters
+metatype.name.Return_2002=Return
+
+# Commands and menu actions
+cmdcategory.name=Filesystem Editor Commands
+cmdcategory.desc=Filesystem Editor Commands
+

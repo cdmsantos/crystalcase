@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package master.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class CaseEditHelper extends master.diagram.edit.helpers.MasterBaseEditHelper {
+	}

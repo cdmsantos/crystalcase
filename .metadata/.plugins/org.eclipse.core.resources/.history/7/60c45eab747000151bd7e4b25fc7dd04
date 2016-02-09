@@ -1,0 +1,103 @@
+/**
+ */
+package filesystem;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Parameters</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link filesystem.Parameters#getParametros_in <em>Parametros in</em>}</li>
+ *   <li>{@link filesystem.Parameters#getParametros_in_out <em>Parametros in out</em>}</li>
+ *   <li>{@link filesystem.Parameters#getParametros_out <em>Parametros out</em>}</li>
+ *   <li>{@link filesystem.Parameters#getNameParameters <em>Name Parameters</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see filesystem.FilesystemPackage#getParameters()
+ * @model annotation="gmf.node label='nameParameters'"
+ * @generated
+ */
+public interface Parameters extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Parametros in</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.ParameterIn}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parametros in</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parametros in</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getParameters_Parametros_in()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ParameterIn> getParametros_in();
+
+	/**
+	 * Returns the value of the '<em><b>Parametros in out</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.ParameterInOut}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parametros in out</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parametros in out</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getParameters_Parametros_in_out()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ParameterInOut> getParametros_in_out();
+
+	/**
+	 * Returns the value of the '<em><b>Parametros out</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.ParameterOut}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parametros out</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parametros out</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getParameters_Parametros_out()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ParameterOut> getParametros_out();
+
+	/**
+	 * Returns the value of the '<em><b>Name Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name Parameters</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name Parameters</em>' attribute.
+	 * @see #setNameParameters(String)
+	 * @see filesystem.FilesystemPackage#getParameters_NameParameters()
+	 * @model
+	 * @generated
+	 */
+	String getNameParameters();
+
+	/**
+	 * Sets the value of the '{@link filesystem.Parameters#getNameParameters <em>Name Parameters</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Parameters</em>' attribute.
+	 * @see #getNameParameters()
+	 * @generated
+	 */
+	void setNameParameters(String value);
+
+} // Parameters

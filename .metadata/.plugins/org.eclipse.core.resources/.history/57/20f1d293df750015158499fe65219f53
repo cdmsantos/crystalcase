@@ -1,0 +1,11 @@
+package Graph;
+
+public class Vertex {
+	public String name;
+	public boolean visited;
+ 
+	public Vertex(String name) {
+		this.name = name;
+		this.visited = false;
+	}
+}

@@ -1,0 +1,628 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.Case;
+import filesystem.Cursor;
+import filesystem.Delete;
+import filesystem.ExecutablePart;
+import filesystem.FilesystemPackage;
+import filesystem.For;
+import filesystem.If;
+import filesystem.Insert;
+import filesystem.Loop;
+import filesystem.Output;
+import filesystem.Select;
+import filesystem.Update;
+import filesystem.While;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Executable Part</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getIfs <em>Ifs</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getCases <em>Cases</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getInserts <em>Inserts</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getUpdates <em>Updates</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getDeletes <em>Deletes</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getSelects <em>Selects</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getOutuputs <em>Outuputs</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getCursors <em>Cursors</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getWhiles <em>Whiles</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getFors <em>Fors</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getLoops <em>Loops</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getExceptions <em>Exceptions</em>}</li>
+ *   <li>{@link filesystem.impl.ExecutablePartImpl#getNameExecutablePart <em>Name Executable Part</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class ExecutablePartImpl extends EObjectImpl implements ExecutablePart {
+	/**
+	 * The cached value of the '{@link #getIfs() <em>Ifs</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIfs()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<If> ifs;
+
+	/**
+	 * The cached value of the '{@link #getCases() <em>Cases</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCases()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Case> cases;
+
+	/**
+	 * The cached value of the '{@link #getInserts() <em>Inserts</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInserts()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Insert> inserts;
+
+	/**
+	 * The cached value of the '{@link #getUpdates() <em>Updates</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUpdates()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Update> updates;
+
+	/**
+	 * The cached value of the '{@link #getDeletes() <em>Deletes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeletes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Delete> deletes;
+
+	/**
+	 * The cached value of the '{@link #getSelects() <em>Selects</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelects()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Select> selects;
+
+	/**
+	 * The cached value of the '{@link #getOutuputs() <em>Outuputs</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutuputs()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Output> outuputs;
+
+	/**
+	 * The cached value of the '{@link #getCursors() <em>Cursors</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCursors()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Cursor> cursors;
+
+	/**
+	 * The cached value of the '{@link #getWhiles() <em>Whiles</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWhiles()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<While> whiles;
+
+	/**
+	 * The cached value of the '{@link #getFors() <em>Fors</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFors()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<For> fors;
+
+	/**
+	 * The cached value of the '{@link #getLoops() <em>Loops</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLoops()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Loop> loops;
+
+	/**
+	 * The cached value of the '{@link #getExceptions() <em>Exceptions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExceptions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<filesystem.Exception> exceptions;
+
+	/**
+	 * The default value of the '{@link #getNameExecutablePart() <em>Name Executable Part</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameExecutablePart()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EXECUTABLE_PART_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameExecutablePart() <em>Name Executable Part</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameExecutablePart()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameExecutablePart = NAME_EXECUTABLE_PART_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExecutablePartImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.EXECUTABLE_PART;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<If> getIfs() {
+		if (ifs == null) {
+			ifs = new EObjectContainmentEList<If>(If.class, this, FilesystemPackage.EXECUTABLE_PART__IFS);
+		}
+		return ifs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Case> getCases() {
+		if (cases == null) {
+			cases = new EObjectContainmentEList<Case>(Case.class, this, FilesystemPackage.EXECUTABLE_PART__CASES);
+		}
+		return cases;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Insert> getInserts() {
+		if (inserts == null) {
+			inserts = new EObjectContainmentEList<Insert>(Insert.class, this, FilesystemPackage.EXECUTABLE_PART__INSERTS);
+		}
+		return inserts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Update> getUpdates() {
+		if (updates == null) {
+			updates = new EObjectContainmentEList<Update>(Update.class, this, FilesystemPackage.EXECUTABLE_PART__UPDATES);
+		}
+		return updates;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Delete> getDeletes() {
+		if (deletes == null) {
+			deletes = new EObjectContainmentEList<Delete>(Delete.class, this, FilesystemPackage.EXECUTABLE_PART__DELETES);
+		}
+		return deletes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Select> getSelects() {
+		if (selects == null) {
+			selects = new EObjectContainmentEList<Select>(Select.class, this, FilesystemPackage.EXECUTABLE_PART__SELECTS);
+		}
+		return selects;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Output> getOutuputs() {
+		if (outuputs == null) {
+			outuputs = new EObjectContainmentEList<Output>(Output.class, this, FilesystemPackage.EXECUTABLE_PART__OUTUPUTS);
+		}
+		return outuputs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Cursor> getCursors() {
+		if (cursors == null) {
+			cursors = new EObjectContainmentEList<Cursor>(Cursor.class, this, FilesystemPackage.EXECUTABLE_PART__CURSORS);
+		}
+		return cursors;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<While> getWhiles() {
+		if (whiles == null) {
+			whiles = new EObjectContainmentEList<While>(While.class, this, FilesystemPackage.EXECUTABLE_PART__WHILES);
+		}
+		return whiles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<For> getFors() {
+		if (fors == null) {
+			fors = new EObjectContainmentEList<For>(For.class, this, FilesystemPackage.EXECUTABLE_PART__FORS);
+		}
+		return fors;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Loop> getLoops() {
+		if (loops == null) {
+			loops = new EObjectContainmentEList<Loop>(Loop.class, this, FilesystemPackage.EXECUTABLE_PART__LOOPS);
+		}
+		return loops;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<filesystem.Exception> getExceptions() {
+		if (exceptions == null) {
+			exceptions = new EObjectContainmentEList<filesystem.Exception>(filesystem.Exception.class, this, FilesystemPackage.EXECUTABLE_PART__EXCEPTIONS);
+		}
+		return exceptions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameExecutablePart() {
+		return nameExecutablePart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameExecutablePart(String newNameExecutablePart) {
+		String oldNameExecutablePart = nameExecutablePart;
+		nameExecutablePart = newNameExecutablePart;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.EXECUTABLE_PART__NAME_EXECUTABLE_PART, oldNameExecutablePart, nameExecutablePart));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FilesystemPackage.EXECUTABLE_PART__IFS:
+				return ((InternalEList<?>)getIfs()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__CASES:
+				return ((InternalEList<?>)getCases()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__INSERTS:
+				return ((InternalEList<?>)getInserts()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__UPDATES:
+				return ((InternalEList<?>)getUpdates()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__DELETES:
+				return ((InternalEList<?>)getDeletes()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__SELECTS:
+				return ((InternalEList<?>)getSelects()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__OUTUPUTS:
+				return ((InternalEList<?>)getOutuputs()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__CURSORS:
+				return ((InternalEList<?>)getCursors()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__WHILES:
+				return ((InternalEList<?>)getWhiles()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__FORS:
+				return ((InternalEList<?>)getFors()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__LOOPS:
+				return ((InternalEList<?>)getLoops()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.EXECUTABLE_PART__EXCEPTIONS:
+				return ((InternalEList<?>)getExceptions()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FilesystemPackage.EXECUTABLE_PART__IFS:
+				return getIfs();
+			case FilesystemPackage.EXECUTABLE_PART__CASES:
+				return getCases();
+			case FilesystemPackage.EXECUTABLE_PART__INSERTS:
+				return getInserts();
+			case FilesystemPackage.EXECUTABLE_PART__UPDATES:
+				return getUpdates();
+			case FilesystemPackage.EXECUTABLE_PART__DELETES:
+				return getDeletes();
+			case FilesystemPackage.EXECUTABLE_PART__SELECTS:
+				return getSelects();
+			case FilesystemPackage.EXECUTABLE_PART__OUTUPUTS:
+				return getOutuputs();
+			case FilesystemPackage.EXECUTABLE_PART__CURSORS:
+				return getCursors();
+			case FilesystemPackage.EXECUTABLE_PART__WHILES:
+				return getWhiles();
+			case FilesystemPackage.EXECUTABLE_PART__FORS:
+				return getFors();
+			case FilesystemPackage.EXECUTABLE_PART__LOOPS:
+				return getLoops();
+			case FilesystemPackage.EXECUTABLE_PART__EXCEPTIONS:
+				return getExceptions();
+			case FilesystemPackage.EXECUTABLE_PART__NAME_EXECUTABLE_PART:
+				return getNameExecutablePart();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FilesystemPackage.EXECUTABLE_PART__IFS:
+				getIfs().clear();
+				getIfs().addAll((Collection<? extends If>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__CASES:
+				getCases().clear();
+				getCases().addAll((Collection<? extends Case>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__INSERTS:
+				getInserts().clear();
+				getInserts().addAll((Collection<? extends Insert>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__UPDATES:
+				getUpdates().clear();
+				getUpdates().addAll((Collection<? extends Update>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__DELETES:
+				getDeletes().clear();
+				getDeletes().addAll((Collection<? extends Delete>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__SELECTS:
+				getSelects().clear();
+				getSelects().addAll((Collection<? extends Select>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__OUTUPUTS:
+				getOutuputs().clear();
+				getOutuputs().addAll((Collection<? extends Output>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__CURSORS:
+				getCursors().clear();
+				getCursors().addAll((Collection<? extends Cursor>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__WHILES:
+				getWhiles().clear();
+				getWhiles().addAll((Collection<? extends While>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__FORS:
+				getFors().clear();
+				getFors().addAll((Collection<? extends For>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__LOOPS:
+				getLoops().clear();
+				getLoops().addAll((Collection<? extends Loop>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__EXCEPTIONS:
+				getExceptions().clear();
+				getExceptions().addAll((Collection<? extends filesystem.Exception>)newValue);
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__NAME_EXECUTABLE_PART:
+				setNameExecutablePart((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.EXECUTABLE_PART__IFS:
+				getIfs().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__CASES:
+				getCases().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__INSERTS:
+				getInserts().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__UPDATES:
+				getUpdates().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__DELETES:
+				getDeletes().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__SELECTS:
+				getSelects().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__OUTUPUTS:
+				getOutuputs().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__CURSORS:
+				getCursors().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__WHILES:
+				getWhiles().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__FORS:
+				getFors().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__LOOPS:
+				getLoops().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__EXCEPTIONS:
+				getExceptions().clear();
+				return;
+			case FilesystemPackage.EXECUTABLE_PART__NAME_EXECUTABLE_PART:
+				setNameExecutablePart(NAME_EXECUTABLE_PART_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.EXECUTABLE_PART__IFS:
+				return ifs != null && !ifs.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__CASES:
+				return cases != null && !cases.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__INSERTS:
+				return inserts != null && !inserts.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__UPDATES:
+				return updates != null && !updates.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__DELETES:
+				return deletes != null && !deletes.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__SELECTS:
+				return selects != null && !selects.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__OUTUPUTS:
+				return outuputs != null && !outuputs.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__CURSORS:
+				return cursors != null && !cursors.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__WHILES:
+				return whiles != null && !whiles.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__FORS:
+				return fors != null && !fors.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__LOOPS:
+				return loops != null && !loops.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__EXCEPTIONS:
+				return exceptions != null && !exceptions.isEmpty();
+			case FilesystemPackage.EXECUTABLE_PART__NAME_EXECUTABLE_PART:
+				return NAME_EXECUTABLE_PART_EDEFAULT == null ? nameExecutablePart != null : !NAME_EXECUTABLE_PART_EDEFAULT.equals(nameExecutablePart);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (nameExecutablePart: ");
+		result.append(nameExecutablePart);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ExecutablePartImpl

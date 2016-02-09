@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package master.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class IfEditHelper extends master.diagram.edit.helpers.MasterBaseEditHelper {
+	}

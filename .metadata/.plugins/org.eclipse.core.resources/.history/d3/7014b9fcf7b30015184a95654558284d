@@ -1,0 +1,16 @@
+package Product;
+
+public enum ExemptedProducts {
+	BOOK {
+		public String toString() {
+			return "book";
+		}
+	},
+
+	TWO {
+		public String toString() {
+			return "this is two";
+		}
+	}
+
+}

@@ -1,0 +1,68 @@
+	/*
+ * 
+ */
+package master.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class ExecutablePartExecutablePartObjectsCompartmentItemSemanticEditPolicy extends master.diagram.edit.policies.MasterBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public ExecutablePartExecutablePartObjectsCompartmentItemSemanticEditPolicy() {
+				super(master.diagram.providers.MasterElementTypes.ExecutablePart_2004);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (master.diagram.providers.MasterElementTypes.Expressions_3013 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.ExpressionsCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Exception_3014 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.ExceptionCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.If_3015 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.IfCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Case_3016 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.CaseCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Insert_3017 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.InsertCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Update_3018 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.UpdateCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Delete_3019 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.DeleteCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Select_3020 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.SelectCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.While_3021 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.WhileCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.For_3022 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.ForCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Loop_3023 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.LoopCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Open_3024 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.OpenCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Fetch_3025 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.FetchCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Close_3026 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.CloseCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

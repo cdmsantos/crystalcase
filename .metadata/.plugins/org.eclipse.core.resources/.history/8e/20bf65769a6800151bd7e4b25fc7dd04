@@ -1,0 +1,645 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class While2EditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart  {
+
+			/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 3013;
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure contentPane;
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure primaryShape;
+	
+		/**
+ * @generated
+ */
+	public While2EditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+			super.createDefaultEditPolicies();
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new filesystem.diagram.edit.policies.While2ItemSemanticEditPolicy());
+							installEditPolicy(org.eclipse.gef.EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.OPEN_ROLE,
+		new filesystem.diagram.edit.policies.OpenDiagramEditPolicy());	// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+	// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+		}
+	
+		/**
+ * @generated
+ */
+	protected org.eclipse.gef.editpolicies.LayoutEditPolicy createLayoutEditPolicy() {
+					org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
+
+			protected org.eclipse.gef.EditPolicy createChildEditPolicy(org.eclipse.gef.EditPart child) {
+								org.eclipse.gef.EditPolicy result = child.getEditPolicy(org.eclipse.gef.EditPolicy.PRIMARY_DRAG_ROLE);
+				if (result == null) {
+					result = new org.eclipse.gef.editpolicies.NonResizableEditPolicy();
+				}
+				return result;
+			}
+
+			protected org.eclipse.gef.commands.Command getMoveChildrenCommand(org.eclipse.gef.Request request) {
+				return null;
+			}
+
+			protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gef.requests.CreateRequest request) {
+				return null;
+			}
+		};
+		return lep;
+		}
+	
+		/**
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure createNodeShape() {
+		return primaryShape = new WhileFigure();
+	}
+
+		/**
+ * @generated
+ */
+	public WhileFigure getPrimaryShape() {
+		return (WhileFigure) primaryShape;
+	}
+	
+		/**
+ * @generated
+ */
+	protected boolean addFixedChild(org.eclipse.gef.EditPart childEditPart) {
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileNameExecutablePart2EditPart) {
+			((filesystem.diagram.edit.parts.WhileNameExecutablePart2EditPart) childEditPart).setLabel(getPrimaryShape().getFigureWhileLabelFigure());
+			return true;
+		}
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileIfsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileIfsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileIfsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileCasesCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileCasesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileCasesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileInsertsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileInsertsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileInsertsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileUpdatesCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileUpdatesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileUpdatesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileDeletesCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileDeletesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileDeletesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileSelectsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileSelectsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileSelectsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileOutuputsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileOutuputsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileOutuputsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileCursorsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileCursorsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileCursorsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileWhilesCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileWhilesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileWhilesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileForsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileForsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileForsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileLoopsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileLoopsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((filesystem.diagram.edit.parts.WhileWhileLoopsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	protected boolean removeFixedChild(org.eclipse.gef.EditPart childEditPart) {
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileNameExecutablePart2EditPart) {
+			return true;
+		}
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileIfsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileIfsCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileIfsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileCasesCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileCasesCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileCasesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileInsertsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileInsertsCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileInsertsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileUpdatesCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileUpdatesCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileUpdatesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileDeletesCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileDeletesCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileDeletesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileSelectsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileSelectsCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileSelectsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileOutuputsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileOutuputsCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileOutuputsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileCursorsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileCursorsCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileCursorsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileWhilesCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileWhilesCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileWhilesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileForsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileForsCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileForsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		if (childEditPart instanceof filesystem.diagram.edit.parts.WhileWhileLoopsCompartmentEditPart) {
+			org.eclipse.draw2d.IFigure pane = getPrimaryShape().getWhileLoopsCompartmentFigure();
+			pane.remove(((filesystem.diagram.edit.parts.WhileWhileLoopsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}	
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	protected void addChildVisual(org.eclipse.gef.EditPart childEditPart, int index) {
+		if (addFixedChild(childEditPart)) {
+			return;
+		}
+		super.addChildVisual(childEditPart, -1);
+	}
+
+		/**
+ * @generated
+ */
+	protected void removeChildVisual(org.eclipse.gef.EditPart childEditPart) {
+		if (removeFixedChild(childEditPart)){
+			return;
+		}
+		super.removeChildVisual(childEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure getContentPaneFor(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart editPart) {
+				if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileIfsCompartmentEditPart) {
+			return getPrimaryShape().getWhileIfsCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileCasesCompartmentEditPart) {
+			return getPrimaryShape().getWhileCasesCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileInsertsCompartmentEditPart) {
+			return getPrimaryShape().getWhileInsertsCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileUpdatesCompartmentEditPart) {
+			return getPrimaryShape().getWhileUpdatesCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileDeletesCompartmentEditPart) {
+			return getPrimaryShape().getWhileDeletesCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileSelectsCompartmentEditPart) {
+			return getPrimaryShape().getWhileSelectsCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileOutuputsCompartmentEditPart) {
+			return getPrimaryShape().getWhileOutuputsCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileCursorsCompartmentEditPart) {
+			return getPrimaryShape().getWhileCursorsCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileWhilesCompartmentEditPart) {
+			return getPrimaryShape().getWhileWhilesCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileForsCompartmentEditPart) {
+			return getPrimaryShape().getWhileForsCompartmentFigure();
+		}	
+		if (editPart instanceof filesystem.diagram.edit.parts.WhileWhileLoopsCompartmentEditPart) {
+			return getPrimaryShape().getWhileLoopsCompartmentFigure();
+		}	
+		return getContentPane();
+	}
+
+			
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure createNodePlate() {
+		org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure result = new org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure(40, 40);
+				return result;
+	}
+	
+						
+		/**
+ * Creates figure for this edit part.
+ * 
+ * Body of this method does not depend on settings in generation model
+ * so you may safely remove <i>generated</i> tag and modify it.
+ * 
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure createNodeFigure() {
+		org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure figure = createNodePlate();
+		figure.setLayoutManager(new org.eclipse.draw2d.StackLayout());
+		org.eclipse.draw2d.IFigure shape = createNodeShape();
+		figure.add(shape);
+		contentPane = setupContentPane(shape);
+		return figure;
+	}
+	
+		/**
+ * Default implementation treats passed figure as content pane.
+ * Respects layout one may have set for generated figure.
+ * @param nodeShape instance of generated figure class
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure setupContentPane(org.eclipse.draw2d.IFigure nodeShape) {
+					if (nodeShape.getLayoutManager() == null) {
+									org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout layout =new org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout();
+					layout.setSpacing(5);
+					nodeShape.setLayoutManager(layout);
+							}
+				return nodeShape; // use nodeShape itself as contentPane
+	}
+	
+		/**
+ * @generated
+ */
+	public org.eclipse.draw2d.IFigure getContentPane() {
+		if (contentPane != null) {
+			return contentPane;
+		}
+		return super.getContentPane();
+	}
+
+		/**
+ * @generated
+ */
+	protected void setForegroundColor(org.eclipse.swt.graphics.Color color) {
+		if (primaryShape != null) {
+			primaryShape.setForegroundColor(color);
+		}
+	}
+
+		/**
+ * @generated
+ */
+	protected void setBackgroundColor(org.eclipse.swt.graphics.Color color) {
+		if (primaryShape != null) {
+			primaryShape.setBackgroundColor(color);
+		}
+	}
+
+		/**
+ * @generated
+ */
+	protected void setLineWidth(int width) {
+		if (primaryShape instanceof org.eclipse.draw2d.Shape) {
+			((org.eclipse.draw2d.Shape) primaryShape).setLineWidth(width);
+		}
+	}
+
+		/**
+ * @generated
+ */
+	protected void setLineType(int style) {
+		if (primaryShape instanceof org.eclipse.draw2d.Shape) {
+			((org.eclipse.draw2d.Shape) primaryShape).setLineStyle(style);
+		}
+	}
+
+				/**
+ * @generated
+ */
+		public org.eclipse.gef.EditPart getPrimaryChildEditPart() {
+			return getChildBySemanticHint(filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.WhileNameExecutablePart2EditPart.VISUAL_ID));
+		}
+	
+
+	
+	
+	
+/**
+ * @generated
+ */
+public class WhileFigure extends org.eclipse.draw2d.RoundedRectangle {
+
+
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureWhileLabelFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileIfsCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileCasesCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileInsertsCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileUpdatesCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileDeletesCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileSelectsCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileOutuputsCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileCursorsCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileWhilesCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileForsCompartmentFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RectangleFigure fWhileLoopsCompartmentFigure; 
+
+
+
+
+	/**
+	 * @generated
+	 */
+	public WhileFigure() {
+				this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)
+, getMapMode().DPtoLP(8)
+));
+this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)
+, getMapMode().DPtoLP(5)
+, getMapMode().DPtoLP(5)
+, getMapMode().DPtoLP(5)
+));
+		createContents();
+	}
+	/**
+	 * @generated
+	 */
+	private void createContents(){
+
+
+fFigureWhileLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+
+fFigureWhileLabelFigure.setText("While");
+fFigureWhileLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)
+, getMapMode().DPtoLP(50)
+));
+
+this.add(fFigureWhileLabelFigure);
+
+
+
+fWhileIfsCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileIfsCompartmentFigure.setOutline(false);
+
+this.add(fWhileIfsCompartmentFigure);
+
+
+
+fWhileCasesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileCasesCompartmentFigure.setOutline(false);
+
+this.add(fWhileCasesCompartmentFigure);
+
+
+
+fWhileInsertsCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileInsertsCompartmentFigure.setOutline(false);
+
+this.add(fWhileInsertsCompartmentFigure);
+
+
+
+fWhileUpdatesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileUpdatesCompartmentFigure.setOutline(false);
+
+this.add(fWhileUpdatesCompartmentFigure);
+
+
+
+fWhileDeletesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileDeletesCompartmentFigure.setOutline(false);
+
+this.add(fWhileDeletesCompartmentFigure);
+
+
+
+fWhileSelectsCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileSelectsCompartmentFigure.setOutline(false);
+
+this.add(fWhileSelectsCompartmentFigure);
+
+
+
+fWhileOutuputsCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileOutuputsCompartmentFigure.setOutline(false);
+
+this.add(fWhileOutuputsCompartmentFigure);
+
+
+
+fWhileCursorsCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileCursorsCompartmentFigure.setOutline(false);
+
+this.add(fWhileCursorsCompartmentFigure);
+
+
+
+fWhileWhilesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileWhilesCompartmentFigure.setOutline(false);
+
+this.add(fWhileWhilesCompartmentFigure);
+
+
+
+fWhileForsCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileForsCompartmentFigure.setOutline(false);
+
+this.add(fWhileForsCompartmentFigure);
+
+
+
+fWhileLoopsCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();
+
+fWhileLoopsCompartmentFigure.setOutline(false);
+
+this.add(fWhileLoopsCompartmentFigure);
+
+
+	}
+
+
+
+
+
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureWhileLabelFigure() {
+		return fFigureWhileLabelFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileIfsCompartmentFigure() {
+		return fWhileIfsCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileCasesCompartmentFigure() {
+		return fWhileCasesCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileInsertsCompartmentFigure() {
+		return fWhileInsertsCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileUpdatesCompartmentFigure() {
+		return fWhileUpdatesCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileDeletesCompartmentFigure() {
+		return fWhileDeletesCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileSelectsCompartmentFigure() {
+		return fWhileSelectsCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileOutuputsCompartmentFigure() {
+		return fWhileOutuputsCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileCursorsCompartmentFigure() {
+		return fWhileCursorsCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileWhilesCompartmentFigure() {
+		return fWhileWhilesCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileForsCompartmentFigure() {
+		return fWhileForsCompartmentFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.draw2d.RectangleFigure getWhileLoopsCompartmentFigure() {
+		return fWhileLoopsCompartmentFigure;
+	}
+
+
+}
+
+
+	
+	}

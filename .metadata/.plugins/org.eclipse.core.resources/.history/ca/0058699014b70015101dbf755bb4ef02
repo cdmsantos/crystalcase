@@ -1,0 +1,423 @@
+
+/*
+ * 
+ */
+package master.diagram.part;
+
+/**
+ * @generated
+ */
+public class MasterPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(master.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createCase1CreationTool());
+paletteContainer.add(createClose2CreationTool());
+paletteContainer.add(createCollections3CreationTool());
+paletteContainer.add(createCursor4CreationTool());
+paletteContainer.add(createDataType5CreationTool());
+paletteContainer.add(createDeclarativePart6CreationTool());
+paletteContainer.add(createDelete7CreationTool());
+paletteContainer.add(createException8CreationTool());
+paletteContainer.add(createExecutablePart9CreationTool());
+paletteContainer.add(createExpressions10CreationTool());
+paletteContainer.add(createFetch11CreationTool());
+paletteContainer.add(createFor12CreationTool());
+paletteContainer.add(createIf13CreationTool());
+paletteContainer.add(createInsert14CreationTool());
+paletteContainer.add(createLoop15CreationTool());
+paletteContainer.add(createOpen16CreationTool());
+paletteContainer.add(createParameters17CreationTool());
+paletteContainer.add(createRecords18CreationTool());
+paletteContainer.add(createReturn19CreationTool());
+paletteContainer.add(createSelect20CreationTool());
+paletteContainer.add(createUpdate21CreationTool());
+paletteContainer.add(createWhile22CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Connections" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createConnections2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(master.diagram.part.Messages.Connections2Group_title);
+				 paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+								paletteContainer.add(createTransition1CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createCase1CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Case_3019);
+types.add(master.diagram.providers.MasterElementTypes.Case_3045);
+types.add(master.diagram.providers.MasterElementTypes.Case_3046);
+types.add(master.diagram.providers.MasterElementTypes.Case_3051);
+types.add(master.diagram.providers.MasterElementTypes.Case_3053);
+types.add(master.diagram.providers.MasterElementTypes.Case_3055);
+types.add(master.diagram.providers.MasterElementTypes.Case_3100);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Case1CreationTool_title, master.diagram.part.Messages.Case1CreationTool_desc, types);
+				 entry.setId("createCase1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Case_3019));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createClose2CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Close_3044);
+types.add(master.diagram.providers.MasterElementTypes.Close_3087);
+types.add(master.diagram.providers.MasterElementTypes.Close_3090);
+types.add(master.diagram.providers.MasterElementTypes.Close_3093);
+types.add(master.diagram.providers.MasterElementTypes.Close_3096);
+types.add(master.diagram.providers.MasterElementTypes.Close_3099);
+types.add(master.diagram.providers.MasterElementTypes.Close_3110);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Close2CreationTool_title, master.diagram.part.Messages.Close2CreationTool_desc, types);
+				 entry.setId("createClose2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Close_3044));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createCollections3CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+types.add(master.diagram.providers.MasterElementTypes.Collections_3002);
+types.add(master.diagram.providers.MasterElementTypes.Collections_3006);
+types.add(master.diagram.providers.MasterElementTypes.Collections_3010);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Collections3CreationTool_title, master.diagram.part.Messages.Collections3CreationTool_desc, types);
+				 entry.setId("createCollections3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Collections_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createCursor4CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+types.add(master.diagram.providers.MasterElementTypes.Cursor_3004);
+types.add(master.diagram.providers.MasterElementTypes.Cursor_3008);
+types.add(master.diagram.providers.MasterElementTypes.Cursor_3012);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Cursor4CreationTool_title, master.diagram.part.Messages.Cursor4CreationTool_desc, types);
+				 entry.setId("createCursor4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Cursor_3004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDataType5CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+types.add(master.diagram.providers.MasterElementTypes.DataType_3001);
+types.add(master.diagram.providers.MasterElementTypes.DataType_3005);
+types.add(master.diagram.providers.MasterElementTypes.DataType_3009);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.DataType5CreationTool_title, master.diagram.part.Messages.DataType5CreationTool_desc, types);
+				 entry.setId("createDataType5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.DataType_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDeclarativePart6CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.DeclarativePart6CreationTool_title, master.diagram.part.Messages.DeclarativePart6CreationTool_desc, java.util.Collections.singletonList(master.diagram.providers.MasterElementTypes.DeclarativePart_2003));
+				 entry.setId("createDeclarativePart6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.DeclarativePart_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDelete7CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Delete_3025);
+types.add(master.diagram.providers.MasterElementTypes.Delete_3049);
+types.add(master.diagram.providers.MasterElementTypes.Delete_3059);
+types.add(master.diagram.providers.MasterElementTypes.Delete_3063);
+types.add(master.diagram.providers.MasterElementTypes.Delete_3068);
+types.add(master.diagram.providers.MasterElementTypes.Delete_3073);
+types.add(master.diagram.providers.MasterElementTypes.Delete_3103);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Delete7CreationTool_title, master.diagram.part.Messages.Delete7CreationTool_desc, types);
+				 entry.setId("createDelete7CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Delete_3025));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createException8CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Exception_3014);
+types.add(master.diagram.providers.MasterElementTypes.Exception_3017);
+types.add(master.diagram.providers.MasterElementTypes.Exception_3021);
+types.add(master.diagram.providers.MasterElementTypes.Exception_3028);
+types.add(master.diagram.providers.MasterElementTypes.Exception_3032);
+types.add(master.diagram.providers.MasterElementTypes.Exception_3036);
+types.add(master.diagram.providers.MasterElementTypes.Exception_3040);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Exception8CreationTool_title, master.diagram.part.Messages.Exception8CreationTool_desc, types);
+				 entry.setId("createException8CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Exception_3014));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createExecutablePart9CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.ExecutablePart9CreationTool_title, master.diagram.part.Messages.ExecutablePart9CreationTool_desc, java.util.Collections.singletonList(master.diagram.providers.MasterElementTypes.ExecutablePart_2004));
+				 entry.setId("createExecutablePart9CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.ExecutablePart_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createExpressions10CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Expressions_3013);
+types.add(master.diagram.providers.MasterElementTypes.Expressions_3016);
+types.add(master.diagram.providers.MasterElementTypes.Expressions_3020);
+types.add(master.diagram.providers.MasterElementTypes.Expressions_3027);
+types.add(master.diagram.providers.MasterElementTypes.Expressions_3031);
+types.add(master.diagram.providers.MasterElementTypes.Expressions_3035);
+types.add(master.diagram.providers.MasterElementTypes.Expressions_3039);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Expressions10CreationTool_title, master.diagram.part.Messages.Expressions10CreationTool_desc, types);
+				 entry.setId("createExpressions10CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Expressions_3013));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createFetch11CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Fetch_3043);
+types.add(master.diagram.providers.MasterElementTypes.Fetch_3086);
+types.add(master.diagram.providers.MasterElementTypes.Fetch_3089);
+types.add(master.diagram.providers.MasterElementTypes.Fetch_3092);
+types.add(master.diagram.providers.MasterElementTypes.Fetch_3095);
+types.add(master.diagram.providers.MasterElementTypes.Fetch_3098);
+types.add(master.diagram.providers.MasterElementTypes.Fetch_3109);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Fetch11CreationTool_title, master.diagram.part.Messages.Fetch11CreationTool_desc, types);
+				 entry.setId("createFetch11CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Fetch_3043));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createFor12CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.For_3034);
+types.add(master.diagram.providers.MasterElementTypes.For_3054);
+types.add(master.diagram.providers.MasterElementTypes.For_3070);
+types.add(master.diagram.providers.MasterElementTypes.For_3078);
+types.add(master.diagram.providers.MasterElementTypes.For_3081);
+types.add(master.diagram.providers.MasterElementTypes.For_3082);
+types.add(master.diagram.providers.MasterElementTypes.For_3106);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.For12CreationTool_title, master.diagram.part.Messages.For12CreationTool_desc, types);
+				 entry.setId("createFor12CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.For_3034));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createIf13CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.If_3015);
+types.add(master.diagram.providers.MasterElementTypes.If_3018);
+types.add(master.diagram.providers.MasterElementTypes.If_3022);
+types.add(master.diagram.providers.MasterElementTypes.If_3029);
+types.add(master.diagram.providers.MasterElementTypes.If_3033);
+types.add(master.diagram.providers.MasterElementTypes.If_3037);
+types.add(master.diagram.providers.MasterElementTypes.If_3041);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.If13CreationTool_title, master.diagram.part.Messages.If13CreationTool_desc, types);
+				 entry.setId("createIf13CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.If_3015));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createInsert14CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Insert_3023);
+types.add(master.diagram.providers.MasterElementTypes.Insert_3047);
+types.add(master.diagram.providers.MasterElementTypes.Insert_3057);
+types.add(master.diagram.providers.MasterElementTypes.Insert_3061);
+types.add(master.diagram.providers.MasterElementTypes.Insert_3066);
+types.add(master.diagram.providers.MasterElementTypes.Insert_3071);
+types.add(master.diagram.providers.MasterElementTypes.Insert_3101);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Insert14CreationTool_title, master.diagram.part.Messages.Insert14CreationTool_desc, types);
+				 entry.setId("createInsert14CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Insert_3023));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createLoop15CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Loop_3038);
+types.add(master.diagram.providers.MasterElementTypes.Loop_3056);
+types.add(master.diagram.providers.MasterElementTypes.Loop_3075);
+types.add(master.diagram.providers.MasterElementTypes.Loop_3080);
+types.add(master.diagram.providers.MasterElementTypes.Loop_3083);
+types.add(master.diagram.providers.MasterElementTypes.Loop_3084);
+types.add(master.diagram.providers.MasterElementTypes.Loop_3107);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Loop15CreationTool_title, master.diagram.part.Messages.Loop15CreationTool_desc, types);
+				 entry.setId("createLoop15CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Loop_3038));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createOpen16CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Open_3042);
+types.add(master.diagram.providers.MasterElementTypes.Open_3085);
+types.add(master.diagram.providers.MasterElementTypes.Open_3088);
+types.add(master.diagram.providers.MasterElementTypes.Open_3091);
+types.add(master.diagram.providers.MasterElementTypes.Open_3094);
+types.add(master.diagram.providers.MasterElementTypes.Open_3097);
+types.add(master.diagram.providers.MasterElementTypes.Open_3108);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Open16CreationTool_title, master.diagram.part.Messages.Open16CreationTool_desc, types);
+				 entry.setId("createOpen16CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Open_3042));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createParameters17CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Parameters17CreationTool_title, master.diagram.part.Messages.Parameters17CreationTool_desc, java.util.Collections.singletonList(master.diagram.providers.MasterElementTypes.Parameters_2001));
+				 entry.setId("createParameters17CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Parameters_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createRecords18CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+types.add(master.diagram.providers.MasterElementTypes.Records_3003);
+types.add(master.diagram.providers.MasterElementTypes.Records_3007);
+types.add(master.diagram.providers.MasterElementTypes.Records_3011);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Records18CreationTool_title, master.diagram.part.Messages.Records18CreationTool_desc, types);
+				 entry.setId("createRecords18CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Records_3003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createReturn19CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Return19CreationTool_title, master.diagram.part.Messages.Return19CreationTool_desc, java.util.Collections.singletonList(master.diagram.providers.MasterElementTypes.Return_2002));
+				 entry.setId("createReturn19CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Return_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createSelect20CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Select_3026);
+types.add(master.diagram.providers.MasterElementTypes.Select_3050);
+types.add(master.diagram.providers.MasterElementTypes.Select_3060);
+types.add(master.diagram.providers.MasterElementTypes.Select_3064);
+types.add(master.diagram.providers.MasterElementTypes.Select_3069);
+types.add(master.diagram.providers.MasterElementTypes.Select_3074);
+types.add(master.diagram.providers.MasterElementTypes.Select_3104);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Select20CreationTool_title, master.diagram.part.Messages.Select20CreationTool_desc, types);
+				 entry.setId("createSelect20CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Select_3026));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createUpdate21CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.Update_3024);
+types.add(master.diagram.providers.MasterElementTypes.Update_3048);
+types.add(master.diagram.providers.MasterElementTypes.Update_3058);
+types.add(master.diagram.providers.MasterElementTypes.Update_3062);
+types.add(master.diagram.providers.MasterElementTypes.Update_3067);
+types.add(master.diagram.providers.MasterElementTypes.Update_3072);
+types.add(master.diagram.providers.MasterElementTypes.Update_3102);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.Update21CreationTool_title, master.diagram.part.Messages.Update21CreationTool_desc, types);
+				 entry.setId("createUpdate21CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Update_3024));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createWhile22CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(7);
+types.add(master.diagram.providers.MasterElementTypes.While_3030);
+types.add(master.diagram.providers.MasterElementTypes.While_3052);
+types.add(master.diagram.providers.MasterElementTypes.While_3065);
+types.add(master.diagram.providers.MasterElementTypes.While_3076);
+types.add(master.diagram.providers.MasterElementTypes.While_3077);
+types.add(master.diagram.providers.MasterElementTypes.While_3079);
+types.add(master.diagram.providers.MasterElementTypes.While_3105);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(master.diagram.part.Messages.While22CreationTool_title, master.diagram.part.Messages.While22CreationTool_desc, types);
+				 entry.setId("createWhile22CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.While_3030));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createTransition1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(master.diagram.part.Messages.Transition1CreationTool_title, master.diagram.part.Messages.Transition1CreationTool_desc, java.util.Collections.singletonList(master.diagram.providers.MasterElementTypes.Transition_4001));
+				 entry.setId("createTransition1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(master.diagram.providers.MasterElementTypes.getImageDescriptor(master.diagram.providers.MasterElementTypes.Transition_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

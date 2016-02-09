@@ -1,0 +1,161 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.FilesystemPackage;
+import filesystem.ParameterOut;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Parameter Out</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link filesystem.impl.ParameterOutImpl#getNameParameterOut <em>Name Parameter Out</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class ParameterOutImpl extends EObjectImpl implements ParameterOut {
+	/**
+	 * The default value of the '{@link #getNameParameterOut() <em>Name Parameter Out</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameterOut()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_PARAMETER_OUT_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getNameParameterOut() <em>Name Parameter Out</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameterOut()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameParameterOut = NAME_PARAMETER_OUT_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ParameterOutImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.PARAMETER_OUT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameParameterOut() {
+		return nameParameterOut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameParameterOut(String newNameParameterOut) {
+		String oldNameParameterOut = nameParameterOut;
+		nameParameterOut = newNameParameterOut;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.PARAMETER_OUT__NAME_PARAMETER_OUT, oldNameParameterOut, nameParameterOut));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETER_OUT__NAME_PARAMETER_OUT:
+				return getNameParameterOut();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETER_OUT__NAME_PARAMETER_OUT:
+				setNameParameterOut((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETER_OUT__NAME_PARAMETER_OUT:
+				setNameParameterOut(NAME_PARAMETER_OUT_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETER_OUT__NAME_PARAMETER_OUT:
+				return NAME_PARAMETER_OUT_EDEFAULT == null ? nameParameterOut != null : !NAME_PARAMETER_OUT_EDEFAULT.equals(nameParameterOut);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (nameParameterOut: ");
+		result.append(nameParameterOut);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ParameterOutImpl

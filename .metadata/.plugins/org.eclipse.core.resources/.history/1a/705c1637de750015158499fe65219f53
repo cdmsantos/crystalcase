@@ -1,0 +1,10 @@
+import java.util.Hashtable;
+
+
+public class Routes {
+	public Hashtable<Node, Edge> routeTable;
+
+	public Routes() {
+		this.routeTable = new Hashtable<Node, Edge>();
+	}
+}

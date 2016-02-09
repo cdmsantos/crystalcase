@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="filesystem_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="filesystem_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="filesystem.diagram.part.FilesystemDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/FilesystemDiagramFile.gif"
+         extensions="filesystem_diagram"
+         default="true"
+         class="filesystem.diagram.part.FilesystemDiagramEditor"
+         matchingStrategy="filesystem.diagram.part.FilesystemMatchingStrategy"
+         contributorClass="filesystem.diagram.part.FilesystemDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="filesystem.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/FilesystemDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="filesystem.diagram.part.FilesystemCreationWizard"
+  	     id="filesystem.diagram.part.FilesystemCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="master.project.diagram.InitDiagram"
+            nameFilter="*.filesystem"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="filesystem.diagram.part.FilesystemInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="master.project.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="FilesystemPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="filesystem.diagram.part.FilesystemDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="FilesystemPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="filesystem.diagram.part.FilesystemDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="FilesystemPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="filesystem.diagram.part.FilesystemDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="FilesystemRender">
+         <Priority name="Lowest"/>
+         <ViewId id="filesystem.diagram.part.FilesystemDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="filesystem.diagram.providers.FilesystemMarkerNavigationProvider">
+         <MarkerType name="master.project.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="Filesystem Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="filesystem.diagram.providers.FilesystemValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="filesystem.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="master.project.diagram.general"
+            name="%prefpage.master.project.diagram.general"
+            class="filesystem.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="master.project.diagram.appearance"
+            name="%prefpage.master.project.diagram.appearance"
+            category="master.project.diagram.general"
+            class="filesystem.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="master.project.diagram.connections"
+            name="%prefpage.master.project.diagram.connections"
+            category="master.project.diagram.general"
+            class="filesystem.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="master.project.diagram.printing"
+            name="%prefpage.master.project.diagram.printing"
+            category="master.project.diagram.general"
+            class="filesystem.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="master.project.diagram.rulersAndGrid"
+            name="%prefpage.master.project.diagram.rulersAndGrid"
+            category="master.project.diagram.general"
+            class="filesystem.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="master.project.diagram"
+            labelProvider="filesystem.diagram.sheet.FilesystemSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="master.project.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="master.project.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="filesystem.diagram.sheet.FilesystemPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="filesystem.diagram.navigator.FilesystemAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="filesystem.diagram.providers.FilesystemViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="filesystem"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Filesystem"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2008,2007,2009,2010,2011,2012,2013,2017,2018,2019,2014,2015,2016,2020,2021,3001,3002,3004,3003,3005"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="filesystem.diagram.providers.FilesystemEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Filesystem"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2008,2007,2009,2010,2011,2012,2013,2017,2018,2019,2014,2015,2016,2020,2021,3001,3002,3004,3003,3005"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5003,5004,5005,5006,5007,5008,5010,5009,5011,5012,5013,5014,5016,5022,5023,5024,5017,5018,5019,5025,5026,5002,5001,5020,5015,5021"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002,7003,7004,7005,7006,7011,7012,7013,7014,7015,7016,7017,7018,7019,7020,7021,7022,7007,7008,7023,7024,7025,7026,7009,7027,7010,7028,7029"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfFilesystemEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.FilesystemEditPart" id="Filesystem_1000"/>
+         <context elements="Filesystem_1000"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfData_TypeEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.Data_TypeEditPart" id="Data_Type_2001"/>
+         <context elements="Data_Type_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfIfEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.IfEditPart" id="If_2002"/>
+         <context elements="If_2002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfCaseEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.CaseEditPart" id="Case_2003"/>
+         <context elements="Case_2003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfInsertEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.InsertEditPart" id="Insert_2004"/>
+         <context elements="Insert_2004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfUpdateEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.UpdateEditPart" id="Update_2005"/>
+         <context elements="Update_2005"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfDeleteEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.DeleteEditPart" id="Delete_2006"/>
+         <context elements="Delete_2006"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfSelectEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.SelectEditPart" id="Select_2008"/>
+         <context elements="Select_2008"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfOutputEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.OutputEditPart" id="Output_2007"/>
+         <context elements="Output_2007"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfCursorEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.CursorEditPart" id="Cursor_2009"/>
+         <context elements="Cursor_2009"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfWhileEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.WhileEditPart" id="While_2010"/>
+         <context elements="While_2010"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfForEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ForEditPart" id="For_2011"/>
+         <context elements="For_2011"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfLoopEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.LoopEditPart" id="Loop_2012"/>
+         <context elements="Loop_2012"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfExceptionCommandEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ExceptionCommandEditPart" id="ExceptionCommand_2013"/>
+         <context elements="ExceptionCommand_2013"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfParameterInEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ParameterInEditPart" id="ParameterIn_2017"/>
+         <context elements="ParameterIn_2017"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfParameterOutEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ParameterOutEditPart" id="ParameterOut_2018"/>
+         <context elements="ParameterOut_2018"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfParameterInOutEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ParameterInOutEditPart" id="ParameterInOut_2019"/>
+         <context elements="ParameterInOut_2019"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfDeclarativePartEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.DeclarativePartEditPart" id="DeclarativePart_2014"/>
+         <context elements="DeclarativePart_2014"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfExecutablePartEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ExecutablePartEditPart" id="ExecutablePart_2015"/>
+         <context elements="ExecutablePart_2015"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfExceptionPartEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ExceptionPartEditPart" id="ExceptionPart_2016"/>
+         <context elements="ExceptionPart_2016"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfReturnEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ReturnEditPart" id="Return_2020"/>
+         <context elements="Return_2020"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfParametersEditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ParametersEditPart" id="Parameters_2021"/>
+         <context elements="Parameters_2021"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfData_Type2EditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.Data_Type2EditPart" id="Data_Type_3001"/>
+         <context elements="Data_Type_3001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfData_Type3EditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.Data_Type3EditPart" id="Data_Type_3002"/>
+         <context elements="Data_Type_3002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfIf2EditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.If2EditPart" id="If_3004"/>
+         <context elements="If_3004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfExceptionCommand2EditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ExceptionCommand2EditPart" id="ExceptionCommand_3003"/>
+         <context elements="ExceptionCommand_3003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="filesystem.diagram.providers.assistants.FilesystemModelingAssistantProviderOfParameterIn2EditPart">
+         <Priority name="Lowest"/>
+         <object class="filesystem.diagram.edit.parts.ParameterIn2EditPart" id="ParameterIn_3005"/>
+         <context elements="ParameterIn_3005"/>
+      </modelingAssistantProvider>
+      
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="filesystem.diagram.providers.FilesystemIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="filesystem.diagram.providers.FilesystemParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="filesystem.diagram.providers.FilesystemShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2008,2007,2009,2010,2011,2012,2013,2017,2018,2019,2014,2015,2016,2020,2021"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Filesystem_1000"
+               name="%metatype.name.Filesystem_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Filesystem"
+               edithelper="filesystem.diagram.edit.helpers.FilesystemEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Data_Type_2001"
+               name="%metatype.name.Data_Type_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Data_Type"
+               edithelper="filesystem.diagram.edit.helpers.Data_TypeEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.If_2002"
+               name="%metatype.name.If_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="If"
+               edithelper="filesystem.diagram.edit.helpers.IfEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Case_2003"
+               name="%metatype.name.Case_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Case"
+               edithelper="filesystem.diagram.edit.helpers.CaseEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Insert_2004"
+               name="%metatype.name.Insert_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Insert"
+               edithelper="filesystem.diagram.edit.helpers.InsertEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Update_2005"
+               name="%metatype.name.Update_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Update"
+               edithelper="filesystem.diagram.edit.helpers.UpdateEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Delete_2006"
+               name="%metatype.name.Delete_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Delete"
+               edithelper="filesystem.diagram.edit.helpers.DeleteEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Select_2008"
+               name="%metatype.name.Select_2008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Select"
+               edithelper="filesystem.diagram.edit.helpers.SelectEditHelper">
+            <param name="semanticHint" value="2008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Output_2007"
+               name="%metatype.name.Output_2007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Output"
+               edithelper="filesystem.diagram.edit.helpers.OutputEditHelper">
+            <param name="semanticHint" value="2007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Cursor_2009"
+               name="%metatype.name.Cursor_2009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Cursor"
+               edithelper="filesystem.diagram.edit.helpers.CursorEditHelper">
+            <param name="semanticHint" value="2009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.While_2010"
+               name="%metatype.name.While_2010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="While"
+               edithelper="filesystem.diagram.edit.helpers.WhileEditHelper">
+            <param name="semanticHint" value="2010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.For_2011"
+               name="%metatype.name.For_2011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="For"
+               edithelper="filesystem.diagram.edit.helpers.ForEditHelper">
+            <param name="semanticHint" value="2011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Loop_2012"
+               name="%metatype.name.Loop_2012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Loop"
+               edithelper="filesystem.diagram.edit.helpers.LoopEditHelper">
+            <param name="semanticHint" value="2012"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.ExceptionCommand_2013"
+               name="%metatype.name.ExceptionCommand_2013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ExceptionCommand"
+               edithelper="filesystem.diagram.edit.helpers.ExceptionCommandEditHelper">
+            <param name="semanticHint" value="2013"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.ParameterIn_2017"
+               name="%metatype.name.ParameterIn_2017"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ParameterIn"
+               edithelper="filesystem.diagram.edit.helpers.ParameterInEditHelper">
+            <param name="semanticHint" value="2017"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.ParameterOut_2018"
+               name="%metatype.name.ParameterOut_2018"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ParameterOut"
+               edithelper="filesystem.diagram.edit.helpers.ParameterOutEditHelper">
+            <param name="semanticHint" value="2018"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.ParameterInOut_2019"
+               name="%metatype.name.ParameterInOut_2019"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ParameterInOut"
+               edithelper="filesystem.diagram.edit.helpers.ParameterInOutEditHelper">
+            <param name="semanticHint" value="2019"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.DeclarativePart_2014"
+               name="%metatype.name.DeclarativePart_2014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DeclarativePart"
+               edithelper="filesystem.diagram.edit.helpers.DeclarativePartEditHelper">
+            <param name="semanticHint" value="2014"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.ExecutablePart_2015"
+               name="%metatype.name.ExecutablePart_2015"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ExecutablePart"
+               edithelper="filesystem.diagram.edit.helpers.ExecutablePartEditHelper">
+            <param name="semanticHint" value="2015"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.ExceptionPart_2016"
+               name="%metatype.name.ExceptionPart_2016"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ExceptionPart"
+               edithelper="filesystem.diagram.edit.helpers.ExceptionPartEditHelper">
+            <param name="semanticHint" value="2016"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Return_2020"
+               name="%metatype.name.Return_2020"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Return"
+               edithelper="filesystem.diagram.edit.helpers.ReturnEditHelper">
+            <param name="semanticHint" value="2020"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Parameters_2021"
+               name="%metatype.name.Parameters_2021"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Parameters"
+               edithelper="filesystem.diagram.edit.helpers.ParametersEditHelper">
+            <param name="semanticHint" value="2021"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <specializationType
+               id="master.project.diagram.Data_Type_3001"
+               name="%metatype.name.Data_Type_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="master.project.diagram.Data_Type_2001"/>
+            <param name="semanticHint" value="3001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <specializationType
+               id="master.project.diagram.Data_Type_3002"
+               name="%metatype.name.Data_Type_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="master.project.diagram.Data_Type_2001"/>
+            <param name="semanticHint" value="3002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <specializationType
+               id="master.project.diagram.If_3004"
+               name="%metatype.name.If_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="master.project.diagram.If_2002"/>
+            <param name="semanticHint" value="3004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <specializationType
+               id="master.project.diagram.ExceptionCommand_3003"
+               name="%metatype.name.ExceptionCommand_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="master.project.diagram.ExceptionCommand_2013"/>
+            <param name="semanticHint" value="3003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <specializationType
+               id="master.project.diagram.ParameterIn_3005"
+               name="%metatype.name.ParameterIn_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="master.project.diagram.ParameterIn_2017"/>
+            <param name="semanticHint" value="3005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="filesystem">
+         <metamodelType
+               id="master.project.diagram.Sync_4001"
+               name="%metatype.name.Sync_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Sync"
+               edithelper="filesystem.diagram.edit.helpers.SyncEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="master.project.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="master.project.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="master.project.diagram.TypeContext">
+         <elementType ref="master.project.diagram.Filesystem_1000"/>
+         <elementType ref="master.project.diagram.Data_Type_2001"/>
+         <elementType ref="master.project.diagram.If_2002"/>
+         <elementType ref="master.project.diagram.Case_2003"/>
+         <elementType ref="master.project.diagram.Insert_2004"/>
+         <elementType ref="master.project.diagram.Update_2005"/>
+         <elementType ref="master.project.diagram.Delete_2006"/>
+         <elementType ref="master.project.diagram.Select_2008"/>
+         <elementType ref="master.project.diagram.Output_2007"/>
+         <elementType ref="master.project.diagram.Cursor_2009"/>
+         <elementType ref="master.project.diagram.While_2010"/>
+         <elementType ref="master.project.diagram.For_2011"/>
+         <elementType ref="master.project.diagram.Loop_2012"/>
+         <elementType ref="master.project.diagram.ExceptionCommand_2013"/>
+         <elementType ref="master.project.diagram.ParameterIn_2017"/>
+         <elementType ref="master.project.diagram.ParameterOut_2018"/>
+         <elementType ref="master.project.diagram.ParameterInOut_2019"/>
+         <elementType ref="master.project.diagram.DeclarativePart_2014"/>
+         <elementType ref="master.project.diagram.ExecutablePart_2015"/>
+         <elementType ref="master.project.diagram.ExceptionPart_2016"/>
+         <elementType ref="master.project.diagram.Return_2020"/>
+         <elementType ref="master.project.diagram.Parameters_2021"/>
+         <elementType ref="master.project.diagram.Data_Type_3001"/>
+         <elementType ref="master.project.diagram.Data_Type_3002"/>
+         <elementType ref="master.project.diagram.If_3004"/>
+         <elementType ref="master.project.diagram.ExceptionCommand_3003"/>
+         <elementType ref="master.project.diagram.ParameterIn_3005"/>
+         <elementType ref="master.project.diagram.Sync_4001"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="master.project.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="master.project.diagram"
+           properties="isURIEditorInput"
+           class="filesystem.diagram.part.FilesystemUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="master.project.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="master.project.diagram"
+           properties="isShortcut"
+           class="filesystem.diagram.part.FilesystemShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="master.project.diagram.resourceContent"/>
+			<contentExtension pattern="master.project.diagram.domainResourceContent"/>
+            <contentExtension pattern="master.project.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="master.project.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="master.project.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="filesystem.diagram.navigator.FilesystemNavigatorContentProvider" 
+            labelProvider="filesystem.diagram.navigator.FilesystemNavigatorLabelProvider"
+            icon="icons/obj16/FilesystemDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="filesystem_diagram"/>
+               </and>
+               <instanceof value="filesystem.diagram.navigator.FilesystemAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="master.project.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="filesystem.diagram.navigator.FilesystemAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="master.project.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="master.project.diagram.navigatorSorter" 
+               class="filesystem.diagram.navigator.FilesystemNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="filesystem_diagram"/>
+                  </and>
+                  <instanceof value="filesystem.diagram.navigator.FilesystemAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="master.project.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="filesystem.diagram.navigator.FilesystemDomainNavigatorContentProvider" 
+            labelProvider="filesystem.diagram.navigator.FilesystemDomainNavigatorLabelProvider"
+            icon="icons/obj16/FilesystemDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="filesystem"/>
+               </and>
+               <instanceof value="filesystem.diagram.navigator.FilesystemDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="filesystem.diagram.navigator.FilesystemDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="master.project.diagram.navigatorActionProvider"
+            class="filesystem.diagram.navigator.FilesystemNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="filesystem.diagram.navigator.FilesystemAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="master.project.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="master.project.diagram.navigatorLinkHelper"
+            class="filesystem.diagram.navigator.FilesystemNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="master.project.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="filesystem.diagram.navigator.FilesystemAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="filesystem.diagram.part.FilesystemDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="filesystem.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="filesystem.diagram.updateDiagram"
+         contextId="filesystem.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="master.project.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="filesystem.diagram.part.FilesystemDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="filesystem.diagram.edit.parts.FilesystemEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="filesystem.diagram.part.FilesystemDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="master.project.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="filesystem.diagram.part.FilesystemDiagramEditorID"
+         defaultHandler="filesystem.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

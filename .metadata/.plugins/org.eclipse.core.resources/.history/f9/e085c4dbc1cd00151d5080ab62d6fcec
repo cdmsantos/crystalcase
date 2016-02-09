@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package crystal.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramConnectionsPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.ConnectionsPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramConnectionsPreferencePage() {
+		setPreferenceStore(crystal.diagram.part.CrystalDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

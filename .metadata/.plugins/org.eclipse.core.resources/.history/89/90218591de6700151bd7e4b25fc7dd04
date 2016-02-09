@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class FilesystemModelingAssistantProviderOfCursorEditPart extends filesystem.diagram.providers.FilesystemModelingAssistantProvider {
+
+					
+	
+
+	}

@@ -1,0 +1,337 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.DeclarativePart;
+import filesystem.ExceptionPart;
+import filesystem.ExecutablePart;
+import filesystem.Filesystem;
+import filesystem.FilesystemPackage;
+import filesystem.Parameters;
+import filesystem.Return;
+import filesystem.Sync;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Filesystem</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getSyncs <em>Syncs</em>}</li>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getDeclarative <em>Declarative</em>}</li>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getExecutable <em>Executable</em>}</li>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getException <em>Exception</em>}</li>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getReturn <em>Return</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class FilesystemImpl extends EObjectImpl implements Filesystem {
+	/**
+	 * The cached value of the '{@link #getSyncs() <em>Syncs</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSyncs()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Sync> syncs;
+
+	/**
+	 * The cached value of the '{@link #getDeclarative() <em>Declarative</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeclarative()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DeclarativePart> declarative;
+
+	/**
+	 * The cached value of the '{@link #getExecutable() <em>Executable</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExecutable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ExecutablePart> executable;
+
+	/**
+	 * The cached value of the '{@link #getException() <em>Exception</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getException()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ExceptionPart> exception;
+
+	/**
+	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParameters()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Parameters> parameters;
+
+	/**
+	 * The cached value of the '{@link #getReturn() <em>Return</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReturn()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Return> return_;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FilesystemImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.FILESYSTEM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Sync> getSyncs() {
+		if (syncs == null) {
+			syncs = new EObjectContainmentEList<Sync>(Sync.class, this, FilesystemPackage.FILESYSTEM__SYNCS);
+		}
+		return syncs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<DeclarativePart> getDeclarative() {
+		if (declarative == null) {
+			declarative = new EObjectContainmentEList<DeclarativePart>(DeclarativePart.class, this, FilesystemPackage.FILESYSTEM__DECLARATIVE);
+		}
+		return declarative;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ExecutablePart> getExecutable() {
+		if (executable == null) {
+			executable = new EObjectContainmentEList<ExecutablePart>(ExecutablePart.class, this, FilesystemPackage.FILESYSTEM__EXECUTABLE);
+		}
+		return executable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ExceptionPart> getException() {
+		if (exception == null) {
+			exception = new EObjectContainmentEList<ExceptionPart>(ExceptionPart.class, this, FilesystemPackage.FILESYSTEM__EXCEPTION);
+		}
+		return exception;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Parameters> getParameters() {
+		if (parameters == null) {
+			parameters = new EObjectContainmentEList<Parameters>(Parameters.class, this, FilesystemPackage.FILESYSTEM__PARAMETERS);
+		}
+		return parameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Return> getReturn() {
+		if (return_ == null) {
+			return_ = new EObjectContainmentEList<Return>(Return.class, this, FilesystemPackage.FILESYSTEM__RETURN);
+		}
+		return return_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				return ((InternalEList<?>)getSyncs()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				return ((InternalEList<?>)getDeclarative()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				return ((InternalEList<?>)getExecutable()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				return ((InternalEList<?>)getException()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.FILESYSTEM__PARAMETERS:
+				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.FILESYSTEM__RETURN:
+				return ((InternalEList<?>)getReturn()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				return getSyncs();
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				return getDeclarative();
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				return getExecutable();
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				return getException();
+			case FilesystemPackage.FILESYSTEM__PARAMETERS:
+				return getParameters();
+			case FilesystemPackage.FILESYSTEM__RETURN:
+				return getReturn();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				getSyncs().clear();
+				getSyncs().addAll((Collection<? extends Sync>)newValue);
+				return;
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				getDeclarative().clear();
+				getDeclarative().addAll((Collection<? extends DeclarativePart>)newValue);
+				return;
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				getExecutable().clear();
+				getExecutable().addAll((Collection<? extends ExecutablePart>)newValue);
+				return;
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				getException().clear();
+				getException().addAll((Collection<? extends ExceptionPart>)newValue);
+				return;
+			case FilesystemPackage.FILESYSTEM__PARAMETERS:
+				getParameters().clear();
+				getParameters().addAll((Collection<? extends Parameters>)newValue);
+				return;
+			case FilesystemPackage.FILESYSTEM__RETURN:
+				getReturn().clear();
+				getReturn().addAll((Collection<? extends Return>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				getSyncs().clear();
+				return;
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				getDeclarative().clear();
+				return;
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				getExecutable().clear();
+				return;
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				getException().clear();
+				return;
+			case FilesystemPackage.FILESYSTEM__PARAMETERS:
+				getParameters().clear();
+				return;
+			case FilesystemPackage.FILESYSTEM__RETURN:
+				getReturn().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				return syncs != null && !syncs.isEmpty();
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				return declarative != null && !declarative.isEmpty();
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				return executable != null && !executable.isEmpty();
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				return exception != null && !exception.isEmpty();
+			case FilesystemPackage.FILESYSTEM__PARAMETERS:
+				return parameters != null && !parameters.isEmpty();
+			case FilesystemPackage.FILESYSTEM__RETURN:
+				return return_ != null && !return_.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //FilesystemImpl

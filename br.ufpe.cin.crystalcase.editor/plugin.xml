@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated crystalmm -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="crystal.presentation.CrystalModelWizardID"
+            name="%_UI_CrystalModelWizard_label"
+            class="crystal.presentation.CrystalModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CrystalModelFile.gif">
+         <description>%_UI_CrystalModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated crystalmm -->
+      <editor
+            id="crystal.presentation.CrystalEditorID"
+            name="%_UI_CrystalEditor_label"
+            icon="icons/full/obj16/CrystalModelFile.gif"
+            extensions="crystal"
+            class="crystal.presentation.CrystalEditor"
+            contributorClass="crystal.presentation.CrystalActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

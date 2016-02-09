@@ -1,0 +1,4976 @@
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+import org.eclipse.core.runtime.Platform;
+import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmf.runtime.notation.Diagram;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
+
+import filesystem.Filesystem;
+import filesystem.FilesystemPackage;
+import filesystem.diagram.edit.parts.*;
+import filesystem.diagram.edit.parts.CaseCaseIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.CaseEditPart;
+import filesystem.diagram.edit.parts.CaseNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.CursorCursorIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.CursorEditPart;
+import filesystem.diagram.edit.parts.CursorNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.Data_Type2EditPart;
+import filesystem.diagram.edit.parts.Data_Type3EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipo_retornoCompartment2EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipo_retornoCompartment3EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipo_retornoCompartmentEditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipos_dadosCompartment2EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipos_dadosCompartment3EditPart;
+import filesystem.diagram.edit.parts.Data_TypeData_TypeTipos_dadosCompartmentEditPart;
+import filesystem.diagram.edit.parts.Data_TypeEditPart;
+import filesystem.diagram.edit.parts.Data_TypeNameReturn2EditPart;
+import filesystem.diagram.edit.parts.Data_TypeNameReturn3EditPart;
+import filesystem.diagram.edit.parts.Data_TypeNameReturnEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartNameDeclarativePartEditPart;
+import filesystem.diagram.edit.parts.DeleteDeleteIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.DeleteEditPart;
+import filesystem.diagram.edit.parts.DeleteNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommand2EditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandExceptionCommandExcecoesCompartment2EditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandExceptionCommandExcecoesCompartmentEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandNameExceptionPart2EditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandNameExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartExceptionPartExcecoesCompartmentEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartNameExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartExecutablePartIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.FilesystemEditPart;
+import filesystem.diagram.edit.parts.ForEditPart;
+import filesystem.diagram.edit.parts.ForForIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.ForNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.If2EditPart;
+import filesystem.diagram.edit.parts.IfEditPart;
+import filesystem.diagram.edit.parts.IfIfIfsCompartment2EditPart;
+import filesystem.diagram.edit.parts.IfIfIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.IfNameExecutablePart2EditPart;
+import filesystem.diagram.edit.parts.IfNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.InsertEditPart;
+import filesystem.diagram.edit.parts.InsertInsertIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.InsertNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.LoopEditPart;
+import filesystem.diagram.edit.parts.LoopLoopIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.LoopNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.OutputEditPart;
+import filesystem.diagram.edit.parts.OutputNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.OutputOutputIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.ParameterIn2EditPart;
+import filesystem.diagram.edit.parts.ParameterInEditPart;
+import filesystem.diagram.edit.parts.ParameterInNameParameters2EditPart;
+import filesystem.diagram.edit.parts.ParameterInNameParametersEditPart;
+import filesystem.diagram.edit.parts.ParameterInOutEditPart;
+import filesystem.diagram.edit.parts.ParameterInOutNameParametersEditPart;
+import filesystem.diagram.edit.parts.ParameterInOutParameterInOutParametros_inCompartmentEditPart;
+import filesystem.diagram.edit.parts.ParameterInParameterInParametros_inCompartment2EditPart;
+import filesystem.diagram.edit.parts.ParameterInParameterInParametros_inCompartmentEditPart;
+import filesystem.diagram.edit.parts.ParameterOutEditPart;
+import filesystem.diagram.edit.parts.ParameterOutNameParametersEditPart;
+import filesystem.diagram.edit.parts.ParameterOutParameterOutParametros_inCompartmentEditPart;
+import filesystem.diagram.edit.parts.ParametersEditPart;
+import filesystem.diagram.edit.parts.ParametersNameParametersEditPart;
+import filesystem.diagram.edit.parts.ParametersParametersParametros_inCompartmentEditPart;
+import filesystem.diagram.edit.parts.ReturnEditPart;
+import filesystem.diagram.edit.parts.ReturnNameReturnEditPart;
+import filesystem.diagram.edit.parts.ReturnReturnTipo_retornoCompartmentEditPart;
+import filesystem.diagram.edit.parts.SelectEditPart;
+import filesystem.diagram.edit.parts.SelectNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.SelectSelectIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.SyncEditPart;
+import filesystem.diagram.edit.parts.UpdateEditPart;
+import filesystem.diagram.edit.parts.UpdateNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.UpdateUpdateIfsCompartmentEditPart;
+import filesystem.diagram.edit.parts.WhileEditPart;
+import filesystem.diagram.edit.parts.WhileNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.WhileWhileIfsCompartmentEditPart;
+
+/**
+ * This registry is used to determine which type of visual object should be
+ * created for the corresponding Diagram, Node, ChildNode or Link represented
+ * by a domain model object.
+ * 
+ * @generated
+ */
+public class FilesystemVisualIDRegistry {
+
+	/**
+	 * @generated
+	 */
+	private static final String DEBUG_KEY = "master.project.diagram/debug/visualID"; //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static int getVisualID(View view) {
+		if (view instanceof Diagram) {
+			if (FilesystemEditPart.MODEL_ID.equals(view.getType())) {
+				return FilesystemEditPart.VISUAL_ID;
+			} else {
+				return -1;
+			}
+		}
+		return filesystem.diagram.part.FilesystemVisualIDRegistry
+				.getVisualID(view.getType());
+	}
+
+	/**
+	 * @generated
+	 */
+	public static String getModelID(View view) {
+		View diagram = view.getDiagram();
+		while (view != diagram) {
+			EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
+			if (annotation != null) {
+				return (String) annotation.getDetails().get("modelID"); //$NON-NLS-1$
+			}
+			view = (View) view.eContainer();
+		}
+		return diagram != null ? diagram.getType() : null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static int getVisualID(String type) {
+		try {
+			return Integer.parseInt(type);
+		} catch (NumberFormatException e) {
+			if (Boolean.TRUE.toString().equalsIgnoreCase(
+					Platform.getDebugOption(DEBUG_KEY))) {
+				FilesystemDiagramEditorPlugin.getInstance().logError(
+						"Unable to parse view type as a visualID number: "
+								+ type);
+			}
+		}
+		return -1;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static String getType(int visualID) {
+		return Integer.toString(visualID);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static int getDiagramVisualID(EObject domainElement) {
+		if (domainElement == null) {
+			return -1;
+		}
+		if (FilesystemPackage.eINSTANCE.getFilesystem().isSuperTypeOf(
+				domainElement.eClass())
+				&& isDiagram((Filesystem) domainElement)) {
+			return FilesystemEditPart.VISUAL_ID;
+		}
+		return -1;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static int getNodeVisualID(View containerView, EObject domainElement) {
+		if (domainElement == null) {
+			return -1;
+		}
+		String containerModelID = filesystem.diagram.part.FilesystemVisualIDRegistry
+				.getModelID(containerView);
+		if (!FilesystemEditPart.MODEL_ID.equals(containerModelID)
+				&& !"filesystem".equals(containerModelID)) { //$NON-NLS-1$
+			return -1;
+		}
+		int containerVisualID;
+		if (FilesystemEditPart.MODEL_ID.equals(containerModelID)) {
+			containerVisualID = filesystem.diagram.part.FilesystemVisualIDRegistry
+					.getVisualID(containerView);
+		} else {
+			if (containerView instanceof Diagram) {
+				containerVisualID = FilesystemEditPart.VISUAL_ID;
+			} else {
+				return -1;
+			}
+		}
+		switch (containerVisualID) {
+		case FilesystemEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Data_TypeEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return IfEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return OutputEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return CursorEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getExceptionCommand()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return ExceptionCommandEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getParameterIn().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterInEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getParameterOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterOutEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getParameterInOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterInOutEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getDeclarativePart().isSuperTypeOf(
+					domainElement.eClass())) {
+				return DeclarativePartEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getExecutablePart().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ExecutablePartEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getExceptionPart().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ExceptionPartEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getReturn().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ReturnEditPart.VISUAL_ID;
+			}
+			if (FilesystemPackage.eINSTANCE.getParameters().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParametersEditPart.VISUAL_ID;
+			}
+			break;
+		case Data_TypeData_TypeTipo_retornoCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Data_Type2EditPart.VISUAL_ID;
+			}
+			break;
+		case Data_TypeData_TypeTipos_dadosCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Data_Type3EditPart.VISUAL_ID;
+			}
+			break;
+		case Data_TypeData_TypeTipo_retornoCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Data_Type2EditPart.VISUAL_ID;
+			}
+			break;
+		case Data_TypeData_TypeTipos_dadosCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Data_Type3EditPart.VISUAL_ID;
+			}
+			break;
+		case Data_TypeData_TypeTipo_retornoCompartment3EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Data_Type2EditPart.VISUAL_ID;
+			}
+			break;
+		case Data_TypeData_TypeTipos_dadosCompartment3EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Data_Type3EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case InsertInsertLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case UpdateUpdateLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeleteDeleteLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectSelectLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case OutputOutputLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case CursorCursorLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopIfsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopCasesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopInsertsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopUpdatesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopDeletesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopSelectsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopOutuputsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopCursorsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopWhilesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopForsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopsCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExceptionCommandExceptionCommandExcecoesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getExceptionCommand()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return ExceptionCommand2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExceptionCommandExceptionCommandExcecoesCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getExceptionCommand()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return ExceptionCommand2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInParameterInParametros_inCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterIn().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterIn2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInParameterInParametros_in_outCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterInOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterInOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInParameterInParametros_outCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInParameterInParametros_inCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterIn().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterIn2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInParameterInParametros_in_outCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterInOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterInOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInParameterInParametros_outCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_inCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterIn().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterIn2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_in_outCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterInOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterInOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_outCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterOutParameterOutParametros_inCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterIn().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterIn2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterOutParameterOutParametros_in_outCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterInOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterInOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterOutParameterOutParametros_outCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterOutParameterOutParametros_inCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterIn().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterIn2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterOutParameterOutParametros_in_outCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterInOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterInOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterOutParameterOutParametros_outCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_inCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterIn().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterIn2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_in_outCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterInOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterInOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_outCompartment2EditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Data_Type3EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartIfsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getIf().isSuperTypeOf(
+					domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartCasesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCase().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartInsertsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getInsert().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartUpdatesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getUpdate().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartDeletesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getDelete().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartSelectsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getSelect().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartOutuputsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getOutput().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Output2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartCursorsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getCursor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Cursor2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartWhilesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getWhile().isSuperTypeOf(
+					domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartForsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getFor().isSuperTypeOf(
+					domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExecutablePartExecutablePartLoopsCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getLoop().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			break;
+		case ExceptionPartExceptionPartExcecoesCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getExceptionCommand()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return ExceptionCommand2EditPart.VISUAL_ID;
+			}
+			break;
+		case ReturnReturnTipo_retornoCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getData_Type().isSuperTypeOf(
+					domainElement.eClass())) {
+				return Data_Type2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParametersParametersParametros_inCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterIn().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterIn2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParametersParametersParametros_in_outCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterInOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterInOut2EditPart.VISUAL_ID;
+			}
+			break;
+		case ParametersParametersParametros_outCompartmentEditPart.VISUAL_ID:
+			if (FilesystemPackage.eINSTANCE.getParameterOut().isSuperTypeOf(
+					domainElement.eClass())) {
+				return ParameterOut2EditPart.VISUAL_ID;
+			}
+			break;
+		}
+		return -1;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static boolean canCreateNode(View containerView, int nodeVisualID) {
+		String containerModelID = filesystem.diagram.part.FilesystemVisualIDRegistry
+				.getModelID(containerView);
+		if (!FilesystemEditPart.MODEL_ID.equals(containerModelID)
+				&& !"filesystem".equals(containerModelID)) { //$NON-NLS-1$
+			return false;
+		}
+		int containerVisualID;
+		if (FilesystemEditPart.MODEL_ID.equals(containerModelID)) {
+			containerVisualID = filesystem.diagram.part.FilesystemVisualIDRegistry
+					.getVisualID(containerView);
+		} else {
+			if (containerView instanceof Diagram) {
+				containerVisualID = FilesystemEditPart.VISUAL_ID;
+			} else {
+				return false;
+			}
+		}
+		switch (containerVisualID) {
+		case FilesystemEditPart.VISUAL_ID:
+			if (Data_TypeEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExceptionCommandEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterOutEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInOutEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeclarativePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExceptionPartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ReturnEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParametersEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Data_TypeEditPart.VISUAL_ID:
+			if (Data_TypeNameReturnEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Data_TypeData_TypeTipo_retornoCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Data_TypeData_TypeTipos_dadosCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfEditPart.VISUAL_ID:
+			if (IfNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseEditPart.VISUAL_ID:
+			if (CaseNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertEditPart.VISUAL_ID:
+			if (InsertNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateEditPart.VISUAL_ID:
+			if (UpdateNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteEditPart.VISUAL_ID:
+			if (DeleteNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectEditPart.VISUAL_ID:
+			if (SelectNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputEditPart.VISUAL_ID:
+			if (OutputNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorEditPart.VISUAL_ID:
+			if (CursorNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileEditPart.VISUAL_ID:
+			if (WhileNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForEditPart.VISUAL_ID:
+			if (ForNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopEditPart.VISUAL_ID:
+			if (LoopNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExceptionCommandEditPart.VISUAL_ID:
+			if (ExceptionCommandNameExceptionPartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExceptionCommandExceptionCommandExcecoesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInEditPart.VISUAL_ID:
+			if (ParameterInNameParametersEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInParameterInParametros_inCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInParameterInParametros_in_outCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInParameterInParametros_outCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterOutEditPart.VISUAL_ID:
+			if (ParameterOutNameParametersEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterOutParameterOutParametros_inCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterOutParameterOutParametros_in_outCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterOutParameterOutParametros_outCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInOutEditPart.VISUAL_ID:
+			if (ParameterInOutNameParametersEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInOutParameterInOutParametros_inCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInOutParameterInOutParametros_in_outCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInOutParameterInOutParametros_outCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeclarativePartEditPart.VISUAL_ID:
+			if (DeclarativePartNameDeclarativePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartEditPart.VISUAL_ID:
+			if (ExecutablePartNameExecutablePartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExecutablePartExecutablePartLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExceptionPartEditPart.VISUAL_ID:
+			if (ExceptionPartNameExceptionPartEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExceptionPartExceptionPartExcecoesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ReturnEditPart.VISUAL_ID:
+			if (ReturnNameReturnEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ReturnReturnTipo_retornoCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParametersEditPart.VISUAL_ID:
+			if (ParametersNameParametersEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParametersParametersParametros_inCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParametersParametersParametros_in_outCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParametersParametersParametros_outCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Data_Type2EditPart.VISUAL_ID:
+			if (Data_TypeNameReturn2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Data_TypeData_TypeTipo_retornoCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Data_TypeData_TypeTipos_dadosCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Data_Type3EditPart.VISUAL_ID:
+			if (Data_TypeNameReturn3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Data_TypeData_TypeTipo_retornoCompartment3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Data_TypeData_TypeTipos_dadosCompartment3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case If2EditPart.VISUAL_ID:
+			if (IfNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfIfsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfInsertsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfUpdatesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfDeletesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfSelectsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfOutuputsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfCursorsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfWhilesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfForsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfLoopsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Case2EditPart.VISUAL_ID:
+			if (CaseNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Insert2EditPart.VISUAL_ID:
+			if (InsertNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertInsertLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Update2EditPart.VISUAL_ID:
+			if (UpdateNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateUpdateLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Delete2EditPart.VISUAL_ID:
+			if (DeleteNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteDeleteLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Select2EditPart.VISUAL_ID:
+			if (SelectNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectSelectLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Output2EditPart.VISUAL_ID:
+			if (OutputNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OutputOutputLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Cursor2EditPart.VISUAL_ID:
+			if (CursorNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CursorCursorLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case While2EditPart.VISUAL_ID:
+			if (WhileNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case For2EditPart.VISUAL_ID:
+			if (ForNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Loop2EditPart.VISUAL_ID:
+			if (LoopNameExecutablePart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopIfsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopInsertsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopUpdatesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopDeletesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopSelectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopOutuputsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopCursorsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopWhilesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopForsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopLoopsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExceptionCommand2EditPart.VISUAL_ID:
+			if (ExceptionCommandNameExceptionPart2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExceptionCommandExceptionCommandExcecoesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterIn2EditPart.VISUAL_ID:
+			if (ParameterInNameParameters2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInParameterInParametros_inCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInParameterInParametros_in_outCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInParameterInParametros_outCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInOut2EditPart.VISUAL_ID:
+			if (ParameterInOutNameParameters2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInOutParameterInOutParametros_inCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInOutParameterInOutParametros_in_outCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterInOutParameterInOutParametros_outCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterOut2EditPart.VISUAL_ID:
+			if (ParameterOutNameParameters2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterOutParameterOutParametros_inCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterOutParameterOutParametros_in_outCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ParameterOutParameterOutParametros_outCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Data_TypeData_TypeTipo_retornoCompartmentEditPart.VISUAL_ID:
+			if (Data_Type2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Data_TypeData_TypeTipos_dadosCompartmentEditPart.VISUAL_ID:
+			if (Data_Type3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Data_TypeData_TypeTipo_retornoCompartment2EditPart.VISUAL_ID:
+			if (Data_Type2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Data_TypeData_TypeTipos_dadosCompartment2EditPart.VISUAL_ID:
+			if (Data_Type3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Data_TypeData_TypeTipo_retornoCompartment3EditPart.VISUAL_ID:
+			if (Data_Type2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Data_TypeData_TypeTipos_dadosCompartment3EditPart.VISUAL_ID:
+			if (Data_Type3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InsertInsertLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UpdateUpdateLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeleteDeleteLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectSelectLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OutputOutputLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CursorCursorLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopIfsCompartment2EditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopCasesCompartment2EditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopInsertsCompartment2EditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopUpdatesCompartment2EditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopDeletesCompartment2EditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopSelectsCompartment2EditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopOutuputsCompartment2EditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopCursorsCompartment2EditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopWhilesCompartment2EditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopForsCompartment2EditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopsCompartment2EditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExceptionCommandExceptionCommandExcecoesCompartmentEditPart.VISUAL_ID:
+			if (ExceptionCommand2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExceptionCommandExceptionCommandExcecoesCompartment2EditPart.VISUAL_ID:
+			if (ExceptionCommand2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInParameterInParametros_inCompartmentEditPart.VISUAL_ID:
+			if (ParameterIn2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInParameterInParametros_in_outCompartmentEditPart.VISUAL_ID:
+			if (ParameterInOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInParameterInParametros_outCompartmentEditPart.VISUAL_ID:
+			if (ParameterOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInParameterInParametros_inCompartment2EditPart.VISUAL_ID:
+			if (ParameterIn2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInParameterInParametros_in_outCompartment2EditPart.VISUAL_ID:
+			if (ParameterInOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInParameterInParametros_outCompartment2EditPart.VISUAL_ID:
+			if (ParameterOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_inCompartmentEditPart.VISUAL_ID:
+			if (ParameterIn2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_in_outCompartmentEditPart.VISUAL_ID:
+			if (ParameterInOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_outCompartmentEditPart.VISUAL_ID:
+			if (ParameterOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterOutParameterOutParametros_inCompartmentEditPart.VISUAL_ID:
+			if (ParameterIn2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterOutParameterOutParametros_in_outCompartmentEditPart.VISUAL_ID:
+			if (ParameterInOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterOutParameterOutParametros_outCompartmentEditPart.VISUAL_ID:
+			if (ParameterOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterOutParameterOutParametros_inCompartment2EditPart.VISUAL_ID:
+			if (ParameterIn2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterOutParameterOutParametros_in_outCompartment2EditPart.VISUAL_ID:
+			if (ParameterInOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterOutParameterOutParametros_outCompartment2EditPart.VISUAL_ID:
+			if (ParameterOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_inCompartment2EditPart.VISUAL_ID:
+			if (ParameterIn2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_in_outCompartment2EditPart.VISUAL_ID:
+			if (ParameterInOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParameterInOutParameterInOutParametros_outCompartment2EditPart.VISUAL_ID:
+			if (ParameterOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart.VISUAL_ID:
+			if (Data_Type3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartIfsCompartmentEditPart.VISUAL_ID:
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartCasesCompartmentEditPart.VISUAL_ID:
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartInsertsCompartmentEditPart.VISUAL_ID:
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartUpdatesCompartmentEditPart.VISUAL_ID:
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartDeletesCompartmentEditPart.VISUAL_ID:
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartSelectsCompartmentEditPart.VISUAL_ID:
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartOutuputsCompartmentEditPart.VISUAL_ID:
+			if (Output2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartCursorsCompartmentEditPart.VISUAL_ID:
+			if (Cursor2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartWhilesCompartmentEditPart.VISUAL_ID:
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartForsCompartmentEditPart.VISUAL_ID:
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExecutablePartExecutablePartLoopsCompartmentEditPart.VISUAL_ID:
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ExceptionPartExceptionPartExcecoesCompartmentEditPart.VISUAL_ID:
+			if (ExceptionCommand2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ReturnReturnTipo_retornoCompartmentEditPart.VISUAL_ID:
+			if (Data_Type2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParametersParametersParametros_inCompartmentEditPart.VISUAL_ID:
+			if (ParameterIn2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParametersParametersParametros_in_outCompartmentEditPart.VISUAL_ID:
+			if (ParameterInOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ParametersParametersParametros_outCompartmentEditPart.VISUAL_ID:
+			if (ParameterOut2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static int getLinkWithClassVisualID(EObject domainElement) {
+		if (domainElement == null) {
+			return -1;
+		}
+		if (FilesystemPackage.eINSTANCE.getSync().isSuperTypeOf(
+				domainElement.eClass())) {
+			return SyncEditPart.VISUAL_ID;
+		}
+		return -1;
+	}
+
+	/**
+	 * User can change implementation of this method to handle some specific
+	 * situations not covered by default logic.
+	 * 
+	 * @generated
+	 */
+	private static boolean isDiagram(Filesystem element) {
+		return true;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static boolean checkNodeVisualID(View containerView,
+			EObject domainElement, int candidate) {
+		if (candidate == -1) {
+			//unrecognized id is always bad
+			return false;
+		}
+		int basic = getNodeVisualID(containerView, domainElement);
+		return basic == candidate;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static boolean isCompartmentVisualID(int visualID) {
+		switch (visualID) {
+		case Data_TypeData_TypeTipo_retornoCompartmentEditPart.VISUAL_ID:
+		case Data_TypeData_TypeTipos_dadosCompartmentEditPart.VISUAL_ID:
+		case Data_TypeData_TypeTipo_retornoCompartment2EditPart.VISUAL_ID:
+		case Data_TypeData_TypeTipos_dadosCompartment2EditPart.VISUAL_ID:
+		case Data_TypeData_TypeTipo_retornoCompartment3EditPart.VISUAL_ID:
+		case Data_TypeData_TypeTipos_dadosCompartment3EditPart.VISUAL_ID:
+		case IfIfIfsCompartmentEditPart.VISUAL_ID:
+		case IfIfCasesCompartmentEditPart.VISUAL_ID:
+		case IfIfInsertsCompartmentEditPart.VISUAL_ID:
+		case IfIfUpdatesCompartmentEditPart.VISUAL_ID:
+		case IfIfDeletesCompartmentEditPart.VISUAL_ID:
+		case IfIfSelectsCompartmentEditPart.VISUAL_ID:
+		case IfIfOutuputsCompartmentEditPart.VISUAL_ID:
+		case IfIfCursorsCompartmentEditPart.VISUAL_ID:
+		case IfIfWhilesCompartmentEditPart.VISUAL_ID:
+		case IfIfForsCompartmentEditPart.VISUAL_ID:
+		case IfIfLoopsCompartmentEditPart.VISUAL_ID:
+		case IfIfIfsCompartment2EditPart.VISUAL_ID:
+		case IfIfCasesCompartment2EditPart.VISUAL_ID:
+		case IfIfInsertsCompartment2EditPart.VISUAL_ID:
+		case IfIfUpdatesCompartment2EditPart.VISUAL_ID:
+		case IfIfDeletesCompartment2EditPart.VISUAL_ID:
+		case IfIfSelectsCompartment2EditPart.VISUAL_ID:
+		case IfIfOutuputsCompartment2EditPart.VISUAL_ID:
+		case IfIfCursorsCompartment2EditPart.VISUAL_ID:
+		case IfIfWhilesCompartment2EditPart.VISUAL_ID:
+		case IfIfForsCompartment2EditPart.VISUAL_ID:
+		case IfIfLoopsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseIfsCompartmentEditPart.VISUAL_ID:
+		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
+		case CaseCaseInsertsCompartmentEditPart.VISUAL_ID:
+		case CaseCaseUpdatesCompartmentEditPart.VISUAL_ID:
+		case CaseCaseDeletesCompartmentEditPart.VISUAL_ID:
+		case CaseCaseSelectsCompartmentEditPart.VISUAL_ID:
+		case CaseCaseOutuputsCompartmentEditPart.VISUAL_ID:
+		case CaseCaseCursorsCompartmentEditPart.VISUAL_ID:
+		case CaseCaseWhilesCompartmentEditPart.VISUAL_ID:
+		case CaseCaseForsCompartmentEditPart.VISUAL_ID:
+		case CaseCaseLoopsCompartmentEditPart.VISUAL_ID:
+		case InsertInsertIfsCompartmentEditPart.VISUAL_ID:
+		case InsertInsertCasesCompartmentEditPart.VISUAL_ID:
+		case InsertInsertInsertsCompartmentEditPart.VISUAL_ID:
+		case InsertInsertUpdatesCompartmentEditPart.VISUAL_ID:
+		case InsertInsertDeletesCompartmentEditPart.VISUAL_ID:
+		case InsertInsertSelectsCompartmentEditPart.VISUAL_ID:
+		case InsertInsertOutuputsCompartmentEditPart.VISUAL_ID:
+		case InsertInsertCursorsCompartmentEditPart.VISUAL_ID:
+		case InsertInsertWhilesCompartmentEditPart.VISUAL_ID:
+		case InsertInsertForsCompartmentEditPart.VISUAL_ID:
+		case InsertInsertLoopsCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateIfsCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateCasesCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateInsertsCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateUpdatesCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateDeletesCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateSelectsCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateOutuputsCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateCursorsCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateWhilesCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateForsCompartmentEditPart.VISUAL_ID:
+		case UpdateUpdateLoopsCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteIfsCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteCasesCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteInsertsCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteUpdatesCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteDeletesCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteSelectsCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteOutuputsCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteCursorsCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteWhilesCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteForsCompartmentEditPart.VISUAL_ID:
+		case DeleteDeleteLoopsCompartmentEditPart.VISUAL_ID:
+		case SelectSelectIfsCompartmentEditPart.VISUAL_ID:
+		case SelectSelectCasesCompartmentEditPart.VISUAL_ID:
+		case SelectSelectInsertsCompartmentEditPart.VISUAL_ID:
+		case SelectSelectUpdatesCompartmentEditPart.VISUAL_ID:
+		case SelectSelectDeletesCompartmentEditPart.VISUAL_ID:
+		case SelectSelectSelectsCompartmentEditPart.VISUAL_ID:
+		case SelectSelectOutuputsCompartmentEditPart.VISUAL_ID:
+		case SelectSelectCursorsCompartmentEditPart.VISUAL_ID:
+		case SelectSelectWhilesCompartmentEditPart.VISUAL_ID:
+		case SelectSelectForsCompartmentEditPart.VISUAL_ID:
+		case SelectSelectLoopsCompartmentEditPart.VISUAL_ID:
+		case OutputOutputIfsCompartmentEditPart.VISUAL_ID:
+		case OutputOutputCasesCompartmentEditPart.VISUAL_ID:
+		case OutputOutputInsertsCompartmentEditPart.VISUAL_ID:
+		case OutputOutputUpdatesCompartmentEditPart.VISUAL_ID:
+		case OutputOutputDeletesCompartmentEditPart.VISUAL_ID:
+		case OutputOutputSelectsCompartmentEditPart.VISUAL_ID:
+		case OutputOutputOutuputsCompartmentEditPart.VISUAL_ID:
+		case OutputOutputCursorsCompartmentEditPart.VISUAL_ID:
+		case OutputOutputWhilesCompartmentEditPart.VISUAL_ID:
+		case OutputOutputForsCompartmentEditPart.VISUAL_ID:
+		case OutputOutputLoopsCompartmentEditPart.VISUAL_ID:
+		case CursorCursorIfsCompartmentEditPart.VISUAL_ID:
+		case CursorCursorCasesCompartmentEditPart.VISUAL_ID:
+		case CursorCursorInsertsCompartmentEditPart.VISUAL_ID:
+		case CursorCursorUpdatesCompartmentEditPart.VISUAL_ID:
+		case CursorCursorDeletesCompartmentEditPart.VISUAL_ID:
+		case CursorCursorSelectsCompartmentEditPart.VISUAL_ID:
+		case CursorCursorOutuputsCompartmentEditPart.VISUAL_ID:
+		case CursorCursorCursorsCompartmentEditPart.VISUAL_ID:
+		case CursorCursorWhilesCompartmentEditPart.VISUAL_ID:
+		case CursorCursorForsCompartmentEditPart.VISUAL_ID:
+		case CursorCursorLoopsCompartmentEditPart.VISUAL_ID:
+		case WhileWhileIfsCompartmentEditPart.VISUAL_ID:
+		case WhileWhileCasesCompartmentEditPart.VISUAL_ID:
+		case WhileWhileInsertsCompartmentEditPart.VISUAL_ID:
+		case WhileWhileUpdatesCompartmentEditPart.VISUAL_ID:
+		case WhileWhileDeletesCompartmentEditPart.VISUAL_ID:
+		case WhileWhileSelectsCompartmentEditPart.VISUAL_ID:
+		case WhileWhileOutuputsCompartmentEditPart.VISUAL_ID:
+		case WhileWhileCursorsCompartmentEditPart.VISUAL_ID:
+		case WhileWhileWhilesCompartmentEditPart.VISUAL_ID:
+		case WhileWhileForsCompartmentEditPart.VISUAL_ID:
+		case WhileWhileLoopsCompartmentEditPart.VISUAL_ID:
+		case ForForIfsCompartmentEditPart.VISUAL_ID:
+		case ForForCasesCompartmentEditPart.VISUAL_ID:
+		case ForForInsertsCompartmentEditPart.VISUAL_ID:
+		case ForForUpdatesCompartmentEditPart.VISUAL_ID:
+		case ForForDeletesCompartmentEditPart.VISUAL_ID:
+		case ForForSelectsCompartmentEditPart.VISUAL_ID:
+		case ForForOutuputsCompartmentEditPart.VISUAL_ID:
+		case ForForCursorsCompartmentEditPart.VISUAL_ID:
+		case ForForWhilesCompartmentEditPart.VISUAL_ID:
+		case ForForForsCompartmentEditPart.VISUAL_ID:
+		case ForForLoopsCompartmentEditPart.VISUAL_ID:
+		case LoopLoopIfsCompartmentEditPart.VISUAL_ID:
+		case LoopLoopCasesCompartmentEditPart.VISUAL_ID:
+		case LoopLoopInsertsCompartmentEditPart.VISUAL_ID:
+		case LoopLoopUpdatesCompartmentEditPart.VISUAL_ID:
+		case LoopLoopDeletesCompartmentEditPart.VISUAL_ID:
+		case LoopLoopSelectsCompartmentEditPart.VISUAL_ID:
+		case LoopLoopOutuputsCompartmentEditPart.VISUAL_ID:
+		case LoopLoopCursorsCompartmentEditPart.VISUAL_ID:
+		case LoopLoopWhilesCompartmentEditPart.VISUAL_ID:
+		case LoopLoopForsCompartmentEditPart.VISUAL_ID:
+		case LoopLoopLoopsCompartmentEditPart.VISUAL_ID:
+		case CaseCaseIfsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
+		case CaseCaseInsertsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseUpdatesCompartment2EditPart.VISUAL_ID:
+		case CaseCaseDeletesCompartment2EditPart.VISUAL_ID:
+		case CaseCaseSelectsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseOutuputsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseCursorsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseWhilesCompartment2EditPart.VISUAL_ID:
+		case CaseCaseForsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseLoopsCompartment2EditPart.VISUAL_ID:
+		case InsertInsertIfsCompartment2EditPart.VISUAL_ID:
+		case InsertInsertCasesCompartment2EditPart.VISUAL_ID:
+		case InsertInsertInsertsCompartment2EditPart.VISUAL_ID:
+		case InsertInsertUpdatesCompartment2EditPart.VISUAL_ID:
+		case InsertInsertDeletesCompartment2EditPart.VISUAL_ID:
+		case InsertInsertSelectsCompartment2EditPart.VISUAL_ID:
+		case InsertInsertOutuputsCompartment2EditPart.VISUAL_ID:
+		case InsertInsertCursorsCompartment2EditPart.VISUAL_ID:
+		case InsertInsertWhilesCompartment2EditPart.VISUAL_ID:
+		case InsertInsertForsCompartment2EditPart.VISUAL_ID:
+		case InsertInsertLoopsCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateIfsCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateCasesCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateInsertsCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateUpdatesCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateDeletesCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateSelectsCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateOutuputsCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateCursorsCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateWhilesCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateForsCompartment2EditPart.VISUAL_ID:
+		case UpdateUpdateLoopsCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteIfsCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteCasesCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteInsertsCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteUpdatesCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteDeletesCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteSelectsCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteOutuputsCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteCursorsCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteWhilesCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteForsCompartment2EditPart.VISUAL_ID:
+		case DeleteDeleteLoopsCompartment2EditPart.VISUAL_ID:
+		case SelectSelectIfsCompartment2EditPart.VISUAL_ID:
+		case SelectSelectCasesCompartment2EditPart.VISUAL_ID:
+		case SelectSelectInsertsCompartment2EditPart.VISUAL_ID:
+		case SelectSelectUpdatesCompartment2EditPart.VISUAL_ID:
+		case SelectSelectDeletesCompartment2EditPart.VISUAL_ID:
+		case SelectSelectSelectsCompartment2EditPart.VISUAL_ID:
+		case SelectSelectOutuputsCompartment2EditPart.VISUAL_ID:
+		case SelectSelectCursorsCompartment2EditPart.VISUAL_ID:
+		case SelectSelectWhilesCompartment2EditPart.VISUAL_ID:
+		case SelectSelectForsCompartment2EditPart.VISUAL_ID:
+		case SelectSelectLoopsCompartment2EditPart.VISUAL_ID:
+		case OutputOutputIfsCompartment2EditPart.VISUAL_ID:
+		case OutputOutputCasesCompartment2EditPart.VISUAL_ID:
+		case OutputOutputInsertsCompartment2EditPart.VISUAL_ID:
+		case OutputOutputUpdatesCompartment2EditPart.VISUAL_ID:
+		case OutputOutputDeletesCompartment2EditPart.VISUAL_ID:
+		case OutputOutputSelectsCompartment2EditPart.VISUAL_ID:
+		case OutputOutputOutuputsCompartment2EditPart.VISUAL_ID:
+		case OutputOutputCursorsCompartment2EditPart.VISUAL_ID:
+		case OutputOutputWhilesCompartment2EditPart.VISUAL_ID:
+		case OutputOutputForsCompartment2EditPart.VISUAL_ID:
+		case OutputOutputLoopsCompartment2EditPart.VISUAL_ID:
+		case CursorCursorIfsCompartment2EditPart.VISUAL_ID:
+		case CursorCursorCasesCompartment2EditPart.VISUAL_ID:
+		case CursorCursorInsertsCompartment2EditPart.VISUAL_ID:
+		case CursorCursorUpdatesCompartment2EditPart.VISUAL_ID:
+		case CursorCursorDeletesCompartment2EditPart.VISUAL_ID:
+		case CursorCursorSelectsCompartment2EditPart.VISUAL_ID:
+		case CursorCursorOutuputsCompartment2EditPart.VISUAL_ID:
+		case CursorCursorCursorsCompartment2EditPart.VISUAL_ID:
+		case CursorCursorWhilesCompartment2EditPart.VISUAL_ID:
+		case CursorCursorForsCompartment2EditPart.VISUAL_ID:
+		case CursorCursorLoopsCompartment2EditPart.VISUAL_ID:
+		case WhileWhileIfsCompartment2EditPart.VISUAL_ID:
+		case WhileWhileCasesCompartment2EditPart.VISUAL_ID:
+		case WhileWhileInsertsCompartment2EditPart.VISUAL_ID:
+		case WhileWhileUpdatesCompartment2EditPart.VISUAL_ID:
+		case WhileWhileDeletesCompartment2EditPart.VISUAL_ID:
+		case WhileWhileSelectsCompartment2EditPart.VISUAL_ID:
+		case WhileWhileOutuputsCompartment2EditPart.VISUAL_ID:
+		case WhileWhileCursorsCompartment2EditPart.VISUAL_ID:
+		case WhileWhileWhilesCompartment2EditPart.VISUAL_ID:
+		case WhileWhileForsCompartment2EditPart.VISUAL_ID:
+		case WhileWhileLoopsCompartment2EditPart.VISUAL_ID:
+		case ForForIfsCompartment2EditPart.VISUAL_ID:
+		case ForForCasesCompartment2EditPart.VISUAL_ID:
+		case ForForInsertsCompartment2EditPart.VISUAL_ID:
+		case ForForUpdatesCompartment2EditPart.VISUAL_ID:
+		case ForForDeletesCompartment2EditPart.VISUAL_ID:
+		case ForForSelectsCompartment2EditPart.VISUAL_ID:
+		case ForForOutuputsCompartment2EditPart.VISUAL_ID:
+		case ForForCursorsCompartment2EditPart.VISUAL_ID:
+		case ForForWhilesCompartment2EditPart.VISUAL_ID:
+		case ForForForsCompartment2EditPart.VISUAL_ID:
+		case ForForLoopsCompartment2EditPart.VISUAL_ID:
+		case LoopLoopIfsCompartment2EditPart.VISUAL_ID:
+		case LoopLoopCasesCompartment2EditPart.VISUAL_ID:
+		case LoopLoopInsertsCompartment2EditPart.VISUAL_ID:
+		case LoopLoopUpdatesCompartment2EditPart.VISUAL_ID:
+		case LoopLoopDeletesCompartment2EditPart.VISUAL_ID:
+		case LoopLoopSelectsCompartment2EditPart.VISUAL_ID:
+		case LoopLoopOutuputsCompartment2EditPart.VISUAL_ID:
+		case LoopLoopCursorsCompartment2EditPart.VISUAL_ID:
+		case LoopLoopWhilesCompartment2EditPart.VISUAL_ID:
+		case LoopLoopForsCompartment2EditPart.VISUAL_ID:
+		case LoopLoopLoopsCompartment2EditPart.VISUAL_ID:
+		case ExceptionCommandExceptionCommandExcecoesCompartmentEditPart.VISUAL_ID:
+		case ExceptionCommandExceptionCommandExcecoesCompartment2EditPart.VISUAL_ID:
+		case ParameterInParameterInParametros_inCompartmentEditPart.VISUAL_ID:
+		case ParameterInParameterInParametros_in_outCompartmentEditPart.VISUAL_ID:
+		case ParameterInParameterInParametros_outCompartmentEditPart.VISUAL_ID:
+		case ParameterInParameterInParametros_inCompartment2EditPart.VISUAL_ID:
+		case ParameterInParameterInParametros_in_outCompartment2EditPart.VISUAL_ID:
+		case ParameterInParameterInParametros_outCompartment2EditPart.VISUAL_ID:
+		case ParameterInOutParameterInOutParametros_inCompartmentEditPart.VISUAL_ID:
+		case ParameterInOutParameterInOutParametros_in_outCompartmentEditPart.VISUAL_ID:
+		case ParameterInOutParameterInOutParametros_outCompartmentEditPart.VISUAL_ID:
+		case ParameterOutParameterOutParametros_inCompartmentEditPart.VISUAL_ID:
+		case ParameterOutParameterOutParametros_in_outCompartmentEditPart.VISUAL_ID:
+		case ParameterOutParameterOutParametros_outCompartmentEditPart.VISUAL_ID:
+		case ParameterOutParameterOutParametros_inCompartment2EditPart.VISUAL_ID:
+		case ParameterOutParameterOutParametros_in_outCompartment2EditPart.VISUAL_ID:
+		case ParameterOutParameterOutParametros_outCompartment2EditPart.VISUAL_ID:
+		case ParameterInOutParameterInOutParametros_inCompartment2EditPart.VISUAL_ID:
+		case ParameterInOutParameterInOutParametros_in_outCompartment2EditPart.VISUAL_ID:
+		case ParameterInOutParameterInOutParametros_outCompartment2EditPart.VISUAL_ID:
+		case DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartIfsCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartCasesCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartInsertsCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartUpdatesCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartDeletesCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartSelectsCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartOutuputsCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartCursorsCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartWhilesCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartForsCompartmentEditPart.VISUAL_ID:
+		case ExecutablePartExecutablePartLoopsCompartmentEditPart.VISUAL_ID:
+		case ExceptionPartExceptionPartExcecoesCompartmentEditPart.VISUAL_ID:
+		case ReturnReturnTipo_retornoCompartmentEditPart.VISUAL_ID:
+		case ParametersParametersParametros_inCompartmentEditPart.VISUAL_ID:
+		case ParametersParametersParametros_in_outCompartmentEditPart.VISUAL_ID:
+		case ParametersParametersParametros_outCompartmentEditPart.VISUAL_ID:
+			return true;
+		default:
+			break;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static boolean isSemanticLeafVisualID(int visualID) {
+		switch (visualID) {
+		case FilesystemEditPart.VISUAL_ID:
+			return false;
+		default:
+			break;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramStructure TYPED_INSTANCE = new DiagramStructure() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public int getVisualID(View view) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry
+					.getVisualID(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public String getModelID(View view) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry
+					.getModelID(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public int getNodeVisualID(View containerView, EObject domainElement) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry
+					.getNodeVisualID(containerView, domainElement);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public boolean checkNodeVisualID(View containerView,
+				EObject domainElement, int candidate) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry
+					.checkNodeVisualID(containerView, domainElement, candidate);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public boolean isCompartmentVisualID(int visualID) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry
+					.isCompartmentVisualID(visualID);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public boolean isSemanticLeafVisualID(int visualID) {
+			return filesystem.diagram.part.FilesystemVisualIDRegistry
+					.isSemanticLeafVisualID(visualID);
+		}
+	};
+
+}

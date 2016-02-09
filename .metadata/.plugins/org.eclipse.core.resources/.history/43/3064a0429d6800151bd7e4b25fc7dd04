@@ -1,0 +1,694 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.parts;
+
+import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.RectangleFigure;
+import org.eclipse.draw2d.RoundedRectangle;
+import org.eclipse.draw2d.Shape;
+import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.gef.EditPart;
+import org.eclipse.gef.EditPolicy;
+import org.eclipse.gef.Request;
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gef.editpolicies.LayoutEditPolicy;
+import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
+import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
+import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
+import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.graphics.Color;
+
+import filesystem.diagram.edit.policies.OpenDiagramEditPolicy;
+import filesystem.diagram.edit.policies.WhileItemSemanticEditPolicy;
+import filesystem.diagram.part.FilesystemVisualIDRegistry;
+
+/**
+ * @generated
+ */
+public class WhileEditPart extends ShapeNodeEditPart {
+
+	/**
+	 * @generated
+	 */
+	public static final int VISUAL_ID = 2010;
+
+	/**
+	 * @generated
+	 */
+	protected IFigure contentPane;
+
+	/**
+	 * @generated
+	 */
+	protected IFigure primaryShape;
+
+	/**
+	 * @generated
+	 */
+	public WhileEditPart(View view) {
+		super(view);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void createDefaultEditPolicies() {
+		super.createDefaultEditPolicies();
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
+				new WhileItemSemanticEditPolicy());
+		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
+				new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected LayoutEditPolicy createLayoutEditPolicy() {
+		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
+
+			protected EditPolicy createChildEditPolicy(EditPart child) {
+				EditPolicy result = child
+						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
+				if (result == null) {
+					result = new NonResizableEditPolicy();
+				}
+				return result;
+			}
+
+			protected Command getMoveChildrenCommand(Request request) {
+				return null;
+			}
+
+			protected Command getCreateCommand(CreateRequest request) {
+				return null;
+			}
+		};
+		return lep;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected IFigure createNodeShape() {
+		return primaryShape = new WhileFigure();
+	}
+
+	/**
+	 * @generated
+	 */
+	public WhileFigure getPrimaryShape() {
+		return (WhileFigure) primaryShape;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean addFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof WhileNameExecutablePartEditPart) {
+			((WhileNameExecutablePartEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureWhileLabelFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileIfsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileIfsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileIfsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileCasesCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileCasesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileCasesCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileInsertsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileInsertsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileInsertsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileUpdatesCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileUpdatesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileUpdatesCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileDeletesCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileDeletesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileDeletesCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileSelectsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileSelectsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileSelectsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileOutuputsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape()
+					.getWhileOutuputsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileOutuputsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileCursorsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileCursorsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileCursorsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileWhilesCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileWhilesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileWhilesCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileForsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileForsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileForsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileLoopsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileLoopsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileLoopsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean removeFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof WhileNameExecutablePartEditPart) {
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileIfsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileIfsCompartmentFigure();
+			pane.remove(((WhileWhileIfsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileCasesCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileCasesCompartmentFigure();
+			pane.remove(((WhileWhileCasesCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileInsertsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileInsertsCompartmentFigure();
+			pane.remove(((WhileWhileInsertsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileUpdatesCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileUpdatesCompartmentFigure();
+			pane.remove(((WhileWhileUpdatesCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileDeletesCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileDeletesCompartmentFigure();
+			pane.remove(((WhileWhileDeletesCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileSelectsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileSelectsCompartmentFigure();
+			pane.remove(((WhileWhileSelectsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileOutuputsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape()
+					.getWhileOutuputsCompartmentFigure();
+			pane.remove(((WhileWhileOutuputsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileCursorsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileCursorsCompartmentFigure();
+			pane.remove(((WhileWhileCursorsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileWhilesCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileWhilesCompartmentFigure();
+			pane.remove(((WhileWhileWhilesCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileForsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileForsCompartmentFigure();
+			pane.remove(((WhileWhileForsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileLoopsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileLoopsCompartmentFigure();
+			pane.remove(((WhileWhileLoopsCompartment2EditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void addChildVisual(EditPart childEditPart, int index) {
+		if (addFixedChild(childEditPart)) {
+			return;
+		}
+		super.addChildVisual(childEditPart, -1);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void removeChildVisual(EditPart childEditPart) {
+		if (removeFixedChild(childEditPart)) {
+			return;
+		}
+		super.removeChildVisual(childEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof WhileWhileIfsCompartment2EditPart) {
+			return getPrimaryShape().getWhileIfsCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileCasesCompartment2EditPart) {
+			return getPrimaryShape().getWhileCasesCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileInsertsCompartment2EditPart) {
+			return getPrimaryShape().getWhileInsertsCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileUpdatesCompartment2EditPart) {
+			return getPrimaryShape().getWhileUpdatesCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileDeletesCompartment2EditPart) {
+			return getPrimaryShape().getWhileDeletesCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileSelectsCompartment2EditPart) {
+			return getPrimaryShape().getWhileSelectsCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileOutuputsCompartment2EditPart) {
+			return getPrimaryShape().getWhileOutuputsCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileCursorsCompartment2EditPart) {
+			return getPrimaryShape().getWhileCursorsCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileWhilesCompartment2EditPart) {
+			return getPrimaryShape().getWhileWhilesCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileForsCompartment2EditPart) {
+			return getPrimaryShape().getWhileForsCompartmentFigure();
+		}
+		if (editPart instanceof WhileWhileLoopsCompartment2EditPart) {
+			return getPrimaryShape().getWhileLoopsCompartmentFigure();
+		}
+		return getContentPane();
+	}
+
+	/**
+	 * @generated
+	 */
+	protected NodeFigure createNodePlate() {
+		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
+		return result;
+	}
+
+	/**
+	 * Creates figure for this edit part.
+	 * 
+	 * Body of this method does not depend on settings in generation model
+	 * so you may safely remove <i>generated</i> tag and modify it.
+	 * 
+	 * @generated
+	 */
+	protected NodeFigure createNodeFigure() {
+		NodeFigure figure = createNodePlate();
+		figure.setLayoutManager(new StackLayout());
+		IFigure shape = createNodeShape();
+		figure.add(shape);
+		contentPane = setupContentPane(shape);
+		return figure;
+	}
+
+	/**
+	 * Default implementation treats passed figure as content pane.
+	 * Respects layout one may have set for generated figure.
+	 * @param nodeShape instance of generated figure class
+	 * @generated
+	 */
+	protected IFigure setupContentPane(IFigure nodeShape) {
+		if (nodeShape.getLayoutManager() == null) {
+			ConstrainedToolbarLayout layout = new ConstrainedToolbarLayout();
+			layout.setSpacing(5);
+			nodeShape.setLayoutManager(layout);
+		}
+		return nodeShape; // use nodeShape itself as contentPane
+	}
+
+	/**
+	 * @generated
+	 */
+	public IFigure getContentPane() {
+		if (contentPane != null) {
+			return contentPane;
+		}
+		return super.getContentPane();
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void setForegroundColor(Color color) {
+		if (primaryShape != null) {
+			primaryShape.setForegroundColor(color);
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void setBackgroundColor(Color color) {
+		if (primaryShape != null) {
+			primaryShape.setBackgroundColor(color);
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void setLineWidth(int width) {
+		if (primaryShape instanceof Shape) {
+			((Shape) primaryShape).setLineWidth(width);
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void setLineType(int style) {
+		if (primaryShape instanceof Shape) {
+			((Shape) primaryShape).setLineStyle(style);
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	public EditPart getPrimaryChildEditPart() {
+		return getChildBySemanticHint(FilesystemVisualIDRegistry
+				.getType(WhileNameExecutablePartEditPart.VISUAL_ID));
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void handleNotificationEvent(Notification event) {
+		if (event.getNotifier() == getModel()
+				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations()
+						.equals(event.getFeature())) {
+			handleMajorSemanticChange();
+		} else {
+			super.handleNotificationEvent(event);
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	public class WhileFigure extends RoundedRectangle {
+
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWhileLabelFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileIfsCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileCasesCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileInsertsCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileUpdatesCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileDeletesCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileSelectsCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileOutuputsCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileCursorsCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileWhilesCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileForsCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fWhileLoopsCompartmentFigure;
+
+		/**
+		 * @generated
+		 */
+		public WhileFigure() {
+			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
+					getMapMode().DPtoLP(8)));
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5)));
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureWhileLabelFigure = new WrappingLabel();
+
+			fFigureWhileLabelFigure.setText("While");
+			fFigureWhileLabelFigure.setMaximumSize(new Dimension(getMapMode()
+					.DPtoLP(10000), getMapMode().DPtoLP(50)));
+
+			this.add(fFigureWhileLabelFigure);
+
+			fWhileIfsCompartmentFigure = new RectangleFigure();
+
+			fWhileIfsCompartmentFigure.setOutline(false);
+
+			this.add(fWhileIfsCompartmentFigure);
+
+			fWhileCasesCompartmentFigure = new RectangleFigure();
+
+			fWhileCasesCompartmentFigure.setOutline(false);
+
+			this.add(fWhileCasesCompartmentFigure);
+
+			fWhileInsertsCompartmentFigure = new RectangleFigure();
+
+			fWhileInsertsCompartmentFigure.setOutline(false);
+
+			this.add(fWhileInsertsCompartmentFigure);
+
+			fWhileUpdatesCompartmentFigure = new RectangleFigure();
+
+			fWhileUpdatesCompartmentFigure.setOutline(false);
+
+			this.add(fWhileUpdatesCompartmentFigure);
+
+			fWhileDeletesCompartmentFigure = new RectangleFigure();
+
+			fWhileDeletesCompartmentFigure.setOutline(false);
+
+			this.add(fWhileDeletesCompartmentFigure);
+
+			fWhileSelectsCompartmentFigure = new RectangleFigure();
+
+			fWhileSelectsCompartmentFigure.setOutline(false);
+
+			this.add(fWhileSelectsCompartmentFigure);
+
+			fWhileOutuputsCompartmentFigure = new RectangleFigure();
+
+			fWhileOutuputsCompartmentFigure.setOutline(false);
+
+			this.add(fWhileOutuputsCompartmentFigure);
+
+			fWhileCursorsCompartmentFigure = new RectangleFigure();
+
+			fWhileCursorsCompartmentFigure.setOutline(false);
+
+			this.add(fWhileCursorsCompartmentFigure);
+
+			fWhileWhilesCompartmentFigure = new RectangleFigure();
+
+			fWhileWhilesCompartmentFigure.setOutline(false);
+
+			this.add(fWhileWhilesCompartmentFigure);
+
+			fWhileForsCompartmentFigure = new RectangleFigure();
+
+			fWhileForsCompartmentFigure.setOutline(false);
+
+			this.add(fWhileForsCompartmentFigure);
+
+			fWhileLoopsCompartmentFigure = new RectangleFigure();
+
+			fWhileLoopsCompartmentFigure.setOutline(false);
+
+			this.add(fWhileLoopsCompartmentFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWhileLabelFigure() {
+			return fFigureWhileLabelFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileIfsCompartmentFigure() {
+			return fWhileIfsCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileCasesCompartmentFigure() {
+			return fWhileCasesCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileInsertsCompartmentFigure() {
+			return fWhileInsertsCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileUpdatesCompartmentFigure() {
+			return fWhileUpdatesCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileDeletesCompartmentFigure() {
+			return fWhileDeletesCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileSelectsCompartmentFigure() {
+			return fWhileSelectsCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileOutuputsCompartmentFigure() {
+			return fWhileOutuputsCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileCursorsCompartmentFigure() {
+			return fWhileCursorsCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileWhilesCompartmentFigure() {
+			return fWhileWhilesCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileForsCompartmentFigure() {
+			return fWhileForsCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getWhileLoopsCompartmentFigure() {
+			return fWhileLoopsCompartmentFigure;
+		}
+
+	}
+
+}

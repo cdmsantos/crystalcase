@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="test_function" nsURI="test_function" nsPrefix="test_function">
+  <eAnnotations source="gmf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Test_Function">
+    <eAnnotations source="gmf.diagram">
+      <details key="model.extension" value="test_function"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Sections" upperBound="-1"
+        eType="#//Sections" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sections" eSuperTypes="#//Parameters #//Return #//Declarative_Part #//Executable_Part">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Declarative_Part" lowerBound="1"
+        eType="#//Declarative_Part" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Executable_Part" lowerBound="1"
+        eType="#//Executable_Part" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Return" lowerBound="1"
+        eType="#//Return" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Parameters" lowerBound="1"
+        eType="#//Parameters" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameters">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Parameter_In" upperBound="-1"
+        eType="#//ParameterIn" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Parameter_Out" upperBound="-1"
+        eType="#//ParameterOut" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Parameter_In_Out" upperBound="-1"
+        eType="#//ParameterInOut" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Return"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Declarative_Part"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Executable_Part"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Data_Type" eSuperTypes="#//Return #//Declarative_Part"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterIn" eSuperTypes="#//Parameters">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="ParameterInName"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ParameterInName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterOut" eSuperTypes="#//Parameters">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="ParameterOutName"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ParameterOutName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterInOut" eSuperTypes="#//Parameters">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="ParameterInOutName"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ParameterInOutName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

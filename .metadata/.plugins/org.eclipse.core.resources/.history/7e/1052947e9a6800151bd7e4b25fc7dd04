@@ -1,0 +1,29 @@
+	/*
+ * 
+ */
+package filesystem.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class DeleteDeleteInsertsCompartment2ItemSemanticEditPolicy extends filesystem.diagram.edit.policies.FilesystemBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public DeleteDeleteInsertsCompartment2ItemSemanticEditPolicy() {
+				super(filesystem.diagram.providers.FilesystemElementTypes.Delete_2006);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (filesystem.diagram.providers.FilesystemElementTypes.Insert_3007 == req.getElementType()) {
+	return getGEFWrapper(new filesystem.diagram.edit.commands.Insert2CreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

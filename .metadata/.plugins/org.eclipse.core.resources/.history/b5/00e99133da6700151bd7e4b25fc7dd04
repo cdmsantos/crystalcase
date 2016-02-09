@@ -1,0 +1,111 @@
+@namespace(uri="filesystem", prefix="filesystem")
+@gmf
+package filesystem;
+
+@gmf.diagram
+class Filesystem {
+    val Drive[*] drives;
+    val Sync[*] syncs;
+    val DeclarativePart[*] declarative;
+    val ExecutablePart[*] executable;
+    val ExceptionPart[*] exception;
+    val Parameters[*] parameters;
+    val Return[*] return;
+}
+
+//Nodes
+class Drive extends Folder {
+}
+
+@gmf.node(label = "name")
+class File {
+    attr String name;
+}
+
+class Folder extends File {
+    @gmf.compartment
+    val File[*] contents;
+}
+
+//Crystal's Nodes
+//Sections
+class Parameters{
+}
+
+class Return{
+}
+
+@gmf.node(label="name")	
+class DeclarativePart {
+    attr String name;
+}
+
+@gmf.node(label="name")	
+class ExecutablePart {
+    attr String name;
+}
+
+@gmf.node(label="name")	
+class ExceptionPart {
+    attr String name;
+}
+
+class Cursor{
+}
+
+class Case{
+}
+
+class Datatype{
+}
+
+class Delete{
+}
+
+class Exception{
+}
+
+class For{
+}
+
+class If{
+}
+
+class Insert{
+}
+
+class Loop{
+}
+
+class Output{
+}
+
+class ParameterIn{
+}
+
+class ParameterOut{
+}
+
+class ParameterInOut{
+}
+
+class Update{
+}
+
+class While{
+}
+
+//Objects
+
+//Links
+@gmf.link(source="source", target="target", style="dot", width="2")
+class Sync {
+    ref File source;
+    ref File target;
+}
+
+class Shortcut extends File {
+    @gmf.link(target.decoration="arrow", style="dash")
+    ref File target;
+}
+

@@ -1,0 +1,577 @@
+	/*
+ * 
+ */
+package filesystem.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class FilesystemNavigatorLabelProvider extends org.eclipse.jface.viewers.LabelProvider implements org.eclipse.ui.navigator.ICommonLabelProvider, org.eclipse.jface.viewers.ITreePathLabelProvider {
+
+		/**
+ * @generated
+ */
+static {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?UnknownElement", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?ImageNotFound", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+public void updateLabel(org.eclipse.jface.viewers.ViewerLabel label, org.eclipse.jface.viewers.TreePath elementPath) {
+	Object element = elementPath.getLastSegment();
+	if (element instanceof filesystem.diagram.navigator.FilesystemNavigatorItem && !isOwnView(((filesystem.diagram.navigator.FilesystemNavigatorItem) element).getView())) {
+		return;
+	}
+	label.setText(getText(element));
+	label.setImage(getImage(element));
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(Object element) {
+	if (element instanceof filesystem.diagram.navigator.FilesystemNavigatorGroup) {
+	filesystem.diagram.navigator.FilesystemNavigatorGroup group = (filesystem.diagram.navigator.FilesystemNavigatorGroup) element;
+	return filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().getBundledImage(group.getIcon());
+}
+
+	if (element instanceof filesystem.diagram.navigator.FilesystemNavigatorItem) {
+	filesystem.diagram.navigator.FilesystemNavigatorItem navigatorItem = (filesystem.diagram.navigator.FilesystemNavigatorItem) element;
+	if (!isOwnView(navigatorItem.getView())) {
+		return super.getImage(element);
+	}
+	return getImage(navigatorItem.getView());
+}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getImage(view);
+	}
+}
+
+		return super.getImage(element);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(org.eclipse.gmf.runtime.notation.View view) {
+		switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view)) {
+		case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:
+	return getImage("Navigator?Diagram?filesystem?Filesystem", filesystem.diagram.providers.FilesystemElementTypes.Filesystem_1000); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.Data_TypeEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Data_Type", filesystem.diagram.providers.FilesystemElementTypes.Data_Type_2001); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.IfEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?If", filesystem.diagram.providers.FilesystemElementTypes.If_2002); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Case", filesystem.diagram.providers.FilesystemElementTypes.Case_2003); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Insert", filesystem.diagram.providers.FilesystemElementTypes.Insert_2004); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Update", filesystem.diagram.providers.FilesystemElementTypes.Update_2005); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Delete", filesystem.diagram.providers.FilesystemElementTypes.Delete_2006); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Select", filesystem.diagram.providers.FilesystemElementTypes.Select_2007); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Output", filesystem.diagram.providers.FilesystemElementTypes.Output_2008); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Cursor", filesystem.diagram.providers.FilesystemElementTypes.Cursor_2009); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?While", filesystem.diagram.providers.FilesystemElementTypes.While_2010); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ForEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?For", filesystem.diagram.providers.FilesystemElementTypes.For_2011); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Loop", filesystem.diagram.providers.FilesystemElementTypes.Loop_2012); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ExceptionCommandEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?ExceptionCommand", filesystem.diagram.providers.FilesystemElementTypes.ExceptionCommand_2013); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?ParameterIn", filesystem.diagram.providers.FilesystemElementTypes.ParameterIn_2014); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?ParameterOut", filesystem.diagram.providers.FilesystemElementTypes.ParameterOut_2015); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?ParameterInOut", filesystem.diagram.providers.FilesystemElementTypes.ParameterInOut_2016); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?DeclarativePart", filesystem.diagram.providers.FilesystemElementTypes.DeclarativePart_2017); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?ExecutablePart", filesystem.diagram.providers.FilesystemElementTypes.ExecutablePart_2018); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ExceptionPartEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?ExceptionPart", filesystem.diagram.providers.FilesystemElementTypes.ExceptionPart_2019); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Return", filesystem.diagram.providers.FilesystemElementTypes.Return_2020); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?filesystem?Parameters", filesystem.diagram.providers.FilesystemElementTypes.Parameters_2021); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?filesystem?ParameterIn", filesystem.diagram.providers.FilesystemElementTypes.ParameterIn_3001); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?filesystem?ParameterInOut", filesystem.diagram.providers.FilesystemElementTypes.ParameterInOut_3002); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?filesystem?ParameterOut", filesystem.diagram.providers.FilesystemElementTypes.ParameterOut_3003); //$NON-NLS-1$
+case filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?filesystem?Sync", filesystem.diagram.providers.FilesystemElementTypes.Sync_4001); //$NON-NLS-1$
+	}
+		return getImage("Navigator?UnknownElement", null);  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+private org.eclipse.swt.graphics.Image getImage(String key, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	org.eclipse.jface.resource.ImageRegistry imageRegistry = filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().getImageRegistry();
+	org.eclipse.swt.graphics.Image image = imageRegistry.get(key);
+	if (image == null && elementType != null && filesystem.diagram.providers.FilesystemElementTypes.isKnownElementType(elementType)) {
+		image = filesystem.diagram.providers.FilesystemElementTypes.getImage(elementType);
+		imageRegistry.put(key, image);
+	}
+			
+	if (image == null) {
+		image = imageRegistry.get("Navigator?ImageNotFound");  //$NON-NLS-1$
+		imageRegistry.put(key, image);
+	}
+	return image;
+}
+	
+		/**
+ * @generated
+ */
+public String getText(Object element) {
+	if (element instanceof filesystem.diagram.navigator.FilesystemNavigatorGroup) {
+	filesystem.diagram.navigator.FilesystemNavigatorGroup group = (filesystem.diagram.navigator.FilesystemNavigatorGroup) element;
+	return group.getGroupName();
+}
+
+	if (element instanceof filesystem.diagram.navigator.FilesystemNavigatorItem) {
+	filesystem.diagram.navigator.FilesystemNavigatorItem navigatorItem = (filesystem.diagram.navigator.FilesystemNavigatorItem) element;
+   		if (!isOwnView(navigatorItem.getView())) {
+   			return null;
+   		}
+   		return getText(navigatorItem.getView());
+	}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getText(view);
+	}
+}
+
+		return super.getText(element);
+}
+	
+		/**
+ * @generated
+ */
+public String getText(org.eclipse.gmf.runtime.notation.View view) {
+	if (view.getElement() != null && view.getElement().eIsProxy()) {
+		return getUnresolvedDomainElementProxyText(view);
+	}
+		switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view)) {
+		case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:
+	return getFilesystem_1000Text(view);
+case filesystem.diagram.edit.parts.Data_TypeEditPart.VISUAL_ID:
+	return getData_Type_2001Text(view);
+case filesystem.diagram.edit.parts.IfEditPart.VISUAL_ID:
+	return getIf_2002Text(view);
+case filesystem.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+	return getCase_2003Text(view);
+case filesystem.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+	return getInsert_2004Text(view);
+case filesystem.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+	return getUpdate_2005Text(view);
+case filesystem.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+	return getDelete_2006Text(view);
+case filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+	return getSelect_2007Text(view);
+case filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID:
+	return getOutput_2008Text(view);
+case filesystem.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+	return getCursor_2009Text(view);
+case filesystem.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+	return getWhile_2010Text(view);
+case filesystem.diagram.edit.parts.ForEditPart.VISUAL_ID:
+	return getFor_2011Text(view);
+case filesystem.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+	return getLoop_2012Text(view);
+case filesystem.diagram.edit.parts.ExceptionCommandEditPart.VISUAL_ID:
+	return getExceptionCommand_2013Text(view);
+case filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID:
+	return getParameterIn_2014Text(view);
+case filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID:
+	return getParameterOut_2015Text(view);
+case filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID:
+	return getParameterInOut_2016Text(view);
+case filesystem.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:
+	return getDeclarativePart_2017Text(view);
+case filesystem.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:
+	return getExecutablePart_2018Text(view);
+case filesystem.diagram.edit.parts.ExceptionPartEditPart.VISUAL_ID:
+	return getExceptionPart_2019Text(view);
+case filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+	return getReturn_2020Text(view);
+case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+	return getParameters_2021Text(view);
+case filesystem.diagram.edit.parts.ParameterIn2EditPart.VISUAL_ID:
+	return getParameterIn_3001Text(view);
+case filesystem.diagram.edit.parts.ParameterInOut2EditPart.VISUAL_ID:
+	return getParameterInOut_3002Text(view);
+case filesystem.diagram.edit.parts.ParameterOut2EditPart.VISUAL_ID:
+	return getParameterOut_3003Text(view);
+case filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID:
+	return getSync_4001Text(view);
+	}
+		return getUnknownElementText(view);
+}
+	
+		/**
+ * @generated
+ */
+private String getFilesystem_1000Text(org.eclipse.gmf.runtime.notation.View view) {
+					return "";  //$NON-NLS-1$
+	}
+	/**
+ * @generated
+ */
+private String getData_Type_2001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Data_Type_2001, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.Data_TypeNameReturnEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getIf_2002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.If_2002, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.IfNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCase_2003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Case_2003, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.CaseNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5003); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getInsert_2004Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Insert_2004, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.InsertNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5004); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getUpdate_2005Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Update_2005, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.UpdateNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5005); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDelete_2006Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Delete_2006, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.DeleteNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5006); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getSelect_2007Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Select_2007, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.SelectNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5007); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getOutput_2008Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Output_2008, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.OutputNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5008); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCursor_2009Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Cursor_2009, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.CursorNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5009); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getWhile_2010Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.While_2010, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.WhileNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5010); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getFor_2011Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.For_2011, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ForNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5011); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getLoop_2012Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Loop_2012, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.LoopNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5012); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getExceptionCommand_2013Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.ExceptionCommand_2013, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ExceptionCommandNameExceptionPartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5013); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getParameterIn_2014Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.ParameterIn_2014, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInNameParametersEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5017); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getParameterOut_2015Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.ParameterOut_2015, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOutNameParametersEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5018); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getParameterInOut_2016Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.ParameterInOut_2016, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOutNameParametersEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5019); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDeclarativePart_2017Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.DeclarativePart_2017, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.DeclarativePartNameDeclarativePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5020); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getExecutablePart_2018Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.ExecutablePart_2018, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ExecutablePartNameExecutablePartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5021); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getExceptionPart_2019Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.ExceptionPart_2019, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ExceptionPartNameExceptionPartEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5022); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getReturn_2020Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Return_2020, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ReturnNameReturnEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5023); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getParameters_2021Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.Parameters_2021, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParametersNameParametersEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5024); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getParameterIn_3001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.ParameterIn_3001, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInNameParameters2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5016); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getParameterInOut_3002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.ParameterInOut_3002, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterInOutNameParameters2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5015); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getParameterOut_3003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = filesystem.diagram.providers.FilesystemParserProvider.getParser(filesystem.diagram.providers.FilesystemElementTypes.ParameterOut_3003, view.getElement() != null ? view.getElement() : view, filesystem.diagram.part.FilesystemVisualIDRegistry.getType(filesystem.diagram.edit.parts.ParameterOutNameParameters2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5014); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getSync_4001Text(org.eclipse.gmf.runtime.notation.View view) {
+								return "";  //$NON-NLS-1$
+		}
+	
+		/**
+ * @generated
+ */
+private String getUnknownElementText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<UnknownElement Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+private String getUnresolvedDomainElementProxyText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<Unresolved domain element Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+
+		/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+		/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+	
+		/**
+ * @generated
+ */
+public String getDescription(Object anElement) {
+	return null;
+}
+	
+		/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return filesystem.diagram.edit.parts.FilesystemEditPart.MODEL_ID.equals(filesystem.diagram.part.FilesystemVisualIDRegistry.getModelID(view));
+}
+
+	}

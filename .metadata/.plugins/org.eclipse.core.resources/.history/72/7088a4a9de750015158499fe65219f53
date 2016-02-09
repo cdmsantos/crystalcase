@@ -1,0 +1,22 @@
+
+public class Edge {
+	public Vertex initialCity;
+	//Name of destination town
+	public Vertex finalCity;
+	//Route weight to destination
+	public int weight;
+	//next possible route
+	public Edge next;
+
+	public Edge(Vertex origin, Vertex destination, int weight) {
+		this.origin 		= origin;
+		this.destination	= destination;
+		this.weight 		= weight;
+		this.next 		= null;
+	}
+	 
+	public Edge next(Edge edge) {
+		this.next = edge;
+		return this;
+	}
+}

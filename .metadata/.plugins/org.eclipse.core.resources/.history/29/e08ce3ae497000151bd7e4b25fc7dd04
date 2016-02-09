@@ -1,0 +1,90 @@
+@namespace(uri="test_function", prefix="test_function")
+@gmf
+
+package test_function;
+
+@gmf.diagram(model.extension="test_function")
+class Test_Function {
+    val Sync[*] syncs;
+    
+    val Declarative_Part[1] Declarative_Part;
+    val Executable_Part[1] Executable_Part;
+    val Return[1] Return;
+    val Parameters[1] Parameters;
+}
+
+class Parameters{
+	attr String Parameter_Name;
+}
+
+@gmf.node(label="nameReturn")	
+class Return{
+    attr String nameReturn;
+}
+
+@gmf.node(label="nameDeclarativePart")	
+class Declarative_Part {
+	val Data_Type[*] tipos_dados;
+    attr String nameDeclarativePart;
+}
+
+@gmf.node(label="nameExecutablePart")	
+class Executable_Part {
+    attr String nameExecutablePart;
+}
+
+
+class Data_Type extends Return, Declarative_Part{
+}
+
+class ParameterIn extends Parameters{
+}
+
+class ParameterOut extends Parameters{
+}
+
+class ParameterInOut extends Parameters{
+}
+
+//class ExceptionCommand extends ExceptionPart{
+//}
+
+class If extends Executable_Part{
+}
+
+class Case extends Executable_Part{
+}
+
+class Insert extends Executable_Part{
+}
+
+class Update extends Executable_Part{
+}
+
+class Delete extends Executable_Part{
+}
+
+class Select extends Executable_Part{
+}
+
+class Output extends Executable_Part{
+}
+
+class Cursor extends Executable_Part{
+}
+
+class While extends Executable_Part{
+}
+
+class For extends Executable_Part{
+}
+
+class Loop extends Executable_Part{
+}
+
+//Links
+@gmf.link(source="source", target="target", style="dot", width="2")
+class Sync {
+    ref Select source;
+    ref Output target;
+}

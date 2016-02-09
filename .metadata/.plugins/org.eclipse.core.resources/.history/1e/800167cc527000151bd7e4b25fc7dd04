@@ -1,0 +1,46 @@
+@namespace(uri="test_function", prefix="test_function")
+@gmf
+
+package test_function;
+
+@gmf.diagram(model.extension="test_function")
+class Test_Function {
+	//val Sections[*] sections;
+}
+
+class Sections extends Parameters, Return, Declarative_Part, Executable_Part{
+	val Declarative_Part[1] declarative_part;
+    val Executable_Part[1] executable_part;
+    val Return[1] return;
+    val Parameters[1] parameters;
+}
+
+class Parameters{
+	val ParameterIn[*] parameter_in;
+	val ParameterOut[*] parameter_out;
+	val ParameterInOut[*] parameter_in_out;
+}
+
+class Return{
+}
+
+class Declarative_Part {
+}
+
+class Executable_Part {
+}
+
+@gmf.node(label = "ParameterInName")
+class ParameterIn extends Parameters{
+	attr String ParameterInName;
+}
+
+@gmf.node(label = "ParameterOutName")
+class ParameterOut extends Parameters{
+	attr String ParameterOutName;
+}
+
+@gmf.node(label = "ParameterInOutName")
+class ParameterInOut extends Parameters{
+	attr String ParameterInOutName;
+}

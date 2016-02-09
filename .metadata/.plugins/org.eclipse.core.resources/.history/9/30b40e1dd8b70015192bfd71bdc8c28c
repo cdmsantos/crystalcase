@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package master.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class CollectionsEditHelper extends master.diagram.edit.helpers.MasterBaseEditHelper {
+	}

@@ -1,0 +1,614 @@
+/*
+ * 
+ */
+package master.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class MasterModelingAssistantProviderOfClose3EditPart extends master.diagram.providers.MasterModelingAssistantProvider {
+
+					
+			/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnSource(org.eclipse.core.runtime.IAdaptable source) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnSource((master.diagram.edit.parts.Close3EditPart) sourceEditPart);
+	}
+	
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnSource(master.diagram.edit.parts.Close3EditPart source) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+				types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+				return types;
+	}
+	
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnSourceAndTarget(
+			org.eclipse.core.runtime.IAdaptable source, org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnSourceAndTarget((master.diagram.edit.parts.Close3EditPart) sourceEditPart, targetEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnSourceAndTarget(master.diagram.edit.parts.Close3EditPart source, org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+							if (targetEditPart instanceof master.diagram.edit.parts.ExpressionsEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.ExceptionEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.IfEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Expressions2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Exception2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.If2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.CaseEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Expressions3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Exception3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.If3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.InsertEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.UpdateEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.DeleteEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.SelectEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Expressions4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Exception4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.If4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.WhileEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Expressions5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Exception5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.If5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.ForEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Expressions6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Exception6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.If6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.LoopEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Expressions7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Exception7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.If7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.OpenEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.FetchEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.CloseEditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Case2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Case3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Insert2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Update2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Delete2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Select2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Case4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.While2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Case5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.For2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Case6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Loop2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Insert3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Update3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Delete3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Select3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Insert4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Update4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Delete4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Select4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.While3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Insert5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Update5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Delete5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Select5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.For3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Insert6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Update6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Delete6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Select6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Loop3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.While4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.While5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.For4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.While6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Loop4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.For5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.For6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Loop5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Loop6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Open2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Fetch2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Close2EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Open3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Fetch3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Close3EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Open4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Fetch4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Close4EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Open5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Fetch5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Close5EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Open6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Fetch6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Close6EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Case7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Insert7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Update7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Delete7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Select7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.While7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.For7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Loop7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Open7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Fetch7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof master.diagram.edit.parts.Close7EditPart) {
+			types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+		}
+							return types;
+	}
+
+			/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForTarget(org.eclipse.core.runtime.IAdaptable source,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetTypesForTarget((master.diagram.edit.parts.Close3EditPart) sourceEditPart, relationshipType);
+	}
+	
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetTypesForTarget(master.diagram.edit.parts.Close3EditPart source, org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == master.diagram.providers.MasterElementTypes.Transition_4001) {
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3013);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3014);
+						types.add(master.diagram.providers.MasterElementTypes.If_3015);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3016);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3017);
+						types.add(master.diagram.providers.MasterElementTypes.If_3018);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3019);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3020);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3021);
+						types.add(master.diagram.providers.MasterElementTypes.If_3022);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3023);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3024);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3025);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3026);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3027);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3028);
+						types.add(master.diagram.providers.MasterElementTypes.If_3029);
+						types.add(master.diagram.providers.MasterElementTypes.While_3030);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3031);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3032);
+						types.add(master.diagram.providers.MasterElementTypes.If_3033);
+						types.add(master.diagram.providers.MasterElementTypes.For_3034);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3035);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3036);
+						types.add(master.diagram.providers.MasterElementTypes.If_3037);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3038);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3039);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3040);
+						types.add(master.diagram.providers.MasterElementTypes.If_3041);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3042);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3043);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3044);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3045);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3046);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3047);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3048);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3049);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3050);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3051);
+						types.add(master.diagram.providers.MasterElementTypes.While_3052);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3053);
+						types.add(master.diagram.providers.MasterElementTypes.For_3054);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3055);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3056);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3057);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3058);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3059);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3060);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3061);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3062);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3063);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3064);
+						types.add(master.diagram.providers.MasterElementTypes.While_3065);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3066);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3067);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3068);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3069);
+						types.add(master.diagram.providers.MasterElementTypes.For_3070);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3071);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3072);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3073);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3074);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3075);
+						types.add(master.diagram.providers.MasterElementTypes.While_3076);
+						types.add(master.diagram.providers.MasterElementTypes.While_3077);
+						types.add(master.diagram.providers.MasterElementTypes.For_3078);
+						types.add(master.diagram.providers.MasterElementTypes.While_3079);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3080);
+						types.add(master.diagram.providers.MasterElementTypes.For_3081);
+						types.add(master.diagram.providers.MasterElementTypes.For_3082);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3083);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3084);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3085);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3086);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3087);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3088);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3089);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3090);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3091);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3092);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3093);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3094);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3095);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3096);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3097);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3098);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3099);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3100);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3101);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3102);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3103);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3104);
+						types.add(master.diagram.providers.MasterElementTypes.While_3105);
+						types.add(master.diagram.providers.MasterElementTypes.For_3106);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3107);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3108);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3109);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3110);
+					}
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnTarget(org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnTarget((master.diagram.edit.parts.Close3EditPart) targetEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnTarget(master.diagram.edit.parts.Close3EditPart target) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+				types.add(master.diagram.providers.MasterElementTypes.Transition_4001);
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForSource(org.eclipse.core.runtime.IAdaptable target,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetTypesForSource((master.diagram.edit.parts.Close3EditPart) targetEditPart, relationshipType);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetTypesForSource(master.diagram.edit.parts.Close3EditPart target, org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == master.diagram.providers.MasterElementTypes.Transition_4001) {
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3013);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3014);
+						types.add(master.diagram.providers.MasterElementTypes.If_3015);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3016);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3017);
+						types.add(master.diagram.providers.MasterElementTypes.If_3018);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3019);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3020);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3021);
+						types.add(master.diagram.providers.MasterElementTypes.If_3022);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3023);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3024);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3025);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3026);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3027);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3028);
+						types.add(master.diagram.providers.MasterElementTypes.If_3029);
+						types.add(master.diagram.providers.MasterElementTypes.While_3030);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3031);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3032);
+						types.add(master.diagram.providers.MasterElementTypes.If_3033);
+						types.add(master.diagram.providers.MasterElementTypes.For_3034);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3035);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3036);
+						types.add(master.diagram.providers.MasterElementTypes.If_3037);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3038);
+						types.add(master.diagram.providers.MasterElementTypes.Expressions_3039);
+						types.add(master.diagram.providers.MasterElementTypes.Exception_3040);
+						types.add(master.diagram.providers.MasterElementTypes.If_3041);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3042);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3043);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3044);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3045);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3046);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3047);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3048);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3049);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3050);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3051);
+						types.add(master.diagram.providers.MasterElementTypes.While_3052);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3053);
+						types.add(master.diagram.providers.MasterElementTypes.For_3054);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3055);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3056);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3057);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3058);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3059);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3060);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3061);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3062);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3063);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3064);
+						types.add(master.diagram.providers.MasterElementTypes.While_3065);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3066);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3067);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3068);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3069);
+						types.add(master.diagram.providers.MasterElementTypes.For_3070);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3071);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3072);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3073);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3074);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3075);
+						types.add(master.diagram.providers.MasterElementTypes.While_3076);
+						types.add(master.diagram.providers.MasterElementTypes.While_3077);
+						types.add(master.diagram.providers.MasterElementTypes.For_3078);
+						types.add(master.diagram.providers.MasterElementTypes.While_3079);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3080);
+						types.add(master.diagram.providers.MasterElementTypes.For_3081);
+						types.add(master.diagram.providers.MasterElementTypes.For_3082);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3083);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3084);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3085);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3086);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3087);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3088);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3089);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3090);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3091);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3092);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3093);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3094);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3095);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3096);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3097);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3098);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3099);
+						types.add(master.diagram.providers.MasterElementTypes.Case_3100);
+						types.add(master.diagram.providers.MasterElementTypes.Insert_3101);
+						types.add(master.diagram.providers.MasterElementTypes.Update_3102);
+						types.add(master.diagram.providers.MasterElementTypes.Delete_3103);
+						types.add(master.diagram.providers.MasterElementTypes.Select_3104);
+						types.add(master.diagram.providers.MasterElementTypes.While_3105);
+						types.add(master.diagram.providers.MasterElementTypes.For_3106);
+						types.add(master.diagram.providers.MasterElementTypes.Loop_3107);
+						types.add(master.diagram.providers.MasterElementTypes.Open_3108);
+						types.add(master.diagram.providers.MasterElementTypes.Fetch_3109);
+						types.add(master.diagram.providers.MasterElementTypes.Close_3110);
+					}
+				return types;
+	}
+
+	}

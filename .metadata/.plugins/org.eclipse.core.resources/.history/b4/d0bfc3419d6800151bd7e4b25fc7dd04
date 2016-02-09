@@ -1,0 +1,1962 @@
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+import org.eclipse.osgi.util.NLS;
+
+/**
+ * @generated
+ */
+public class Messages extends NLS {
+
+	/**
+	 * @generated
+	 */
+	static {
+		NLS.initializeMessages("messages", Messages.class); //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private Messages() {
+	}
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemCreationWizardTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemCreationWizard_DiagramModelFilePageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemCreationWizard_DiagramModelFilePageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemCreationWizard_DomainModelFilePageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemCreationWizard_DomainModelFilePageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemCreationWizardOpenEditorError;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemCreationWizardCreationError;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemCreationWizardPageExtensionError;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDiagramEditorUtil_OpenModelResourceErrorDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDiagramEditorUtil_OpenModelResourceErrorDialogMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDiagramEditorUtil_CreateDiagramProgressTask;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDiagramEditorUtil_CreateDiagramCommandLabel;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDocumentProvider_isModifiable;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDocumentProvider_handleElementContentChanged;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDocumentProvider_IncorrectInputError;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDocumentProvider_NoDiagramInResourceError;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDocumentProvider_DiagramLoadingError;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDocumentProvider_UnsynchronizedFileSaveError;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDocumentProvider_SaveDiagramTask;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDocumentProvider_SaveNextResourceTask;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDocumentProvider_SaveAsOperation;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_ResourceErrorDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_ResourceErrorDialogMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_WizardTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_OpenModelFileDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_CreationPageName;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_CreationPageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_CreationPageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_RootSelectionPageName;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_RootSelectionPageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_RootSelectionPageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_RootSelectionPageSelectionTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_RootSelectionPageNoSelectionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_RootSelectionPageInvalidSelectionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_InitDiagramCommand;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemNewDiagramFileWizard_IncorrectRootError;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDiagramEditor_SavingDeletedFile;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDiagramEditor_SaveAsErrorTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDiagramEditor_SaveAsErrorMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDiagramEditor_SaveErrorTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemDiagramEditor_SaveErrorMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemElementChooserDialog_SelectModelElementTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String ModelElementSelectionPageMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String ValidateActionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String Objects1Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Connections2Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Case1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Case1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Cursor2CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Cursor2CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Data_Type3CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Data_Type3CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String DeclarativePart4CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeclarativePart4CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Delete5CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Delete5CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ExceptionCommand6CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExceptionCommand6CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ExceptionPart7CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExceptionPart7CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePart8CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePart8CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String For9CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String For9CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String If10CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String If10CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Insert11CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Insert11CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Loop12CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Loop12CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Output13CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Output13CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterIn14CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterIn14CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInOut15CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInOut15CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterOut16CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterOut16CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Parameters17CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Parameters17CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Return18CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Return18CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Select19CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Select19CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Update20CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Update20CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String While21CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String While21CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Sync1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Sync1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Data_TypeData_TypeTipo_retornoCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Data_TypeData_TypeTipos_dadosCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Data_TypeData_TypeTipo_retornoCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Data_TypeData_TypeTipos_dadosCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Data_TypeData_TypeTipo_retornoCompartment3EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Data_TypeData_TypeTipos_dadosCompartment3EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InsertInsertLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String UpdateUpdateLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeleteDeleteLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputOutputLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CursorCursorLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopIfsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopCasesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopInsertsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopUpdatesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopDeletesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopSelectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopOutuputsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopCursorsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopWhilesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopForsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopLoopsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExceptionCommandExceptionCommandExcecoesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExceptionCommandExceptionCommandExcecoesCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInParameterInParametros_inCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInParameterInParametros_in_outCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInParameterInParametros_outCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInParameterInParametros_inCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInParameterInParametros_in_outCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInParameterInParametros_outCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterOutParameterOutParametros_inCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterOutParameterOutParametros_in_outCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterOutParameterOutParametros_outCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterOutParameterOutParametros_inCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterOutParameterOutParametros_in_outCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterOutParameterOutParametros_outCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInOutParameterInOutParametros_inCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInOutParameterInOutParametros_in_outCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInOutParameterInOutParametros_outCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInOutParameterInOutParametros_inCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInOutParameterInOutParametros_in_outCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParameterInOutParameterInOutParametros_outCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartIfsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartCasesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartInsertsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartUpdatesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartDeletesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartSelectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartOutuputsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartCursorsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartWhilesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartForsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartLoopsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExceptionPartExceptionPartExcecoesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ReturnReturnTipo_retornoCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParametersParametersParametros_inCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParametersParametersParametros_in_outCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ParametersParametersParametros_outCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CommandName_OpenDiagram;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Filesystem_1000_links;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Output_2007_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_2008_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3010_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Output_3011_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Sync_4001_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Sync_4001_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorActionProvider_OpenDiagramActionName;
+
+	/**
+	 * @generated
+	 */
+	public static String MessageFormatParser_InvalidInputError;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemModelingAssistantProviderTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FilesystemModelingAssistantProviderMessage;
+
+	//TODO: put accessor fields manually	
+}

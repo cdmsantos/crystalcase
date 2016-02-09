@@ -1,0 +1,28 @@
+/*
+ * 
+ */
+package crystal.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ElementInitializers {
+
+	protected ElementInitializers() {
+		// use #getInstance to access cached instance
+	} 
+
+			
+	
+	
+	/**
+ * @generated
+ */
+	public static ElementInitializers getInstance() {
+		ElementInitializers cached = crystal.diagram.part.CrystalDiagramEditorPlugin.getInstance().getElementInitializers();
+		if (cached == null) {
+			crystal.diagram.part.CrystalDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
+		}
+		return cached;
+	}
+}

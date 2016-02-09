@@ -1,0 +1,17 @@
+	/*
+ * 
+ */
+package master.diagram.part;
+
+	/**
+ * @generated
+ */
+public class MasterNodeDescriptor extends org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor {
+		/**
+ * @generated
+ */
+public MasterNodeDescriptor(org.eclipse.emf.ecore.EObject modelElement, int visualID) {
+	super(modelElement, visualID);
+}
+
+	}

@@ -1,0 +1,48 @@
+package Product;
+
+public enum ExemptedProducts {
+	BOOK {
+		public String toString() {
+			return "book";
+		}
+	},
+	
+	BOOKS {
+		public String toString() {
+			return "books";
+		}
+	},
+
+	FOOD {
+		public String toString() {
+			return "food";
+		}
+	},
+
+	CHOCOLATE {
+		public String toString() {
+			return "chocolate";
+		}
+	},
+	
+	CHOCOLATES {
+		public String toString() {
+			return "chocolates";
+		}
+	},
+	
+	MEDICAL {
+		public String toString() {
+			return "medical";
+		}
+	},
+	
+	MEDICAL {
+		public String toString() {
+			return "medical";
+		}
+	},
+	
+	
+
+}

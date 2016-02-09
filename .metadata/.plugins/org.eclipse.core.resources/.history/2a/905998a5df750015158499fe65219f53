@@ -1,0 +1,14 @@
+package Graph;
+
+/**
+ * Class Vertex represents the Cities of the routes.
+ **/
+public class Vertex {
+	public String town;
+	public boolean visited;
+ 
+	public Vertex(String town) {
+		this.town = town;
+		this.visited = false;
+	}
+}

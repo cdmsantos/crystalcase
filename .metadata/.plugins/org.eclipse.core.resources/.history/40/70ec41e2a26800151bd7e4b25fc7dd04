@@ -1,0 +1,3062 @@
+/**
+ */
+package filesystem;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see filesystem.FilesystemFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface FilesystemPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "filesystem";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "filesystem";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "filesystem";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	FilesystemPackage eINSTANCE = filesystem.impl.FilesystemPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.FilesystemImpl <em>Filesystem</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.FilesystemImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getFilesystem()
+	 * @generated
+	 */
+	int FILESYSTEM = 0;
+
+	/**
+	 * The feature id for the '<em><b>Syncs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__SYNCS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Declarative</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__DECLARATIVE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Executable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__EXECUTABLE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__EXCEPTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Return</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__RETURN = 4;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM__PARAMETERS = 5;
+
+	/**
+	 * The number of structural features of the '<em>Filesystem</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILESYSTEM_FEATURE_COUNT = 6;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ParameterInImpl <em>Parameter In</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ParameterInImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getParameterIn()
+	 * @generated
+	 */
+	int PARAMETER_IN = 7;
+
+	/**
+	 * The number of structural features of the '<em>Parameter In</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_IN_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ParametersImpl <em>Parameters</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ParametersImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getParameters()
+	 * @generated
+	 */
+	int PARAMETERS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Parametros in</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETERS__PARAMETROS_IN = PARAMETER_IN_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parametros in out</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETERS__PARAMETROS_IN_OUT = PARAMETER_IN_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Parametros out</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETERS__PARAMETROS_OUT = PARAMETER_IN_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Name Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETERS__NAME_PARAMETERS = PARAMETER_IN_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Parameters</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETERS_FEATURE_COUNT = PARAMETER_IN_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ReturnImpl <em>Return</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ReturnImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getReturn()
+	 * @generated
+	 */
+	int RETURN = 2;
+
+	/**
+	 * The feature id for the '<em><b>Tipo retorno</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN__TIPO_RETORNO = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name Return</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN__NAME_RETURN = 1;
+
+	/**
+	 * The number of structural features of the '<em>Return</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.DeclarativePartImpl <em>Declarative Part</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.DeclarativePartImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getDeclarativePart()
+	 * @generated
+	 */
+	int DECLARATIVE_PART = 3;
+
+	/**
+	 * The feature id for the '<em><b>Tipos dados</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECLARATIVE_PART__TIPOS_DADOS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name Declarative Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECLARATIVE_PART__NAME_DECLARATIVE_PART = 1;
+
+	/**
+	 * The number of structural features of the '<em>Declarative Part</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECLARATIVE_PART_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ExecutablePartImpl <em>Executable Part</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ExecutablePartImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getExecutablePart()
+	 * @generated
+	 */
+	int EXECUTABLE_PART = 4;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__IFS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__CASES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__INSERTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__UPDATES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__DELETES = 4;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__SELECTS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__OUTUPUTS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__CURSORS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__WHILES = 8;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__FORS = 9;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__LOOPS = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART__NAME_EXECUTABLE_PART = 11;
+
+	/**
+	 * The number of structural features of the '<em>Executable Part</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTABLE_PART_FEATURE_COUNT = 12;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ExceptionPartImpl <em>Exception Part</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ExceptionPartImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getExceptionPart()
+	 * @generated
+	 */
+	int EXCEPTION_PART = 5;
+
+	/**
+	 * The feature id for the '<em><b>Excecoes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_PART__EXCECOES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name Exception Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_PART__NAME_EXCEPTION_PART = 1;
+
+	/**
+	 * The number of structural features of the '<em>Exception Part</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_PART_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.Data_TypeImpl <em>Data Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.Data_TypeImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getData_Type()
+	 * @generated
+	 */
+	int DATA_TYPE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Tipo retorno</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__TIPO_RETORNO = RETURN__TIPO_RETORNO;
+
+	/**
+	 * The feature id for the '<em><b>Name Return</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__NAME_RETURN = RETURN__NAME_RETURN;
+
+	/**
+	 * The feature id for the '<em><b>Tipos dados</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__TIPOS_DADOS = RETURN_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name Declarative Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__NAME_DECLARATIVE_PART = RETURN_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Data Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FEATURE_COUNT = RETURN_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ParameterOutImpl <em>Parameter Out</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ParameterOutImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getParameterOut()
+	 * @generated
+	 */
+	int PARAMETER_OUT = 8;
+
+	/**
+	 * The number of structural features of the '<em>Parameter Out</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_OUT_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ParameterInOutImpl <em>Parameter In Out</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ParameterInOutImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getParameterInOut()
+	 * @generated
+	 */
+	int PARAMETER_IN_OUT = 9;
+
+	/**
+	 * The number of structural features of the '<em>Parameter In Out</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_IN_OUT_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ExceptionCommandImpl <em>Exception Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ExceptionCommandImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getExceptionCommand()
+	 * @generated
+	 */
+	int EXCEPTION_COMMAND = 10;
+
+	/**
+	 * The feature id for the '<em><b>Excecoes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_COMMAND__EXCECOES = EXCEPTION_PART__EXCECOES;
+
+	/**
+	 * The feature id for the '<em><b>Name Exception Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_COMMAND__NAME_EXCEPTION_PART = EXCEPTION_PART__NAME_EXCEPTION_PART;
+
+	/**
+	 * The number of structural features of the '<em>Exception Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_COMMAND_FEATURE_COUNT = EXCEPTION_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.IfImpl <em>If</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.IfImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getIf()
+	 * @generated
+	 */
+	int IF = 11;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>If</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.CaseImpl <em>Case</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.CaseImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getCase()
+	 * @generated
+	 */
+	int CASE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.InsertImpl <em>Insert</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.InsertImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getInsert()
+	 * @generated
+	 */
+	int INSERT = 13;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>Insert</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERT_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.UpdateImpl <em>Update</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.UpdateImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getUpdate()
+	 * @generated
+	 */
+	int UPDATE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>Update</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.DeleteImpl <em>Delete</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.DeleteImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getDelete()
+	 * @generated
+	 */
+	int DELETE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>Delete</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.SelectImpl <em>Select</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.SelectImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getSelect()
+	 * @generated
+	 */
+	int SELECT = 16;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>Select</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECT_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.OutputImpl <em>Output</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.OutputImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getOutput()
+	 * @generated
+	 */
+	int OUTPUT = 17;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>Output</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.CursorImpl <em>Cursor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.CursorImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getCursor()
+	 * @generated
+	 */
+	int CURSOR = 18;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>Cursor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.WhileImpl <em>While</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.WhileImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getWhile()
+	 * @generated
+	 */
+	int WHILE = 19;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>While</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.ForImpl <em>For</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.ForImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getFor()
+	 * @generated
+	 */
+	int FOR = 20;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>For</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.LoopImpl <em>Loop</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.LoopImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getLoop()
+	 * @generated
+	 */
+	int LOOP = 21;
+
+	/**
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__IFS = EXECUTABLE_PART__IFS;
+
+	/**
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__CASES = EXECUTABLE_PART__CASES;
+
+	/**
+	 * The feature id for the '<em><b>Inserts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__INSERTS = EXECUTABLE_PART__INSERTS;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__UPDATES = EXECUTABLE_PART__UPDATES;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__DELETES = EXECUTABLE_PART__DELETES;
+
+	/**
+	 * The feature id for the '<em><b>Selects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__SELECTS = EXECUTABLE_PART__SELECTS;
+
+	/**
+	 * The feature id for the '<em><b>Outuputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__OUTUPUTS = EXECUTABLE_PART__OUTUPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Cursors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__CURSORS = EXECUTABLE_PART__CURSORS;
+
+	/**
+	 * The feature id for the '<em><b>Whiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__WHILES = EXECUTABLE_PART__WHILES;
+
+	/**
+	 * The feature id for the '<em><b>Fors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__FORS = EXECUTABLE_PART__FORS;
+
+	/**
+	 * The feature id for the '<em><b>Loops</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__LOOPS = EXECUTABLE_PART__LOOPS;
+
+	/**
+	 * The feature id for the '<em><b>Name Executable Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__NAME_EXECUTABLE_PART = EXECUTABLE_PART__NAME_EXECUTABLE_PART;
+
+	/**
+	 * The number of structural features of the '<em>Loop</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_FEATURE_COUNT = EXECUTABLE_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link filesystem.impl.SyncImpl <em>Sync</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see filesystem.impl.SyncImpl
+	 * @see filesystem.impl.FilesystemPackageImpl#getSync()
+	 * @generated
+	 */
+	int SYNC = 22;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNC__SOURCE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNC__TARGET = 1;
+
+	/**
+	 * The number of structural features of the '<em>Sync</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNC_FEATURE_COUNT = 2;
+
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Filesystem <em>Filesystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Filesystem</em>'.
+	 * @see filesystem.Filesystem
+	 * @generated
+	 */
+	EClass getFilesystem();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Filesystem#getSyncs <em>Syncs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Syncs</em>'.
+	 * @see filesystem.Filesystem#getSyncs()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Syncs();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link filesystem.Filesystem#getDeclarative <em>Declarative</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Declarative</em>'.
+	 * @see filesystem.Filesystem#getDeclarative()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Declarative();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link filesystem.Filesystem#getExecutable <em>Executable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Executable</em>'.
+	 * @see filesystem.Filesystem#getExecutable()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Executable();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link filesystem.Filesystem#getException <em>Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Exception</em>'.
+	 * @see filesystem.Filesystem#getException()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Exception();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link filesystem.Filesystem#getReturn <em>Return</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Return</em>'.
+	 * @see filesystem.Filesystem#getReturn()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Return();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link filesystem.Filesystem#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Parameters</em>'.
+	 * @see filesystem.Filesystem#getParameters()
+	 * @see #getFilesystem()
+	 * @generated
+	 */
+	EReference getFilesystem_Parameters();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Parameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameters</em>'.
+	 * @see filesystem.Parameters
+	 * @generated
+	 */
+	EClass getParameters();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Parameters#getParametros_in <em>Parametros in</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parametros in</em>'.
+	 * @see filesystem.Parameters#getParametros_in()
+	 * @see #getParameters()
+	 * @generated
+	 */
+	EReference getParameters_Parametros_in();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Parameters#getParametros_in_out <em>Parametros in out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parametros in out</em>'.
+	 * @see filesystem.Parameters#getParametros_in_out()
+	 * @see #getParameters()
+	 * @generated
+	 */
+	EReference getParameters_Parametros_in_out();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.Parameters#getParametros_out <em>Parametros out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parametros out</em>'.
+	 * @see filesystem.Parameters#getParametros_out()
+	 * @see #getParameters()
+	 * @generated
+	 */
+	EReference getParameters_Parametros_out();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.Parameters#getNameParameters <em>Name Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Parameters</em>'.
+	 * @see filesystem.Parameters#getNameParameters()
+	 * @see #getParameters()
+	 * @generated
+	 */
+	EAttribute getParameters_NameParameters();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Return <em>Return</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Return</em>'.
+	 * @see filesystem.Return
+	 * @generated
+	 */
+	EClass getReturn();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link filesystem.Return#getTipo_retorno <em>Tipo retorno</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tipo retorno</em>'.
+	 * @see filesystem.Return#getTipo_retorno()
+	 * @see #getReturn()
+	 * @generated
+	 */
+	EReference getReturn_Tipo_retorno();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.Return#getNameReturn <em>Name Return</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Return</em>'.
+	 * @see filesystem.Return#getNameReturn()
+	 * @see #getReturn()
+	 * @generated
+	 */
+	EAttribute getReturn_NameReturn();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.DeclarativePart <em>Declarative Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Declarative Part</em>'.
+	 * @see filesystem.DeclarativePart
+	 * @generated
+	 */
+	EClass getDeclarativePart();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.DeclarativePart#getTipos_dados <em>Tipos dados</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tipos dados</em>'.
+	 * @see filesystem.DeclarativePart#getTipos_dados()
+	 * @see #getDeclarativePart()
+	 * @generated
+	 */
+	EReference getDeclarativePart_Tipos_dados();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.DeclarativePart#getNameDeclarativePart <em>Name Declarative Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Declarative Part</em>'.
+	 * @see filesystem.DeclarativePart#getNameDeclarativePart()
+	 * @see #getDeclarativePart()
+	 * @generated
+	 */
+	EAttribute getDeclarativePart_NameDeclarativePart();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ExecutablePart <em>Executable Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Executable Part</em>'.
+	 * @see filesystem.ExecutablePart
+	 * @generated
+	 */
+	EClass getExecutablePart();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getIfs <em>Ifs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Ifs</em>'.
+	 * @see filesystem.ExecutablePart#getIfs()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Ifs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getCases <em>Cases</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Cases</em>'.
+	 * @see filesystem.ExecutablePart#getCases()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Cases();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getInserts <em>Inserts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Inserts</em>'.
+	 * @see filesystem.ExecutablePart#getInserts()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Inserts();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getUpdates <em>Updates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Updates</em>'.
+	 * @see filesystem.ExecutablePart#getUpdates()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Updates();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getDeletes <em>Deletes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Deletes</em>'.
+	 * @see filesystem.ExecutablePart#getDeletes()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Deletes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getSelects <em>Selects</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Selects</em>'.
+	 * @see filesystem.ExecutablePart#getSelects()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Selects();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getOutuputs <em>Outuputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Outuputs</em>'.
+	 * @see filesystem.ExecutablePart#getOutuputs()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Outuputs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getCursors <em>Cursors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Cursors</em>'.
+	 * @see filesystem.ExecutablePart#getCursors()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Cursors();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getWhiles <em>Whiles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Whiles</em>'.
+	 * @see filesystem.ExecutablePart#getWhiles()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Whiles();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getFors <em>Fors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Fors</em>'.
+	 * @see filesystem.ExecutablePart#getFors()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Fors();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExecutablePart#getLoops <em>Loops</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Loops</em>'.
+	 * @see filesystem.ExecutablePart#getLoops()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EReference getExecutablePart_Loops();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.ExecutablePart#getNameExecutablePart <em>Name Executable Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Executable Part</em>'.
+	 * @see filesystem.ExecutablePart#getNameExecutablePart()
+	 * @see #getExecutablePart()
+	 * @generated
+	 */
+	EAttribute getExecutablePart_NameExecutablePart();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ExceptionPart <em>Exception Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exception Part</em>'.
+	 * @see filesystem.ExceptionPart
+	 * @generated
+	 */
+	EClass getExceptionPart();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link filesystem.ExceptionPart#getExcecoes <em>Excecoes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Excecoes</em>'.
+	 * @see filesystem.ExceptionPart#getExcecoes()
+	 * @see #getExceptionPart()
+	 * @generated
+	 */
+	EReference getExceptionPart_Excecoes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link filesystem.ExceptionPart#getNameExceptionPart <em>Name Exception Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Exception Part</em>'.
+	 * @see filesystem.ExceptionPart#getNameExceptionPart()
+	 * @see #getExceptionPart()
+	 * @generated
+	 */
+	EAttribute getExceptionPart_NameExceptionPart();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Data_Type <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Type</em>'.
+	 * @see filesystem.Data_Type
+	 * @generated
+	 */
+	EClass getData_Type();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ParameterIn <em>Parameter In</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter In</em>'.
+	 * @see filesystem.ParameterIn
+	 * @generated
+	 */
+	EClass getParameterIn();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ParameterOut <em>Parameter Out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter Out</em>'.
+	 * @see filesystem.ParameterOut
+	 * @generated
+	 */
+	EClass getParameterOut();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ParameterInOut <em>Parameter In Out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter In Out</em>'.
+	 * @see filesystem.ParameterInOut
+	 * @generated
+	 */
+	EClass getParameterInOut();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.ExceptionCommand <em>Exception Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exception Command</em>'.
+	 * @see filesystem.ExceptionCommand
+	 * @generated
+	 */
+	EClass getExceptionCommand();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.If <em>If</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>If</em>'.
+	 * @see filesystem.If
+	 * @generated
+	 */
+	EClass getIf();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Case <em>Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Case</em>'.
+	 * @see filesystem.Case
+	 * @generated
+	 */
+	EClass getCase();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Insert <em>Insert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Insert</em>'.
+	 * @see filesystem.Insert
+	 * @generated
+	 */
+	EClass getInsert();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Update <em>Update</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update</em>'.
+	 * @see filesystem.Update
+	 * @generated
+	 */
+	EClass getUpdate();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Delete <em>Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete</em>'.
+	 * @see filesystem.Delete
+	 * @generated
+	 */
+	EClass getDelete();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Select <em>Select</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Select</em>'.
+	 * @see filesystem.Select
+	 * @generated
+	 */
+	EClass getSelect();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Output <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output</em>'.
+	 * @see filesystem.Output
+	 * @generated
+	 */
+	EClass getOutput();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Cursor <em>Cursor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cursor</em>'.
+	 * @see filesystem.Cursor
+	 * @generated
+	 */
+	EClass getCursor();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.While <em>While</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>While</em>'.
+	 * @see filesystem.While
+	 * @generated
+	 */
+	EClass getWhile();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.For <em>For</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>For</em>'.
+	 * @see filesystem.For
+	 * @generated
+	 */
+	EClass getFor();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Loop <em>Loop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Loop</em>'.
+	 * @see filesystem.Loop
+	 * @generated
+	 */
+	EClass getLoop();
+
+	/**
+	 * Returns the meta object for class '{@link filesystem.Sync <em>Sync</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sync</em>'.
+	 * @see filesystem.Sync
+	 * @generated
+	 */
+	EClass getSync();
+
+	/**
+	 * Returns the meta object for the reference '{@link filesystem.Sync#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see filesystem.Sync#getSource()
+	 * @see #getSync()
+	 * @generated
+	 */
+	EReference getSync_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link filesystem.Sync#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see filesystem.Sync#getTarget()
+	 * @see #getSync()
+	 * @generated
+	 */
+	EReference getSync_Target();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	FilesystemFactory getFilesystemFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.FilesystemImpl <em>Filesystem</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.FilesystemImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getFilesystem()
+		 * @generated
+		 */
+		EClass FILESYSTEM = eINSTANCE.getFilesystem();
+
+		/**
+		 * The meta object literal for the '<em><b>Syncs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__SYNCS = eINSTANCE.getFilesystem_Syncs();
+
+		/**
+		 * The meta object literal for the '<em><b>Declarative</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__DECLARATIVE = eINSTANCE.getFilesystem_Declarative();
+
+		/**
+		 * The meta object literal for the '<em><b>Executable</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__EXECUTABLE = eINSTANCE.getFilesystem_Executable();
+
+		/**
+		 * The meta object literal for the '<em><b>Exception</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__EXCEPTION = eINSTANCE.getFilesystem_Exception();
+
+		/**
+		 * The meta object literal for the '<em><b>Return</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__RETURN = eINSTANCE.getFilesystem_Return();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FILESYSTEM__PARAMETERS = eINSTANCE.getFilesystem_Parameters();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ParametersImpl <em>Parameters</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ParametersImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getParameters()
+		 * @generated
+		 */
+		EClass PARAMETERS = eINSTANCE.getParameters();
+
+		/**
+		 * The meta object literal for the '<em><b>Parametros in</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETERS__PARAMETROS_IN = eINSTANCE.getParameters_Parametros_in();
+
+		/**
+		 * The meta object literal for the '<em><b>Parametros in out</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETERS__PARAMETROS_IN_OUT = eINSTANCE.getParameters_Parametros_in_out();
+
+		/**
+		 * The meta object literal for the '<em><b>Parametros out</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETERS__PARAMETROS_OUT = eINSTANCE.getParameters_Parametros_out();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Parameters</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETERS__NAME_PARAMETERS = eINSTANCE.getParameters_NameParameters();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ReturnImpl <em>Return</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ReturnImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getReturn()
+		 * @generated
+		 */
+		EClass RETURN = eINSTANCE.getReturn();
+
+		/**
+		 * The meta object literal for the '<em><b>Tipo retorno</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RETURN__TIPO_RETORNO = eINSTANCE.getReturn_Tipo_retorno();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Return</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RETURN__NAME_RETURN = eINSTANCE.getReturn_NameReturn();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.DeclarativePartImpl <em>Declarative Part</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.DeclarativePartImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getDeclarativePart()
+		 * @generated
+		 */
+		EClass DECLARATIVE_PART = eINSTANCE.getDeclarativePart();
+
+		/**
+		 * The meta object literal for the '<em><b>Tipos dados</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DECLARATIVE_PART__TIPOS_DADOS = eINSTANCE.getDeclarativePart_Tipos_dados();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Declarative Part</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DECLARATIVE_PART__NAME_DECLARATIVE_PART = eINSTANCE.getDeclarativePart_NameDeclarativePart();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ExecutablePartImpl <em>Executable Part</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ExecutablePartImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getExecutablePart()
+		 * @generated
+		 */
+		EClass EXECUTABLE_PART = eINSTANCE.getExecutablePart();
+
+		/**
+		 * The meta object literal for the '<em><b>Ifs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__IFS = eINSTANCE.getExecutablePart_Ifs();
+
+		/**
+		 * The meta object literal for the '<em><b>Cases</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__CASES = eINSTANCE.getExecutablePart_Cases();
+
+		/**
+		 * The meta object literal for the '<em><b>Inserts</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__INSERTS = eINSTANCE.getExecutablePart_Inserts();
+
+		/**
+		 * The meta object literal for the '<em><b>Updates</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__UPDATES = eINSTANCE.getExecutablePart_Updates();
+
+		/**
+		 * The meta object literal for the '<em><b>Deletes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__DELETES = eINSTANCE.getExecutablePart_Deletes();
+
+		/**
+		 * The meta object literal for the '<em><b>Selects</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__SELECTS = eINSTANCE.getExecutablePart_Selects();
+
+		/**
+		 * The meta object literal for the '<em><b>Outuputs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__OUTUPUTS = eINSTANCE.getExecutablePart_Outuputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Cursors</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__CURSORS = eINSTANCE.getExecutablePart_Cursors();
+
+		/**
+		 * The meta object literal for the '<em><b>Whiles</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__WHILES = eINSTANCE.getExecutablePart_Whiles();
+
+		/**
+		 * The meta object literal for the '<em><b>Fors</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__FORS = eINSTANCE.getExecutablePart_Fors();
+
+		/**
+		 * The meta object literal for the '<em><b>Loops</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTABLE_PART__LOOPS = eINSTANCE.getExecutablePart_Loops();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Executable Part</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXECUTABLE_PART__NAME_EXECUTABLE_PART = eINSTANCE.getExecutablePart_NameExecutablePart();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ExceptionPartImpl <em>Exception Part</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ExceptionPartImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getExceptionPart()
+		 * @generated
+		 */
+		EClass EXCEPTION_PART = eINSTANCE.getExceptionPart();
+
+		/**
+		 * The meta object literal for the '<em><b>Excecoes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXCEPTION_PART__EXCECOES = eINSTANCE.getExceptionPart_Excecoes();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Exception Part</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXCEPTION_PART__NAME_EXCEPTION_PART = eINSTANCE.getExceptionPart_NameExceptionPart();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.Data_TypeImpl <em>Data Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.Data_TypeImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getData_Type()
+		 * @generated
+		 */
+		EClass DATA_TYPE = eINSTANCE.getData_Type();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ParameterInImpl <em>Parameter In</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ParameterInImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getParameterIn()
+		 * @generated
+		 */
+		EClass PARAMETER_IN = eINSTANCE.getParameterIn();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ParameterOutImpl <em>Parameter Out</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ParameterOutImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getParameterOut()
+		 * @generated
+		 */
+		EClass PARAMETER_OUT = eINSTANCE.getParameterOut();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ParameterInOutImpl <em>Parameter In Out</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ParameterInOutImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getParameterInOut()
+		 * @generated
+		 */
+		EClass PARAMETER_IN_OUT = eINSTANCE.getParameterInOut();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ExceptionCommandImpl <em>Exception Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ExceptionCommandImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getExceptionCommand()
+		 * @generated
+		 */
+		EClass EXCEPTION_COMMAND = eINSTANCE.getExceptionCommand();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.IfImpl <em>If</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.IfImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getIf()
+		 * @generated
+		 */
+		EClass IF = eINSTANCE.getIf();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.CaseImpl <em>Case</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.CaseImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getCase()
+		 * @generated
+		 */
+		EClass CASE = eINSTANCE.getCase();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.InsertImpl <em>Insert</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.InsertImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getInsert()
+		 * @generated
+		 */
+		EClass INSERT = eINSTANCE.getInsert();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.UpdateImpl <em>Update</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.UpdateImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getUpdate()
+		 * @generated
+		 */
+		EClass UPDATE = eINSTANCE.getUpdate();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.DeleteImpl <em>Delete</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.DeleteImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getDelete()
+		 * @generated
+		 */
+		EClass DELETE = eINSTANCE.getDelete();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.SelectImpl <em>Select</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.SelectImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getSelect()
+		 * @generated
+		 */
+		EClass SELECT = eINSTANCE.getSelect();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.OutputImpl <em>Output</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.OutputImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getOutput()
+		 * @generated
+		 */
+		EClass OUTPUT = eINSTANCE.getOutput();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.CursorImpl <em>Cursor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.CursorImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getCursor()
+		 * @generated
+		 */
+		EClass CURSOR = eINSTANCE.getCursor();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.WhileImpl <em>While</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.WhileImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getWhile()
+		 * @generated
+		 */
+		EClass WHILE = eINSTANCE.getWhile();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.ForImpl <em>For</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.ForImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getFor()
+		 * @generated
+		 */
+		EClass FOR = eINSTANCE.getFor();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.LoopImpl <em>Loop</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.LoopImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getLoop()
+		 * @generated
+		 */
+		EClass LOOP = eINSTANCE.getLoop();
+
+		/**
+		 * The meta object literal for the '{@link filesystem.impl.SyncImpl <em>Sync</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see filesystem.impl.SyncImpl
+		 * @see filesystem.impl.FilesystemPackageImpl#getSync()
+		 * @generated
+		 */
+		EClass SYNC = eINSTANCE.getSync();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYNC__SOURCE = eINSTANCE.getSync_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYNC__TARGET = eINSTANCE.getSync_Target();
+
+	}
+
+} //FilesystemPackage

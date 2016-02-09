@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package master.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class MasterModelingAssistantProviderOfCursor3EditPart extends master.diagram.providers.MasterModelingAssistantProvider {
+
+					
+	
+
+	}

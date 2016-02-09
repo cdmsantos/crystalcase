@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/crystal.project/src" modelPluginID="crystal.project"
+    modelName="Crystal" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>crystal.emf</foreignModel>
+  <genPackages prefix="Crystal" disposableProviderFactory="true" ecorePackage="crystal.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="crystal.ecore#//ParameterType">
+      <genEnumLiterals ecoreEnumLiteral="crystal.ecore#//ParameterType/None"/>
+      <genEnumLiterals ecoreEnumLiteral="crystal.ecore#//ParameterType/In"/>
+      <genEnumLiterals ecoreEnumLiteral="crystal.ecore#//ParameterType/Out"/>
+      <genEnumLiterals ecoreEnumLiteral="crystal.ecore#//ParameterType/InOut"/>
+    </genEnums>
+    <genClasses ecoreClass="crystal.ecore#//Crystal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystal.ecore#//Crystal/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystal.ecore#//Crystal/procedures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystal.ecore#//Crystal/functions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystal.ecore#//Crystal/blocks"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="crystal.ecore#//Sections">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystal.ecore#//Sections/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystal.ecore#//Sections/declarativePart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystal.ecore#//Sections/executablePart"/>
+    </genClasses>
+    <genClasses ecoreClass="crystal.ecore#//Procedure">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystal.ecore#//Procedure/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="crystal.ecore#//Function">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystal.ecore#//Function/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystal.ecore#//Function/returnPart"/>
+    </genClasses>
+    <genClasses ecoreClass="crystal.ecore#//AnonymousBlock"/>
+    <genClasses image="false" ecoreClass="crystal.ecore#//Variables">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystal.ecore#//Variables/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystal.ecore#//Variables/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystal.ecore#//Variables/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystal.ecore#//Variables/description"/>
+    </genClasses>
+    <genClasses ecoreClass="crystal.ecore#//DataType"/>
+    <genClasses ecoreClass="crystal.ecore#//Collections"/>
+    <genClasses ecoreClass="crystal.ecore#//Records"/>
+    <genClasses ecoreClass="crystal.ecore#//Cursor"/>
+    <genClasses image="false" ecoreClass="crystal.ecore#//Objects">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystal.ecore#//Objects/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystal.ecore#//Objects/description"/>
+    </genClasses>
+    <genClasses ecoreClass="crystal.ecore#//Expressions"/>
+    <genClasses ecoreClass="crystal.ecore#//Exception"/>
+    <genClasses ecoreClass="crystal.ecore#//If"/>
+    <genClasses ecoreClass="crystal.ecore#//Case"/>
+    <genClasses ecoreClass="crystal.ecore#//Insert"/>
+    <genClasses ecoreClass="crystal.ecore#//Update"/>
+    <genClasses ecoreClass="crystal.ecore#//Delete"/>
+    <genClasses ecoreClass="crystal.ecore#//Select"/>
+    <genClasses ecoreClass="crystal.ecore#//While"/>
+    <genClasses ecoreClass="crystal.ecore#//For"/>
+    <genClasses ecoreClass="crystal.ecore#//Loop"/>
+    <genClasses ecoreClass="crystal.ecore#//Open"/>
+    <genClasses ecoreClass="crystal.ecore#//Fetch"/>
+    <genClasses ecoreClass="crystal.ecore#//Close"/>
+    <genClasses ecoreClass="crystal.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystal.ecore#//Transition/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystal.ecore#//Transition/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystal.ecore#//Transition/target"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

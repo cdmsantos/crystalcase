@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package filesystem.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramConnectionsPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.ConnectionsPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramConnectionsPreferencePage() {
+		setPreferenceStore(filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

@@ -1,0 +1,654 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmf.runtime.common.core.service.AbstractProvider;
+import org.eclipse.gmf.runtime.common.core.service.IOperation;
+import org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation;
+import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
+import org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider;
+import org.eclipse.gmf.runtime.common.ui.services.parser.ParserService;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
+import org.eclipse.gmf.runtime.notation.View;
+
+import filesystem.FilesystemPackage;
+import filesystem.diagram.edit.parts.CaseNameEditPart;
+import filesystem.diagram.edit.parts.CursorNameEditPart;
+import filesystem.diagram.edit.parts.DatatypeNameNameEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartNameEditPart;
+import filesystem.diagram.edit.parts.DeleteNameEditPart;
+import filesystem.diagram.edit.parts.DriveName2EditPart;
+import filesystem.diagram.edit.parts.DriveNameEditPart;
+import filesystem.diagram.edit.parts.ExceptionNameEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartNameEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartNameEditPart;
+import filesystem.diagram.edit.parts.FileNameEditPart;
+import filesystem.diagram.edit.parts.FolderNameEditPart;
+import filesystem.diagram.edit.parts.ForNameEditPart;
+import filesystem.diagram.edit.parts.IfNameEditPart;
+import filesystem.diagram.edit.parts.InsertNameEditPart;
+import filesystem.diagram.edit.parts.LoopNameEditPart;
+import filesystem.diagram.edit.parts.OutputNameEditPart;
+import filesystem.diagram.edit.parts.ParameterInNameEditPart;
+import filesystem.diagram.edit.parts.ParameterInOutNameEditPart;
+import filesystem.diagram.edit.parts.ParameterOutNameEditPart;
+import filesystem.diagram.edit.parts.ParametersNameEditPart;
+import filesystem.diagram.edit.parts.ReturnNameEditPart;
+import filesystem.diagram.edit.parts.SelectNameEditPart;
+import filesystem.diagram.edit.parts.ShortcutNameEditPart;
+import filesystem.diagram.edit.parts.UpdateNameEditPart;
+import filesystem.diagram.edit.parts.WhileNameEditPart;
+import filesystem.diagram.parsers.MessageFormatParser;
+import filesystem.diagram.part.FilesystemVisualIDRegistry;
+
+/**
+ * @generated
+ */
+public class FilesystemParserProvider extends AbstractProvider implements
+		IParserProvider {
+
+	/**
+	 * @generated
+	 */
+	private IParser driveName_5005Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDriveName_5005Parser() {
+		if (driveName_5005Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getFile_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			driveName_5005Parser = parser;
+		}
+		return driveName_5005Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser datatypeNameName_5012Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDatatypeNameName_5012Parser() {
+		if (datatypeNameName_5012Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					FilesystemPackage.eINSTANCE.getReturn_Name(),
+					FilesystemPackage.eINSTANCE.getDeclarativePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			datatypeNameName_5012Parser = parser;
+		}
+		return datatypeNameName_5012Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser ifName_5013Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getIfName_5013Parser() {
+		if (ifName_5013Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			ifName_5013Parser = parser;
+		}
+		return ifName_5013Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser caseName_5014Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCaseName_5014Parser() {
+		if (caseName_5014Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			caseName_5014Parser = parser;
+		}
+		return caseName_5014Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser insertName_5015Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getInsertName_5015Parser() {
+		if (insertName_5015Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			insertName_5015Parser = parser;
+		}
+		return insertName_5015Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser updateName_5016Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getUpdateName_5016Parser() {
+		if (updateName_5016Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			updateName_5016Parser = parser;
+		}
+		return updateName_5016Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser deleteName_5017Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDeleteName_5017Parser() {
+		if (deleteName_5017Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			deleteName_5017Parser = parser;
+		}
+		return deleteName_5017Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser outputName_5018Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getOutputName_5018Parser() {
+		if (outputName_5018Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			outputName_5018Parser = parser;
+		}
+		return outputName_5018Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser selectName_5019Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getSelectName_5019Parser() {
+		if (selectName_5019Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			selectName_5019Parser = parser;
+		}
+		return selectName_5019Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5020Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5020Parser() {
+		if (cursorName_5020Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5020Parser = parser;
+		}
+		return cursorName_5020Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser whileName_5021Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getWhileName_5021Parser() {
+		if (whileName_5021Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			whileName_5021Parser = parser;
+		}
+		return whileName_5021Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser forName_5022Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getForName_5022Parser() {
+		if (forName_5022Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			forName_5022Parser = parser;
+		}
+		return forName_5022Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser loopName_5023Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getLoopName_5023Parser() {
+		if (loopName_5023Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			loopName_5023Parser = parser;
+		}
+		return loopName_5023Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser exceptionName_5024Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExceptionName_5024Parser() {
+		if (exceptionName_5024Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExceptionPart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			exceptionName_5024Parser = parser;
+		}
+		return exceptionName_5024Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser parameterInName_5025Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getParameterInName_5025Parser() {
+		if (parameterInName_5025Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getParameters_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			parameterInName_5025Parser = parser;
+		}
+		return parameterInName_5025Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser parameterOutName_5026Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getParameterOutName_5026Parser() {
+		if (parameterOutName_5026Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getParameters_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			parameterOutName_5026Parser = parser;
+		}
+		return parameterOutName_5026Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser parameterInOutName_5027Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getParameterInOutName_5027Parser() {
+		if (parameterInOutName_5027Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getParameters_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			parameterInOutName_5027Parser = parser;
+		}
+		return parameterInOutName_5027Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser declarativePartName_5006Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDeclarativePartName_5006Parser() {
+		if (declarativePartName_5006Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getDeclarativePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			declarativePartName_5006Parser = parser;
+		}
+		return declarativePartName_5006Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser executablePartName_5010Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExecutablePartName_5010Parser() {
+		if (executablePartName_5010Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExecutablePart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			executablePartName_5010Parser = parser;
+		}
+		return executablePartName_5010Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser exceptionPartName_5011Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExceptionPartName_5011Parser() {
+		if (exceptionPartName_5011Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getExceptionPart_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			exceptionPartName_5011Parser = parser;
+		}
+		return exceptionPartName_5011Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser parametersName_5028Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getParametersName_5028Parser() {
+		if (parametersName_5028Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getParameters_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			parametersName_5028Parser = parser;
+		}
+		return parametersName_5028Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser returnName_5029Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getReturnName_5029Parser() {
+		if (returnName_5029Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getReturn_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			returnName_5029Parser = parser;
+		}
+		return returnName_5029Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser driveName_5004Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDriveName_5004Parser() {
+		if (driveName_5004Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getFile_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			driveName_5004Parser = parser;
+		}
+		return driveName_5004Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser folderName_5003Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getFolderName_5003Parser() {
+		if (folderName_5003Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getFile_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			folderName_5003Parser = parser;
+		}
+		return folderName_5003Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser shortcutName_5009Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getShortcutName_5009Parser() {
+		if (shortcutName_5009Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getFile_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			shortcutName_5009Parser = parser;
+		}
+		return shortcutName_5009Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser fileName_5002Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getFileName_5002Parser() {
+		if (fileName_5002Parser == null) {
+			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
+					.getFile_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			fileName_5002Parser = parser;
+		}
+		return fileName_5002Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected IParser getParser(int visualID) {
+		switch (visualID) {
+		case DriveNameEditPart.VISUAL_ID:
+			return getDriveName_5005Parser();
+		case DatatypeNameNameEditPart.VISUAL_ID:
+			return getDatatypeNameName_5012Parser();
+		case IfNameEditPart.VISUAL_ID:
+			return getIfName_5013Parser();
+		case CaseNameEditPart.VISUAL_ID:
+			return getCaseName_5014Parser();
+		case InsertNameEditPart.VISUAL_ID:
+			return getInsertName_5015Parser();
+		case UpdateNameEditPart.VISUAL_ID:
+			return getUpdateName_5016Parser();
+		case DeleteNameEditPart.VISUAL_ID:
+			return getDeleteName_5017Parser();
+		case OutputNameEditPart.VISUAL_ID:
+			return getOutputName_5018Parser();
+		case SelectNameEditPart.VISUAL_ID:
+			return getSelectName_5019Parser();
+		case CursorNameEditPart.VISUAL_ID:
+			return getCursorName_5020Parser();
+		case WhileNameEditPart.VISUAL_ID:
+			return getWhileName_5021Parser();
+		case ForNameEditPart.VISUAL_ID:
+			return getForName_5022Parser();
+		case LoopNameEditPart.VISUAL_ID:
+			return getLoopName_5023Parser();
+		case ExceptionNameEditPart.VISUAL_ID:
+			return getExceptionName_5024Parser();
+		case ParameterInNameEditPart.VISUAL_ID:
+			return getParameterInName_5025Parser();
+		case ParameterOutNameEditPart.VISUAL_ID:
+			return getParameterOutName_5026Parser();
+		case ParameterInOutNameEditPart.VISUAL_ID:
+			return getParameterInOutName_5027Parser();
+		case DeclarativePartNameEditPart.VISUAL_ID:
+			return getDeclarativePartName_5006Parser();
+		case ExecutablePartNameEditPart.VISUAL_ID:
+			return getExecutablePartName_5010Parser();
+		case ExceptionPartNameEditPart.VISUAL_ID:
+			return getExceptionPartName_5011Parser();
+		case ParametersNameEditPart.VISUAL_ID:
+			return getParametersName_5028Parser();
+		case ReturnNameEditPart.VISUAL_ID:
+			return getReturnName_5029Parser();
+		case DriveName2EditPart.VISUAL_ID:
+			return getDriveName_5004Parser();
+		case FolderNameEditPart.VISUAL_ID:
+			return getFolderName_5003Parser();
+		case ShortcutNameEditPart.VISUAL_ID:
+			return getShortcutName_5009Parser();
+		case FileNameEditPart.VISUAL_ID:
+			return getFileName_5002Parser();
+		}
+		return null;
+	}
+
+	/**
+	 * Utility method that consults ParserService
+	 * @generated
+	 */
+	public static IParser getParser(IElementType type, EObject object,
+			String parserHint) {
+		return ParserService.getInstance().getParser(
+				new HintAdapter(type, object, parserHint));
+	}
+
+	/**
+	 * @generated
+	 */
+	public IParser getParser(IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(FilesystemVisualIDRegistry.getVisualID(vid));
+		}
+		View view = (View) hint.getAdapter(View.class);
+		if (view != null) {
+			return getParser(FilesystemVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public boolean provides(IOperation operation) {
+		if (operation instanceof GetParserOperation) {
+			IAdaptable hint = ((GetParserOperation) operation).getHint();
+			if (FilesystemElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static class HintAdapter extends ParserHintAdapter {
+
+		/**
+		 * @generated
+		 */
+		private final IElementType elementType;
+
+		/**
+		 * @generated
+		 */
+		public HintAdapter(IElementType type, EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+		 * @generated
+		 */
+		public Object getAdapter(Class adapter) {
+			if (IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+}

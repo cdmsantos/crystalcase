@@ -1,0 +1,14 @@
+var palette := GmfTool!Palette.all.first();
+var toolGroupActivities= new GmfTool!ToolGroup;
+
+toolGroupActivities.title := 'Sections';
+toolGroupActivities.collapsible := true;
+palette.tools.add(toolGroupActivities);
+
+var toolGroupObjects = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Objects');
+var toolGroupConnections = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Connections');
+
+var toolEntry;
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'parameters');
+toolGroupActivities.tools.add(toolEntry);

@@ -1,0 +1,199 @@
+@namespace(uri="crystal", prefix="crystal")
+@gmf
+
+package crystal;
+
+@gmf.diagram
+class Crystal {
+	val Transition[*] transitions;
+	
+	val Parameters[1] parameters;
+	val Return[1] return;
+	val DeclarativePart[1] declarativePart;
+	val ExecutablePart[1] executablePart;	
+} 
+
+//Sections
+class Sections{
+}
+
+@gmf.node(label="Name", figure="rounded", size="150,200", border.color="255,13,13", border.style="dash", label.readOnly="true") //vermelho	
+class Parameters extends Sections{
+	attr String[1] Name="Parameters";
+	@gmf.compartment
+	val Variables[*] variables;
+}
+
+@gmf.node(label="Name", figure="rectangle", size="150,200", border.color="25,191,108", border.style="dash", label.readOnly="true") //azul	
+class Return extends Sections{
+	attr String[1] Name="Return";
+	@gmf.compartment
+	val Variables[*] variables;
+}
+
+@gmf.node(label="Name", figure="rectangle", size="150,200", border.color="43,106,215", border.style="dash", label.readOnly="true") //verde
+class DeclarativePart extends Sections{
+	attr String[1] Name="Declarative Part";
+	@gmf.compartment
+	val Variables[*] variables;
+}
+
+@gmf.node(label="Name", size="450,450", figure="rectangle", border.color="158,25,191", border.style="dash", label.readOnly="true") //roxo	
+class ExecutablePart extends Sections{
+	attr String[1] Name="Executable Part";
+	@gmf.compartment
+	val Objects[*] objects;
+}
+
+//Variables
+
+class Variables{	
+}
+
+@gmf.node(label="Name", figure="rectangle", label.icon="true", label.placement="internal")
+class DataType extends Variables{
+	attr String[1] Name="DATATYPE";
+	attr String Code = "Type the code.";
+	attr ParameterType Type;
+	attr String Description = "DATATYPE: Type the description.";
+}
+
+@gmf.node(label="Name", figure="rectangle", label.icon="true", label.placement="internal")
+class Collections extends Variables{
+	attr String[1] Name="COLLECTION";
+	attr String Code = "Type the code.";
+	attr ParameterType Type;
+	attr String Description = "COLLECTION: Type the description.";
+}
+
+@gmf.node(label="Name", figure="rectangle", label.icon="true", label.placement="internal")
+class Records extends Variables{
+	attr String[1] Name="RECORD";
+	attr ParameterType Type;
+	attr String Code = "Type the code.";
+	attr String Description = "RECORD: Type the description.";
+}
+
+@gmf.node(label="Name", figure="rectangle", label.icon="true", label.placement="internal")
+class Cursor extends Variables {
+	attr String[1] Name="CURSOR";
+	attr ParameterType Type;
+	attr String Code = "Type the code.";
+	attr String Description = "CURSOR: Type the description.";
+}
+
+//Objects
+class Objects{
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Expressions extends Objects{
+	attr String[1] Name="EXPRESSION";
+	attr String Code = "Type the code.";
+	attr String Description = "EXPRESSION: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Exception extends Objects{
+	attr String[1] Name="EXCEPTION";
+	attr String Code = "Type the code.";
+	attr String Description = "EXCEPTION: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class If extends Objects{
+	attr String[1] Name="IF";
+	attr String Code = "Type the code.";
+	attr String Description = "IF: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Case extends Objects{
+	attr String[1] Name="CASE";
+	attr String Code = "Type the code.";
+	attr String Description = "CASE: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Insert extends Objects{
+	attr String[1] Name="INSERT";
+	attr String Code = "Type the code.";
+	attr String Description = "INSERT: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Update extends Objects{
+	attr String[1] Name="UPDATE";
+	attr String Code = "Type the code.";
+	attr String Description = "UPDATE: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Delete extends Objects{
+	attr String[1] Name="DELETE";
+	attr String Code = "Type the code.";
+	attr String Description = "DELETE: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Select extends Objects{
+	attr String[1] Name="SELECT";
+	attr String Code = "Type the code.";
+	attr String Description = "SELECT: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class While extends Objects{
+	attr String[1] Name="WHILE";
+	attr String Code = "Type the code.";
+	attr String Description = "WHILE: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class For extends Objects{
+	attr String[1] Name="FOR";
+	attr String Code = "Type the code.";
+	attr String Description = "FOR: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Loop extends Objects{
+	attr String[1] Name="LOOP";
+	attr String Code = "Type the code.";
+	attr String Description = "LOOP: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Open extends Objects{
+	attr String[1] Name="OPEN";
+	attr String Code = "Type the code.";
+	attr String Description = "OPEN: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Fetch extends Objects{
+	attr String[1] Name="FETCH";
+	attr String Code = "Type the code.";
+	attr String Description = "FETCH: Type the description.";
+}
+
+@gmf.node(label="Description", figure="rectangle", label.icon="true", label.placement="internal")
+class Close extends Objects{
+	attr String[1] Name="CLOSE";
+	attr String Code = "Type the code.";
+	attr String Description = "CLOSE: Type the description.";
+}
+
+@gmf.link(source="start", target="end", target.decoration="arrow", color="0,0,0")
+class Transition{
+	attr String name = "connection";
+	ref Objects start;
+	ref Objects end;
+}
+
+enum ParameterType {
+None;
+In;
+Out;
+InOut;
+}

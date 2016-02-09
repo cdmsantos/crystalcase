@@ -1,0 +1,4 @@
+#Sat Dec 12 19:27:18 BRT 2015
+-Xms=40m,40m
+-XX\:MaxPermSize\==256m
+-Xmx=512m,512m

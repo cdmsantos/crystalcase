@@ -1,0 +1,1517 @@
+/**
+ */
+package master.impl;
+
+import master.Case;
+import master.Close;
+import master.Collections;
+import master.Cursor;
+import master.DataType;
+import master.DeclarativePart;
+import master.Delete;
+import master.ExecutablePart;
+import master.Expressions;
+import master.Fetch;
+import master.For;
+import master.If;
+import master.Insert;
+import master.Loop;
+import master.Master;
+import master.MasterFactory;
+import master.MasterPackage;
+import master.Objects;
+import master.Open;
+import master.Parameters;
+import master.Records;
+import master.Return;
+import master.Sections;
+import master.Select;
+import master.Transition;
+import master.Update;
+import master.Variables;
+import master.While;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class MasterPackageImpl extends EPackageImpl implements MasterPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass masterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sectionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parametersEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass returnEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass declarativePartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass executablePartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass variablesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass collectionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass recordsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cursorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass objectsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass expressionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass exceptionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ifEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass caseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass insertEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass selectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass whileEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass forEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass loopEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass openEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fetchEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass closeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transitionEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see master.MasterPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private MasterPackageImpl() {
+		super(eNS_URI, MasterFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 * 
+	 * <p>This method is used to initialize {@link MasterPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static MasterPackage init() {
+		if (isInited) return (MasterPackage)EPackage.Registry.INSTANCE.getEPackage(MasterPackage.eNS_URI);
+
+		// Obtain or create and register package
+		MasterPackageImpl theMasterPackage = (MasterPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof MasterPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new MasterPackageImpl());
+
+		isInited = true;
+
+		// Create package meta-data objects
+		theMasterPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theMasterPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theMasterPackage.freeze();
+
+  
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(MasterPackage.eNS_URI, theMasterPackage);
+		return theMasterPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMaster() {
+		return masterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMaster_Transitions() {
+		return (EReference)masterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMaster_Parameters() {
+		return (EReference)masterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMaster_Return() {
+		return (EReference)masterEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMaster_DeclarativePart() {
+		return (EReference)masterEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMaster_ExecutablePart() {
+		return (EReference)masterEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSections() {
+		return sectionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParameters() {
+		return parametersEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getParameters_Name() {
+		return (EAttribute)parametersEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParameters_Variables() {
+		return (EReference)parametersEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getReturn() {
+		return returnEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getReturn_Name() {
+		return (EAttribute)returnEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getReturn_Variables() {
+		return (EReference)returnEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDeclarativePart() {
+		return declarativePartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDeclarativePart_Name() {
+		return (EAttribute)declarativePartEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDeclarativePart_Variables() {
+		return (EReference)declarativePartEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExecutablePart() {
+		return executablePartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutablePart_Name() {
+		return (EAttribute)executablePartEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExecutablePart_Objects() {
+		return (EReference)executablePartEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVariables() {
+		return variablesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDataType() {
+		return dataTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDataType_Name() {
+		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCollections() {
+		return collectionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCollections_Name() {
+		return (EAttribute)collectionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRecords() {
+		return recordsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRecords_Name() {
+		return (EAttribute)recordsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCursor() {
+		return cursorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCursor_Name() {
+		return (EAttribute)cursorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getObjects() {
+		return objectsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExpressions() {
+		return expressionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExpressions_Name() {
+		return (EAttribute)expressionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getException() {
+		return exceptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getException_Name() {
+		return (EAttribute)exceptionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIf() {
+		return ifEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIf_Name() {
+		return (EAttribute)ifEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIf_Objects() {
+		return (EReference)ifEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCase() {
+		return caseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCase_Name() {
+		return (EAttribute)caseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCase_Objects() {
+		return (EReference)caseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInsert() {
+		return insertEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInsert_Name() {
+		return (EAttribute)insertEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUpdate() {
+		return updateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdate_Name() {
+		return (EAttribute)updateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDelete() {
+		return deleteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDelete_Name() {
+		return (EAttribute)deleteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSelect() {
+		return selectEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSelect_Name() {
+		return (EAttribute)selectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSelect_Objects() {
+		return (EReference)selectEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWhile() {
+		return whileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWhile_Name() {
+		return (EAttribute)whileEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWhile_Objects() {
+		return (EReference)whileEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFor() {
+		return forEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFor_Name() {
+		return (EAttribute)forEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFor_Objects() {
+		return (EReference)forEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLoop() {
+		return loopEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_Name() {
+		return (EAttribute)loopEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLoop_Objects() {
+		return (EReference)loopEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOpen() {
+		return openEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOpen_Name() {
+		return (EAttribute)openEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFetch() {
+		return fetchEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFetch_Name() {
+		return (EAttribute)fetchEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getClose() {
+		return closeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClose_Name() {
+		return (EAttribute)closeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTransition() {
+		return transitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransition_Start() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransition_End() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MasterFactory getMasterFactory() {
+		return (MasterFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		masterEClass = createEClass(MASTER);
+		createEReference(masterEClass, MASTER__TRANSITIONS);
+		createEReference(masterEClass, MASTER__PARAMETERS);
+		createEReference(masterEClass, MASTER__RETURN);
+		createEReference(masterEClass, MASTER__DECLARATIVE_PART);
+		createEReference(masterEClass, MASTER__EXECUTABLE_PART);
+
+		sectionsEClass = createEClass(SECTIONS);
+
+		parametersEClass = createEClass(PARAMETERS);
+		createEAttribute(parametersEClass, PARAMETERS__NAME);
+		createEReference(parametersEClass, PARAMETERS__VARIABLES);
+
+		returnEClass = createEClass(RETURN);
+		createEAttribute(returnEClass, RETURN__NAME);
+		createEReference(returnEClass, RETURN__VARIABLES);
+
+		declarativePartEClass = createEClass(DECLARATIVE_PART);
+		createEAttribute(declarativePartEClass, DECLARATIVE_PART__NAME);
+		createEReference(declarativePartEClass, DECLARATIVE_PART__VARIABLES);
+
+		executablePartEClass = createEClass(EXECUTABLE_PART);
+		createEAttribute(executablePartEClass, EXECUTABLE_PART__NAME);
+		createEReference(executablePartEClass, EXECUTABLE_PART__OBJECTS);
+
+		variablesEClass = createEClass(VARIABLES);
+
+		dataTypeEClass = createEClass(DATA_TYPE);
+		createEAttribute(dataTypeEClass, DATA_TYPE__NAME);
+
+		collectionsEClass = createEClass(COLLECTIONS);
+		createEAttribute(collectionsEClass, COLLECTIONS__NAME);
+
+		recordsEClass = createEClass(RECORDS);
+		createEAttribute(recordsEClass, RECORDS__NAME);
+
+		cursorEClass = createEClass(CURSOR);
+		createEAttribute(cursorEClass, CURSOR__NAME);
+
+		objectsEClass = createEClass(OBJECTS);
+
+		expressionsEClass = createEClass(EXPRESSIONS);
+		createEAttribute(expressionsEClass, EXPRESSIONS__NAME);
+
+		exceptionEClass = createEClass(EXCEPTION);
+		createEAttribute(exceptionEClass, EXCEPTION__NAME);
+
+		ifEClass = createEClass(IF);
+		createEAttribute(ifEClass, IF__NAME);
+		createEReference(ifEClass, IF__OBJECTS);
+
+		caseEClass = createEClass(CASE);
+		createEAttribute(caseEClass, CASE__NAME);
+		createEReference(caseEClass, CASE__OBJECTS);
+
+		insertEClass = createEClass(INSERT);
+		createEAttribute(insertEClass, INSERT__NAME);
+
+		updateEClass = createEClass(UPDATE);
+		createEAttribute(updateEClass, UPDATE__NAME);
+
+		deleteEClass = createEClass(DELETE);
+		createEAttribute(deleteEClass, DELETE__NAME);
+
+		selectEClass = createEClass(SELECT);
+		createEAttribute(selectEClass, SELECT__NAME);
+		createEReference(selectEClass, SELECT__OBJECTS);
+
+		whileEClass = createEClass(WHILE);
+		createEAttribute(whileEClass, WHILE__NAME);
+		createEReference(whileEClass, WHILE__OBJECTS);
+
+		forEClass = createEClass(FOR);
+		createEAttribute(forEClass, FOR__NAME);
+		createEReference(forEClass, FOR__OBJECTS);
+
+		loopEClass = createEClass(LOOP);
+		createEAttribute(loopEClass, LOOP__NAME);
+		createEReference(loopEClass, LOOP__OBJECTS);
+
+		openEClass = createEClass(OPEN);
+		createEAttribute(openEClass, OPEN__NAME);
+
+		fetchEClass = createEClass(FETCH);
+		createEAttribute(fetchEClass, FETCH__NAME);
+
+		closeEClass = createEClass(CLOSE);
+		createEAttribute(closeEClass, CLOSE__NAME);
+
+		transitionEClass = createEClass(TRANSITION);
+		createEReference(transitionEClass, TRANSITION__START);
+		createEReference(transitionEClass, TRANSITION__END);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		parametersEClass.getESuperTypes().add(this.getSections());
+		returnEClass.getESuperTypes().add(this.getSections());
+		declarativePartEClass.getESuperTypes().add(this.getSections());
+		executablePartEClass.getESuperTypes().add(this.getSections());
+		dataTypeEClass.getESuperTypes().add(this.getVariables());
+		collectionsEClass.getESuperTypes().add(this.getVariables());
+		recordsEClass.getESuperTypes().add(this.getVariables());
+		cursorEClass.getESuperTypes().add(this.getVariables());
+		expressionsEClass.getESuperTypes().add(this.getObjects());
+		exceptionEClass.getESuperTypes().add(this.getObjects());
+		ifEClass.getESuperTypes().add(this.getObjects());
+		caseEClass.getESuperTypes().add(this.getObjects());
+		insertEClass.getESuperTypes().add(this.getObjects());
+		updateEClass.getESuperTypes().add(this.getObjects());
+		deleteEClass.getESuperTypes().add(this.getObjects());
+		selectEClass.getESuperTypes().add(this.getObjects());
+		whileEClass.getESuperTypes().add(this.getObjects());
+		forEClass.getESuperTypes().add(this.getObjects());
+		loopEClass.getESuperTypes().add(this.getObjects());
+		openEClass.getESuperTypes().add(this.getObjects());
+		fetchEClass.getESuperTypes().add(this.getObjects());
+		closeEClass.getESuperTypes().add(this.getObjects());
+
+		// Initialize classes and features; add operations and parameters
+		initEClass(masterEClass, Master.class, "Master", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMaster_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, Master.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMaster_Parameters(), this.getParameters(), null, "parameters", null, 1, 1, Master.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMaster_Return(), this.getReturn(), null, "return", null, 1, 1, Master.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMaster_DeclarativePart(), this.getDeclarativePart(), null, "declarativePart", null, 1, 1, Master.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMaster_ExecutablePart(), this.getExecutablePart(), null, "executablePart", null, 1, 1, Master.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sectionsEClass, Sections.class, "Sections", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(parametersEClass, Parameters.class, "Parameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getParameters_Name(), ecorePackage.getEString(), "name", "Parameters", 1, 1, Parameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParameters_Variables(), this.getVariables(), null, "variables", null, 0, -1, Parameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(returnEClass, Return.class, "Return", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getReturn_Name(), ecorePackage.getEString(), "name", "Return", 1, 1, Return.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReturn_Variables(), this.getVariables(), null, "variables", null, 0, -1, Return.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(declarativePartEClass, DeclarativePart.class, "DeclarativePart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDeclarativePart_Name(), ecorePackage.getEString(), "name", "Declarative Part", 1, 1, DeclarativePart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDeclarativePart_Variables(), this.getVariables(), null, "variables", null, 0, -1, DeclarativePart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(executablePartEClass, ExecutablePart.class, "ExecutablePart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExecutablePart_Name(), ecorePackage.getEString(), "name", "Executable Part", 1, 1, ExecutablePart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutablePart_Objects(), this.getObjects(), null, "objects", null, 0, -1, ExecutablePart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(variablesEClass, Variables.class, "Variables", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDataType_Name(), ecorePackage.getEString(), "name", "data type", 1, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(collectionsEClass, Collections.class, "Collections", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCollections_Name(), ecorePackage.getEString(), "name", "collections", 1, 1, Collections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(recordsEClass, Records.class, "Records", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRecords_Name(), ecorePackage.getEString(), "name", "records", 1, 1, Records.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cursorEClass, Cursor.class, "Cursor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCursor_Name(), ecorePackage.getEString(), "name", "cursor", 1, 1, Cursor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(objectsEClass, Objects.class, "Objects", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(expressionsEClass, Expressions.class, "Expressions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExpressions_Name(), ecorePackage.getEString(), "name", "expressions", 1, 1, Expressions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(exceptionEClass, master.Exception.class, "Exception", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getException_Name(), ecorePackage.getEString(), "name", "exception", 1, 1, master.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ifEClass, If.class, "If", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIf_Name(), ecorePackage.getEString(), "name", "if", 1, 1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIf_Objects(), this.getObjects(), null, "objects", null, 0, -1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCase_Name(), ecorePackage.getEString(), "name", "case", 1, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCase_Objects(), this.getObjects(), null, "objects", null, 0, -1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(insertEClass, Insert.class, "Insert", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInsert_Name(), ecorePackage.getEString(), "name", "insert", 1, 1, Insert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updateEClass, Update.class, "Update", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUpdate_Name(), ecorePackage.getEString(), "name", "update", 1, 1, Update.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(deleteEClass, Delete.class, "Delete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDelete_Name(), ecorePackage.getEString(), "name", "delete", 1, 1, Delete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(selectEClass, Select.class, "Select", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSelect_Name(), ecorePackage.getEString(), "name", "select", 1, 1, Select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelect_Objects(), this.getObjects(), null, "objects", null, 0, -1, Select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(whileEClass, While.class, "While", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWhile_Name(), ecorePackage.getEString(), "name", "while", 1, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWhile_Objects(), this.getObjects(), null, "objects", null, 0, -1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(forEClass, For.class, "For", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFor_Name(), ecorePackage.getEString(), "name", "for", 1, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFor_Objects(), this.getObjects(), null, "objects", null, 0, -1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(loopEClass, Loop.class, "Loop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLoop_Name(), ecorePackage.getEString(), "name", "loop", 1, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoop_Objects(), this.getObjects(), null, "objects", null, 0, -1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(openEClass, Open.class, "Open", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOpen_Name(), ecorePackage.getEString(), "name", "open", 1, 1, Open.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fetchEClass, Fetch.class, "Fetch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFetch_Name(), ecorePackage.getEString(), "name", "fetch", 1, 1, Fetch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(closeEClass, Close.class, "Close", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getClose_Name(), ecorePackage.getEString(), "name", "close", 1, 1, Close.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransition_Start(), this.getObjects(), null, "start", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_End(), this.getObjects(), null, "end", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
+
+		// Create annotations
+		// gmf
+		createGmfAnnotations();
+		// gmf.diagram
+		createGmf_1Annotations();
+		// gmf.node
+		createGmf_2Annotations();
+		// gmf.compartment
+		createGmf_3Annotations();
+		// gmf.link
+		createGmf_4Annotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmfAnnotations() {
+		String source = "gmf";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.diagram</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_1Annotations() {
+		String source = "gmf.diagram";	
+		addAnnotation
+		  (masterEClass, 
+		   source, 
+		   new String[] {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.node</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_2Annotations() {
+		String source = "gmf.node";	
+		addAnnotation
+		  (parametersEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "rounded",
+			 "size", "150,200",
+			 "border.color", "255,13,13",
+			 "border.style", "dash",
+			 "label.readOnly", "true"
+		   });	
+		addAnnotation
+		  (returnEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "rectangle",
+			 "size", "150,200",
+			 "border.color", "25,191,108",
+			 "border.style", "dash"
+		   });	
+		addAnnotation
+		  (declarativePartEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "rectangle",
+			 "size", "150,200",
+			 "border.color", "43,106,215",
+			 "border.style", "dash"
+		   });	
+		addAnnotation
+		  (executablePartEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "size", "450,450",
+			 "figure", "rectangle",
+			 "border.color", "158,25,191",
+			 "border.style", "dash"
+		   });	
+		addAnnotation
+		  (dataTypeEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/datatype.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (collectionsEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/collections.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (recordsEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/records.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (cursorEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/cursor.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (expressionsEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/expression.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (exceptionEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/exception.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (ifEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "rounded",
+			 "label.icon", "false",
+			 "label.placement", "internal",
+			 "size", "70,70",
+			 "border.color", "158,25,191",
+			 "border.style", "dash"
+		   });	
+		addAnnotation
+		  (caseEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/case.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (insertEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/insert.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (updateEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/update.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (deleteEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/delete.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (selectEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/select.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (whileEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/while.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (forEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/for.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (loopEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/loop.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (openEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/open.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (fetchEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/fetch.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (closeEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/CINproject/icons/close.svg",
+			 "label.icon", "false",
+			 "label.placement", "none"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.compartment</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_3Annotations() {
+		String source = "gmf.compartment";	
+		addAnnotation
+		  (getParameters_Variables(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getReturn_Variables(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getDeclarativePart_Variables(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getExecutablePart_Objects(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getIf_Objects(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getCase_Objects(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getSelect_Objects(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getWhile_Objects(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getFor_Objects(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getLoop_Objects(), 
+		   source, 
+		   new String[] {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.link</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_4Annotations() {
+		String source = "gmf.link";	
+		addAnnotation
+		  (transitionEClass, 
+		   source, 
+		   new String[] {
+			 "source", "start",
+			 "target", "end",
+			 "target.decoration", "arrow",
+			 "color", "0,0,0"
+		   });
+	}
+
+} //MasterPackageImpl

@@ -1,0 +1,22 @@
+/*
+ * 
+ */
+package crystal.diagram.preferences;
+
+import org.eclipse.gmf.runtime.diagram.ui.preferences.PrintingPreferencePage;
+
+import crystal.diagram.part.CrystalDiagramEditorPlugin;
+
+/**
+ * @generated
+ */
+public class DiagramPrintingPreferencePage extends PrintingPreferencePage {
+
+	/**
+	 * @generated
+	 */
+	public DiagramPrintingPreferencePage() {
+		setPreferenceStore(CrystalDiagramEditorPlugin.getInstance()
+				.getPreferenceStore());
+	}
+}

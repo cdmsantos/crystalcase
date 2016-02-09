@@ -1,0 +1,881 @@
+	/*
+ * 
+ */
+package crystal.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class CrystalNavigatorContentProvider implements org.eclipse.ui.navigator.ICommonContentProvider {
+
+		/**
+ * @generated
+ */
+private static final Object[] EMPTY_ARRAY = new Object[0];
+
+	/**
+ * @generated
+ */
+private org.eclipse.jface.viewers.Viewer myViewer;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain myEditingDomain;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.workspace.util.WorkspaceSynchronizer myWorkspaceSynchronizer;
+
+	/**
+ * @generated
+ */
+private Runnable myViewerRefreshRunnable;
+	
+	/**
+ * @generated
+ */
+@SuppressWarnings({ "unchecked", "serial", "rawtypes" })
+public CrystalNavigatorContentProvider() {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory.INSTANCE.createEditingDomain();
+myEditingDomain = (org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain) editingDomain;
+myEditingDomain.setResourceToReadOnlyMap(new java.util.HashMap() {
+	public Object get(Object key) {
+		if (!containsKey(key)) {
+			put(key, Boolean.TRUE);
+		}
+		return super.get(key);
+	}
+});
+myViewerRefreshRunnable = new Runnable() {
+	public void run() {
+		if (myViewer != null) {
+			myViewer.refresh();
+		}
+	}
+};
+myWorkspaceSynchronizer = new org.eclipse.emf.workspace.util.WorkspaceSynchronizer(editingDomain, new org.eclipse.emf.workspace.util.WorkspaceSynchronizer.Delegate() {
+	public void dispose() {
+	}
+
+	public boolean handleResourceChanged(final org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceDeleted(org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceMoved(org.eclipse.emf.ecore.resource.Resource resource, final org.eclipse.emf.common.util.URI newURI) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+});
+}
+
+		/**
+ * @generated
+ */
+public void dispose() {
+	myWorkspaceSynchronizer.dispose();
+	myWorkspaceSynchronizer = null;
+	myViewerRefreshRunnable = null;
+	myViewer = null;
+	unloadAllResources();
+	((org.eclipse.emf.transaction.TransactionalEditingDomain) myEditingDomain).dispose();
+	myEditingDomain = null;
+}
+	
+		/**
+ * @generated
+ */
+public void inputChanged(org.eclipse.jface.viewers.Viewer viewer, Object oldInput, Object newInput) {
+	myViewer = viewer;
+}
+	
+	
+	/**
+ * @generated
+ */
+	void unloadAllResources() {
+		for (org.eclipse.emf.ecore.resource.Resource nextResource : myEditingDomain.getResourceSet().getResources()) {
+			nextResource.unload();
+		}
+	}
+	
+	/**
+ * @generated
+ */
+	void asyncRefresh() {
+		if (myViewer != null && !myViewer.getControl().isDisposed()) {
+			myViewer.getControl().getDisplay().asyncExec(myViewerRefreshRunnable);
+		}
+	}
+	
+	/**
+ * @generated
+ */
+public Object[] getElements(Object inputElement) {
+	return getChildren(inputElement);
+}
+	
+	/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+    
+    /**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+    
+    	/**
+ * @generated
+ */
+public Object[] getChildren(Object parentElement) {
+	if (parentElement instanceof org.eclipse.core.resources.IFile) {
+		org.eclipse.core.resources.IFile file = (org.eclipse.core.resources.IFile) parentElement;
+org.eclipse.emf.common.util.URI fileURI = org.eclipse.emf.common.util.URI.createPlatformResourceURI(file.getFullPath().toString(), true);
+org.eclipse.emf.ecore.resource.Resource resource = myEditingDomain.getResourceSet().getResource(fileURI, true);
+	java.util.ArrayList<crystal.diagram.navigator.CrystalNavigatorItem> result = new java.util.ArrayList<crystal.diagram.navigator.CrystalNavigatorItem>();
+					java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> topViews = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>(resource.getContents().size());
+		for (org.eclipse.emf.ecore.EObject o : resource.getContents()) {
+			if (o instanceof org.eclipse.gmf.runtime.notation.View) {
+				topViews.add((org.eclipse.gmf.runtime.notation.View) o);
+			}
+		}
+					result.addAll(createNavigatorItems(selectViewsByType(topViews, crystal.diagram.edit.parts.CrystalEditPart.MODEL_ID), file, false));
+						return result.toArray();
+   	} 
+    	
+   	if (parentElement instanceof crystal.diagram.navigator.CrystalNavigatorGroup) {
+	crystal.diagram.navigator.CrystalNavigatorGroup group = (crystal.diagram.navigator.CrystalNavigatorGroup) parentElement;
+return group.getChildren();
+	} 
+		
+	if (parentElement instanceof crystal.diagram.navigator.CrystalNavigatorItem) {
+	crystal.diagram.navigator.CrystalNavigatorItem navigatorItem = (crystal.diagram.navigator.CrystalNavigatorItem) parentElement;
+if (navigatorItem.isLeaf() || !isOwnView(navigatorItem.getView())) {
+	return EMPTY_ARRAY;
+}
+return getViewChildren(navigatorItem.getView(), parentElement);
+	}
+		
+			/*
+ * Due to plugin.xml restrictions this code will be called only for views representing
+ * shortcuts to this diagram elements created on other diagrams. 
+*/ 
+if (parentElement instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) parentElement).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null) {
+		return getViewChildren(view, parentElement);
+	}
+}
+
+		return EMPTY_ARRAY;
+}
+    
+	/**
+ * @generated
+ */
+private Object[] getViewChildren(org.eclipse.gmf.runtime.notation.View view, Object parentElement) {
+   	switch (crystal.diagram.part.CrystalVisualIDRegistry.getVisualID(view)) {
+	
+case crystal.diagram.edit.parts.CrystalEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+	result.addAll(getForeignShortcuts((org.eclipse.gmf.runtime.notation.Diagram) view, parentElement));
+	org.eclipse.gmf.runtime.notation.Diagram sv = (org.eclipse.gmf.runtime.notation.Diagram) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup links = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Crystal_1000_links,
+	"icons/linksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+															if (!links.isEmpty()) {		result.add(links);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.ProcedureEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.IfEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ForEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureParametersCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DataType2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureParametersCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.Collections2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureParametersCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.Records2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ProcedureProcedureParametersCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.Cursor2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case crystal.diagram.edit.parts.FunctionEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.IfEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ForEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionParametersCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DataType3EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionParametersCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.Collections3EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionParametersCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.Records3EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionParametersCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.Cursor3EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionReturnPartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DataType4EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionReturnPartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.Collections4EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionReturnPartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.Records4EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionFunctionReturnPartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.Cursor4EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case crystal.diagram.edit.parts.AnonymousBlockEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.IfEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ForEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Exception_3005_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Exception_3005_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.IfEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_If_3006_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_If_3006_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Case_3007_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Case_3007_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Insert_3008_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Insert_3008_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Update_3009_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Update_3009_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Delete_3010_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Delete_3010_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Select_3011_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Select_3011_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_While_3012_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_While_3012_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.ForEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_For_3013_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_For_3013_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Loop_3014_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Loop_3014_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Open_3015_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Open_3015_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Fetch_3016_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Fetch_3016_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup incominglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Close_3017_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup outgoinglinks = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Close_3017_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID: {
+	java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem> result = new java.util.LinkedList<crystal.diagram.navigator.CrystalAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				crystal.diagram.navigator.CrystalNavigatorGroup target = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Transition_4001_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	crystal.diagram.navigator.CrystalNavigatorGroup source = new crystal.diagram.navigator.CrystalNavigatorGroup(
+	crystal.diagram.part.Messages.NavigatorGroupName_Transition_4001_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.IfEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ForEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.IfEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ForEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, crystal.diagram.part.CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+	}
+	return EMPTY_ARRAY;
+}
+    
+    /**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksSourceByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeSource = nextEdge.getSource();
+ 		if (type.equals(nextEdgeSource.getType()) && isOwnView(nextEdgeSource)) {
+ 			result.add(nextEdgeSource);
+ 		}
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksTargetByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeTarget = nextEdge.getTarget();
+ 		if (type.equals(nextEdgeTarget.getType()) && isOwnView(nextEdgeTarget)) {
+ 			result.add(nextEdgeTarget);
+ 		}
+ 	}
+ 	return result;
+}
+
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getOutgoingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getSourceEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getIncomingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getTargetEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getChildrenByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getChildren(), type));
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getDiagramLinksByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Diagram> diagrams, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.Diagram nextDiagram : diagrams) {
+		result.addAll(selectViewsByType(nextDiagram.getEdges(), type));
+	}
+	return result;
+}
+
+// TODO refactor as static method
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> selectViewsByType(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		if (type.equals(nextView.getType()) && isOwnView(nextView)) {
+			result.add(nextView);
+		}
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return crystal.diagram.edit.parts.CrystalEditPart.MODEL_ID.equals(crystal.diagram.part.CrystalVisualIDRegistry.getModelID(view));
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<crystal.diagram.navigator.CrystalNavigatorItem> createNavigatorItems(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, Object parent, boolean isLeafs) {
+	java.util.ArrayList<crystal.diagram.navigator.CrystalNavigatorItem> result = new java.util.ArrayList<crystal.diagram.navigator.CrystalNavigatorItem>(views.size());
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		result.add(new crystal.diagram.navigator.CrystalNavigatorItem(nextView, parent, isLeafs));
+	}
+	return result;
+}
+		
+/**
+ * @generated
+ */
+private java.util.Collection<crystal.diagram.navigator.CrystalNavigatorItem> getForeignShortcuts(org.eclipse.gmf.runtime.notation.Diagram diagram, Object parent) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+	for (java.util.Iterator<org.eclipse.gmf.runtime.notation.View> it = diagram.getChildren().iterator(); it.hasNext();) {
+	org.eclipse.gmf.runtime.notation.View nextView = it.next();
+		if (!isOwnView(nextView) && nextView.getEAnnotation("Shortcut") != null) { //$NON-NLS-1$
+			result.add(nextView);
+		}
+	}
+	return createNavigatorItems(result, parent, false);
+}
+		
+	/**
+ * @generated
+ */
+public Object getParent(Object element) {
+	if (element instanceof crystal.diagram.navigator.CrystalAbstractNavigatorItem) {
+    	crystal.diagram.navigator.CrystalAbstractNavigatorItem abstractNavigatorItem = (crystal.diagram.navigator.CrystalAbstractNavigatorItem) element;
+		return abstractNavigatorItem.getParent();
+	}
+	return null;
+}
+	
+	/**
+ * @generated
+ */
+public boolean hasChildren(Object element) {
+	return element instanceof org.eclipse.core.resources.IFile || getChildren(element).length > 0;
+}
+    
+    }

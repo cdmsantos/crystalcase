@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 3 resources" deleteContents="true" description="Delete 3 resources" element1="/org.eclipse.sirius.sample.basicfamily" element2="/org.eclipse.sirius.sample.basicfamily.edit" element3="/org.eclipse.sirius.sample.basicfamily.editor" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="3" stamp="1448750356369"/>
+</session>

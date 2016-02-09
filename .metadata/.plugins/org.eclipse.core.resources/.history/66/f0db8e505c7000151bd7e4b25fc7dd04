@@ -1,0 +1,207 @@
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
+
+import filesystem.Filesystem;
+import filesystem.Parameters;
+import filesystem.Return;
+import filesystem.diagram.edit.parts.FilesystemEditPart;
+import filesystem.diagram.edit.parts.ParametersEditPart;
+import filesystem.diagram.edit.parts.ReturnEditPart;
+
+/**
+ * @generated
+ */
+public class FilesystemDiagramUpdater {
+
+	/**
+	 * @generated
+	 */
+	public static boolean isShortcutOrphaned(View view) {
+		return !view.isSetElement() || view.getElement() == null
+				|| view.getElement().eIsProxy();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000SemanticChildren(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getFilesystem_1000SemanticChildren(
+			View view) {
+		if (!view.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Filesystem modelElement = (Filesystem) view.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		{
+			Parameters childElement = modelElement.getParameters();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ParametersEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+			}
+		}
+		{
+			Return childElement = modelElement.getReturn();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ReturnEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000ContainedLinks(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001ContainedLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2002ContainedLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001IncomingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2002IncomingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001OutgoingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2002OutgoingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFilesystem_1000ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramUpdater TYPED_INSTANCE = new DiagramUpdater() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+			return FilesystemDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+			return FilesystemDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+			return FilesystemDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+			return FilesystemDiagramUpdater.getOutgoingLinks(view);
+		}
+	};
+
+}

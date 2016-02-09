@@ -1,0 +1,37 @@
+/*
+ * 
+ */
+package crystal.diagram.providers.assistants;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+
+import crystal.diagram.providers.CrystalElementTypes;
+import crystal.diagram.providers.CrystalModelingAssistantProvider;
+
+/**
+ * @generated
+ */
+public class CrystalModelingAssistantProviderOfCrystalEditPart extends
+		CrystalModelingAssistantProvider {
+
+	/**
+	 * @generated
+	 */
+	@Override
+	public List<IElementType> getTypesForPopupBar(IAdaptable host) {
+		List<IElementType> types = new ArrayList<IElementType>(7);
+		types.add(CrystalElementTypes.Parameters_2001);
+		types.add(CrystalElementTypes.Return_2002);
+		types.add(CrystalElementTypes.DeclarativePart_2003);
+		types.add(CrystalElementTypes.ExecutablePart_2004);
+		types.add(CrystalElementTypes.Procedure_2005);
+		types.add(CrystalElementTypes.Function_2006);
+		types.add(CrystalElementTypes.AnonymousBlock_2007);
+		return types;
+	}
+
+}

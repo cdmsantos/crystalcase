@@ -1,0 +1,1181 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.parts;
+
+import org.eclipse.gef.EditPart;
+import org.eclipse.gef.EditPartFactory;
+import org.eclipse.gef.tools.CellEditorLocator;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess;
+
+import filesystem.diagram.part.FilesystemVisualIDRegistry;
+
+/**
+ * @generated
+ */
+public class FilesystemEditPartFactory implements EditPartFactory {
+
+	/**
+	 * @generated
+	 */
+	public EditPart createEditPart(EditPart context, Object model) {
+		if (model instanceof View) {
+			View view = (View) model;
+			switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+
+			case FilesystemEditPart.VISUAL_ID:
+				return new FilesystemEditPart(view);
+
+			case Data_TypeEditPart.VISUAL_ID:
+				return new Data_TypeEditPart(view);
+
+			case Data_TypeNameReturnEditPart.VISUAL_ID:
+				return new Data_TypeNameReturnEditPart(view);
+
+			case IfEditPart.VISUAL_ID:
+				return new IfEditPart(view);
+
+			case IfNameExecutablePartEditPart.VISUAL_ID:
+				return new IfNameExecutablePartEditPart(view);
+
+			case CaseEditPart.VISUAL_ID:
+				return new CaseEditPart(view);
+
+			case CaseNameExecutablePartEditPart.VISUAL_ID:
+				return new CaseNameExecutablePartEditPart(view);
+
+			case InsertEditPart.VISUAL_ID:
+				return new InsertEditPart(view);
+
+			case InsertNameExecutablePartEditPart.VISUAL_ID:
+				return new InsertNameExecutablePartEditPart(view);
+
+			case UpdateEditPart.VISUAL_ID:
+				return new UpdateEditPart(view);
+
+			case UpdateNameExecutablePartEditPart.VISUAL_ID:
+				return new UpdateNameExecutablePartEditPart(view);
+
+			case DeleteEditPart.VISUAL_ID:
+				return new DeleteEditPart(view);
+
+			case DeleteNameExecutablePartEditPart.VISUAL_ID:
+				return new DeleteNameExecutablePartEditPart(view);
+
+			case SelectEditPart.VISUAL_ID:
+				return new SelectEditPart(view);
+
+			case SelectNameExecutablePartEditPart.VISUAL_ID:
+				return new SelectNameExecutablePartEditPart(view);
+
+			case OutputEditPart.VISUAL_ID:
+				return new OutputEditPart(view);
+
+			case OutputNameExecutablePartEditPart.VISUAL_ID:
+				return new OutputNameExecutablePartEditPart(view);
+
+			case CursorEditPart.VISUAL_ID:
+				return new CursorEditPart(view);
+
+			case CursorNameExecutablePartEditPart.VISUAL_ID:
+				return new CursorNameExecutablePartEditPart(view);
+
+			case WhileEditPart.VISUAL_ID:
+				return new WhileEditPart(view);
+
+			case WhileNameExecutablePartEditPart.VISUAL_ID:
+				return new WhileNameExecutablePartEditPart(view);
+
+			case ForEditPart.VISUAL_ID:
+				return new ForEditPart(view);
+
+			case ForNameExecutablePartEditPart.VISUAL_ID:
+				return new ForNameExecutablePartEditPart(view);
+
+			case LoopEditPart.VISUAL_ID:
+				return new LoopEditPart(view);
+
+			case LoopNameExecutablePartEditPart.VISUAL_ID:
+				return new LoopNameExecutablePartEditPart(view);
+
+			case ExceptionCommandEditPart.VISUAL_ID:
+				return new ExceptionCommandEditPart(view);
+
+			case ExceptionCommandNameExceptionPartEditPart.VISUAL_ID:
+				return new ExceptionCommandNameExceptionPartEditPart(view);
+
+			case ParameterInEditPart.VISUAL_ID:
+				return new ParameterInEditPart(view);
+
+			case ParameterInNameParametersEditPart.VISUAL_ID:
+				return new ParameterInNameParametersEditPart(view);
+
+			case ParameterOutEditPart.VISUAL_ID:
+				return new ParameterOutEditPart(view);
+
+			case ParameterOutNameParametersEditPart.VISUAL_ID:
+				return new ParameterOutNameParametersEditPart(view);
+
+			case ParameterInOutEditPart.VISUAL_ID:
+				return new ParameterInOutEditPart(view);
+
+			case ParameterInOutNameParametersEditPart.VISUAL_ID:
+				return new ParameterInOutNameParametersEditPart(view);
+
+			case DeclarativePartEditPart.VISUAL_ID:
+				return new DeclarativePartEditPart(view);
+
+			case DeclarativePartNameDeclarativePartEditPart.VISUAL_ID:
+				return new DeclarativePartNameDeclarativePartEditPart(view);
+
+			case ExecutablePartEditPart.VISUAL_ID:
+				return new ExecutablePartEditPart(view);
+
+			case ExecutablePartNameExecutablePartEditPart.VISUAL_ID:
+				return new ExecutablePartNameExecutablePartEditPart(view);
+
+			case ExceptionPartEditPart.VISUAL_ID:
+				return new ExceptionPartEditPart(view);
+
+			case ExceptionPartNameExceptionPartEditPart.VISUAL_ID:
+				return new ExceptionPartNameExceptionPartEditPart(view);
+
+			case ReturnEditPart.VISUAL_ID:
+				return new ReturnEditPart(view);
+
+			case ReturnNameReturnEditPart.VISUAL_ID:
+				return new ReturnNameReturnEditPart(view);
+
+			case ParametersEditPart.VISUAL_ID:
+				return new ParametersEditPart(view);
+
+			case ParametersNameParametersEditPart.VISUAL_ID:
+				return new ParametersNameParametersEditPart(view);
+
+			case Data_Type2EditPart.VISUAL_ID:
+				return new Data_Type2EditPart(view);
+
+			case Data_TypeNameReturn2EditPart.VISUAL_ID:
+				return new Data_TypeNameReturn2EditPart(view);
+
+			case Data_Type3EditPart.VISUAL_ID:
+				return new Data_Type3EditPart(view);
+
+			case Data_TypeNameReturn3EditPart.VISUAL_ID:
+				return new Data_TypeNameReturn3EditPart(view);
+
+			case If2EditPart.VISUAL_ID:
+				return new If2EditPart(view);
+
+			case IfNameExecutablePart2EditPart.VISUAL_ID:
+				return new IfNameExecutablePart2EditPart(view);
+
+			case Case2EditPart.VISUAL_ID:
+				return new Case2EditPart(view);
+
+			case CaseNameExecutablePart2EditPart.VISUAL_ID:
+				return new CaseNameExecutablePart2EditPart(view);
+
+			case Insert2EditPart.VISUAL_ID:
+				return new Insert2EditPart(view);
+
+			case InsertNameExecutablePart2EditPart.VISUAL_ID:
+				return new InsertNameExecutablePart2EditPart(view);
+
+			case Update2EditPart.VISUAL_ID:
+				return new Update2EditPart(view);
+
+			case UpdateNameExecutablePart2EditPart.VISUAL_ID:
+				return new UpdateNameExecutablePart2EditPart(view);
+
+			case Delete2EditPart.VISUAL_ID:
+				return new Delete2EditPart(view);
+
+			case DeleteNameExecutablePart2EditPart.VISUAL_ID:
+				return new DeleteNameExecutablePart2EditPart(view);
+
+			case Select2EditPart.VISUAL_ID:
+				return new Select2EditPart(view);
+
+			case SelectNameExecutablePart2EditPart.VISUAL_ID:
+				return new SelectNameExecutablePart2EditPart(view);
+
+			case Output2EditPart.VISUAL_ID:
+				return new Output2EditPart(view);
+
+			case OutputNameExecutablePart2EditPart.VISUAL_ID:
+				return new OutputNameExecutablePart2EditPart(view);
+
+			case Cursor2EditPart.VISUAL_ID:
+				return new Cursor2EditPart(view);
+
+			case CursorNameExecutablePart2EditPart.VISUAL_ID:
+				return new CursorNameExecutablePart2EditPart(view);
+
+			case While2EditPart.VISUAL_ID:
+				return new While2EditPart(view);
+
+			case WhileNameExecutablePart2EditPart.VISUAL_ID:
+				return new WhileNameExecutablePart2EditPart(view);
+
+			case For2EditPart.VISUAL_ID:
+				return new For2EditPart(view);
+
+			case ForNameExecutablePart2EditPart.VISUAL_ID:
+				return new ForNameExecutablePart2EditPart(view);
+
+			case Loop2EditPart.VISUAL_ID:
+				return new Loop2EditPart(view);
+
+			case LoopNameExecutablePart2EditPart.VISUAL_ID:
+				return new LoopNameExecutablePart2EditPart(view);
+
+			case ExceptionCommand2EditPart.VISUAL_ID:
+				return new ExceptionCommand2EditPart(view);
+
+			case ExceptionCommandNameExceptionPart2EditPart.VISUAL_ID:
+				return new ExceptionCommandNameExceptionPart2EditPart(view);
+
+			case ParameterIn2EditPart.VISUAL_ID:
+				return new ParameterIn2EditPart(view);
+
+			case ParameterInNameParameters2EditPart.VISUAL_ID:
+				return new ParameterInNameParameters2EditPart(view);
+
+			case ParameterInOut2EditPart.VISUAL_ID:
+				return new ParameterInOut2EditPart(view);
+
+			case ParameterInOutNameParameters2EditPart.VISUAL_ID:
+				return new ParameterInOutNameParameters2EditPart(view);
+
+			case ParameterOut2EditPart.VISUAL_ID:
+				return new ParameterOut2EditPart(view);
+
+			case ParameterOutNameParameters2EditPart.VISUAL_ID:
+				return new ParameterOutNameParameters2EditPart(view);
+
+			case Data_TypeData_TypeTipo_retornoCompartmentEditPart.VISUAL_ID:
+				return new Data_TypeData_TypeTipo_retornoCompartmentEditPart(
+						view);
+
+			case Data_TypeData_TypeTipos_dadosCompartmentEditPart.VISUAL_ID:
+				return new Data_TypeData_TypeTipos_dadosCompartmentEditPart(
+						view);
+
+			case Data_TypeData_TypeTipo_retornoCompartment2EditPart.VISUAL_ID:
+				return new Data_TypeData_TypeTipo_retornoCompartment2EditPart(
+						view);
+
+			case Data_TypeData_TypeTipos_dadosCompartment2EditPart.VISUAL_ID:
+				return new Data_TypeData_TypeTipos_dadosCompartment2EditPart(
+						view);
+
+			case Data_TypeData_TypeTipo_retornoCompartment3EditPart.VISUAL_ID:
+				return new Data_TypeData_TypeTipo_retornoCompartment3EditPart(
+						view);
+
+			case Data_TypeData_TypeTipos_dadosCompartment3EditPart.VISUAL_ID:
+				return new Data_TypeData_TypeTipos_dadosCompartment3EditPart(
+						view);
+
+			case IfIfIfsCompartmentEditPart.VISUAL_ID:
+				return new IfIfIfsCompartmentEditPart(view);
+
+			case IfIfCasesCompartmentEditPart.VISUAL_ID:
+				return new IfIfCasesCompartmentEditPart(view);
+
+			case IfIfInsertsCompartmentEditPart.VISUAL_ID:
+				return new IfIfInsertsCompartmentEditPart(view);
+
+			case IfIfUpdatesCompartmentEditPart.VISUAL_ID:
+				return new IfIfUpdatesCompartmentEditPart(view);
+
+			case IfIfDeletesCompartmentEditPart.VISUAL_ID:
+				return new IfIfDeletesCompartmentEditPart(view);
+
+			case IfIfSelectsCompartmentEditPart.VISUAL_ID:
+				return new IfIfSelectsCompartmentEditPart(view);
+
+			case IfIfOutuputsCompartmentEditPart.VISUAL_ID:
+				return new IfIfOutuputsCompartmentEditPart(view);
+
+			case IfIfCursorsCompartmentEditPart.VISUAL_ID:
+				return new IfIfCursorsCompartmentEditPart(view);
+
+			case IfIfWhilesCompartmentEditPart.VISUAL_ID:
+				return new IfIfWhilesCompartmentEditPart(view);
+
+			case IfIfForsCompartmentEditPart.VISUAL_ID:
+				return new IfIfForsCompartmentEditPart(view);
+
+			case IfIfLoopsCompartmentEditPart.VISUAL_ID:
+				return new IfIfLoopsCompartmentEditPart(view);
+
+			case IfIfIfsCompartment2EditPart.VISUAL_ID:
+				return new IfIfIfsCompartment2EditPart(view);
+
+			case IfIfCasesCompartment2EditPart.VISUAL_ID:
+				return new IfIfCasesCompartment2EditPart(view);
+
+			case IfIfInsertsCompartment2EditPart.VISUAL_ID:
+				return new IfIfInsertsCompartment2EditPart(view);
+
+			case IfIfUpdatesCompartment2EditPart.VISUAL_ID:
+				return new IfIfUpdatesCompartment2EditPart(view);
+
+			case IfIfDeletesCompartment2EditPart.VISUAL_ID:
+				return new IfIfDeletesCompartment2EditPart(view);
+
+			case IfIfSelectsCompartment2EditPart.VISUAL_ID:
+				return new IfIfSelectsCompartment2EditPart(view);
+
+			case IfIfOutuputsCompartment2EditPart.VISUAL_ID:
+				return new IfIfOutuputsCompartment2EditPart(view);
+
+			case IfIfCursorsCompartment2EditPart.VISUAL_ID:
+				return new IfIfCursorsCompartment2EditPart(view);
+
+			case IfIfWhilesCompartment2EditPart.VISUAL_ID:
+				return new IfIfWhilesCompartment2EditPart(view);
+
+			case IfIfForsCompartment2EditPart.VISUAL_ID:
+				return new IfIfForsCompartment2EditPart(view);
+
+			case IfIfLoopsCompartment2EditPart.VISUAL_ID:
+				return new IfIfLoopsCompartment2EditPart(view);
+
+			case CaseCaseIfsCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseIfsCompartmentEditPart(view);
+
+			case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseCasesCompartmentEditPart(view);
+
+			case CaseCaseInsertsCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseInsertsCompartmentEditPart(view);
+
+			case CaseCaseUpdatesCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseUpdatesCompartmentEditPart(view);
+
+			case CaseCaseDeletesCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseDeletesCompartmentEditPart(view);
+
+			case CaseCaseSelectsCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseSelectsCompartmentEditPart(view);
+
+			case CaseCaseOutuputsCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseOutuputsCompartmentEditPart(view);
+
+			case CaseCaseCursorsCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseCursorsCompartmentEditPart(view);
+
+			case CaseCaseWhilesCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseWhilesCompartmentEditPart(view);
+
+			case CaseCaseForsCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseForsCompartmentEditPart(view);
+
+			case CaseCaseLoopsCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseLoopsCompartmentEditPart(view);
+
+			case InsertInsertIfsCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertIfsCompartmentEditPart(view);
+
+			case InsertInsertCasesCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertCasesCompartmentEditPart(view);
+
+			case InsertInsertInsertsCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertInsertsCompartmentEditPart(view);
+
+			case InsertInsertUpdatesCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertUpdatesCompartmentEditPart(view);
+
+			case InsertInsertDeletesCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertDeletesCompartmentEditPart(view);
+
+			case InsertInsertSelectsCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertSelectsCompartmentEditPart(view);
+
+			case InsertInsertOutuputsCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertOutuputsCompartmentEditPart(view);
+
+			case InsertInsertCursorsCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertCursorsCompartmentEditPart(view);
+
+			case InsertInsertWhilesCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertWhilesCompartmentEditPart(view);
+
+			case InsertInsertForsCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertForsCompartmentEditPart(view);
+
+			case InsertInsertLoopsCompartmentEditPart.VISUAL_ID:
+				return new InsertInsertLoopsCompartmentEditPart(view);
+
+			case UpdateUpdateIfsCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateIfsCompartmentEditPart(view);
+
+			case UpdateUpdateCasesCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateCasesCompartmentEditPart(view);
+
+			case UpdateUpdateInsertsCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateInsertsCompartmentEditPart(view);
+
+			case UpdateUpdateUpdatesCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateUpdatesCompartmentEditPart(view);
+
+			case UpdateUpdateDeletesCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateDeletesCompartmentEditPart(view);
+
+			case UpdateUpdateSelectsCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateSelectsCompartmentEditPart(view);
+
+			case UpdateUpdateOutuputsCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateOutuputsCompartmentEditPart(view);
+
+			case UpdateUpdateCursorsCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateCursorsCompartmentEditPart(view);
+
+			case UpdateUpdateWhilesCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateWhilesCompartmentEditPart(view);
+
+			case UpdateUpdateForsCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateForsCompartmentEditPart(view);
+
+			case UpdateUpdateLoopsCompartmentEditPart.VISUAL_ID:
+				return new UpdateUpdateLoopsCompartmentEditPart(view);
+
+			case DeleteDeleteIfsCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteIfsCompartmentEditPart(view);
+
+			case DeleteDeleteCasesCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteCasesCompartmentEditPart(view);
+
+			case DeleteDeleteInsertsCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteInsertsCompartmentEditPart(view);
+
+			case DeleteDeleteUpdatesCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteUpdatesCompartmentEditPart(view);
+
+			case DeleteDeleteDeletesCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteDeletesCompartmentEditPart(view);
+
+			case DeleteDeleteSelectsCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteSelectsCompartmentEditPart(view);
+
+			case DeleteDeleteOutuputsCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteOutuputsCompartmentEditPart(view);
+
+			case DeleteDeleteCursorsCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteCursorsCompartmentEditPart(view);
+
+			case DeleteDeleteWhilesCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteWhilesCompartmentEditPart(view);
+
+			case DeleteDeleteForsCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteForsCompartmentEditPart(view);
+
+			case DeleteDeleteLoopsCompartmentEditPart.VISUAL_ID:
+				return new DeleteDeleteLoopsCompartmentEditPart(view);
+
+			case SelectSelectIfsCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectIfsCompartmentEditPart(view);
+
+			case SelectSelectCasesCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectCasesCompartmentEditPart(view);
+
+			case SelectSelectInsertsCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectInsertsCompartmentEditPart(view);
+
+			case SelectSelectUpdatesCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectUpdatesCompartmentEditPart(view);
+
+			case SelectSelectDeletesCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectDeletesCompartmentEditPart(view);
+
+			case SelectSelectSelectsCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectSelectsCompartmentEditPart(view);
+
+			case SelectSelectOutuputsCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectOutuputsCompartmentEditPart(view);
+
+			case SelectSelectCursorsCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectCursorsCompartmentEditPart(view);
+
+			case SelectSelectWhilesCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectWhilesCompartmentEditPart(view);
+
+			case SelectSelectForsCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectForsCompartmentEditPart(view);
+
+			case SelectSelectLoopsCompartmentEditPart.VISUAL_ID:
+				return new SelectSelectLoopsCompartmentEditPart(view);
+
+			case OutputOutputIfsCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputIfsCompartmentEditPart(view);
+
+			case OutputOutputCasesCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputCasesCompartmentEditPart(view);
+
+			case OutputOutputInsertsCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputInsertsCompartmentEditPart(view);
+
+			case OutputOutputUpdatesCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputUpdatesCompartmentEditPart(view);
+
+			case OutputOutputDeletesCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputDeletesCompartmentEditPart(view);
+
+			case OutputOutputSelectsCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputSelectsCompartmentEditPart(view);
+
+			case OutputOutputOutuputsCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputOutuputsCompartmentEditPart(view);
+
+			case OutputOutputCursorsCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputCursorsCompartmentEditPart(view);
+
+			case OutputOutputWhilesCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputWhilesCompartmentEditPart(view);
+
+			case OutputOutputForsCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputForsCompartmentEditPart(view);
+
+			case OutputOutputLoopsCompartmentEditPart.VISUAL_ID:
+				return new OutputOutputLoopsCompartmentEditPart(view);
+
+			case CursorCursorIfsCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorIfsCompartmentEditPart(view);
+
+			case CursorCursorCasesCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorCasesCompartmentEditPart(view);
+
+			case CursorCursorInsertsCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorInsertsCompartmentEditPart(view);
+
+			case CursorCursorUpdatesCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorUpdatesCompartmentEditPart(view);
+
+			case CursorCursorDeletesCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorDeletesCompartmentEditPart(view);
+
+			case CursorCursorSelectsCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorSelectsCompartmentEditPart(view);
+
+			case CursorCursorOutuputsCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorOutuputsCompartmentEditPart(view);
+
+			case CursorCursorCursorsCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorCursorsCompartmentEditPart(view);
+
+			case CursorCursorWhilesCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorWhilesCompartmentEditPart(view);
+
+			case CursorCursorForsCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorForsCompartmentEditPart(view);
+
+			case CursorCursorLoopsCompartmentEditPart.VISUAL_ID:
+				return new CursorCursorLoopsCompartmentEditPart(view);
+
+			case WhileWhileIfsCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileIfsCompartmentEditPart(view);
+
+			case WhileWhileCasesCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileCasesCompartmentEditPart(view);
+
+			case WhileWhileInsertsCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileInsertsCompartmentEditPart(view);
+
+			case WhileWhileUpdatesCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileUpdatesCompartmentEditPart(view);
+
+			case WhileWhileDeletesCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileDeletesCompartmentEditPart(view);
+
+			case WhileWhileSelectsCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileSelectsCompartmentEditPart(view);
+
+			case WhileWhileOutuputsCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileOutuputsCompartmentEditPart(view);
+
+			case WhileWhileCursorsCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileCursorsCompartmentEditPart(view);
+
+			case WhileWhileWhilesCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileWhilesCompartmentEditPart(view);
+
+			case WhileWhileForsCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileForsCompartmentEditPart(view);
+
+			case WhileWhileLoopsCompartmentEditPart.VISUAL_ID:
+				return new WhileWhileLoopsCompartmentEditPart(view);
+
+			case ForForIfsCompartmentEditPart.VISUAL_ID:
+				return new ForForIfsCompartmentEditPart(view);
+
+			case ForForCasesCompartmentEditPart.VISUAL_ID:
+				return new ForForCasesCompartmentEditPart(view);
+
+			case ForForInsertsCompartmentEditPart.VISUAL_ID:
+				return new ForForInsertsCompartmentEditPart(view);
+
+			case ForForUpdatesCompartmentEditPart.VISUAL_ID:
+				return new ForForUpdatesCompartmentEditPart(view);
+
+			case ForForDeletesCompartmentEditPart.VISUAL_ID:
+				return new ForForDeletesCompartmentEditPart(view);
+
+			case ForForSelectsCompartmentEditPart.VISUAL_ID:
+				return new ForForSelectsCompartmentEditPart(view);
+
+			case ForForOutuputsCompartmentEditPart.VISUAL_ID:
+				return new ForForOutuputsCompartmentEditPart(view);
+
+			case ForForCursorsCompartmentEditPart.VISUAL_ID:
+				return new ForForCursorsCompartmentEditPart(view);
+
+			case ForForWhilesCompartmentEditPart.VISUAL_ID:
+				return new ForForWhilesCompartmentEditPart(view);
+
+			case ForForForsCompartmentEditPart.VISUAL_ID:
+				return new ForForForsCompartmentEditPart(view);
+
+			case ForForLoopsCompartmentEditPart.VISUAL_ID:
+				return new ForForLoopsCompartmentEditPart(view);
+
+			case LoopLoopIfsCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopIfsCompartmentEditPart(view);
+
+			case LoopLoopCasesCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopCasesCompartmentEditPart(view);
+
+			case LoopLoopInsertsCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopInsertsCompartmentEditPart(view);
+
+			case LoopLoopUpdatesCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopUpdatesCompartmentEditPart(view);
+
+			case LoopLoopDeletesCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopDeletesCompartmentEditPart(view);
+
+			case LoopLoopSelectsCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopSelectsCompartmentEditPart(view);
+
+			case LoopLoopOutuputsCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopOutuputsCompartmentEditPart(view);
+
+			case LoopLoopCursorsCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopCursorsCompartmentEditPart(view);
+
+			case LoopLoopWhilesCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopWhilesCompartmentEditPart(view);
+
+			case LoopLoopForsCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopForsCompartmentEditPart(view);
+
+			case LoopLoopLoopsCompartmentEditPart.VISUAL_ID:
+				return new LoopLoopLoopsCompartmentEditPart(view);
+
+			case CaseCaseIfsCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseIfsCompartment2EditPart(view);
+
+			case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseCasesCompartment2EditPart(view);
+
+			case CaseCaseInsertsCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseInsertsCompartment2EditPart(view);
+
+			case CaseCaseUpdatesCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseUpdatesCompartment2EditPart(view);
+
+			case CaseCaseDeletesCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseDeletesCompartment2EditPart(view);
+
+			case CaseCaseSelectsCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseSelectsCompartment2EditPart(view);
+
+			case CaseCaseOutuputsCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseOutuputsCompartment2EditPart(view);
+
+			case CaseCaseCursorsCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseCursorsCompartment2EditPart(view);
+
+			case CaseCaseWhilesCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseWhilesCompartment2EditPart(view);
+
+			case CaseCaseForsCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseForsCompartment2EditPart(view);
+
+			case CaseCaseLoopsCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseLoopsCompartment2EditPart(view);
+
+			case InsertInsertIfsCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertIfsCompartment2EditPart(view);
+
+			case InsertInsertCasesCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertCasesCompartment2EditPart(view);
+
+			case InsertInsertInsertsCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertInsertsCompartment2EditPart(view);
+
+			case InsertInsertUpdatesCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertUpdatesCompartment2EditPart(view);
+
+			case InsertInsertDeletesCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertDeletesCompartment2EditPart(view);
+
+			case InsertInsertSelectsCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertSelectsCompartment2EditPart(view);
+
+			case InsertInsertOutuputsCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertOutuputsCompartment2EditPart(view);
+
+			case InsertInsertCursorsCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertCursorsCompartment2EditPart(view);
+
+			case InsertInsertWhilesCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertWhilesCompartment2EditPart(view);
+
+			case InsertInsertForsCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertForsCompartment2EditPart(view);
+
+			case InsertInsertLoopsCompartment2EditPart.VISUAL_ID:
+				return new InsertInsertLoopsCompartment2EditPart(view);
+
+			case UpdateUpdateIfsCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateIfsCompartment2EditPart(view);
+
+			case UpdateUpdateCasesCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateCasesCompartment2EditPart(view);
+
+			case UpdateUpdateInsertsCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateInsertsCompartment2EditPart(view);
+
+			case UpdateUpdateUpdatesCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateUpdatesCompartment2EditPart(view);
+
+			case UpdateUpdateDeletesCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateDeletesCompartment2EditPart(view);
+
+			case UpdateUpdateSelectsCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateSelectsCompartment2EditPart(view);
+
+			case UpdateUpdateOutuputsCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateOutuputsCompartment2EditPart(view);
+
+			case UpdateUpdateCursorsCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateCursorsCompartment2EditPart(view);
+
+			case UpdateUpdateWhilesCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateWhilesCompartment2EditPart(view);
+
+			case UpdateUpdateForsCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateForsCompartment2EditPart(view);
+
+			case UpdateUpdateLoopsCompartment2EditPart.VISUAL_ID:
+				return new UpdateUpdateLoopsCompartment2EditPart(view);
+
+			case DeleteDeleteIfsCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteIfsCompartment2EditPart(view);
+
+			case DeleteDeleteCasesCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteCasesCompartment2EditPart(view);
+
+			case DeleteDeleteInsertsCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteInsertsCompartment2EditPart(view);
+
+			case DeleteDeleteUpdatesCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteUpdatesCompartment2EditPart(view);
+
+			case DeleteDeleteDeletesCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteDeletesCompartment2EditPart(view);
+
+			case DeleteDeleteSelectsCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteSelectsCompartment2EditPart(view);
+
+			case DeleteDeleteOutuputsCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteOutuputsCompartment2EditPart(view);
+
+			case DeleteDeleteCursorsCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteCursorsCompartment2EditPart(view);
+
+			case DeleteDeleteWhilesCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteWhilesCompartment2EditPart(view);
+
+			case DeleteDeleteForsCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteForsCompartment2EditPart(view);
+
+			case DeleteDeleteLoopsCompartment2EditPart.VISUAL_ID:
+				return new DeleteDeleteLoopsCompartment2EditPart(view);
+
+			case SelectSelectIfsCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectIfsCompartment2EditPart(view);
+
+			case SelectSelectCasesCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectCasesCompartment2EditPart(view);
+
+			case SelectSelectInsertsCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectInsertsCompartment2EditPart(view);
+
+			case SelectSelectUpdatesCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectUpdatesCompartment2EditPart(view);
+
+			case SelectSelectDeletesCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectDeletesCompartment2EditPart(view);
+
+			case SelectSelectSelectsCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectSelectsCompartment2EditPart(view);
+
+			case SelectSelectOutuputsCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectOutuputsCompartment2EditPart(view);
+
+			case SelectSelectCursorsCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectCursorsCompartment2EditPart(view);
+
+			case SelectSelectWhilesCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectWhilesCompartment2EditPart(view);
+
+			case SelectSelectForsCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectForsCompartment2EditPart(view);
+
+			case SelectSelectLoopsCompartment2EditPart.VISUAL_ID:
+				return new SelectSelectLoopsCompartment2EditPart(view);
+
+			case OutputOutputIfsCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputIfsCompartment2EditPart(view);
+
+			case OutputOutputCasesCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputCasesCompartment2EditPart(view);
+
+			case OutputOutputInsertsCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputInsertsCompartment2EditPart(view);
+
+			case OutputOutputUpdatesCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputUpdatesCompartment2EditPart(view);
+
+			case OutputOutputDeletesCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputDeletesCompartment2EditPart(view);
+
+			case OutputOutputSelectsCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputSelectsCompartment2EditPart(view);
+
+			case OutputOutputOutuputsCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputOutuputsCompartment2EditPart(view);
+
+			case OutputOutputCursorsCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputCursorsCompartment2EditPart(view);
+
+			case OutputOutputWhilesCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputWhilesCompartment2EditPart(view);
+
+			case OutputOutputForsCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputForsCompartment2EditPart(view);
+
+			case OutputOutputLoopsCompartment2EditPart.VISUAL_ID:
+				return new OutputOutputLoopsCompartment2EditPart(view);
+
+			case CursorCursorIfsCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorIfsCompartment2EditPart(view);
+
+			case CursorCursorCasesCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorCasesCompartment2EditPart(view);
+
+			case CursorCursorInsertsCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorInsertsCompartment2EditPart(view);
+
+			case CursorCursorUpdatesCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorUpdatesCompartment2EditPart(view);
+
+			case CursorCursorDeletesCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorDeletesCompartment2EditPart(view);
+
+			case CursorCursorSelectsCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorSelectsCompartment2EditPart(view);
+
+			case CursorCursorOutuputsCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorOutuputsCompartment2EditPart(view);
+
+			case CursorCursorCursorsCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorCursorsCompartment2EditPart(view);
+
+			case CursorCursorWhilesCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorWhilesCompartment2EditPart(view);
+
+			case CursorCursorForsCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorForsCompartment2EditPart(view);
+
+			case CursorCursorLoopsCompartment2EditPart.VISUAL_ID:
+				return new CursorCursorLoopsCompartment2EditPart(view);
+
+			case WhileWhileIfsCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileIfsCompartment2EditPart(view);
+
+			case WhileWhileCasesCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileCasesCompartment2EditPart(view);
+
+			case WhileWhileInsertsCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileInsertsCompartment2EditPart(view);
+
+			case WhileWhileUpdatesCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileUpdatesCompartment2EditPart(view);
+
+			case WhileWhileDeletesCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileDeletesCompartment2EditPart(view);
+
+			case WhileWhileSelectsCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileSelectsCompartment2EditPart(view);
+
+			case WhileWhileOutuputsCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileOutuputsCompartment2EditPart(view);
+
+			case WhileWhileCursorsCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileCursorsCompartment2EditPart(view);
+
+			case WhileWhileWhilesCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileWhilesCompartment2EditPart(view);
+
+			case WhileWhileForsCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileForsCompartment2EditPart(view);
+
+			case WhileWhileLoopsCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileLoopsCompartment2EditPart(view);
+
+			case ForForIfsCompartment2EditPart.VISUAL_ID:
+				return new ForForIfsCompartment2EditPart(view);
+
+			case ForForCasesCompartment2EditPart.VISUAL_ID:
+				return new ForForCasesCompartment2EditPart(view);
+
+			case ForForInsertsCompartment2EditPart.VISUAL_ID:
+				return new ForForInsertsCompartment2EditPart(view);
+
+			case ForForUpdatesCompartment2EditPart.VISUAL_ID:
+				return new ForForUpdatesCompartment2EditPart(view);
+
+			case ForForDeletesCompartment2EditPart.VISUAL_ID:
+				return new ForForDeletesCompartment2EditPart(view);
+
+			case ForForSelectsCompartment2EditPart.VISUAL_ID:
+				return new ForForSelectsCompartment2EditPart(view);
+
+			case ForForOutuputsCompartment2EditPart.VISUAL_ID:
+				return new ForForOutuputsCompartment2EditPart(view);
+
+			case ForForCursorsCompartment2EditPart.VISUAL_ID:
+				return new ForForCursorsCompartment2EditPart(view);
+
+			case ForForWhilesCompartment2EditPart.VISUAL_ID:
+				return new ForForWhilesCompartment2EditPart(view);
+
+			case ForForForsCompartment2EditPart.VISUAL_ID:
+				return new ForForForsCompartment2EditPart(view);
+
+			case ForForLoopsCompartment2EditPart.VISUAL_ID:
+				return new ForForLoopsCompartment2EditPart(view);
+
+			case LoopLoopIfsCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopIfsCompartment2EditPart(view);
+
+			case LoopLoopCasesCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopCasesCompartment2EditPart(view);
+
+			case LoopLoopInsertsCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopInsertsCompartment2EditPart(view);
+
+			case LoopLoopUpdatesCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopUpdatesCompartment2EditPart(view);
+
+			case LoopLoopDeletesCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopDeletesCompartment2EditPart(view);
+
+			case LoopLoopSelectsCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopSelectsCompartment2EditPart(view);
+
+			case LoopLoopOutuputsCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopOutuputsCompartment2EditPart(view);
+
+			case LoopLoopCursorsCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopCursorsCompartment2EditPart(view);
+
+			case LoopLoopWhilesCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopWhilesCompartment2EditPart(view);
+
+			case LoopLoopForsCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopForsCompartment2EditPart(view);
+
+			case LoopLoopLoopsCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopLoopsCompartment2EditPart(view);
+
+			case ExceptionCommandExceptionCommandExcecoesCompartmentEditPart.VISUAL_ID:
+				return new ExceptionCommandExceptionCommandExcecoesCompartmentEditPart(
+						view);
+
+			case ExceptionCommandExceptionCommandExcecoesCompartment2EditPart.VISUAL_ID:
+				return new ExceptionCommandExceptionCommandExcecoesCompartment2EditPart(
+						view);
+
+			case ParameterInParameterInParametros_inCompartmentEditPart.VISUAL_ID:
+				return new ParameterInParameterInParametros_inCompartmentEditPart(
+						view);
+
+			case ParameterInParameterInParametros_in_outCompartmentEditPart.VISUAL_ID:
+				return new ParameterInParameterInParametros_in_outCompartmentEditPart(
+						view);
+
+			case ParameterInParameterInParametros_outCompartmentEditPart.VISUAL_ID:
+				return new ParameterInParameterInParametros_outCompartmentEditPart(
+						view);
+
+			case ParameterInParameterInParametros_inCompartment2EditPart.VISUAL_ID:
+				return new ParameterInParameterInParametros_inCompartment2EditPart(
+						view);
+
+			case ParameterInParameterInParametros_in_outCompartment2EditPart.VISUAL_ID:
+				return new ParameterInParameterInParametros_in_outCompartment2EditPart(
+						view);
+
+			case ParameterInParameterInParametros_outCompartment2EditPart.VISUAL_ID:
+				return new ParameterInParameterInParametros_outCompartment2EditPart(
+						view);
+
+			case ParameterInOutParameterInOutParametros_inCompartmentEditPart.VISUAL_ID:
+				return new ParameterInOutParameterInOutParametros_inCompartmentEditPart(
+						view);
+
+			case ParameterInOutParameterInOutParametros_in_outCompartmentEditPart.VISUAL_ID:
+				return new ParameterInOutParameterInOutParametros_in_outCompartmentEditPart(
+						view);
+
+			case ParameterInOutParameterInOutParametros_outCompartmentEditPart.VISUAL_ID:
+				return new ParameterInOutParameterInOutParametros_outCompartmentEditPart(
+						view);
+
+			case ParameterOutParameterOutParametros_inCompartmentEditPart.VISUAL_ID:
+				return new ParameterOutParameterOutParametros_inCompartmentEditPart(
+						view);
+
+			case ParameterOutParameterOutParametros_in_outCompartmentEditPart.VISUAL_ID:
+				return new ParameterOutParameterOutParametros_in_outCompartmentEditPart(
+						view);
+
+			case ParameterOutParameterOutParametros_outCompartmentEditPart.VISUAL_ID:
+				return new ParameterOutParameterOutParametros_outCompartmentEditPart(
+						view);
+
+			case ParameterOutParameterOutParametros_inCompartment2EditPart.VISUAL_ID:
+				return new ParameterOutParameterOutParametros_inCompartment2EditPart(
+						view);
+
+			case ParameterOutParameterOutParametros_in_outCompartment2EditPart.VISUAL_ID:
+				return new ParameterOutParameterOutParametros_in_outCompartment2EditPart(
+						view);
+
+			case ParameterOutParameterOutParametros_outCompartment2EditPart.VISUAL_ID:
+				return new ParameterOutParameterOutParametros_outCompartment2EditPart(
+						view);
+
+			case ParameterInOutParameterInOutParametros_inCompartment2EditPart.VISUAL_ID:
+				return new ParameterInOutParameterInOutParametros_inCompartment2EditPart(
+						view);
+
+			case ParameterInOutParameterInOutParametros_in_outCompartment2EditPart.VISUAL_ID:
+				return new ParameterInOutParameterInOutParametros_in_outCompartment2EditPart(
+						view);
+
+			case ParameterInOutParameterInOutParametros_outCompartment2EditPart.VISUAL_ID:
+				return new ParameterInOutParameterInOutParametros_outCompartment2EditPart(
+						view);
+
+			case DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart.VISUAL_ID:
+				return new DeclarativePartDeclarativePartTipos_dadosCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartIfsCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartIfsCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartCasesCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartCasesCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartInsertsCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartInsertsCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartUpdatesCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartUpdatesCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartDeletesCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartDeletesCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartSelectsCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartSelectsCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartOutuputsCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartOutuputsCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartCursorsCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartCursorsCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartWhilesCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartWhilesCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartForsCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartForsCompartmentEditPart(
+						view);
+
+			case ExecutablePartExecutablePartLoopsCompartmentEditPart.VISUAL_ID:
+				return new ExecutablePartExecutablePartLoopsCompartmentEditPart(
+						view);
+
+			case ExceptionPartExceptionPartExcecoesCompartmentEditPart.VISUAL_ID:
+				return new ExceptionPartExceptionPartExcecoesCompartmentEditPart(
+						view);
+
+			case ReturnReturnTipo_retornoCompartmentEditPart.VISUAL_ID:
+				return new ReturnReturnTipo_retornoCompartmentEditPart(view);
+
+			case ParametersParametersParametros_inCompartmentEditPart.VISUAL_ID:
+				return new ParametersParametersParametros_inCompartmentEditPart(
+						view);
+
+			case ParametersParametersParametros_in_outCompartmentEditPart.VISUAL_ID:
+				return new ParametersParametersParametros_in_outCompartmentEditPart(
+						view);
+
+			case ParametersParametersParametros_outCompartmentEditPart.VISUAL_ID:
+				return new ParametersParametersParametros_outCompartmentEditPart(
+						view);
+
+			case SyncEditPart.VISUAL_ID:
+				return new SyncEditPart(view);
+
+			}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+
+	/**
+	 * @generated
+	 */
+	private EditPart createUnrecognizedEditPart(EditPart context, Object model) {
+		// Handle creation of unrecognized child node EditParts here
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static CellEditorLocator getTextCellEditorLocator(
+			ITextAwareEditPart source) {
+		return CellEditorLocatorAccess.INSTANCE
+				.getTextCellEditorLocator(source);
+	}
+
+}

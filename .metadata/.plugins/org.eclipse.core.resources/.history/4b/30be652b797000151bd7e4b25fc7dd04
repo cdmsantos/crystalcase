@@ -1,0 +1,59 @@
+pluginName=Filesystem Plugin
+providerName=Sample Plugin Provider, Inc
+
+editorName=Filesystem Diagram Editing
+context.description=Filesystem Diagram Editing
+context.name=In Filesystem Diagram Editor
+newWizardName=Filesystem Diagram
+newWizardDesc=Creates Filesystem diagram.
+
+initDiagramActionLabel=Initialize filesystem_diagram diagram file
+
+
+navigatorContentName=*.filesystem_diagram diagram contents
+domainNavigatorContentName=*.filesystem model contents
+update.diagram.name=Update Filesystem diagram
+update.diagram.description=Perform Filesystem diagram update
+
+
+# Property Sheet
+tab.appearance=Appearance
+tab.diagram=Rulers & Grid
+tab.domain=Core
+
+# Preferences
+prefpage.master.project.diagram.general=Filesystem Diagram
+prefpage.master.project.diagram.appearance=Appearance
+prefpage.master.project.diagram.connections=Connections
+prefpage.master.project.diagram.printing=Printing
+prefpage.master.project.diagram.rulersAndGrid=Rulers And Grid
+
+
+# Providers
+metatype.name.Filesystem_1000=Undefined
+metatype.name.Data_Type_2001=Data_Type
+metatype.name.Exception_2002=Exception
+metatype.name.If_2003=If
+metatype.name.Case_2004=Case
+metatype.name.Insert_2005=Insert
+metatype.name.Update_2006=Update
+metatype.name.Delete_2007=Delete
+metatype.name.Select_2008=Select
+metatype.name.Output_2009=Output
+metatype.name.Cursor_2010=Cursor
+metatype.name.While_2011=While
+metatype.name.For_2012=For
+metatype.name.Loop_2013=Loop
+metatype.name.ParameterIn_2014=ParameterIn
+metatype.name.ParameterOut_2015=ParameterOut
+metatype.name.ParameterInOut_2016=ParameterInOut
+metatype.name.DeclarativePart_2017=DeclarativePart
+metatype.name.ExecutablePart_2018=ExecutablePart
+metatype.name.Return_2019=Return
+metatype.name.Parameters_2020=Parameters
+metatype.name.Sync_4001=Sync
+
+# Commands and menu actions
+cmdcategory.name=Filesystem Editor Commands
+cmdcategory.desc=Filesystem Editor Commands
+

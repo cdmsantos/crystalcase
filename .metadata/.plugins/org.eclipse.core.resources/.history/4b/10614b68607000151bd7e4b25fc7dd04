@@ -1,0 +1,111 @@
+
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+/**
+ * @generated
+ */
+public class FilesystemPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(filesystem.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createDrive1CreationTool());
+paletteContainer.add(createFile2CreationTool());
+paletteContainer.add(createFolder3CreationTool());
+paletteContainer.add(createShortcut4CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Connections" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createConnections2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(filesystem.diagram.part.Messages.Connections2Group_title);
+				 paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+								paletteContainer.add(createSync1CreationTool());
+paletteContainer.add(createTarget2CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDrive1CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+types.add(filesystem.diagram.providers.FilesystemElementTypes.Drive_2001);
+types.add(filesystem.diagram.providers.FilesystemElementTypes.Drive_3001);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(filesystem.diagram.part.Messages.Drive1CreationTool_title, filesystem.diagram.part.Messages.Drive1CreationTool_desc, types);
+				 entry.setId("createDrive1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(filesystem.diagram.providers.FilesystemElementTypes.getImageDescriptor(filesystem.diagram.providers.FilesystemElementTypes.Drive_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createFile2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(filesystem.diagram.part.Messages.File2CreationTool_title, filesystem.diagram.part.Messages.File2CreationTool_desc, java.util.Collections.singletonList(filesystem.diagram.providers.FilesystemElementTypes.File_3004));
+				 entry.setId("createFile2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(filesystem.diagram.providers.FilesystemElementTypes.getImageDescriptor(filesystem.diagram.providers.FilesystemElementTypes.File_3004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createFolder3CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(filesystem.diagram.part.Messages.Folder3CreationTool_title, filesystem.diagram.part.Messages.Folder3CreationTool_desc, java.util.Collections.singletonList(filesystem.diagram.providers.FilesystemElementTypes.Folder_3002));
+				 entry.setId("createFolder3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(filesystem.diagram.providers.FilesystemElementTypes.getImageDescriptor(filesystem.diagram.providers.FilesystemElementTypes.Folder_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createShortcut4CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(filesystem.diagram.part.Messages.Shortcut4CreationTool_title, filesystem.diagram.part.Messages.Shortcut4CreationTool_desc, java.util.Collections.singletonList(filesystem.diagram.providers.FilesystemElementTypes.Shortcut_3003));
+				 entry.setId("createShortcut4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(filesystem.diagram.providers.FilesystemElementTypes.getImageDescriptor(filesystem.diagram.providers.FilesystemElementTypes.Shortcut_3003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createSync1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(filesystem.diagram.part.Messages.Sync1CreationTool_title, filesystem.diagram.part.Messages.Sync1CreationTool_desc, java.util.Collections.singletonList(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001));
+				 entry.setId("createSync1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(filesystem.diagram.providers.FilesystemElementTypes.getImageDescriptor(filesystem.diagram.providers.FilesystemElementTypes.Sync_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createTarget2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(filesystem.diagram.part.Messages.Target2CreationTool_title, filesystem.diagram.part.Messages.Target2CreationTool_desc, java.util.Collections.singletonList(filesystem.diagram.providers.FilesystemElementTypes.ShortcutTarget_4002));
+				 entry.setId("createTarget2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(filesystem.diagram.providers.FilesystemElementTypes.getImageDescriptor(filesystem.diagram.providers.FilesystemElementTypes.ShortcutTarget_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

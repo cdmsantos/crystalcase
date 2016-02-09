@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class FilesystemModelingAssistantProviderOfParameterInOutEditPart extends filesystem.diagram.providers.FilesystemModelingAssistantProvider {
+
+					
+	
+
+	}

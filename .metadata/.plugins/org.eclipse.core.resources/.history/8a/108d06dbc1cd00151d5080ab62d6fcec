@@ -1,0 +1,150 @@
+/*
+ * 
+ */
+package crystal.diagram.edit.commands;
+
+/**
+ * @generated
+ */
+public class TransitionReorientCommand extends org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand {
+
+	/**
+ * @generated
+ */
+	private final int reorientDirection;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject oldEnd;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject newEnd;
+
+	/**
+ * @generated
+ */
+	public TransitionReorientCommand(org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest request) {
+		super(request.getLabel(), request.getRelationship(), request);
+		reorientDirection = request.getDirection();
+		oldEnd = request.getOldRelationshipEnd();
+		newEnd = request.getNewRelationshipEnd();
+	}
+	
+	/**
+ * @generated
+ */
+	public boolean canExecute() {
+			if (false == getElementToEdit() instanceof crystal.Transition) {
+		return false;
+	}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return canReorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return canReorientTarget();
+		}
+		return false;
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientSource() {
+			if (!(oldEnd instanceof crystal.Statements && newEnd instanceof crystal.Statements)) {
+		return false;
+	}
+				crystal.Statements target = getLink().getTarget();
+			if (!(getLink().eContainer() instanceof crystal.Crystal)) {
+		return false;
+	}
+	crystal.Crystal container = (crystal.Crystal) getLink().eContainer();
+	return crystal.diagram.edit.policies.CrystalBaseItemSemanticEditPolicy.getLinkConstraints().canExistTransition_4001(container, getLink(), getNewSource(), target);
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientTarget() {
+			if (!(oldEnd instanceof crystal.Statements && newEnd instanceof crystal.Statements)) {
+		return false;
+	}
+						crystal.Statements source = getLink().getSource();
+				if (!(getLink().eContainer() instanceof crystal.Crystal)) {
+		return false;
+	}
+	crystal.Crystal container = (crystal.Crystal) getLink().eContainer();
+	return crystal.diagram.edit.policies.CrystalBaseItemSemanticEditPolicy.getLinkConstraints().canExistTransition_4001(container, getLink(), source, getNewTarget());
+	}
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+			org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+			throws org.eclipse.core.commands.ExecutionException {
+		if (!canExecute()) {
+			throw new org.eclipse.core.commands.ExecutionException("Invalid arguments in reorient link command");  //$NON-NLS-1$
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return reorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return reorientTarget();
+		}
+		throw new IllegalStateException();
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientSource() throws org.eclipse.core.commands.ExecutionException {
+				getLink().setSource(getNewSource());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(getLink());
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientTarget() throws org.eclipse.core.commands.ExecutionException {
+				getLink().setTarget(getNewTarget());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(getLink());
+	}
+		
+	/**
+ * @generated
+ */
+	protected crystal.Transition getLink() {
+		return (crystal.Transition) getElementToEdit();
+	}
+	
+	/**
+ * @generated
+ */
+	protected crystal.Statements getOldSource() {
+		return (crystal.Statements) oldEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected crystal.Statements getNewSource() {
+		return (crystal.Statements) newEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected crystal.Statements getOldTarget() {
+		return (crystal.Statements) oldEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected crystal.Statements getNewTarget() {
+		return (crystal.Statements) newEnd;
+	}
+}

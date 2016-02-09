@@ -1,0 +1,18 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class FilesystemBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}

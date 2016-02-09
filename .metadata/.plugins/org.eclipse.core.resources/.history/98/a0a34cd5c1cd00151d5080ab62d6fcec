@@ -1,0 +1,18 @@
+/*
+ * 
+ */
+package crystal.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class CrystalBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}

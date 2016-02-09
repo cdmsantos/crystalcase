@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="filesystem" nsURI="filesystem" nsPrefix="filesystem">
+  <eAnnotations source="gmf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Filesystem">
+    <eAnnotations source="gmf.diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="syncs" upperBound="-1"
+        eType="#//Sync" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declarative" lowerBound="1"
+        eType="#//DeclarativePart" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executable" lowerBound="1"
+        eType="#//ExecutablePart" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="return" lowerBound="1"
+        eType="#//Return" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" lowerBound="1"
+        eType="#//Parameters" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameters">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nameParameters"/>
+      <details key="figure" value="rectangle"/>
+      <details key="size" value="150,200"/>
+      <details key="border.color" value="255,13,13"/>
+      <details key="border.style" value="dash"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameParameters" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Return">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nameReturn"/>
+      <details key="figure" value="rectangle"/>
+      <details key="size" value="150,200"/>
+      <details key="border.color" value="25,191,108"/>
+      <details key="border.style" value="dash"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameReturn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclarativePart">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nameDeclarativePart"/>
+      <details key="figure" value="rectangle"/>
+      <details key="size" value="150,200"/>
+      <details key="border.color" value="43,106,215"/>
+      <details key="border.style" value="dash"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameDeclarativePart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutablePart">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nameExecutablePart"/>
+      <details key="size" value="450,450"/>
+      <details key="figure" value="rectangle"/>
+      <details key="border.color" value="158,25,191"/>
+      <details key="border.style" value="dash"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameExecutablePart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data_Type" eSuperTypes="#//Return #//DeclarativePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterIn" eSuperTypes="#//Parameters"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterOut" eSuperTypes="#//Parameters"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterInOut" eSuperTypes="#//Parameters"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Exception" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Case" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cursor" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="While" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="For" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//ExecutablePart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sync">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="style" value="dot"/>
+      <details key="width" value="2"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Select"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Output"/>
+  </eClassifiers>
+</ecore:EPackage>

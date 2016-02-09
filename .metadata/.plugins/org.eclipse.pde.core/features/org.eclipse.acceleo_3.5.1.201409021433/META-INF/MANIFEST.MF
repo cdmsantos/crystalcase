@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_51
+Built-By: genie.modeling.acceleo
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+
+Name: epl-v10.html
+SHA1-Digest: hNPRR3joO5UV8+u/L0qjKV/Y2EE=
+
+Name: license.txt
+SHA1-Digest: d6GI1XjNcaRRNFQuoZL5MGTR6/E=
+
+Name: license.html
+SHA1-Digest: /vLZjlHkZSXMSfPrWwNqOUDqqbM=
+
+Name: feature.properties
+SHA1-Digest: 9tr4tEt4noV+3o0NBDkzebkviWU=
+
+Name: about.html
+SHA1-Digest: NWUkD2ZtLMVKKZ5w1UeqagEnpPg=
+
+Name: feature.xml
+SHA1-Digest: odA4GqUSM7+rh6Z49Q9xC6/yMHo=
+

@@ -1,0 +1,2141 @@
+/*
+ * 
+ */
+package crystal.diagram.providers;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmf.runtime.common.core.service.AbstractProvider;
+import org.eclipse.gmf.runtime.common.core.service.IOperation;
+import org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation;
+import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
+import org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider;
+import org.eclipse.gmf.runtime.common.ui.services.parser.ParserService;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
+import org.eclipse.gmf.runtime.notation.View;
+
+import crystal.CrystalPackage;
+import crystal.diagram.edit.parts.*;
+import crystal.diagram.edit.parts.CaseName2EditPart;
+import crystal.diagram.edit.parts.CaseNameEditPart;
+import crystal.diagram.edit.parts.CloseName2EditPart;
+import crystal.diagram.edit.parts.CloseNameEditPart;
+import crystal.diagram.edit.parts.CollectionsName2EditPart;
+import crystal.diagram.edit.parts.CollectionsName3EditPart;
+import crystal.diagram.edit.parts.CollectionsName4EditPart;
+import crystal.diagram.edit.parts.CollectionsName5EditPart;
+import crystal.diagram.edit.parts.CollectionsNameEditPart;
+import crystal.diagram.edit.parts.CursorName2EditPart;
+import crystal.diagram.edit.parts.CursorName3EditPart;
+import crystal.diagram.edit.parts.CursorName4EditPart;
+import crystal.diagram.edit.parts.CursorName5EditPart;
+import crystal.diagram.edit.parts.CursorNameEditPart;
+import crystal.diagram.edit.parts.DataTypeName2EditPart;
+import crystal.diagram.edit.parts.DataTypeName3EditPart;
+import crystal.diagram.edit.parts.DataTypeName4EditPart;
+import crystal.diagram.edit.parts.DataTypeName5EditPart;
+import crystal.diagram.edit.parts.DataTypeNameEditPart;
+import crystal.diagram.edit.parts.DeclarativePartNameEditPart;
+import crystal.diagram.edit.parts.DeleteName2EditPart;
+import crystal.diagram.edit.parts.DeleteNameEditPart;
+import crystal.diagram.edit.parts.ExceptionName2EditPart;
+import crystal.diagram.edit.parts.ExceptionNameEditPart;
+import crystal.diagram.edit.parts.ExecutablePartNameEditPart;
+import crystal.diagram.edit.parts.ExpressionsName2EditPart;
+import crystal.diagram.edit.parts.ExpressionsNameEditPart;
+import crystal.diagram.edit.parts.FetchName2EditPart;
+import crystal.diagram.edit.parts.FetchNameEditPart;
+import crystal.diagram.edit.parts.ForName2EditPart;
+import crystal.diagram.edit.parts.ForNameEditPart;
+import crystal.diagram.edit.parts.IfName2EditPart;
+import crystal.diagram.edit.parts.IfNameEditPart;
+import crystal.diagram.edit.parts.InsertName2EditPart;
+import crystal.diagram.edit.parts.InsertNameEditPart;
+import crystal.diagram.edit.parts.LoopName2EditPart;
+import crystal.diagram.edit.parts.LoopNameEditPart;
+import crystal.diagram.edit.parts.OpenName2EditPart;
+import crystal.diagram.edit.parts.OpenNameEditPart;
+import crystal.diagram.edit.parts.ParametersNameEditPart;
+import crystal.diagram.edit.parts.ProcedureNameEditPart;
+import crystal.diagram.edit.parts.RecordsName2EditPart;
+import crystal.diagram.edit.parts.RecordsName3EditPart;
+import crystal.diagram.edit.parts.RecordsName4EditPart;
+import crystal.diagram.edit.parts.RecordsName5EditPart;
+import crystal.diagram.edit.parts.RecordsNameEditPart;
+import crystal.diagram.edit.parts.ReturnNameEditPart;
+import crystal.diagram.edit.parts.SelectName2EditPart;
+import crystal.diagram.edit.parts.SelectNameEditPart;
+import crystal.diagram.edit.parts.UpdateName2EditPart;
+import crystal.diagram.edit.parts.UpdateNameEditPart;
+import crystal.diagram.edit.parts.WhileName2EditPart;
+import crystal.diagram.edit.parts.WhileNameEditPart;
+import crystal.diagram.parsers.MessageFormatParser;
+import crystal.diagram.part.CrystalVisualIDRegistry;
+
+/**
+ * @generated
+ */
+public class CrystalParserProvider extends AbstractProvider implements
+		IParserProvider {
+
+	/**
+	 * @generated
+	 */
+	private IParser parametersName_5005Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getParametersName_5005Parser() {
+		if (parametersName_5005Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getSections_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			parametersName_5005Parser = parser;
+		}
+		return parametersName_5005Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser returnName_5010Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getReturnName_5010Parser() {
+		if (returnName_5010Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getSections_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			returnName_5010Parser = parser;
+		}
+		return returnName_5010Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser declarativePartName_5015Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDeclarativePartName_5015Parser() {
+		if (declarativePartName_5015Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getSections_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			declarativePartName_5015Parser = parser;
+		}
+		return declarativePartName_5015Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser executablePartName_5030Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExecutablePartName_5030Parser() {
+		if (executablePartName_5030Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getSections_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			executablePartName_5030Parser = parser;
+		}
+		return executablePartName_5030Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser procedureName_5053Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getProcedureName_5053Parser() {
+		if (procedureName_5053Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getSections_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			procedureName_5053Parser = parser;
+		}
+		return procedureName_5053Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser functionName_5080Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getFunctionName_5080Parser() {
+		if (functionName_5080Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getSections_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			functionName_5080Parser = parser;
+		}
+		return functionName_5080Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser anonymousBlockName_5099Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getAnonymousBlockName_5099Parser() {
+		if (anonymousBlockName_5099Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getSections_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			anonymousBlockName_5099Parser = parser;
+		}
+		return anonymousBlockName_5099Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser dataTypeName_5001Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDataTypeName_5001Parser() {
+		if (dataTypeName_5001Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			dataTypeName_5001Parser = parser;
+		}
+		return dataTypeName_5001Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser collectionsName_5002Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCollectionsName_5002Parser() {
+		if (collectionsName_5002Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			collectionsName_5002Parser = parser;
+		}
+		return collectionsName_5002Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser recordsName_5003Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRecordsName_5003Parser() {
+		if (recordsName_5003Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			recordsName_5003Parser = parser;
+		}
+		return recordsName_5003Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5004Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5004Parser() {
+		if (cursorName_5004Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5004Parser = parser;
+		}
+		return cursorName_5004Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser dataTypeName_5006Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDataTypeName_5006Parser() {
+		if (dataTypeName_5006Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			dataTypeName_5006Parser = parser;
+		}
+		return dataTypeName_5006Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser collectionsName_5007Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCollectionsName_5007Parser() {
+		if (collectionsName_5007Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			collectionsName_5007Parser = parser;
+		}
+		return collectionsName_5007Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser recordsName_5008Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRecordsName_5008Parser() {
+		if (recordsName_5008Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			recordsName_5008Parser = parser;
+		}
+		return recordsName_5008Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5009Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5009Parser() {
+		if (cursorName_5009Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5009Parser = parser;
+		}
+		return cursorName_5009Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser dataTypeName_5011Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDataTypeName_5011Parser() {
+		if (dataTypeName_5011Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			dataTypeName_5011Parser = parser;
+		}
+		return dataTypeName_5011Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser collectionsName_5012Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCollectionsName_5012Parser() {
+		if (collectionsName_5012Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			collectionsName_5012Parser = parser;
+		}
+		return collectionsName_5012Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser recordsName_5013Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRecordsName_5013Parser() {
+		if (recordsName_5013Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			recordsName_5013Parser = parser;
+		}
+		return recordsName_5013Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5014Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5014Parser() {
+		if (cursorName_5014Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5014Parser = parser;
+		}
+		return cursorName_5014Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser expressionsName_5016Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExpressionsName_5016Parser() {
+		if (expressionsName_5016Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionsName_5016Parser = parser;
+		}
+		return expressionsName_5016Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser exceptionName_5017Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExceptionName_5017Parser() {
+		if (exceptionName_5017Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			exceptionName_5017Parser = parser;
+		}
+		return exceptionName_5017Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser ifName_5018Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getIfName_5018Parser() {
+		if (ifName_5018Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			ifName_5018Parser = parser;
+		}
+		return ifName_5018Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser caseName_5019Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCaseName_5019Parser() {
+		if (caseName_5019Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			caseName_5019Parser = parser;
+		}
+		return caseName_5019Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser insertName_5020Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getInsertName_5020Parser() {
+		if (insertName_5020Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			insertName_5020Parser = parser;
+		}
+		return insertName_5020Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser updateName_5021Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getUpdateName_5021Parser() {
+		if (updateName_5021Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			updateName_5021Parser = parser;
+		}
+		return updateName_5021Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser deleteName_5022Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDeleteName_5022Parser() {
+		if (deleteName_5022Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			deleteName_5022Parser = parser;
+		}
+		return deleteName_5022Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser selectName_5023Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getSelectName_5023Parser() {
+		if (selectName_5023Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			selectName_5023Parser = parser;
+		}
+		return selectName_5023Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser whileName_5024Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getWhileName_5024Parser() {
+		if (whileName_5024Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			whileName_5024Parser = parser;
+		}
+		return whileName_5024Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser forName_5025Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getForName_5025Parser() {
+		if (forName_5025Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			forName_5025Parser = parser;
+		}
+		return forName_5025Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser loopName_5026Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getLoopName_5026Parser() {
+		if (loopName_5026Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			loopName_5026Parser = parser;
+		}
+		return loopName_5026Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser openName_5027Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getOpenName_5027Parser() {
+		if (openName_5027Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			openName_5027Parser = parser;
+		}
+		return openName_5027Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser fetchName_5028Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getFetchName_5028Parser() {
+		if (fetchName_5028Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			fetchName_5028Parser = parser;
+		}
+		return fetchName_5028Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser closeName_5029Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCloseName_5029Parser() {
+		if (closeName_5029Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			closeName_5029Parser = parser;
+		}
+		return closeName_5029Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser dataTypeName_5031Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDataTypeName_5031Parser() {
+		if (dataTypeName_5031Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			dataTypeName_5031Parser = parser;
+		}
+		return dataTypeName_5031Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser collectionsName_5032Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCollectionsName_5032Parser() {
+		if (collectionsName_5032Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			collectionsName_5032Parser = parser;
+		}
+		return collectionsName_5032Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser recordsName_5033Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRecordsName_5033Parser() {
+		if (recordsName_5033Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			recordsName_5033Parser = parser;
+		}
+		return recordsName_5033Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5034Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5034Parser() {
+		if (cursorName_5034Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5034Parser = parser;
+		}
+		return cursorName_5034Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser dataTypeName_5035Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDataTypeName_5035Parser() {
+		if (dataTypeName_5035Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			dataTypeName_5035Parser = parser;
+		}
+		return dataTypeName_5035Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser collectionsName_5036Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCollectionsName_5036Parser() {
+		if (collectionsName_5036Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			collectionsName_5036Parser = parser;
+		}
+		return collectionsName_5036Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser recordsName_5037Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRecordsName_5037Parser() {
+		if (recordsName_5037Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			recordsName_5037Parser = parser;
+		}
+		return recordsName_5037Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5038Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5038Parser() {
+		if (cursorName_5038Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5038Parser = parser;
+		}
+		return cursorName_5038Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser expressionsName_5039Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExpressionsName_5039Parser() {
+		if (expressionsName_5039Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionsName_5039Parser = parser;
+		}
+		return expressionsName_5039Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser exceptionName_5040Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExceptionName_5040Parser() {
+		if (exceptionName_5040Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			exceptionName_5040Parser = parser;
+		}
+		return exceptionName_5040Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser ifName_5041Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getIfName_5041Parser() {
+		if (ifName_5041Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			ifName_5041Parser = parser;
+		}
+		return ifName_5041Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser caseName_5042Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCaseName_5042Parser() {
+		if (caseName_5042Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			caseName_5042Parser = parser;
+		}
+		return caseName_5042Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser insertName_5043Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getInsertName_5043Parser() {
+		if (insertName_5043Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			insertName_5043Parser = parser;
+		}
+		return insertName_5043Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser updateName_5044Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getUpdateName_5044Parser() {
+		if (updateName_5044Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			updateName_5044Parser = parser;
+		}
+		return updateName_5044Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser deleteName_5045Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDeleteName_5045Parser() {
+		if (deleteName_5045Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			deleteName_5045Parser = parser;
+		}
+		return deleteName_5045Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser selectName_5046Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getSelectName_5046Parser() {
+		if (selectName_5046Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			selectName_5046Parser = parser;
+		}
+		return selectName_5046Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser whileName_5047Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getWhileName_5047Parser() {
+		if (whileName_5047Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			whileName_5047Parser = parser;
+		}
+		return whileName_5047Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser forName_5048Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getForName_5048Parser() {
+		if (forName_5048Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			forName_5048Parser = parser;
+		}
+		return forName_5048Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser loopName_5049Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getLoopName_5049Parser() {
+		if (loopName_5049Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			loopName_5049Parser = parser;
+		}
+		return loopName_5049Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser openName_5050Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getOpenName_5050Parser() {
+		if (openName_5050Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			openName_5050Parser = parser;
+		}
+		return openName_5050Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser fetchName_5051Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getFetchName_5051Parser() {
+		if (fetchName_5051Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			fetchName_5051Parser = parser;
+		}
+		return fetchName_5051Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser closeName_5052Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCloseName_5052Parser() {
+		if (closeName_5052Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			closeName_5052Parser = parser;
+		}
+		return closeName_5052Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser dataTypeName_5054Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDataTypeName_5054Parser() {
+		if (dataTypeName_5054Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			dataTypeName_5054Parser = parser;
+		}
+		return dataTypeName_5054Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser collectionsName_5055Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCollectionsName_5055Parser() {
+		if (collectionsName_5055Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			collectionsName_5055Parser = parser;
+		}
+		return collectionsName_5055Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser recordsName_5056Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRecordsName_5056Parser() {
+		if (recordsName_5056Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			recordsName_5056Parser = parser;
+		}
+		return recordsName_5056Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5057Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5057Parser() {
+		if (cursorName_5057Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5057Parser = parser;
+		}
+		return cursorName_5057Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser dataTypeName_5058Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDataTypeName_5058Parser() {
+		if (dataTypeName_5058Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			dataTypeName_5058Parser = parser;
+		}
+		return dataTypeName_5058Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser collectionsName_5059Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCollectionsName_5059Parser() {
+		if (collectionsName_5059Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			collectionsName_5059Parser = parser;
+		}
+		return collectionsName_5059Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser recordsName_5060Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRecordsName_5060Parser() {
+		if (recordsName_5060Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			recordsName_5060Parser = parser;
+		}
+		return recordsName_5060Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5061Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5061Parser() {
+		if (cursorName_5061Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5061Parser = parser;
+		}
+		return cursorName_5061Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser expressionsName_5062Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExpressionsName_5062Parser() {
+		if (expressionsName_5062Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionsName_5062Parser = parser;
+		}
+		return expressionsName_5062Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser exceptionName_5063Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExceptionName_5063Parser() {
+		if (exceptionName_5063Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			exceptionName_5063Parser = parser;
+		}
+		return exceptionName_5063Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser ifName_5064Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getIfName_5064Parser() {
+		if (ifName_5064Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			ifName_5064Parser = parser;
+		}
+		return ifName_5064Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser caseName_5065Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCaseName_5065Parser() {
+		if (caseName_5065Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			caseName_5065Parser = parser;
+		}
+		return caseName_5065Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser insertName_5066Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getInsertName_5066Parser() {
+		if (insertName_5066Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			insertName_5066Parser = parser;
+		}
+		return insertName_5066Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser updateName_5067Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getUpdateName_5067Parser() {
+		if (updateName_5067Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			updateName_5067Parser = parser;
+		}
+		return updateName_5067Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser deleteName_5068Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDeleteName_5068Parser() {
+		if (deleteName_5068Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			deleteName_5068Parser = parser;
+		}
+		return deleteName_5068Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser selectName_5069Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getSelectName_5069Parser() {
+		if (selectName_5069Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			selectName_5069Parser = parser;
+		}
+		return selectName_5069Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser whileName_5070Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getWhileName_5070Parser() {
+		if (whileName_5070Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			whileName_5070Parser = parser;
+		}
+		return whileName_5070Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser forName_5071Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getForName_5071Parser() {
+		if (forName_5071Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			forName_5071Parser = parser;
+		}
+		return forName_5071Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser loopName_5072Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getLoopName_5072Parser() {
+		if (loopName_5072Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			loopName_5072Parser = parser;
+		}
+		return loopName_5072Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser openName_5073Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getOpenName_5073Parser() {
+		if (openName_5073Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			openName_5073Parser = parser;
+		}
+		return openName_5073Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser fetchName_5074Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getFetchName_5074Parser() {
+		if (fetchName_5074Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			fetchName_5074Parser = parser;
+		}
+		return fetchName_5074Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser closeName_5075Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCloseName_5075Parser() {
+		if (closeName_5075Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			closeName_5075Parser = parser;
+		}
+		return closeName_5075Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser dataTypeName_5076Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDataTypeName_5076Parser() {
+		if (dataTypeName_5076Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			dataTypeName_5076Parser = parser;
+		}
+		return dataTypeName_5076Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser collectionsName_5077Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCollectionsName_5077Parser() {
+		if (collectionsName_5077Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			collectionsName_5077Parser = parser;
+		}
+		return collectionsName_5077Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser recordsName_5078Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRecordsName_5078Parser() {
+		if (recordsName_5078Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			recordsName_5078Parser = parser;
+		}
+		return recordsName_5078Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5079Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5079Parser() {
+		if (cursorName_5079Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5079Parser = parser;
+		}
+		return cursorName_5079Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser dataTypeName_5081Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDataTypeName_5081Parser() {
+		if (dataTypeName_5081Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			dataTypeName_5081Parser = parser;
+		}
+		return dataTypeName_5081Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser collectionsName_5082Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCollectionsName_5082Parser() {
+		if (collectionsName_5082Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			collectionsName_5082Parser = parser;
+		}
+		return collectionsName_5082Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser recordsName_5083Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRecordsName_5083Parser() {
+		if (recordsName_5083Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			recordsName_5083Parser = parser;
+		}
+		return recordsName_5083Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser cursorName_5084Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCursorName_5084Parser() {
+		if (cursorName_5084Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getVariables_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			cursorName_5084Parser = parser;
+		}
+		return cursorName_5084Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser expressionsName_5085Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExpressionsName_5085Parser() {
+		if (expressionsName_5085Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionsName_5085Parser = parser;
+		}
+		return expressionsName_5085Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser exceptionName_5086Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getExceptionName_5086Parser() {
+		if (exceptionName_5086Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			exceptionName_5086Parser = parser;
+		}
+		return exceptionName_5086Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser ifName_5087Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getIfName_5087Parser() {
+		if (ifName_5087Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			ifName_5087Parser = parser;
+		}
+		return ifName_5087Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser caseName_5088Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCaseName_5088Parser() {
+		if (caseName_5088Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			caseName_5088Parser = parser;
+		}
+		return caseName_5088Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser insertName_5089Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getInsertName_5089Parser() {
+		if (insertName_5089Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			insertName_5089Parser = parser;
+		}
+		return insertName_5089Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser updateName_5090Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getUpdateName_5090Parser() {
+		if (updateName_5090Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			updateName_5090Parser = parser;
+		}
+		return updateName_5090Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser deleteName_5091Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getDeleteName_5091Parser() {
+		if (deleteName_5091Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			deleteName_5091Parser = parser;
+		}
+		return deleteName_5091Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser selectName_5092Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getSelectName_5092Parser() {
+		if (selectName_5092Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			selectName_5092Parser = parser;
+		}
+		return selectName_5092Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser whileName_5093Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getWhileName_5093Parser() {
+		if (whileName_5093Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			whileName_5093Parser = parser;
+		}
+		return whileName_5093Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser forName_5094Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getForName_5094Parser() {
+		if (forName_5094Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			forName_5094Parser = parser;
+		}
+		return forName_5094Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser loopName_5095Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getLoopName_5095Parser() {
+		if (loopName_5095Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			loopName_5095Parser = parser;
+		}
+		return loopName_5095Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser openName_5096Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getOpenName_5096Parser() {
+		if (openName_5096Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			openName_5096Parser = parser;
+		}
+		return openName_5096Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser fetchName_5097Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getFetchName_5097Parser() {
+		if (fetchName_5097Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			fetchName_5097Parser = parser;
+		}
+		return fetchName_5097Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser closeName_5098Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCloseName_5098Parser() {
+		if (closeName_5098Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE
+					.getObjects_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			closeName_5098Parser = parser;
+		}
+		return closeName_5098Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected IParser getParser(int visualID) {
+		switch (visualID) {
+		case ParametersNameEditPart.VISUAL_ID:
+			return getParametersName_5005Parser();
+		case ReturnNameEditPart.VISUAL_ID:
+			return getReturnName_5010Parser();
+		case DeclarativePartNameEditPart.VISUAL_ID:
+			return getDeclarativePartName_5015Parser();
+		case ExecutablePartNameEditPart.VISUAL_ID:
+			return getExecutablePartName_5030Parser();
+		case ProcedureNameEditPart.VISUAL_ID:
+			return getProcedureName_5053Parser();
+		case FunctionNameEditPart.VISUAL_ID:
+			return getFunctionName_5080Parser();
+		case AnonymousBlockNameEditPart.VISUAL_ID:
+			return getAnonymousBlockName_5099Parser();
+		case DataTypeNameEditPart.VISUAL_ID:
+			return getDataTypeName_5001Parser();
+		case CollectionsNameEditPart.VISUAL_ID:
+			return getCollectionsName_5002Parser();
+		case RecordsNameEditPart.VISUAL_ID:
+			return getRecordsName_5003Parser();
+		case CursorNameEditPart.VISUAL_ID:
+			return getCursorName_5004Parser();
+		case DataTypeName2EditPart.VISUAL_ID:
+			return getDataTypeName_5006Parser();
+		case CollectionsName2EditPart.VISUAL_ID:
+			return getCollectionsName_5007Parser();
+		case RecordsName2EditPart.VISUAL_ID:
+			return getRecordsName_5008Parser();
+		case CursorName2EditPart.VISUAL_ID:
+			return getCursorName_5009Parser();
+		case DataTypeName3EditPart.VISUAL_ID:
+			return getDataTypeName_5011Parser();
+		case CollectionsName3EditPart.VISUAL_ID:
+			return getCollectionsName_5012Parser();
+		case RecordsName3EditPart.VISUAL_ID:
+			return getRecordsName_5013Parser();
+		case CursorName3EditPart.VISUAL_ID:
+			return getCursorName_5014Parser();
+		case ExpressionsNameEditPart.VISUAL_ID:
+			return getExpressionsName_5016Parser();
+		case ExceptionNameEditPart.VISUAL_ID:
+			return getExceptionName_5017Parser();
+		case IfNameEditPart.VISUAL_ID:
+			return getIfName_5018Parser();
+		case CaseNameEditPart.VISUAL_ID:
+			return getCaseName_5019Parser();
+		case InsertNameEditPart.VISUAL_ID:
+			return getInsertName_5020Parser();
+		case UpdateNameEditPart.VISUAL_ID:
+			return getUpdateName_5021Parser();
+		case DeleteNameEditPart.VISUAL_ID:
+			return getDeleteName_5022Parser();
+		case SelectNameEditPart.VISUAL_ID:
+			return getSelectName_5023Parser();
+		case WhileNameEditPart.VISUAL_ID:
+			return getWhileName_5024Parser();
+		case ForNameEditPart.VISUAL_ID:
+			return getForName_5025Parser();
+		case LoopNameEditPart.VISUAL_ID:
+			return getLoopName_5026Parser();
+		case OpenNameEditPart.VISUAL_ID:
+			return getOpenName_5027Parser();
+		case FetchNameEditPart.VISUAL_ID:
+			return getFetchName_5028Parser();
+		case CloseNameEditPart.VISUAL_ID:
+			return getCloseName_5029Parser();
+		case DataTypeName4EditPart.VISUAL_ID:
+			return getDataTypeName_5031Parser();
+		case CollectionsName4EditPart.VISUAL_ID:
+			return getCollectionsName_5032Parser();
+		case RecordsName4EditPart.VISUAL_ID:
+			return getRecordsName_5033Parser();
+		case CursorName4EditPart.VISUAL_ID:
+			return getCursorName_5034Parser();
+		case DataTypeName5EditPart.VISUAL_ID:
+			return getDataTypeName_5035Parser();
+		case CollectionsName5EditPart.VISUAL_ID:
+			return getCollectionsName_5036Parser();
+		case RecordsName5EditPart.VISUAL_ID:
+			return getRecordsName_5037Parser();
+		case CursorName5EditPart.VISUAL_ID:
+			return getCursorName_5038Parser();
+		case ExpressionsName2EditPart.VISUAL_ID:
+			return getExpressionsName_5039Parser();
+		case ExceptionName2EditPart.VISUAL_ID:
+			return getExceptionName_5040Parser();
+		case IfName2EditPart.VISUAL_ID:
+			return getIfName_5041Parser();
+		case CaseName2EditPart.VISUAL_ID:
+			return getCaseName_5042Parser();
+		case InsertName2EditPart.VISUAL_ID:
+			return getInsertName_5043Parser();
+		case UpdateName2EditPart.VISUAL_ID:
+			return getUpdateName_5044Parser();
+		case DeleteName2EditPart.VISUAL_ID:
+			return getDeleteName_5045Parser();
+		case SelectName2EditPart.VISUAL_ID:
+			return getSelectName_5046Parser();
+		case WhileName2EditPart.VISUAL_ID:
+			return getWhileName_5047Parser();
+		case ForName2EditPart.VISUAL_ID:
+			return getForName_5048Parser();
+		case LoopName2EditPart.VISUAL_ID:
+			return getLoopName_5049Parser();
+		case OpenName2EditPart.VISUAL_ID:
+			return getOpenName_5050Parser();
+		case FetchName2EditPart.VISUAL_ID:
+			return getFetchName_5051Parser();
+		case CloseName2EditPart.VISUAL_ID:
+			return getCloseName_5052Parser();
+		case DataTypeName6EditPart.VISUAL_ID:
+			return getDataTypeName_5054Parser();
+		case CollectionsName6EditPart.VISUAL_ID:
+			return getCollectionsName_5055Parser();
+		case RecordsName6EditPart.VISUAL_ID:
+			return getRecordsName_5056Parser();
+		case CursorName6EditPart.VISUAL_ID:
+			return getCursorName_5057Parser();
+		case DataTypeName7EditPart.VISUAL_ID:
+			return getDataTypeName_5058Parser();
+		case CollectionsName7EditPart.VISUAL_ID:
+			return getCollectionsName_5059Parser();
+		case RecordsName7EditPart.VISUAL_ID:
+			return getRecordsName_5060Parser();
+		case CursorName7EditPart.VISUAL_ID:
+			return getCursorName_5061Parser();
+		case ExpressionsName3EditPart.VISUAL_ID:
+			return getExpressionsName_5062Parser();
+		case ExceptionName3EditPart.VISUAL_ID:
+			return getExceptionName_5063Parser();
+		case IfName3EditPart.VISUAL_ID:
+			return getIfName_5064Parser();
+		case CaseName3EditPart.VISUAL_ID:
+			return getCaseName_5065Parser();
+		case InsertName3EditPart.VISUAL_ID:
+			return getInsertName_5066Parser();
+		case UpdateName3EditPart.VISUAL_ID:
+			return getUpdateName_5067Parser();
+		case DeleteName3EditPart.VISUAL_ID:
+			return getDeleteName_5068Parser();
+		case SelectName3EditPart.VISUAL_ID:
+			return getSelectName_5069Parser();
+		case WhileName3EditPart.VISUAL_ID:
+			return getWhileName_5070Parser();
+		case ForName3EditPart.VISUAL_ID:
+			return getForName_5071Parser();
+		case LoopName3EditPart.VISUAL_ID:
+			return getLoopName_5072Parser();
+		case OpenName3EditPart.VISUAL_ID:
+			return getOpenName_5073Parser();
+		case FetchName3EditPart.VISUAL_ID:
+			return getFetchName_5074Parser();
+		case CloseName3EditPart.VISUAL_ID:
+			return getCloseName_5075Parser();
+		case DataTypeName8EditPart.VISUAL_ID:
+			return getDataTypeName_5076Parser();
+		case CollectionsName8EditPart.VISUAL_ID:
+			return getCollectionsName_5077Parser();
+		case RecordsName8EditPart.VISUAL_ID:
+			return getRecordsName_5078Parser();
+		case CursorName8EditPart.VISUAL_ID:
+			return getCursorName_5079Parser();
+		case DataTypeName9EditPart.VISUAL_ID:
+			return getDataTypeName_5081Parser();
+		case CollectionsName9EditPart.VISUAL_ID:
+			return getCollectionsName_5082Parser();
+		case RecordsName9EditPart.VISUAL_ID:
+			return getRecordsName_5083Parser();
+		case CursorName9EditPart.VISUAL_ID:
+			return getCursorName_5084Parser();
+		case ExpressionsName4EditPart.VISUAL_ID:
+			return getExpressionsName_5085Parser();
+		case ExceptionName4EditPart.VISUAL_ID:
+			return getExceptionName_5086Parser();
+		case IfName4EditPart.VISUAL_ID:
+			return getIfName_5087Parser();
+		case CaseName4EditPart.VISUAL_ID:
+			return getCaseName_5088Parser();
+		case InsertName4EditPart.VISUAL_ID:
+			return getInsertName_5089Parser();
+		case UpdateName4EditPart.VISUAL_ID:
+			return getUpdateName_5090Parser();
+		case DeleteName4EditPart.VISUAL_ID:
+			return getDeleteName_5091Parser();
+		case SelectName4EditPart.VISUAL_ID:
+			return getSelectName_5092Parser();
+		case WhileName4EditPart.VISUAL_ID:
+			return getWhileName_5093Parser();
+		case ForName4EditPart.VISUAL_ID:
+			return getForName_5094Parser();
+		case LoopName4EditPart.VISUAL_ID:
+			return getLoopName_5095Parser();
+		case OpenName4EditPart.VISUAL_ID:
+			return getOpenName_5096Parser();
+		case FetchName4EditPart.VISUAL_ID:
+			return getFetchName_5097Parser();
+		case CloseName4EditPart.VISUAL_ID:
+			return getCloseName_5098Parser();
+		}
+		return null;
+	}
+
+	/**
+	 * Utility method that consults ParserService
+	 * @generated
+	 */
+	public static IParser getParser(IElementType type, EObject object,
+			String parserHint) {
+		return ParserService.getInstance().getParser(
+				new HintAdapter(type, object, parserHint));
+	}
+
+	/**
+	 * @generated
+	 */
+	public IParser getParser(IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(CrystalVisualIDRegistry.getVisualID(vid));
+		}
+		View view = (View) hint.getAdapter(View.class);
+		if (view != null) {
+			return getParser(CrystalVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public boolean provides(IOperation operation) {
+		if (operation instanceof GetParserOperation) {
+			IAdaptable hint = ((GetParserOperation) operation).getHint();
+			if (CrystalElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static class HintAdapter extends ParserHintAdapter {
+
+		/**
+		 * @generated
+		 */
+		private final IElementType elementType;
+
+		/**
+		 * @generated
+		 */
+		public HintAdapter(IElementType type, EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+		 * @generated
+		 */
+		public Object getAdapter(Class adapter) {
+			if (IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+}

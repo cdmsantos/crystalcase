@@ -1,0 +1,28 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ElementInitializers {
+
+	protected ElementInitializers() {
+		// use #getInstance to access cached instance
+	} 
+
+			
+	
+	
+	/**
+ * @generated
+ */
+	public static ElementInitializers getInstance() {
+		ElementInitializers cached = filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().getElementInitializers();
+		if (cached == null) {
+			filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
+		}
+		return cached;
+	}
+}

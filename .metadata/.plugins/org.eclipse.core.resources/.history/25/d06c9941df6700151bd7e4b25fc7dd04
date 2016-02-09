@@ -1,0 +1,381 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.*;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Factory</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class FilesystemFactoryImpl extends EFactoryImpl implements FilesystemFactory {
+	/**
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static FilesystemFactory init() {
+		try {
+			FilesystemFactory theFilesystemFactory = (FilesystemFactory)EPackage.Registry.INSTANCE.getEFactory(FilesystemPackage.eNS_URI);
+			if (theFilesystemFactory != null) {
+				return theFilesystemFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new FilesystemFactoryImpl();
+	}
+
+	/**
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FilesystemFactoryImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EObject create(EClass eClass) {
+		switch (eClass.getClassifierID()) {
+			case FilesystemPackage.FILESYSTEM: return createFilesystem();
+			case FilesystemPackage.DRIVE: return createDrive();
+			case FilesystemPackage.FILE: return createFile();
+			case FilesystemPackage.FOLDER: return createFolder();
+			case FilesystemPackage.PARAMETERS: return createParameters();
+			case FilesystemPackage.RETURN: return createReturn();
+			case FilesystemPackage.DECLARATIVE_PART: return createDeclarativePart();
+			case FilesystemPackage.EXECUTABLE_PART: return createExecutablePart();
+			case FilesystemPackage.EXCEPTION_PART: return createExceptionPart();
+			case FilesystemPackage.DATA_TYPE: return createData_Type();
+			case FilesystemPackage.PARAMETER_IN: return createParameterIn();
+			case FilesystemPackage.PARAMETER_OUT: return createParameterOut();
+			case FilesystemPackage.PARAMETER_IN_OUT: return createParameterInOut();
+			case FilesystemPackage.EXCEPTION_COMMAND: return createExceptionCommand();
+			case FilesystemPackage.IF: return createIf();
+			case FilesystemPackage.CASE: return createCase();
+			case FilesystemPackage.INSERT: return createInsert();
+			case FilesystemPackage.UPDATE: return createUpdate();
+			case FilesystemPackage.DELETE: return createDelete();
+			case FilesystemPackage.OUTPUT: return createOutput();
+			case FilesystemPackage.SELECT: return createSelect();
+			case FilesystemPackage.CURSOR: return createCursor();
+			case FilesystemPackage.WHILE: return createWhile();
+			case FilesystemPackage.FOR: return createFor();
+			case FilesystemPackage.LOOP: return createLoop();
+			case FilesystemPackage.SYNC: return createSync();
+			case FilesystemPackage.SHORTCUT: return createShortcut();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Filesystem createFilesystem() {
+		FilesystemImpl filesystem = new FilesystemImpl();
+		return filesystem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Drive createDrive() {
+		DriveImpl drive = new DriveImpl();
+		return drive;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public File createFile() {
+		FileImpl file = new FileImpl();
+		return file;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Folder createFolder() {
+		FolderImpl folder = new FolderImpl();
+		return folder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameters createParameters() {
+		ParametersImpl parameters = new ParametersImpl();
+		return parameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Return createReturn() {
+		ReturnImpl return_ = new ReturnImpl();
+		return return_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeclarativePart createDeclarativePart() {
+		DeclarativePartImpl declarativePart = new DeclarativePartImpl();
+		return declarativePart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExecutablePart createExecutablePart() {
+		ExecutablePartImpl executablePart = new ExecutablePartImpl();
+		return executablePart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExceptionPart createExceptionPart() {
+		ExceptionPartImpl exceptionPart = new ExceptionPartImpl();
+		return exceptionPart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Data_Type createData_Type() {
+		Data_TypeImpl data_Type = new Data_TypeImpl();
+		return data_Type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ParameterIn createParameterIn() {
+		ParameterInImpl parameterIn = new ParameterInImpl();
+		return parameterIn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ParameterOut createParameterOut() {
+		ParameterOutImpl parameterOut = new ParameterOutImpl();
+		return parameterOut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ParameterInOut createParameterInOut() {
+		ParameterInOutImpl parameterInOut = new ParameterInOutImpl();
+		return parameterInOut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExceptionCommand createExceptionCommand() {
+		ExceptionCommandImpl exceptionCommand = new ExceptionCommandImpl();
+		return exceptionCommand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public If createIf() {
+		IfImpl if_ = new IfImpl();
+		return if_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Case createCase() {
+		CaseImpl case_ = new CaseImpl();
+		return case_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Insert createInsert() {
+		InsertImpl insert = new InsertImpl();
+		return insert;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Update createUpdate() {
+		UpdateImpl update = new UpdateImpl();
+		return update;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Delete createDelete() {
+		DeleteImpl delete = new DeleteImpl();
+		return delete;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Output createOutput() {
+		OutputImpl output = new OutputImpl();
+		return output;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Select createSelect() {
+		SelectImpl select = new SelectImpl();
+		return select;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cursor createCursor() {
+		CursorImpl cursor = new CursorImpl();
+		return cursor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public While createWhile() {
+		WhileImpl while_ = new WhileImpl();
+		return while_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public For createFor() {
+		ForImpl for_ = new ForImpl();
+		return for_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Loop createLoop() {
+		LoopImpl loop = new LoopImpl();
+		return loop;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Sync createSync() {
+		SyncImpl sync = new SyncImpl();
+		return sync;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Shortcut createShortcut() {
+		ShortcutImpl shortcut = new ShortcutImpl();
+		return shortcut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FilesystemPackage getFilesystemPackage() {
+		return (FilesystemPackage)getEPackage();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @deprecated
+	 * @generated
+	 */
+	@Deprecated
+	public static FilesystemPackage getPackage() {
+		return FilesystemPackage.eINSTANCE;
+	}
+
+} //FilesystemFactoryImpl

@@ -1,0 +1,32 @@
+	/*
+ * 
+ */
+package filesystem.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class ReturnReturnTipo_retornoCompartmentItemSemanticEditPolicy extends filesystem.diagram.edit.policies.FilesystemBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public ReturnReturnTipo_retornoCompartmentItemSemanticEditPolicy() {
+				super(filesystem.diagram.providers.FilesystemElementTypes.Return_2002);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (filesystem.diagram.providers.FilesystemElementTypes.Return_3001 == req.getElementType()) {
+	return getGEFWrapper(new filesystem.diagram.edit.commands.Return2CreateCommand(req));
+}
+		if (filesystem.diagram.providers.FilesystemElementTypes.Data_Type_3002 == req.getElementType()) {
+	return getGEFWrapper(new filesystem.diagram.edit.commands.Data_TypeCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

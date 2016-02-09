@@ -1,0 +1,38 @@
+	/*
+ * 
+ */
+package crystal.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class FunctionFunctionParametersCompartmentItemSemanticEditPolicy extends crystal.diagram.edit.policies.CrystalBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public FunctionFunctionParametersCompartmentItemSemanticEditPolicy() {
+				super(crystal.diagram.providers.CrystalElementTypes.Function_2002);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (crystal.diagram.providers.CrystalElementTypes.DataType_3022 == req.getElementType()) {
+	return getGEFWrapper(new crystal.diagram.edit.commands.DataType3CreateCommand(req));
+}
+		if (crystal.diagram.providers.CrystalElementTypes.Collections_3023 == req.getElementType()) {
+	return getGEFWrapper(new crystal.diagram.edit.commands.Collections3CreateCommand(req));
+}
+		if (crystal.diagram.providers.CrystalElementTypes.Records_3024 == req.getElementType()) {
+	return getGEFWrapper(new crystal.diagram.edit.commands.Records3CreateCommand(req));
+}
+		if (crystal.diagram.providers.CrystalElementTypes.Cursor_3025 == req.getElementType()) {
+	return getGEFWrapper(new crystal.diagram.edit.commands.Cursor3CreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

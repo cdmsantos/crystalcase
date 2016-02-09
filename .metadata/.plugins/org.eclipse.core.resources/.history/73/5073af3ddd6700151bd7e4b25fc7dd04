@@ -1,0 +1,67 @@
+pluginName=Filesystem Plugin
+providerName=Sample Plugin Provider, Inc
+
+editorName=Filesystem Diagram Editing
+context.description=Filesystem Diagram Editing
+context.name=In Filesystem Diagram Editor
+newWizardName=Filesystem Diagram
+newWizardDesc=Creates Filesystem diagram.
+
+initDiagramActionLabel=Initialize filesystem_diagram diagram file
+
+
+navigatorContentName=*.filesystem_diagram diagram contents
+domainNavigatorContentName=*.filesystem model contents
+update.diagram.name=Update Filesystem diagram
+update.diagram.description=Perform Filesystem diagram update
+
+
+# Property Sheet
+tab.appearance=Appearance
+tab.diagram=Rulers & Grid
+tab.domain=Core
+
+# Preferences
+prefpage.teste.diagram.general=Filesystem Diagram
+prefpage.teste.diagram.appearance=Appearance
+prefpage.teste.diagram.connections=Connections
+prefpage.teste.diagram.printing=Printing
+prefpage.teste.diagram.rulersAndGrid=Rulers And Grid
+
+
+# Providers
+metatype.name.Filesystem_1000=Undefined
+metatype.name.Drive_2001=Drive
+metatype.name.Drive_3001=Drive
+metatype.name.Folder_3002=Folder
+metatype.name.Shortcut_3003=Shortcut
+metatype.name.File_3004=File
+metatype.name.Sync_4001=Sync
+metatype.name.ShortcutTarget_4002=Undefined
+
+# Commands and menu actions
+cmdcategory.name=Filesystem Editor Commands
+cmdcategory.desc=Filesystem Editor Commands
+
+metatype.name.DeclarativePart_2002=DeclarativePart
+metatype.name.ExecutablePart_2003=ExecutablePart
+metatype.name.ExceptionPart_2004=ExceptionPart
+metatype.name.Shortcut_3005=Shortcut
+metatype.name.Datatype_2005=Datatype
+metatype.name.If_2006=If
+metatype.name.Case_2007=Case
+metatype.name.Insert_2008=Insert
+metatype.name.Update_2009=Update
+metatype.name.Delete_2010=Delete
+metatype.name.Output_2011=Output
+metatype.name.Select_2012=Select
+metatype.name.Cursor_2013=Cursor
+metatype.name.While_2014=While
+metatype.name.For_2015=For
+metatype.name.Loop_2016=Loop
+metatype.name.Exception_2017=Exception
+metatype.name.ParameterIn_2018=ParameterIn
+metatype.name.ParameterOut_2019=ParameterOut
+metatype.name.ParameterInOut_2020=ParameterInOut
+metatype.name.Parameters_2021=Parameters
+metatype.name.Return_2022=Return

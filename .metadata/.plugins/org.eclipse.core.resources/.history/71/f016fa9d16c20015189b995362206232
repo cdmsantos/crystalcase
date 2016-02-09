@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="crystal">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="TransitionFigureTargetDecoration"/>
+    <descriptors name="ProcedureFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ProcedureFigure" lineKind="LINE_DASH">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="13" blue="13"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ProcedureLabelFigure" text="Procedure">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="ProcedureDeclarativePartCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="ProcedureExecutablePartCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="ProcedureParametersCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureProcedureLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors accessor="getProcedureDeclarativePartCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      <accessors accessor="getProcedureExecutablePartCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.2"/>
+      <accessors accessor="getProcedureParametersCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.3"/>
+    </descriptors>
+    <descriptors name="FunctionFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="FunctionFigure" lineKind="LINE_DASH">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="25" green="191" blue="108"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="FunctionLabelFigure" text="Function">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="FunctionDeclarativePartCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="FunctionExecutablePartCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="FunctionParametersCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="FunctionReturnPartCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureFunctionLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getFunctionDeclarativePartCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors accessor="getFunctionExecutablePartCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+      <accessors accessor="getFunctionParametersCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.3"/>
+      <accessors accessor="getFunctionReturnPartCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.4"/>
+    </descriptors>
+    <descriptors name="AnonymousBlockFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="AnonymousBlockFigure" lineKind="LINE_DASH">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="43" green="106" blue="215"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AnonymousBlockLabelFigure" text="Anonymous Block">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="AnonymousBlockDeclarativePartCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="AnonymousBlockExecutablePartCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureAnonymousBlockLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors accessor="getAnonymousBlockDeclarativePartCompartmentFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+      <accessors accessor="getAnonymousBlockExecutablePartCompartmentFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="DataTypeFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DataTypeFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="DataTypeLabelFigure" text="DataType"/>
+      </actualFigure>
+      <accessors accessor="getFigureDataTypeLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="CollectionsFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CollectionsFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="CollectionsLabelFigure" text="Collections"/>
+      </actualFigure>
+      <accessors accessor="getFigureCollectionsLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="RecordsFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="RecordsFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="RecordsLabelFigure" text="Records"/>
+      </actualFigure>
+      <accessors accessor="getFigureRecordsLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="CursorFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CursorFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="CursorLabelFigure" text="Cursor"/>
+      </actualFigure>
+      <accessors accessor="getFigureCursorLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ExpressionsFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ExpressionsFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ExpressionsLabelFigure" text="Expressions"/>
+      </actualFigure>
+      <accessors accessor="getFigureExpressionsLabelFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ExceptionFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ExceptionFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ExceptionLabelFigure" text="Exception"/>
+      </actualFigure>
+      <accessors accessor="getFigureExceptionLabelFigure" figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="IfFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="IfFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="IfLabelFigure" text="If"/>
+      </actualFigure>
+      <accessors accessor="getFigureIfLabelFigure" figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="CaseFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CaseFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="CaseLabelFigure" text="Case"/>
+      </actualFigure>
+      <accessors accessor="getFigureCaseLabelFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="InsertFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="InsertFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="InsertLabelFigure" text="Insert"/>
+      </actualFigure>
+      <accessors accessor="getFigureInsertLabelFigure" figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="UpdateFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="UpdateFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="UpdateLabelFigure" text="Update"/>
+      </actualFigure>
+      <accessors accessor="getFigureUpdateLabelFigure" figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="DeleteFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DeleteFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="DeleteLabelFigure" text="Delete"/>
+      </actualFigure>
+      <accessors accessor="getFigureDeleteLabelFigure" figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="SelectFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="SelectFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="SelectLabelFigure" text="Select"/>
+      </actualFigure>
+      <accessors accessor="getFigureSelectLabelFigure" figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="WhileFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="WhileFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="WhileLabelFigure" text="While"/>
+      </actualFigure>
+      <accessors accessor="getFigureWhileLabelFigure" figure="//@figures.0/@descriptors.15/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ForFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ForFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ForLabelFigure" text="For"/>
+      </actualFigure>
+      <accessors accessor="getFigureForLabelFigure" figure="//@figures.0/@descriptors.16/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="LoopFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="LoopFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="LoopLabelFigure" text="Loop"/>
+      </actualFigure>
+      <accessors accessor="getFigureLoopLabelFigure" figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="OpenFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="OpenFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="OpenLabelFigure" text="Open"/>
+      </actualFigure>
+      <accessors accessor="getFigureOpenLabelFigure" figure="//@figures.0/@descriptors.18/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="FetchFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="FetchFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="FetchLabelFigure" text="Fetch"/>
+      </actualFigure>
+      <accessors accessor="getFigureFetchLabelFigure" figure="//@figures.0/@descriptors.19/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="CloseFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CloseFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="CloseLabelFigure" text="Close"/>
+      </actualFigure>
+      <accessors accessor="getFigureCloseLabelFigure" figure="//@figures.0/@descriptors.20/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TransitionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TransitionFigure" targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
+    </descriptors>
+  </figures>
+  <nodes name="Procedure" figure="ProcedureFigure"/>
+  <nodes name="Function" figure="FunctionFigure"/>
+  <nodes name="AnonymousBlock" figure="AnonymousBlockFigure"/>
+  <nodes name="DataType" figure="DataTypeFigure"/>
+  <nodes name="Collections" figure="CollectionsFigure"/>
+  <nodes name="Records" figure="RecordsFigure"/>
+  <nodes name="Cursor" figure="CursorFigure"/>
+  <nodes name="Expressions" figure="ExpressionsFigure"/>
+  <nodes name="Exception" figure="ExceptionFigure"/>
+  <nodes name="If" figure="IfFigure"/>
+  <nodes name="Case" figure="CaseFigure"/>
+  <nodes name="Insert" figure="InsertFigure"/>
+  <nodes name="Update" figure="UpdateFigure"/>
+  <nodes name="Delete" figure="DeleteFigure"/>
+  <nodes name="Select" figure="SelectFigure"/>
+  <nodes name="While" figure="WhileFigure"/>
+  <nodes name="For" figure="ForFigure"/>
+  <nodes name="Loop" figure="LoopFigure"/>
+  <nodes name="Open" figure="OpenFigure"/>
+  <nodes name="Fetch" figure="FetchFigure"/>
+  <nodes name="Close" figure="CloseFigure"/>
+  <connections name="Transition" figure="TransitionFigure"/>
+  <compartments name="ProcedureDeclarativePartCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <compartments name="ProcedureExecutablePartCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.2"/>
+  <compartments name="ProcedureParametersCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.3"/>
+  <compartments name="FunctionDeclarativePartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <compartments name="FunctionExecutablePartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.2"/>
+  <compartments name="FunctionParametersCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.3"/>
+  <compartments name="FunctionReturnPartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.4"/>
+  <compartments name="AnonymousBlockDeclarativePartCompartment" figure="AnonymousBlockFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <compartments name="AnonymousBlockExecutablePartCompartment" figure="AnonymousBlockFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.2"/>
+  <labels name="ProcedureLabel" figure="ProcedureFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="FunctionLabel" figure="FunctionFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="AnonymousBlockLabel" figure="AnonymousBlockFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="DataTypeLabel" figure="DataTypeFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="CollectionsLabel" figure="CollectionsFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="RecordsLabel" figure="RecordsFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="CursorLabel" figure="CursorFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="ExpressionsLabel" figure="ExpressionsFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <labels name="ExceptionLabel" figure="ExceptionFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="IfLabel" figure="IfFigure" accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+  <labels name="CaseLabel" figure="CaseFigure" accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+  <labels name="InsertLabel" figure="InsertFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+  <labels name="UpdateLabel" figure="UpdateFigure" accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <labels name="DeleteLabel" figure="DeleteFigure" accessor="//@figures.0/@descriptors.13/@accessors.0"/>
+  <labels name="SelectLabel" figure="SelectFigure" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
+  <labels name="WhileLabel" figure="WhileFigure" accessor="//@figures.0/@descriptors.15/@accessors.0"/>
+  <labels name="ForLabel" figure="ForFigure" accessor="//@figures.0/@descriptors.16/@accessors.0"/>
+  <labels name="LoopLabel" figure="LoopFigure" accessor="//@figures.0/@descriptors.17/@accessors.0"/>
+  <labels name="OpenLabel" figure="OpenFigure" accessor="//@figures.0/@descriptors.18/@accessors.0"/>
+  <labels name="FetchLabel" figure="FetchFigure" accessor="//@figures.0/@descriptors.19/@accessors.0"/>
+  <labels name="CloseLabel" figure="CloseFigure" accessor="//@figures.0/@descriptors.20/@accessors.0"/>
+</gmfgraph:Canvas>

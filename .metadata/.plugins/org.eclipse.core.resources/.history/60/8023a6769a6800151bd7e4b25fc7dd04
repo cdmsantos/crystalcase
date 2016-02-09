@@ -1,0 +1,201 @@
+	/*
+ * 
+ */
+package filesystem.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class Loop2ItemSemanticEditPolicy extends filesystem.diagram.edit.policies.FilesystemBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public Loop2ItemSemanticEditPolicy() {
+				super(filesystem.diagram.providers.FilesystemElementTypes.Loop_3015);
+	}
+
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDestroyElementCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest req) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) getHost().getModel();
+	org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand cmd = new org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand(getEditingDomain(), null);
+	cmd.setTransactionNestingEnabled(false);
+		org.eclipse.emf.ecore.EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
+	if (annotation == null) {
+		// there are indirectly referenced children, need extra commands: false
+		addDestroyChildNodesCommand(cmd);
+		addDestroyShortcutsCommand(cmd, view);
+		// delete host element
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(req));
+	} else {
+		cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), view));
+	}
+	return getGEFWrapper(cmd.reduce());
+}
+			
+	/**
+ * @generated
+ */
+	private void addDestroyChildNodesCommand(org.eclipse.gmf.runtime.common.core.command.ICompositeCommand cmd) {
+		org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) getHost().getModel();
+		for (java.util.Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
+			org.eclipse.gmf.runtime.notation.Node node = (org.eclipse.gmf.runtime.notation.Node) nit.next();
+			switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(node)) {
+									case filesystem.diagram.edit.parts.LoopLoopIfsCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.If2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopCasesCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.Case2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopInsertsCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.Insert2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopUpdatesCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.Update2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopDeletesCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.Delete2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopSelectsCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.Select2EditPart.VISUAL_ID:
+		for (java.util.Iterator<?> it = cnode.getSourceEdges().iterator(); it.hasNext();) {
+		org.eclipse.gmf.runtime.notation.Edge outgoingLink = (org.eclipse.gmf.runtime.notation.Edge) it.next();
+		if (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(outgoingLink) == filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID) {
+			org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest r = new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(outgoingLink.getElement(), false);
+			cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(r));
+			cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), outgoingLink));
+			continue;
+		}
+	}
+	cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopOutuputsCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.Output2EditPart.VISUAL_ID:
+		for (java.util.Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
+		org.eclipse.gmf.runtime.notation.Edge incomingLink = (org.eclipse.gmf.runtime.notation.Edge) it.next();
+		if (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(incomingLink) == filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID) {
+			org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest r = new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(incomingLink.getElement(), false);
+			cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(r));
+			cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), incomingLink));
+			continue;
+		}
+	}
+	cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopCursorsCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.Cursor2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopWhilesCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.While2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopForsCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.For2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case filesystem.diagram.edit.parts.LoopLoopLoopsCompartmentEditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(cnode)) {
+					case filesystem.diagram.edit.parts.Loop2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						}
+		}
+	}
+					
+	}

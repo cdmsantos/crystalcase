@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="crystal" nsURI="crystal" nsPrefix="crystal">
+  <eAnnotations source="gmf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Crystal">
+    <eAnnotations source="gmf.diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
+        eType="#//Transition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" lowerBound="1"
+        eType="#//Parameters" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="return" lowerBound="1"
+        eType="#//Return" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declarativePart" lowerBound="1"
+        eType="#//DeclarativePart" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executablePart" lowerBound="1"
+        eType="#//ExecutablePart" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sections"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameters" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+      <details key="figure" value="rounded"/>
+      <details key="size" value="150,200"/>
+      <details key="border.color" value="255,13,13"/>
+      <details key="border.style" value="dash"/>
+      <details key="label.readOnly" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Parameters"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Return" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="size" value="150,200"/>
+      <details key="border.color" value="25,191,108"/>
+      <details key="border.style" value="dash"/>
+      <details key="label.readOnly" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Return"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclarativePart" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="size" value="150,200"/>
+      <details key="border.color" value="43,106,215"/>
+      <details key="border.style" value="dash"/>
+      <details key="label.readOnly" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Declarative Part"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutablePart" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+      <details key="size" value="450,450"/>
+      <details key="figure" value="rectangle"/>
+      <details key="border.color" value="158,25,191"/>
+      <details key="border.style" value="dash"/>
+      <details key="label.readOnly" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Executable Part"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Objects" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variables"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Variables">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="DATATYPE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//ParameterType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="DATATYPE: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Collections" eSuperTypes="#//Variables">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="COLLECTION"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//ParameterType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="COLLECTION: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Records" eSuperTypes="#//Variables">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="RECORD"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//ParameterType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="RECORD: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cursor" eSuperTypes="#//Variables">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="CURSOR"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//ParameterType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="CURSOR: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expressions" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="EXPRESSION"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="EXPRESSION: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exception" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="EXCEPTION"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="EXCEPTION: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="IF"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="IF: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Case" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="CASE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="CASE: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="INSERT"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="INSERT: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="UPDATE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="UPDATE: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="DELETE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="DELETE: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="SELECT"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="SELECT: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="While" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="WHILE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="WHILE: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="For" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="FOR"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="FOR: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="LOOP"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="LOOP: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Open" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="OPEN"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="OPEN: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fetch" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="FETCH"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="FETCH: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Close" eSuperTypes="#//Objects">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="CLOSE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code."/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="CLOSE: Type the description."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="start"/>
+      <details key="target" value="end"/>
+      <details key="target.decoration" value="arrow"/>
+      <details key="color" value="0,0,0"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="connection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="start" eType="#//Objects"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="end" eType="#//Objects"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ParameterType">
+    <eLiterals name="None"/>
+    <eLiterals name="In" value="1"/>
+    <eLiterals name="Out" value="2"/>
+    <eLiterals name="InOut" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,184 @@
+	/*
+ * 
+ */
+package filesystem.diagram.part;
+
+	/**
+ * @generated
+ */
+public class FilesystemDiagramUpdater {
+		
+	/**
+ * @generated
+ */
+public static boolean isShortcutOrphaned(org.eclipse.gmf.runtime.notation.View view) {
+	return !view.isSetElement() || view.getElement() == null || view.getElement().eIsProxy();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view)) {
+		case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:
+	return getFilesystem_1000SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemNodeDescriptor> getFilesystem_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+filesystem.Filesystem modelElement = (filesystem.Filesystem) view.getElement();
+	java.util.LinkedList<filesystem.diagram.part.FilesystemNodeDescriptor> result = new java.util.LinkedList<filesystem.diagram.part.FilesystemNodeDescriptor>();
+						{ filesystem.Parameters childElement = modelElement.getParameters();
+					int visualID = filesystem.diagram.part.FilesystemVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID) {
+	result.add(new filesystem.diagram.part.FilesystemNodeDescriptor(childElement, visualID));
+}
+	}
+						{ filesystem.Return childElement = modelElement.getReturn();
+					int visualID = filesystem.diagram.part.FilesystemVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID) {
+	result.add(new filesystem.diagram.part.FilesystemNodeDescriptor(childElement, visualID));
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view)) {
+		case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:
+	return getFilesystem_1000ContainedLinks(view);
+case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+	return getParameters_2001ContainedLinks(view);
+case filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+	return getReturn_2002ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view)) {
+		case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+	return getParameters_2001IncomingLinks(view);
+case filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+	return getReturn_2002IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view)) {
+		case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+	return getParameters_2001OutgoingLinks(view);
+case filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+	return getReturn_2002OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getFilesystem_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getParameters_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getReturn_2002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getParameters_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getReturn_2002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getParameters_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getReturn_2002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+				
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<filesystem.diagram.part.FilesystemNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return FilesystemDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return FilesystemDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return FilesystemDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<filesystem.diagram.part.FilesystemLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return FilesystemDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

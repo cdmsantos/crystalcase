@@ -1,0 +1,19 @@
+
+public class Edge {
+	public Vertex initialCity;
+	public Vertex finalCity;
+	public int distance;
+	public Edge next;
+
+	public Edge(Vertex initialCity, Vertex finalCity, int distance) {
+		this.initialCity = initialCity;
+		this.finalCity = finalCity;
+		this.distance = distance;
+		this.next = null;
+	}
+	 
+	public Edge next(Edge edge) {
+		this.next = edge;
+		return this;
+	}
+}

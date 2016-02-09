@@ -1,0 +1,41 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.DeclarativePart;
+import filesystem.FilesystemPackage;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Declarative Part</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+public class DeclarativePartImpl extends EObjectImpl implements DeclarativePart {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DeclarativePartImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.DECLARATIVE_PART;
+	}
+
+} //DeclarativePartImpl

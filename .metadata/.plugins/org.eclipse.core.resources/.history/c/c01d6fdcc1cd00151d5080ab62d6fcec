@@ -1,0 +1,17 @@
+	/*
+ * 
+ */
+package crystal.diagram.part;
+
+	/**
+ * @generated
+ */
+public class CrystalNodeDescriptor extends org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor {
+		/**
+ * @generated
+ */
+public CrystalNodeDescriptor(org.eclipse.emf.ecore.EObject modelElement, int visualID) {
+	super(modelElement, visualID);
+}
+
+	}

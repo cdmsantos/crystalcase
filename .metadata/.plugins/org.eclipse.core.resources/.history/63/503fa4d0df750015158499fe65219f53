@@ -1,0 +1,23 @@
+package Graph;
+
+/**
+ * Class Edge represents the route between two cities.
+ **/
+public class Edge {
+	public Vertex source; //initial city
+	public Vertex target;
+	public int distance;
+	public Edge next;
+
+	public Edge(Vertex source, Vertex target, int distance) {
+		this.source = source;
+		this.target = target;
+		this.distance = distance;
+		this.next = null;
+	}
+	 
+	public Edge next(Edge edge) {
+		this.next = edge;
+		return this;
+	}
+}

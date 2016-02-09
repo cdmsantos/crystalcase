@@ -1,0 +1,39 @@
+/**
+ */
+package crystal.impl;
+
+import crystal.CallFunction;
+import crystal.CrystalPackage;
+
+import org.eclipse.emf.ecore.EClass;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Call Function</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+public class CallFunctionImpl extends StatementsImpl implements CallFunction {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CallFunctionImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CrystalPackage.Literals.CALL_FUNCTION;
+	}
+
+} //CallFunctionImpl

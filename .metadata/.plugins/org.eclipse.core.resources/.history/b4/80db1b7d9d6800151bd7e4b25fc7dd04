@@ -1,0 +1,554 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers;
+
+/**
+ * @generated
+ */
+public class FilesystemParserProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider implements org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider {
+	
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser data_TypeNameReturn_5001Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getData_TypeNameReturn_5001Parser() {
+		if (data_TypeNameReturn_5001Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getReturn_NameReturn()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								data_TypeNameReturn_5001Parser = parser;
+		}
+		return data_TypeNameReturn_5001Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser ifNameExecutablePart_5002Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getIfNameExecutablePart_5002Parser() {
+		if (ifNameExecutablePart_5002Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								ifNameExecutablePart_5002Parser = parser;
+		}
+		return ifNameExecutablePart_5002Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser caseNameExecutablePart_5003Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCaseNameExecutablePart_5003Parser() {
+		if (caseNameExecutablePart_5003Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								caseNameExecutablePart_5003Parser = parser;
+		}
+		return caseNameExecutablePart_5003Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser insertNameExecutablePart_5004Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getInsertNameExecutablePart_5004Parser() {
+		if (insertNameExecutablePart_5004Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								insertNameExecutablePart_5004Parser = parser;
+		}
+		return insertNameExecutablePart_5004Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser updateNameExecutablePart_5005Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getUpdateNameExecutablePart_5005Parser() {
+		if (updateNameExecutablePart_5005Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								updateNameExecutablePart_5005Parser = parser;
+		}
+		return updateNameExecutablePart_5005Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser deleteNameExecutablePart_5006Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDeleteNameExecutablePart_5006Parser() {
+		if (deleteNameExecutablePart_5006Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								deleteNameExecutablePart_5006Parser = parser;
+		}
+		return deleteNameExecutablePart_5006Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser selectNameExecutablePart_5007Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getSelectNameExecutablePart_5007Parser() {
+		if (selectNameExecutablePart_5007Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								selectNameExecutablePart_5007Parser = parser;
+		}
+		return selectNameExecutablePart_5007Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser outputNameExecutablePart_5008Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getOutputNameExecutablePart_5008Parser() {
+		if (outputNameExecutablePart_5008Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								outputNameExecutablePart_5008Parser = parser;
+		}
+		return outputNameExecutablePart_5008Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser cursorNameExecutablePart_5009Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCursorNameExecutablePart_5009Parser() {
+		if (cursorNameExecutablePart_5009Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								cursorNameExecutablePart_5009Parser = parser;
+		}
+		return cursorNameExecutablePart_5009Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser whileNameExecutablePart_5010Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getWhileNameExecutablePart_5010Parser() {
+		if (whileNameExecutablePart_5010Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								whileNameExecutablePart_5010Parser = parser;
+		}
+		return whileNameExecutablePart_5010Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser forNameExecutablePart_5011Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getForNameExecutablePart_5011Parser() {
+		if (forNameExecutablePart_5011Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								forNameExecutablePart_5011Parser = parser;
+		}
+		return forNameExecutablePart_5011Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser loopNameExecutablePart_5012Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getLoopNameExecutablePart_5012Parser() {
+		if (loopNameExecutablePart_5012Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								loopNameExecutablePart_5012Parser = parser;
+		}
+		return loopNameExecutablePart_5012Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser exceptionCommandNameExceptionPart_5013Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getExceptionCommandNameExceptionPart_5013Parser() {
+		if (exceptionCommandNameExceptionPart_5013Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExceptionPart_NameExceptionPart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								exceptionCommandNameExceptionPart_5013Parser = parser;
+		}
+		return exceptionCommandNameExceptionPart_5013Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser parameterInNameParameters_5014Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParameterInNameParameters_5014Parser() {
+		if (parameterInNameParameters_5014Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getParameters_NameParameters()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								parameterInNameParameters_5014Parser = parser;
+		}
+		return parameterInNameParameters_5014Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser parameterOutNameParameters_5015Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParameterOutNameParameters_5015Parser() {
+		if (parameterOutNameParameters_5015Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getParameters_NameParameters()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								parameterOutNameParameters_5015Parser = parser;
+		}
+		return parameterOutNameParameters_5015Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser parameterInOutNameParameters_5016Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParameterInOutNameParameters_5016Parser() {
+		if (parameterInOutNameParameters_5016Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getParameters_NameParameters()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								parameterInOutNameParameters_5016Parser = parser;
+		}
+		return parameterInOutNameParameters_5016Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser declarativePartNameDeclarativePart_5017Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDeclarativePartNameDeclarativePart_5017Parser() {
+		if (declarativePartNameDeclarativePart_5017Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getDeclarativePart_NameDeclarativePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								declarativePartNameDeclarativePart_5017Parser = parser;
+		}
+		return declarativePartNameDeclarativePart_5017Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser executablePartNameExecutablePart_5018Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getExecutablePartNameExecutablePart_5018Parser() {
+		if (executablePartNameExecutablePart_5018Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExecutablePart_NameExecutablePart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								executablePartNameExecutablePart_5018Parser = parser;
+		}
+		return executablePartNameExecutablePart_5018Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser exceptionPartNameExceptionPart_5019Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getExceptionPartNameExceptionPart_5019Parser() {
+		if (exceptionPartNameExceptionPart_5019Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getExceptionPart_NameExceptionPart()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								exceptionPartNameExceptionPart_5019Parser = parser;
+		}
+		return exceptionPartNameExceptionPart_5019Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser returnNameReturn_5020Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getReturnNameReturn_5020Parser() {
+		if (returnNameReturn_5020Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getReturn_NameReturn()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								returnNameReturn_5020Parser = parser;
+		}
+		return returnNameReturn_5020Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser parametersNameParameters_5021Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParametersNameParameters_5021Parser() {
+		if (parametersNameParameters_5021Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				filesystem.FilesystemPackage.eINSTANCE.getParameters_NameParameters()
+			};
+				filesystem.diagram.parsers.MessageFormatParser parser = new filesystem.diagram.parsers.MessageFormatParser(features);
+								parametersNameParameters_5021Parser = parser;
+		}
+		return parametersNameParameters_5021Parser;
+	}
+
+
+	
+	
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(int visualID) {
+		switch (visualID) {
+				case filesystem.diagram.edit.parts.Data_TypeNameReturnEditPart.VISUAL_ID: return getData_TypeNameReturn_5001Parser();
+		case filesystem.diagram.edit.parts.IfNameExecutablePartEditPart.VISUAL_ID: return getIfNameExecutablePart_5002Parser();
+		case filesystem.diagram.edit.parts.CaseNameExecutablePartEditPart.VISUAL_ID: return getCaseNameExecutablePart_5003Parser();
+		case filesystem.diagram.edit.parts.InsertNameExecutablePartEditPart.VISUAL_ID: return getInsertNameExecutablePart_5004Parser();
+		case filesystem.diagram.edit.parts.UpdateNameExecutablePartEditPart.VISUAL_ID: return getUpdateNameExecutablePart_5005Parser();
+		case filesystem.diagram.edit.parts.DeleteNameExecutablePartEditPart.VISUAL_ID: return getDeleteNameExecutablePart_5006Parser();
+		case filesystem.diagram.edit.parts.SelectNameExecutablePartEditPart.VISUAL_ID: return getSelectNameExecutablePart_5007Parser();
+		case filesystem.diagram.edit.parts.OutputNameExecutablePartEditPart.VISUAL_ID: return getOutputNameExecutablePart_5008Parser();
+		case filesystem.diagram.edit.parts.CursorNameExecutablePartEditPart.VISUAL_ID: return getCursorNameExecutablePart_5009Parser();
+		case filesystem.diagram.edit.parts.WhileNameExecutablePartEditPart.VISUAL_ID: return getWhileNameExecutablePart_5010Parser();
+		case filesystem.diagram.edit.parts.ForNameExecutablePartEditPart.VISUAL_ID: return getForNameExecutablePart_5011Parser();
+		case filesystem.diagram.edit.parts.LoopNameExecutablePartEditPart.VISUAL_ID: return getLoopNameExecutablePart_5012Parser();
+		case filesystem.diagram.edit.parts.ExceptionCommandNameExceptionPartEditPart.VISUAL_ID: return getExceptionCommandNameExceptionPart_5013Parser();
+		case filesystem.diagram.edit.parts.ParameterInNameParametersEditPart.VISUAL_ID: return getParameterInNameParameters_5014Parser();
+		case filesystem.diagram.edit.parts.ParameterOutNameParametersEditPart.VISUAL_ID: return getParameterOutNameParameters_5015Parser();
+		case filesystem.diagram.edit.parts.ParameterInOutNameParametersEditPart.VISUAL_ID: return getParameterInOutNameParameters_5016Parser();
+		case filesystem.diagram.edit.parts.DeclarativePartNameDeclarativePartEditPart.VISUAL_ID: return getDeclarativePartNameDeclarativePart_5017Parser();
+		case filesystem.diagram.edit.parts.ExecutablePartNameExecutablePartEditPart.VISUAL_ID: return getExecutablePartNameExecutablePart_5018Parser();
+		case filesystem.diagram.edit.parts.ExceptionPartNameExceptionPartEditPart.VISUAL_ID: return getExceptionPartNameExceptionPart_5019Parser();
+		case filesystem.diagram.edit.parts.ReturnNameReturnEditPart.VISUAL_ID: return getReturnNameReturn_5020Parser();
+		case filesystem.diagram.edit.parts.ParametersNameParametersEditPart.VISUAL_ID: return getParametersNameParameters_5021Parser();
+						}
+		return null;
+	}
+		/**
+ * Utility method that consults ParserService
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(org.eclipse.gmf.runtime.emf.type.core.IElementType type, org.eclipse.emf.ecore.EObject object, String parserHint) {
+		return org.eclipse.gmf.runtime.common.ui.services.parser.ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
+	}
+		/**
+ * @generated
+ */
+	public org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(
+			org.eclipse.core.runtime.IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(vid));
+		}
+		org.eclipse.gmf.runtime.notation.View view =
+				(org.eclipse.gmf.runtime.notation.View) hint.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+		if (view != null) {
+			return getParser(filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+		/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (operation instanceof org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) {
+			org.eclipse.core.runtime.IAdaptable hint =
+					((org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) operation).getHint();
+			if (filesystem.diagram.providers.FilesystemElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	private static class HintAdapter extends org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter {
+
+		/**
+ * @generated
+ */
+		private final org.eclipse.gmf.runtime.emf.type.core.IElementType elementType;
+
+		/**
+ * @generated
+ */
+		public HintAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType type,
+				org.eclipse.emf.ecore.EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+ * @generated
+ */
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+	}

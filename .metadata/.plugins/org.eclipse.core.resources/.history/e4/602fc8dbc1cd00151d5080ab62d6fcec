@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package crystal.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramRulersAndGridPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.RulerGridPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramRulersAndGridPreferencePage() {
+		setPreferenceStore(crystal.diagram.part.CrystalDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

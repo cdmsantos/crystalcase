@@ -1,0 +1,263 @@
+/**
+ */
+package crystal.impl;
+
+import crystal.AnonymousBlock;
+import crystal.Crystal;
+import crystal.CrystalPackage;
+import crystal.Function;
+import crystal.Procedure;
+import crystal.Transition;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Crystal</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link crystal.impl.CrystalImpl#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getProcedures <em>Procedures</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getFunctions <em>Functions</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getBlocks <em>Blocks</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class CrystalImpl extends EObjectImpl implements Crystal {
+	/**
+	 * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTransitions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Transition> transitions;
+
+	/**
+	 * The cached value of the '{@link #getProcedures() <em>Procedures</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProcedures()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Procedure> procedures;
+
+	/**
+	 * The cached value of the '{@link #getFunctions() <em>Functions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFunctions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Function> functions;
+
+	/**
+	 * The cached value of the '{@link #getBlocks() <em>Blocks</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBlocks()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AnonymousBlock> blocks;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CrystalImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CrystalPackage.Literals.CRYSTAL;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Transition> getTransitions() {
+		if (transitions == null) {
+			transitions = new EObjectContainmentEList<Transition>(Transition.class, this, CrystalPackage.CRYSTAL__TRANSITIONS);
+		}
+		return transitions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Procedure> getProcedures() {
+		if (procedures == null) {
+			procedures = new EObjectContainmentEList<Procedure>(Procedure.class, this, CrystalPackage.CRYSTAL__PROCEDURES);
+		}
+		return procedures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Function> getFunctions() {
+		if (functions == null) {
+			functions = new EObjectContainmentEList<Function>(Function.class, this, CrystalPackage.CRYSTAL__FUNCTIONS);
+		}
+		return functions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<AnonymousBlock> getBlocks() {
+		if (blocks == null) {
+			blocks = new EObjectContainmentEList<AnonymousBlock>(AnonymousBlock.class, this, CrystalPackage.CRYSTAL__BLOCKS);
+		}
+		return blocks;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				return ((InternalEList<?>)getProcedures()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				return ((InternalEList<?>)getBlocks()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				return getTransitions();
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				return getProcedures();
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				return getFunctions();
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				return getBlocks();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				getTransitions().clear();
+				getTransitions().addAll((Collection<? extends Transition>)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				getProcedures().clear();
+				getProcedures().addAll((Collection<? extends Procedure>)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				getFunctions().clear();
+				getFunctions().addAll((Collection<? extends Function>)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				getBlocks().clear();
+				getBlocks().addAll((Collection<? extends AnonymousBlock>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				getTransitions().clear();
+				return;
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				getProcedures().clear();
+				return;
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				getFunctions().clear();
+				return;
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				getBlocks().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				return transitions != null && !transitions.isEmpty();
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				return procedures != null && !procedures.isEmpty();
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				return functions != null && !functions.isEmpty();
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				return blocks != null && !blocks.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //CrystalImpl

@@ -1,0 +1,161 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.FilesystemPackage;
+import filesystem.ParameterIn;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Parameter In</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link filesystem.impl.ParameterInImpl#getNameParameterIn <em>Name Parameter In</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class ParameterInImpl extends EObjectImpl implements ParameterIn {
+	/**
+	 * The default value of the '{@link #getNameParameterIn() <em>Name Parameter In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameterIn()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_PARAMETER_IN_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getNameParameterIn() <em>Name Parameter In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameterIn()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameParameterIn = NAME_PARAMETER_IN_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ParameterInImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.PARAMETER_IN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameParameterIn() {
+		return nameParameterIn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameParameterIn(String newNameParameterIn) {
+		String oldNameParameterIn = nameParameterIn;
+		nameParameterIn = newNameParameterIn;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.PARAMETER_IN__NAME_PARAMETER_IN, oldNameParameterIn, nameParameterIn));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETER_IN__NAME_PARAMETER_IN:
+				return getNameParameterIn();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETER_IN__NAME_PARAMETER_IN:
+				setNameParameterIn((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETER_IN__NAME_PARAMETER_IN:
+				setNameParameterIn(NAME_PARAMETER_IN_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETER_IN__NAME_PARAMETER_IN:
+				return NAME_PARAMETER_IN_EDEFAULT == null ? nameParameterIn != null : !NAME_PARAMETER_IN_EDEFAULT.equals(nameParameterIn);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (nameParameterIn: ");
+		result.append(nameParameterIn);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ParameterInImpl

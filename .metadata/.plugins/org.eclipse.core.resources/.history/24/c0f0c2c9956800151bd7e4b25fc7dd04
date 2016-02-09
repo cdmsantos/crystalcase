@@ -1,0 +1,163 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.ExceptionPart;
+import filesystem.FilesystemPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Exception Part</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link filesystem.impl.ExceptionPartImpl#getNameExceptionPart <em>Name Exception Part</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class ExceptionPartImpl extends EObjectImpl implements ExceptionPart {
+	/**
+	 * The default value of the '{@link #getNameExceptionPart() <em>Name Exception Part</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameExceptionPart()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EXCEPTION_PART_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameExceptionPart() <em>Name Exception Part</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameExceptionPart()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameExceptionPart = NAME_EXCEPTION_PART_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExceptionPartImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.EXCEPTION_PART;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameExceptionPart() {
+		return nameExceptionPart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameExceptionPart(String newNameExceptionPart) {
+		String oldNameExceptionPart = nameExceptionPart;
+		nameExceptionPart = newNameExceptionPart;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.EXCEPTION_PART__NAME_EXCEPTION_PART, oldNameExceptionPart, nameExceptionPart));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FilesystemPackage.EXCEPTION_PART__NAME_EXCEPTION_PART:
+				return getNameExceptionPart();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FilesystemPackage.EXCEPTION_PART__NAME_EXCEPTION_PART:
+				setNameExceptionPart((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.EXCEPTION_PART__NAME_EXCEPTION_PART:
+				setNameExceptionPart(NAME_EXCEPTION_PART_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.EXCEPTION_PART__NAME_EXCEPTION_PART:
+				return NAME_EXCEPTION_PART_EDEFAULT == null ? nameExceptionPart != null : !NAME_EXCEPTION_PART_EDEFAULT.equals(nameExceptionPart);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (nameExceptionPart: ");
+		result.append(nameExceptionPart);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ExceptionPartImpl

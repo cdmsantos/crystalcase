@@ -1,0 +1,355 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.DeclarativePart;
+import filesystem.ExceptionPart;
+import filesystem.ExecutablePart;
+import filesystem.Filesystem;
+import filesystem.FilesystemPackage;
+import filesystem.Sync;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Filesystem</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getSyncs <em>Syncs</em>}</li>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getDeclarative <em>Declarative</em>}</li>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getExecutable <em>Executable</em>}</li>
+ *   <li>{@link filesystem.impl.FilesystemImpl#getException <em>Exception</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class FilesystemImpl extends EObjectImpl implements Filesystem {
+	/**
+	 * The cached value of the '{@link #getSyncs() <em>Syncs</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSyncs()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Sync> syncs;
+
+	/**
+	 * The cached value of the '{@link #getDeclarative() <em>Declarative</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeclarative()
+	 * @generated
+	 * @ordered
+	 */
+	protected DeclarativePart declarative;
+
+	/**
+	 * The cached value of the '{@link #getExecutable() <em>Executable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExecutable()
+	 * @generated
+	 * @ordered
+	 */
+	protected ExecutablePart executable;
+
+	/**
+	 * The cached value of the '{@link #getException() <em>Exception</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getException()
+	 * @generated
+	 * @ordered
+	 */
+	protected ExceptionPart exception;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FilesystemImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.FILESYSTEM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Sync> getSyncs() {
+		if (syncs == null) {
+			syncs = new EObjectContainmentEList<Sync>(Sync.class, this, FilesystemPackage.FILESYSTEM__SYNCS);
+		}
+		return syncs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeclarativePart getDeclarative() {
+		return declarative;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeclarative(DeclarativePart newDeclarative, NotificationChain msgs) {
+		DeclarativePart oldDeclarative = declarative;
+		declarative = newDeclarative;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FilesystemPackage.FILESYSTEM__DECLARATIVE, oldDeclarative, newDeclarative);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDeclarative(DeclarativePart newDeclarative) {
+		if (newDeclarative != declarative) {
+			NotificationChain msgs = null;
+			if (declarative != null)
+				msgs = ((InternalEObject)declarative).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FilesystemPackage.FILESYSTEM__DECLARATIVE, null, msgs);
+			if (newDeclarative != null)
+				msgs = ((InternalEObject)newDeclarative).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FilesystemPackage.FILESYSTEM__DECLARATIVE, null, msgs);
+			msgs = basicSetDeclarative(newDeclarative, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.FILESYSTEM__DECLARATIVE, newDeclarative, newDeclarative));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExecutablePart getExecutable() {
+		return executable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExecutable(ExecutablePart newExecutable, NotificationChain msgs) {
+		ExecutablePart oldExecutable = executable;
+		executable = newExecutable;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FilesystemPackage.FILESYSTEM__EXECUTABLE, oldExecutable, newExecutable);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExecutable(ExecutablePart newExecutable) {
+		if (newExecutable != executable) {
+			NotificationChain msgs = null;
+			if (executable != null)
+				msgs = ((InternalEObject)executable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FilesystemPackage.FILESYSTEM__EXECUTABLE, null, msgs);
+			if (newExecutable != null)
+				msgs = ((InternalEObject)newExecutable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FilesystemPackage.FILESYSTEM__EXECUTABLE, null, msgs);
+			msgs = basicSetExecutable(newExecutable, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.FILESYSTEM__EXECUTABLE, newExecutable, newExecutable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExceptionPart getException() {
+		return exception;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetException(ExceptionPart newException, NotificationChain msgs) {
+		ExceptionPart oldException = exception;
+		exception = newException;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FilesystemPackage.FILESYSTEM__EXCEPTION, oldException, newException);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setException(ExceptionPart newException) {
+		if (newException != exception) {
+			NotificationChain msgs = null;
+			if (exception != null)
+				msgs = ((InternalEObject)exception).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FilesystemPackage.FILESYSTEM__EXCEPTION, null, msgs);
+			if (newException != null)
+				msgs = ((InternalEObject)newException).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FilesystemPackage.FILESYSTEM__EXCEPTION, null, msgs);
+			msgs = basicSetException(newException, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.FILESYSTEM__EXCEPTION, newException, newException));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				return ((InternalEList<?>)getSyncs()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				return basicSetDeclarative(null, msgs);
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				return basicSetExecutable(null, msgs);
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				return basicSetException(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				return getSyncs();
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				return getDeclarative();
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				return getExecutable();
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				return getException();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				getSyncs().clear();
+				getSyncs().addAll((Collection<? extends Sync>)newValue);
+				return;
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				setDeclarative((DeclarativePart)newValue);
+				return;
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				setExecutable((ExecutablePart)newValue);
+				return;
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				setException((ExceptionPart)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				getSyncs().clear();
+				return;
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				setDeclarative((DeclarativePart)null);
+				return;
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				setExecutable((ExecutablePart)null);
+				return;
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				setException((ExceptionPart)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.FILESYSTEM__SYNCS:
+				return syncs != null && !syncs.isEmpty();
+			case FilesystemPackage.FILESYSTEM__DECLARATIVE:
+				return declarative != null;
+			case FilesystemPackage.FILESYSTEM__EXECUTABLE:
+				return executable != null;
+			case FilesystemPackage.FILESYSTEM__EXCEPTION:
+				return exception != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //FilesystemImpl

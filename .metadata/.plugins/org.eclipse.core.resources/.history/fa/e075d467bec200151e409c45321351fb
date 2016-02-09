@@ -1,0 +1,138 @@
+pluginName=Crystal Plugin
+providerName=Sample Plugin Provider, Inc
+
+editorName=Crystal Diagram Editing
+context.description=Crystal Diagram Editing
+context.name=In Crystal Diagram Editor
+newWizardName=Crystal Diagram
+newWizardDesc=Creates Crystal diagram.
+
+initDiagramActionLabel=Initialize crystal diagram file
+
+
+navigatorContentName=*.crystal diagram contents
+domainNavigatorContentName=*.crystal model contents
+update.diagram.name=Update Crystal diagram
+update.diagram.description=Perform Crystal diagram update
+
+
+# Property Sheet
+tab.appearance=Appearance
+tab.diagram=Rulers & Grid
+tab.domain=Core
+
+# Preferences
+prefpage.crystal.project.diagram.general=Crystal Diagram
+prefpage.crystal.project.diagram.appearance=Appearance
+prefpage.crystal.project.diagram.connections=Connections
+prefpage.crystal.project.diagram.printing=Printing
+prefpage.crystal.project.diagram.rulersAndGrid=Rulers And Grid
+
+
+# Providers
+metatype.name.Crystal_1000=Undefined
+metatype.name.Parameters_2001=Parameters
+metatype.name.Return_2002=Return
+metatype.name.DeclarativePart_2003=DeclarativePart
+metatype.name.ExecutablePart_2004=ExecutablePart
+metatype.name.DataType_3001=DataType
+metatype.name.Collections_3002=Collections
+metatype.name.Records_3003=Records
+metatype.name.Cursor_3004=Cursor
+metatype.name.DataType_3005=DataType
+metatype.name.Collections_3006=Collections
+metatype.name.Records_3007=Records
+metatype.name.Cursor_3008=Cursor
+metatype.name.DataType_3009=DataType
+metatype.name.Collections_3010=Collections
+metatype.name.Records_3011=Records
+metatype.name.Cursor_3012=Cursor
+metatype.name.Expressions_3013=Expressions
+metatype.name.Exception_3014=Exception
+metatype.name.If_3015=If
+metatype.name.Case_3016=Case
+metatype.name.Insert_3017=Insert
+metatype.name.Update_3018=Update
+metatype.name.Delete_3019=Delete
+metatype.name.Select_3020=Select
+metatype.name.While_3021=While
+metatype.name.For_3022=For
+metatype.name.Loop_3023=Loop
+metatype.name.Open_3024=Open
+metatype.name.Fetch_3025=Fetch
+metatype.name.Close_3026=Close
+metatype.name.Transition_4001=Transition
+
+# Commands and menu actions
+cmdcategory.name=Crystal Editor Commands
+cmdcategory.desc=Crystal Editor Commands
+
+metatype.name.Procedure_2005=Procedure
+metatype.name.DataType_3027=DataType
+metatype.name.Collections_3028=Collections
+metatype.name.Records_3029=Records
+metatype.name.Cursor_3030=Cursor
+metatype.name.DataType_3031=DataType
+metatype.name.Collections_3032=Collections
+metatype.name.Records_3033=Records
+metatype.name.Cursor_3034=Cursor
+metatype.name.Expressions_3035=Expressions
+metatype.name.Exception_3036=Exception
+metatype.name.If_3037=If
+metatype.name.Case_3038=Case
+metatype.name.Insert_3039=Insert
+metatype.name.Update_3040=Update
+metatype.name.Delete_3041=Delete
+metatype.name.Select_3042=Select
+metatype.name.While_3043=While
+metatype.name.For_3044=For
+metatype.name.Loop_3045=Loop
+metatype.name.Open_3046=Open
+metatype.name.Fetch_3047=Fetch
+metatype.name.Close_3048=Close
+metatype.name.Function_2006=Function
+metatype.name.AnonymousBlock_2007=AnonymousBlock
+metatype.name.DataType_3049=DataType
+metatype.name.Collections_3050=Collections
+metatype.name.Records_3051=Records
+metatype.name.Cursor_3052=Cursor
+metatype.name.DataType_3053=DataType
+metatype.name.Collections_3054=Collections
+metatype.name.Records_3055=Records
+metatype.name.Cursor_3056=Cursor
+metatype.name.Expressions_3057=Expressions
+metatype.name.Exception_3058=Exception
+metatype.name.If_3059=If
+metatype.name.Case_3060=Case
+metatype.name.Insert_3061=Insert
+metatype.name.Update_3062=Update
+metatype.name.Delete_3063=Delete
+metatype.name.Select_3064=Select
+metatype.name.While_3065=While
+metatype.name.For_3066=For
+metatype.name.Loop_3067=Loop
+metatype.name.Open_3068=Open
+metatype.name.Fetch_3069=Fetch
+metatype.name.Close_3070=Close
+metatype.name.DataType_3071=DataType
+metatype.name.Collections_3072=Collections
+metatype.name.Records_3073=Records
+metatype.name.Cursor_3074=Cursor
+metatype.name.DataType_3075=DataType
+metatype.name.Collections_3076=Collections
+metatype.name.Records_3077=Records
+metatype.name.Cursor_3078=Cursor
+metatype.name.Expressions_3079=Expressions
+metatype.name.Exception_3080=Exception
+metatype.name.If_3081=If
+metatype.name.Case_3082=Case
+metatype.name.Insert_3083=Insert
+metatype.name.Update_3084=Update
+metatype.name.Delete_3085=Delete
+metatype.name.Select_3086=Select
+metatype.name.While_3087=While
+metatype.name.For_3088=For
+metatype.name.Loop_3089=Loop
+metatype.name.Open_3090=Open
+metatype.name.Fetch_3091=Fetch
+metatype.name.Close_3092=Close

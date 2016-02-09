@@ -1,0 +1,1211 @@
+/*
+ * 
+ */
+package crystal.diagram.providers;
+
+import java.util.HashSet;
+import java.util.IdentityHashMap;
+import java.util.Map;
+import java.util.Set;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.emf.ecore.ENamedElement;
+import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages;
+import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.graphics.Image;
+
+import crystal.CrystalPackage;
+import crystal.diagram.edit.parts.*;
+import crystal.diagram.edit.parts.Case2EditPart;
+import crystal.diagram.edit.parts.CaseEditPart;
+import crystal.diagram.edit.parts.Close2EditPart;
+import crystal.diagram.edit.parts.CloseEditPart;
+import crystal.diagram.edit.parts.Collections2EditPart;
+import crystal.diagram.edit.parts.Collections3EditPart;
+import crystal.diagram.edit.parts.Collections4EditPart;
+import crystal.diagram.edit.parts.Collections5EditPart;
+import crystal.diagram.edit.parts.CollectionsEditPart;
+import crystal.diagram.edit.parts.CrystalEditPart;
+import crystal.diagram.edit.parts.Cursor2EditPart;
+import crystal.diagram.edit.parts.Cursor3EditPart;
+import crystal.diagram.edit.parts.Cursor4EditPart;
+import crystal.diagram.edit.parts.Cursor5EditPart;
+import crystal.diagram.edit.parts.CursorEditPart;
+import crystal.diagram.edit.parts.DataType2EditPart;
+import crystal.diagram.edit.parts.DataType3EditPart;
+import crystal.diagram.edit.parts.DataType4EditPart;
+import crystal.diagram.edit.parts.DataType5EditPart;
+import crystal.diagram.edit.parts.DataTypeEditPart;
+import crystal.diagram.edit.parts.DeclarativePartEditPart;
+import crystal.diagram.edit.parts.Delete2EditPart;
+import crystal.diagram.edit.parts.DeleteEditPart;
+import crystal.diagram.edit.parts.Exception2EditPart;
+import crystal.diagram.edit.parts.ExceptionEditPart;
+import crystal.diagram.edit.parts.ExecutablePartEditPart;
+import crystal.diagram.edit.parts.Expressions2EditPart;
+import crystal.diagram.edit.parts.ExpressionsEditPart;
+import crystal.diagram.edit.parts.Fetch2EditPart;
+import crystal.diagram.edit.parts.FetchEditPart;
+import crystal.diagram.edit.parts.For2EditPart;
+import crystal.diagram.edit.parts.ForEditPart;
+import crystal.diagram.edit.parts.If2EditPart;
+import crystal.diagram.edit.parts.IfEditPart;
+import crystal.diagram.edit.parts.Insert2EditPart;
+import crystal.diagram.edit.parts.InsertEditPart;
+import crystal.diagram.edit.parts.Loop2EditPart;
+import crystal.diagram.edit.parts.LoopEditPart;
+import crystal.diagram.edit.parts.Open2EditPart;
+import crystal.diagram.edit.parts.OpenEditPart;
+import crystal.diagram.edit.parts.ParametersEditPart;
+import crystal.diagram.edit.parts.ProcedureEditPart;
+import crystal.diagram.edit.parts.Records2EditPart;
+import crystal.diagram.edit.parts.Records3EditPart;
+import crystal.diagram.edit.parts.Records4EditPart;
+import crystal.diagram.edit.parts.Records5EditPart;
+import crystal.diagram.edit.parts.RecordsEditPart;
+import crystal.diagram.edit.parts.ReturnEditPart;
+import crystal.diagram.edit.parts.Select2EditPart;
+import crystal.diagram.edit.parts.SelectEditPart;
+import crystal.diagram.edit.parts.TransitionEditPart;
+import crystal.diagram.edit.parts.Update2EditPart;
+import crystal.diagram.edit.parts.UpdateEditPart;
+import crystal.diagram.edit.parts.While2EditPart;
+import crystal.diagram.edit.parts.WhileEditPart;
+import crystal.diagram.part.CrystalDiagramEditorPlugin;
+
+/**
+ * @generated
+ */
+public class CrystalElementTypes {
+
+	/**
+	 * @generated
+	 */
+	private CrystalElementTypes() {
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Map<IElementType, ENamedElement> elements;
+
+	/**
+	 * @generated
+	 */
+	private static DiagramElementTypeImages elementTypeImages = new DiagramElementTypeImages(
+			CrystalDiagramEditorPlugin.getInstance()
+					.getItemProvidersAdapterFactory());
+
+	/**
+	 * @generated
+	 */
+	private static Set<IElementType> KNOWN_ELEMENT_TYPES;
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Crystal_1000 = getElementType("crystal.project.diagram.Crystal_1000"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Parameters_2001 = getElementType("crystal.project.diagram.Parameters_2001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Return_2002 = getElementType("crystal.project.diagram.Return_2002"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType DeclarativePart_2003 = getElementType("crystal.project.diagram.DeclarativePart_2003"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType ExecutablePart_2004 = getElementType("crystal.project.diagram.ExecutablePart_2004"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Procedure_2005 = getElementType("crystal.project.diagram.Procedure_2005"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Function_2006 = getElementType("crystal.project.diagram.Function_2006"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType AnonymousBlock_2007 = getElementType("crystal.project.diagram.AnonymousBlock_2007"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataType_3001 = getElementType("crystal.project.diagram.DataType_3001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Collections_3002 = getElementType("crystal.project.diagram.Collections_3002"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Records_3003 = getElementType("crystal.project.diagram.Records_3003"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_3004 = getElementType("crystal.project.diagram.Cursor_3004"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataType_3005 = getElementType("crystal.project.diagram.DataType_3005"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Collections_3006 = getElementType("crystal.project.diagram.Collections_3006"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Records_3007 = getElementType("crystal.project.diagram.Records_3007"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_3008 = getElementType("crystal.project.diagram.Cursor_3008"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataType_3009 = getElementType("crystal.project.diagram.DataType_3009"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Collections_3010 = getElementType("crystal.project.diagram.Collections_3010"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Records_3011 = getElementType("crystal.project.diagram.Records_3011"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_3012 = getElementType("crystal.project.diagram.Cursor_3012"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Expressions_3013 = getElementType("crystal.project.diagram.Expressions_3013"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Exception_3014 = getElementType("crystal.project.diagram.Exception_3014"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType If_3015 = getElementType("crystal.project.diagram.If_3015"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Case_3016 = getElementType("crystal.project.diagram.Case_3016"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Insert_3017 = getElementType("crystal.project.diagram.Insert_3017"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Update_3018 = getElementType("crystal.project.diagram.Update_3018"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Delete_3019 = getElementType("crystal.project.diagram.Delete_3019"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Select_3020 = getElementType("crystal.project.diagram.Select_3020"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType While_3021 = getElementType("crystal.project.diagram.While_3021"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType For_3022 = getElementType("crystal.project.diagram.For_3022"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Loop_3023 = getElementType("crystal.project.diagram.Loop_3023"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Open_3024 = getElementType("crystal.project.diagram.Open_3024"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Fetch_3025 = getElementType("crystal.project.diagram.Fetch_3025"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Close_3026 = getElementType("crystal.project.diagram.Close_3026"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataType_3027 = getElementType("crystal.project.diagram.DataType_3027"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Collections_3028 = getElementType("crystal.project.diagram.Collections_3028"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Records_3029 = getElementType("crystal.project.diagram.Records_3029"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_3030 = getElementType("crystal.project.diagram.Cursor_3030"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataType_3031 = getElementType("crystal.project.diagram.DataType_3031"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Collections_3032 = getElementType("crystal.project.diagram.Collections_3032"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Records_3033 = getElementType("crystal.project.diagram.Records_3033"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_3034 = getElementType("crystal.project.diagram.Cursor_3034"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Expressions_3035 = getElementType("crystal.project.diagram.Expressions_3035"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Exception_3036 = getElementType("crystal.project.diagram.Exception_3036"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType If_3037 = getElementType("crystal.project.diagram.If_3037"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Case_3038 = getElementType("crystal.project.diagram.Case_3038"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Insert_3039 = getElementType("crystal.project.diagram.Insert_3039"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Update_3040 = getElementType("crystal.project.diagram.Update_3040"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Delete_3041 = getElementType("crystal.project.diagram.Delete_3041"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Select_3042 = getElementType("crystal.project.diagram.Select_3042"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType While_3043 = getElementType("crystal.project.diagram.While_3043"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType For_3044 = getElementType("crystal.project.diagram.For_3044"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Loop_3045 = getElementType("crystal.project.diagram.Loop_3045"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Open_3046 = getElementType("crystal.project.diagram.Open_3046"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Fetch_3047 = getElementType("crystal.project.diagram.Fetch_3047"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Close_3048 = getElementType("crystal.project.diagram.Close_3048"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataType_3049 = getElementType("crystal.project.diagram.DataType_3049"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Collections_3050 = getElementType("crystal.project.diagram.Collections_3050"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Records_3051 = getElementType("crystal.project.diagram.Records_3051"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_3052 = getElementType("crystal.project.diagram.Cursor_3052"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataType_3053 = getElementType("crystal.project.diagram.DataType_3053"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Collections_3054 = getElementType("crystal.project.diagram.Collections_3054"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Records_3055 = getElementType("crystal.project.diagram.Records_3055"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_3056 = getElementType("crystal.project.diagram.Cursor_3056"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Expressions_3057 = getElementType("crystal.project.diagram.Expressions_3057"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Exception_3058 = getElementType("crystal.project.diagram.Exception_3058"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType If_3059 = getElementType("crystal.project.diagram.If_3059"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Case_3060 = getElementType("crystal.project.diagram.Case_3060"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Insert_3061 = getElementType("crystal.project.diagram.Insert_3061"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Update_3062 = getElementType("crystal.project.diagram.Update_3062"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Delete_3063 = getElementType("crystal.project.diagram.Delete_3063"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Select_3064 = getElementType("crystal.project.diagram.Select_3064"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType While_3065 = getElementType("crystal.project.diagram.While_3065"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType For_3066 = getElementType("crystal.project.diagram.For_3066"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Loop_3067 = getElementType("crystal.project.diagram.Loop_3067"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Open_3068 = getElementType("crystal.project.diagram.Open_3068"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Fetch_3069 = getElementType("crystal.project.diagram.Fetch_3069"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Close_3070 = getElementType("crystal.project.diagram.Close_3070"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataType_3071 = getElementType("crystal.project.diagram.DataType_3071"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Collections_3072 = getElementType("crystal.project.diagram.Collections_3072"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Records_3073 = getElementType("crystal.project.diagram.Records_3073"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_3074 = getElementType("crystal.project.diagram.Cursor_3074"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataType_3075 = getElementType("crystal.project.diagram.DataType_3075"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Collections_3076 = getElementType("crystal.project.diagram.Collections_3076"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Records_3077 = getElementType("crystal.project.diagram.Records_3077"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Cursor_3078 = getElementType("crystal.project.diagram.Cursor_3078"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Expressions_3079 = getElementType("crystal.project.diagram.Expressions_3079"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Exception_3080 = getElementType("crystal.project.diagram.Exception_3080"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType If_3081 = getElementType("crystal.project.diagram.If_3081"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Case_3082 = getElementType("crystal.project.diagram.Case_3082"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Insert_3083 = getElementType("crystal.project.diagram.Insert_3083"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Update_3084 = getElementType("crystal.project.diagram.Update_3084"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Delete_3085 = getElementType("crystal.project.diagram.Delete_3085"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Select_3086 = getElementType("crystal.project.diagram.Select_3086"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType While_3087 = getElementType("crystal.project.diagram.While_3087"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType For_3088 = getElementType("crystal.project.diagram.For_3088"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Loop_3089 = getElementType("crystal.project.diagram.Loop_3089"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Open_3090 = getElementType("crystal.project.diagram.Open_3090"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Fetch_3091 = getElementType("crystal.project.diagram.Fetch_3091"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Close_3092 = getElementType("crystal.project.diagram.Close_3092"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Transition_4001 = getElementType("crystal.project.diagram.Transition_4001"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static ImageDescriptor getImageDescriptor(ENamedElement element) {
+		return elementTypeImages.getImageDescriptor(element);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static Image getImage(ENamedElement element) {
+		return elementTypeImages.getImage(element);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static ImageDescriptor getImageDescriptor(IAdaptable hint) {
+		return getImageDescriptor(getElement(hint));
+	}
+
+	/**
+	 * @generated
+	 */
+	public static Image getImage(IAdaptable hint) {
+		return getImage(getElement(hint));
+	}
+
+	/**
+	 * Returns 'type' of the ecore object associated with the hint.
+	 * 
+	 * @generated
+	 */
+	public static ENamedElement getElement(IAdaptable hint) {
+		Object type = hint.getAdapter(IElementType.class);
+		if (elements == null) {
+			elements = new IdentityHashMap<IElementType, ENamedElement>();
+
+			elements.put(Crystal_1000, CrystalPackage.eINSTANCE.getCrystal());
+
+			elements.put(Parameters_2001,
+					CrystalPackage.eINSTANCE.getParameters());
+
+			elements.put(Return_2002, CrystalPackage.eINSTANCE.getReturn());
+
+			elements.put(DeclarativePart_2003,
+					CrystalPackage.eINSTANCE.getDeclarativePart());
+
+			elements.put(ExecutablePart_2004,
+					CrystalPackage.eINSTANCE.getExecutablePart());
+
+			elements.put(Procedure_2005,
+					CrystalPackage.eINSTANCE.getProcedure());
+
+			elements.put(Function_2006, CrystalPackage.eINSTANCE.getFunction());
+
+			elements.put(AnonymousBlock_2007,
+					CrystalPackage.eINSTANCE.getAnonymousBlock());
+
+			elements.put(DataType_3001, CrystalPackage.eINSTANCE.getDataType());
+
+			elements.put(Collections_3002,
+					CrystalPackage.eINSTANCE.getCollections());
+
+			elements.put(Records_3003, CrystalPackage.eINSTANCE.getRecords());
+
+			elements.put(Cursor_3004, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(DataType_3005, CrystalPackage.eINSTANCE.getDataType());
+
+			elements.put(Collections_3006,
+					CrystalPackage.eINSTANCE.getCollections());
+
+			elements.put(Records_3007, CrystalPackage.eINSTANCE.getRecords());
+
+			elements.put(Cursor_3008, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(DataType_3009, CrystalPackage.eINSTANCE.getDataType());
+
+			elements.put(Collections_3010,
+					CrystalPackage.eINSTANCE.getCollections());
+
+			elements.put(Records_3011, CrystalPackage.eINSTANCE.getRecords());
+
+			elements.put(Cursor_3012, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(Expressions_3013,
+					CrystalPackage.eINSTANCE.getExpressions());
+
+			elements.put(Exception_3014,
+					CrystalPackage.eINSTANCE.getException());
+
+			elements.put(If_3015, CrystalPackage.eINSTANCE.getIf());
+
+			elements.put(Case_3016, CrystalPackage.eINSTANCE.getCase());
+
+			elements.put(Insert_3017, CrystalPackage.eINSTANCE.getInsert());
+
+			elements.put(Update_3018, CrystalPackage.eINSTANCE.getUpdate());
+
+			elements.put(Delete_3019, CrystalPackage.eINSTANCE.getDelete());
+
+			elements.put(Select_3020, CrystalPackage.eINSTANCE.getSelect());
+
+			elements.put(While_3021, CrystalPackage.eINSTANCE.getWhile());
+
+			elements.put(For_3022, CrystalPackage.eINSTANCE.getFor());
+
+			elements.put(Loop_3023, CrystalPackage.eINSTANCE.getLoop());
+
+			elements.put(Open_3024, CrystalPackage.eINSTANCE.getOpen());
+
+			elements.put(Fetch_3025, CrystalPackage.eINSTANCE.getFetch());
+
+			elements.put(Close_3026, CrystalPackage.eINSTANCE.getClose());
+
+			elements.put(DataType_3027, CrystalPackage.eINSTANCE.getDataType());
+
+			elements.put(Collections_3028,
+					CrystalPackage.eINSTANCE.getCollections());
+
+			elements.put(Records_3029, CrystalPackage.eINSTANCE.getRecords());
+
+			elements.put(Cursor_3030, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(DataType_3031, CrystalPackage.eINSTANCE.getDataType());
+
+			elements.put(Collections_3032,
+					CrystalPackage.eINSTANCE.getCollections());
+
+			elements.put(Records_3033, CrystalPackage.eINSTANCE.getRecords());
+
+			elements.put(Cursor_3034, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(Expressions_3035,
+					CrystalPackage.eINSTANCE.getExpressions());
+
+			elements.put(Exception_3036,
+					CrystalPackage.eINSTANCE.getException());
+
+			elements.put(If_3037, CrystalPackage.eINSTANCE.getIf());
+
+			elements.put(Case_3038, CrystalPackage.eINSTANCE.getCase());
+
+			elements.put(Insert_3039, CrystalPackage.eINSTANCE.getInsert());
+
+			elements.put(Update_3040, CrystalPackage.eINSTANCE.getUpdate());
+
+			elements.put(Delete_3041, CrystalPackage.eINSTANCE.getDelete());
+
+			elements.put(Select_3042, CrystalPackage.eINSTANCE.getSelect());
+
+			elements.put(While_3043, CrystalPackage.eINSTANCE.getWhile());
+
+			elements.put(For_3044, CrystalPackage.eINSTANCE.getFor());
+
+			elements.put(Loop_3045, CrystalPackage.eINSTANCE.getLoop());
+
+			elements.put(Open_3046, CrystalPackage.eINSTANCE.getOpen());
+
+			elements.put(Fetch_3047, CrystalPackage.eINSTANCE.getFetch());
+
+			elements.put(Close_3048, CrystalPackage.eINSTANCE.getClose());
+
+			elements.put(DataType_3049, CrystalPackage.eINSTANCE.getDataType());
+
+			elements.put(Collections_3050,
+					CrystalPackage.eINSTANCE.getCollections());
+
+			elements.put(Records_3051, CrystalPackage.eINSTANCE.getRecords());
+
+			elements.put(Cursor_3052, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(DataType_3053, CrystalPackage.eINSTANCE.getDataType());
+
+			elements.put(Collections_3054,
+					CrystalPackage.eINSTANCE.getCollections());
+
+			elements.put(Records_3055, CrystalPackage.eINSTANCE.getRecords());
+
+			elements.put(Cursor_3056, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(Expressions_3057,
+					CrystalPackage.eINSTANCE.getExpressions());
+
+			elements.put(Exception_3058,
+					CrystalPackage.eINSTANCE.getException());
+
+			elements.put(If_3059, CrystalPackage.eINSTANCE.getIf());
+
+			elements.put(Case_3060, CrystalPackage.eINSTANCE.getCase());
+
+			elements.put(Insert_3061, CrystalPackage.eINSTANCE.getInsert());
+
+			elements.put(Update_3062, CrystalPackage.eINSTANCE.getUpdate());
+
+			elements.put(Delete_3063, CrystalPackage.eINSTANCE.getDelete());
+
+			elements.put(Select_3064, CrystalPackage.eINSTANCE.getSelect());
+
+			elements.put(While_3065, CrystalPackage.eINSTANCE.getWhile());
+
+			elements.put(For_3066, CrystalPackage.eINSTANCE.getFor());
+
+			elements.put(Loop_3067, CrystalPackage.eINSTANCE.getLoop());
+
+			elements.put(Open_3068, CrystalPackage.eINSTANCE.getOpen());
+
+			elements.put(Fetch_3069, CrystalPackage.eINSTANCE.getFetch());
+
+			elements.put(Close_3070, CrystalPackage.eINSTANCE.getClose());
+
+			elements.put(DataType_3071, CrystalPackage.eINSTANCE.getDataType());
+
+			elements.put(Collections_3072,
+					CrystalPackage.eINSTANCE.getCollections());
+
+			elements.put(Records_3073, CrystalPackage.eINSTANCE.getRecords());
+
+			elements.put(Cursor_3074, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(DataType_3075, CrystalPackage.eINSTANCE.getDataType());
+
+			elements.put(Collections_3076,
+					CrystalPackage.eINSTANCE.getCollections());
+
+			elements.put(Records_3077, CrystalPackage.eINSTANCE.getRecords());
+
+			elements.put(Cursor_3078, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(Expressions_3079,
+					CrystalPackage.eINSTANCE.getExpressions());
+
+			elements.put(Exception_3080,
+					CrystalPackage.eINSTANCE.getException());
+
+			elements.put(If_3081, CrystalPackage.eINSTANCE.getIf());
+
+			elements.put(Case_3082, CrystalPackage.eINSTANCE.getCase());
+
+			elements.put(Insert_3083, CrystalPackage.eINSTANCE.getInsert());
+
+			elements.put(Update_3084, CrystalPackage.eINSTANCE.getUpdate());
+
+			elements.put(Delete_3085, CrystalPackage.eINSTANCE.getDelete());
+
+			elements.put(Select_3086, CrystalPackage.eINSTANCE.getSelect());
+
+			elements.put(While_3087, CrystalPackage.eINSTANCE.getWhile());
+
+			elements.put(For_3088, CrystalPackage.eINSTANCE.getFor());
+
+			elements.put(Loop_3089, CrystalPackage.eINSTANCE.getLoop());
+
+			elements.put(Open_3090, CrystalPackage.eINSTANCE.getOpen());
+
+			elements.put(Fetch_3091, CrystalPackage.eINSTANCE.getFetch());
+
+			elements.put(Close_3092, CrystalPackage.eINSTANCE.getClose());
+
+			elements.put(Transition_4001,
+					CrystalPackage.eINSTANCE.getTransition());
+		}
+		return (ENamedElement) elements.get(type);
+	}
+
+	/**
+	 * @generated
+	 */
+	private static IElementType getElementType(String id) {
+		return ElementTypeRegistry.getInstance().getType(id);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static boolean isKnownElementType(IElementType elementType) {
+		if (KNOWN_ELEMENT_TYPES == null) {
+			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
+			KNOWN_ELEMENT_TYPES.add(Crystal_1000);
+			KNOWN_ELEMENT_TYPES.add(Parameters_2001);
+			KNOWN_ELEMENT_TYPES.add(Return_2002);
+			KNOWN_ELEMENT_TYPES.add(DeclarativePart_2003);
+			KNOWN_ELEMENT_TYPES.add(ExecutablePart_2004);
+			KNOWN_ELEMENT_TYPES.add(Procedure_2005);
+			KNOWN_ELEMENT_TYPES.add(Function_2006);
+			KNOWN_ELEMENT_TYPES.add(AnonymousBlock_2007);
+			KNOWN_ELEMENT_TYPES.add(DataType_3001);
+			KNOWN_ELEMENT_TYPES.add(Collections_3002);
+			KNOWN_ELEMENT_TYPES.add(Records_3003);
+			KNOWN_ELEMENT_TYPES.add(Cursor_3004);
+			KNOWN_ELEMENT_TYPES.add(DataType_3005);
+			KNOWN_ELEMENT_TYPES.add(Collections_3006);
+			KNOWN_ELEMENT_TYPES.add(Records_3007);
+			KNOWN_ELEMENT_TYPES.add(Cursor_3008);
+			KNOWN_ELEMENT_TYPES.add(DataType_3009);
+			KNOWN_ELEMENT_TYPES.add(Collections_3010);
+			KNOWN_ELEMENT_TYPES.add(Records_3011);
+			KNOWN_ELEMENT_TYPES.add(Cursor_3012);
+			KNOWN_ELEMENT_TYPES.add(Expressions_3013);
+			KNOWN_ELEMENT_TYPES.add(Exception_3014);
+			KNOWN_ELEMENT_TYPES.add(If_3015);
+			KNOWN_ELEMENT_TYPES.add(Case_3016);
+			KNOWN_ELEMENT_TYPES.add(Insert_3017);
+			KNOWN_ELEMENT_TYPES.add(Update_3018);
+			KNOWN_ELEMENT_TYPES.add(Delete_3019);
+			KNOWN_ELEMENT_TYPES.add(Select_3020);
+			KNOWN_ELEMENT_TYPES.add(While_3021);
+			KNOWN_ELEMENT_TYPES.add(For_3022);
+			KNOWN_ELEMENT_TYPES.add(Loop_3023);
+			KNOWN_ELEMENT_TYPES.add(Open_3024);
+			KNOWN_ELEMENT_TYPES.add(Fetch_3025);
+			KNOWN_ELEMENT_TYPES.add(Close_3026);
+			KNOWN_ELEMENT_TYPES.add(DataType_3027);
+			KNOWN_ELEMENT_TYPES.add(Collections_3028);
+			KNOWN_ELEMENT_TYPES.add(Records_3029);
+			KNOWN_ELEMENT_TYPES.add(Cursor_3030);
+			KNOWN_ELEMENT_TYPES.add(DataType_3031);
+			KNOWN_ELEMENT_TYPES.add(Collections_3032);
+			KNOWN_ELEMENT_TYPES.add(Records_3033);
+			KNOWN_ELEMENT_TYPES.add(Cursor_3034);
+			KNOWN_ELEMENT_TYPES.add(Expressions_3035);
+			KNOWN_ELEMENT_TYPES.add(Exception_3036);
+			KNOWN_ELEMENT_TYPES.add(If_3037);
+			KNOWN_ELEMENT_TYPES.add(Case_3038);
+			KNOWN_ELEMENT_TYPES.add(Insert_3039);
+			KNOWN_ELEMENT_TYPES.add(Update_3040);
+			KNOWN_ELEMENT_TYPES.add(Delete_3041);
+			KNOWN_ELEMENT_TYPES.add(Select_3042);
+			KNOWN_ELEMENT_TYPES.add(While_3043);
+			KNOWN_ELEMENT_TYPES.add(For_3044);
+			KNOWN_ELEMENT_TYPES.add(Loop_3045);
+			KNOWN_ELEMENT_TYPES.add(Open_3046);
+			KNOWN_ELEMENT_TYPES.add(Fetch_3047);
+			KNOWN_ELEMENT_TYPES.add(Close_3048);
+			KNOWN_ELEMENT_TYPES.add(DataType_3049);
+			KNOWN_ELEMENT_TYPES.add(Collections_3050);
+			KNOWN_ELEMENT_TYPES.add(Records_3051);
+			KNOWN_ELEMENT_TYPES.add(Cursor_3052);
+			KNOWN_ELEMENT_TYPES.add(DataType_3053);
+			KNOWN_ELEMENT_TYPES.add(Collections_3054);
+			KNOWN_ELEMENT_TYPES.add(Records_3055);
+			KNOWN_ELEMENT_TYPES.add(Cursor_3056);
+			KNOWN_ELEMENT_TYPES.add(Expressions_3057);
+			KNOWN_ELEMENT_TYPES.add(Exception_3058);
+			KNOWN_ELEMENT_TYPES.add(If_3059);
+			KNOWN_ELEMENT_TYPES.add(Case_3060);
+			KNOWN_ELEMENT_TYPES.add(Insert_3061);
+			KNOWN_ELEMENT_TYPES.add(Update_3062);
+			KNOWN_ELEMENT_TYPES.add(Delete_3063);
+			KNOWN_ELEMENT_TYPES.add(Select_3064);
+			KNOWN_ELEMENT_TYPES.add(While_3065);
+			KNOWN_ELEMENT_TYPES.add(For_3066);
+			KNOWN_ELEMENT_TYPES.add(Loop_3067);
+			KNOWN_ELEMENT_TYPES.add(Open_3068);
+			KNOWN_ELEMENT_TYPES.add(Fetch_3069);
+			KNOWN_ELEMENT_TYPES.add(Close_3070);
+			KNOWN_ELEMENT_TYPES.add(DataType_3071);
+			KNOWN_ELEMENT_TYPES.add(Collections_3072);
+			KNOWN_ELEMENT_TYPES.add(Records_3073);
+			KNOWN_ELEMENT_TYPES.add(Cursor_3074);
+			KNOWN_ELEMENT_TYPES.add(DataType_3075);
+			KNOWN_ELEMENT_TYPES.add(Collections_3076);
+			KNOWN_ELEMENT_TYPES.add(Records_3077);
+			KNOWN_ELEMENT_TYPES.add(Cursor_3078);
+			KNOWN_ELEMENT_TYPES.add(Expressions_3079);
+			KNOWN_ELEMENT_TYPES.add(Exception_3080);
+			KNOWN_ELEMENT_TYPES.add(If_3081);
+			KNOWN_ELEMENT_TYPES.add(Case_3082);
+			KNOWN_ELEMENT_TYPES.add(Insert_3083);
+			KNOWN_ELEMENT_TYPES.add(Update_3084);
+			KNOWN_ELEMENT_TYPES.add(Delete_3085);
+			KNOWN_ELEMENT_TYPES.add(Select_3086);
+			KNOWN_ELEMENT_TYPES.add(While_3087);
+			KNOWN_ELEMENT_TYPES.add(For_3088);
+			KNOWN_ELEMENT_TYPES.add(Loop_3089);
+			KNOWN_ELEMENT_TYPES.add(Open_3090);
+			KNOWN_ELEMENT_TYPES.add(Fetch_3091);
+			KNOWN_ELEMENT_TYPES.add(Close_3092);
+			KNOWN_ELEMENT_TYPES.add(Transition_4001);
+		}
+		return KNOWN_ELEMENT_TYPES.contains(elementType);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static IElementType getElementType(int visualID) {
+		switch (visualID) {
+		case CrystalEditPart.VISUAL_ID:
+			return Crystal_1000;
+		case ParametersEditPart.VISUAL_ID:
+			return Parameters_2001;
+		case ReturnEditPart.VISUAL_ID:
+			return Return_2002;
+		case DeclarativePartEditPart.VISUAL_ID:
+			return DeclarativePart_2003;
+		case ExecutablePartEditPart.VISUAL_ID:
+			return ExecutablePart_2004;
+		case ProcedureEditPart.VISUAL_ID:
+			return Procedure_2005;
+		case FunctionEditPart.VISUAL_ID:
+			return Function_2006;
+		case AnonymousBlockEditPart.VISUAL_ID:
+			return AnonymousBlock_2007;
+		case DataTypeEditPart.VISUAL_ID:
+			return DataType_3001;
+		case CollectionsEditPart.VISUAL_ID:
+			return Collections_3002;
+		case RecordsEditPart.VISUAL_ID:
+			return Records_3003;
+		case CursorEditPart.VISUAL_ID:
+			return Cursor_3004;
+		case DataType2EditPart.VISUAL_ID:
+			return DataType_3005;
+		case Collections2EditPart.VISUAL_ID:
+			return Collections_3006;
+		case Records2EditPart.VISUAL_ID:
+			return Records_3007;
+		case Cursor2EditPart.VISUAL_ID:
+			return Cursor_3008;
+		case DataType3EditPart.VISUAL_ID:
+			return DataType_3009;
+		case Collections3EditPart.VISUAL_ID:
+			return Collections_3010;
+		case Records3EditPart.VISUAL_ID:
+			return Records_3011;
+		case Cursor3EditPart.VISUAL_ID:
+			return Cursor_3012;
+		case ExpressionsEditPart.VISUAL_ID:
+			return Expressions_3013;
+		case ExceptionEditPart.VISUAL_ID:
+			return Exception_3014;
+		case IfEditPart.VISUAL_ID:
+			return If_3015;
+		case CaseEditPart.VISUAL_ID:
+			return Case_3016;
+		case InsertEditPart.VISUAL_ID:
+			return Insert_3017;
+		case UpdateEditPart.VISUAL_ID:
+			return Update_3018;
+		case DeleteEditPart.VISUAL_ID:
+			return Delete_3019;
+		case SelectEditPart.VISUAL_ID:
+			return Select_3020;
+		case WhileEditPart.VISUAL_ID:
+			return While_3021;
+		case ForEditPart.VISUAL_ID:
+			return For_3022;
+		case LoopEditPart.VISUAL_ID:
+			return Loop_3023;
+		case OpenEditPart.VISUAL_ID:
+			return Open_3024;
+		case FetchEditPart.VISUAL_ID:
+			return Fetch_3025;
+		case CloseEditPart.VISUAL_ID:
+			return Close_3026;
+		case DataType4EditPart.VISUAL_ID:
+			return DataType_3027;
+		case Collections4EditPart.VISUAL_ID:
+			return Collections_3028;
+		case Records4EditPart.VISUAL_ID:
+			return Records_3029;
+		case Cursor4EditPart.VISUAL_ID:
+			return Cursor_3030;
+		case DataType5EditPart.VISUAL_ID:
+			return DataType_3031;
+		case Collections5EditPart.VISUAL_ID:
+			return Collections_3032;
+		case Records5EditPart.VISUAL_ID:
+			return Records_3033;
+		case Cursor5EditPart.VISUAL_ID:
+			return Cursor_3034;
+		case Expressions2EditPart.VISUAL_ID:
+			return Expressions_3035;
+		case Exception2EditPart.VISUAL_ID:
+			return Exception_3036;
+		case If2EditPart.VISUAL_ID:
+			return If_3037;
+		case Case2EditPart.VISUAL_ID:
+			return Case_3038;
+		case Insert2EditPart.VISUAL_ID:
+			return Insert_3039;
+		case Update2EditPart.VISUAL_ID:
+			return Update_3040;
+		case Delete2EditPart.VISUAL_ID:
+			return Delete_3041;
+		case Select2EditPart.VISUAL_ID:
+			return Select_3042;
+		case While2EditPart.VISUAL_ID:
+			return While_3043;
+		case For2EditPart.VISUAL_ID:
+			return For_3044;
+		case Loop2EditPart.VISUAL_ID:
+			return Loop_3045;
+		case Open2EditPart.VISUAL_ID:
+			return Open_3046;
+		case Fetch2EditPart.VISUAL_ID:
+			return Fetch_3047;
+		case Close2EditPart.VISUAL_ID:
+			return Close_3048;
+		case DataType6EditPart.VISUAL_ID:
+			return DataType_3049;
+		case Collections6EditPart.VISUAL_ID:
+			return Collections_3050;
+		case Records6EditPart.VISUAL_ID:
+			return Records_3051;
+		case Cursor6EditPart.VISUAL_ID:
+			return Cursor_3052;
+		case DataType7EditPart.VISUAL_ID:
+			return DataType_3053;
+		case Collections7EditPart.VISUAL_ID:
+			return Collections_3054;
+		case Records7EditPart.VISUAL_ID:
+			return Records_3055;
+		case Cursor7EditPart.VISUAL_ID:
+			return Cursor_3056;
+		case Expressions3EditPart.VISUAL_ID:
+			return Expressions_3057;
+		case Exception3EditPart.VISUAL_ID:
+			return Exception_3058;
+		case If3EditPart.VISUAL_ID:
+			return If_3059;
+		case Case3EditPart.VISUAL_ID:
+			return Case_3060;
+		case Insert3EditPart.VISUAL_ID:
+			return Insert_3061;
+		case Update3EditPart.VISUAL_ID:
+			return Update_3062;
+		case Delete3EditPart.VISUAL_ID:
+			return Delete_3063;
+		case Select3EditPart.VISUAL_ID:
+			return Select_3064;
+		case While3EditPart.VISUAL_ID:
+			return While_3065;
+		case For3EditPart.VISUAL_ID:
+			return For_3066;
+		case Loop3EditPart.VISUAL_ID:
+			return Loop_3067;
+		case Open3EditPart.VISUAL_ID:
+			return Open_3068;
+		case Fetch3EditPart.VISUAL_ID:
+			return Fetch_3069;
+		case Close3EditPart.VISUAL_ID:
+			return Close_3070;
+		case DataType8EditPart.VISUAL_ID:
+			return DataType_3071;
+		case Collections8EditPart.VISUAL_ID:
+			return Collections_3072;
+		case Records8EditPart.VISUAL_ID:
+			return Records_3073;
+		case Cursor8EditPart.VISUAL_ID:
+			return Cursor_3074;
+		case DataType9EditPart.VISUAL_ID:
+			return DataType_3075;
+		case Collections9EditPart.VISUAL_ID:
+			return Collections_3076;
+		case Records9EditPart.VISUAL_ID:
+			return Records_3077;
+		case Cursor9EditPart.VISUAL_ID:
+			return Cursor_3078;
+		case Expressions4EditPart.VISUAL_ID:
+			return Expressions_3079;
+		case Exception4EditPart.VISUAL_ID:
+			return Exception_3080;
+		case If4EditPart.VISUAL_ID:
+			return If_3081;
+		case Case4EditPart.VISUAL_ID:
+			return Case_3082;
+		case Insert4EditPart.VISUAL_ID:
+			return Insert_3083;
+		case Update4EditPart.VISUAL_ID:
+			return Update_3084;
+		case Delete4EditPart.VISUAL_ID:
+			return Delete_3085;
+		case Select4EditPart.VISUAL_ID:
+			return Select_3086;
+		case While4EditPart.VISUAL_ID:
+			return While_3087;
+		case For4EditPart.VISUAL_ID:
+			return For_3088;
+		case Loop4EditPart.VISUAL_ID:
+			return Loop_3089;
+		case Open4EditPart.VISUAL_ID:
+			return Open_3090;
+		case Fetch4EditPart.VISUAL_ID:
+			return Fetch_3091;
+		case Close4EditPart.VISUAL_ID:
+			return Close_3092;
+		case TransitionEditPart.VISUAL_ID:
+			return Transition_4001;
+		}
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramElementTypes TYPED_INSTANCE = new DiagramElementTypes(
+			elementTypeImages) {
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public boolean isKnownElementType(IElementType elementType) {
+			return crystal.diagram.providers.CrystalElementTypes
+					.isKnownElementType(elementType);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public IElementType getElementTypeForVisualId(int visualID) {
+			return crystal.diagram.providers.CrystalElementTypes
+					.getElementType(visualID);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public ENamedElement getDefiningNamedElement(
+				IAdaptable elementTypeAdapter) {
+			return crystal.diagram.providers.CrystalElementTypes
+					.getElement(elementTypeAdapter);
+		}
+	};
+
+}

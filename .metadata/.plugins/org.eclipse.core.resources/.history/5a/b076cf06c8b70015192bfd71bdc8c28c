@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package master.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramRulersAndGridPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.RulerGridPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramRulersAndGridPreferencePage() {
+		setPreferenceStore(master.diagram.part.MasterDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

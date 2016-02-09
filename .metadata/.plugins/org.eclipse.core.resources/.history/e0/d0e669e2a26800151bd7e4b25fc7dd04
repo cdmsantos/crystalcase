@@ -1,0 +1,18 @@
+/**
+ */
+package filesystem;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Parameter In</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see filesystem.FilesystemPackage#getParameterIn()
+ * @model
+ * @generated
+ */
+public interface ParameterIn extends EObject {
+} // ParameterIn

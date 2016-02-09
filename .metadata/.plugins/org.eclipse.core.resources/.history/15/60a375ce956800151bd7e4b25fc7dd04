@@ -1,0 +1,1043 @@
+/*
+ * 
+ */
+package filesystem.diagram.part;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
+
+import filesystem.DeclarativePart;
+import filesystem.ExceptionPart;
+import filesystem.ExecutablePart;
+import filesystem.Filesystem;
+import filesystem.FilesystemPackage;
+import filesystem.Output;
+import filesystem.Parameters;
+import filesystem.Return;
+import filesystem.Select;
+import filesystem.Sync;
+import filesystem.diagram.edit.parts.CaseEditPart;
+import filesystem.diagram.edit.parts.CursorEditPart;
+import filesystem.diagram.edit.parts.Data_TypeEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartEditPart;
+import filesystem.diagram.edit.parts.DeleteEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartEditPart;
+import filesystem.diagram.edit.parts.FilesystemEditPart;
+import filesystem.diagram.edit.parts.ForEditPart;
+import filesystem.diagram.edit.parts.IfEditPart;
+import filesystem.diagram.edit.parts.InsertEditPart;
+import filesystem.diagram.edit.parts.LoopEditPart;
+import filesystem.diagram.edit.parts.OutputEditPart;
+import filesystem.diagram.edit.parts.ParameterInEditPart;
+import filesystem.diagram.edit.parts.ParameterInOutEditPart;
+import filesystem.diagram.edit.parts.ParameterOutEditPart;
+import filesystem.diagram.edit.parts.ParametersEditPart;
+import filesystem.diagram.edit.parts.ReturnEditPart;
+import filesystem.diagram.edit.parts.SelectEditPart;
+import filesystem.diagram.edit.parts.SyncEditPart;
+import filesystem.diagram.edit.parts.UpdateEditPart;
+import filesystem.diagram.edit.parts.WhileEditPart;
+import filesystem.diagram.providers.FilesystemElementTypes;
+
+/**
+ * @generated
+ */
+public class FilesystemDiagramUpdater {
+
+	/**
+	 * @generated
+	 */
+	public static boolean isShortcutOrphaned(View view) {
+		return !view.isSetElement() || view.getElement() == null
+				|| view.getElement().eIsProxy();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000SemanticChildren(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemNodeDescriptor> getFilesystem_1000SemanticChildren(
+			View view) {
+		if (!view.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Filesystem modelElement = (Filesystem) view.getElement();
+		LinkedList<FilesystemNodeDescriptor> result = new LinkedList<FilesystemNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getDeclarative().iterator(); it
+				.hasNext();) {
+			DeclarativePart childElement = (DeclarativePart) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == Data_TypeEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeclarativePartEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getExecutable().iterator(); it
+				.hasNext();) {
+			ExecutablePart childElement = (ExecutablePart) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == IfEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CaseEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == InsertEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == UpdateEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeleteEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == OutputEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SelectEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CursorEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == WhileEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ForEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == LoopEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ExecutablePartEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getException().iterator(); it
+				.hasNext();) {
+			ExceptionPart childElement = (ExceptionPart) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ExceptionCommandEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ExceptionPartEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getParameters().iterator(); it
+				.hasNext();) {
+			Parameters childElement = (Parameters) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ParameterInEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ParameterOutEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ParameterInOutEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ParametersEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getReturn().iterator(); it.hasNext();) {
+			Return childElement = (Return) it.next();
+			int visualID = FilesystemVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == ReturnEditPart.VISUAL_ID) {
+				result.add(new FilesystemNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000ContainedLinks(view);
+		case Data_TypeEditPart.VISUAL_ID:
+			return getData_Type_2001ContainedLinks(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_2002ContainedLinks(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_2003ContainedLinks(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_2004ContainedLinks(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_2005ContainedLinks(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_2006ContainedLinks(view);
+		case OutputEditPart.VISUAL_ID:
+			return getOutput_2007ContainedLinks(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_2008ContainedLinks(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_2009ContainedLinks(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_2010ContainedLinks(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_2011ContainedLinks(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_2012ContainedLinks(view);
+		case ExceptionCommandEditPart.VISUAL_ID:
+			return getExceptionCommand_2013ContainedLinks(view);
+		case ParameterInEditPart.VISUAL_ID:
+			return getParameterIn_2014ContainedLinks(view);
+		case ParameterOutEditPart.VISUAL_ID:
+			return getParameterOut_2015ContainedLinks(view);
+		case ParameterInOutEditPart.VISUAL_ID:
+			return getParameterInOut_2016ContainedLinks(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2017ContainedLinks(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2018ContainedLinks(view);
+		case ExceptionPartEditPart.VISUAL_ID:
+			return getExceptionPart_2019ContainedLinks(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2020ContainedLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2021ContainedLinks(view);
+		case SyncEditPart.VISUAL_ID:
+			return getSync_4001ContainedLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case Data_TypeEditPart.VISUAL_ID:
+			return getData_Type_2001IncomingLinks(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_2002IncomingLinks(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_2003IncomingLinks(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_2004IncomingLinks(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_2005IncomingLinks(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_2006IncomingLinks(view);
+		case OutputEditPart.VISUAL_ID:
+			return getOutput_2007IncomingLinks(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_2008IncomingLinks(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_2009IncomingLinks(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_2010IncomingLinks(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_2011IncomingLinks(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_2012IncomingLinks(view);
+		case ExceptionCommandEditPart.VISUAL_ID:
+			return getExceptionCommand_2013IncomingLinks(view);
+		case ParameterInEditPart.VISUAL_ID:
+			return getParameterIn_2014IncomingLinks(view);
+		case ParameterOutEditPart.VISUAL_ID:
+			return getParameterOut_2015IncomingLinks(view);
+		case ParameterInOutEditPart.VISUAL_ID:
+			return getParameterInOut_2016IncomingLinks(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2017IncomingLinks(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2018IncomingLinks(view);
+		case ExceptionPartEditPart.VISUAL_ID:
+			return getExceptionPart_2019IncomingLinks(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2020IncomingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2021IncomingLinks(view);
+		case SyncEditPart.VISUAL_ID:
+			return getSync_4001IncomingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case Data_TypeEditPart.VISUAL_ID:
+			return getData_Type_2001OutgoingLinks(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_2002OutgoingLinks(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_2003OutgoingLinks(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_2004OutgoingLinks(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_2005OutgoingLinks(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_2006OutgoingLinks(view);
+		case OutputEditPart.VISUAL_ID:
+			return getOutput_2007OutgoingLinks(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_2008OutgoingLinks(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_2009OutgoingLinks(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_2010OutgoingLinks(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_2011OutgoingLinks(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_2012OutgoingLinks(view);
+		case ExceptionCommandEditPart.VISUAL_ID:
+			return getExceptionCommand_2013OutgoingLinks(view);
+		case ParameterInEditPart.VISUAL_ID:
+			return getParameterIn_2014OutgoingLinks(view);
+		case ParameterOutEditPart.VISUAL_ID:
+			return getParameterOut_2015OutgoingLinks(view);
+		case ParameterInOutEditPart.VISUAL_ID:
+			return getParameterInOut_2016OutgoingLinks(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2017OutgoingLinks(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2018OutgoingLinks(view);
+		case ExceptionPartEditPart.VISUAL_ID:
+			return getExceptionPart_2019OutgoingLinks(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2020OutgoingLinks(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2021OutgoingLinks(view);
+		case SyncEditPart.VISUAL_ID:
+			return getSync_4001OutgoingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFilesystem_1000ContainedLinks(
+			View view) {
+		Filesystem modelElement = (Filesystem) view.getElement();
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Sync_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getData_Type_2001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIf_2002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCase_2003ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getInsert_2004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getUpdate_2005ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDelete_2006ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutput_2007ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSelect_2008ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCursor_2009ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getWhile_2010ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFor_2011ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getLoop_2012ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExceptionCommand_2013ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterIn_2014ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterOut_2015ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterInOut_2016ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDeclarativePart_2017ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExecutablePart_2018ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExceptionPart_2019ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2020ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2021ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSync_4001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getData_Type_2001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIf_2002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCase_2003IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getInsert_2004IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getUpdate_2005IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDelete_2006IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutput_2007IncomingLinks(
+			View view) {
+		Output modelElement = (Output) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Sync_4001(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSelect_2008IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCursor_2009IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getWhile_2010IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFor_2011IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getLoop_2012IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExceptionCommand_2013IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterIn_2014IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterOut_2015IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterInOut_2016IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDeclarativePart_2017IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExecutablePart_2018IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExceptionPart_2019IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2020IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2021IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSync_4001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getData_Type_2001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getIf_2002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCase_2003OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getInsert_2004OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getUpdate_2005OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDelete_2006OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getOutput_2007OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSelect_2008OutgoingLinks(
+			View view) {
+		Select modelElement = (Select) view.getElement();
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Sync_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getCursor_2009OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getWhile_2010OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getFor_2011OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getLoop_2012OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExceptionCommand_2013OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterIn_2014OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterOut_2015OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameterInOut_2016OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getDeclarativePart_2017OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExecutablePart_2018OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getExceptionPart_2019OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getParameters_2020OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getReturn_2021OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FilesystemLinkDescriptor> getSync_4001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FilesystemLinkDescriptor> getContainedTypeModelFacetLinks_Sync_4001(
+			Filesystem container) {
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		for (Iterator<?> links = container.getSyncs().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Sync) {
+				continue;
+			}
+			Sync link = (Sync) linkObject;
+			if (SyncEditPart.VISUAL_ID != FilesystemVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Output dst = link.getTarget();
+			Select src = link.getSource();
+			result.add(new FilesystemLinkDescriptor(src, dst, link,
+					FilesystemElementTypes.Sync_4001, SyncEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FilesystemLinkDescriptor> getIncomingTypeModelFacetLinks_Sync_4001(
+			Output target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != FilesystemPackage.eINSTANCE
+					.getSync_Target()
+					|| false == setting.getEObject() instanceof Sync) {
+				continue;
+			}
+			Sync link = (Sync) setting.getEObject();
+			if (SyncEditPart.VISUAL_ID != FilesystemVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Select src = link.getSource();
+			result.add(new FilesystemLinkDescriptor(src, target, link,
+					FilesystemElementTypes.Sync_4001, SyncEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FilesystemLinkDescriptor> getOutgoingTypeModelFacetLinks_Sync_4001(
+			Select source) {
+		Filesystem container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element
+				.eContainer()) {
+			if (element instanceof Filesystem) {
+				container = (Filesystem) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
+		for (Iterator<?> links = container.getSyncs().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Sync) {
+				continue;
+			}
+			Sync link = (Sync) linkObject;
+			if (SyncEditPart.VISUAL_ID != FilesystemVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Output dst = link.getTarget();
+			Select src = link.getSource();
+			if (src != source) {
+				continue;
+			}
+			result.add(new FilesystemLinkDescriptor(src, dst, link,
+					FilesystemElementTypes.Sync_4001, SyncEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramUpdater TYPED_INSTANCE = new DiagramUpdater() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemNodeDescriptor> getSemanticChildren(View view) {
+			return FilesystemDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getContainedLinks(View view) {
+			return FilesystemDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getIncomingLinks(View view) {
+			return FilesystemDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FilesystemLinkDescriptor> getOutgoingLinks(View view) {
+			return FilesystemDiagramUpdater.getOutgoingLinks(view);
+		}
+	};
+
+}

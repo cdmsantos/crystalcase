@@ -1,0 +1,86 @@
+#
+
+pluginName = Crystal Edit Support
+providerName = www.example.org
+
+_UI_CreateChild_text = {0}
+_UI_CreateChild_text2 = {1} {0}
+_UI_CreateChild_text3 = {1}
+_UI_CreateChild_tooltip = Create New {0} Under {1} Feature
+_UI_CreateChild_description = Create a new child of type {0} for the {1} feature of the selected {2}.
+_UI_CreateSibling_description = Create a new sibling of type {0} for the selected {2}, under the {1} feature of their parent.
+
+_UI_PropertyDescriptor_description = The {0} of the {1}
+
+_UI_Crystal_type = Crystal
+_UI_Sections_type = Sections
+_UI_Parameters_type = Parameters
+_UI_Return_type = Return
+_UI_DeclarativePart_type = Declarative Part
+_UI_ExecutablePart_type = Executable Part
+_UI_Variables_type = Variables
+_UI_DataType_type = Data Type
+_UI_Collections_type = Collections
+_UI_Records_type = Records
+_UI_Cursor_type = Cursor
+_UI_Objects_type = Objects
+_UI_Expressions_type = Expressions
+_UI_Exception_type = Exception
+_UI_If_type = If
+_UI_Case_type = Case
+_UI_Insert_type = Insert
+_UI_Update_type = Update
+_UI_Delete_type = Delete
+_UI_Select_type = Select
+_UI_While_type = While
+_UI_For_type = For
+_UI_Loop_type = Loop
+_UI_Open_type = Open
+_UI_Fetch_type = Fetch
+_UI_Close_type = Close
+_UI_Transition_type = Transition
+_UI_Unknown_type = Object
+
+_UI_Unknown_datatype= Value
+
+_UI_Crystal_transitions_feature = Transitions
+_UI_Crystal_parameters_feature = Parameters
+_UI_Crystal_return_feature = Return
+_UI_Crystal_declarativePart_feature = Declarative Part
+_UI_Crystal_executablePart_feature = Executable Part
+_UI_Sections_name_feature = Name
+_UI_Parameters_variables_feature = Variables
+_UI_Return_variables_feature = Variables
+_UI_DeclarativePart_variables_feature = Variables
+_UI_ExecutablePart_objects_feature = Objects
+_UI_Variables_name_feature = Name
+_UI_Variables_code_feature = Code
+_UI_Variables_type_feature = Type
+_UI_Variables_description_feature = Description
+_UI_Objects_name_feature = Name
+_UI_Objects_code_feature = Code
+_UI_Objects_description_feature = Description
+_UI_Transition_name_feature = Name
+_UI_Transition_start_feature = Start
+_UI_Transition_end_feature = End
+_UI_Unknown_feature = Unspecified
+
+_UI_ParameterType_None_literal = None
+_UI_ParameterType_In_literal = In
+_UI_ParameterType_Out_literal = Out
+_UI_ParameterType_InOut_literal = InOut
+_UI_Procedure_type = Procedure
+_UI_Crystal_procedures_feature = Procedures
+_UI_Procedure_parameters_feature = Parameters
+_UI_Procedure_declarativePart_feature = Declarative Part
+_UI_Procedure_executablePart_feature = Executable Part
+_UI_Function_type = Function
+_UI_AnonymousBlock_type = Anonymous Block
+_UI_Function_parameters_feature = Parameters
+_UI_Function_declarativePart_feature = Declarative Part
+_UI_Function_executablePart_feature = Executable Part
+_UI_Function_returnPart_feature = Return Part
+_UI_AnonymousBlock_declarativePart_feature = Declarative Part
+_UI_AnonymousBlock_executablePart_feature = Executable Part
+_UI_Crystal_functions_feature = Functions
+_UI_Crystal_blocks_feature = Blocks

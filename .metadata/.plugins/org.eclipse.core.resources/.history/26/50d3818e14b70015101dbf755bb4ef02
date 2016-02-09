@@ -1,0 +1,131 @@
+/*
+ * 
+ */
+package master.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class LoopLoopObjectsCompartment4EditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeCompartmentEditPart  {
+
+			/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 7037;
+	
+		/**
+ * @generated
+ */
+	public LoopLoopObjectsCompartment4EditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+			
+		/**
+ * @generated
+ */
+	public String getCompartmentName() {
+		return master.diagram.part.Messages.LoopLoopObjectsCompartment4EditPart_title;
+	}
+	
+						/**
+ * @generated
+ */
+		public org.eclipse.draw2d.IFigure createFigure() {
+			org.eclipse.gmf.runtime.diagram.ui.figures.ResizableCompartmentFigure result = (org.eclipse.gmf.runtime.diagram.ui.figures.ResizableCompartmentFigure) super.createFigure();
+			result.setTitleVisibility(false);
+			return result;
+		}
+		
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+			super.createDefaultEditPolicies();
+			installEditPolicy(org.eclipse.gef.EditPolicy.PRIMARY_DRAG_ROLE, new org.eclipse.gmf.runtime.diagram.ui.editpolicies.ResizableCompartmentEditPolicy());
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new master.diagram.edit.policies.LoopLoopObjectsCompartment4ItemSemanticEditPolicy());
+				installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CREATION_ROLE, new org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent(master.diagram.part.MasterVisualIDRegistry.TYPED_INSTANCE));
+		installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.DRAG_DROP_ROLE, new org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy());
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CANONICAL_ROLE, new master.diagram.edit.policies.LoopLoopObjectsCompartment4CanonicalEditPolicy());
+					}
+	
+			
+			
+			
+		/**
+ * @generated
+ */
+	protected void setRatio(Double ratio) {
+				if (getFigure().getParent().getLayoutManager() instanceof org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout) {
+			super.setRatio(ratio);
+		}
+			}
+	
+	
+	/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart getTargetEditPart(org.eclipse.gef.Request request) {
+					if (request instanceof org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewAndElementRequest) {
+				org.eclipse.gmf.runtime.diagram.core.edithelpers.CreateElementRequestAdapter adapter = ((org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewAndElementRequest) request).getViewAndElementDescriptor().getCreateElementRequestAdapter();
+				org.eclipse.gmf.runtime.emf.type.core.IElementType type = (org.eclipse.gmf.runtime.emf.type.core.IElementType) adapter.getAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType.class);
+							if (type == master.diagram.providers.MasterElementTypes.Expressions_3039) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Exception_3040) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.If_3041) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Case_3045) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Insert_3057) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Update_3058) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Delete_3059) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Select_3060) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.While_3076) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.For_3081) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Loop_3084) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Open_3085) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Fetch_3086) {
+					return this;
+				}
+							if (type == master.diagram.providers.MasterElementTypes.Close_3087) {
+					return this;
+				}
+							return getParent().getTargetEditPart(request);
+			}
+			if (request instanceof org.eclipse.gmf.runtime.diagram.ui.requests.CreateUnspecifiedTypeConnectionRequest) {
+								if (org.eclipse.gmf.runtime.diagram.ui.requests.RequestConstants.REQ_CONNECTION_END.equals(request.getType())) {
+					for (Object type : ((org.eclipse.gmf.runtime.diagram.ui.requests.CreateUnspecifiedTypeConnectionRequest) request).getElementTypes()) {
+						if (type instanceof org.eclipse.gmf.runtime.emf.type.core.IElementType) {
+							org.eclipse.gmf.runtime.emf.type.core.IElementType elementType = (org.eclipse.gmf.runtime.emf.type.core.IElementType) type;
+							if (elementType.equals(master.diagram.providers.MasterElementTypes.Transition_4001))
+								return super.getTargetEditPart(request);
+						}
+					}
+				}
+								return getParent().getTargetEditPart(request);
+			}
+				return super.getTargetEditPart(request);
+	}
+	
+	}

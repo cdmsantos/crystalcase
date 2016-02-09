@@ -1,0 +1,169 @@
+@namespace(uri="master", prefix="master")
+@gmf
+
+package master;
+
+@gmf.diagram
+class Master {
+	val Transition[*] transitions;
+	
+	val Parameters[1] parameters;
+	val Return[1] return;
+	val DeclarativePart[1] declarativePart;
+	val ExecutablePart[1] executablePart;	
+} 
+
+
+//Sections
+class Sections{
+}
+
+@gmf.node(label="name", figure="rounded", size="150,200", border.color="255,13,13", border.style="dash", label.readOnly="true") //vermelho	
+class Parameters extends Sections{
+	attr String[1] name="Parameters";
+	@gmf.compartment
+	val Variables[*] variables;
+}
+
+@gmf.node(label="name", figure="rectangle", size="150,200", border.color="25,191,108", border.style="dash", label.readOnly="true") //azul	
+class Return extends Sections{
+	attr String[1] name="Return";
+	@gmf.compartment
+	val Variables[*] variables;
+}
+
+@gmf.node(label="name", figure="rectangle", size="150,200", border.color="43,106,215", border.style="dash", label.readOnly="true") //verde
+class DeclarativePart extends Sections{
+	attr String[1] name="Declarative Part";
+	@gmf.compartment
+	val Variables[*] variables;
+}
+
+@gmf.node(label="name", size="450,450", figure="rectangle", border.color="158,25,191", border.style="dash", label.readOnly="true") //roxo	
+class ExecutablePart extends Sections{
+	attr String[1] name="Executable Part";
+	@gmf.compartment
+	val Objects[*] objects;
+}
+
+//Variables
+
+class Variables{	
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/datatype.svg", label.icon="false", label.placement="none")
+class DataType extends Variables{
+	attr String[1] name="data type";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/collections.svg", label.icon="false", label.placement="none")
+class Collections extends Variables{
+	attr String[1] name="collections";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/records.svg", label.icon="false", label.placement="none")
+class Records extends Variables{
+	attr String[1] name="records";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/cursor.svg", label.icon="false", label.placement="none")
+class Cursor extends Variables {
+	attr String[1] name="cursor";
+	attr String Code;
+}
+
+//Objects
+class Objects{
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/expression.svg", label.icon="false", label.placement="none")
+class Expressions extends Objects{
+	attr String[1] Name="expressions";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/exception.svg", label.icon="false", label.placement="none")
+class Exception extends Objects{
+	attr String[1] name="exception";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/if.svg", label.icon="false", label.placement="none")
+class If extends Objects{
+	attr String[1] name="if";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/case.svg", label.icon="false", label.placement="none")
+class Case extends Objects{
+	attr String[1] name="case";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/insert.svg", label.icon="false", label.placement="none")
+class Insert extends Objects{
+	attr String[1] name="insert";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/update.svg", label.icon="false", label.placement="none")
+class Update extends Objects{
+	attr String[1] name="update";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/delete.svg", label.icon="false", label.placement="none")
+class Delete extends Objects{
+	attr String[1] name="delete";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/select.svg", label.icon="false", label.placement="none")
+class Select extends Objects{
+	attr String[1] name="select";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/while.svg", label.icon="false", label.placement="none")
+class While extends Objects{
+	attr String[1] name="while";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/for.svg", label.icon="false", label.placement="none")
+class For extends Objects{
+	attr String[1] name="for";
+	attr String Code;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/loop.svg", label.icon="false", label.placement="none")
+class Loop extends Objects{
+	attr String[1] name="loop";
+	@gmf.compartment
+	val Objects[*] objects;
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/open.svg", label.icon="false", label.placement="none")
+class Open extends Objects{
+	attr String[1] name="open";
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/fetch.svg", label.icon="false", label.placement="none")
+class Fetch extends Objects{
+	attr String[1] name="fetch";
+}
+
+@gmf.node(label="name", figure="svg", svg.uri="platform:/plugin/masterproject/icons/close.svg", label.icon="false", label.placement="none")
+class Close extends Objects{
+	attr String[1] name="close";
+}
+
+@gmf.link(source="start", target="end", target.decoration="arrow", color="0,0,0")
+class Transition{
+	ref Objects start;
+	ref Objects end;
+}
+

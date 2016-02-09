@@ -1,0 +1,163 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.FilesystemPackage;
+import filesystem.Parameters;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Parameters</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link filesystem.impl.ParametersImpl#getNameParameters <em>Name Parameters</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class ParametersImpl extends EObjectImpl implements Parameters {
+	/**
+	 * The default value of the '{@link #getNameParameters() <em>Name Parameters</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameters()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_PARAMETERS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameParameters() <em>Name Parameters</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameters()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameParameters = NAME_PARAMETERS_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ParametersImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.PARAMETERS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameParameters() {
+		return nameParameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameParameters(String newNameParameters) {
+		String oldNameParameters = nameParameters;
+		nameParameters = newNameParameters;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.PARAMETERS__NAME_PARAMETERS, oldNameParameters, nameParameters));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETERS:
+				return getNameParameters();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETERS:
+				setNameParameters((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETERS:
+				setNameParameters(NAME_PARAMETERS_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETERS:
+				return NAME_PARAMETERS_EDEFAULT == null ? nameParameters != null : !NAME_PARAMETERS_EDEFAULT.equals(nameParameters);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (nameParameters: ");
+		result.append(nameParameters);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ParametersImpl

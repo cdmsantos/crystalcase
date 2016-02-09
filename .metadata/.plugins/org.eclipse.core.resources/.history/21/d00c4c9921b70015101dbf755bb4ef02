@@ -1,0 +1,1742 @@
+/*
+ * 
+ */
+package master.diagram.part;
+
+import org.eclipse.osgi.util.NLS;
+
+/**
+ * @generated
+ */
+public class Messages extends NLS {
+
+	/**
+	 * @generated
+	 */
+	static {
+		NLS.initializeMessages("messages", Messages.class); //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private Messages() {
+	}
+
+	/**
+	 * @generated
+	 */
+	public static String MasterCreationWizardTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterCreationWizard_DiagramModelFilePageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterCreationWizard_DiagramModelFilePageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterCreationWizard_DomainModelFilePageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterCreationWizard_DomainModelFilePageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterCreationWizardOpenEditorError;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterCreationWizardCreationError;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterCreationWizardPageExtensionError;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDiagramEditorUtil_OpenModelResourceErrorDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDiagramEditorUtil_OpenModelResourceErrorDialogMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDiagramEditorUtil_CreateDiagramProgressTask;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDiagramEditorUtil_CreateDiagramCommandLabel;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDocumentProvider_isModifiable;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDocumentProvider_handleElementContentChanged;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDocumentProvider_IncorrectInputError;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDocumentProvider_NoDiagramInResourceError;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDocumentProvider_DiagramLoadingError;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDocumentProvider_UnsynchronizedFileSaveError;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDocumentProvider_SaveDiagramTask;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDocumentProvider_SaveNextResourceTask;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDocumentProvider_SaveAsOperation;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_ResourceErrorDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_ResourceErrorDialogMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_WizardTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_OpenModelFileDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_CreationPageName;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_CreationPageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_CreationPageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_RootSelectionPageName;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_RootSelectionPageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_RootSelectionPageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_RootSelectionPageSelectionTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_RootSelectionPageNoSelectionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_RootSelectionPageInvalidSelectionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_InitDiagramCommand;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterNewDiagramFileWizard_IncorrectRootError;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDiagramEditor_SavingDeletedFile;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDiagramEditor_SaveAsErrorTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDiagramEditor_SaveAsErrorMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDiagramEditor_SaveErrorTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterDiagramEditor_SaveErrorMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterElementChooserDialog_SelectModelElementTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String ModelElementSelectionPageMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String ValidateActionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String Objects1Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Connections2Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Sections3Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Case1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Case1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Close2CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Close2CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Collections3CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Collections3CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Cursor4CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Cursor4CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String DataType5CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DataType5CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String DeclarativePart6CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeclarativePart6CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Delete7CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Delete7CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Exception8CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Exception8CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePart9CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePart9CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Expressions10CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Expressions10CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Fetch11CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Fetch11CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String For12CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String For12CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String If13CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String If13CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Insert14CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Insert14CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Loop15CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Loop15CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Open16CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Open16CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Parameters17CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Parameters17CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Records18CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Records18CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Return19CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Return19CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Select20CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Select20CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Update21CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Update21CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String While22CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String While22CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Transition1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Transition1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ParametersParametersVariablesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ReturnReturnVariablesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String DeclarativePartDeclarativePartVariablesCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ExecutablePartExecutablePartObjectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfObjectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfObjectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseObjectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfObjectsCompartment3EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectObjectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfObjectsCompartment4EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileObjectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfObjectsCompartment5EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForObjectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfObjectsCompartment6EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopObjectsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String IfIfObjectsCompartment7EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseObjectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseObjectsCompartment3EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectObjectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseObjectsCompartment4EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileObjectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseObjectsCompartment5EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForObjectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseObjectsCompartment6EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopObjectsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectObjectsCompartment3EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectObjectsCompartment4EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileObjectsCompartment3EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectObjectsCompartment5EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForObjectsCompartment3EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectObjectsCompartment6EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopObjectsCompartment3EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileObjectsCompartment4EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileObjectsCompartment5EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForObjectsCompartment4EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileObjectsCompartment6EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopObjectsCompartment4EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForObjectsCompartment5EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForObjectsCompartment6EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopObjectsCompartment5EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopObjectsCompartment6EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseObjectsCompartment7EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String SelectSelectObjectsCompartment7EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String WhileWhileObjectsCompartment7EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ForForObjectsCompartment7EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String LoopLoopObjectsCompartment7EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CommandName_OpenDiagram;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Master_1000_links;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3013_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3013_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3014_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3014_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3015_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3015_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3016_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3016_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3017_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3017_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3018_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3018_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3019_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3019_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3020_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3020_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3021_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3021_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3022_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3022_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3023_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3023_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3024_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3024_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3025_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3025_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3026_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3026_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3027_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3027_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3028_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3028_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3029_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3029_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3030_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3030_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3031_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3031_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3032_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3032_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3033_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3033_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3034_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3034_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3035_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3035_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3036_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3036_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3037_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3037_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3038_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3038_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3039_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Expressions_3039_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3040_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Exception_3040_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3041_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_If_3041_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3042_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3042_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3043_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3043_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3044_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3044_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3045_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3045_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3046_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3046_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3047_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3047_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3048_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3048_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3049_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3049_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3050_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3050_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3051_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3051_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3052_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3052_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3053_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3053_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3054_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3054_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3055_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3055_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3056_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3056_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3057_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3057_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3058_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3058_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3059_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3059_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3060_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3060_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3061_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3061_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3062_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3062_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3063_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3063_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3064_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3064_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3065_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3065_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3066_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3066_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3067_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3067_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3068_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3068_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3069_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3069_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3070_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3070_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3071_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3071_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3072_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3072_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3073_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3073_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3074_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3074_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3075_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3075_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3076_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3076_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3077_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3077_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3078_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3078_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3079_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3079_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3080_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3080_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3081_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3081_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3082_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3082_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3083_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3083_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3084_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3084_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3085_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3085_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3086_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3086_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3087_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3087_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3088_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3088_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3089_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3089_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3090_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3090_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3091_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3091_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3092_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3092_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3093_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3093_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3094_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3094_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3095_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3095_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3096_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3096_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3097_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3097_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3098_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3098_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3099_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3099_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3100_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3100_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3101_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Insert_3101_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3102_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Update_3102_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3103_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Delete_3103_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3104_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Select_3104_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3105_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_While_3105_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3106_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_For_3106_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3107_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Loop_3107_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3108_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Open_3108_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3109_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Fetch_3109_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3110_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Close_3110_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Transition_4001_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Transition_4001_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorActionProvider_OpenDiagramActionName;
+
+	/**
+	 * @generated
+	 */
+	public static String MessageFormatParser_InvalidInputError;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterModelingAssistantProviderTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String MasterModelingAssistantProviderMessage;
+
+	//TODO: put accessor fields manually	
+}

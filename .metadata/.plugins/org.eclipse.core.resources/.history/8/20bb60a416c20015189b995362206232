@@ -1,0 +1,17 @@
+/**
+ */
+package crystal;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Insert</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see crystal.CrystalPackage#getInsert()
+ * @model
+ * @generated
+ */
+public interface Insert extends Objects {
+} // Insert

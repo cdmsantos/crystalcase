@@ -1,0 +1,26 @@
+/*
+ * 
+ */
+package master.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class MasterModelingAssistantProviderOfMasterEditPart extends master.diagram.providers.MasterModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(4);
+					types.add(master.diagram.providers.MasterElementTypes.Parameters_2001);
+					types.add(master.diagram.providers.MasterElementTypes.Return_2002);
+					types.add(master.diagram.providers.MasterElementTypes.DeclarativePart_2003);
+					types.add(master.diagram.providers.MasterElementTypes.ExecutablePart_2004);
+					return types;	
+	}
+			
+	
+	}

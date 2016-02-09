@@ -1,0 +1,54 @@
+@namespace(uri="filesystem", prefix="filesystem")
+@gmf
+package filesystem;
+
+@gmf.diagram
+class Filesystem {
+    val Drive[*] drives;
+    val Sync[*] syncs;
+    val DeclarativePart[*] declarative;
+    val ExecutablePart[*] executable;
+    val ExceptionPart[*] exception;
+    val Parameter[*] parameters;
+}
+
+class Drive extends Folder {
+
+}
+
+@gmf.node(label="name")	
+class DeclarativePart {
+    attr String name;
+}
+
+@gmf.node(label="name")	
+class ExecutablePart {
+    attr String name;
+}
+
+@gmf.node(label="name")	
+class ExceptionPart {
+    attr String name;
+}
+
+
+class Folder extends File {
+    @gmf.compartment
+    val File[*] contents;
+}
+
+@gmf.link(source="source", target="target", style="dot", width="2")
+class Sync {
+    ref File source;
+    ref File target;
+}
+
+class Shortcut extends File {
+    @gmf.link(target.decoration="arrow", style="dash")
+    ref File target;
+}
+
+@gmf.node(label = "name")
+class File {
+    attr String name;
+}

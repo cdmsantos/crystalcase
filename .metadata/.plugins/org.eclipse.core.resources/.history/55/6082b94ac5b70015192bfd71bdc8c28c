@@ -1,0 +1,38 @@
+	/*
+ * 
+ */
+package master.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class DeclarativePartDeclarativePartVariablesCompartmentItemSemanticEditPolicy extends master.diagram.edit.policies.MasterBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public DeclarativePartDeclarativePartVariablesCompartmentItemSemanticEditPolicy() {
+				super(master.diagram.providers.MasterElementTypes.DeclarativePart_2003);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (master.diagram.providers.MasterElementTypes.DataType_3009 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.DataType3CreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Collections_3010 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.Collections3CreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Records_3011 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.Records3CreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Cursor_3012 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.Cursor3CreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

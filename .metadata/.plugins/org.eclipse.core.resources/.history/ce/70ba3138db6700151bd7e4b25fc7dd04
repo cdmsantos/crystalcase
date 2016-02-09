@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class FilesystemModelingAssistantProviderOfExceptionEditPart extends filesystem.diagram.providers.FilesystemModelingAssistantProvider {
+
+					
+	
+
+	}

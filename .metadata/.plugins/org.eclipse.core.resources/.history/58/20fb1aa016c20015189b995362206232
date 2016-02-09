@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="crystal" nsURI="crystal" nsPrefix="crystal">
+  <eClassifiers xsi:type="ecore:EClass" name="Crystal">
+    <eAnnotations source="gmf.diagram">
+      <details key="foo" value="bar"/>
+      <details key="rcp" value="false"/>
+      <details key="onefile" value="true"/>
+      <details key="diagram.extension" value="crystal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
+        eType="#//Transition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="procedures" upperBound="-1"
+        eType="#//Procedure" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
+        eType="#//Function" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="blocks" upperBound="-1"
+        eType="#//AnonymousBlock" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sections" abstract="true">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="rectangle"/>
+      <details key="border.style" value="dash"/>
+      <details key="border.width" value="1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declarativePart" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executablePart" upperBound="-1"
+        eType="#//Objects" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Procedure" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="label.text" value="Procedure"/>
+      <details key="border.color" value="255,13,13"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="label.text" value="Function"/>
+      <details key="border.color" value="25,191,108"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnPart" upperBound="-1"
+        eType="#//Variables" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnonymousBlock" eSuperTypes="#//Sections">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="label.text" value="Anonymous Block"/>
+      <details key="border.color" value="43,106,215"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variables" abstract="true">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="border.width" value="1"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the SQL code"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ParameterType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Description"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Variables"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Collections" eSuperTypes="#//Variables"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Records" eSuperTypes="#//Variables"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cursor" eSuperTypes="#//Variables"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Objects" abstract="true">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="description"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="true"/>
+      <details key="label.placement" value="internal"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the SQL code"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Description"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expressions" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Exception" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Case" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="While" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="For" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Open" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Fetch" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Close" eSuperTypes="#//Objects"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="incoming" value="true"/>
+      <details key="target.decoration" value="arrow"/>
+      <details key="color" value="0,0,0"/>
+      <details key="width" value="1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Connection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Objects"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Objects"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ParameterType">
+    <eLiterals name="None"/>
+    <eLiterals name="In" value="1"/>
+    <eLiterals name="Out" value="2"/>
+    <eLiterals name="InOut" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,17 @@
+	/*
+ * 
+ */
+package filesystem.diagram.part;
+
+	/**
+ * @generated
+ */
+public class FilesystemNodeDescriptor extends org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor {
+		/**
+ * @generated
+ */
+public FilesystemNodeDescriptor(org.eclipse.emf.ecore.EObject modelElement, int visualID) {
+	super(modelElement, visualID);
+}
+
+	}

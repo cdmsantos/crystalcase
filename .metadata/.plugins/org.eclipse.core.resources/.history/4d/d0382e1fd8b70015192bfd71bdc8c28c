@@ -1,0 +1,25 @@
+	/*
+ * 
+ */
+package master.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class TransitionItemSemanticEditPolicy extends master.diagram.edit.policies.MasterBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public TransitionItemSemanticEditPolicy() {
+				super(master.diagram.providers.MasterElementTypes.Transition_4001);
+	}
+
+			/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getDestroyElementCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest req) {
+		return getGEFWrapper(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(req));
+	}
+					
+	}

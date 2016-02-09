@@ -1,0 +1,393 @@
+/**
+ */
+package filesystem.impl;
+
+import filesystem.FilesystemPackage;
+import filesystem.ParameterIn;
+import filesystem.ParameterInOut;
+import filesystem.ParameterOut;
+import filesystem.Parameters;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Parameters</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link filesystem.impl.ParametersImpl#getNameParameterOut <em>Name Parameter Out</em>}</li>
+ *   <li>{@link filesystem.impl.ParametersImpl#getNameParameterInOut <em>Name Parameter In Out</em>}</li>
+ *   <li>{@link filesystem.impl.ParametersImpl#getParametros_in <em>Parametros in</em>}</li>
+ *   <li>{@link filesystem.impl.ParametersImpl#getParametros_in_out <em>Parametros in out</em>}</li>
+ *   <li>{@link filesystem.impl.ParametersImpl#getParametros_out <em>Parametros out</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class ParametersImpl extends ParameterInImpl implements Parameters {
+	/**
+	 * The default value of the '{@link #getNameParameterOut() <em>Name Parameter Out</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameterOut()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_PARAMETER_OUT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameParameterOut() <em>Name Parameter Out</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameterOut()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameParameterOut = NAME_PARAMETER_OUT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNameParameterInOut() <em>Name Parameter In Out</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameterInOut()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_PARAMETER_IN_OUT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameParameterInOut() <em>Name Parameter In Out</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameParameterInOut()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameParameterInOut = NAME_PARAMETER_IN_OUT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getParametros_in() <em>Parametros in</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParametros_in()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ParameterIn> parametros_in;
+
+	/**
+	 * The cached value of the '{@link #getParametros_in_out() <em>Parametros in out</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParametros_in_out()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ParameterInOut> parametros_in_out;
+
+	/**
+	 * The cached value of the '{@link #getParametros_out() <em>Parametros out</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParametros_out()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ParameterOut> parametros_out;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ParametersImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FilesystemPackage.Literals.PARAMETERS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameParameterOut() {
+		return nameParameterOut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameParameterOut(String newNameParameterOut) {
+		String oldNameParameterOut = nameParameterOut;
+		nameParameterOut = newNameParameterOut;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.PARAMETERS__NAME_PARAMETER_OUT, oldNameParameterOut, nameParameterOut));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameParameterInOut() {
+		return nameParameterInOut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameParameterInOut(String newNameParameterInOut) {
+		String oldNameParameterInOut = nameParameterInOut;
+		nameParameterInOut = newNameParameterInOut;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FilesystemPackage.PARAMETERS__NAME_PARAMETER_IN_OUT, oldNameParameterInOut, nameParameterInOut));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ParameterIn> getParametros_in() {
+		if (parametros_in == null) {
+			parametros_in = new EObjectContainmentEList<ParameterIn>(ParameterIn.class, this, FilesystemPackage.PARAMETERS__PARAMETROS_IN);
+		}
+		return parametros_in;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ParameterInOut> getParametros_in_out() {
+		if (parametros_in_out == null) {
+			parametros_in_out = new EObjectContainmentEList<ParameterInOut>(ParameterInOut.class, this, FilesystemPackage.PARAMETERS__PARAMETROS_IN_OUT);
+		}
+		return parametros_in_out;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ParameterOut> getParametros_out() {
+		if (parametros_out == null) {
+			parametros_out = new EObjectContainmentEList<ParameterOut>(ParameterOut.class, this, FilesystemPackage.PARAMETERS__PARAMETROS_OUT);
+		}
+		return parametros_out;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN:
+				return ((InternalEList<?>)getParametros_in()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN_OUT:
+				return ((InternalEList<?>)getParametros_in_out()).basicRemove(otherEnd, msgs);
+			case FilesystemPackage.PARAMETERS__PARAMETROS_OUT:
+				return ((InternalEList<?>)getParametros_out()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETER_OUT:
+				return getNameParameterOut();
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETER_IN_OUT:
+				return getNameParameterInOut();
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN:
+				return getParametros_in();
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN_OUT:
+				return getParametros_in_out();
+			case FilesystemPackage.PARAMETERS__PARAMETROS_OUT:
+				return getParametros_out();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETER_OUT:
+				setNameParameterOut((String)newValue);
+				return;
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETER_IN_OUT:
+				setNameParameterInOut((String)newValue);
+				return;
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN:
+				getParametros_in().clear();
+				getParametros_in().addAll((Collection<? extends ParameterIn>)newValue);
+				return;
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN_OUT:
+				getParametros_in_out().clear();
+				getParametros_in_out().addAll((Collection<? extends ParameterInOut>)newValue);
+				return;
+			case FilesystemPackage.PARAMETERS__PARAMETROS_OUT:
+				getParametros_out().clear();
+				getParametros_out().addAll((Collection<? extends ParameterOut>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETER_OUT:
+				setNameParameterOut(NAME_PARAMETER_OUT_EDEFAULT);
+				return;
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETER_IN_OUT:
+				setNameParameterInOut(NAME_PARAMETER_IN_OUT_EDEFAULT);
+				return;
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN:
+				getParametros_in().clear();
+				return;
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN_OUT:
+				getParametros_in_out().clear();
+				return;
+			case FilesystemPackage.PARAMETERS__PARAMETROS_OUT:
+				getParametros_out().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETER_OUT:
+				return NAME_PARAMETER_OUT_EDEFAULT == null ? nameParameterOut != null : !NAME_PARAMETER_OUT_EDEFAULT.equals(nameParameterOut);
+			case FilesystemPackage.PARAMETERS__NAME_PARAMETER_IN_OUT:
+				return NAME_PARAMETER_IN_OUT_EDEFAULT == null ? nameParameterInOut != null : !NAME_PARAMETER_IN_OUT_EDEFAULT.equals(nameParameterInOut);
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN:
+				return parametros_in != null && !parametros_in.isEmpty();
+			case FilesystemPackage.PARAMETERS__PARAMETROS_IN_OUT:
+				return parametros_in_out != null && !parametros_in_out.isEmpty();
+			case FilesystemPackage.PARAMETERS__PARAMETROS_OUT:
+				return parametros_out != null && !parametros_out.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == ParameterOut.class) {
+			switch (derivedFeatureID) {
+				case FilesystemPackage.PARAMETERS__NAME_PARAMETER_OUT: return FilesystemPackage.PARAMETER_OUT__NAME_PARAMETER_OUT;
+				default: return -1;
+			}
+		}
+		if (baseClass == ParameterInOut.class) {
+			switch (derivedFeatureID) {
+				case FilesystemPackage.PARAMETERS__NAME_PARAMETER_IN_OUT: return FilesystemPackage.PARAMETER_IN_OUT__NAME_PARAMETER_IN_OUT;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == ParameterOut.class) {
+			switch (baseFeatureID) {
+				case FilesystemPackage.PARAMETER_OUT__NAME_PARAMETER_OUT: return FilesystemPackage.PARAMETERS__NAME_PARAMETER_OUT;
+				default: return -1;
+			}
+		}
+		if (baseClass == ParameterInOut.class) {
+			switch (baseFeatureID) {
+				case FilesystemPackage.PARAMETER_IN_OUT__NAME_PARAMETER_IN_OUT: return FilesystemPackage.PARAMETERS__NAME_PARAMETER_IN_OUT;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (nameParameterOut: ");
+		result.append(nameParameterOut);
+		result.append(", nameParameterInOut: ");
+		result.append(nameParameterInOut);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ParametersImpl

@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package crystal.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class DataTypeEditHelper extends CrystalBaseEditHelper {
+}

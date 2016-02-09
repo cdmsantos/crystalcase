@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package master.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class ExpressionsEditHelper extends master.diagram.edit.helpers.MasterBaseEditHelper {
+	}

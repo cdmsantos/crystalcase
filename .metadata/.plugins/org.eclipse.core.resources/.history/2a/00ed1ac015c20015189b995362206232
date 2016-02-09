@@ -1,0 +1,122 @@
+@namespace(uri="crystal", prefix="crystal")
+package crystal;
+
+@gmf.diagram(foo="bar", rcp="false", onefile="true", diagram.extension="crystal")
+class Crystal {
+	val Transition[*] transitions;
+	val Procedure[*] procedures;
+	val Function[*] functions;
+	val AnonymousBlock[*] blocks;
+}
+
+//Sections
+@gmf.node( figure="rectangle", border.style="dash", border.width="1")
+abstract class Sections{
+	attr String name;
+	@gmf.compartment
+	val Variables[*] declarativePart;
+	@gmf.compartment
+	val Objects[*] executablePart;
+}
+
+@gmf.node(label="name", label.text="Procedure", border.color="255,13,13") //vermelho
+class Procedure extends Sections {
+	@gmf.compartment
+	val Variables[*] parameters;
+}
+
+@gmf.node(label="name", label.text="Function", border.color="25,191,108") //azul	
+class Function extends Sections {
+	@gmf.compartment
+	val Variables[*] parameters;
+	@gmf.compartment
+	val Variables[*] returnPart;
+}
+
+@gmf.node(label="name", label.text="Anonymous Block", border.color="43,106,215") //verde
+class AnonymousBlock extends Sections {
+}
+
+//Variables
+@gmf.node(label="name", figure="rectangle", border.width="1", label.icon="true", label.placement="internal")
+abstract class Variables{
+	attr String name;	
+	attr String code = "Type the SQL code";
+	attr ParameterType type;
+	attr String description = "Description";
+}
+
+class DataType extends Variables{
+}
+
+class Collections extends Variables{
+}
+
+class Records extends Variables{
+}
+
+class Cursor extends Variables {
+}
+
+//Objects
+@gmf.node(label="description", figure="rectangle", label.icon="true", label.placement="internal")
+abstract class Objects{
+	attr String code = "Type the SQL code";
+	attr String description = "Description";
+}
+
+class Expressions extends Objects{
+}
+
+class Exception extends Objects{
+}
+
+class If extends Objects{
+}
+
+class Case extends Objects{
+}
+
+class Insert extends Objects{
+}
+
+class Update extends Objects{
+}
+
+class Delete extends Objects{
+}
+
+class Select extends Objects{
+}
+
+class While extends Objects{
+}
+
+class For extends Objects{
+}
+
+class Loop extends Objects{
+}
+
+class Open extends Objects{
+}
+
+class Fetch extends Objects{
+}
+
+class Close extends Objects{
+}
+
+@gmf.link(source="source", target="target", incoming="true", target.decoration="arrow", color="0,0,0", width="1")
+class Transition{
+    attr String name = "Connection";
+    ref Objects source;
+    ref Objects target;
+}
+
+enum ParameterType {
+    None = 0;
+    In = 1;
+    Out = 2;
+    InOut = 3;
+}

@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package master.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class MasterModelingAssistantProviderOfRecords2EditPart extends master.diagram.providers.MasterModelingAssistantProvider {
+
+					
+	
+
+	}

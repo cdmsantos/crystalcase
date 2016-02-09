@@ -1,0 +1,60 @@
+	/*
+ * 
+ */
+package master.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class MasterItemSemanticEditPolicy extends master.diagram.edit.policies.MasterBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public MasterItemSemanticEditPolicy() {
+				super(master.diagram.providers.MasterElementTypes.Master_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (master.diagram.providers.MasterElementTypes.Parameters_2001 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.ParametersCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.Return_2002 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.ReturnCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.DeclarativePart_2003 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.DeclarativePartCreateCommand(req));
+}
+		if (master.diagram.providers.MasterElementTypes.ExecutablePart_2004 == req.getElementType()) {
+	return getGEFWrapper(new master.diagram.edit.commands.ExecutablePartCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}

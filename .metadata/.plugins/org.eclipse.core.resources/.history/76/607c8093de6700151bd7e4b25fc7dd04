@@ -1,0 +1,218 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class FilesystemEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (filesystem.diagram.part.FilesystemVisualIDRegistry.getVisualID(view)) {
+				
+	case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FilesystemEditPart(view);
+									
+	case filesystem.diagram.edit.parts.DriveEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveEditPart(view);
+					
+	case filesystem.diagram.edit.parts.DriveNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.DatatypeEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DatatypeEditPart(view);
+					
+	case filesystem.diagram.edit.parts.DatatypeNameNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DatatypeNameNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.IfEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.IfEditPart(view);
+					
+	case filesystem.diagram.edit.parts.IfNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.IfNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.CaseEditPart(view);
+					
+	case filesystem.diagram.edit.parts.CaseNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.CaseNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.InsertEditPart(view);
+					
+	case filesystem.diagram.edit.parts.InsertNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.InsertNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.UpdateEditPart(view);
+					
+	case filesystem.diagram.edit.parts.UpdateNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.UpdateNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DeleteEditPart(view);
+					
+	case filesystem.diagram.edit.parts.DeleteNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DeleteNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.OutputEditPart(view);
+					
+	case filesystem.diagram.edit.parts.OutputNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.OutputNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.SelectEditPart(view);
+					
+	case filesystem.diagram.edit.parts.SelectNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.SelectNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.CursorEditPart(view);
+					
+	case filesystem.diagram.edit.parts.CursorNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.CursorNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.WhileEditPart(view);
+					
+	case filesystem.diagram.edit.parts.WhileNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.WhileNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ForEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ForEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ForNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ForNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.LoopEditPart(view);
+					
+	case filesystem.diagram.edit.parts.LoopNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.LoopNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ExceptionCommandEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ExceptionCommandEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ExceptionCommandNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ExceptionCommandNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ParameterInEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ParameterInNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ParameterInNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ParameterOutEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ParameterOutNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ParameterOutNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ParameterInOutEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ParameterInOutNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ParameterInOutNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DeclarativePartEditPart(view);
+					
+	case filesystem.diagram.edit.parts.DeclarativePartNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DeclarativePartNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ExecutablePartEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ExecutablePartNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ExecutablePartNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ExceptionPartEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ExceptionPartEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ExceptionPartNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ExceptionPartNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ParametersEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ParametersNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ParametersNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ReturnEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ReturnNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ReturnNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.Drive2EditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.Drive2EditPart(view);
+					
+	case filesystem.diagram.edit.parts.DriveName2EditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveName2EditPart(view);
+									
+	case filesystem.diagram.edit.parts.FolderEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FolderEditPart(view);
+					
+	case filesystem.diagram.edit.parts.FolderNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FolderNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.ShortcutEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ShortcutEditPart(view);
+					
+	case filesystem.diagram.edit.parts.ShortcutNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ShortcutNameEditPart(view);
+									
+	case filesystem.diagram.edit.parts.FileEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FileEditPart(view);
+					
+	case filesystem.diagram.edit.parts.FileNameEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FileNameEditPart(view);
+								
+	case filesystem.diagram.edit.parts.DriveDriveContentsCompartmentEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveDriveContentsCompartmentEditPart(view);
+
+	case filesystem.diagram.edit.parts.DriveDriveContentsCompartment2EditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.DriveDriveContentsCompartment2EditPart(view);
+
+	case filesystem.diagram.edit.parts.FolderFolderContentsCompartmentEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.FolderFolderContentsCompartmentEditPart(view);
+									
+	case filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.SyncEditPart(view);
+					
+									
+	case filesystem.diagram.edit.parts.ShortcutTargetEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.ShortcutTargetEditPart(view);
+					
+	case filesystem.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID:
+		return new filesystem.diagram.edit.parts.WrappingLabelEditPart(view);
+
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

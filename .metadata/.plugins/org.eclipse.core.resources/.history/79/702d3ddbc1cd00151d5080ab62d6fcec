@@ -1,0 +1,265 @@
+/*
+ * 
+ */
+package crystal.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class CrystalEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (crystal.diagram.part.CrystalVisualIDRegistry.getVisualID(view)) {
+				
+	case crystal.diagram.edit.parts.CrystalEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CrystalEditPart(view);
+									
+	case crystal.diagram.edit.parts.ProcedureEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.ProcedureEditPart(view);
+					
+	case crystal.diagram.edit.parts.ProcedureNameEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.ProcedureNameEditPart(view);
+									
+	case crystal.diagram.edit.parts.FunctionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.FunctionEditPart(view);
+					
+	case crystal.diagram.edit.parts.FunctionNameEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.FunctionNameEditPart(view);
+									
+	case crystal.diagram.edit.parts.AnonymousBlockEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.AnonymousBlockEditPart(view);
+					
+	case crystal.diagram.edit.parts.AnonymousBlockNameEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.AnonymousBlockNameEditPart(view);
+									
+	case crystal.diagram.edit.parts.DataTypeEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DataTypeEditPart(view);
+					
+	case crystal.diagram.edit.parts.DataTypeNameEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DataTypeNameEditPart(view);
+									
+	case crystal.diagram.edit.parts.CollectionsEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CollectionsEditPart(view);
+					
+	case crystal.diagram.edit.parts.CollectionsNameEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CollectionsNameEditPart(view);
+									
+	case crystal.diagram.edit.parts.RecordsEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.RecordsEditPart(view);
+					
+	case crystal.diagram.edit.parts.RecordsNameEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.RecordsNameEditPart(view);
+									
+	case crystal.diagram.edit.parts.CursorEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CursorEditPart(view);
+					
+	case crystal.diagram.edit.parts.CursorNameEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CursorNameEditPart(view);
+									
+	case crystal.diagram.edit.parts.ExceptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.ExceptionEditPart(view);
+					
+	case crystal.diagram.edit.parts.ExceptionDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.ExceptionDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.IfEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.IfEditPart(view);
+					
+	case crystal.diagram.edit.parts.IfDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.IfDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CaseEditPart(view);
+					
+	case crystal.diagram.edit.parts.CaseDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CaseDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.InsertEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.InsertEditPart(view);
+					
+	case crystal.diagram.edit.parts.InsertDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.InsertDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.UpdateEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.UpdateEditPart(view);
+					
+	case crystal.diagram.edit.parts.UpdateDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.UpdateDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.DeleteEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DeleteEditPart(view);
+					
+	case crystal.diagram.edit.parts.DeleteDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DeleteDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.SelectEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.SelectEditPart(view);
+					
+	case crystal.diagram.edit.parts.SelectDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.SelectDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.WhileEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.WhileEditPart(view);
+					
+	case crystal.diagram.edit.parts.WhileDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.WhileDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.ForEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.ForEditPart(view);
+					
+	case crystal.diagram.edit.parts.ForDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.ForDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.LoopEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.LoopEditPart(view);
+					
+	case crystal.diagram.edit.parts.LoopDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.LoopDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.OpenEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.OpenEditPart(view);
+					
+	case crystal.diagram.edit.parts.OpenDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.OpenDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.FetchEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.FetchEditPart(view);
+					
+	case crystal.diagram.edit.parts.FetchDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.FetchDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.CloseEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CloseEditPart(view);
+					
+	case crystal.diagram.edit.parts.CloseDescriptionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CloseDescriptionEditPart(view);
+									
+	case crystal.diagram.edit.parts.DataType2EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DataType2EditPart(view);
+					
+	case crystal.diagram.edit.parts.DataTypeName2EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DataTypeName2EditPart(view);
+									
+	case crystal.diagram.edit.parts.Collections2EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.Collections2EditPart(view);
+					
+	case crystal.diagram.edit.parts.CollectionsName2EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CollectionsName2EditPart(view);
+									
+	case crystal.diagram.edit.parts.Records2EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.Records2EditPart(view);
+					
+	case crystal.diagram.edit.parts.RecordsName2EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.RecordsName2EditPart(view);
+									
+	case crystal.diagram.edit.parts.Cursor2EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.Cursor2EditPart(view);
+					
+	case crystal.diagram.edit.parts.CursorName2EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CursorName2EditPart(view);
+									
+	case crystal.diagram.edit.parts.DataType3EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DataType3EditPart(view);
+					
+	case crystal.diagram.edit.parts.DataTypeName3EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DataTypeName3EditPart(view);
+									
+	case crystal.diagram.edit.parts.Collections3EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.Collections3EditPart(view);
+					
+	case crystal.diagram.edit.parts.CollectionsName3EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CollectionsName3EditPart(view);
+									
+	case crystal.diagram.edit.parts.Records3EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.Records3EditPart(view);
+					
+	case crystal.diagram.edit.parts.RecordsName3EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.RecordsName3EditPart(view);
+									
+	case crystal.diagram.edit.parts.Cursor3EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.Cursor3EditPart(view);
+					
+	case crystal.diagram.edit.parts.CursorName3EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CursorName3EditPart(view);
+									
+	case crystal.diagram.edit.parts.DataType4EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DataType4EditPart(view);
+					
+	case crystal.diagram.edit.parts.DataTypeName4EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.DataTypeName4EditPart(view);
+									
+	case crystal.diagram.edit.parts.Collections4EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.Collections4EditPart(view);
+					
+	case crystal.diagram.edit.parts.CollectionsName4EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CollectionsName4EditPart(view);
+									
+	case crystal.diagram.edit.parts.Records4EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.Records4EditPart(view);
+					
+	case crystal.diagram.edit.parts.RecordsName4EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.RecordsName4EditPart(view);
+									
+	case crystal.diagram.edit.parts.Cursor4EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.Cursor4EditPart(view);
+					
+	case crystal.diagram.edit.parts.CursorName4EditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.CursorName4EditPart(view);
+								
+	case crystal.diagram.edit.parts.ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.ProcedureProcedureDeclarativePartCompartmentEditPart(view);
+
+	case crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.ProcedureProcedureExecutablePartCompartmentEditPart(view);
+
+	case crystal.diagram.edit.parts.ProcedureProcedureParametersCompartmentEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.ProcedureProcedureParametersCompartmentEditPart(view);
+
+	case crystal.diagram.edit.parts.FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.FunctionFunctionDeclarativePartCompartmentEditPart(view);
+
+	case crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.FunctionFunctionExecutablePartCompartmentEditPart(view);
+
+	case crystal.diagram.edit.parts.FunctionFunctionParametersCompartmentEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.FunctionFunctionParametersCompartmentEditPart(view);
+
+	case crystal.diagram.edit.parts.FunctionFunctionReturnPartCompartmentEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.FunctionFunctionReturnPartCompartmentEditPart(view);
+
+	case crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart(view);
+
+	case crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart(view);
+									
+	case crystal.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+		return new crystal.diagram.edit.parts.TransitionEditPart(view);
+					
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

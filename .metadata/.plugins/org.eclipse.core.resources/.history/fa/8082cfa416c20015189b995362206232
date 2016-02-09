@@ -1,0 +1,17 @@
+/**
+ */
+package crystal;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Expressions</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see crystal.CrystalPackage#getExpressions()
+ * @model
+ * @generated
+ */
+public interface Expressions extends Objects {
+} // Expressions

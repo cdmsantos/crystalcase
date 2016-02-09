@@ -1,0 +1,25 @@
+1451828838204	Encapsulate field 'saleTax'
+1451828848581	Encapsulate field 'totalCost'
+1451830118172	Encapsulate field 'priceWithTax'
+1451849942869	Encapsulate field 'quantity'
+1451856299013	Delete element
+1452012449971	Move compilation unit
+1452012455302	Delete element
+1452012920303	Move compilation unit
+1452012937088	Move compilation units
+1452012953813	Move compilation units
+1452012968086	Copy package
+1452012982155	Move compilation units
+1452012986696	Delete element
+1452012994511	Move compilation units
+1452013000480	Delete element
+1452013047470	Delete element
+1452028712228	Delete element
+1452030872978	Delete element
+1452130472754	Move compilation unit
+1452130539470	Rename package 'Principal'
+1452130637743	Rename package 'Cart'
+1452130692757	Rename package 'Main'
+1452130701536	Rename package 'Product'
+1452130710775	Rename package 'Tax'
+1452130721826	Rename package 'Tests'

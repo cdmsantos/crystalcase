@@ -1,0 +1,38 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class FilesystemModelingAssistantProviderOfFilesystemEditPart extends filesystem.diagram.providers.FilesystemModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(16);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Data_Type_2001);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.If_2002);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Case_2003);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Insert_2004);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Update_2005);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Delete_2006);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Output_2007);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Select_2008);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Cursor_2009);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.While_2010);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.For_2011);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Loop_2012);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.ExceptionCommand_2013);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.DeclarativePart_2014);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.ExecutablePart_2015);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.ExceptionPart_2016);
+					return types;	
+	}
+			
+	
+	}

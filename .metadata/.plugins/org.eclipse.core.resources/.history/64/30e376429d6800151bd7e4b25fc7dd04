@@ -1,0 +1,67 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers.assistants;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+
+import filesystem.diagram.edit.parts.OutputEditPart;
+import filesystem.diagram.providers.FilesystemElementTypes;
+import filesystem.diagram.providers.FilesystemModelingAssistantProvider;
+
+/**
+ * @generated
+ */
+public class FilesystemModelingAssistantProviderOfOutputEditPart extends
+		FilesystemModelingAssistantProvider {
+
+	/**
+	 * @generated
+	 */
+	@Override
+	public List<IElementType> getRelTypesOnTarget(IAdaptable target) {
+		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
+				.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnTarget((OutputEditPart) targetEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> doGetRelTypesOnTarget(OutputEditPart target) {
+		List<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(FilesystemElementTypes.Sync_4001);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	@Override
+	public List<IElementType> getTypesForSource(IAdaptable target,
+			IElementType relationshipType) {
+		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
+				.getAdapter(IGraphicalEditPart.class);
+		return doGetTypesForSource((OutputEditPart) targetEditPart,
+				relationshipType);
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> doGetTypesForSource(OutputEditPart target,
+			IElementType relationshipType) {
+		List<IElementType> types = new ArrayList<IElementType>();
+		if (relationshipType == FilesystemElementTypes.Sync_4001) {
+			types.add(FilesystemElementTypes.Select_2008);
+			types.add(FilesystemElementTypes.Select_3010);
+		}
+		return types;
+	}
+
+}

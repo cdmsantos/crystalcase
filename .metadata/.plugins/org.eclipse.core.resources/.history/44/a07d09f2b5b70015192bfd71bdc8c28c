@@ -1,0 +1,18 @@
+/*
+ * 
+ */
+package master.diagram.providers;
+
+/**
+ * @generated
+ */
+public class MasterIconProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider implements org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider {
+
+		/**
+ * @generated
+ */
+	public MasterIconProvider() {
+		super(master.diagram.providers.MasterElementTypes.TYPED_INSTANCE);
+	}
+
+	}

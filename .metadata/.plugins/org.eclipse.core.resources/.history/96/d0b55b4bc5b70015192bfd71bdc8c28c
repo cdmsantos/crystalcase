@@ -1,0 +1,21 @@
+/*
+ * 
+ */
+package master.diagram.providers;
+
+/**
+ * @generated
+ */
+public class MasterEditPartProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider {
+
+	
+	/**
+ * @generated
+ */
+	public MasterEditPartProvider() {
+		super(new master.diagram.edit.parts.MasterEditPartFactory(), 			master.diagram.part.MasterVisualIDRegistry.TYPED_INSTANCE, 			master.diagram.edit.parts.MasterEditPart.MODEL_ID			
+		);
+	}
+
+
+	}

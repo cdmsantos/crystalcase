@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package master.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class MasterModelingAssistantProviderOfReturnEditPart extends master.diagram.providers.MasterModelingAssistantProvider {
+
+					
+	
+
+	}

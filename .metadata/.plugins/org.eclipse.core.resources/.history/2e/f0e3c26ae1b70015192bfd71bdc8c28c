@@ -1,0 +1,39 @@
+var palette := GmfTool!Palette.all.first();
+var toolGroupActivities = new GmfTool!ToolGroup;
+
+toolGroupActivities.title := 'Sections';
+toolGroupActivities.collapsible := true;
+palette.tools.add(toolGroupActivities);
+
+var toolGroupObjects = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Objects');
+var toolGroupConnections = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Connections');
+
+var toolEntry;
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Parameters');
+toolGroupActivities.tools.add(toolEntry);
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'DeclarativePart');
+toolGroupActivities.tools.add(toolEntry);
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'ExecutablePart');
+toolGroupActivities.tools.add(toolEntry);
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Return');
+toolGroupActivities.tools.add(toolEntry);
+
+var toolGroupActivities2 = new GmfTool!ToolGroup;
+
+toolGroupActivities2.title := 'Variables';
+toolGroupActivities2.collapsible := true;
+palette.tools.add(toolGroupActivities2);
+
+var toolEntry2;
+
+toolEntry2 = toolGroupObjects.tools.selectOne(r|r.title = 'DataType');
+toolGroupActivities2.tools.add(toolEntry2);
+toolEntry2 = toolGroupObjects.tools.selectOne(r|r.title = 'Collections');
+toolGroupActivities2.tools.add(toolEntry2);
+toolEntry2 = toolGroupObjects.tools.selectOne(r|r.title = 'Records');
+toolGroupActivities2.tools.add(toolEntry2);
+toolEntry2 = toolGroupObjects.tools.selectOne(r|r.title = 'Cursor');
+toolGroupActivities2.tools.add(toolEntry2);
+
+

@@ -1,0 +1,127 @@
+/**
+ */
+package filesystem;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Filesystem</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link filesystem.Filesystem#getSyncs <em>Syncs</em>}</li>
+ *   <li>{@link filesystem.Filesystem#getDeclarative <em>Declarative</em>}</li>
+ *   <li>{@link filesystem.Filesystem#getExecutable <em>Executable</em>}</li>
+ *   <li>{@link filesystem.Filesystem#getException <em>Exception</em>}</li>
+ *   <li>{@link filesystem.Filesystem#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link filesystem.Filesystem#getReturn <em>Return</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see filesystem.FilesystemPackage#getFilesystem()
+ * @model
+ * @generated
+ */
+public interface Filesystem extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Syncs</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Sync}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Syncs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Syncs</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getFilesystem_Syncs()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Sync> getSyncs();
+
+	/**
+	 * Returns the value of the '<em><b>Declarative</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.DeclarativePart}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Declarative</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Declarative</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getFilesystem_Declarative()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<DeclarativePart> getDeclarative();
+
+	/**
+	 * Returns the value of the '<em><b>Executable</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.ExecutablePart}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Executable</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Executable</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getFilesystem_Executable()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ExecutablePart> getExecutable();
+
+	/**
+	 * Returns the value of the '<em><b>Exception</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.ExceptionPart}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Exception</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exception</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getFilesystem_Exception()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ExceptionPart> getException();
+
+	/**
+	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Parameters}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parameters</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getFilesystem_Parameters()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Parameters> getParameters();
+
+	/**
+	 * Returns the value of the '<em><b>Return</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.Return}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Return</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Return</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getFilesystem_Return()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Return> getReturn();
+
+} // Filesystem

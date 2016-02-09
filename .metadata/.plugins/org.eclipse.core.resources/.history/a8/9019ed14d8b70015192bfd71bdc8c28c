@@ -1,0 +1,189 @@
+@namespace(uri="master", prefix="master")
+@gmf
+
+package master;
+
+@gmf.diagram
+class master {
+	val Transition[*] transitions;
+	
+	val Parameters[1] parameters;
+	val Return[1] return;
+	val DeclarativePart[1] declarativePart;
+	val ExecutablePart[1] executablePart;	
+} 
+
+
+//Sections
+class Sections{
+}
+
+@gmf.node(label="Description", figure="rounded", size="150,200", border.color="255,13,13", border.style="dash", label.readOnly="true") //vermelho	
+class Parameters extends Sections{
+	attr String[1] name="Parameters";
+	@gmf.compartment
+	val Variables[*] variables;
+}
+
+@gmf.node(label="Description", figure="rectangle", size="150,200", border.color="25,191,108", border.style="dash", label.readOnly="true") //azul	
+class Return extends Sections{
+	attr String[1] name="Return";
+	@gmf.compartment
+	val Variables[*] variables;
+}
+
+@gmf.node(label="Description", figure="rectangle", size="150,200", border.color="43,106,215", border.style="dash", label.readOnly="true") //verde
+class DeclarativePart extends Sections{
+	attr String[1] name="Declarative Part";
+	@gmf.compartment
+	val Variables[*] variables;
+}
+
+@gmf.node(label="Description", size="450,450", figure="rectangle", border.color="158,25,191", border.style="dash", label.readOnly="true") //roxo	
+class ExecutablePart extends Sections{
+	attr String[1] name="Executable Part";
+	@gmf.compartment
+	val Objects[*] objects;
+}
+
+//Variables
+
+class Variables{	
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/datatype.svg", label.icon="false", label.placement="internal")
+class DataType extends Variables{
+	attr String[1] Name="DATATYPE";
+	attr String Code = "Type the code here.";
+	attr String Description = "DATATYPE Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/collections.svg", label.icon="false", label.placement="internal")
+class Collections extends Variables{
+	attr String[1] Name="COLLECTION";
+	attr String Code = "Type the code here.";
+	attr String Description = "COLLECTION Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/records.svg", label.icon="false", label.placement="internal")
+class Records extends Variables{
+	attr String[1] Name="RECORD";
+	attr String Code = "Type the code here.";
+	attr String Description = "RECORD Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/cursor.svg", label.icon="false", label.placement="internal")
+class Cursor extends Variables {
+	attr String[1] Name="CURSOR";
+	attr String Code = "Type the code here.";
+	attr String Description = "CURSOR Object. Type the description.";
+}
+
+//Objects
+class Objects{
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/expression.svg", label.icon="false", label.placement="internal")
+class Expressions extends Objects{
+	attr String[1] Name="EXPRESSION";
+	attr String Code = "Type the code here.";
+	attr String Description = "EXPRESSION Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/exception.svg", label.icon="false", label.placement="internal")
+class Exception extends Objects{
+	attr String[1] Name="EXCEPTION";
+	attr String Code = "Type the code here.";
+	attr String Description = "EXCEPTION Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/if.svg", label.icon="false", label.placement="internal")
+class If extends Objects{
+	attr String[1] Name="IF";
+	attr String Code = "Type the code here.";
+	attr String Description = "IF Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/case.svg", label.icon="false", label.placement="internal")
+class Case extends Objects{
+	attr String[1] Name="CASE";
+	attr String Code = "Type the code here.";
+	attr String Description = "CASE Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/insert.svg", label.icon="false", label.placement="internal")
+class Insert extends Objects{
+	attr String[1] Name="INSERT";
+	attr String Code = "Type the code here.";
+	attr String Description = "INSERT Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/update.svg", label.icon="false", label.placement="internal")
+class Update extends Objects{
+	attr String[1] Name="UPDATE";
+	attr String Code = "Type the code here.";
+	attr String Description = "UPDATE Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/delete.svg", label.icon="false", label.placement="internal")
+class Delete extends Objects{
+	attr String[1] Name="DELETE";
+	attr String Code = "Type the code here.";
+	attr String Description = "DELETE Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/select.svg", label.icon="false", label.placement="internal")
+class Select extends Objects{
+	attr String[1] Name="SELECT";
+	attr String Code = "Type the code here.";
+	attr String Description = "SELECT Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/while.svg", label.icon="false", label.placement="internal")
+class While extends Objects{
+	attr String[1] Name="WHILE";
+	attr String Code = "Type the code here.";
+	attr String Description = "WHILE Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/for.svg", label.icon="false", label.placement="internal")
+class For extends Objects{
+	attr String[1] Name="FOR";
+	attr String Code = "Type the code here.";
+	attr String Description = "FOR Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/loop.svg", label.icon="false", label.placement="internal")
+class Loop extends Objects{
+	attr String[1] Name="LOOP";
+	attr String Code = "Type the code here.";
+	attr String Description = "LOOP Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/open.svg", label.icon="false", label.placement="internal")
+class Open extends Objects{
+	attr String[1] Name="OPEN";
+	attr String Code = "Type the code here.";
+	attr String Description = "OPEN Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/fetch.svg", label.icon="false", label.placement="internal")
+class Fetch extends Objects{
+	attr String[1] Name="FETCH";
+	attr String Code = "Type the code here.";
+	attr String Description = "FETCH Object. Type the description.";
+}
+
+@gmf.node(label="Description", figure="svg", svg.uri="platform:/plugin/master.project/icons/close.svg", label.icon="false", label.placement="internal")
+class Close extends Objects{
+	attr String[1] Name="CLOSE";
+	attr String Code = "Type the code here.";
+	attr String Description = "CLOSE Object. Type the description.";
+}
+
+@gmf.link(source="start", target="end", target.decoration="arrow", color="0,0,0")
+class Transition{
+	attr String name = "connection";
+	ref Objects start;
+	ref Objects end;
+}

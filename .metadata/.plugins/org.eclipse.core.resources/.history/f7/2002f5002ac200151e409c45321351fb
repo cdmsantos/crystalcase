@@ -1,0 +1,533 @@
+/**
+ */
+package crystal.impl;
+
+import crystal.AnonymousBlock;
+import crystal.Crystal;
+import crystal.CrystalPackage;
+import crystal.DeclarativePart;
+import crystal.ExecutablePart;
+import crystal.Function;
+import crystal.Parameters;
+import crystal.Procedure;
+import crystal.Return;
+import crystal.Transition;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Crystal</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link crystal.impl.CrystalImpl#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getReturn <em>Return</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getDeclarativePart <em>Declarative Part</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getExecutablePart <em>Executable Part</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getProcedures <em>Procedures</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getFunctions <em>Functions</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getBlocks <em>Blocks</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class CrystalImpl extends EObjectImpl implements Crystal {
+	/**
+	 * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTransitions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Transition> transitions;
+
+	/**
+	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParameters()
+	 * @generated
+	 * @ordered
+	 */
+	protected Parameters parameters;
+
+	/**
+	 * The cached value of the '{@link #getReturn() <em>Return</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReturn()
+	 * @generated
+	 * @ordered
+	 */
+	protected Return return_;
+
+	/**
+	 * The cached value of the '{@link #getDeclarativePart() <em>Declarative Part</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeclarativePart()
+	 * @generated
+	 * @ordered
+	 */
+	protected DeclarativePart declarativePart;
+
+	/**
+	 * The cached value of the '{@link #getExecutablePart() <em>Executable Part</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExecutablePart()
+	 * @generated
+	 * @ordered
+	 */
+	protected ExecutablePart executablePart;
+
+	/**
+	 * The cached value of the '{@link #getProcedures() <em>Procedures</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProcedures()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Procedure> procedures;
+
+	/**
+	 * The cached value of the '{@link #getFunctions() <em>Functions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFunctions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Function> functions;
+
+	/**
+	 * The cached value of the '{@link #getBlocks() <em>Blocks</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBlocks()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AnonymousBlock> blocks;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CrystalImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CrystalPackage.Literals.CRYSTAL;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Transition> getTransitions() {
+		if (transitions == null) {
+			transitions = new EObjectContainmentEList<Transition>(Transition.class, this, CrystalPackage.CRYSTAL__TRANSITIONS);
+		}
+		return transitions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameters getParameters() {
+		return parameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetParameters(Parameters newParameters, NotificationChain msgs) {
+		Parameters oldParameters = parameters;
+		parameters = newParameters;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CrystalPackage.CRYSTAL__PARAMETERS, oldParameters, newParameters);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParameters(Parameters newParameters) {
+		if (newParameters != parameters) {
+			NotificationChain msgs = null;
+			if (parameters != null)
+				msgs = ((InternalEObject)parameters).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CrystalPackage.CRYSTAL__PARAMETERS, null, msgs);
+			if (newParameters != null)
+				msgs = ((InternalEObject)newParameters).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CrystalPackage.CRYSTAL__PARAMETERS, null, msgs);
+			msgs = basicSetParameters(newParameters, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CRYSTAL__PARAMETERS, newParameters, newParameters));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Return getReturn() {
+		return return_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetReturn(Return newReturn, NotificationChain msgs) {
+		Return oldReturn = return_;
+		return_ = newReturn;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CrystalPackage.CRYSTAL__RETURN, oldReturn, newReturn);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReturn(Return newReturn) {
+		if (newReturn != return_) {
+			NotificationChain msgs = null;
+			if (return_ != null)
+				msgs = ((InternalEObject)return_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CrystalPackage.CRYSTAL__RETURN, null, msgs);
+			if (newReturn != null)
+				msgs = ((InternalEObject)newReturn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CrystalPackage.CRYSTAL__RETURN, null, msgs);
+			msgs = basicSetReturn(newReturn, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CRYSTAL__RETURN, newReturn, newReturn));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeclarativePart getDeclarativePart() {
+		return declarativePart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeclarativePart(DeclarativePart newDeclarativePart, NotificationChain msgs) {
+		DeclarativePart oldDeclarativePart = declarativePart;
+		declarativePart = newDeclarativePart;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CrystalPackage.CRYSTAL__DECLARATIVE_PART, oldDeclarativePart, newDeclarativePart);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDeclarativePart(DeclarativePart newDeclarativePart) {
+		if (newDeclarativePart != declarativePart) {
+			NotificationChain msgs = null;
+			if (declarativePart != null)
+				msgs = ((InternalEObject)declarativePart).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CrystalPackage.CRYSTAL__DECLARATIVE_PART, null, msgs);
+			if (newDeclarativePart != null)
+				msgs = ((InternalEObject)newDeclarativePart).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CrystalPackage.CRYSTAL__DECLARATIVE_PART, null, msgs);
+			msgs = basicSetDeclarativePart(newDeclarativePart, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CRYSTAL__DECLARATIVE_PART, newDeclarativePart, newDeclarativePart));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExecutablePart getExecutablePart() {
+		return executablePart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExecutablePart(ExecutablePart newExecutablePart, NotificationChain msgs) {
+		ExecutablePart oldExecutablePart = executablePart;
+		executablePart = newExecutablePart;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CrystalPackage.CRYSTAL__EXECUTABLE_PART, oldExecutablePart, newExecutablePart);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExecutablePart(ExecutablePart newExecutablePart) {
+		if (newExecutablePart != executablePart) {
+			NotificationChain msgs = null;
+			if (executablePart != null)
+				msgs = ((InternalEObject)executablePart).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CrystalPackage.CRYSTAL__EXECUTABLE_PART, null, msgs);
+			if (newExecutablePart != null)
+				msgs = ((InternalEObject)newExecutablePart).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CrystalPackage.CRYSTAL__EXECUTABLE_PART, null, msgs);
+			msgs = basicSetExecutablePart(newExecutablePart, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CRYSTAL__EXECUTABLE_PART, newExecutablePart, newExecutablePart));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Procedure> getProcedures() {
+		if (procedures == null) {
+			procedures = new EObjectContainmentEList<Procedure>(Procedure.class, this, CrystalPackage.CRYSTAL__PROCEDURES);
+		}
+		return procedures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Function> getFunctions() {
+		if (functions == null) {
+			functions = new EObjectContainmentEList<Function>(Function.class, this, CrystalPackage.CRYSTAL__FUNCTIONS);
+		}
+		return functions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<AnonymousBlock> getBlocks() {
+		if (blocks == null) {
+			blocks = new EObjectContainmentEList<AnonymousBlock>(AnonymousBlock.class, this, CrystalPackage.CRYSTAL__BLOCKS);
+		}
+		return blocks;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CRYSTAL__PARAMETERS:
+				return basicSetParameters(null, msgs);
+			case CrystalPackage.CRYSTAL__RETURN:
+				return basicSetReturn(null, msgs);
+			case CrystalPackage.CRYSTAL__DECLARATIVE_PART:
+				return basicSetDeclarativePart(null, msgs);
+			case CrystalPackage.CRYSTAL__EXECUTABLE_PART:
+				return basicSetExecutablePart(null, msgs);
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				return ((InternalEList<?>)getProcedures()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				return ((InternalEList<?>)getBlocks()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				return getTransitions();
+			case CrystalPackage.CRYSTAL__PARAMETERS:
+				return getParameters();
+			case CrystalPackage.CRYSTAL__RETURN:
+				return getReturn();
+			case CrystalPackage.CRYSTAL__DECLARATIVE_PART:
+				return getDeclarativePart();
+			case CrystalPackage.CRYSTAL__EXECUTABLE_PART:
+				return getExecutablePart();
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				return getProcedures();
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				return getFunctions();
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				return getBlocks();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				getTransitions().clear();
+				getTransitions().addAll((Collection<? extends Transition>)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__PARAMETERS:
+				setParameters((Parameters)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__RETURN:
+				setReturn((Return)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__DECLARATIVE_PART:
+				setDeclarativePart((DeclarativePart)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__EXECUTABLE_PART:
+				setExecutablePart((ExecutablePart)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				getProcedures().clear();
+				getProcedures().addAll((Collection<? extends Procedure>)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				getFunctions().clear();
+				getFunctions().addAll((Collection<? extends Function>)newValue);
+				return;
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				getBlocks().clear();
+				getBlocks().addAll((Collection<? extends AnonymousBlock>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				getTransitions().clear();
+				return;
+			case CrystalPackage.CRYSTAL__PARAMETERS:
+				setParameters((Parameters)null);
+				return;
+			case CrystalPackage.CRYSTAL__RETURN:
+				setReturn((Return)null);
+				return;
+			case CrystalPackage.CRYSTAL__DECLARATIVE_PART:
+				setDeclarativePart((DeclarativePart)null);
+				return;
+			case CrystalPackage.CRYSTAL__EXECUTABLE_PART:
+				setExecutablePart((ExecutablePart)null);
+				return;
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				getProcedures().clear();
+				return;
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				getFunctions().clear();
+				return;
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				getBlocks().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case CrystalPackage.CRYSTAL__TRANSITIONS:
+				return transitions != null && !transitions.isEmpty();
+			case CrystalPackage.CRYSTAL__PARAMETERS:
+				return parameters != null;
+			case CrystalPackage.CRYSTAL__RETURN:
+				return return_ != null;
+			case CrystalPackage.CRYSTAL__DECLARATIVE_PART:
+				return declarativePart != null;
+			case CrystalPackage.CRYSTAL__EXECUTABLE_PART:
+				return executablePart != null;
+			case CrystalPackage.CRYSTAL__PROCEDURES:
+				return procedures != null && !procedures.isEmpty();
+			case CrystalPackage.CRYSTAL__FUNCTIONS:
+				return functions != null && !functions.isEmpty();
+			case CrystalPackage.CRYSTAL__BLOCKS:
+				return blocks != null && !blocks.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //CrystalImpl

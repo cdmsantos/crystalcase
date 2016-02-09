@@ -1,0 +1,121 @@
+/**
+ */
+package filesystem;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Folder</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link filesystem.Folder#getContents <em>Contents</em>}</li>
+ *   <li>{@link filesystem.Folder#getDeclarative <em>Declarative</em>}</li>
+ *   <li>{@link filesystem.Folder#getExecutable <em>Executable</em>}</li>
+ *   <li>{@link filesystem.Folder#getException <em>Exception</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see filesystem.FilesystemPackage#getFolder()
+ * @model
+ * @generated
+ */
+public interface Folder extends File {
+	/**
+	 * Returns the value of the '<em><b>Contents</b></em>' containment reference list.
+	 * The list contents are of type {@link filesystem.File}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Contents</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Contents</em>' containment reference list.
+	 * @see filesystem.FilesystemPackage#getFolder_Contents()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<File> getContents();
+
+	/**
+	 * Returns the value of the '<em><b>Declarative</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Declarative</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Declarative</em>' containment reference.
+	 * @see #setDeclarative(DeclarativePart)
+	 * @see filesystem.FilesystemPackage#getFolder_Declarative()
+	 * @model containment="true"
+	 * @generated
+	 */
+	DeclarativePart getDeclarative();
+
+	/**
+	 * Sets the value of the '{@link filesystem.Folder#getDeclarative <em>Declarative</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Declarative</em>' containment reference.
+	 * @see #getDeclarative()
+	 * @generated
+	 */
+	void setDeclarative(DeclarativePart value);
+
+	/**
+	 * Returns the value of the '<em><b>Executable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Executable</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Executable</em>' containment reference.
+	 * @see #setExecutable(ExecutablePart)
+	 * @see filesystem.FilesystemPackage#getFolder_Executable()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ExecutablePart getExecutable();
+
+	/**
+	 * Sets the value of the '{@link filesystem.Folder#getExecutable <em>Executable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Executable</em>' containment reference.
+	 * @see #getExecutable()
+	 * @generated
+	 */
+	void setExecutable(ExecutablePart value);
+
+	/**
+	 * Returns the value of the '<em><b>Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Exception</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exception</em>' containment reference.
+	 * @see #setException(ExceptionPart)
+	 * @see filesystem.FilesystemPackage#getFolder_Exception()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ExceptionPart getException();
+
+	/**
+	 * Sets the value of the '{@link filesystem.Folder#getException <em>Exception</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Exception</em>' containment reference.
+	 * @see #getException()
+	 * @generated
+	 */
+	void setException(ExceptionPart value);
+
+} // Folder

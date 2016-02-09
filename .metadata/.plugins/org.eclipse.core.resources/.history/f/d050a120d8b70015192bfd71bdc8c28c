@@ -1,0 +1,35 @@
+	/*
+ * 
+ */
+package master.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public class MasterNavigatorSorter  extends org.eclipse.jface.viewers.ViewerSorter {
+
+		/**
+ * @generated
+ */
+private static final int GROUP_CATEGORY = 7006;
+	
+	/**
+ * @generated
+ */
+private static final int SHORTCUTS_CATEGORY = 7005;
+		
+		/**
+ * @generated
+ */
+public int category(Object element) {
+	if (element instanceof master.diagram.navigator.MasterNavigatorItem) {
+		master.diagram.navigator.MasterNavigatorItem item = (master.diagram.navigator.MasterNavigatorItem) element;
+			if (item.getView().getEAnnotation("Shortcut") != null) {  //$NON-NLS-1$
+			return SHORTCUTS_CATEGORY;
+		}
+			return master.diagram.part.MasterVisualIDRegistry.getVisualID(item.getView());
+	}
+	return GROUP_CATEGORY;
+}
+
+    }

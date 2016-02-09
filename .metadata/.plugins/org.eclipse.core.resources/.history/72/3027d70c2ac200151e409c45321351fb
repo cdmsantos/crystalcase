@@ -1,0 +1,87 @@
+/*
+ * 
+ */
+package crystal.diagram.edit.policies;
+
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
+
+import crystal.diagram.edit.commands.Case4CreateCommand;
+import crystal.diagram.edit.commands.Close4CreateCommand;
+import crystal.diagram.edit.commands.Delete4CreateCommand;
+import crystal.diagram.edit.commands.Exception4CreateCommand;
+import crystal.diagram.edit.commands.Expressions4CreateCommand;
+import crystal.diagram.edit.commands.Fetch4CreateCommand;
+import crystal.diagram.edit.commands.For4CreateCommand;
+import crystal.diagram.edit.commands.If4CreateCommand;
+import crystal.diagram.edit.commands.Insert4CreateCommand;
+import crystal.diagram.edit.commands.Loop4CreateCommand;
+import crystal.diagram.edit.commands.Open4CreateCommand;
+import crystal.diagram.edit.commands.Select4CreateCommand;
+import crystal.diagram.edit.commands.Update4CreateCommand;
+import crystal.diagram.edit.commands.While4CreateCommand;
+import crystal.diagram.providers.CrystalElementTypes;
+
+/**
+ * @generated
+ */
+public class AnonymousBlockAnonymousBlockExecutablePartCompartmentItemSemanticEditPolicy
+		extends CrystalBaseItemSemanticEditPolicy {
+
+	/**
+	 * @generated
+	 */
+	public AnonymousBlockAnonymousBlockExecutablePartCompartmentItemSemanticEditPolicy() {
+		super(CrystalElementTypes.AnonymousBlock_2007);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getCreateCommand(CreateElementRequest req) {
+		if (CrystalElementTypes.Expressions_3079 == req.getElementType()) {
+			return getGEFWrapper(new Expressions4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Exception_3080 == req.getElementType()) {
+			return getGEFWrapper(new Exception4CreateCommand(req));
+		}
+		if (CrystalElementTypes.If_3081 == req.getElementType()) {
+			return getGEFWrapper(new If4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Case_3082 == req.getElementType()) {
+			return getGEFWrapper(new Case4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Insert_3083 == req.getElementType()) {
+			return getGEFWrapper(new Insert4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Update_3084 == req.getElementType()) {
+			return getGEFWrapper(new Update4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Delete_3085 == req.getElementType()) {
+			return getGEFWrapper(new Delete4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Select_3086 == req.getElementType()) {
+			return getGEFWrapper(new Select4CreateCommand(req));
+		}
+		if (CrystalElementTypes.While_3087 == req.getElementType()) {
+			return getGEFWrapper(new While4CreateCommand(req));
+		}
+		if (CrystalElementTypes.For_3088 == req.getElementType()) {
+			return getGEFWrapper(new For4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Loop_3089 == req.getElementType()) {
+			return getGEFWrapper(new Loop4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Open_3090 == req.getElementType()) {
+			return getGEFWrapper(new Open4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Fetch_3091 == req.getElementType()) {
+			return getGEFWrapper(new Fetch4CreateCommand(req));
+		}
+		if (CrystalElementTypes.Close_3092 == req.getElementType()) {
+			return getGEFWrapper(new Close4CreateCommand(req));
+		}
+		return super.getCreateCommand(req);
+	}
+
+}

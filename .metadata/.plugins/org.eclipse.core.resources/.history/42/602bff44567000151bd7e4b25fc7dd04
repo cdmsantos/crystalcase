@@ -1,0 +1,24 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class FilesystemModelingAssistantProviderOfFilesystemEditPart extends filesystem.diagram.providers.FilesystemModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Parameters_2001);
+					types.add(filesystem.diagram.providers.FilesystemElementTypes.Return_2002);
+					return types;	
+	}
+			
+	
+	}

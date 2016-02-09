@@ -1,0 +1,778 @@
+/*
+ * 
+ */
+package filesystem.diagram.navigator;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
+import org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions;
+import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.resource.ImageRegistry;
+import org.eclipse.jface.viewers.ITreePathLabelProvider;
+import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.TreePath;
+import org.eclipse.jface.viewers.ViewerLabel;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.ui.IMemento;
+import org.eclipse.ui.navigator.ICommonContentExtensionSite;
+import org.eclipse.ui.navigator.ICommonLabelProvider;
+
+import filesystem.diagram.edit.parts.CaseEditPart;
+import filesystem.diagram.edit.parts.CaseNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.CursorEditPart;
+import filesystem.diagram.edit.parts.CursorNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.Data_TypeEditPart;
+import filesystem.diagram.edit.parts.Data_TypeNameReturnEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartEditPart;
+import filesystem.diagram.edit.parts.DeclarativePartNameDeclarativePartEditPart;
+import filesystem.diagram.edit.parts.DeleteEditPart;
+import filesystem.diagram.edit.parts.DeleteNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandEditPart;
+import filesystem.diagram.edit.parts.ExceptionCommandNameExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExceptionPartNameExceptionPartEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartEditPart;
+import filesystem.diagram.edit.parts.ExecutablePartNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.FilesystemEditPart;
+import filesystem.diagram.edit.parts.ForEditPart;
+import filesystem.diagram.edit.parts.ForNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.IfEditPart;
+import filesystem.diagram.edit.parts.IfNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.InsertEditPart;
+import filesystem.diagram.edit.parts.InsertNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.LoopEditPart;
+import filesystem.diagram.edit.parts.LoopNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.OutputEditPart;
+import filesystem.diagram.edit.parts.OutputNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.ParameterInEditPart;
+import filesystem.diagram.edit.parts.ParameterInNameParameterInEditPart;
+import filesystem.diagram.edit.parts.Parameters2EditPart;
+import filesystem.diagram.edit.parts.ParametersEditPart;
+import filesystem.diagram.edit.parts.ParametersNameParameterIn2EditPart;
+import filesystem.diagram.edit.parts.ParametersNameParameterInEditPart;
+import filesystem.diagram.edit.parts.ParametersNameParameters2EditPart;
+import filesystem.diagram.edit.parts.ParametersNameParametersEditPart;
+import filesystem.diagram.edit.parts.ReturnEditPart;
+import filesystem.diagram.edit.parts.ReturnNameReturnEditPart;
+import filesystem.diagram.edit.parts.SelectEditPart;
+import filesystem.diagram.edit.parts.SelectNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.SyncEditPart;
+import filesystem.diagram.edit.parts.UpdateEditPart;
+import filesystem.diagram.edit.parts.UpdateNameExecutablePartEditPart;
+import filesystem.diagram.edit.parts.WhileEditPart;
+import filesystem.diagram.edit.parts.WhileNameExecutablePartEditPart;
+import filesystem.diagram.part.FilesystemDiagramEditorPlugin;
+import filesystem.diagram.part.FilesystemVisualIDRegistry;
+import filesystem.diagram.providers.FilesystemElementTypes;
+import filesystem.diagram.providers.FilesystemParserProvider;
+
+/**
+ * @generated
+ */
+public class FilesystemNavigatorLabelProvider extends LabelProvider implements
+		ICommonLabelProvider, ITreePathLabelProvider {
+
+	/**
+	 * @generated
+	 */
+	static {
+		FilesystemDiagramEditorPlugin
+				.getInstance()
+				.getImageRegistry()
+				.put("Navigator?UnknownElement", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
+		FilesystemDiagramEditorPlugin
+				.getInstance()
+				.getImageRegistry()
+				.put("Navigator?ImageNotFound", ImageDescriptor.getMissingImageDescriptor()); //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	public void updateLabel(ViewerLabel label, TreePath elementPath) {
+		Object element = elementPath.getLastSegment();
+		if (element instanceof FilesystemNavigatorItem
+				&& !isOwnView(((FilesystemNavigatorItem) element).getView())) {
+			return;
+		}
+		label.setText(getText(element));
+		label.setImage(getImage(element));
+	}
+
+	/**
+	 * @generated
+	 */
+	public Image getImage(Object element) {
+		if (element instanceof FilesystemNavigatorGroup) {
+			FilesystemNavigatorGroup group = (FilesystemNavigatorGroup) element;
+			return FilesystemDiagramEditorPlugin.getInstance().getBundledImage(
+					group.getIcon());
+		}
+
+		if (element instanceof FilesystemNavigatorItem) {
+			FilesystemNavigatorItem navigatorItem = (FilesystemNavigatorItem) element;
+			if (!isOwnView(navigatorItem.getView())) {
+				return super.getImage(element);
+			}
+			return getImage(navigatorItem.getView());
+		}
+
+		// Due to plugin.xml content will be called only for "own" views
+		if (element instanceof IAdaptable) {
+			View view = (View) ((IAdaptable) element).getAdapter(View.class);
+			if (view != null && isOwnView(view)) {
+				return getImage(view);
+			}
+		}
+
+		return super.getImage(element);
+	}
+
+	/**
+	 * @generated
+	 */
+	public Image getImage(View view) {
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Diagram?filesystem?Filesystem", FilesystemElementTypes.Filesystem_1000); //$NON-NLS-1$
+		case ParametersEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Parameters", FilesystemElementTypes.Parameters_2001); //$NON-NLS-1$
+		case Data_TypeEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Data_Type", FilesystemElementTypes.Data_Type_2002); //$NON-NLS-1$
+		case IfEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?If", FilesystemElementTypes.If_2003); //$NON-NLS-1$
+		case CaseEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Case", FilesystemElementTypes.Case_2004); //$NON-NLS-1$
+		case InsertEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Insert", FilesystemElementTypes.Insert_2005); //$NON-NLS-1$
+		case UpdateEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Update", FilesystemElementTypes.Update_2006); //$NON-NLS-1$
+		case DeleteEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Delete", FilesystemElementTypes.Delete_2007); //$NON-NLS-1$
+		case SelectEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Select", FilesystemElementTypes.Select_2008); //$NON-NLS-1$
+		case OutputEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Output", FilesystemElementTypes.Output_2009); //$NON-NLS-1$
+		case CursorEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Cursor", FilesystemElementTypes.Cursor_2010); //$NON-NLS-1$
+		case WhileEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?While", FilesystemElementTypes.While_2011); //$NON-NLS-1$
+		case ForEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?For", FilesystemElementTypes.For_2012); //$NON-NLS-1$
+		case LoopEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Loop", FilesystemElementTypes.Loop_2013); //$NON-NLS-1$
+		case ExceptionCommandEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?ExceptionCommand", FilesystemElementTypes.ExceptionCommand_2014); //$NON-NLS-1$
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?DeclarativePart", FilesystemElementTypes.DeclarativePart_2015); //$NON-NLS-1$
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?ExecutablePart", FilesystemElementTypes.ExecutablePart_2016); //$NON-NLS-1$
+		case ExceptionPartEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?ExceptionPart", FilesystemElementTypes.ExceptionPart_2017); //$NON-NLS-1$
+		case ReturnEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?filesystem?Return", FilesystemElementTypes.Return_2018); //$NON-NLS-1$
+		case Parameters2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?filesystem?Parameters", FilesystemElementTypes.Parameters_3001); //$NON-NLS-1$
+		case ParameterInEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?filesystem?ParameterIn", FilesystemElementTypes.ParameterIn_3002); //$NON-NLS-1$
+		case SyncEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?filesystem?Sync", FilesystemElementTypes.Sync_4001); //$NON-NLS-1$
+		}
+		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private Image getImage(String key, IElementType elementType) {
+		ImageRegistry imageRegistry = FilesystemDiagramEditorPlugin
+				.getInstance().getImageRegistry();
+		Image image = imageRegistry.get(key);
+		if (image == null && elementType != null
+				&& FilesystemElementTypes.isKnownElementType(elementType)) {
+			image = FilesystemElementTypes.getImage(elementType);
+			imageRegistry.put(key, image);
+		}
+
+		if (image == null) {
+			image = imageRegistry.get("Navigator?ImageNotFound"); //$NON-NLS-1$
+			imageRegistry.put(key, image);
+		}
+		return image;
+	}
+
+	/**
+	 * @generated
+	 */
+	public String getText(Object element) {
+		if (element instanceof FilesystemNavigatorGroup) {
+			FilesystemNavigatorGroup group = (FilesystemNavigatorGroup) element;
+			return group.getGroupName();
+		}
+
+		if (element instanceof FilesystemNavigatorItem) {
+			FilesystemNavigatorItem navigatorItem = (FilesystemNavigatorItem) element;
+			if (!isOwnView(navigatorItem.getView())) {
+				return null;
+			}
+			return getText(navigatorItem.getView());
+		}
+
+		// Due to plugin.xml content will be called only for "own" views
+		if (element instanceof IAdaptable) {
+			View view = (View) ((IAdaptable) element).getAdapter(View.class);
+			if (view != null && isOwnView(view)) {
+				return getText(view);
+			}
+		}
+
+		return super.getText(element);
+	}
+
+	/**
+	 * @generated
+	 */
+	public String getText(View view) {
+		if (view.getElement() != null && view.getElement().eIsProxy()) {
+			return getUnresolvedDomainElementProxyText(view);
+		}
+		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
+		case FilesystemEditPart.VISUAL_ID:
+			return getFilesystem_1000Text(view);
+		case ParametersEditPart.VISUAL_ID:
+			return getParameters_2001Text(view);
+		case Data_TypeEditPart.VISUAL_ID:
+			return getData_Type_2002Text(view);
+		case IfEditPart.VISUAL_ID:
+			return getIf_2003Text(view);
+		case CaseEditPart.VISUAL_ID:
+			return getCase_2004Text(view);
+		case InsertEditPart.VISUAL_ID:
+			return getInsert_2005Text(view);
+		case UpdateEditPart.VISUAL_ID:
+			return getUpdate_2006Text(view);
+		case DeleteEditPart.VISUAL_ID:
+			return getDelete_2007Text(view);
+		case SelectEditPart.VISUAL_ID:
+			return getSelect_2008Text(view);
+		case OutputEditPart.VISUAL_ID:
+			return getOutput_2009Text(view);
+		case CursorEditPart.VISUAL_ID:
+			return getCursor_2010Text(view);
+		case WhileEditPart.VISUAL_ID:
+			return getWhile_2011Text(view);
+		case ForEditPart.VISUAL_ID:
+			return getFor_2012Text(view);
+		case LoopEditPart.VISUAL_ID:
+			return getLoop_2013Text(view);
+		case ExceptionCommandEditPart.VISUAL_ID:
+			return getExceptionCommand_2014Text(view);
+		case DeclarativePartEditPart.VISUAL_ID:
+			return getDeclarativePart_2015Text(view);
+		case ExecutablePartEditPart.VISUAL_ID:
+			return getExecutablePart_2016Text(view);
+		case ExceptionPartEditPart.VISUAL_ID:
+			return getExceptionPart_2017Text(view);
+		case ReturnEditPart.VISUAL_ID:
+			return getReturn_2018Text(view);
+		case Parameters2EditPart.VISUAL_ID:
+			return getParameters_3001Text(view);
+		case ParameterInEditPart.VISUAL_ID:
+			return getParameterIn_3002Text(view);
+		case SyncEditPart.VISUAL_ID:
+			return getSync_4001Text(view);
+		}
+		return getUnknownElementText(view);
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getFilesystem_1000Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getParameters_2001Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Parameters_2001,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(ParametersNameParameterInEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getData_Type_2002Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Data_Type_2002,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(Data_TypeNameReturnEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5003); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getIf_2003Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.If_2003,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(IfNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5004); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCase_2004Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Case_2004,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(CaseNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5005); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getInsert_2005Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Insert_2005,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(InsertNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5006); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getUpdate_2006Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Update_2006,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(UpdateNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5007); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getDelete_2007Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Delete_2007,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(DeleteNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5008); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSelect_2008Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Select_2008,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(SelectNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5009); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getOutput_2009Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Output_2009,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(OutputNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5010); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCursor_2010Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Cursor_2010,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(CursorNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5011); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getWhile_2011Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.While_2011,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(WhileNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5012); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getFor_2012Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.For_2012,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(ForNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5013); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getLoop_2013Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Loop_2013,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(LoopNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5014); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getExceptionCommand_2014Text(View view) {
+		IParser parser = FilesystemParserProvider
+				.getParser(
+						FilesystemElementTypes.ExceptionCommand_2014,
+						view.getElement() != null ? view.getElement() : view,
+						FilesystemVisualIDRegistry
+								.getType(ExceptionCommandNameExceptionPartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5015); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getDeclarativePart_2015Text(View view) {
+		IParser parser = FilesystemParserProvider
+				.getParser(
+						FilesystemElementTypes.DeclarativePart_2015,
+						view.getElement() != null ? view.getElement() : view,
+						FilesystemVisualIDRegistry
+								.getType(DeclarativePartNameDeclarativePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5016); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getExecutablePart_2016Text(View view) {
+		IParser parser = FilesystemParserProvider
+				.getParser(
+						FilesystemElementTypes.ExecutablePart_2016,
+						view.getElement() != null ? view.getElement() : view,
+						FilesystemVisualIDRegistry
+								.getType(ExecutablePartNameExecutablePartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5017); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getExceptionPart_2017Text(View view) {
+		IParser parser = FilesystemParserProvider
+				.getParser(
+						FilesystemElementTypes.ExceptionPart_2017,
+						view.getElement() != null ? view.getElement() : view,
+						FilesystemVisualIDRegistry
+								.getType(ExceptionPartNameExceptionPartEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5018); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getReturn_2018Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Return_2018,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(ReturnNameReturnEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5019); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getParameters_3001Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Parameters_3001,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(ParametersNameParameterIn2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getParameterIn_3002Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.ParameterIn_3002,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(ParameterInNameParameterInEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5020); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSync_4001Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getUnknownElementText(View view) {
+		return "<UnknownElement Visual_ID = " + view.getType() + ">"; //$NON-NLS-1$  //$NON-NLS-2$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getUnresolvedDomainElementProxyText(View view) {
+		return "<Unresolved domain element Visual_ID = " + view.getType() + ">"; //$NON-NLS-1$  //$NON-NLS-2$
+	}
+
+	/**
+	 * @generated
+	 */
+	public void init(ICommonContentExtensionSite aConfig) {
+	}
+
+	/**
+	 * @generated
+	 */
+	public void restoreState(IMemento aMemento) {
+	}
+
+	/**
+	 * @generated
+	 */
+	public void saveState(IMemento aMemento) {
+	}
+
+	/**
+	 * @generated
+	 */
+	public String getDescription(Object anElement) {
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	private boolean isOwnView(View view) {
+		return FilesystemEditPart.MODEL_ID.equals(FilesystemVisualIDRegistry
+				.getModelID(view));
+	}
+
+}

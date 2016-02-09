@@ -1,0 +1,393 @@
+/*
+ * 
+ */
+package filesystem.diagram.providers;
+
+/**
+ * @generated
+ */
+public class FilesystemElementTypes {
+
+		/**
+ * @generated
+ */
+private FilesystemElementTypes() {
+}
+	
+		/**
+ * @generated
+ */
+private static java.util.Map<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement> elements;
+
+	/**
+ * @generated
+ */
+private static org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages elementTypeImages = new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages(	filesystem.diagram.part.FilesystemDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
+
+	/**
+ * @generated
+ */
+private static java.util.Set<org.eclipse.gmf.runtime.emf.type.core.IElementType> KNOWN_ELEMENT_TYPES;
+	
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Filesystem_1000 = getElementType("master.project.diagram.Filesystem_1000");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Drive_2001 = getElementType("master.project.diagram.Drive_2001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ParameterType_2002 = getElementType("master.project.diagram.ParameterType_2002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType If_2003 = getElementType("master.project.diagram.If_2003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Case_2004 = getElementType("master.project.diagram.Case_2004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Insert_2005 = getElementType("master.project.diagram.Insert_2005");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Update_2006 = getElementType("master.project.diagram.Update_2006");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Delete_2007 = getElementType("master.project.diagram.Delete_2007");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Output_2008 = getElementType("master.project.diagram.Output_2008");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Select_2009 = getElementType("master.project.diagram.Select_2009");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Cursor_2010 = getElementType("master.project.diagram.Cursor_2010");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType While_2011 = getElementType("master.project.diagram.While_2011");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType For_2012 = getElementType("master.project.diagram.For_2012");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Loop_2013 = getElementType("master.project.diagram.Loop_2013");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ExceptionCommand_2014 = getElementType("master.project.diagram.ExceptionCommand_2014");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ParameterIn_2015 = getElementType("master.project.diagram.ParameterIn_2015");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ParameterOut_2016 = getElementType("master.project.diagram.ParameterOut_2016");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ParameterInOut_2017 = getElementType("master.project.diagram.ParameterInOut_2017");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DeclarativePart_2018 = getElementType("master.project.diagram.DeclarativePart_2018");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ExecutablePart_2019 = getElementType("master.project.diagram.ExecutablePart_2019");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ExceptionPart_2020 = getElementType("master.project.diagram.ExceptionPart_2020");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Parameters_2021 = getElementType("master.project.diagram.Parameters_2021");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Return_2022 = getElementType("master.project.diagram.Return_2022");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Drive_3001 = getElementType("master.project.diagram.Drive_3001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Folder_3002 = getElementType("master.project.diagram.Folder_3002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Shortcut_3003 = getElementType("master.project.diagram.Shortcut_3003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType File_3004 = getElementType("master.project.diagram.File_3004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Sync_4001 = getElementType("master.project.diagram.Sync_4001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ShortcutTarget_4002 = getElementType("master.project.diagram.ShortcutTarget_4002");  //$NON-NLS-1$
+		
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImageDescriptor(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImage(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImageDescriptor(getElement(hint));
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImage(getElement(hint));
+}
+
+		/**
+ * Returns 'type' of the ecore object associated with the hint.
+ * 
+ * @generated
+ */
+public static org.eclipse.emf.ecore.ENamedElement getElement(org.eclipse.core.runtime.IAdaptable hint) {
+	Object type = hint.getAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType.class);
+	if (elements == null) {
+		elements = new java.util.IdentityHashMap<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement>();
+		
+	elements.put(Filesystem_1000, filesystem.FilesystemPackage.eINSTANCE.getFilesystem());
+					
+	
+	elements.put(Drive_2001, filesystem.FilesystemPackage.eINSTANCE.getDrive());
+					
+	
+	elements.put(ParameterType_2002, filesystem.FilesystemPackage.eINSTANCE.getParameterType());
+					
+	
+	elements.put(If_2003, filesystem.FilesystemPackage.eINSTANCE.getIf());
+					
+	
+	elements.put(Case_2004, filesystem.FilesystemPackage.eINSTANCE.getCase());
+					
+	
+	elements.put(Insert_2005, filesystem.FilesystemPackage.eINSTANCE.getInsert());
+					
+	
+	elements.put(Update_2006, filesystem.FilesystemPackage.eINSTANCE.getUpdate());
+					
+	
+	elements.put(Delete_2007, filesystem.FilesystemPackage.eINSTANCE.getDelete());
+					
+	
+	elements.put(Output_2008, filesystem.FilesystemPackage.eINSTANCE.getOutput());
+					
+	
+	elements.put(Select_2009, filesystem.FilesystemPackage.eINSTANCE.getSelect());
+					
+	
+	elements.put(Cursor_2010, filesystem.FilesystemPackage.eINSTANCE.getCursor());
+					
+	
+	elements.put(While_2011, filesystem.FilesystemPackage.eINSTANCE.getWhile());
+					
+	
+	elements.put(For_2012, filesystem.FilesystemPackage.eINSTANCE.getFor());
+					
+	
+	elements.put(Loop_2013, filesystem.FilesystemPackage.eINSTANCE.getLoop());
+					
+	
+	elements.put(ExceptionCommand_2014, filesystem.FilesystemPackage.eINSTANCE.getExceptionCommand());
+					
+	
+	elements.put(ParameterIn_2015, filesystem.FilesystemPackage.eINSTANCE.getParameterIn());
+					
+	
+	elements.put(ParameterOut_2016, filesystem.FilesystemPackage.eINSTANCE.getParameterOut());
+					
+	
+	elements.put(ParameterInOut_2017, filesystem.FilesystemPackage.eINSTANCE.getParameterInOut());
+					
+	
+	elements.put(DeclarativePart_2018, filesystem.FilesystemPackage.eINSTANCE.getDeclarativePart());
+					
+	
+	elements.put(ExecutablePart_2019, filesystem.FilesystemPackage.eINSTANCE.getExecutablePart());
+					
+	
+	elements.put(ExceptionPart_2020, filesystem.FilesystemPackage.eINSTANCE.getExceptionPart());
+					
+	
+	elements.put(Parameters_2021, filesystem.FilesystemPackage.eINSTANCE.getParameters());
+					
+	
+	elements.put(Return_2022, filesystem.FilesystemPackage.eINSTANCE.getReturn());
+					
+	
+	elements.put(Drive_3001, filesystem.FilesystemPackage.eINSTANCE.getDrive());
+					
+	
+	elements.put(Folder_3002, filesystem.FilesystemPackage.eINSTANCE.getFolder());
+					
+	
+	elements.put(Shortcut_3003, filesystem.FilesystemPackage.eINSTANCE.getShortcut());
+					
+	
+	elements.put(File_3004, filesystem.FilesystemPackage.eINSTANCE.getFile());
+							
+	
+	elements.put(Sync_4001, filesystem.FilesystemPackage.eINSTANCE.getSync());
+					
+	elements.put(ShortcutTarget_4002, filesystem.FilesystemPackage.eINSTANCE.getShortcut_Target());
+			}
+	return (org.eclipse.emf.ecore.ENamedElement) elements.get(type);
+}
+
+		/**
+ * @generated
+ */
+private static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(String id) {
+	return org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry.getInstance().getType(id);
+}
+
+		/**
+ * @generated
+ */
+public static boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	if (KNOWN_ELEMENT_TYPES == null) {
+		KNOWN_ELEMENT_TYPES = new java.util.HashSet<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+			KNOWN_ELEMENT_TYPES.add(Filesystem_1000);
+		KNOWN_ELEMENT_TYPES.add(Drive_2001);
+		KNOWN_ELEMENT_TYPES.add(ParameterType_2002);
+		KNOWN_ELEMENT_TYPES.add(If_2003);
+		KNOWN_ELEMENT_TYPES.add(Case_2004);
+		KNOWN_ELEMENT_TYPES.add(Insert_2005);
+		KNOWN_ELEMENT_TYPES.add(Update_2006);
+		KNOWN_ELEMENT_TYPES.add(Delete_2007);
+		KNOWN_ELEMENT_TYPES.add(Output_2008);
+		KNOWN_ELEMENT_TYPES.add(Select_2009);
+		KNOWN_ELEMENT_TYPES.add(Cursor_2010);
+		KNOWN_ELEMENT_TYPES.add(While_2011);
+		KNOWN_ELEMENT_TYPES.add(For_2012);
+		KNOWN_ELEMENT_TYPES.add(Loop_2013);
+		KNOWN_ELEMENT_TYPES.add(ExceptionCommand_2014);
+		KNOWN_ELEMENT_TYPES.add(ParameterIn_2015);
+		KNOWN_ELEMENT_TYPES.add(ParameterOut_2016);
+		KNOWN_ELEMENT_TYPES.add(ParameterInOut_2017);
+		KNOWN_ELEMENT_TYPES.add(DeclarativePart_2018);
+		KNOWN_ELEMENT_TYPES.add(ExecutablePart_2019);
+		KNOWN_ELEMENT_TYPES.add(ExceptionPart_2020);
+		KNOWN_ELEMENT_TYPES.add(Parameters_2021);
+		KNOWN_ELEMENT_TYPES.add(Return_2022);
+		KNOWN_ELEMENT_TYPES.add(Drive_3001);
+		KNOWN_ELEMENT_TYPES.add(Folder_3002);
+		KNOWN_ELEMENT_TYPES.add(Shortcut_3003);
+		KNOWN_ELEMENT_TYPES.add(File_3004);
+		KNOWN_ELEMENT_TYPES.add(Sync_4001);
+		KNOWN_ELEMENT_TYPES.add(ShortcutTarget_4002);
+		}
+	return KNOWN_ELEMENT_TYPES.contains(elementType);
+}
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(int visualID) {
+		switch (visualID) {
+				case filesystem.diagram.edit.parts.FilesystemEditPart.VISUAL_ID:		return Filesystem_1000;
+	case filesystem.diagram.edit.parts.DriveEditPart.VISUAL_ID:		return Drive_2001;
+	case filesystem.diagram.edit.parts.ParameterTypeEditPart.VISUAL_ID:		return ParameterType_2002;
+	case filesystem.diagram.edit.parts.IfEditPart.VISUAL_ID:		return If_2003;
+	case filesystem.diagram.edit.parts.CaseEditPart.VISUAL_ID:		return Case_2004;
+	case filesystem.diagram.edit.parts.InsertEditPart.VISUAL_ID:		return Insert_2005;
+	case filesystem.diagram.edit.parts.UpdateEditPart.VISUAL_ID:		return Update_2006;
+	case filesystem.diagram.edit.parts.DeleteEditPart.VISUAL_ID:		return Delete_2007;
+	case filesystem.diagram.edit.parts.OutputEditPart.VISUAL_ID:		return Output_2008;
+	case filesystem.diagram.edit.parts.SelectEditPart.VISUAL_ID:		return Select_2009;
+	case filesystem.diagram.edit.parts.CursorEditPart.VISUAL_ID:		return Cursor_2010;
+	case filesystem.diagram.edit.parts.WhileEditPart.VISUAL_ID:		return While_2011;
+	case filesystem.diagram.edit.parts.ForEditPart.VISUAL_ID:		return For_2012;
+	case filesystem.diagram.edit.parts.LoopEditPart.VISUAL_ID:		return Loop_2013;
+	case filesystem.diagram.edit.parts.ExceptionCommandEditPart.VISUAL_ID:		return ExceptionCommand_2014;
+	case filesystem.diagram.edit.parts.ParameterInEditPart.VISUAL_ID:		return ParameterIn_2015;
+	case filesystem.diagram.edit.parts.ParameterOutEditPart.VISUAL_ID:		return ParameterOut_2016;
+	case filesystem.diagram.edit.parts.ParameterInOutEditPart.VISUAL_ID:		return ParameterInOut_2017;
+	case filesystem.diagram.edit.parts.DeclarativePartEditPart.VISUAL_ID:		return DeclarativePart_2018;
+	case filesystem.diagram.edit.parts.ExecutablePartEditPart.VISUAL_ID:		return ExecutablePart_2019;
+	case filesystem.diagram.edit.parts.ExceptionPartEditPart.VISUAL_ID:		return ExceptionPart_2020;
+	case filesystem.diagram.edit.parts.ParametersEditPart.VISUAL_ID:		return Parameters_2021;
+	case filesystem.diagram.edit.parts.ReturnEditPart.VISUAL_ID:		return Return_2022;
+	case filesystem.diagram.edit.parts.Drive2EditPart.VISUAL_ID:		return Drive_3001;
+	case filesystem.diagram.edit.parts.FolderEditPart.VISUAL_ID:		return Folder_3002;
+	case filesystem.diagram.edit.parts.ShortcutEditPart.VISUAL_ID:		return Shortcut_3003;
+	case filesystem.diagram.edit.parts.FileEditPart.VISUAL_ID:		return File_3004;
+	case filesystem.diagram.edit.parts.SyncEditPart.VISUAL_ID:		return Sync_4001;
+	case filesystem.diagram.edit.parts.ShortcutTargetEditPart.VISUAL_ID:		return ShortcutTarget_4002;
+		}
+		return null;
+	}
+	
+		/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes TYPED_INSTANCE 
+		= new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes(elementTypeImages) {
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+			return filesystem.diagram.providers.FilesystemElementTypes.isKnownElementType(elementType);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.gmf.runtime.emf.type.core.IElementType getElementTypeForVisualId(int visualID) {
+			return filesystem.diagram.providers.FilesystemElementTypes.getElementType(visualID);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.emf.ecore.ENamedElement getDefiningNamedElement(org.eclipse.core.runtime.IAdaptable elementTypeAdapter) {
+			return filesystem.diagram.providers.FilesystemElementTypes.getElement(elementTypeAdapter);
+		}
+	}; 
+
+	}

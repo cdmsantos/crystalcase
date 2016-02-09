@@ -1,0 +1,74 @@
+#
+
+pluginName = Filesystem Edit Support
+providerName = www.example.org
+
+_UI_CreateChild_text = {0}
+_UI_CreateChild_text2 = {1} {0}
+_UI_CreateChild_text3 = {1}
+_UI_CreateChild_tooltip = Create New {0} Under {1} Feature
+_UI_CreateChild_description = Create a new child of type {0} for the {1} feature of the selected {2}.
+_UI_CreateSibling_description = Create a new sibling of type {0} for the selected {2}, under the {1} feature of their parent.
+
+_UI_PropertyDescriptor_description = The {0} of the {1}
+
+_UI_Filesystem_type = Filesystem
+_UI_Sections_type = Sections
+_UI_Parameters_type = Parameters
+_UI_Return_type = Return
+_UI_DeclarativePart_type = Declarative Part
+_UI_ExecutablePart_type = Executable Part
+_UI_ExceptionPart_type = Exception Part
+_UI_Data_Type_type = Data Type
+_UI_ParameterIn_type = Parameter In
+_UI_ParameterOut_type = Parameter Out
+_UI_ParameterInOut_type = Parameter In Out
+_UI_ExceptionCommand_type = Exception Command
+_UI_If_type = If
+_UI_Case_type = Case
+_UI_Insert_type = Insert
+_UI_Update_type = Update
+_UI_Delete_type = Delete
+_UI_Select_type = Select
+_UI_Output_type = Output
+_UI_Cursor_type = Cursor
+_UI_While_type = While
+_UI_For_type = For
+_UI_Loop_type = Loop
+_UI_Sync_type = Sync
+_UI_Unknown_type = Object
+
+_UI_Unknown_datatype= Value
+
+_UI_Filesystem_sections_feature = Sections
+_UI_Sections_declarative_feature = Declarative
+_UI_Sections_executable_feature = Executable
+_UI_Sections_return_feature = Return
+_UI_Sections_parameters_feature = Parameters
+_UI_Parameters_parametros_in_feature = Parametros in
+_UI_Parameters_parametros_in_out_feature = Parametros in out
+_UI_Parameters_parametros_out_feature = Parametros out
+_UI_Return_tipo_retorno_feature = Tipo retorno
+_UI_DeclarativePart_tipos_dados_feature = Tipos dados
+_UI_DeclarativePart_nameDeclarativePart_feature = Name Declarative Part
+_UI_ExecutablePart_ifs_feature = Ifs
+_UI_ExecutablePart_cases_feature = Cases
+_UI_ExecutablePart_inserts_feature = Inserts
+_UI_ExecutablePart_updates_feature = Updates
+_UI_ExecutablePart_deletes_feature = Deletes
+_UI_ExecutablePart_selects_feature = Selects
+_UI_ExecutablePart_outuputs_feature = Outuputs
+_UI_ExecutablePart_cursors_feature = Cursors
+_UI_ExecutablePart_whiles_feature = Whiles
+_UI_ExecutablePart_fors_feature = Fors
+_UI_ExecutablePart_loops_feature = Loops
+_UI_ExceptionPart_excecoes_feature = Excecoes
+_UI_ExceptionPart_nameExceptionPart_feature = Name Exception Part
+_UI_Data_Type_nameDataType_feature = Name Data Type
+_UI_ParameterIn_nameParameterIn_feature = Name Parameter In
+_UI_ParameterOut_nameParameterOut_feature = Name Parameter Out
+_UI_ParameterInOut_nameParameterInOut_feature = Name Parameter In Out
+_UI_Sync_source_feature = Source
+_UI_Sync_target_feature = Target
+_UI_Unknown_feature = Unspecified
+

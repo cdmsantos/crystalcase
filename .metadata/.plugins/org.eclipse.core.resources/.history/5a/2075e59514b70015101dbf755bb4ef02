@@ -1,0 +1,56 @@
+	/*
+ * 
+ */
+package master.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public abstract class MasterAbstractNavigatorItem extends org.eclipse.core.runtime.PlatformObject {
+
+
+		/**
+ * @generated
+ */
+static {
+	final Class[] supportedTypes = new Class[] { org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor.class };
+	final org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor propertySheetPageContributor = new org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor() {
+		public String getContributorId() {
+			return "CINproject.diagram";  //$NON-NLS-1$
+		}
+	};
+	org.eclipse.core.runtime.Platform.getAdapterManager().registerAdapters(new org.eclipse.core.runtime.IAdapterFactory() {
+		
+		public Object getAdapter(Object adaptableObject, Class adapterType) {
+			if (adaptableObject instanceof master.diagram.navigator.MasterAbstractNavigatorItem && adapterType == org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor.class) {
+				return propertySheetPageContributor;				
+			}
+			return null;
+		}
+
+		public Class[] getAdapterList() {
+			return supportedTypes;
+		}
+	}, master.diagram.navigator.MasterAbstractNavigatorItem.class);
+}
+	
+		/**
+ * @generated
+ */
+private Object myParent;
+	
+		/**
+ * @generated
+ */
+protected MasterAbstractNavigatorItem(Object parent) {
+	myParent = parent;
+}
+	
+		/**
+ * @generated
+ */
+public Object getParent() {
+	return myParent;
+}
+
+	}

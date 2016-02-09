@@ -1,0 +1,128 @@
+/*
+ * 
+ */
+package filesystem.diagram.edit.policies;
+
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand;
+import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
+import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
+
+import filesystem.diagram.edit.commands.CaseCreateCommand;
+import filesystem.diagram.edit.commands.CursorCreateCommand;
+import filesystem.diagram.edit.commands.Data_TypeCreateCommand;
+import filesystem.diagram.edit.commands.DeclarativePartCreateCommand;
+import filesystem.diagram.edit.commands.DeleteCreateCommand;
+import filesystem.diagram.edit.commands.ExceptionCommandCreateCommand;
+import filesystem.diagram.edit.commands.ExceptionPartCreateCommand;
+import filesystem.diagram.edit.commands.ExecutablePartCreateCommand;
+import filesystem.diagram.edit.commands.ForCreateCommand;
+import filesystem.diagram.edit.commands.IfCreateCommand;
+import filesystem.diagram.edit.commands.InsertCreateCommand;
+import filesystem.diagram.edit.commands.LoopCreateCommand;
+import filesystem.diagram.edit.commands.OutputCreateCommand;
+import filesystem.diagram.edit.commands.SelectCreateCommand;
+import filesystem.diagram.edit.commands.UpdateCreateCommand;
+import filesystem.diagram.edit.commands.WhileCreateCommand;
+import filesystem.diagram.providers.FilesystemElementTypes;
+
+/**
+ * @generated
+ */
+public class FilesystemItemSemanticEditPolicy extends
+		FilesystemBaseItemSemanticEditPolicy {
+
+	/**
+	 * @generated
+	 */
+	public FilesystemItemSemanticEditPolicy() {
+		super(FilesystemElementTypes.Filesystem_1000);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getCreateCommand(CreateElementRequest req) {
+		if (FilesystemElementTypes.Data_Type_2001 == req.getElementType()) {
+			return getGEFWrapper(new Data_TypeCreateCommand(req));
+		}
+		if (FilesystemElementTypes.If_2002 == req.getElementType()) {
+			return getGEFWrapper(new IfCreateCommand(req));
+		}
+		if (FilesystemElementTypes.Case_2003 == req.getElementType()) {
+			return getGEFWrapper(new CaseCreateCommand(req));
+		}
+		if (FilesystemElementTypes.Insert_2004 == req.getElementType()) {
+			return getGEFWrapper(new InsertCreateCommand(req));
+		}
+		if (FilesystemElementTypes.Update_2005 == req.getElementType()) {
+			return getGEFWrapper(new UpdateCreateCommand(req));
+		}
+		if (FilesystemElementTypes.Delete_2006 == req.getElementType()) {
+			return getGEFWrapper(new DeleteCreateCommand(req));
+		}
+		if (FilesystemElementTypes.Output_2007 == req.getElementType()) {
+			return getGEFWrapper(new OutputCreateCommand(req));
+		}
+		if (FilesystemElementTypes.Select_2008 == req.getElementType()) {
+			return getGEFWrapper(new SelectCreateCommand(req));
+		}
+		if (FilesystemElementTypes.Cursor_2009 == req.getElementType()) {
+			return getGEFWrapper(new CursorCreateCommand(req));
+		}
+		if (FilesystemElementTypes.While_2010 == req.getElementType()) {
+			return getGEFWrapper(new WhileCreateCommand(req));
+		}
+		if (FilesystemElementTypes.For_2011 == req.getElementType()) {
+			return getGEFWrapper(new ForCreateCommand(req));
+		}
+		if (FilesystemElementTypes.Loop_2012 == req.getElementType()) {
+			return getGEFWrapper(new LoopCreateCommand(req));
+		}
+		if (FilesystemElementTypes.ExceptionCommand_2013 == req
+				.getElementType()) {
+			return getGEFWrapper(new ExceptionCommandCreateCommand(req));
+		}
+		if (FilesystemElementTypes.DeclarativePart_2014 == req.getElementType()) {
+			return getGEFWrapper(new DeclarativePartCreateCommand(req));
+		}
+		if (FilesystemElementTypes.ExecutablePart_2015 == req.getElementType()) {
+			return getGEFWrapper(new ExecutablePartCreateCommand(req));
+		}
+		if (FilesystemElementTypes.ExceptionPart_2016 == req.getElementType()) {
+			return getGEFWrapper(new ExceptionPartCreateCommand(req));
+		}
+		return super.getCreateCommand(req);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getDuplicateCommand(DuplicateElementsRequest req) {
+		TransactionalEditingDomain editingDomain = ((IGraphicalEditPart) getHost())
+				.getEditingDomain();
+		return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+	}
+
+	/**
+	 * @generated
+	 */
+	private static class DuplicateAnythingCommand extends
+			DuplicateEObjectsCommand {
+
+		/**
+		 * @generated
+		 */
+		public DuplicateAnythingCommand(
+				TransactionalEditingDomain editingDomain,
+				DuplicateElementsRequest req) {
+			super(editingDomain, req.getLabel(), req
+					.getElementsToBeDuplicated(), req
+					.getAllDuplicatedElementsMap());
+		}
+
+	}
+
+}
