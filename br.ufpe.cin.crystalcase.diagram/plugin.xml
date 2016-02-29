@@ -5,6 +5,61 @@
 -->
 <plugin>
 
+
+<!-- Menus -->
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <command
+            defaultHandler="crystal.diagram.custom.part.transformation.TransformationHandler"
+            id="crystal.diagram.custom.part.transformation.TransformationHandler"
+            name="Generate SQL DDL">
+      </command>
+   </extension>
+
+	<extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar id="crystal.diagram.toolbar1"
+               label="Workbench Wizards">
+            
+           <command
+                  commandId="org.eclipse.ui.newWizard"
+                  style="push">
+               <parameter
+                     name="newWizardId"
+                     value="org.eclipse.ui.wizards.new.project">
+               </parameter>
+            </command>    
+            
+            <command
+                  commandId="org.eclipse.ui.newWizard"
+                  style="push">
+               <parameter
+                     name="newWizardId"
+                     value="crystal.diagram.part.CrystalCreationWizardID">
+               </parameter>
+            </command>
+            
+
+            <command
+                  commandId="crystal.diagram.custom.part.transformation.TransformationHandler"
+                  icon="icons/transformation.png"
+                  id="crystal.diagram.custom.part.transformation.TransformationHandler.command"
+                  style="push"
+                  tooltip="Generate SQL DDL">
+            </command>
+            
+            <command
+               commandId="org.eclipse.ui.help.aboutAction"
+               style="push">
+            </command>
+            
+         </toolbar>
+      </menuContribution>
+</extension>
+
    <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
       <?gmfgen generated="true"?>
       <fileTypes type="text" extension="crystal"/>

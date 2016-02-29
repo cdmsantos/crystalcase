@@ -1,0 +1,13 @@
+#texto livre
+
+[%
+out.print("teste print\n");
+
+for(element in Procedure.allInstances()) {
+
+out.print("PROCEDURE "+element.name + "{ \n");
+
+out.print("}\n");
+
+}
+%]

@@ -90,7 +90,7 @@ context Statements {
 	constraint HasCode {
 		check {
 			if(not(self.eclass().name = 'Loop' or self.eclass().name = 'For' or self.eclass().name = 'CallProcedure' or 
-				self.eclass().name = 'CallFunction') and not(self.code.isEmpty())){
+				self.eclass().name = 'CallFunction') and self.code.isEmpty()){
 				return false;
 			}
 			return true;

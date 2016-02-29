@@ -1,0 +1,271 @@
+#!/bin/bash
+# Monitoramento local.
+# Tempo, CPU, Memódia, Disco, Rede lan, Rede Wifi, Processos Zumbis.
+
+# Pré-requisitos básicos: date, mpstat, free, df, cat, ps aux.
+# Pré-requisitos auxiliares: echo, awk, cut, gawk, grep, head, sleep, wc.
+
+# Pré-requisito de execução: chmod +x monitoramento-local.sh (torna o arquivo executável)
+# Execução: ./nome-arquivo.sh
+
+[%
+out.print("echo ");
+var workstationTime : Boolean = false;
+var workstationDate : Boolean = false;
+var workstationHour : Boolean = false;
+var workstationName : String;
+for(element in Workstation.allInstances()) {
+	workstationName = element.getName();
+	if(element.isDate()){
+		out.print("Date ");
+		workstationTime = true;
+		workstationDate = true;
+	}
+	if(element.isHour()){
+		out.print("Hour");
+		workstationTime = true;
+		workstationHour = true;
+	}
+	
+}
+out.println("");out.println("");
+out.println("while [ True ]");
+out.println("do");
+if(workstationTime){
+	out.println("   tempo=`date --rfc-3339=seconds`");
+	if(workstationDate)
+		out.println("   data=`echo $tempo | awk '{print $1}'`");
+	if(workstationHour)
+		out.println("   hora=`echo $tempo | cut -d\\  -f2 | gawk 'BEGIN{FS=\"-\"}{print $1}'`");
+}
+
+out.println("");
+var cpu: Boolean = false;
+var cpuIdle : Boolean = false;
+var cpuIOWait : Boolean = false;
+var cpuSys : Boolean = false;
+var cpuTotal : Boolean = false;
+var cpuUser : Boolean = false;
+
+for(element in CPU.allInstances()) {
+	if(element.isIdle()){
+		cpuIdle = true;
+		cpu = true;
+	}
+	if(element.isIOWait()){
+		cpuIOWait = true;
+		cpu = true;
+	}
+	if(element.isSys()){
+		cpuSys = true;
+		cpu = true;
+	}
+	if(element.isTotal()){
+		cpuTotal = true;
+		cpu = true;
+	}
+	if(element.isUser()){
+		cpuUser = true;
+		cpu = true;
+	}
+}
+
+if(cpu){
+	out.println("   cpu=`mpstat 1 1 | grep all | head -1`");
+	if(cpuTotal)
+		out.println("   cputotal=`echo $cpu | awk '{print (100-$11)}'`");
+	if(cpuUser)
+		out.println("   cpuuser=`echo $cpu | awk '{print $3}'`");
+	if(cpuSys)
+		out.println("   cpusys=`echo $cpu | awk '{print $5}'`");
+	if(cpuIOWait)
+		out.println("   cpuiowait=`echo $cpu | awk '{print $6}'`");
+	if(cpuIdle)
+		out.println("   cpuidle=`echo $cpu | awk '{print $11}'`");
+}
+
+var workstationMem : Boolean = false;
+var workstationMenUsed : Boolean = false;
+var workstationMenFree : Boolean = false;
+var workstationMenCache : Boolean = false;
+var workstationSwap : Boolean = false;
+var workstationSwapUsed : Boolean = false;
+var workstationSwapFree : Boolean = false;
+var workstationSwapTotal : Boolean = false;
+
+for(element in Workstation.allInstances()) {
+	if(element.isMemoryUsed()){
+		workstationMenUsed = true;
+		workstationMem = true;
+	}
+	if(element.isMemoryFree()){
+		workstationMenFree = true;
+		workstationMem = true;
+	}
+	if(element.isMemoryCache()){
+		workstationMenCache = true;
+		workstationMem = true;
+	}
+	if(element.isSwapTotal()){
+		workstationSwapTotal = true;
+		workstationSwap = true;
+	}
+	if(element.isSwapFree()){
+		workstationSwapFree = true;
+		workstationSwap = true;
+	}
+	if(element.isSwapUsed()){
+		workstationSwapUsed = true;
+		workstationSwap = true;
+	}
+}
+
+if(workstationMem){
+	out.println("");
+	out.println("   mem=`free -m | grep Mem`");
+	if(workstationMenUsed)
+		out.println("   memused=`echo $mem | awk '{print ($3/$2)*100}'`");
+	if(workstationMenFree)
+		out.println("   memfree=`echo $mem | awk '{print ($4/$2)*100}'`");
+	if(workstationMenCache)
+		out.println("   memcache=`echo $mem | awk '{print ($7/$2)*100}'`");
+}
+
+if(workstationSwap){
+	out.println("");
+	out.println("   swap=`free -m | grep Swap`");
+	if(workstationSwapTotal)
+		out.println("   swaptotal=`echo $swap | awk '{print $2}'`");
+	if(workstationSwapUsed)
+		out.println("   swapused=`echo $swap | awk '{print ($3/$2)*100}'`");
+	if(workstationSwapFree)
+		out.println("   swapfree=`echo $swap | awk '{print ($4/$2)*100}'`");
+}
+
+var HardDriveNumber : Integer = 0;
+for(element in HardDrive.allInstances()) {
+	if(element.isFree() or element.isUsed()){
+		out.println("");
+		out.println("   disc"+HardDriveNumber+"=`df -h | grep "+element.getName()+"`");
+		if(element.isUsed()){
+			out.println("   discused"+HardDriveNumber+"=`echo $disc"+HardDriveNumber+" | awk '{print $5}'`");
+		}
+		if(element.isFree()){
+			out.println("   discfree"+HardDriveNumber+"=`echo $disc"+HardDriveNumber+" | awk '{print (100-$5)}'`");
+		}
+	}
+	HardDriveNumber = HardDriveNumber + 1;
+}
+out.println("");
+var haveNetwork : Boolean = false;
+
+for(element in Network.allInstances()) {
+	if(element.isDownload() or element.isUpload()){
+		out.println("   netA"+element.getName()+"=`cat /proc/net/dev | grep "+element.getName()+"`");
+		haveNetwork = true;
+	}
+}
+if(haveNetwork){
+	out.println("   sleep 1");
+
+	for(element in Network.allInstances()) {
+		if(element.isDownload() or element.isUpload())
+			out.println("   netB"+element.getName()+"=`cat /proc/net/dev | grep "+element.getName()+"`");
+	}
+
+	for(element in Network.allInstances()) {
+		if(element.isDownload()){
+			out.println("");
+			out.println("   netADownload"+element.getName()+"=`echo $netA"+element.getName()+" | awk '{print $2}'`");
+			out.println("   netBDownload"+element.getName()+"=`echo $netB"+element.getName()+" | awk '{print $2}'`");
+			out.println("   netDownloadkb"+element.getName()+"=`expr '(' $netBDownload"+element.getName()+" - $netADownload"+element.getName()+" ')' / 1024`");
+		}
+		if(element.isUpload()){
+			out.println("");
+			out.println("   netAUpload"+element.getName()+"=`echo $netA"+element.getName()+" | awk '{print $10}'`");
+			out.println("   netBUpload"+element.getName()+"=`echo $netB"+element.getName()+" | awk '{print $10}'`");
+			out.println("   netUploadkb"+element.getName()+"=`expr '(' $netBUpload"+element.getName()+" - $netAUpload"+element.getName()+" ')' / 1024`");
+		}
+	}
+}
+
+for(element in Workstation.allInstances()) {
+	if(element.isProcessNumZumbis()){
+		out.println("");
+		out.println("   numzumbis=`ps aux | awk '{if ($8~\"Z\"){print $0}}' | wc -l`");
+	}
+}
+
+out.println("");
+out.print("   echo ");
+for(element in Workstation.allInstances()) {
+	if(element.isDate()){
+		out.print(" $data ");
+	}
+	if(element.isHour()){
+		out.print(" $hora ");
+	}
+}
+
+for(element in CPU.allInstances()) {
+	if(element.isIdle())
+		out.print(" $cpuidle ");
+	if(element.isIOWait())
+		out.print(" $cpuiowait ");
+	if(element.isSys())
+		out.print(" $cpusys ");
+	if(element.isTotal())
+		out.print(" $cputotal ");
+	if(element.isUser())
+		out.print(" $cpuuser ");
+}
+
+for(element in Workstation.allInstances()) {
+	if(element.isMemoryUsed())
+		out.print(" $memused ");
+	if(element.isMemoryFree())
+		out.print(" $memfree ");
+	if(element.isMemoryCache())
+		out.print(" $memcache ");
+	if(element.isSwapTotal())
+		out.print(" $swaptotal ");
+	if(element.isSwapUsed())
+		out.print(" $swapused ");
+	if(element.isSwapFree())
+		out.print(" $swapfree ");
+}
+
+HardDriveNumber = 0;
+for(element in HardDrive.allInstances()) {
+	if(element.isUsed()){
+		out.print(" $discused"+HardDriveNumber+" ");
+	}
+	if(element.isFree()){
+		out.print(" $discfree"+HardDriveNumber+" ");
+	}
+	HardDriveNumber = HardDriveNumber + 1;
+}
+
+for(element in Network.allInstances()) {
+	if(element.isDownload()){
+		out.print(" $netDownloadkb"+element.getName()+" ");
+	}
+	if(element.isUpload()){
+		out.print(" $netUploadkb"+element.getName()+" ");
+	}
+}
+
+for(element in Workstation.allInstances()) {
+	if(element.isProcessNumZumbis()){
+		out.print(" $numzumbis ");
+	}
+}
+
+out.print(" >> "+workstationName+".txt ");
+
+out.println("");
+out.println("");
+out.println("   sleep 10 ");
+out.println("");
+out.println("done");
+%]

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pca>
+
+[%
+for(element in Context.allInstances()) {
+%]<Context name="[%=element.getName()%]" />	
+
+[%
+}
+%]
+[%
+for(element in Adjectives.allInstances()) {
+%]<Adjectives name="[%=element.getName()%]" >
+	[%
+	for(elementIn in element.getAdjectives()){
+	%]
+	<Adjective name="[%=elementIn.getName()%]" />
+	[%
+	}
+	%]
+</Adjectives>	
+
+[%
+}
+%]
+[%
+for(element in Verbs.allInstances()) {
+%]<Verbs name="[%=element.getName()%]" >
+	[%
+	for(elementIn in element.getVerbs()){
+	%]
+	<Verb name="[%=elementIn.getName()%]" />
+	[%
+	}
+	%]
+</Verbs>	
+
+[%
+}
+%]
+[%
+for(element in Miscellaneous.allInstances() ){
+	if(element.isInColectionnMiscellaneous() == false){
+		element.printColectionMiscellaneous(0);
+		%]
+		
+		[%
+	}
+}
+%]
+[%
+for(element in Nouns.allInstances() ){
+	if(element.isInColectionnNoun() == false){
+		element.printColectionNoun(0);
+		%]
+		
+		[%
+	}
+}
+%]
+[%
+for(element in Pronouns.allInstances() ){
+	if(element.isInColectionnPronoun() == false){
+		element.printColectionPronoun(0);
+		%]
+		
+		[%
+	}
+}
+%]
+[%
+for(element in SocialExpressions.allInstances() ){
+	if(element.isInColectionSocialExpression() == false){
+		element.printColectionSocialExpression(0);
+		%]
+		
+		[%
+	}
+}
+%]
+[%
+for(element in ContextualizationLink.allInstances() ){
+%]<ContextualizationLink source="[%=element.getSource().getName() %]" target="[%=element.getTarget().getName() %]" />
+
+[%	
+}
+%]
+[%
+for(element in successionLink.allInstances() ){
+%]<successionLink source="[%=element.getSource().getName() %]" target="[%=element.getTarget().getName() %]" />
+
+[%	
+}
+%]
+</pca>
+[%
+
+operation Nouns printColectionNoun(space: Integer)  {
+	var c : Integer;
+	c = 0;
+	while(c <space){
+		out.print("\t");
+		c = c + 1;
+	}
+	out.println("<Nouns name=\""+self.getName()+ "\" >");
+	for(element in self.getNouns()){
+		if(element.isKindOf(Nouns)){
+			element.printColectionNoun(space + 1);
+		}else{
+			c = 0;
+			while(c <space+1){
+				out.print("\t");
+				c = c + 1;
+			}
+			out.println("<Noun name=\""+element.getName()+ "\" />");
+	 	}
+	}
+	c = 0;
+	while(c < space){
+		out.print("\t");
+		c = c + 1;
+	}
+	out.println("</Nouns>");
+}
+
+operation Nouns isInColectionnNoun() : Boolean {
+	if(Nouns.allInstances()->select(e|e.getNouns().contains(self))->size > 0){
+		
+		return true;
+	}else{
+		return false;
+	}
+}
+
+operation Miscellaneous printColectionMiscellaneous(space: Integer)  {
+	var c : Integer;
+	c = 0;
+	while(c <space){
+		out.print("\t");
+		c = c + 1;
+	}
+	out.println("<Miscellaneous name=\""+self.getName()+ "\" >");
+	for(element in self.getMiscellaneous()){
+		if(element.isKindOf(Miscellaneous)){
+			element.printColectionMiscellaneous(space + 1);
+		}else{
+			c = 0;
+			while(c <space+1){
+				out.print("\t");
+				c = c + 1;
+			}
+			out.println("<Miscellany name=\""+element.getName()+ "\" />");
+	 	}
+	}
+	c = 0;
+	while(c < space){
+		out.print("\t");
+		c = c + 1;
+	}
+	out.println("</Miscellaneous>");
+}
+
+operation Miscellaneous isInColectionnMiscellaneous() : Boolean {
+	if(Miscellaneous.allInstances()->select(e|e.getMiscellaneous().contains(self))->size > 0){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+operation Pronouns printColectionPronoun(space: Integer)  {
+	var c : Integer;
+	c = 0;
+	while(c <space){
+		out.print("\t");
+		c = c + 1;
+	}
+	out.println("<Pronouns name=\""+self.getName()+ "\" >");
+	for(element in self.getPronouns()){
+		if(element.isKindOf(Pronouns)){
+			element.printColectionPronoun(space + 1);
+		}else{
+			c = 0;
+			while(c <space+1){
+				out.print("\t");
+				c = c + 1;
+			}
+			out.println("<Pronoun name=\""+element.getName()+ "\" />");
+	 	}
+	}
+	c = 0;
+	while(c < space){
+		out.print("\t");
+		c = c + 1;
+	}
+	out.println("</Pronouns>");
+}
+
+operation Pronouns isInColectionnPronoun() : Boolean {
+	if(Pronouns.allInstances()->select(e|e.getPronouns().contains(self))->size > 0){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+operation SocialExpressions printColectionSocialExpression(space: Integer)  {
+	var c : Integer;
+	c = 0;
+	while(c <space){
+		out.print("\t");
+		c = c + 1;
+	}
+	out.println("<SocialExpressions name=\""+self.getName()+ "\" >");
+	for(element in self.getSocialExpressions()){
+		if(element.isKindOf(SocialExpressions)){
+			element.printColectionSocialExpression(space + 1);
+		}else{
+			c = 0;
+			while(c <space+1){
+				out.print("\t");
+				c = c + 1;
+			}
+			out.println("<SocialExpression name=\""+element.getName()+ "\" />");
+	 	}
+	}
+	c = 0;
+	while(c < space){
+		out.print("\t");
+		c = c + 1;
+	}
+	out.println("</SocialExpressions>");
+}
+
+operation SocialExpressions isInColectionSocialExpression() : Boolean {
+	if(SocialExpressions.allInstances()->select(e|e.getSocialExpressions().contains(self))->size > 0){
+		return true;
+	}else{
+		return false;
+	}
+}
+%]
