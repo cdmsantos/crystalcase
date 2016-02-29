@@ -127,6 +127,7 @@ class For extends Statements{
 
 @gmf.node(figure="rectangle")
 class Loop extends Statements{
+	attr String code = "Type the code of the Loop statement";
 }
 
 @gmf.node(figure="rectangle")

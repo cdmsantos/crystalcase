@@ -114,7 +114,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//For/lowestNumber"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//For/highestNumber"/>
     </genClasses>
-    <genClasses ecoreClass="crystalmm.ecore#//Loop"/>
+    <genClasses ecoreClass="crystalmm.ecore#//Loop">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Loop/code"/>
+    </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Open">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Open/code"/>
     </genClasses>

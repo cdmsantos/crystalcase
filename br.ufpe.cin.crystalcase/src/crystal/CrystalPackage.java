@@ -969,13 +969,22 @@ public interface CrystalPackage extends EPackage {
 	int LOOP__DESCRIPTION = STATEMENTS__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__CODE = STATEMENTS_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Loop</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 0;
+	int LOOP_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link crystal.impl.OpenImpl <em>Open</em>}' class.
@@ -1791,6 +1800,17 @@ public interface CrystalPackage extends EPackage {
 	EClass getLoop();
 
 	/**
+	 * Returns the meta object for the attribute '{@link crystal.Loop#getCode <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code</em>'.
+	 * @see crystal.Loop#getCode()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_Code();
+
+	/**
 	 * Returns the meta object for class '{@link crystal.Open <em>Open</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2447,6 +2467,14 @@ public interface CrystalPackage extends EPackage {
 		 * @generated
 		 */
 		EClass LOOP = eINSTANCE.getLoop();
+
+		/**
+		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__CODE = eINSTANCE.getLoop_Code();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.OpenImpl <em>Open</em>}' class.

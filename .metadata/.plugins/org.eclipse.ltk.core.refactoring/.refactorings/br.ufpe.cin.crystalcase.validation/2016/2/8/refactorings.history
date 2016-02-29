@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;crystalcase.evl&apos; to &apos;model&apos;&#x0A;- Original project: &apos;br.ufpe.cin.crystalcase.validation&apos;&#x0A;- Destination element: &apos;model&apos;&#x0A;- Original element: &apos;crystalcase.evl&apos;&#x0A;- Update references to refactored element" description="Move file" element1="validation/crystalcase.evl" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1456004596924" target="/br.ufpe.cin.crystalcase/model" units="0" version="1.0"/>
+</session>

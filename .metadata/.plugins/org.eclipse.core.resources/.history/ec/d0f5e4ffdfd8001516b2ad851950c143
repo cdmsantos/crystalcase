@@ -1,0 +1,82 @@
+context Subprograms {
+	constraint SubprogramsHasName {
+		check{
+			if(((self.eclass().name ="Function") and not(self.name.isDefined())) or
+			((self.eclass().name ="Procedure") and not(self.name.isDefined()))){
+				return false;
+			}
+			return true;
+		}
+		message : '(CR01) An element of '+self.eclass().name + ' type must have a name, because through the name it is possible make a future reference for this object.'
+		fix {	
+			title : 'Enter the name of ' + self.eClass().name + '.'
+			do {
+				var nome : String;
+				nome = UserInput.prompt('Enter the name:');
+				if (nome.isDefined()) self.name := nome;
+			}
+		}
+	}
+	
+	constraint NameIsValid {
+		guard : self.satisfies('SubprogramsHasName')
+		check : not(("#")->isSubstringOf(self.name)) and not(("-")->isSubstringOf(self.name)) and not(("$")->isSubstringOf(self.name))
+		message : '(CR02) An element of '+self.eclass().name + ' type must have a name started by a letter followed by other letters, numbers or underlines, because an element with special characters can result in a "well-formed" problem since it is can yield grammar conflicts.'
+	}
+	
+	constraint NoSubprogramWithSameName {
+		guard : self.satisfies('SubprogramsHasName')
+		check : not (Subprograms.allInstances.select(e|e.name = self.name)->size() <> 1)
+		message : '(CR03) The Subprograms must have different names, because through the name it is possible make a future reference for these objects.'
+		fix {
+			title : 'Change the name of the Entity.'
+			do {
+				var nome : String;
+				nome = UserInput.prompt('Enter the new name:');
+				if (nome.isDefined()) self.name := nome;
+			}
+		}
+	}
+	
+	constraint HasExecutablePart {
+    	check : not self.executablePart.isEmpty()
+    	message : '(CR04) You must have at least one executable statement because these are the statements that the '+self.eclass().name + ' executes when it is called.'
+    }
+	
+}
+
+context Function {
+	constraint HasReturn {
+		check : not self.returnPart.isEmpty()
+		message : '(CR05) You must have one statemenet at Return Part because it is required for the '+self.eclass().name + '.'
+	}
+
+}
+
+context Parameters {
+	constraint HasCode {
+		check{
+			if(((self.eclass().name ="Collections") and not self.code.isEmpty()) or
+				((self.eclass().name ="Records" and not self.code.isEmpty())) or
+				((self.eclass().name ="Cursor" and not self.code.isEmpty()))){
+				return false;
+			}
+			return true;
+		} 
+		message : '(CR06) The field code of the parameter '+ self.eclass().name +' it is required.'
+	}
+}
+
+context DataType {
+	constraint HasPrecisionAndScale {
+		check{
+			if(not((self.options = DataTypeOptions#NUMBER) or (self.options = DataTypeOptions#NUMERIC) or 
+				(self.options = DataTypeOptions#DEC) or (self.options = DataTypeOptions#DECIMAL)) 
+				and ((self.precision > 1) or (self.scale > 0))){
+				return false;
+			}
+			return true;
+		}
+		message : 'teste'
+	}
+}

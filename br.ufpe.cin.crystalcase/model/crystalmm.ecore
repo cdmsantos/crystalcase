@@ -191,6 +191,8 @@
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the code of the Loop statement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Open" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">

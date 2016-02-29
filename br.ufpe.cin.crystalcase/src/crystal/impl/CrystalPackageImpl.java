@@ -793,6 +793,15 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getLoop_Code() {
+		return (EAttribute)loopEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOpen() {
 		return openEClass;
 	}
@@ -1041,6 +1050,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		createEAttribute(forEClass, FOR__HIGHEST_NUMBER);
 
 		loopEClass = createEClass(LOOP);
+		createEAttribute(loopEClass, LOOP__CODE);
 
 		openEClass = createEClass(OPEN);
 		createEAttribute(openEClass, OPEN__CODE);
@@ -1192,6 +1202,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		initEAttribute(getFor_HighestNumber(), ecorePackage.getEInt(), "highestNumber", "0", 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(loopEClass, Loop.class, "Loop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLoop_Code(), ecorePackage.getEString(), "code", "Type the code of the Loop statement", 0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(openEClass, Open.class, "Open", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOpen_Code(), ecorePackage.getEString(), "code", "OPEN cursorName", 0, 1, Open.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
