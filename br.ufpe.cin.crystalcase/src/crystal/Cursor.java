@@ -11,6 +11,7 @@ package crystal;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link crystal.Cursor#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.Cursor#getCode <em>Code</em>}</li>
  * </ul>
  * </p>
@@ -20,6 +21,33 @@ package crystal;
  * @generated
  */
 public interface Cursor extends Parameters {
+	/**
+	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"Cursor"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
+	 * @see crystal.CrystalPackage#getCursor_ClassName()
+	 * @model default="Cursor"
+	 * @generated
+	 */
+	String getClassName();
+
+	/**
+	 * Sets the value of the '{@link crystal.Cursor#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
 	 * The default value is <code>"CURSOR cursorName IS selectStatement"</code>.

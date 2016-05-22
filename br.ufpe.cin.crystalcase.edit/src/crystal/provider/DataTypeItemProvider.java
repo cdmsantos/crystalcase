@@ -45,11 +45,34 @@ public class DataTypeItemProvider extends ParametersItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
 			addOptionsPropertyDescriptor(object);
 			addPrecisionPropertyDescriptor(object);
 			addScalePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DataType_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataType_className_feature", "_UI_DataType_type"),
+				 CrystalPackage.Literals.DATA_TYPE__CLASS_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -156,6 +179,7 @@ public class DataTypeItemProvider extends ParametersItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DataType.class)) {
+			case CrystalPackage.DATA_TYPE__CLASS_NAME:
 			case CrystalPackage.DATA_TYPE__OPTIONS:
 			case CrystalPackage.DATA_TYPE__PRECISION:
 			case CrystalPackage.DATA_TYPE__SCALE:

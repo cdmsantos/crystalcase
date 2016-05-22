@@ -388,13 +388,22 @@ public interface CrystalPackage extends EPackage {
 	int DATA_TYPE__TYPE = PARAMETERS__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Class Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__CLASS_NAME = PARAMETERS_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Options</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__OPTIONS = PARAMETERS_FEATURE_COUNT + 0;
+	int DATA_TYPE__OPTIONS = PARAMETERS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Precision</b></em>' attribute.
@@ -403,7 +412,7 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__PRECISION = PARAMETERS_FEATURE_COUNT + 1;
+	int DATA_TYPE__PRECISION = PARAMETERS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Scale</b></em>' attribute.
@@ -412,7 +421,7 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__SCALE = PARAMETERS_FEATURE_COUNT + 2;
+	int DATA_TYPE__SCALE = PARAMETERS_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Data Type</em>' class.
@@ -421,7 +430,7 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 3;
+	int DATA_TYPE_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link crystal.impl.CollectionsImpl <em>Collections</em>}' class.
@@ -452,13 +461,22 @@ public interface CrystalPackage extends EPackage {
 	int COLLECTIONS__TYPE = PARAMETERS__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Class Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTIONS__CLASS_NAME = PARAMETERS_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTIONS__CODE = PARAMETERS_FEATURE_COUNT + 0;
+	int COLLECTIONS__CODE = PARAMETERS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Collections</em>' class.
@@ -467,7 +485,7 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTIONS_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 1;
+	int COLLECTIONS_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link crystal.impl.RecordsImpl <em>Records</em>}' class.
@@ -498,13 +516,22 @@ public interface CrystalPackage extends EPackage {
 	int RECORDS__TYPE = PARAMETERS__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Class Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECORDS__CLASS_NAME = PARAMETERS_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECORDS__CODE = PARAMETERS_FEATURE_COUNT + 0;
+	int RECORDS__CODE = PARAMETERS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Records</em>' class.
@@ -513,7 +540,7 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECORDS_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 1;
+	int RECORDS_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link crystal.impl.CursorImpl <em>Cursor</em>}' class.
@@ -544,13 +571,22 @@ public interface CrystalPackage extends EPackage {
 	int CURSOR__TYPE = PARAMETERS__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Class Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSOR__CLASS_NAME = PARAMETERS_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CURSOR__CODE = PARAMETERS_FEATURE_COUNT + 0;
+	int CURSOR__CODE = PARAMETERS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Cursor</em>' class.
@@ -559,7 +595,7 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CURSOR_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 1;
+	int CURSOR_FEATURE_COUNT = PARAMETERS_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link crystal.impl.StatementsImpl <em>Statements</em>}' class.
@@ -1451,6 +1487,17 @@ public interface CrystalPackage extends EPackage {
 	EClass getDataType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link crystal.DataType#getClassName <em>Class Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Name</em>'.
+	 * @see crystal.DataType#getClassName()
+	 * @see #getDataType()
+	 * @generated
+	 */
+	EAttribute getDataType_ClassName();
+
+	/**
 	 * Returns the meta object for the attribute '{@link crystal.DataType#getOptions <em>Options</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1494,6 +1541,17 @@ public interface CrystalPackage extends EPackage {
 	EClass getCollections();
 
 	/**
+	 * Returns the meta object for the attribute '{@link crystal.Collections#getClassName <em>Class Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Name</em>'.
+	 * @see crystal.Collections#getClassName()
+	 * @see #getCollections()
+	 * @generated
+	 */
+	EAttribute getCollections_ClassName();
+
+	/**
 	 * Returns the meta object for the attribute '{@link crystal.Collections#getCode <em>Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1515,6 +1573,17 @@ public interface CrystalPackage extends EPackage {
 	EClass getRecords();
 
 	/**
+	 * Returns the meta object for the attribute '{@link crystal.Records#getClassName <em>Class Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Name</em>'.
+	 * @see crystal.Records#getClassName()
+	 * @see #getRecords()
+	 * @generated
+	 */
+	EAttribute getRecords_ClassName();
+
+	/**
 	 * Returns the meta object for the attribute '{@link crystal.Records#getCode <em>Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1534,6 +1603,17 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCursor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link crystal.Cursor#getClassName <em>Class Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Name</em>'.
+	 * @see crystal.Cursor#getClassName()
+	 * @see #getCursor()
+	 * @generated
+	 */
+	EAttribute getCursor_ClassName();
 
 	/**
 	 * Returns the meta object for the attribute '{@link crystal.Cursor#getCode <em>Code</em>}'.
@@ -2177,6 +2257,14 @@ public interface CrystalPackage extends EPackage {
 		EClass DATA_TYPE = eINSTANCE.getDataType();
 
 		/**
+		 * The meta object literal for the '<em><b>Class Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_TYPE__CLASS_NAME = eINSTANCE.getDataType_ClassName();
+
+		/**
 		 * The meta object literal for the '<em><b>Options</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2211,6 +2299,14 @@ public interface CrystalPackage extends EPackage {
 		EClass COLLECTIONS = eINSTANCE.getCollections();
 
 		/**
+		 * The meta object literal for the '<em><b>Class Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTIONS__CLASS_NAME = eINSTANCE.getCollections_ClassName();
+
+		/**
 		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2229,6 +2325,14 @@ public interface CrystalPackage extends EPackage {
 		EClass RECORDS = eINSTANCE.getRecords();
 
 		/**
+		 * The meta object literal for the '<em><b>Class Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECORDS__CLASS_NAME = eINSTANCE.getRecords_ClassName();
+
+		/**
 		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2245,6 +2349,14 @@ public interface CrystalPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CURSOR = eINSTANCE.getCursor();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CURSOR__CLASS_NAME = eINSTANCE.getCursor_ClassName();
 
 		/**
 		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.

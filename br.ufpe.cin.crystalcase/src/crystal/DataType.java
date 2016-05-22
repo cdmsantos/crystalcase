@@ -11,6 +11,7 @@ package crystal;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link crystal.DataType#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.DataType#getOptions <em>Options</em>}</li>
  *   <li>{@link crystal.DataType#getPrecision <em>Precision</em>}</li>
  *   <li>{@link crystal.DataType#getScale <em>Scale</em>}</li>
@@ -21,7 +22,34 @@ package crystal;
  * @model annotation="gmf.node label.text='Data Type'"
  * @generated
  */
-public interface DataType extends Parameters {
+public interface DataType extends Parameters { 
+	/**
+	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"DataType"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
+	 * @see crystal.CrystalPackage#getDataType_ClassName()
+	 * @model default="DataType"
+	 * @generated
+	 */
+	String getClassName();
+
+	/**
+	 * Sets the value of the '{@link crystal.DataType#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Options</b></em>' attribute.
 	 * The literals are from the enumeration {@link crystal.DataTypeOptions}.

@@ -45,9 +45,32 @@ public class CollectionsItemProvider extends ParametersItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Collections_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Collections_className_feature", "_UI_Collections_type"),
+				 CrystalPackage.Literals.COLLECTIONS__CLASS_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -110,6 +133,7 @@ public class CollectionsItemProvider extends ParametersItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Collections.class)) {
+			case CrystalPackage.COLLECTIONS__CLASS_NAME:
 			case CrystalPackage.COLLECTIONS__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

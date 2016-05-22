@@ -1121,15 +1121,7 @@
       </menuContribution>
    </extension>
 
-   <extension point="org.eclipse.ui.commands" id="menu-commands">
-      <?gmfgen generated="true"?>
-      <category id="crystal.diagram.part.CrystalDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
-      <command id="br.ufpe.cin.crystalcase.diagram.LoadResourceAction"
-         name="Load Resource"
-         categoryId="crystal.diagram.part.CrystalDiagramEditorID"
-         defaultHandler="crystal.diagram.part.LoadResourceAction"/>
-   </extension>
-
+   
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">
       <?gmfgen generated="true"?>
    </extension>

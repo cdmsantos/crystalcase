@@ -83,6 +83,8 @@
     <eAnnotations source="gmf.node">
       <details key="label.text" value="Data Type"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="DataType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="options" eType="#//DataTypeOptions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="precision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="1"/>
@@ -93,6 +95,8 @@
     <eAnnotations source="gmf.node">
       <details key="label.text" value="Collection"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Collection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)"/>
   </eClassifiers>
@@ -100,6 +104,8 @@
     <eAnnotations source="gmf.node">
       <details key="label.text" value="Record"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Record"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="TYPE recordType IS RECORD &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(id number(5), &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;name varchar2(25), &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;lastName tableA.last_name%type)"/>
   </eClassifiers>
@@ -107,6 +113,8 @@
     <eAnnotations source="gmf.node">
       <details key="label.text" value="Cursor"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Cursor"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="CURSOR cursorName IS selectStatement"/>
   </eClassifiers>

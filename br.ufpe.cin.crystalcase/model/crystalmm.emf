@@ -17,6 +17,10 @@ abstract class Subprograms{
 	val Parameters[*] declarativePart;
 	@gmf.compartment
 	val Statements[*] executablePart;
+	
+	
+	
+	
 }
 
 @gmf.node(label="name", label.text="Procedure", border.color="255,13,13") //vermelho
@@ -46,6 +50,7 @@ abstract class Parameters{
 
 @gmf.node(label.text="Data Type")
 class DataType extends Parameters{
+	attr String className ="DataType";
 	attr DataTypeOptions options;
 	attr int precision = 1;
 	attr int scale = 0;
@@ -53,11 +58,13 @@ class DataType extends Parameters{
 
 @gmf.node(label.text="Collection")
 class Collections extends Parameters{
+	attr String className ="Collection";
 	attr String code = "TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)";
 }
 
 @gmf.node(label.text="Record")
 class Records extends Parameters{
+	attr String className ="Record";
 	attr String code = "TYPE recordType IS RECORD 
 							(id number(5), 
 							name varchar2(25), 
@@ -66,6 +73,7 @@ class Records extends Parameters{
 
 @gmf.node(label.text="Cursor")
 class Cursor extends Parameters {
+	attr String className ="Cursor";
 	attr String code = "CURSOR cursorName IS selectStatement";
 }
 

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link crystal.impl.RecordsImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.RecordsImpl#getCode <em>Code</em>}</li>
  * </ul>
  * </p>
@@ -25,6 +26,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class RecordsImpl extends ParametersImpl implements Records {
+	/**
+	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_NAME_EDEFAULT = "Record";
+
+	/**
+	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String className = CLASS_NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -69,6 +90,27 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getClassName() {
+		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.RECORDS__CLASS_NAME, oldClassName, className));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getCode() {
 		return code;
 	}
@@ -93,6 +135,8 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CrystalPackage.RECORDS__CLASS_NAME:
+				return getClassName();
 			case CrystalPackage.RECORDS__CODE:
 				return getCode();
 		}
@@ -107,6 +151,9 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.RECORDS__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
 			case CrystalPackage.RECORDS__CODE:
 				setCode((String)newValue);
 				return;
@@ -122,6 +169,9 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.RECORDS__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
 			case CrystalPackage.RECORDS__CODE:
 				setCode(CODE_EDEFAULT);
 				return;
@@ -137,6 +187,8 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.RECORDS__CLASS_NAME:
+				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.RECORDS__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		}
@@ -153,7 +205,9 @@ public class RecordsImpl extends ParametersImpl implements Records {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (code: ");
+		result.append(" (className: ");
+		result.append(className);
+		result.append(", code: ");
 		result.append(code);
 		result.append(')');
 		return result.toString();

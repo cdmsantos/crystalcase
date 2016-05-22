@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link crystal.impl.DataTypeImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.DataTypeImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link crystal.impl.DataTypeImpl#getPrecision <em>Precision</em>}</li>
  *   <li>{@link crystal.impl.DataTypeImpl#getScale <em>Scale</em>}</li>
@@ -28,6 +29,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class DataTypeImpl extends ParametersImpl implements DataType {
+	/**
+	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_NAME_EDEFAULT = "DataType";
+
+	/**
+	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String className = CLASS_NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getOptions() <em>Options</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -112,6 +133,27 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getClassName() {
+		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.DATA_TYPE__CLASS_NAME, oldClassName, className));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DataTypeOptions getOptions() {
 		return options;
 	}
@@ -178,6 +220,8 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CrystalPackage.DATA_TYPE__CLASS_NAME:
+				return getClassName();
 			case CrystalPackage.DATA_TYPE__OPTIONS:
 				return getOptions();
 			case CrystalPackage.DATA_TYPE__PRECISION:
@@ -196,6 +240,9 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.DATA_TYPE__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
 			case CrystalPackage.DATA_TYPE__OPTIONS:
 				setOptions((DataTypeOptions)newValue);
 				return;
@@ -217,6 +264,9 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.DATA_TYPE__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
 			case CrystalPackage.DATA_TYPE__OPTIONS:
 				setOptions(OPTIONS_EDEFAULT);
 				return;
@@ -238,6 +288,8 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.DATA_TYPE__CLASS_NAME:
+				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.DATA_TYPE__OPTIONS:
 				return options != OPTIONS_EDEFAULT;
 			case CrystalPackage.DATA_TYPE__PRECISION:
@@ -258,7 +310,9 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (options: ");
+		result.append(" (className: ");
+		result.append(className);
+		result.append(", options: ");
 		result.append(options);
 		result.append(", precision: ");
 		result.append(precision);

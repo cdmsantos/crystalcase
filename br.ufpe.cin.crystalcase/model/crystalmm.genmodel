@@ -68,17 +68,21 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Parameters/type"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//DataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//DataType/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//DataType/options"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//DataType/precision"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//DataType/scale"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Collections">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Collections/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Collections/code"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Records">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Records/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Records/code"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Cursor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Cursor/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Cursor/code"/>
     </genClasses>
     <genClasses image="false" ecoreClass="crystalmm.ecore#//Statements">

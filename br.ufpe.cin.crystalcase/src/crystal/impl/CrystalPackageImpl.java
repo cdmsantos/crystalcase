@@ -496,7 +496,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDataType_Options() {
+	public EAttribute getDataType_ClassName() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -505,7 +505,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDataType_Precision() {
+	public EAttribute getDataType_Options() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -514,8 +514,17 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDataType_Scale() {
+	public EAttribute getDataType_Precision() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDataType_Scale() {
+		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -532,8 +541,17 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCollections_Code() {
+	public EAttribute getCollections_ClassName() {
 		return (EAttribute)collectionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCollections_Code() {
+		return (EAttribute)collectionsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -550,8 +568,17 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRecords_Code() {
+	public EAttribute getRecords_ClassName() {
 		return (EAttribute)recordsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRecords_Code() {
+		return (EAttribute)recordsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -568,8 +595,17 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCursor_Code() {
+	public EAttribute getCursor_ClassName() {
 		return (EAttribute)cursorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCursor_Code() {
+		return (EAttribute)cursorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1003,17 +1039,21 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		createEAttribute(parametersEClass, PARAMETERS__TYPE);
 
 		dataTypeEClass = createEClass(DATA_TYPE);
+		createEAttribute(dataTypeEClass, DATA_TYPE__CLASS_NAME);
 		createEAttribute(dataTypeEClass, DATA_TYPE__OPTIONS);
 		createEAttribute(dataTypeEClass, DATA_TYPE__PRECISION);
 		createEAttribute(dataTypeEClass, DATA_TYPE__SCALE);
 
 		collectionsEClass = createEClass(COLLECTIONS);
+		createEAttribute(collectionsEClass, COLLECTIONS__CLASS_NAME);
 		createEAttribute(collectionsEClass, COLLECTIONS__CODE);
 
 		recordsEClass = createEClass(RECORDS);
+		createEAttribute(recordsEClass, RECORDS__CLASS_NAME);
 		createEAttribute(recordsEClass, RECORDS__CODE);
 
 		cursorEClass = createEClass(CURSOR);
+		createEAttribute(cursorEClass, CURSOR__CLASS_NAME);
 		createEAttribute(cursorEClass, CURSOR__CODE);
 
 		statementsEClass = createEClass(STATEMENTS);
@@ -1155,17 +1195,21 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		initEAttribute(getParameters_Type(), this.getParameterType(), "type", null, 0, 1, Parameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDataType_ClassName(), ecorePackage.getEString(), "className", "DataType", 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataType_Options(), this.getDataTypeOptions(), "options", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataType_Precision(), ecorePackage.getEInt(), "precision", "1", 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataType_Scale(), ecorePackage.getEInt(), "scale", "0", 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(collectionsEClass, Collections.class, "Collections", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCollections_ClassName(), ecorePackage.getEString(), "className", "Collection", 0, 1, Collections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollections_Code(), ecorePackage.getEString(), "code", "TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)", 0, 1, Collections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(recordsEClass, Records.class, "Records", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRecords_ClassName(), ecorePackage.getEString(), "className", "Record", 0, 1, Records.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRecords_Code(), ecorePackage.getEString(), "code", "TYPE recordType IS RECORD \r\n\t\t\t\t\t\t\t(id number(5), \r\n\t\t\t\t\t\t\tname varchar2(25), \r\n\t\t\t\t\t\t\tlastName tableA.last_name%type)", 0, 1, Records.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cursorEClass, Cursor.class, "Cursor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCursor_ClassName(), ecorePackage.getEString(), "className", "Cursor", 0, 1, Cursor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCursor_Code(), ecorePackage.getEString(), "code", "CURSOR cursorName IS selectStatement", 0, 1, Cursor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statementsEClass, Statements.class, "Statements", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

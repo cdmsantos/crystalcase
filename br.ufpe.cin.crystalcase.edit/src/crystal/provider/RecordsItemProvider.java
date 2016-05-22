@@ -45,9 +45,32 @@ public class RecordsItemProvider extends ParametersItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Records_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Records_className_feature", "_UI_Records_type"),
+				 CrystalPackage.Literals.RECORDS__CLASS_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -110,6 +133,7 @@ public class RecordsItemProvider extends ParametersItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Records.class)) {
+			case CrystalPackage.RECORDS__CLASS_NAME:
 			case CrystalPackage.RECORDS__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
