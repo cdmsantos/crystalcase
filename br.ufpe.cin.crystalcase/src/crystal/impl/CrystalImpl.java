@@ -29,13 +29,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.CrystalImpl#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link crystal.impl.CrystalImpl#getProcedures <em>Procedures</em>}</li>
  *   <li>{@link crystal.impl.CrystalImpl#getFunctions <em>Functions</em>}</li>
  *   <li>{@link crystal.impl.CrystalImpl#getBlocks <em>Blocks</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

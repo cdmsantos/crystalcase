@@ -10,11 +10,11 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Cursor#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.Cursor#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getCursor()
  * @model annotation="gmf.node label.text='Cursor'"

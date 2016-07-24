@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Procedure#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getProcedure()
  * @model annotation="gmf.node label='name' label.text='Procedure' border.color='255,13,13'"

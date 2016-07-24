@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Statements#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getStatements()
  * @model abstract="true"

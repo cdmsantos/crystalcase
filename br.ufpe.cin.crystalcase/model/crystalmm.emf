@@ -2,7 +2,7 @@
 package crystal;
 
 @gmf.diagram(foo="bar", rcp="false", onefile="true", diagram.extension="crystal")
-class Crystal {
+class CML {
 	val Transition[*] transitions;
 	val Procedure[*] procedures;
 	val Function[*] functions;
@@ -17,10 +17,6 @@ abstract class Subprograms{
 	val Parameters[*] declarativePart;
 	@gmf.compartment
 	val Statements[*] executablePart;
-	
-	
-	
-	
 }
 
 @gmf.node(label="name", label.text="Procedure", border.color="255,13,13") //vermelho

@@ -10,13 +10,13 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.For#getCounter <em>Counter</em>}</li>
  *   <li>{@link crystal.For#getTypeCounter <em>Type Counter</em>}</li>
  *   <li>{@link crystal.For#getLowestNumber <em>Lowest Number</em>}</li>
  *   <li>{@link crystal.For#getHighestNumber <em>Highest Number</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getFor()
  * @model annotation="gmf.node figure='rectangle'"

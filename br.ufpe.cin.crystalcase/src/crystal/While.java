@@ -10,10 +10,10 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.While#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getWhile()
  * @model annotation="gmf.node figure='rectangle'"

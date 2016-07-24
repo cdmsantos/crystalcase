@@ -10,10 +10,10 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Case#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getCase()
  * @model annotation="gmf.node figure='rectangle'"

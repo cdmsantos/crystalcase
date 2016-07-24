@@ -24,11 +24,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.FunctionImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link crystal.impl.FunctionImpl#getReturnPart <em>Return Part</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

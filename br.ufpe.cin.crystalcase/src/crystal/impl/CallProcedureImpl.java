@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.CallProcedureImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

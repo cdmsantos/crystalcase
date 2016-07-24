@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.CollectionsImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.CollectionsImpl#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

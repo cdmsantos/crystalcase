@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Transition#getName <em>Name</em>}</li>
  *   <li>{@link crystal.Transition#getSource <em>Source</em>}</li>
  *   <li>{@link crystal.Transition#getTarget <em>Target</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getTransition()
  * @model annotation="gmf.link source='source' target='target' incoming='true' target.decoration='arrow' color='0,0,0' width='1'"

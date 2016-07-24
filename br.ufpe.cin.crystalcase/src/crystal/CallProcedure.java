@@ -10,10 +10,10 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.CallProcedure#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getCallProcedure()
  * @model annotation="gmf.node figure='rectangle'"

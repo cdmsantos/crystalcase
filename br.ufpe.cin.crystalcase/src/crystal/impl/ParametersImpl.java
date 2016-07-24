@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.ParametersImpl#getName <em>Name</em>}</li>
  *   <li>{@link crystal.impl.ParametersImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -10,10 +10,10 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Exception#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getException()
  * @model annotation="gmf.node figure='rectangle'"

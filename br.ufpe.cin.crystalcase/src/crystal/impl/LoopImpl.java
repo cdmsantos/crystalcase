@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.LoopImpl#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

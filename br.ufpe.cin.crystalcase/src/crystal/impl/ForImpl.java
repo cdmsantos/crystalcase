@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.ForImpl#getCounter <em>Counter</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getTypeCounter <em>Type Counter</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getLowestNumber <em>Lowest Number</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getHighestNumber <em>Highest Number</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

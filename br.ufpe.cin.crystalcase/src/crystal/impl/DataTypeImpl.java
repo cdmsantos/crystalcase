@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.DataTypeImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.DataTypeImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link crystal.impl.DataTypeImpl#getPrecision <em>Precision</em>}</li>
  *   <li>{@link crystal.impl.DataTypeImpl#getScale <em>Scale</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

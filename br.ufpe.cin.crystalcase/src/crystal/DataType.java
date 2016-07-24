@@ -10,13 +10,13 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.DataType#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.DataType#getOptions <em>Options</em>}</li>
  *   <li>{@link crystal.DataType#getPrecision <em>Precision</em>}</li>
  *   <li>{@link crystal.DataType#getScale <em>Scale</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getDataType()
  * @model annotation="gmf.node label.text='Data Type'"

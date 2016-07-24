@@ -29,12 +29,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.SubprogramsImpl#getName <em>Name</em>}</li>
  *   <li>{@link crystal.impl.SubprogramsImpl#getDeclarativePart <em>Declarative Part</em>}</li>
  *   <li>{@link crystal.impl.SubprogramsImpl#getExecutablePart <em>Executable Part</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

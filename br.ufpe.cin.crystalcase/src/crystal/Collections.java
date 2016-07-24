@@ -10,11 +10,11 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Collections#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.Collections#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getCollections()
  * @model annotation="gmf.node label.text='Collection'"

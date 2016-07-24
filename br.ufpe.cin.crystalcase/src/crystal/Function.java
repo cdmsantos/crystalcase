@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Function#getParameters <em>Parameters</em>}</li>
  *   <li>{@link crystal.Function#getReturnPart <em>Return Part</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getFunction()
  * @model annotation="gmf.node label='name' label.text='Function' border.color='25,191,108'"
