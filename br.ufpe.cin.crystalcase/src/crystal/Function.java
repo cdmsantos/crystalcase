@@ -67,7 +67,7 @@ public interface Function extends Subprograms {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Return Part</em>' containment reference list.
 	 * @see crystal.CrystalPackage#getFunction_ReturnPart()
-	 * @model containment="true"
+	 * @model containment="true" transient="true"
 	 * @generated
 	 */
 	EList<Parameters> getReturnPart();
