@@ -45,12 +45,36 @@ public class ForItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
 			addCounterPropertyDescriptor(object);
 			addTypeCounterPropertyDescriptor(object);
 			addLowestNumberPropertyDescriptor(object);
 			addHighestNumberPropertyDescriptor(object);
+			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_For_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_For_className_feature", "_UI_For_type"),
+				 CrystalPackage.Literals.FOR__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -142,6 +166,28 @@ public class ForItemProvider extends StatementsItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Code feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCodePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_For_code_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_For_code_feature", "_UI_For_type"),
+				 CrystalPackage.Literals.FOR__CODE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns For.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -160,7 +206,7 @@ public class ForItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((For)object).getDescription();
+		String label = ((For)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_For_type") :
 			getString("_UI_For_type") + " " + label;
@@ -179,10 +225,12 @@ public class ForItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(For.class)) {
+			case CrystalPackage.FOR__CLASS_NAME:
 			case CrystalPackage.FOR__COUNTER:
 			case CrystalPackage.FOR__TYPE_COUNTER:
 			case CrystalPackage.FOR__LOWEST_NUMBER:
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
+			case CrystalPackage.FOR__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -17,6 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.AnonymousBlock;
 import crystal.Crystal;
+import crystal.CrystalCase;
 import crystal.CrystalFactory;
 
 /**
@@ -36,8 +37,7 @@ public class AnonymousBlockCreateCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected EObject getElementToEdit() {
-		EObject container = ((CreateElementRequest) getRequest())
-				.getContainer();
+		EObject container = ((CreateElementRequest) getRequest()).getContainer();
 		if (container instanceof View) {
 			container = ((View) container).getElement();
 		}
@@ -55,10 +55,8 @@ public class AnonymousBlockCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
-			IAdaptable info) throws ExecutionException {
-		AnonymousBlock newElement = CrystalFactory.eINSTANCE
-				.createAnonymousBlock();
+	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
+		AnonymousBlock newElement = CrystalFactory.eINSTANCE.createAnonymousBlock();
 
 		Crystal owner = (Crystal) getElementToEdit();
 		owner.getBlocks().add(newElement);
@@ -72,18 +70,13 @@ public class AnonymousBlockCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(AnonymousBlock newElement,
-			IProgressMonitor monitor, IAdaptable info)
+	protected void doConfigure(AnonymousBlock newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
-		IElementType elementType = ((CreateElementRequest) getRequest())
-				.getElementType();
-		ConfigureRequest configureRequest = new ConfigureRequest(
-				getEditingDomain(), newElement, elementType);
-		configureRequest.setClientContext(((CreateElementRequest) getRequest())
-				.getClientContext());
+		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();
+		ConfigureRequest configureRequest = new ConfigureRequest(getEditingDomain(), newElement, elementType);
+		configureRequest.setClientContext(((CreateElementRequest) getRequest()).getClientContext());
 		configureRequest.addParameters(getRequest().getParameters());
-		ICommand configureCommand = elementType
-				.getEditCommand(configureRequest);
+		ICommand configureCommand = elementType.getEditCommand(configureRequest);
 		if (configureCommand != null && configureCommand.canExecute()) {
 			configureCommand.execute(monitor, info);
 		}

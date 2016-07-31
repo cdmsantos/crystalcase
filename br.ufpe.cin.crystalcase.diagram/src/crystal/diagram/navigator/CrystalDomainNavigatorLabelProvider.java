@@ -15,15 +15,13 @@ import crystal.diagram.part.CrystalDiagramEditorPlugin;
 /**
  * @generated
  */
-public class CrystalDomainNavigatorLabelProvider implements
-		ICommonLabelProvider {
+public class CrystalDomainNavigatorLabelProvider implements ICommonLabelProvider {
 
 	/**
 	 * @generated
 	 */
 	private AdapterFactoryLabelProvider myAdapterFactoryLabelProvider = new AdapterFactoryLabelProvider(
-			CrystalDiagramEditorPlugin.getInstance()
-					.getItemProvidersAdapterFactory());
+			CrystalDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
 
 	/**
 	 * @generated
@@ -36,9 +34,7 @@ public class CrystalDomainNavigatorLabelProvider implements
 	 */
 	public Image getImage(Object element) {
 		if (element instanceof CrystalDomainNavigatorItem) {
-			return myAdapterFactoryLabelProvider
-					.getImage(((CrystalDomainNavigatorItem) element)
-							.getEObject());
+			return myAdapterFactoryLabelProvider.getImage(((CrystalDomainNavigatorItem) element).getEObject());
 		}
 		return null;
 	}
@@ -48,9 +44,7 @@ public class CrystalDomainNavigatorLabelProvider implements
 	 */
 	public String getText(Object element) {
 		if (element instanceof CrystalDomainNavigatorItem) {
-			return myAdapterFactoryLabelProvider
-					.getText(((CrystalDomainNavigatorItem) element)
-							.getEObject());
+			return myAdapterFactoryLabelProvider.getText(((CrystalDomainNavigatorItem) element).getEObject());
 		}
 		return null;
 	}

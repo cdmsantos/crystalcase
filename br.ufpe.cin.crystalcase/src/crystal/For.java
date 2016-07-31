@@ -10,19 +10,37 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
+ *   <li>{@link crystal.For#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.For#getCounter <em>Counter</em>}</li>
  *   <li>{@link crystal.For#getTypeCounter <em>Type Counter</em>}</li>
  *   <li>{@link crystal.For#getLowestNumber <em>Lowest Number</em>}</li>
  *   <li>{@link crystal.For#getHighestNumber <em>Highest Number</em>}</li>
+ *   <li>{@link crystal.For#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getFor()
  * @model annotation="gmf.node figure='rectangle'"
  * @generated
  */
 public interface For extends Statements {
+	/**
+	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"For"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see crystal.CrystalPackage#getFor_ClassName()
+	 * @model default="For" changeable="false"
+	 * @generated
+	 */
+	String getClassName();
+
 	/**
 	 * Returns the value of the '<em><b>Counter</b></em>' attribute.
 	 * The default value is <code>"Type the name of the FOR counter"</code>.
@@ -132,5 +150,32 @@ public interface For extends Statements {
 	 * @generated
 	 */
 	void setHighestNumber(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Code</b></em>' attribute.
+	 * The default value is <code>"Type the FOR code"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Code</em>' attribute.
+	 * @see #setCode(String)
+	 * @see crystal.CrystalPackage#getFor_Code()
+	 * @model default="Type the FOR code"
+	 * @generated
+	 */
+	String getCode();
+
+	/**
+	 * Sets the value of the '{@link crystal.For#getCode <em>Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Code</em>' attribute.
+	 * @see #getCode()
+	 * @generated
+	 */
+	void setCode(String value);
 
 } // For

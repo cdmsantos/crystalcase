@@ -70,6 +70,30 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CursorNameEditPart.VISUAL_ID:
 				return new CursorNameEditPart(view);
 
+			case DataType2EditPart.VISUAL_ID:
+				return new DataType2EditPart(view);
+
+			case DataTypeName2EditPart.VISUAL_ID:
+				return new DataTypeName2EditPart(view);
+
+			case Collections2EditPart.VISUAL_ID:
+				return new Collections2EditPart(view);
+
+			case CollectionsName2EditPart.VISUAL_ID:
+				return new CollectionsName2EditPart(view);
+
+			case Records2EditPart.VISUAL_ID:
+				return new Records2EditPart(view);
+
+			case RecordsName2EditPart.VISUAL_ID:
+				return new RecordsName2EditPart(view);
+
+			case Cursor2EditPart.VISUAL_ID:
+				return new Cursor2EditPart(view);
+
+			case CursorName2EditPart.VISUAL_ID:
+				return new CursorName2EditPart(view);
+
 			case ExceptionEditPart.VISUAL_ID:
 				return new ExceptionEditPart(view);
 
@@ -160,30 +184,6 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescriptionEditPart.VISUAL_ID:
 				return new CallFunctionDescriptionEditPart(view);
 
-			case DataType2EditPart.VISUAL_ID:
-				return new DataType2EditPart(view);
-
-			case DataTypeName2EditPart.VISUAL_ID:
-				return new DataTypeName2EditPart(view);
-
-			case Collections2EditPart.VISUAL_ID:
-				return new Collections2EditPart(view);
-
-			case CollectionsName2EditPart.VISUAL_ID:
-				return new CollectionsName2EditPart(view);
-
-			case Records2EditPart.VISUAL_ID:
-				return new Records2EditPart(view);
-
-			case RecordsName2EditPart.VISUAL_ID:
-				return new RecordsName2EditPart(view);
-
-			case Cursor2EditPart.VISUAL_ID:
-				return new Cursor2EditPart(view);
-
-			case CursorName2EditPart.VISUAL_ID:
-				return new CursorName2EditPart(view);
-
 			case DataType3EditPart.VISUAL_ID:
 				return new DataType3EditPart(view);
 
@@ -232,24 +232,242 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CursorName4EditPart.VISUAL_ID:
 				return new CursorName4EditPart(view);
 
-			case ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID:
-				return new ProcedureProcedureDeclarativePartCompartmentEditPart(
-						view);
+			case DataType5EditPart.VISUAL_ID:
+				return new DataType5EditPart(view);
 
-			case ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID:
-				return new ProcedureProcedureExecutablePartCompartmentEditPart(
-						view);
+			case DataTypeName5EditPart.VISUAL_ID:
+				return new DataTypeName5EditPart(view);
+
+			case Collections5EditPart.VISUAL_ID:
+				return new Collections5EditPart(view);
+
+			case CollectionsName5EditPart.VISUAL_ID:
+				return new CollectionsName5EditPart(view);
+
+			case Records5EditPart.VISUAL_ID:
+				return new Records5EditPart(view);
+
+			case RecordsName5EditPart.VISUAL_ID:
+				return new RecordsName5EditPart(view);
+
+			case Cursor5EditPart.VISUAL_ID:
+				return new Cursor5EditPart(view);
+
+			case CursorName5EditPart.VISUAL_ID:
+				return new CursorName5EditPart(view);
+
+			case Exception2EditPart.VISUAL_ID:
+				return new Exception2EditPart(view);
+
+			case ExceptionDescription2EditPart.VISUAL_ID:
+				return new ExceptionDescription2EditPart(view);
+
+			case If2EditPart.VISUAL_ID:
+				return new If2EditPart(view);
+
+			case IfDescription2EditPart.VISUAL_ID:
+				return new IfDescription2EditPart(view);
+
+			case Case2EditPart.VISUAL_ID:
+				return new Case2EditPart(view);
+
+			case CaseDescription2EditPart.VISUAL_ID:
+				return new CaseDescription2EditPart(view);
+
+			case Insert2EditPart.VISUAL_ID:
+				return new Insert2EditPart(view);
+
+			case InsertDescription2EditPart.VISUAL_ID:
+				return new InsertDescription2EditPart(view);
+
+			case Update2EditPart.VISUAL_ID:
+				return new Update2EditPart(view);
+
+			case UpdateDescription2EditPart.VISUAL_ID:
+				return new UpdateDescription2EditPart(view);
+
+			case Delete2EditPart.VISUAL_ID:
+				return new Delete2EditPart(view);
+
+			case DeleteDescription2EditPart.VISUAL_ID:
+				return new DeleteDescription2EditPart(view);
+
+			case Select2EditPart.VISUAL_ID:
+				return new Select2EditPart(view);
+
+			case SelectDescription2EditPart.VISUAL_ID:
+				return new SelectDescription2EditPart(view);
+
+			case While2EditPart.VISUAL_ID:
+				return new While2EditPart(view);
+
+			case WhileDescription2EditPart.VISUAL_ID:
+				return new WhileDescription2EditPart(view);
+
+			case For2EditPart.VISUAL_ID:
+				return new For2EditPart(view);
+
+			case ForDescription2EditPart.VISUAL_ID:
+				return new ForDescription2EditPart(view);
+
+			case Loop2EditPart.VISUAL_ID:
+				return new Loop2EditPart(view);
+
+			case LoopDescription2EditPart.VISUAL_ID:
+				return new LoopDescription2EditPart(view);
+
+			case Open2EditPart.VISUAL_ID:
+				return new Open2EditPart(view);
+
+			case OpenDescription2EditPart.VISUAL_ID:
+				return new OpenDescription2EditPart(view);
+
+			case Fetch2EditPart.VISUAL_ID:
+				return new Fetch2EditPart(view);
+
+			case FetchDescription2EditPart.VISUAL_ID:
+				return new FetchDescription2EditPart(view);
+
+			case Close2EditPart.VISUAL_ID:
+				return new Close2EditPart(view);
+
+			case CloseDescription2EditPart.VISUAL_ID:
+				return new CloseDescription2EditPart(view);
+
+			case CallProcedure2EditPart.VISUAL_ID:
+				return new CallProcedure2EditPart(view);
+
+			case CallProcedureDescription2EditPart.VISUAL_ID:
+				return new CallProcedureDescription2EditPart(view);
+
+			case CallFunction2EditPart.VISUAL_ID:
+				return new CallFunction2EditPart(view);
+
+			case CallFunctionDescription2EditPart.VISUAL_ID:
+				return new CallFunctionDescription2EditPart(view);
+
+			case DataType6EditPart.VISUAL_ID:
+				return new DataType6EditPart(view);
+
+			case DataTypeName6EditPart.VISUAL_ID:
+				return new DataTypeName6EditPart(view);
+
+			case Collections6EditPart.VISUAL_ID:
+				return new Collections6EditPart(view);
+
+			case CollectionsName6EditPart.VISUAL_ID:
+				return new CollectionsName6EditPart(view);
+
+			case Records6EditPart.VISUAL_ID:
+				return new Records6EditPart(view);
+
+			case RecordsName6EditPart.VISUAL_ID:
+				return new RecordsName6EditPart(view);
+
+			case Cursor6EditPart.VISUAL_ID:
+				return new Cursor6EditPart(view);
+
+			case CursorName6EditPart.VISUAL_ID:
+				return new CursorName6EditPart(view);
+
+			case Exception3EditPart.VISUAL_ID:
+				return new Exception3EditPart(view);
+
+			case ExceptionDescription3EditPart.VISUAL_ID:
+				return new ExceptionDescription3EditPart(view);
+
+			case If3EditPart.VISUAL_ID:
+				return new If3EditPart(view);
+
+			case IfDescription3EditPart.VISUAL_ID:
+				return new IfDescription3EditPart(view);
+
+			case Case3EditPart.VISUAL_ID:
+				return new Case3EditPart(view);
+
+			case CaseDescription3EditPart.VISUAL_ID:
+				return new CaseDescription3EditPart(view);
+
+			case Insert3EditPart.VISUAL_ID:
+				return new Insert3EditPart(view);
+
+			case InsertDescription3EditPart.VISUAL_ID:
+				return new InsertDescription3EditPart(view);
+
+			case Update3EditPart.VISUAL_ID:
+				return new Update3EditPart(view);
+
+			case UpdateDescription3EditPart.VISUAL_ID:
+				return new UpdateDescription3EditPart(view);
+
+			case Delete3EditPart.VISUAL_ID:
+				return new Delete3EditPart(view);
+
+			case DeleteDescription3EditPart.VISUAL_ID:
+				return new DeleteDescription3EditPart(view);
+
+			case Select3EditPart.VISUAL_ID:
+				return new Select3EditPart(view);
+
+			case SelectDescription3EditPart.VISUAL_ID:
+				return new SelectDescription3EditPart(view);
+
+			case While3EditPart.VISUAL_ID:
+				return new While3EditPart(view);
+
+			case WhileDescription3EditPart.VISUAL_ID:
+				return new WhileDescription3EditPart(view);
+
+			case For3EditPart.VISUAL_ID:
+				return new For3EditPart(view);
+
+			case ForDescription3EditPart.VISUAL_ID:
+				return new ForDescription3EditPart(view);
+
+			case Loop3EditPart.VISUAL_ID:
+				return new Loop3EditPart(view);
+
+			case LoopDescription3EditPart.VISUAL_ID:
+				return new LoopDescription3EditPart(view);
+
+			case Open3EditPart.VISUAL_ID:
+				return new Open3EditPart(view);
+
+			case OpenDescription3EditPart.VISUAL_ID:
+				return new OpenDescription3EditPart(view);
+
+			case Fetch3EditPart.VISUAL_ID:
+				return new Fetch3EditPart(view);
+
+			case FetchDescription3EditPart.VISUAL_ID:
+				return new FetchDescription3EditPart(view);
+
+			case Close3EditPart.VISUAL_ID:
+				return new Close3EditPart(view);
+
+			case CloseDescription3EditPart.VISUAL_ID:
+				return new CloseDescription3EditPart(view);
+
+			case CallProcedure3EditPart.VISUAL_ID:
+				return new CallProcedure3EditPart(view);
+
+			case CallProcedureDescription3EditPart.VISUAL_ID:
+				return new CallProcedureDescription3EditPart(view);
+
+			case CallFunction3EditPart.VISUAL_ID:
+				return new CallFunction3EditPart(view);
+
+			case CallFunctionDescription3EditPart.VISUAL_ID:
+				return new CallFunctionDescription3EditPart(view);
 
 			case ProcedureProcedureParametersCompartmentEditPart.VISUAL_ID:
 				return new ProcedureProcedureParametersCompartmentEditPart(view);
 
-			case FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
-				return new FunctionFunctionDeclarativePartCompartmentEditPart(
-						view);
+			case ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID:
+				return new ProcedureProcedureDeclarativePartCompartmentEditPart(view);
 
-			case FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
-				return new FunctionFunctionExecutablePartCompartmentEditPart(
-						view);
+			case ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID:
+				return new ProcedureProcedureExecutablePartCompartmentEditPart(view);
 
 			case FunctionFunctionParametersCompartmentEditPart.VISUAL_ID:
 				return new FunctionFunctionParametersCompartmentEditPart(view);
@@ -257,13 +475,17 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case FunctionFunctionReturnPartCompartmentEditPart.VISUAL_ID:
 				return new FunctionFunctionReturnPartCompartmentEditPart(view);
 
+			case FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
+				return new FunctionFunctionDeclarativePartCompartmentEditPart(view);
+
+			case FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
+				return new FunctionFunctionExecutablePartCompartmentEditPart(view);
+
 			case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
-				return new AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart(
-						view);
+				return new AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart(view);
 
 			case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
-				return new AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart(
-						view);
+				return new AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart(view);
 
 			case TransitionEditPart.VISUAL_ID:
 				return new TransitionEditPart(view);
@@ -284,10 +506,8 @@ public class CrystalEditPartFactory implements EditPartFactory {
 	/**
 	 * @generated
 	 */
-	public static CellEditorLocator getTextCellEditorLocator(
-			ITextAwareEditPart source) {
-		return CellEditorLocatorAccess.INSTANCE
-				.getTextCellEditorLocator(source);
+	public static CellEditorLocator getTextCellEditorLocator(ITextAwareEditPart source) {
+		return CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
 	}
 
 }

@@ -25,9 +25,13 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
+import crystal.diagram.edit.parts.Collections3EditPart;
 import crystal.diagram.edit.parts.Collections4EditPart;
+import crystal.diagram.edit.parts.Cursor3EditPart;
 import crystal.diagram.edit.parts.Cursor4EditPart;
+import crystal.diagram.edit.parts.DataType3EditPart;
 import crystal.diagram.edit.parts.DataType4EditPart;
+import crystal.diagram.edit.parts.Records3EditPart;
 import crystal.diagram.edit.parts.Records4EditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
@@ -36,8 +40,7 @@ import crystal.diagram.part.CrystalVisualIDRegistry;
 /**
  * @generated
  */
-public class FunctionFunctionReturnPartCompartmentCanonicalEditPolicy extends
-		CanonicalEditPolicy {
+public class FunctionFunctionReturnPartCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
 
 	/**
 	 * @generated
@@ -66,7 +69,7 @@ public class FunctionFunctionReturnPartCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getFunctionFunctionReturnPartCompartment_7007SemanticChildren(viewObject);
+				.getFunctionFunctionReturnPartCompartment_7017SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -76,10 +79,8 @@ public class FunctionFunctionReturnPartCompartmentCanonicalEditPolicy extends
 	/**
 	 * @generated
 	 */
-	protected boolean isOrphaned(Collection<EObject> semanticChildren,
-			final View view) {
-		return isMyDiagramElement(view)
-				&& !semanticChildren.contains(view.getElement());
+	protected boolean isOrphaned(Collection<EObject> semanticChildren, final View view) {
+		return isMyDiagramElement(view) && !semanticChildren.contains(view.getElement());
 	}
 
 	/**
@@ -106,8 +107,7 @@ public class FunctionFunctionReturnPartCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getFunctionFunctionReturnPartCompartment_7007SemanticChildren((View) getHost()
-						.getModel());
+				.getFunctionFunctionReturnPartCompartment_7017SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();
@@ -121,8 +121,8 @@ public class FunctionFunctionReturnPartCompartmentCanonicalEditPolicy extends
 		// iteration happens over list of desired semantic elements, trying to find best matching View, while original CEP
 		// iterates views, potentially losing view (size/bounds) information - i.e. if there are few views to reference same EObject, only last one 
 		// to answer isOrphaned == true will be used for the domain element representation, see #cleanCanonicalSemanticChildren()
-		for (Iterator<CrystalNodeDescriptor> descriptorsIterator = childDescriptors
-				.iterator(); descriptorsIterator.hasNext();) {
+		for (Iterator<CrystalNodeDescriptor> descriptorsIterator = childDescriptors.iterator(); descriptorsIterator
+				.hasNext();) {
 			CrystalNodeDescriptor next = descriptorsIterator.next();
 			String hint = CrystalVisualIDRegistry.getType(next.getVisualID());
 			LinkedList<View> perfectMatch = new LinkedList<View>(); // both semanticElement and hint match that of NodeDescriptor
@@ -151,11 +151,9 @@ public class FunctionFunctionReturnPartCompartmentCanonicalEditPolicy extends
 				childDescriptors.size());
 		for (CrystalNodeDescriptor next : childDescriptors) {
 			String hint = CrystalVisualIDRegistry.getType(next.getVisualID());
-			IAdaptable elementAdapter = new CanonicalElementAdapter(
-					next.getModelElement(), hint);
-			CreateViewRequest.ViewDescriptor descriptor = new CreateViewRequest.ViewDescriptor(
-					elementAdapter, Node.class, hint, ViewUtil.APPEND, false,
-					host().getDiagramPreferencesHint());
+			IAdaptable elementAdapter = new CanonicalElementAdapter(next.getModelElement(), hint);
+			CreateViewRequest.ViewDescriptor descriptor = new CreateViewRequest.ViewDescriptor(elementAdapter,
+					Node.class, hint, ViewUtil.APPEND, false, host().getDiagramPreferencesHint());
 			viewDescriptors.add(descriptor);
 		}
 
@@ -164,10 +162,10 @@ public class FunctionFunctionReturnPartCompartmentCanonicalEditPolicy extends
 		CreateViewRequest request = getCreateViewRequest(viewDescriptors);
 		Command cmd = getCreateViewCommand(request);
 		if (cmd != null && cmd.canExecute()) {
-			SetViewMutabilityCommand.makeMutable(
-					new EObjectAdapter(host().getNotationView())).execute();
+			SetViewMutabilityCommand.makeMutable(new EObjectAdapter(host().getNotationView())).execute();
 			executeCommand(cmd);
 			@SuppressWarnings("unchecked")
+
 			List<IAdaptable> nl = (List<IAdaptable>) request.getNewObject();
 			createdViews.addAll(nl);
 		}
@@ -176,8 +174,8 @@ public class FunctionFunctionReturnPartCompartmentCanonicalEditPolicy extends
 		}
 		if (createdViews.size() > 1) {
 			// perform a layout of the container
-			DeferredLayoutCommand layoutCmd = new DeferredLayoutCommand(host()
-					.getEditingDomain(), createdViews, host());
+			DeferredLayoutCommand layoutCmd = new DeferredLayoutCommand(host().getEditingDomain(), createdViews,
+					host());
 			executeCommand(new ICommandProxy(layoutCmd));
 		}
 

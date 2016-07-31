@@ -60,8 +60,7 @@ public class Collections4EditPart extends ShapeNodeEditPart {
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new Collections4ItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new Collections4ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -74,8 +73,7 @@ public class Collections4EditPart extends ShapeNodeEditPart {
 		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
-				EditPolicy result = child
-						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
+				EditPolicy result = child.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 				if (result == null) {
 					result = new NonResizableEditPolicy();
 				}
@@ -112,9 +110,7 @@ public class Collections4EditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof CollectionsName4EditPart) {
-			((CollectionsName4EditPart) childEditPart)
-					.setLabel(getPrimaryShape()
-							.getFigureCollectionsLabelFigure());
+			((CollectionsName4EditPart) childEditPart).setLabel(getPrimaryShape().getFigureCollectionsLabelFigure());
 			return true;
 		}
 		return false;
@@ -247,8 +243,7 @@ public class Collections4EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(CrystalVisualIDRegistry
-				.getType(CollectionsName4EditPart.VISUAL_ID));
+		return getChildBySemanticHint(CrystalVisualIDRegistry.getType(CollectionsName4EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -265,8 +260,7 @@ public class Collections4EditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		public CollectionsFigure() {
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();
 		}

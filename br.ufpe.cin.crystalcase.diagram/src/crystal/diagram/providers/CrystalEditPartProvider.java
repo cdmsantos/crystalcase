@@ -18,9 +18,7 @@ public class CrystalEditPartProvider extends DefaultEditPartProvider {
 	 * @generated
 	 */
 	public CrystalEditPartProvider() {
-		super(new CrystalEditPartFactory(),
-				CrystalVisualIDRegistry.TYPED_INSTANCE,
-				CrystalEditPart.MODEL_ID);
+		super(new CrystalEditPartFactory(), CrystalVisualIDRegistry.TYPED_INSTANCE, CrystalEditPart.MODEL_ID);
 	}
 
 }

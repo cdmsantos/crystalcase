@@ -10,11 +10,11 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Cursor#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.Cursor#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getCursor()
  * @model annotation="gmf.node label.text='Cursor'"
@@ -31,22 +31,11 @@ public interface Cursor extends Parameters {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
-	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCursor_ClassName()
-	 * @model default="Cursor"
+	 * @model default="Cursor" changeable="false"
 	 * @generated
 	 */
 	String getClassName();
-
-	/**
-	 * Sets the value of the '{@link crystal.Cursor#getClassName <em>Class Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Class Name</em>' attribute.
-	 * @see #getClassName()
-	 * @generated
-	 */
-	void setClassName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.

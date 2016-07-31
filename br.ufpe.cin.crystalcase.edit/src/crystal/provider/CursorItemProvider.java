@@ -65,7 +65,7 @@ public class CursorItemProvider extends ParametersItemProvider {
 				 getString("_UI_Cursor_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Cursor_className_feature", "_UI_Cursor_type"),
 				 CrystalPackage.Literals.CURSOR__CLASS_NAME,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

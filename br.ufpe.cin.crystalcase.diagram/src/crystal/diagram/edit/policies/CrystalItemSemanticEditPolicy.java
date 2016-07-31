@@ -18,8 +18,7 @@ import crystal.diagram.providers.CrystalElementTypes;
 /**
  * @generated
  */
-public class CrystalItemSemanticEditPolicy extends
-		CrystalBaseItemSemanticEditPolicy {
+public class CrystalItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
@@ -32,13 +31,13 @@ public class CrystalItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (CrystalElementTypes.Procedure_2001 == req.getElementType()) {
+		if (CrystalElementTypes.Procedure_2007 == req.getElementType()) {
 			return getGEFWrapper(new ProcedureCreateCommand(req));
 		}
-		if (CrystalElementTypes.Function_2002 == req.getElementType()) {
+		if (CrystalElementTypes.Function_2008 == req.getElementType()) {
 			return getGEFWrapper(new FunctionCreateCommand(req));
 		}
-		if (CrystalElementTypes.AnonymousBlock_2003 == req.getElementType()) {
+		if (CrystalElementTypes.AnonymousBlock_2009 == req.getElementType()) {
 			return getGEFWrapper(new AnonymousBlockCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
@@ -48,26 +47,20 @@ public class CrystalItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getDuplicateCommand(DuplicateElementsRequest req) {
-		TransactionalEditingDomain editingDomain = ((IGraphicalEditPart) getHost())
-				.getEditingDomain();
+		TransactionalEditingDomain editingDomain = ((IGraphicalEditPart) getHost()).getEditingDomain();
 		return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
 	}
 
 	/**
 	 * @generated
 	 */
-	private static class DuplicateAnythingCommand extends
-			DuplicateEObjectsCommand {
+	private static class DuplicateAnythingCommand extends DuplicateEObjectsCommand {
 
 		/**
 		 * @generated
 		 */
-		public DuplicateAnythingCommand(
-				TransactionalEditingDomain editingDomain,
-				DuplicateElementsRequest req) {
-			super(editingDomain, req.getLabel(), req
-					.getElementsToBeDuplicated(), req
-					.getAllDuplicatedElementsMap());
+		public DuplicateAnythingCommand(TransactionalEditingDomain editingDomain, DuplicateElementsRequest req) {
+			super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
 		}
 
 	}

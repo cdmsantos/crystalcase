@@ -29,12 +29,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.SubprogramsImpl#getName <em>Name</em>}</li>
- *   <li>{@link crystal.impl.SubprogramsImpl#getDeclarativePart <em>Declarative Part</em>}</li>
- *   <li>{@link crystal.impl.SubprogramsImpl#getExecutablePart <em>Executable Part</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -58,26 +56,6 @@ public abstract class SubprogramsImpl extends EObjectImpl implements Subprograms
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getDeclarativePart() <em>Declarative Part</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDeclarativePart()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Parameters> declarativePart;
-
-	/**
-	 * The cached value of the '{@link #getExecutablePart() <em>Executable Part</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExecutablePart()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Statements> executablePart;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,55 +102,11 @@ public abstract class SubprogramsImpl extends EObjectImpl implements Subprograms
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parameters> getDeclarativePart() {
-		if (declarativePart == null) {
-			declarativePart = new EObjectContainmentEList<Parameters>(Parameters.class, this, CrystalPackage.SUBPROGRAMS__DECLARATIVE_PART);
-		}
-		return declarativePart;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Statements> getExecutablePart() {
-		if (executablePart == null) {
-			executablePart = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.SUBPROGRAMS__EXECUTABLE_PART);
-		}
-		return executablePart;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CrystalPackage.SUBPROGRAMS__DECLARATIVE_PART:
-				return ((InternalEList<?>)getDeclarativePart()).basicRemove(otherEnd, msgs);
-			case CrystalPackage.SUBPROGRAMS__EXECUTABLE_PART:
-				return ((InternalEList<?>)getExecutablePart()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CrystalPackage.SUBPROGRAMS__NAME:
 				return getName();
-			case CrystalPackage.SUBPROGRAMS__DECLARATIVE_PART:
-				return getDeclarativePart();
-			case CrystalPackage.SUBPROGRAMS__EXECUTABLE_PART:
-				return getExecutablePart();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -189,14 +123,6 @@ public abstract class SubprogramsImpl extends EObjectImpl implements Subprograms
 			case CrystalPackage.SUBPROGRAMS__NAME:
 				setName((String)newValue);
 				return;
-			case CrystalPackage.SUBPROGRAMS__DECLARATIVE_PART:
-				getDeclarativePart().clear();
-				getDeclarativePart().addAll((Collection<? extends Parameters>)newValue);
-				return;
-			case CrystalPackage.SUBPROGRAMS__EXECUTABLE_PART:
-				getExecutablePart().clear();
-				getExecutablePart().addAll((Collection<? extends Statements>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -212,12 +138,6 @@ public abstract class SubprogramsImpl extends EObjectImpl implements Subprograms
 			case CrystalPackage.SUBPROGRAMS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case CrystalPackage.SUBPROGRAMS__DECLARATIVE_PART:
-				getDeclarativePart().clear();
-				return;
-			case CrystalPackage.SUBPROGRAMS__EXECUTABLE_PART:
-				getExecutablePart().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -232,10 +152,6 @@ public abstract class SubprogramsImpl extends EObjectImpl implements Subprograms
 		switch (featureID) {
 			case CrystalPackage.SUBPROGRAMS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case CrystalPackage.SUBPROGRAMS__DECLARATIVE_PART:
-				return declarativePart != null && !declarativePart.isEmpty();
-			case CrystalPackage.SUBPROGRAMS__EXECUTABLE_PART:
-				return executablePart != null && !executablePart.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

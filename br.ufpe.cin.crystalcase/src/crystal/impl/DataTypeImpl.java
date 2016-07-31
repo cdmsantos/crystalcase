@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.DataTypeImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.DataTypeImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link crystal.impl.DataTypeImpl#getPrecision <em>Precision</em>}</li>
  *   <li>{@link crystal.impl.DataTypeImpl#getScale <em>Scale</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -142,18 +142,6 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setClassName(String newClassName) {
-		String oldClassName = className;
-		className = newClassName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.DATA_TYPE__CLASS_NAME, oldClassName, className));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public DataTypeOptions getOptions() {
 		return options;
 	}
@@ -240,9 +228,6 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.DATA_TYPE__CLASS_NAME:
-				setClassName((String)newValue);
-				return;
 			case CrystalPackage.DATA_TYPE__OPTIONS:
 				setOptions((DataTypeOptions)newValue);
 				return;
@@ -264,9 +249,6 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.DATA_TYPE__CLASS_NAME:
-				setClassName(CLASS_NAME_EDEFAULT);
-				return;
 			case CrystalPackage.DATA_TYPE__OPTIONS:
 				setOptions(OPTIONS_EDEFAULT);
 				return;

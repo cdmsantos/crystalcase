@@ -78,8 +78,7 @@ public class CrystalCreationWizard extends Wizard implements INewWizard {
 	/**
 	 * @generated
 	 */
-	public void setOpenNewlyCreatedDiagramEditor(
-			boolean openNewlyCreatedDiagramEditor) {
+	public void setOpenNewlyCreatedDiagramEditor(boolean openNewlyCreatedDiagramEditor) {
 		this.openNewlyCreatedDiagramEditor = openNewlyCreatedDiagramEditor;
 	}
 
@@ -90,8 +89,8 @@ public class CrystalCreationWizard extends Wizard implements INewWizard {
 		this.workbench = workbench;
 		this.selection = selection;
 		setWindowTitle(Messages.CrystalCreationWizardTitle);
-		setDefaultPageImageDescriptor(CrystalDiagramEditorPlugin
-				.getBundledImageDescriptor("icons/wizban/NewCrystalWizard.gif")); //$NON-NLS-1$
+		setDefaultPageImageDescriptor(
+				CrystalDiagramEditorPlugin.getBundledImageDescriptor("icons/wizban/NewCrystalWizard.gif")); //$NON-NLS-1$
 		setNeedsProgressMonitor(true);
 	}
 
@@ -99,12 +98,9 @@ public class CrystalCreationWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public void addPages() {
-		diagramModelFilePage = new CrystalCreationWizardPage(
-				"DiagramModelFile", getSelection(), "crystal"); //$NON-NLS-1$ //$NON-NLS-2$
-		diagramModelFilePage
-				.setTitle(Messages.CrystalCreationWizard_DiagramModelFilePageTitle);
-		diagramModelFilePage
-				.setDescription(Messages.CrystalCreationWizard_DiagramModelFilePageDescription);
+		diagramModelFilePage = new CrystalCreationWizardPage("DiagramModelFile", getSelection(), "crystal"); //$NON-NLS-1$ //$NON-NLS-2$
+		diagramModelFilePage.setTitle(Messages.CrystalCreationWizard_DiagramModelFilePageTitle);
+		diagramModelFilePage.setDescription(Messages.CrystalCreationWizard_DiagramModelFilePageDescription);
 		addPage(diagramModelFilePage);
 	}
 
@@ -114,16 +110,13 @@ public class CrystalCreationWizard extends Wizard implements INewWizard {
 	public boolean performFinish() {
 		IRunnableWithProgress op = new WorkspaceModifyOperation(null) {
 
-			protected void execute(IProgressMonitor monitor)
-					throws CoreException, InterruptedException {
-				diagram = CrystalDiagramEditorUtil.createDiagram(
-						diagramModelFilePage.getURI(), monitor);
+			protected void execute(IProgressMonitor monitor) throws CoreException, InterruptedException {
+				diagram = CrystalDiagramEditorUtil.createDiagram(diagramModelFilePage.getURI(), monitor);
 				if (isOpenNewlyCreatedDiagramEditor() && diagram != null) {
 					try {
 						CrystalDiagramEditorUtil.openDiagram(diagram);
 					} catch (PartInitException e) {
-						ErrorDialog.openError(getContainer().getShell(),
-								Messages.CrystalCreationWizardOpenEditorError,
+						ErrorDialog.openError(getContainer().getShell(), Messages.CrystalCreationWizardOpenEditorError,
 								null, e.getStatus());
 					}
 				}
@@ -135,12 +128,10 @@ public class CrystalCreationWizard extends Wizard implements INewWizard {
 			return false;
 		} catch (InvocationTargetException e) {
 			if (e.getTargetException() instanceof CoreException) {
-				ErrorDialog.openError(getContainer().getShell(),
-						Messages.CrystalCreationWizardCreationError, null,
+				ErrorDialog.openError(getContainer().getShell(), Messages.CrystalCreationWizardCreationError, null,
 						((CoreException) e.getTargetException()).getStatus());
 			} else {
-				CrystalDiagramEditorPlugin.getInstance().logError(
-						"Error creating diagram", e.getTargetException()); //$NON-NLS-1$
+				CrystalDiagramEditorPlugin.getInstance().logError("Error creating diagram", e.getTargetException()); //$NON-NLS-1$
 			}
 			return false;
 		}

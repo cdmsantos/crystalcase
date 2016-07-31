@@ -16,14 +16,35 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
+ *   <li>{@link crystal.impl.ExceptionImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.ExceptionImpl#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
+	/**
+	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_NAME_EDEFAULT = "Exception";
+
+	/**
+	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String className = CLASS_NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -32,7 +53,7 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "EXCEPTION\r\n\t\t\t\t\t\t\tWHEN no_data_found THEN \r\n\t\t\t\t\t\t\t\tDBMS_OUTPUT.PUT_LINE(\'There aren\'t data registred\')";
+	protected static final String CODE_EDEFAULT = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There arent data registred\')";
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -68,6 +89,15 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getClassName() {
+		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getCode() {
 		return code;
 	}
@@ -92,6 +122,8 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CrystalPackage.EXCEPTION__CLASS_NAME:
+				return getClassName();
 			case CrystalPackage.EXCEPTION__CODE:
 				return getCode();
 		}
@@ -136,6 +168,8 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.EXCEPTION__CLASS_NAME:
+				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.EXCEPTION__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		}
@@ -152,7 +186,9 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (code: ");
+		result.append(" (className: ");
+		result.append(className);
+		result.append(", code: ");
 		result.append(code);
 		result.append(')');
 		return result.toString();

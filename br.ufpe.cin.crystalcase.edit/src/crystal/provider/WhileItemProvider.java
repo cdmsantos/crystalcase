@@ -45,9 +45,55 @@ public class WhileItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
+			addConditionPropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_While_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_While_className_feature", "_UI_While_type"),
+				 CrystalPackage.Literals.WHILE__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Condition feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConditionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_While_condition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_While_condition_feature", "_UI_While_type"),
+				 CrystalPackage.Literals.WHILE__CONDITION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,7 +137,7 @@ public class WhileItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((While)object).getDescription();
+		String label = ((While)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_While_type") :
 			getString("_UI_While_type") + " " + label;
@@ -110,6 +156,8 @@ public class WhileItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(While.class)) {
+			case CrystalPackage.WHILE__CLASS_NAME:
+			case CrystalPackage.WHILE__CONDITION:
 			case CrystalPackage.WHILE__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

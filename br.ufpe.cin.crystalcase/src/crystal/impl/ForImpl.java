@@ -18,17 +18,39 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
+ *   <li>{@link crystal.impl.ForImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getCounter <em>Counter</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getTypeCounter <em>Type Counter</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getLowestNumber <em>Lowest Number</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getHighestNumber <em>Highest Number</em>}</li>
+ *   <li>{@link crystal.impl.ForImpl#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class ForImpl extends StatementsImpl implements For {
+	/**
+	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_NAME_EDEFAULT = "For";
+
+	/**
+	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String className = CLASS_NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getCounter() <em>Counter</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -110,6 +132,26 @@ public class ForImpl extends StatementsImpl implements For {
 	protected int highestNumber = HIGHEST_NUMBER_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CODE_EDEFAULT = "Type the FOR code";
+
+	/**
+	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected String code = CODE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -126,6 +168,15 @@ public class ForImpl extends StatementsImpl implements For {
 	@Override
 	protected EClass eStaticClass() {
 		return CrystalPackage.Literals.FOR;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getClassName() {
+		return className;
 	}
 
 	/**
@@ -217,9 +268,32 @@ public class ForImpl extends StatementsImpl implements For {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCode() {
+		return code;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCode(String newCode) {
+		String oldCode = code;
+		code = newCode;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.FOR__CODE, oldCode, code));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CrystalPackage.FOR__CLASS_NAME:
+				return getClassName();
 			case CrystalPackage.FOR__COUNTER:
 				return getCounter();
 			case CrystalPackage.FOR__TYPE_COUNTER:
@@ -228,6 +302,8 @@ public class ForImpl extends StatementsImpl implements For {
 				return getLowestNumber();
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				return getHighestNumber();
+			case CrystalPackage.FOR__CODE:
+				return getCode();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -251,6 +327,9 @@ public class ForImpl extends StatementsImpl implements For {
 				return;
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				setHighestNumber((Integer)newValue);
+				return;
+			case CrystalPackage.FOR__CODE:
+				setCode((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -276,6 +355,9 @@ public class ForImpl extends StatementsImpl implements For {
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				setHighestNumber(HIGHEST_NUMBER_EDEFAULT);
 				return;
+			case CrystalPackage.FOR__CODE:
+				setCode(CODE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -288,6 +370,8 @@ public class ForImpl extends StatementsImpl implements For {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.FOR__CLASS_NAME:
+				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.FOR__COUNTER:
 				return COUNTER_EDEFAULT == null ? counter != null : !COUNTER_EDEFAULT.equals(counter);
 			case CrystalPackage.FOR__TYPE_COUNTER:
@@ -296,6 +380,8 @@ public class ForImpl extends StatementsImpl implements For {
 				return lowestNumber != LOWEST_NUMBER_EDEFAULT;
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				return highestNumber != HIGHEST_NUMBER_EDEFAULT;
+			case CrystalPackage.FOR__CODE:
+				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -310,7 +396,9 @@ public class ForImpl extends StatementsImpl implements For {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (counter: ");
+		result.append(" (className: ");
+		result.append(className);
+		result.append(", counter: ");
 		result.append(counter);
 		result.append(", typeCounter: ");
 		result.append(typeCounter);
@@ -318,6 +406,8 @@ public class ForImpl extends StatementsImpl implements For {
 		result.append(lowestNumber);
 		result.append(", highestNumber: ");
 		result.append(highestNumber);
+		result.append(", code: ");
+		result.append(code);
 		result.append(')');
 		return result.toString();
 	}

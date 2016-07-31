@@ -56,9 +56,9 @@ context Function {
 context Parameters {
 	constraint HasCode {
 		check{
-			if(((self.eclass().name ="Collections") and not self.code.isEmpty()) or
-				((self.eclass().name ="Records" and not self.code.isEmpty())) or
-				((self.eclass().name ="Cursor" and not self.code.isEmpty()))){
+			if(((self.eclass().name =="Collections") and self.code.size() < 0) or
+				((self.eclass().name =="Records" and self.code.size() < 0)) or
+				((self.eclass().name =="Cursor" and self.code.size() < 0))){
 				return false;
 			}
 			return true;
@@ -106,5 +106,16 @@ context Statements {
 			return true;
 		}
 		message : '(CR10) The field code of the statement ' + self.eclass().name + ' have to implement the exit of the loop with the term "EXIT WHEN".'
+	}
+	
+	constraint HasName {
+		check {
+			if((self.eclass().name = 'CallFunction' or self.eclass().name = 'CallProcedure')
+				and self.nameSubroutine.size() < 0) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR11) The name of the statement ' + self.eclass().name + ' have to be declared.'
 	}
 }

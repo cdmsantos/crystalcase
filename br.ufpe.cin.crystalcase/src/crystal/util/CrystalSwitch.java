@@ -9,6 +9,7 @@ import crystal.Case;
 import crystal.Close;
 import crystal.Collections;
 import crystal.Crystal;
+import crystal.CrystalCase;
 import crystal.CrystalPackage;
 import crystal.Cursor;
 import crystal.DataType;
@@ -73,7 +74,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */

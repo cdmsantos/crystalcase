@@ -26,17 +26,14 @@ public class CrystalElementChooserDialog extends DefaultElementChooserDialog {
 	/**
 	 * @generated
 	 */
-	public CrystalElementChooserDialog(Shell parentShell, View view,
-			boolean allowMultiSelection) {
-		super(parentShell, view, new CrystalElementChooserDialogContextImpl(
-				allowMultiSelection));
+	public CrystalElementChooserDialog(Shell parentShell, View view, boolean allowMultiSelection) {
+		super(parentShell, view, new CrystalElementChooserDialogContextImpl(allowMultiSelection));
 	}
 
 	/**
 	 * @generated
 	 */
-	private static class CrystalElementChooserDialogContextImpl implements
-			DefaultElementChooserDialog.Context {
+	private static class CrystalElementChooserDialogContextImpl implements DefaultElementChooserDialog.Context {
 
 		/**
 		 * @generated
@@ -51,8 +48,7 @@ public class CrystalElementChooserDialog extends DefaultElementChooserDialog {
 		/**
 		 * @generated
 		 */
-		private CrystalElementChooserDialogContextImpl(
-				boolean allowMultiSelection) {
+		private CrystalElementChooserDialogContextImpl(boolean allowMultiSelection) {
 			myAllowMultiSelection = allowMultiSelection;
 		}
 
@@ -61,8 +57,7 @@ public class CrystalElementChooserDialog extends DefaultElementChooserDialog {
 		 */
 		@Override
 		public AdapterFactory getAdapterFactory() {
-			return CrystalDiagramEditorPlugin.getInstance()
-					.getItemProvidersAdapterFactory();
+			return CrystalDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory();
 		}
 
 		/**

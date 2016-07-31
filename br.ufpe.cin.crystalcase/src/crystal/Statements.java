@@ -11,10 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Statements#getDescription <em>Description</em>}</li>
+ *   <li>{@link crystal.Statements#isIsStart <em>Is Start</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getStatements()
  * @model abstract="true"
@@ -48,5 +49,32 @@ public interface Statements extends EObject {
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Start</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Start</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Start</em>' attribute.
+	 * @see #setIsStart(boolean)
+	 * @see crystal.CrystalPackage#getStatements_IsStart()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isIsStart();
+
+	/**
+	 * Sets the value of the '{@link crystal.Statements#isIsStart <em>Is Start</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Start</em>' attribute.
+	 * @see #isIsStart()
+	 * @generated
+	 */
+	void setIsStart(boolean value);
 
 } // Statements

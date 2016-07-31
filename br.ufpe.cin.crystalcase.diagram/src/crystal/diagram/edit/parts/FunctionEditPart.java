@@ -41,7 +41,7 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2002;
+	public static final int VISUAL_ID = 2008;
 
 	/**
 	 * @generated
@@ -65,11 +65,9 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new FunctionItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new FunctionItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
-				new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -80,8 +78,7 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
-				EditPolicy result = child
-						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
+				EditPolicy result = child.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 				if (result == null) {
 					result = new NonResizableEditPolicy();
 				}
@@ -118,40 +115,31 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof FunctionNameEditPart) {
-			((FunctionNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureFunctionLabelFigure());
-			return true;
-		}
-		if (childEditPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFunctionDeclarativePartCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((FunctionFunctionDeclarativePartCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
-		if (childEditPart instanceof FunctionFunctionExecutablePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFunctionExecutablePartCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((FunctionFunctionExecutablePartCompartmentEditPart) childEditPart)
-					.getFigure());
+			((FunctionNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureFunctionLabelFigure());
 			return true;
 		}
 		if (childEditPart instanceof FunctionFunctionParametersCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFunctionParametersCompartmentFigure();
+			IFigure pane = getPrimaryShape().getFunctionParametersCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((FunctionFunctionParametersCompartmentEditPart) childEditPart)
-					.getFigure());
+			pane.add(((FunctionFunctionParametersCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		if (childEditPart instanceof FunctionFunctionReturnPartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFunctionReturnPartCompartmentFigure();
+			IFigure pane = getPrimaryShape().getFunctionReturnPartCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((FunctionFunctionReturnPartCompartmentEditPart) childEditPart)
-					.getFigure());
+			pane.add(((FunctionFunctionReturnPartCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getFunctionDeclarativePartCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((FunctionFunctionDeclarativePartCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof FunctionFunctionExecutablePartCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getFunctionExecutablePartCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((FunctionFunctionExecutablePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -164,32 +152,24 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof FunctionNameEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFunctionDeclarativePartCompartmentFigure();
-			pane.remove(((FunctionFunctionDeclarativePartCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
-		if (childEditPart instanceof FunctionFunctionExecutablePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFunctionExecutablePartCompartmentFigure();
-			pane.remove(((FunctionFunctionExecutablePartCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
 		if (childEditPart instanceof FunctionFunctionParametersCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFunctionParametersCompartmentFigure();
-			pane.remove(((FunctionFunctionParametersCompartmentEditPart) childEditPart)
-					.getFigure());
+			IFigure pane = getPrimaryShape().getFunctionParametersCompartmentFigure();
+			pane.remove(((FunctionFunctionParametersCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		if (childEditPart instanceof FunctionFunctionReturnPartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFunctionReturnPartCompartmentFigure();
-			pane.remove(((FunctionFunctionReturnPartCompartmentEditPart) childEditPart)
-					.getFigure());
+			IFigure pane = getPrimaryShape().getFunctionReturnPartCompartmentFigure();
+			pane.remove(((FunctionFunctionReturnPartCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getFunctionDeclarativePartCompartmentFigure();
+			pane.remove(((FunctionFunctionDeclarativePartCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof FunctionFunctionExecutablePartCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getFunctionExecutablePartCompartmentFigure();
+			pane.remove(((FunctionFunctionExecutablePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -219,19 +199,17 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
-			return getPrimaryShape()
-					.getFunctionDeclarativePartCompartmentFigure();
-		}
-		if (editPart instanceof FunctionFunctionExecutablePartCompartmentEditPart) {
-			return getPrimaryShape()
-					.getFunctionExecutablePartCompartmentFigure();
-		}
 		if (editPart instanceof FunctionFunctionParametersCompartmentEditPart) {
 			return getPrimaryShape().getFunctionParametersCompartmentFigure();
 		}
 		if (editPart instanceof FunctionFunctionReturnPartCompartmentEditPart) {
 			return getPrimaryShape().getFunctionReturnPartCompartmentFigure();
+		}
+		if (editPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
+			return getPrimaryShape().getFunctionDeclarativePartCompartmentFigure();
+		}
+		if (editPart instanceof FunctionFunctionExecutablePartCompartmentEditPart) {
+			return getPrimaryShape().getFunctionExecutablePartCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -326,8 +304,7 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(CrystalVisualIDRegistry
-				.getType(FunctionNameEditPart.VISUAL_ID));
+		return getChildBySemanticHint(CrystalVisualIDRegistry.getType(FunctionNameEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -335,8 +312,7 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 	 */
 	protected void handleNotificationEvent(Notification event) {
 		if (event.getNotifier() == getModel()
-				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations()
-						.equals(event.getFeature())) {
+				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations().equals(event.getFeature())) {
 			handleMajorSemanticChange();
 		} else {
 			super.handleNotificationEvent(event);
@@ -355,14 +331,6 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fFunctionDeclarativePartCompartmentFigure;
-		/**
-		 * @generated
-		 */
-		private RectangleFigure fFunctionExecutablePartCompartmentFigure;
-		/**
-		 * @generated
-		 */
 		private RectangleFigure fFunctionParametersCompartmentFigure;
 		/**
 		 * @generated
@@ -370,13 +338,21 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 		private RectangleFigure fFunctionReturnPartCompartmentFigure;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
+		private RectangleFigure fFunctionDeclarativePartCompartmentFigure;
+		/**
+		* @generated
+		*/
+		private RectangleFigure fFunctionExecutablePartCompartmentFigure;
+
+		/**
+			 * @generated
+			 */
 		public FunctionFigure() {
 			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(THIS_FORE);
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();
 		}
@@ -389,22 +365,10 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 			fFigureFunctionLabelFigure = new WrappingLabel();
 
 			fFigureFunctionLabelFigure.setText("Function");
-			fFigureFunctionLabelFigure.setMaximumSize(new Dimension(
-					getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
+			fFigureFunctionLabelFigure
+					.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
 			this.add(fFigureFunctionLabelFigure);
-
-			fFunctionDeclarativePartCompartmentFigure = new RectangleFigure();
-
-			fFunctionDeclarativePartCompartmentFigure.setOutline(false);
-
-			this.add(fFunctionDeclarativePartCompartmentFigure);
-
-			fFunctionExecutablePartCompartmentFigure = new RectangleFigure();
-
-			fFunctionExecutablePartCompartmentFigure.setOutline(false);
-
-			this.add(fFunctionExecutablePartCompartmentFigure);
 
 			fFunctionParametersCompartmentFigure = new RectangleFigure();
 
@@ -418,6 +382,18 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 
 			this.add(fFunctionReturnPartCompartmentFigure);
 
+			fFunctionDeclarativePartCompartmentFigure = new RectangleFigure();
+
+			fFunctionDeclarativePartCompartmentFigure.setOutline(false);
+
+			this.add(fFunctionDeclarativePartCompartmentFigure);
+
+			fFunctionExecutablePartCompartmentFigure = new RectangleFigure();
+
+			fFunctionExecutablePartCompartmentFigure.setOutline(false);
+
+			this.add(fFunctionExecutablePartCompartmentFigure);
+
 		}
 
 		/**
@@ -425,20 +401,6 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureFunctionLabelFigure() {
 			return fFigureFunctionLabelFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public RectangleFigure getFunctionDeclarativePartCompartmentFigure() {
-			return fFunctionDeclarativePartCompartmentFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public RectangleFigure getFunctionExecutablePartCompartmentFigure() {
-			return fFunctionExecutablePartCompartmentFigure;
 		}
 
 		/**
@@ -453,6 +415,20 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 		 */
 		public RectangleFigure getFunctionReturnPartCompartmentFigure() {
 			return fFunctionReturnPartCompartmentFigure;
+		}
+
+		/**
+		* @generated
+		*/
+		public RectangleFigure getFunctionDeclarativePartCompartmentFigure() {
+			return fFunctionDeclarativePartCompartmentFigure;
+		}
+
+		/**
+		* @generated
+		*/
+		public RectangleFigure getFunctionExecutablePartCompartmentFigure() {
+			return fFunctionExecutablePartCompartmentFigure;
 		}
 
 	}

@@ -10,13 +10,13 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.DataType#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.DataType#getOptions <em>Options</em>}</li>
  *   <li>{@link crystal.DataType#getPrecision <em>Precision</em>}</li>
  *   <li>{@link crystal.DataType#getScale <em>Scale</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getDataType()
  * @model annotation="gmf.node label.text='Data Type'"
@@ -33,22 +33,11 @@ public interface DataType extends Parameters {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
-	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getDataType_ClassName()
-	 * @model default="DataType"
+	 * @model default="DataType" changeable="false"
 	 * @generated
 	 */
 	String getClassName();
-
-	/**
-	 * Sets the value of the '{@link crystal.DataType#getClassName <em>Class Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Class Name</em>' attribute.
-	 * @see #getClassName()
-	 * @generated
-	 */
-	void setClassName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Options</b></em>' attribute.

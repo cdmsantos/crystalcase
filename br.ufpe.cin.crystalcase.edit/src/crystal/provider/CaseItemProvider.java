@@ -45,9 +45,55 @@ public class CaseItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
+			addConditionPropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Case_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Case_className_feature", "_UI_Case_type"),
+				 CrystalPackage.Literals.CASE__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Condition feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConditionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Case_condition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Case_condition_feature", "_UI_Case_type"),
+				 CrystalPackage.Literals.CASE__CONDITION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,7 +137,7 @@ public class CaseItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Case)object).getDescription();
+		String label = ((Case)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Case_type") :
 			getString("_UI_Case_type") + " " + label;
@@ -110,6 +156,8 @@ public class CaseItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Case.class)) {
+			case CrystalPackage.CASE__CLASS_NAME:
+			case CrystalPackage.CASE__CONDITION:
 			case CrystalPackage.CASE__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

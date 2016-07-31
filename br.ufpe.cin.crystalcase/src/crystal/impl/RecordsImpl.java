@@ -17,11 +17,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.RecordsImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.RecordsImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.impl.RecordsImpl#getTypeName <em>Type Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -54,7 +55,7 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "TYPE recordType IS RECORD \r\n\t\t\t\t\t\t\t(id number(5), \r\n\t\t\t\t\t\t\tname varchar2(25), \r\n\t\t\t\t\t\t\tlastName tableA.last_name%type)";
+	protected static final String CODE_EDEFAULT = "TYPE recordType IS RECORD (id number(5), name varchar2(25), lastName tableA.last_name%type)";
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -65,6 +66,26 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 * @ordered
 	 */
 	protected String code = CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_NAME_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String typeName = TYPE_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,18 +120,6 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setClassName(String newClassName) {
-		String oldClassName = className;
-		className = newClassName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.RECORDS__CLASS_NAME, oldClassName, className));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getCode() {
 		return code;
 	}
@@ -132,6 +141,27 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getTypeName() {
+		return typeName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTypeName(String newTypeName) {
+		String oldTypeName = typeName;
+		typeName = newTypeName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.RECORDS__TYPE_NAME, oldTypeName, typeName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -139,6 +169,8 @@ public class RecordsImpl extends ParametersImpl implements Records {
 				return getClassName();
 			case CrystalPackage.RECORDS__CODE:
 				return getCode();
+			case CrystalPackage.RECORDS__TYPE_NAME:
+				return getTypeName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -151,11 +183,11 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.RECORDS__CLASS_NAME:
-				setClassName((String)newValue);
-				return;
 			case CrystalPackage.RECORDS__CODE:
 				setCode((String)newValue);
+				return;
+			case CrystalPackage.RECORDS__TYPE_NAME:
+				setTypeName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -169,11 +201,11 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.RECORDS__CLASS_NAME:
-				setClassName(CLASS_NAME_EDEFAULT);
-				return;
 			case CrystalPackage.RECORDS__CODE:
 				setCode(CODE_EDEFAULT);
+				return;
+			case CrystalPackage.RECORDS__TYPE_NAME:
+				setTypeName(TYPE_NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -191,6 +223,8 @@ public class RecordsImpl extends ParametersImpl implements Records {
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.RECORDS__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+			case CrystalPackage.RECORDS__TYPE_NAME:
+				return TYPE_NAME_EDEFAULT == null ? typeName != null : !TYPE_NAME_EDEFAULT.equals(typeName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -209,6 +243,8 @@ public class RecordsImpl extends ParametersImpl implements Records {
 		result.append(className);
 		result.append(", code: ");
 		result.append(code);
+		result.append(", typeName: ");
+		result.append(typeName);
 		result.append(')');
 		return result.toString();
 	}

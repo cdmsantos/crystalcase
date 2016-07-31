@@ -33,56 +33,56 @@ public class ProcedureProcedureExecutablePartCompartmentItemSemanticEditPolicy
 	 * @generated
 	 */
 	public ProcedureProcedureExecutablePartCompartmentItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Procedure_2001);
+		super(CrystalElementTypes.Procedure_2007);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (CrystalElementTypes.Exception_3005 == req.getElementType()) {
+		if (CrystalElementTypes.Exception_3056 == req.getElementType()) {
 			return getGEFWrapper(new ExceptionCreateCommand(req));
 		}
-		if (CrystalElementTypes.If_3006 == req.getElementType()) {
+		if (CrystalElementTypes.If_3057 == req.getElementType()) {
 			return getGEFWrapper(new IfCreateCommand(req));
 		}
-		if (CrystalElementTypes.Case_3007 == req.getElementType()) {
+		if (CrystalElementTypes.Case_3058 == req.getElementType()) {
 			return getGEFWrapper(new CaseCreateCommand(req));
 		}
-		if (CrystalElementTypes.Insert_3008 == req.getElementType()) {
+		if (CrystalElementTypes.Insert_3059 == req.getElementType()) {
 			return getGEFWrapper(new InsertCreateCommand(req));
 		}
-		if (CrystalElementTypes.Update_3009 == req.getElementType()) {
+		if (CrystalElementTypes.Update_3060 == req.getElementType()) {
 			return getGEFWrapper(new UpdateCreateCommand(req));
 		}
-		if (CrystalElementTypes.Delete_3010 == req.getElementType()) {
+		if (CrystalElementTypes.Delete_3061 == req.getElementType()) {
 			return getGEFWrapper(new DeleteCreateCommand(req));
 		}
-		if (CrystalElementTypes.Select_3011 == req.getElementType()) {
+		if (CrystalElementTypes.Select_3062 == req.getElementType()) {
 			return getGEFWrapper(new SelectCreateCommand(req));
 		}
-		if (CrystalElementTypes.While_3012 == req.getElementType()) {
+		if (CrystalElementTypes.While_3063 == req.getElementType()) {
 			return getGEFWrapper(new WhileCreateCommand(req));
 		}
-		if (CrystalElementTypes.For_3013 == req.getElementType()) {
+		if (CrystalElementTypes.For_3064 == req.getElementType()) {
 			return getGEFWrapper(new ForCreateCommand(req));
 		}
-		if (CrystalElementTypes.Loop_3014 == req.getElementType()) {
+		if (CrystalElementTypes.Loop_3065 == req.getElementType()) {
 			return getGEFWrapper(new LoopCreateCommand(req));
 		}
-		if (CrystalElementTypes.Open_3015 == req.getElementType()) {
+		if (CrystalElementTypes.Open_3066 == req.getElementType()) {
 			return getGEFWrapper(new OpenCreateCommand(req));
 		}
-		if (CrystalElementTypes.Fetch_3016 == req.getElementType()) {
+		if (CrystalElementTypes.Fetch_3067 == req.getElementType()) {
 			return getGEFWrapper(new FetchCreateCommand(req));
 		}
-		if (CrystalElementTypes.Close_3017 == req.getElementType()) {
+		if (CrystalElementTypes.Close_3068 == req.getElementType()) {
 			return getGEFWrapper(new CloseCreateCommand(req));
 		}
-		if (CrystalElementTypes.CallProcedure_3031 == req.getElementType()) {
+		if (CrystalElementTypes.CallProcedure_3069 == req.getElementType()) {
 			return getGEFWrapper(new CallProcedureCreateCommand(req));
 		}
-		if (CrystalElementTypes.CallFunction_3032 == req.getElementType()) {
+		if (CrystalElementTypes.CallFunction_3070 == req.getElementType()) {
 			return getGEFWrapper(new CallFunctionCreateCommand(req));
 		}
 		return super.getCreateCommand(req);

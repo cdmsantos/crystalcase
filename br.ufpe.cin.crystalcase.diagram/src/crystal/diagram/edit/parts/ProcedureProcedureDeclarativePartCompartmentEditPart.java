@@ -29,64 +29,57 @@ import crystal.diagram.providers.CrystalElementTypes;
 /**
  * @generated
  */
-public class ProcedureProcedureDeclarativePartCompartmentEditPart extends
-		ShapeCompartmentEditPart {
+public class ProcedureProcedureDeclarativePartCompartmentEditPart extends ShapeCompartmentEditPart {
 
 	/**
-	 * @generated
-	 */
-	public static final int VISUAL_ID = 7001;
+	* @generated
+	*/
+	public static final int VISUAL_ID = 7020;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ProcedureProcedureDeclarativePartCompartmentEditPart(View view) {
 		super(view);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public String getCompartmentName() {
 		return Messages.ProcedureProcedureDeclarativePartCompartmentEditPart_title;
 	}
 
 	/**
-	 * @generated not
-	 * Crystal Santos
-	 * 20/01/2016
-	 */
+	* @generated not
+	* Crystal Santos
+	* 24/07/2016
+	*/
 	public IFigure createFigure() {
-		ResizableCompartmentFigure result = (ResizableCompartmentFigure) super
-				.createFigure();
+		ResizableCompartmentFigure result = (ResizableCompartmentFigure) super.createFigure();
 		result.setTitleVisibility(true);
 		result.setTitle("Declarative Part");
 		return result;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
-				new ResizableCompartmentEditPolicy());
-		installEditPolicy(
-				EditPolicyRoles.SEMANTIC_ROLE,
+		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE, new ResizableCompartmentEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
 				new ProcedureProcedureDeclarativePartCompartmentItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
-				new CreationEditPolicyWithCustomReparent(
-						CrystalVisualIDRegistry.TYPED_INSTANCE));
-		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE,
-				new DragDropEditPolicy());
-		installEditPolicy(
-				EditPolicyRoles.CANONICAL_ROLE,
+				new CreationEditPolicyWithCustomReparent(CrystalVisualIDRegistry.TYPED_INSTANCE));
+		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE, new DragDropEditPolicy());
+		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
 				new ProcedureProcedureDeclarativePartCompartmentCanonicalEditPolicy());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void setRatio(Double ratio) {
 		if (getFigure().getParent().getLayoutManager() instanceof ConstrainedToolbarLayout) {
 			super.setRatio(ratio);
@@ -94,25 +87,23 @@ public class ProcedureProcedureDeclarativePartCompartmentEditPart extends
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public EditPart getTargetEditPart(Request request) {
 		if (request instanceof CreateViewAndElementRequest) {
-			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request)
-					.getViewAndElementDescriptor()
+			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
-			IElementType type = (IElementType) adapter
-					.getAdapter(IElementType.class);
-			if (type == CrystalElementTypes.DataType_3001) {
+			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.DataType_3052) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Collections_3002) {
+			if (type == CrystalElementTypes.Collections_3053) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Records_3003) {
+			if (type == CrystalElementTypes.Records_3054) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Cursor_3004) {
+			if (type == CrystalElementTypes.Cursor_3055) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

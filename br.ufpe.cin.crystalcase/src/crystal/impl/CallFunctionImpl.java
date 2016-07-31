@@ -15,33 +15,51 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link crystal.impl.CallFunctionImpl#getName <em>Name</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link crystal.impl.CallFunctionImpl#getClassName <em>Class Name</em>}</li>
+ *   <li>{@link crystal.impl.CallFunctionImpl#getNameSubroutine <em>Name Subroutine</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class CallFunctionImpl extends StatementsImpl implements CallFunction {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getClassName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String CLASS_NAME_EDEFAULT = "CallFunction";
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getClassName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
-
+	protected String className = CLASS_NAME_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getNameSubroutine() <em>Name Subroutine</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameSubroutine()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_SUBROUTINE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getNameSubroutine() <em>Name Subroutine</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameSubroutine()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameSubroutine = NAME_SUBROUTINE_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,8 +84,8 @@ public class CallFunctionImpl extends StatementsImpl implements CallFunction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getClassName() {
+		return className;
 	}
 
 	/**
@@ -75,11 +93,20 @@ public class CallFunctionImpl extends StatementsImpl implements CallFunction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public String getNameSubroutine() {
+		return nameSubroutine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameSubroutine(String newNameSubroutine) {
+		String oldNameSubroutine = nameSubroutine;
+		nameSubroutine = newNameSubroutine;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CALL_FUNCTION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CALL_FUNCTION__NAME_SUBROUTINE, oldNameSubroutine, nameSubroutine));
 	}
 
 	/**
@@ -90,8 +117,10 @@ public class CallFunctionImpl extends StatementsImpl implements CallFunction {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CrystalPackage.CALL_FUNCTION__NAME:
-				return getName();
+			case CrystalPackage.CALL_FUNCTION__CLASS_NAME:
+				return getClassName();
+			case CrystalPackage.CALL_FUNCTION__NAME_SUBROUTINE:
+				return getNameSubroutine();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -104,8 +133,8 @@ public class CallFunctionImpl extends StatementsImpl implements CallFunction {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.CALL_FUNCTION__NAME:
-				setName((String)newValue);
+			case CrystalPackage.CALL_FUNCTION__NAME_SUBROUTINE:
+				setNameSubroutine((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -119,8 +148,8 @@ public class CallFunctionImpl extends StatementsImpl implements CallFunction {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.CALL_FUNCTION__NAME:
-				setName(NAME_EDEFAULT);
+			case CrystalPackage.CALL_FUNCTION__NAME_SUBROUTINE:
+				setNameSubroutine(NAME_SUBROUTINE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -134,8 +163,10 @@ public class CallFunctionImpl extends StatementsImpl implements CallFunction {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.CALL_FUNCTION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CrystalPackage.CALL_FUNCTION__CLASS_NAME:
+				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
+			case CrystalPackage.CALL_FUNCTION__NAME_SUBROUTINE:
+				return NAME_SUBROUTINE_EDEFAULT == null ? nameSubroutine != null : !NAME_SUBROUTINE_EDEFAULT.equals(nameSubroutine);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -150,8 +181,10 @@ public class CallFunctionImpl extends StatementsImpl implements CallFunction {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (className: ");
+		result.append(className);
+		result.append(", nameSubroutine: ");
+		result.append(nameSubroutine);
 		result.append(')');
 		return result.toString();
 	}

@@ -64,6 +64,8 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CrystalPackage.Literals.FUNCTION__PARAMETERS);
 			childrenFeatures.add(CrystalPackage.Literals.FUNCTION__RETURN_PART);
+			childrenFeatures.add(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART);
+			childrenFeatures.add(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART);
 		}
 		return childrenFeatures;
 	}
@@ -121,6 +123,8 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 		switch (notification.getFeatureID(Function.class)) {
 			case CrystalPackage.FUNCTION__PARAMETERS:
 			case CrystalPackage.FUNCTION__RETURN_PART:
+			case CrystalPackage.FUNCTION__DECLARATIVE_PART:
+			case CrystalPackage.FUNCTION__EXECUTABLE_PART:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -177,6 +181,101 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.FUNCTION__RETURN_PART,
 				 CrystalFactory.eINSTANCE.createCursor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
+				 CrystalFactory.eINSTANCE.createDataType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
+				 CrystalFactory.eINSTANCE.createCollections()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
+				 CrystalFactory.eINSTANCE.createRecords()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
+				 CrystalFactory.eINSTANCE.createCursor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createException()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createIf()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createCase()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createInsert()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createUpdate()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createDelete()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createSelect()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createWhile()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createFor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createLoop()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createOpen()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createFetch()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createClose()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createCallProcedure()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createCallFunction()));
 	}
 
 	/**
@@ -191,9 +290,9 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == CrystalPackage.Literals.SUBPROGRAMS__DECLARATIVE_PART ||
 			childFeature == CrystalPackage.Literals.FUNCTION__PARAMETERS ||
-			childFeature == CrystalPackage.Literals.FUNCTION__RETURN_PART;
+			childFeature == CrystalPackage.Literals.FUNCTION__RETURN_PART ||
+			childFeature == CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART;
 
 		if (qualify) {
 			return getString

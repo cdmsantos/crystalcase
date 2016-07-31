@@ -47,6 +47,7 @@ public class RecordsItemProvider extends ParametersItemProvider {
 
 			addClassNamePropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
+			addTypeNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -65,7 +66,7 @@ public class RecordsItemProvider extends ParametersItemProvider {
 				 getString("_UI_Records_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Records_className_feature", "_UI_Records_type"),
 				 CrystalPackage.Literals.RECORDS__CLASS_NAME,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -87,6 +88,28 @@ public class RecordsItemProvider extends ParametersItemProvider {
 				 getString("_UI_Records_code_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Records_code_feature", "_UI_Records_type"),
 				 CrystalPackage.Literals.RECORDS__CODE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypeNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Records_typeName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Records_typeName_feature", "_UI_Records_type"),
+				 CrystalPackage.Literals.RECORDS__TYPE_NAME,
 				 true,
 				 false,
 				 false,
@@ -135,6 +158,7 @@ public class RecordsItemProvider extends ParametersItemProvider {
 		switch (notification.getFeatureID(Records.class)) {
 			case CrystalPackage.RECORDS__CLASS_NAME:
 			case CrystalPackage.RECORDS__CODE:
+			case CrystalPackage.RECORDS__TYPE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

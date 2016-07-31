@@ -41,7 +41,7 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2001;
+	public static final int VISUAL_ID = 2007;
 
 	/**
 	 * @generated
@@ -65,11 +65,9 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new ProcedureItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new ProcedureItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
-				new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -80,8 +78,7 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
-				EditPolicy result = child
-						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
+				EditPolicy result = child.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 				if (result == null) {
 					result = new NonResizableEditPolicy();
 				}
@@ -118,32 +115,25 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof ProcedureNameEditPart) {
-			((ProcedureNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureProcedureLabelFigure());
-			return true;
-		}
-		if (childEditPart instanceof ProcedureProcedureDeclarativePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getProcedureDeclarativePartCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((ProcedureProcedureDeclarativePartCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
-		if (childEditPart instanceof ProcedureProcedureExecutablePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getProcedureExecutablePartCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((ProcedureProcedureExecutablePartCompartmentEditPart) childEditPart)
-					.getFigure());
+			((ProcedureNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureProcedureLabelFigure());
 			return true;
 		}
 		if (childEditPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getProcedureParametersCompartmentFigure();
+			IFigure pane = getPrimaryShape().getProcedureParametersCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((ProcedureProcedureParametersCompartmentEditPart) childEditPart)
-					.getFigure());
+			pane.add(((ProcedureProcedureParametersCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof ProcedureProcedureDeclarativePartCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getProcedureDeclarativePartCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((ProcedureProcedureDeclarativePartCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof ProcedureProcedureExecutablePartCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getProcedureExecutablePartCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((ProcedureProcedureExecutablePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -156,25 +146,19 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof ProcedureNameEditPart) {
 			return true;
 		}
+		if (childEditPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getProcedureParametersCompartmentFigure();
+			pane.remove(((ProcedureProcedureParametersCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
 		if (childEditPart instanceof ProcedureProcedureDeclarativePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getProcedureDeclarativePartCompartmentFigure();
-			pane.remove(((ProcedureProcedureDeclarativePartCompartmentEditPart) childEditPart)
-					.getFigure());
+			IFigure pane = getPrimaryShape().getProcedureDeclarativePartCompartmentFigure();
+			pane.remove(((ProcedureProcedureDeclarativePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		if (childEditPart instanceof ProcedureProcedureExecutablePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getProcedureExecutablePartCompartmentFigure();
-			pane.remove(((ProcedureProcedureExecutablePartCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
-		if (childEditPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getProcedureParametersCompartmentFigure();
-			pane.remove(((ProcedureProcedureParametersCompartmentEditPart) childEditPart)
-					.getFigure());
+			IFigure pane = getPrimaryShape().getProcedureExecutablePartCompartmentFigure();
+			pane.remove(((ProcedureProcedureExecutablePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -204,16 +188,14 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof ProcedureProcedureDeclarativePartCompartmentEditPart) {
-			return getPrimaryShape()
-					.getProcedureDeclarativePartCompartmentFigure();
-		}
-		if (editPart instanceof ProcedureProcedureExecutablePartCompartmentEditPart) {
-			return getPrimaryShape()
-					.getProcedureExecutablePartCompartmentFigure();
-		}
 		if (editPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
 			return getPrimaryShape().getProcedureParametersCompartmentFigure();
+		}
+		if (editPart instanceof ProcedureProcedureDeclarativePartCompartmentEditPart) {
+			return getPrimaryShape().getProcedureDeclarativePartCompartmentFigure();
+		}
+		if (editPart instanceof ProcedureProcedureExecutablePartCompartmentEditPart) {
+			return getPrimaryShape().getProcedureExecutablePartCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -308,8 +290,7 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(CrystalVisualIDRegistry
-				.getType(ProcedureNameEditPart.VISUAL_ID));
+		return getChildBySemanticHint(CrystalVisualIDRegistry.getType(ProcedureNameEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -317,8 +298,7 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 	 */
 	protected void handleNotificationEvent(Notification event) {
 		if (event.getNotifier() == getModel()
-				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations()
-						.equals(event.getFeature())) {
+				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations().equals(event.getFeature())) {
 			handleMajorSemanticChange();
 		} else {
 			super.handleNotificationEvent(event);
@@ -337,24 +317,24 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fProcedureDeclarativePartCompartmentFigure;
-		/**
-		 * @generated
-		 */
-		private RectangleFigure fProcedureExecutablePartCompartmentFigure;
-		/**
-		 * @generated
-		 */
 		private RectangleFigure fProcedureParametersCompartmentFigure;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
+		private RectangleFigure fProcedureDeclarativePartCompartmentFigure;
+		/**
+		* @generated
+		*/
+		private RectangleFigure fProcedureExecutablePartCompartmentFigure;
+
+		/**
+			 * @generated
+			 */
 		public ProcedureFigure() {
 			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(THIS_FORE);
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();
 		}
@@ -367,10 +347,16 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 			fFigureProcedureLabelFigure = new WrappingLabel();
 
 			fFigureProcedureLabelFigure.setText("Procedure");
-			fFigureProcedureLabelFigure.setMaximumSize(new Dimension(
-					getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
+			fFigureProcedureLabelFigure
+					.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
 			this.add(fFigureProcedureLabelFigure);
+
+			fProcedureParametersCompartmentFigure = new RectangleFigure();
+
+			fProcedureParametersCompartmentFigure.setOutline(false);
+
+			this.add(fProcedureParametersCompartmentFigure);
 
 			fProcedureDeclarativePartCompartmentFigure = new RectangleFigure();
 
@@ -384,12 +370,6 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 
 			this.add(fProcedureExecutablePartCompartmentFigure);
 
-			fProcedureParametersCompartmentFigure = new RectangleFigure();
-
-			fProcedureParametersCompartmentFigure.setOutline(false);
-
-			this.add(fProcedureParametersCompartmentFigure);
-
 		}
 
 		/**
@@ -402,22 +382,22 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
+		public RectangleFigure getProcedureParametersCompartmentFigure() {
+			return fProcedureParametersCompartmentFigure;
+		}
+
+		/**
+		* @generated
+		*/
 		public RectangleFigure getProcedureDeclarativePartCompartmentFigure() {
 			return fProcedureDeclarativePartCompartmentFigure;
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public RectangleFigure getProcedureExecutablePartCompartmentFigure() {
 			return fProcedureExecutablePartCompartmentFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public RectangleFigure getProcedureParametersCompartmentFigure() {
-			return fProcedureParametersCompartmentFigure;
 		}
 
 	}

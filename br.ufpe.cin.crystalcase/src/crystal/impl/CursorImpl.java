@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link crystal.impl.CursorImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.CursorImpl#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -99,18 +99,6 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setClassName(String newClassName) {
-		String oldClassName = className;
-		className = newClassName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CURSOR__CLASS_NAME, oldClassName, className));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getCode() {
 		return code;
 	}
@@ -151,9 +139,6 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.CURSOR__CLASS_NAME:
-				setClassName((String)newValue);
-				return;
 			case CrystalPackage.CURSOR__CODE:
 				setCode((String)newValue);
 				return;
@@ -169,9 +154,6 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.CURSOR__CLASS_NAME:
-				setClassName(CLASS_NAME_EDEFAULT);
-				return;
 			case CrystalPackage.CURSOR__CODE:
 				setCode(CODE_EDEFAULT);
 				return;

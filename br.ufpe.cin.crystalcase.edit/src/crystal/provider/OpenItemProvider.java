@@ -45,9 +45,32 @@ public class OpenItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Open_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Open_className_feature", "_UI_Open_type"),
+				 CrystalPackage.Literals.OPEN__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,7 +114,7 @@ public class OpenItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Open)object).getDescription();
+		String label = ((Open)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Open_type") :
 			getString("_UI_Open_type") + " " + label;
@@ -110,6 +133,7 @@ public class OpenItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Open.class)) {
+			case CrystalPackage.OPEN__CLASS_NAME:
 			case CrystalPackage.OPEN__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

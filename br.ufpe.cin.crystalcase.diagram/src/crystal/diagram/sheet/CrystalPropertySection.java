@@ -9,8 +9,7 @@ import org.eclipse.ui.views.properties.IPropertySourceProvider;
 /**
  * @generated
  */
-public class CrystalPropertySection extends DefaultPropertySection implements
-		IPropertySourceProvider {
+public class CrystalPropertySection extends DefaultPropertySection implements IPropertySourceProvider {
 
 	/**
 	 * Modify/unwrap selection.

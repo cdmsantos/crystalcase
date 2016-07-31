@@ -18,8 +18,7 @@ import crystal.diagram.edit.policies.TransitionItemSemanticEditPolicy;
 /**
  * @generated
  */
-public class TransitionEditPart extends ConnectionNodeEditPart implements
-		ITreeBranchEditPart {
+public class TransitionEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	 * @generated
@@ -38,8 +37,7 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new TransitionItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new TransitionItemSemanticEditPolicy());
 	}
 
 	/**

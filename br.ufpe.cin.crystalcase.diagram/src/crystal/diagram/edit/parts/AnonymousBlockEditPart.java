@@ -41,7 +41,7 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2003;
+	public static final int VISUAL_ID = 2009;
 
 	/**
 	 * @generated
@@ -65,11 +65,9 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new AnonymousBlockItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new AnonymousBlockItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
-				new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -80,8 +78,7 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
-				EditPolicy result = child
-						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
+				EditPolicy result = child.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 				if (result == null) {
 					result = new NonResizableEditPolicy();
 				}
@@ -119,24 +116,19 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof AnonymousBlockNameEditPart) {
 			((AnonymousBlockNameEditPart) childEditPart)
-					.setLabel(getPrimaryShape()
-							.getFigureAnonymousBlockLabelFigure());
+					.setLabel(getPrimaryShape().getFigureAnonymousBlockLabelFigure());
 			return true;
 		}
 		if (childEditPart instanceof AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getAnonymousBlockDeclarativePartCompartmentFigure();
+			IFigure pane = getPrimaryShape().getAnonymousBlockDeclarativePartCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart) childEditPart)
-					.getFigure());
+			pane.add(((AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		if (childEditPart instanceof AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getAnonymousBlockExecutablePartCompartmentFigure();
+			IFigure pane = getPrimaryShape().getAnonymousBlockExecutablePartCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart) childEditPart)
-					.getFigure());
+			pane.add(((AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -150,17 +142,13 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 			return true;
 		}
 		if (childEditPart instanceof AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getAnonymousBlockDeclarativePartCompartmentFigure();
-			pane.remove(((AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart) childEditPart)
-					.getFigure());
+			IFigure pane = getPrimaryShape().getAnonymousBlockDeclarativePartCompartmentFigure();
+			pane.remove(((AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		if (childEditPart instanceof AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getAnonymousBlockExecutablePartCompartmentFigure();
-			pane.remove(((AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart) childEditPart)
-					.getFigure());
+			IFigure pane = getPrimaryShape().getAnonymousBlockExecutablePartCompartmentFigure();
+			pane.remove(((AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -191,12 +179,10 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
 		if (editPart instanceof AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart) {
-			return getPrimaryShape()
-					.getAnonymousBlockDeclarativePartCompartmentFigure();
+			return getPrimaryShape().getAnonymousBlockDeclarativePartCompartmentFigure();
 		}
 		if (editPart instanceof AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart) {
-			return getPrimaryShape()
-					.getAnonymousBlockExecutablePartCompartmentFigure();
+			return getPrimaryShape().getAnonymousBlockExecutablePartCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -291,8 +277,7 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(CrystalVisualIDRegistry
-				.getType(AnonymousBlockNameEditPart.VISUAL_ID));
+		return getChildBySemanticHint(CrystalVisualIDRegistry.getType(AnonymousBlockNameEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -300,8 +285,7 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	 */
 	protected void handleNotificationEvent(Notification event) {
 		if (event.getNotifier() == getModel()
-				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations()
-						.equals(event.getFeature())) {
+				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations().equals(event.getFeature())) {
 			handleMajorSemanticChange();
 		} else {
 			super.handleNotificationEvent(event);
@@ -332,8 +316,7 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 		public AnonymousBlockFigure() {
 			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(THIS_FORE);
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();
 		}
@@ -346,8 +329,8 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 			fFigureAnonymousBlockLabelFigure = new WrappingLabel();
 
 			fFigureAnonymousBlockLabelFigure.setText("Anonymous Block");
-			fFigureAnonymousBlockLabelFigure.setMaximumSize(new Dimension(
-					getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
+			fFigureAnonymousBlockLabelFigure
+					.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
 			this.add(fFigureAnonymousBlockLabelFigure);
 

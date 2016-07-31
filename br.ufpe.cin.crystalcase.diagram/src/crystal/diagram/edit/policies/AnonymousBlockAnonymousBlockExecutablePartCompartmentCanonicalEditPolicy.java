@@ -25,20 +25,35 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
+import crystal.diagram.edit.parts.CallFunction3EditPart;
 import crystal.diagram.edit.parts.CallFunctionEditPart;
+import crystal.diagram.edit.parts.CallProcedure3EditPart;
 import crystal.diagram.edit.parts.CallProcedureEditPart;
+import crystal.diagram.edit.parts.Case3EditPart;
 import crystal.diagram.edit.parts.CaseEditPart;
+import crystal.diagram.edit.parts.Close3EditPart;
 import crystal.diagram.edit.parts.CloseEditPart;
+import crystal.diagram.edit.parts.Delete3EditPart;
 import crystal.diagram.edit.parts.DeleteEditPart;
+import crystal.diagram.edit.parts.Exception3EditPart;
 import crystal.diagram.edit.parts.ExceptionEditPart;
+import crystal.diagram.edit.parts.Fetch3EditPart;
 import crystal.diagram.edit.parts.FetchEditPart;
+import crystal.diagram.edit.parts.For3EditPart;
 import crystal.diagram.edit.parts.ForEditPart;
+import crystal.diagram.edit.parts.If3EditPart;
 import crystal.diagram.edit.parts.IfEditPart;
+import crystal.diagram.edit.parts.Insert3EditPart;
 import crystal.diagram.edit.parts.InsertEditPart;
+import crystal.diagram.edit.parts.Loop3EditPart;
 import crystal.diagram.edit.parts.LoopEditPart;
+import crystal.diagram.edit.parts.Open3EditPart;
 import crystal.diagram.edit.parts.OpenEditPart;
+import crystal.diagram.edit.parts.Select3EditPart;
 import crystal.diagram.edit.parts.SelectEditPart;
+import crystal.diagram.edit.parts.Update3EditPart;
 import crystal.diagram.edit.parts.UpdateEditPart;
+import crystal.diagram.edit.parts.While3EditPart;
 import crystal.diagram.edit.parts.WhileEditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
@@ -47,8 +62,7 @@ import crystal.diagram.part.CrystalVisualIDRegistry;
 /**
  * @generated
  */
-public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditPolicy
-		extends CanonicalEditPolicy {
+public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
 
 	/**
 	 * @generated
@@ -66,7 +80,7 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return CrystalPackage.eINSTANCE.getSubprograms_ExecutablePart();
+		return CrystalPackage.eINSTANCE.getAnonymousBlock_ExecutablePart();
 	}
 
 	/**
@@ -77,7 +91,7 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getAnonymousBlockAnonymousBlockExecutablePartCompartment_7009SemanticChildren(viewObject);
+				.getAnonymousBlockAnonymousBlockExecutablePartCompartment_7019SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -87,10 +101,8 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 	/**
 	 * @generated
 	 */
-	protected boolean isOrphaned(Collection<EObject> semanticChildren,
-			final View view) {
-		return isMyDiagramElement(view)
-				&& !semanticChildren.contains(view.getElement());
+	protected boolean isOrphaned(Collection<EObject> semanticChildren, final View view) {
+		return isMyDiagramElement(view) && !semanticChildren.contains(view.getElement());
 	}
 
 	/**
@@ -99,21 +111,21 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case ExceptionEditPart.VISUAL_ID:
-		case IfEditPart.VISUAL_ID:
-		case CaseEditPart.VISUAL_ID:
-		case InsertEditPart.VISUAL_ID:
-		case UpdateEditPart.VISUAL_ID:
-		case DeleteEditPart.VISUAL_ID:
-		case SelectEditPart.VISUAL_ID:
-		case WhileEditPart.VISUAL_ID:
-		case ForEditPart.VISUAL_ID:
-		case LoopEditPart.VISUAL_ID:
-		case OpenEditPart.VISUAL_ID:
-		case FetchEditPart.VISUAL_ID:
-		case CloseEditPart.VISUAL_ID:
-		case CallProcedureEditPart.VISUAL_ID:
-		case CallFunctionEditPart.VISUAL_ID:
+		case Exception3EditPart.VISUAL_ID:
+		case If3EditPart.VISUAL_ID:
+		case Case3EditPart.VISUAL_ID:
+		case Insert3EditPart.VISUAL_ID:
+		case Update3EditPart.VISUAL_ID:
+		case Delete3EditPart.VISUAL_ID:
+		case Select3EditPart.VISUAL_ID:
+		case While3EditPart.VISUAL_ID:
+		case For3EditPart.VISUAL_ID:
+		case Loop3EditPart.VISUAL_ID:
+		case Open3EditPart.VISUAL_ID:
+		case Fetch3EditPart.VISUAL_ID:
+		case Close3EditPart.VISUAL_ID:
+		case CallProcedure3EditPart.VISUAL_ID:
+		case CallFunction3EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -128,8 +140,8 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getAnonymousBlockAnonymousBlockExecutablePartCompartment_7009SemanticChildren((View) getHost()
-						.getModel());
+				.getAnonymousBlockAnonymousBlockExecutablePartCompartment_7019SemanticChildren(
+						(View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();
@@ -143,8 +155,8 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 		// iteration happens over list of desired semantic elements, trying to find best matching View, while original CEP
 		// iterates views, potentially losing view (size/bounds) information - i.e. if there are few views to reference same EObject, only last one 
 		// to answer isOrphaned == true will be used for the domain element representation, see #cleanCanonicalSemanticChildren()
-		for (Iterator<CrystalNodeDescriptor> descriptorsIterator = childDescriptors
-				.iterator(); descriptorsIterator.hasNext();) {
+		for (Iterator<CrystalNodeDescriptor> descriptorsIterator = childDescriptors.iterator(); descriptorsIterator
+				.hasNext();) {
 			CrystalNodeDescriptor next = descriptorsIterator.next();
 			String hint = CrystalVisualIDRegistry.getType(next.getVisualID());
 			LinkedList<View> perfectMatch = new LinkedList<View>(); // both semanticElement and hint match that of NodeDescriptor
@@ -173,11 +185,9 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 				childDescriptors.size());
 		for (CrystalNodeDescriptor next : childDescriptors) {
 			String hint = CrystalVisualIDRegistry.getType(next.getVisualID());
-			IAdaptable elementAdapter = new CanonicalElementAdapter(
-					next.getModelElement(), hint);
-			CreateViewRequest.ViewDescriptor descriptor = new CreateViewRequest.ViewDescriptor(
-					elementAdapter, Node.class, hint, ViewUtil.APPEND, false,
-					host().getDiagramPreferencesHint());
+			IAdaptable elementAdapter = new CanonicalElementAdapter(next.getModelElement(), hint);
+			CreateViewRequest.ViewDescriptor descriptor = new CreateViewRequest.ViewDescriptor(elementAdapter,
+					Node.class, hint, ViewUtil.APPEND, false, host().getDiagramPreferencesHint());
 			viewDescriptors.add(descriptor);
 		}
 
@@ -186,10 +196,10 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 		CreateViewRequest request = getCreateViewRequest(viewDescriptors);
 		Command cmd = getCreateViewCommand(request);
 		if (cmd != null && cmd.canExecute()) {
-			SetViewMutabilityCommand.makeMutable(
-					new EObjectAdapter(host().getNotationView())).execute();
+			SetViewMutabilityCommand.makeMutable(new EObjectAdapter(host().getNotationView())).execute();
 			executeCommand(cmd);
 			@SuppressWarnings("unchecked")
+
 			List<IAdaptable> nl = (List<IAdaptable>) request.getNewObject();
 			createdViews.addAll(nl);
 		}
@@ -198,8 +208,8 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 		}
 		if (createdViews.size() > 1) {
 			// perform a layout of the container
-			DeferredLayoutCommand layoutCmd = new DeferredLayoutCommand(host()
-					.getEditingDomain(), createdViews, host());
+			DeferredLayoutCommand layoutCmd = new DeferredLayoutCommand(host().getEditingDomain(), createdViews,
+					host());
 			executeCommand(new ICommandProxy(layoutCmd));
 		}
 

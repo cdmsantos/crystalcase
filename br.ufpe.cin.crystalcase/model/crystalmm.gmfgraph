@@ -11,14 +11,14 @@
         <children xsi:type="gmfgraph:Label" name="ProcedureLabelFigure" text="Procedure">
           <maximumSize dx="10000" dy="50"/>
         </children>
+        <children xsi:type="gmfgraph:Rectangle" name="ProcedureParametersCompartmentFigure" outline="false"/>
         <children xsi:type="gmfgraph:Rectangle" name="ProcedureDeclarativePartCompartmentFigure" outline="false"/>
         <children xsi:type="gmfgraph:Rectangle" name="ProcedureExecutablePartCompartmentFigure" outline="false"/>
-        <children xsi:type="gmfgraph:Rectangle" name="ProcedureParametersCompartmentFigure" outline="false"/>
       </actualFigure>
       <accessors accessor="getFigureProcedureLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
-      <accessors accessor="getProcedureDeclarativePartCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
-      <accessors accessor="getProcedureExecutablePartCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.2"/>
-      <accessors accessor="getProcedureParametersCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.3"/>
+      <accessors accessor="getProcedureParametersCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      <accessors accessor="getProcedureDeclarativePartCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.2"/>
+      <accessors accessor="getProcedureExecutablePartCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.3"/>
     </descriptors>
     <descriptors name="FunctionFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="FunctionFigure" lineKind="LINE_DASH">
@@ -29,16 +29,16 @@
         <children xsi:type="gmfgraph:Label" name="FunctionLabelFigure" text="Function">
           <maximumSize dx="10000" dy="50"/>
         </children>
-        <children xsi:type="gmfgraph:Rectangle" name="FunctionDeclarativePartCompartmentFigure" outline="false"/>
-        <children xsi:type="gmfgraph:Rectangle" name="FunctionExecutablePartCompartmentFigure" outline="false"/>
         <children xsi:type="gmfgraph:Rectangle" name="FunctionParametersCompartmentFigure" outline="false"/>
         <children xsi:type="gmfgraph:Rectangle" name="FunctionReturnPartCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="FunctionDeclarativePartCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="FunctionExecutablePartCompartmentFigure" outline="false"/>
       </actualFigure>
       <accessors accessor="getFigureFunctionLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
-      <accessors accessor="getFunctionDeclarativePartCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
-      <accessors accessor="getFunctionExecutablePartCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
-      <accessors accessor="getFunctionParametersCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.3"/>
-      <accessors accessor="getFunctionReturnPartCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.4"/>
+      <accessors accessor="getFunctionParametersCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors accessor="getFunctionReturnPartCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+      <accessors accessor="getFunctionDeclarativePartCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.3"/>
+      <accessors accessor="getFunctionExecutablePartCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.4"/>
     </descriptors>
     <descriptors name="AnonymousBlockFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="AnonymousBlockFigure" lineKind="LINE_DASH">
@@ -256,13 +256,13 @@
   <nodes name="CallProcedure" figure="CallProcedureFigure"/>
   <nodes name="CallFunction" figure="CallFunctionFigure"/>
   <connections name="Transition" figure="TransitionFigure"/>
-  <compartments name="ProcedureDeclarativePartCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
-  <compartments name="ProcedureExecutablePartCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.2"/>
-  <compartments name="ProcedureParametersCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.3"/>
-  <compartments name="FunctionDeclarativePartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
-  <compartments name="FunctionExecutablePartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.2"/>
-  <compartments name="FunctionParametersCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.3"/>
-  <compartments name="FunctionReturnPartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.4"/>
+  <compartments name="ProcedureParametersCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <compartments name="ProcedureDeclarativePartCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.2"/>
+  <compartments name="ProcedureExecutablePartCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.3"/>
+  <compartments name="FunctionParametersCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <compartments name="FunctionReturnPartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.2"/>
+  <compartments name="FunctionDeclarativePartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.3"/>
+  <compartments name="FunctionExecutablePartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.4"/>
   <compartments name="AnonymousBlockDeclarativePartCompartment" figure="AnonymousBlockFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
   <compartments name="AnonymousBlockExecutablePartCompartment" figure="AnonymousBlockFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.2"/>
   <labels name="ProcedureLabel" figure="ProcedureFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>

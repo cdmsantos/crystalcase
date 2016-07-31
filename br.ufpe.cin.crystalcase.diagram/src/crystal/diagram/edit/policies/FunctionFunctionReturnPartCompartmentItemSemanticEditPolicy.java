@@ -6,23 +6,26 @@ package crystal.diagram.edit.policies;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
+import crystal.diagram.edit.commands.Collections3CreateCommand;
 import crystal.diagram.edit.commands.Collections4CreateCommand;
+import crystal.diagram.edit.commands.Cursor3CreateCommand;
 import crystal.diagram.edit.commands.Cursor4CreateCommand;
+import crystal.diagram.edit.commands.DataType3CreateCommand;
 import crystal.diagram.edit.commands.DataType4CreateCommand;
+import crystal.diagram.edit.commands.Records3CreateCommand;
 import crystal.diagram.edit.commands.Records4CreateCommand;
 import crystal.diagram.providers.CrystalElementTypes;
 
 /**
  * @generated
  */
-public class FunctionFunctionReturnPartCompartmentItemSemanticEditPolicy extends
-		CrystalBaseItemSemanticEditPolicy {
+public class FunctionFunctionReturnPartCompartmentItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
 	public FunctionFunctionReturnPartCompartmentItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Function_2002);
+		super(CrystalElementTypes.Function_2008);
 	}
 
 	/**

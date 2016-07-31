@@ -45,9 +45,56 @@ public class IfItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
+			addConditionPropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
+			addCodeElsePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_If_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_If_className_feature", "_UI_If_type"),
+				 CrystalPackage.Literals.IF__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Condition feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConditionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_If_condition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_If_condition_feature", "_UI_If_type"),
+				 CrystalPackage.Literals.IF__CONDITION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -64,6 +111,28 @@ public class IfItemProvider extends StatementsItemProvider {
 				 getString("_UI_If_code_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_If_code_feature", "_UI_If_type"),
 				 CrystalPackage.Literals.IF__CODE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Code Else feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCodeElsePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_If_codeElse_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_If_codeElse_feature", "_UI_If_type"),
+				 CrystalPackage.Literals.IF__CODE_ELSE,
 				 true,
 				 false,
 				 false,
@@ -91,7 +160,7 @@ public class IfItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((If)object).getDescription();
+		String label = ((If)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_If_type") :
 			getString("_UI_If_type") + " " + label;
@@ -110,7 +179,10 @@ public class IfItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(If.class)) {
+			case CrystalPackage.IF__CLASS_NAME:
+			case CrystalPackage.IF__CONDITION:
 			case CrystalPackage.IF__CODE:
+			case CrystalPackage.IF__CODE_ELSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

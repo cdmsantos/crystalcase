@@ -3,6 +3,7 @@
 package crystal.tests;
 
 import crystal.Crystal;
+import crystal.CrystalCase;
 import crystal.CrystalFactory;
 import crystal.CrystalPackage;
 

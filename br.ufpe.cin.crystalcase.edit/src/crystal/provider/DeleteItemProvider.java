@@ -45,9 +45,32 @@ public class DeleteItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Delete_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Delete_className_feature", "_UI_Delete_type"),
+				 CrystalPackage.Literals.DELETE__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,7 +114,7 @@ public class DeleteItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Delete)object).getDescription();
+		String label = ((Delete)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Delete_type") :
 			getString("_UI_Delete_type") + " " + label;
@@ -110,6 +133,7 @@ public class DeleteItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Delete.class)) {
+			case CrystalPackage.DELETE__CLASS_NAME:
 			case CrystalPackage.DELETE__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

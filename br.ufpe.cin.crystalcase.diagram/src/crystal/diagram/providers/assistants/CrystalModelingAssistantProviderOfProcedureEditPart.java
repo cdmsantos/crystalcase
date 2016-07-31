@@ -8,7 +8,6 @@ import crystal.diagram.providers.CrystalModelingAssistantProvider;
 /**
  * @generated
  */
-public class CrystalModelingAssistantProviderOfProcedureEditPart extends
-		CrystalModelingAssistantProvider {
+public class CrystalModelingAssistantProviderOfProcedureEditPart extends CrystalModelingAssistantProvider {
 
 }

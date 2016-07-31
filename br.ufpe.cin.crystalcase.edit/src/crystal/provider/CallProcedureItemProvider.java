@@ -45,25 +45,48 @@ public class CallProcedureItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addClassNamePropertyDescriptor(object);
+			addNameSubroutinePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Class Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addClassNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CallProcedure_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CallProcedure_name_feature", "_UI_CallProcedure_type"),
-				 CrystalPackage.Literals.CALL_PROCEDURE__NAME,
+				 getString("_UI_CallProcedure_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CallProcedure_className_feature", "_UI_CallProcedure_type"),
+				 CrystalPackage.Literals.CALL_PROCEDURE__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Name Subroutine feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNameSubroutinePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CallProcedure_nameSubroutine_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CallProcedure_nameSubroutine_feature", "_UI_CallProcedure_type"),
+				 CrystalPackage.Literals.CALL_PROCEDURE__NAME_SUBROUTINE,
 				 true,
 				 false,
 				 false,
@@ -91,7 +114,7 @@ public class CallProcedureItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CallProcedure)object).getName();
+		String label = ((CallProcedure)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_CallProcedure_type") :
 			getString("_UI_CallProcedure_type") + " " + label;
@@ -110,7 +133,8 @@ public class CallProcedureItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CallProcedure.class)) {
-			case CrystalPackage.CALL_PROCEDURE__NAME:
+			case CrystalPackage.CALL_PROCEDURE__CLASS_NAME:
+			case CrystalPackage.CALL_PROCEDURE__NAME_SUBROUTINE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

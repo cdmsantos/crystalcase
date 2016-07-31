@@ -24,8 +24,7 @@ public class CrystalNavigatorItem extends CrystalAbstractNavigatorItem {
 			public Object getAdapter(Object adaptableObject, Class adapterType) {
 				if (adaptableObject instanceof crystal.diagram.navigator.CrystalNavigatorItem
 						&& (adapterType == View.class || adapterType == EObject.class)) {
-					return ((crystal.diagram.navigator.CrystalNavigatorItem) adaptableObject)
-							.getView();
+					return ((crystal.diagram.navigator.CrystalNavigatorItem) adaptableObject).getView();
 				}
 				return null;
 			}
@@ -74,11 +73,8 @@ public class CrystalNavigatorItem extends CrystalAbstractNavigatorItem {
 	 */
 	public boolean equals(Object obj) {
 		if (obj instanceof crystal.diagram.navigator.CrystalNavigatorItem) {
-			return EcoreUtil
-					.getURI(getView())
-					.equals(EcoreUtil
-							.getURI(((crystal.diagram.navigator.CrystalNavigatorItem) obj)
-									.getView()));
+			return EcoreUtil.getURI(getView())
+					.equals(EcoreUtil.getURI(((crystal.diagram.navigator.CrystalNavigatorItem) obj).getView()));
 		}
 		return super.equals(obj);
 	}

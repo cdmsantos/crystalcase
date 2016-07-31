@@ -9,6 +9,7 @@ import crystal.Case;
 import crystal.Close;
 import crystal.Collections;
 import crystal.Crystal;
+import crystal.CrystalCase;
 import crystal.CrystalPackage;
 import crystal.Cursor;
 import crystal.DataType;

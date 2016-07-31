@@ -61,6 +61,7 @@ public class StatementsItemProvider
 			super.getPropertyDescriptors(object);
 
 			addDescriptionPropertyDescriptor(object);
+			addIsStartPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -83,6 +84,28 @@ public class StatementsItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Start feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsStartPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Statements_isStart_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Statements_isStart_feature", "_UI_Statements_type"),
+				 CrystalPackage.Literals.STATEMENTS__IS_START,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -115,6 +138,7 @@ public class StatementsItemProvider
 
 		switch (notification.getFeatureID(Statements.class)) {
 			case CrystalPackage.STATEMENTS__DESCRIPTION:
+			case CrystalPackage.STATEMENTS__IS_START:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

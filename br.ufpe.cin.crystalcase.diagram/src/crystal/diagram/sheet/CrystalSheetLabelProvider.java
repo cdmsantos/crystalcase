@@ -18,8 +18,7 @@ import crystal.diagram.providers.CrystalElementTypes;
 /**
  * @generated
  */
-public class CrystalSheetLabelProvider extends BaseLabelProvider implements
-		ILabelProvider {
+public class CrystalSheetLabelProvider extends BaseLabelProvider implements ILabelProvider {
 
 	/**
 	 * @generated
@@ -75,8 +74,7 @@ public class CrystalSheetLabelProvider extends BaseLabelProvider implements
 			if (etype != null) {
 				return etype;
 			}
-			view = view.eContainer() instanceof View ? (View) view.eContainer()
-					: null;
+			view = view.eContainer() instanceof View ? (View) view.eContainer() : null;
 		}
 		return null;
 	}

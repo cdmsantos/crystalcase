@@ -45,9 +45,32 @@ public class SelectItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Select_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Select_className_feature", "_UI_Select_type"),
+				 CrystalPackage.Literals.SELECT__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,7 +114,7 @@ public class SelectItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Select)object).getDescription();
+		String label = ((Select)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Select_type") :
 			getString("_UI_Select_type") + " " + label;
@@ -110,6 +133,7 @@ public class SelectItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Select.class)) {
+			case CrystalPackage.SELECT__CLASS_NAME:
 			case CrystalPackage.SELECT__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

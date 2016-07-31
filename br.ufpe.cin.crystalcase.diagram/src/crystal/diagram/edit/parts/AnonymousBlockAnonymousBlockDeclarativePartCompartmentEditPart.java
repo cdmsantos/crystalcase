@@ -29,19 +29,17 @@ import crystal.diagram.providers.CrystalElementTypes;
 /**
  * @generated
  */
-public class AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart
-		extends ShapeCompartmentEditPart {
+public class AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart extends ShapeCompartmentEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7008;
+	public static final int VISUAL_ID = 7018;
 
 	/**
 	 * @generated
 	 */
-	public AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart(
-			View view) {
+	public AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart(View view) {
 		super(view);
 	}
 
@@ -58,8 +56,7 @@ public class AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart
 	 * 20/01/2016
 	 */
 	public IFigure createFigure() {
-		ResizableCompartmentFigure result = (ResizableCompartmentFigure) super
-				.createFigure();
+		ResizableCompartmentFigure result = (ResizableCompartmentFigure) super.createFigure();
 		result.setTitleVisibility(true);
 		result.setTitle("Declarative Part");
 		return result;
@@ -70,18 +67,13 @@ public class AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
-				new ResizableCompartmentEditPolicy());
-		installEditPolicy(
-				EditPolicyRoles.SEMANTIC_ROLE,
+		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE, new ResizableCompartmentEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
 				new AnonymousBlockAnonymousBlockDeclarativePartCompartmentItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
-				new CreationEditPolicyWithCustomReparent(
-						CrystalVisualIDRegistry.TYPED_INSTANCE));
-		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE,
-				new DragDropEditPolicy());
-		installEditPolicy(
-				EditPolicyRoles.CANONICAL_ROLE,
+				new CreationEditPolicyWithCustomReparent(CrystalVisualIDRegistry.TYPED_INSTANCE));
+		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE, new DragDropEditPolicy());
+		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
 				new AnonymousBlockAnonymousBlockDeclarativePartCompartmentCanonicalEditPolicy());
 	}
 
@@ -99,21 +91,19 @@ public class AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart
 	 */
 	public EditPart getTargetEditPart(Request request) {
 		if (request instanceof CreateViewAndElementRequest) {
-			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request)
-					.getViewAndElementDescriptor()
+			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
-			IElementType type = (IElementType) adapter
-					.getAdapter(IElementType.class);
-			if (type == CrystalElementTypes.DataType_3001) {
+			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.DataType_3033) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Collections_3002) {
+			if (type == CrystalElementTypes.Collections_3034) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Records_3003) {
+			if (type == CrystalElementTypes.Records_3035) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Cursor_3004) {
+			if (type == CrystalElementTypes.Cursor_3036) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

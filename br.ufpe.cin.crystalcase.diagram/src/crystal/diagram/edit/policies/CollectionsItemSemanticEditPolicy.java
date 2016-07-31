@@ -16,14 +16,13 @@ import crystal.diagram.providers.CrystalElementTypes;
 /**
  * @generated
  */
-public class CollectionsItemSemanticEditPolicy extends
-		CrystalBaseItemSemanticEditPolicy {
+public class CollectionsItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
 	public CollectionsItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Collections_3002);
+		super(CrystalElementTypes.Collections_3019);
 	}
 
 	/**
@@ -31,8 +30,7 @@ public class CollectionsItemSemanticEditPolicy extends
 	 */
 	protected Command getDestroyElementCommand(DestroyElementRequest req) {
 		View view = (View) getHost().getModel();
-		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
-				getEditingDomain(), null);
+		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
 		EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
 		if (annotation == null) {

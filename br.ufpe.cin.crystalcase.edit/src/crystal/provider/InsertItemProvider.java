@@ -45,9 +45,32 @@ public class InsertItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Insert_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Insert_className_feature", "_UI_Insert_type"),
+				 CrystalPackage.Literals.INSERT__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,7 +114,7 @@ public class InsertItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Insert)object).getDescription();
+		String label = ((Insert)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Insert_type") :
 			getString("_UI_Insert_type") + " " + label;
@@ -110,6 +133,7 @@ public class InsertItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Insert.class)) {
+			case CrystalPackage.INSERT__CLASS_NAME:
 			case CrystalPackage.INSERT__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

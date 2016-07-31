@@ -31,7 +31,6 @@ import crystal.diagram.providers.CrystalModelingAssistantProvider;
 /**
  * @generated
  */
-public class CrystalModelingAssistantProviderOfAnonymousBlockEditPart extends
-		CrystalModelingAssistantProvider {
+public class CrystalModelingAssistantProviderOfAnonymousBlockEditPart extends CrystalModelingAssistantProvider {
 
 }

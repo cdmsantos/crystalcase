@@ -30,19 +30,17 @@ import crystal.diagram.providers.CrystalElementTypes;
 /**
  * @generated
  */
-public class AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart
-		extends ShapeCompartmentEditPart {
+public class AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart extends ShapeCompartmentEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7009;
+	public static final int VISUAL_ID = 7019;
 
 	/**
 	 * @generated
 	 */
-	public AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart(
-			View view) {
+	public AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart(View view) {
 		super(view);
 	}
 
@@ -59,8 +57,7 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart
 	 * 20/01/2016
 	 */
 	public IFigure createFigure() {
-		ResizableCompartmentFigure result = (ResizableCompartmentFigure) super
-				.createFigure();
+		ResizableCompartmentFigure result = (ResizableCompartmentFigure) super.createFigure();
 		result.setTitleVisibility(true);
 		result.setTitle("Executable Part");
 		return result;
@@ -71,18 +68,13 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
-				new ResizableCompartmentEditPolicy());
-		installEditPolicy(
-				EditPolicyRoles.SEMANTIC_ROLE,
+		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE, new ResizableCompartmentEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
 				new AnonymousBlockAnonymousBlockExecutablePartCompartmentItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
-				new CreationEditPolicyWithCustomReparent(
-						CrystalVisualIDRegistry.TYPED_INSTANCE));
-		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE,
-				new DragDropEditPolicy());
-		installEditPolicy(
-				EditPolicyRoles.CANONICAL_ROLE,
+				new CreationEditPolicyWithCustomReparent(CrystalVisualIDRegistry.TYPED_INSTANCE));
+		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE, new DragDropEditPolicy());
+		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
 				new AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditPolicy());
 	}
 
@@ -100,66 +92,62 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart
 	 */
 	public EditPart getTargetEditPart(Request request) {
 		if (request instanceof CreateViewAndElementRequest) {
-			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request)
-					.getViewAndElementDescriptor()
+			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
-			IElementType type = (IElementType) adapter
-					.getAdapter(IElementType.class);
-			if (type == CrystalElementTypes.Exception_3005) {
+			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Exception_3037) {
 				return this;
 			}
-			if (type == CrystalElementTypes.If_3006) {
+			if (type == CrystalElementTypes.If_3038) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Case_3007) {
+			if (type == CrystalElementTypes.Case_3039) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Insert_3008) {
+			if (type == CrystalElementTypes.Insert_3040) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Update_3009) {
+			if (type == CrystalElementTypes.Update_3041) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Delete_3010) {
+			if (type == CrystalElementTypes.Delete_3042) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Select_3011) {
+			if (type == CrystalElementTypes.Select_3043) {
 				return this;
 			}
-			if (type == CrystalElementTypes.While_3012) {
+			if (type == CrystalElementTypes.While_3044) {
 				return this;
 			}
-			if (type == CrystalElementTypes.For_3013) {
+			if (type == CrystalElementTypes.For_3045) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Loop_3014) {
+			if (type == CrystalElementTypes.Loop_3046) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Open_3015) {
+			if (type == CrystalElementTypes.Open_3047) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Fetch_3016) {
+			if (type == CrystalElementTypes.Fetch_3048) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Close_3017) {
+			if (type == CrystalElementTypes.Close_3049) {
 				return this;
 			}
-			if (type == CrystalElementTypes.CallProcedure_3031) {
+			if (type == CrystalElementTypes.CallProcedure_3050) {
 				return this;
 			}
-			if (type == CrystalElementTypes.CallFunction_3032) {
+			if (type == CrystalElementTypes.CallFunction_3051) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {
 			if (RequestConstants.REQ_CONNECTION_END.equals(request.getType())) {
-				for (Object type : ((CreateUnspecifiedTypeConnectionRequest) request)
-						.getElementTypes()) {
+				for (Object type : ((CreateUnspecifiedTypeConnectionRequest) request).getElementTypes()) {
 					if (type instanceof IElementType) {
 						IElementType elementType = (IElementType) type;
-						if (elementType
-								.equals(CrystalElementTypes.Transition_4001))
+						if (elementType.equals(CrystalElementTypes.Transition_4001))
 							return super.getTargetEditPart(request);
 					}
 				}

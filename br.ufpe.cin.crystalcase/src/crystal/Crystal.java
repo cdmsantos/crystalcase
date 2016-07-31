@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Crystal#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link crystal.Crystal#getProcedures <em>Procedures</em>}</li>
  *   <li>{@link crystal.Crystal#getFunctions <em>Functions</em>}</li>
  *   <li>{@link crystal.Crystal#getBlocks <em>Blocks</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getCrystal()
  * @model annotation="gmf.diagram foo='bar' rcp='false' onefile='true' diagram.extension='crystal'"

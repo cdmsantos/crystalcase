@@ -10,11 +10,12 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link crystal.Collections#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.Collections#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.Collections#getTypeName <em>Type Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getCollections()
  * @model annotation="gmf.node label.text='Collection'"
@@ -31,22 +32,11 @@ public interface Collections extends Parameters {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
-	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCollections_ClassName()
-	 * @model default="Collection"
+	 * @model default="Collection" changeable="false"
 	 * @generated
 	 */
 	String getClassName();
-
-	/**
-	 * Sets the value of the '{@link crystal.Collections#getClassName <em>Class Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Class Name</em>' attribute.
-	 * @see #getClassName()
-	 * @generated
-	 */
-	void setClassName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
@@ -74,5 +64,32 @@ public interface Collections extends Parameters {
 	 * @generated
 	 */
 	void setCode(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Type Name</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type Name</em>' attribute.
+	 * @see #setTypeName(String)
+	 * @see crystal.CrystalPackage#getCollections_TypeName()
+	 * @model default=""
+	 * @generated
+	 */
+	String getTypeName();
+
+	/**
+	 * Sets the value of the '{@link crystal.Collections#getTypeName <em>Type Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type Name</em>' attribute.
+	 * @see #getTypeName()
+	 * @generated
+	 */
+	void setTypeName(String value);
 
 } // Collections

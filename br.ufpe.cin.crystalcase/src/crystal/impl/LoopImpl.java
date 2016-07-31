@@ -15,14 +15,33 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
+ *   <li>{@link crystal.impl.LoopImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.LoopImpl#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class LoopImpl extends StatementsImpl implements Loop {
+	/**
+	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_NAME_EDEFAULT = "Loop";
+	/**
+	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String className = CLASS_NAME_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -66,6 +85,15 @@ public class LoopImpl extends StatementsImpl implements Loop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getClassName() {
+		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getCode() {
 		return code;
 	}
@@ -90,6 +118,8 @@ public class LoopImpl extends StatementsImpl implements Loop {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CrystalPackage.LOOP__CLASS_NAME:
+				return getClassName();
 			case CrystalPackage.LOOP__CODE:
 				return getCode();
 		}
@@ -134,6 +164,8 @@ public class LoopImpl extends StatementsImpl implements Loop {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.LOOP__CLASS_NAME:
+				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.LOOP__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		}
@@ -150,7 +182,9 @@ public class LoopImpl extends StatementsImpl implements Loop {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (code: ");
+		result.append(" (className: ");
+		result.append(className);
+		result.append(", code: ");
 		result.append(code);
 		result.append(')');
 		return result.toString();

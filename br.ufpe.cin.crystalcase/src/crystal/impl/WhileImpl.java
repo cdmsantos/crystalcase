@@ -17,14 +17,56 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
+ *   <li>{@link crystal.impl.WhileImpl#getClassName <em>Class Name</em>}</li>
+ *   <li>{@link crystal.impl.WhileImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link crystal.impl.WhileImpl#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class WhileImpl extends StatementsImpl implements While {
+	/**
+	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_NAME_EDEFAULT = "While";
+
+	/**
+	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String className = CLASS_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCondition()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONDITION_EDEFAULT = "Type the WHILE condition";
+
+	/**
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCondition()
+	 * @generated
+	 * @ordered
+	 */
+	protected String condition = CONDITION_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,7 +75,7 @@ public class WhileImpl extends StatementsImpl implements While {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "Type the WHILE condition";
+	protected static final String CODE_EDEFAULT = "Type the WHILE code";
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -69,6 +111,36 @@ public class WhileImpl extends StatementsImpl implements While {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getClassName() {
+		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCondition() {
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCondition(String newCondition) {
+		String oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.WHILE__CONDITION, oldCondition, condition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getCode() {
 		return code;
 	}
@@ -93,6 +165,10 @@ public class WhileImpl extends StatementsImpl implements While {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CrystalPackage.WHILE__CLASS_NAME:
+				return getClassName();
+			case CrystalPackage.WHILE__CONDITION:
+				return getCondition();
 			case CrystalPackage.WHILE__CODE:
 				return getCode();
 		}
@@ -107,6 +183,9 @@ public class WhileImpl extends StatementsImpl implements While {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.WHILE__CONDITION:
+				setCondition((String)newValue);
+				return;
 			case CrystalPackage.WHILE__CODE:
 				setCode((String)newValue);
 				return;
@@ -122,6 +201,9 @@ public class WhileImpl extends StatementsImpl implements While {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.WHILE__CONDITION:
+				setCondition(CONDITION_EDEFAULT);
+				return;
 			case CrystalPackage.WHILE__CODE:
 				setCode(CODE_EDEFAULT);
 				return;
@@ -137,6 +219,10 @@ public class WhileImpl extends StatementsImpl implements While {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.WHILE__CLASS_NAME:
+				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
+			case CrystalPackage.WHILE__CONDITION:
+				return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
 			case CrystalPackage.WHILE__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		}
@@ -153,7 +239,11 @@ public class WhileImpl extends StatementsImpl implements While {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (code: ");
+		result.append(" (className: ");
+		result.append(className);
+		result.append(", condition: ");
+		result.append(condition);
+		result.append(", code: ");
 		result.append(code);
 		result.append(')');
 		return result.toString();

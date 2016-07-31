@@ -12,8 +12,7 @@ import crystal.diagram.providers.CrystalElementTypes;
 /**
  * @generated
  */
-public class TransitionItemSemanticEditPolicy extends
-		CrystalBaseItemSemanticEditPolicy {
+public class TransitionItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated

@@ -17,14 +17,35 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
+ *   <li>{@link crystal.impl.SelectImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.SelectImpl#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class SelectImpl extends StatementsImpl implements Select {
+	/**
+	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_NAME_EDEFAULT = "Select";
+
+	/**
+	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String className = CLASS_NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -69,6 +90,15 @@ public class SelectImpl extends StatementsImpl implements Select {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getClassName() {
+		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getCode() {
 		return code;
 	}
@@ -93,6 +123,8 @@ public class SelectImpl extends StatementsImpl implements Select {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CrystalPackage.SELECT__CLASS_NAME:
+				return getClassName();
 			case CrystalPackage.SELECT__CODE:
 				return getCode();
 		}
@@ -137,6 +169,8 @@ public class SelectImpl extends StatementsImpl implements Select {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.SELECT__CLASS_NAME:
+				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.SELECT__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		}
@@ -153,7 +187,9 @@ public class SelectImpl extends StatementsImpl implements Select {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (code: ");
+		result.append(" (className: ");
+		result.append(className);
+		result.append(", code: ");
 		result.append(code);
 		result.append(')');
 		return result.toString();

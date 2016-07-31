@@ -45,9 +45,32 @@ public class CloseItemProvider extends StatementsItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addClassNamePropertyDescriptor(object);
 			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Close_className_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Close_className_feature", "_UI_Close_type"),
+				 CrystalPackage.Literals.CLOSE__CLASS_NAME,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,7 +114,7 @@ public class CloseItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Close)object).getDescription();
+		String label = ((Close)object).getClassName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Close_type") :
 			getString("_UI_Close_type") + " " + label;
@@ -110,6 +133,7 @@ public class CloseItemProvider extends StatementsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Close.class)) {
+			case CrystalPackage.CLOSE__CLASS_NAME:
 			case CrystalPackage.CLOSE__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

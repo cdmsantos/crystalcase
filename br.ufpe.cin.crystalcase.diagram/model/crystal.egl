@@ -4,24 +4,82 @@
 
 for(element in Procedure.allInstances()) {
 
+	//DECLARAÇÃO DE VARIÁVEIS
+	printDeclarativePart(element);
+	
+	//PARAMETROS
+	printParametersPart(element);
+
 	out.println("CREATE OR REPLACE PROCEDURE "+element.name); --static
 	out.println("AS"); --static
 	out.println("BEGIN"); --static
 	
-	for(statements in element.executablePart) {
-		out.println("   " + statements.code + ";");
-	}
+	//PARTE EXECUTÁVEL
+	var firstElement = getFirstElement();
+	printExecutablePart(firstElement);
+	printElementsByTransition(firstElement);
 	
 	out.println("END;"); --static
 	out.println("/"); --static
-	out.println();
+	out.println(); --static
 }
 
 for(element in Function.allInstances()) {
 
 	//DECLARAÇÃO DE VARIÁVEIS
-	if(not isEmpty(element.declarativePart)){
-		for(declaration in element.declarativePart){
+	printDeclarativePart(element);
+	
+	out.println(); --static
+	out.println("CREATE OR REPLACE FUNCTION " + element.name); --static
+	
+	//PARAMETROS
+	printParametersPart(element);
+	
+	//RETORNO
+	var returnStatement;
+	if(not isEmpty(element.returnPart)){
+		for(backStatement in element.returnPart) {
+			returnStatement = backStatement;
+			out.println("RETURN " + backStatement.options);
+			out.println("IS " + backStatement.name + " " + backStatement.options + ";");
+		}
+	}
+	
+	out.println("BEGIN"); --static
+	
+	//PARTE EXECUTÁVEL
+	var firstElement = getFirstElement();
+	printExecutablePart(firstElement);
+	printElementsByTransition(firstElement);
+
+	out.println("RETURN " + returnStatement.name + ";");
+	out.println("END;"); --static
+	out.println("/"); --static
+	out.println(); --static
+}
+
+operation getFirstElement(){
+	return Statements.all.
+		selectOne(s|s.isStart);
+}
+
+operation Statements getNext() {
+  return Transition.all.
+  	select(t|t.source = self).
+  	collect(t|t.target).
+  	flatten();
+}
+
+operation isEmpty (object) {
+   if(object.size > 0){
+      return false;
+   }
+   return true;
+}
+
+operation printDeclarativePart(object) {
+	if(not isEmpty(object.declarativePart)){
+		for(declaration in object.declarativePart){
 			out.println("DECLARE"); --static
 			if(not (declaration.className == "DataType")) {
 				out.println("   " + declaration.name + " " + declaration.className + ";");
@@ -30,35 +88,81 @@ for(element in Function.allInstances()) {
 			}
 		}
 	}
+}
+
+operation printElementsByTransition(object) {
+	var i = 0 ;
+	var element;
+	for(transition in Transition.all) {
+		if(i = 0) { 
+			element = object.getNext();
+			i = 1;
+		} else{
+			element = element.first().getNext();
+		}
+		printExecutablePart(element.first());
+	}
+}
+
+operation printExecutablePart(object){
+	if(object.className == "If"){
+		out.println("   " + "IF " + object.condition + " THEN");
+		out.println("   " + "   " + object.code);
+		if(not isEmpty(object.codeElse)) {
+			out.println("   " + "ELSE"); --static
+			out.println("   " + "   " + object.codeElse);
+		}
+		out.println("   " + "END IF;"); --static
+	} else if (object.className == "Case") {
+		out.println("   " + "CASE " + object.condition);
+		out.println("   " + "   " + object.code);
+		out.println("   " + "END;"); --static
+	} else if (object.className == "While") {
+		out.println("   " + "WHILE " + object.condition);
+		out.println("   " + "LOOP");
+		out.println("   " + "   " + object.code);
+		out.println("   " + "END LOOP;"); --static
+	} else if (object.className == "For") {
+		out.println("   " + "FOR " + object.counter + "IN " + object.typeCounter + " " + object.lowestNumber + ".." + object.highestNumber);
+		out.println("   " + "LOOP"); --static
+		out.println("   " + "   " + object.code);
+		out.println("   " + "END LOOP;"); --static
+	} else if (object.className == "Loop") {
+		out.println("   " + "LOOP"); --static
+		out.println("   " + "   " + object.code);
+		out.println("   " + "END LOOP;"); --static
+	} else if (object.className == "CallProcedure" or object.className == "CallFunction") {
+		out.println("   " + "EXEC " + object.nameSubroutine);
+	} else {
+		out.println("   " + object.code + ";");	
+	}
 	
-	out.println("CREATE OR REPLACE FUNCTION "+element.name); --static
-	
-	//PARAMETROS
-	
-	//RETORNO
+	out.println(); --static
+}
+
+operation printParametersPart(object) {
+	if(not isEmpty(object.parameters)) {
+		out.println("("); --static
+		for(parameters in object.parameters) {
+			if(parameters.className == "DataType") {
+				out.println("   " + parameters.name + " " + parameters.type + " " + parameters.options);	
+			} else if(parameters.className == "Cursor") {
+				out.println("   " + parameters.name + " " + parameters.type + " SYS_REFCURSOR");
+			} else  {
+				out.println("   " + parameters.name + " " + parameters.typeName);
+			}
+		}
+		out.println(")"); --static
+	}
+}
+
+operation Statements printReturnPart(object) {
 	var returnStatement;
-	for(backStatement in element.returnPart) {
+	for(backStatement in object.returnPart) {
 		returnStatement = backStatement;
 		out.println("RETURN " + backStatement.options);
 		out.println("IS " + backStatement.name + " " + backStatement.options + ";");
 	}
-	
-	out.println("BEGIN"); --static
-	
-	for(statements in element.executablePart) {
-		out.println("   " + statements.code + ";");
-	}
-	
-	out.println("RETURN " + returnStatement.name + ";");
-	out.println("END;"); --static
-	out.println("/"); --static
-	out.println();
-}
-
-operation isEmpty (object) {
-   if(object.size > 0){
-      return false;
-   }
-   return true;
+	return returnStatement;
 }
 %]

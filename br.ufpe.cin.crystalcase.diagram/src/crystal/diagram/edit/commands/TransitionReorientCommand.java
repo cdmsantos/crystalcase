@@ -12,6 +12,7 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
 import crystal.Crystal;
+import crystal.CrystalCase;
 import crystal.Statements;
 import crystal.Transition;
 import crystal.diagram.edit.policies.CrystalBaseItemSemanticEditPolicy;
@@ -74,9 +75,8 @@ public class TransitionReorientCommand extends EditElementCommand {
 			return false;
 		}
 		Crystal container = (Crystal) getLink().eContainer();
-		return CrystalBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistTransition_4001(container, getLink(), getNewSource(),
-						target);
+		return CrystalBaseItemSemanticEditPolicy.getLinkConstraints().canExistTransition_4001(container, getLink(),
+				getNewSource(), target);
 	}
 
 	/**
@@ -91,19 +91,16 @@ public class TransitionReorientCommand extends EditElementCommand {
 			return false;
 		}
 		Crystal container = (Crystal) getLink().eContainer();
-		return CrystalBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistTransition_4001(container, getLink(), source,
-						getNewTarget());
+		return CrystalBaseItemSemanticEditPolicy.getLinkConstraints().canExistTransition_4001(container, getLink(),
+				source, getNewTarget());
 	}
 
 	/**
 	 * @generated
 	 */
-	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
-			IAdaptable info) throws ExecutionException {
+	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		if (!canExecute()) {
-			throw new ExecutionException(
-					"Invalid arguments in reorient link command"); //$NON-NLS-1$
+			throw new ExecutionException("Invalid arguments in reorient link command"); //$NON-NLS-1$
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
 			return reorientSource();

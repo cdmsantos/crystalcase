@@ -10,16 +10,33 @@ package crystal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
+ *   <li>{@link crystal.Open#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.Open#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @see crystal.CrystalPackage#getOpen()
  * @model annotation="gmf.node figure='rectangle'"
  * @generated
  */
 public interface Open extends Statements {
+	/**
+	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"Open"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see crystal.CrystalPackage#getOpen_ClassName()
+	 * @model default="Open" changeable="false"
+	 * @generated
+	 */
+	String getClassName();
+
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
 	 * The default value is <code>"OPEN cursorName"</code>.

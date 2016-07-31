@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.edit.policies;
 
 import java.util.ArrayList;
@@ -25,21 +25,21 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
-import crystal.diagram.edit.parts.CallFunctionEditPart;
-import crystal.diagram.edit.parts.CallProcedureEditPart;
-import crystal.diagram.edit.parts.CaseEditPart;
-import crystal.diagram.edit.parts.CloseEditPart;
-import crystal.diagram.edit.parts.DeleteEditPart;
-import crystal.diagram.edit.parts.ExceptionEditPart;
-import crystal.diagram.edit.parts.FetchEditPart;
-import crystal.diagram.edit.parts.ForEditPart;
-import crystal.diagram.edit.parts.IfEditPart;
-import crystal.diagram.edit.parts.InsertEditPart;
-import crystal.diagram.edit.parts.LoopEditPart;
-import crystal.diagram.edit.parts.OpenEditPart;
-import crystal.diagram.edit.parts.SelectEditPart;
-import crystal.diagram.edit.parts.UpdateEditPart;
-import crystal.diagram.edit.parts.WhileEditPart;
+import crystal.diagram.edit.parts.CallFunction2EditPart;
+import crystal.diagram.edit.parts.CallProcedure2EditPart;
+import crystal.diagram.edit.parts.Case2EditPart;
+import crystal.diagram.edit.parts.Close2EditPart;
+import crystal.diagram.edit.parts.Delete2EditPart;
+import crystal.diagram.edit.parts.Exception2EditPart;
+import crystal.diagram.edit.parts.Fetch2EditPart;
+import crystal.diagram.edit.parts.For2EditPart;
+import crystal.diagram.edit.parts.If2EditPart;
+import crystal.diagram.edit.parts.Insert2EditPart;
+import crystal.diagram.edit.parts.Loop2EditPart;
+import crystal.diagram.edit.parts.Open2EditPart;
+import crystal.diagram.edit.parts.Select2EditPart;
+import crystal.diagram.edit.parts.Update2EditPart;
+import crystal.diagram.edit.parts.While2EditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
 import crystal.diagram.part.CrystalVisualIDRegistry;
@@ -47,12 +47,11 @@ import crystal.diagram.part.CrystalVisualIDRegistry;
 /**
  * @generated
  */
-public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy
-		extends CanonicalEditPolicy {
+public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void refreshOnActivate() {
 		// Need to activate editpart children before invoking the canonical refresh for EditParts to add event listeners
 		List<?> c = getHost().getChildren();
@@ -63,21 +62,22 @@ public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return CrystalPackage.eINSTANCE.getSubprograms_ExecutablePart();
+		return CrystalPackage.eINSTANCE.getFunction_ExecutablePart();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	@SuppressWarnings("rawtypes")
+
 	protected List getSemanticChildrenList() {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getFunctionFunctionExecutablePartCompartment_7005SemanticChildren(viewObject);
+				.getFunctionFunctionExecutablePartCompartment_7023SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -85,51 +85,48 @@ public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy
 	}
 
 	/**
-	 * @generated
-	 */
-	protected boolean isOrphaned(Collection<EObject> semanticChildren,
-			final View view) {
-		return isMyDiagramElement(view)
-				&& !semanticChildren.contains(view.getElement());
+	* @generated
+	*/
+	protected boolean isOrphaned(Collection<EObject> semanticChildren, final View view) {
+		return isMyDiagramElement(view) && !semanticChildren.contains(view.getElement());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case ExceptionEditPart.VISUAL_ID:
-		case IfEditPart.VISUAL_ID:
-		case CaseEditPart.VISUAL_ID:
-		case InsertEditPart.VISUAL_ID:
-		case UpdateEditPart.VISUAL_ID:
-		case DeleteEditPart.VISUAL_ID:
-		case SelectEditPart.VISUAL_ID:
-		case WhileEditPart.VISUAL_ID:
-		case ForEditPart.VISUAL_ID:
-		case LoopEditPart.VISUAL_ID:
-		case OpenEditPart.VISUAL_ID:
-		case FetchEditPart.VISUAL_ID:
-		case CloseEditPart.VISUAL_ID:
-		case CallProcedureEditPart.VISUAL_ID:
-		case CallFunctionEditPart.VISUAL_ID:
+		case Exception2EditPart.VISUAL_ID:
+		case If2EditPart.VISUAL_ID:
+		case Case2EditPart.VISUAL_ID:
+		case Insert2EditPart.VISUAL_ID:
+		case Update2EditPart.VISUAL_ID:
+		case Delete2EditPart.VISUAL_ID:
+		case Select2EditPart.VISUAL_ID:
+		case While2EditPart.VISUAL_ID:
+		case For2EditPart.VISUAL_ID:
+		case Loop2EditPart.VISUAL_ID:
+		case Open2EditPart.VISUAL_ID:
+		case Fetch2EditPart.VISUAL_ID:
+		case Close2EditPart.VISUAL_ID:
+		case CallProcedure2EditPart.VISUAL_ID:
+		case CallFunction2EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void refreshSemantic() {
 		if (resolveSemanticElement() == null) {
 			return;
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getFunctionFunctionExecutablePartCompartment_7005SemanticChildren((View) getHost()
-						.getModel());
+				.getFunctionFunctionExecutablePartCompartment_7023SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();
@@ -143,8 +140,8 @@ public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy
 		// iteration happens over list of desired semantic elements, trying to find best matching View, while original CEP
 		// iterates views, potentially losing view (size/bounds) information - i.e. if there are few views to reference same EObject, only last one 
 		// to answer isOrphaned == true will be used for the domain element representation, see #cleanCanonicalSemanticChildren()
-		for (Iterator<CrystalNodeDescriptor> descriptorsIterator = childDescriptors
-				.iterator(); descriptorsIterator.hasNext();) {
+		for (Iterator<CrystalNodeDescriptor> descriptorsIterator = childDescriptors.iterator(); descriptorsIterator
+				.hasNext();) {
 			CrystalNodeDescriptor next = descriptorsIterator.next();
 			String hint = CrystalVisualIDRegistry.getType(next.getVisualID());
 			LinkedList<View> perfectMatch = new LinkedList<View>(); // both semanticElement and hint match that of NodeDescriptor
@@ -173,11 +170,9 @@ public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy
 				childDescriptors.size());
 		for (CrystalNodeDescriptor next : childDescriptors) {
 			String hint = CrystalVisualIDRegistry.getType(next.getVisualID());
-			IAdaptable elementAdapter = new CanonicalElementAdapter(
-					next.getModelElement(), hint);
-			CreateViewRequest.ViewDescriptor descriptor = new CreateViewRequest.ViewDescriptor(
-					elementAdapter, Node.class, hint, ViewUtil.APPEND, false,
-					host().getDiagramPreferencesHint());
+			IAdaptable elementAdapter = new CanonicalElementAdapter(next.getModelElement(), hint);
+			CreateViewRequest.ViewDescriptor descriptor = new CreateViewRequest.ViewDescriptor(elementAdapter,
+					Node.class, hint, ViewUtil.APPEND, false, host().getDiagramPreferencesHint());
 			viewDescriptors.add(descriptor);
 		}
 
@@ -186,10 +181,10 @@ public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy
 		CreateViewRequest request = getCreateViewRequest(viewDescriptors);
 		Command cmd = getCreateViewCommand(request);
 		if (cmd != null && cmd.canExecute()) {
-			SetViewMutabilityCommand.makeMutable(
-					new EObjectAdapter(host().getNotationView())).execute();
+			SetViewMutabilityCommand.makeMutable(new EObjectAdapter(host().getNotationView())).execute();
 			executeCommand(cmd);
 			@SuppressWarnings("unchecked")
+
 			List<IAdaptable> nl = (List<IAdaptable>) request.getNewObject();
 			createdViews.addAll(nl);
 		}
@@ -198,8 +193,8 @@ public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy
 		}
 		if (createdViews.size() > 1) {
 			// perform a layout of the container
-			DeferredLayoutCommand layoutCmd = new DeferredLayoutCommand(host()
-					.getEditingDomain(), createdViews, host());
+			DeferredLayoutCommand layoutCmd = new DeferredLayoutCommand(host().getEditingDomain(), createdViews,
+					host());
 			executeCommand(new ICommandProxy(layoutCmd));
 		}
 

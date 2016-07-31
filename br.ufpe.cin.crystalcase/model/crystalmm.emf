@@ -13,32 +13,36 @@ class Crystal {
 @gmf.node(figure="rectangle", border.style="dash", border.width="1", label.readOnly = "true")
 abstract class Subprograms{
 	attr String name;
-	@gmf.compartment
-	val Parameters[*] declarativePart;
-	@gmf.compartment
-	val Statements[*] executablePart;
-	
-	
-	
-	
 }
 
 @gmf.node(label="name", label.text="Procedure", border.color="255,13,13") //vermelho
 class Procedure extends Subprograms {
 	@gmf.compartment
+	val Parameters[*] declarativePart;
+	@gmf.compartment
 	val Parameters[*] parameters;
+	@gmf.compartment
+	val Statements[*] executablePart;
 }
 
 @gmf.node(label="name", label.text="Function", border.color="25,191,108") //azul	
 class Function extends Subprograms {
 	@gmf.compartment
+	val Parameters[*] declarativePart;
+	@gmf.compartment
 	val Parameters[*] parameters;
 	@gmf.compartment
-	val Parameters[*] returnPart;
+	val Parameters[1] returnPart;
+	@gmf.compartment
+	val Statements[*] executablePart;
 }
 
 @gmf.node(label="name", label.text="Anonymous Block", border.color="43,106,215") //verde
 class AnonymousBlock extends Subprograms {
+	@gmf.compartment
+	val Parameters[*] declarativePart;
+	@gmf.compartment
+	val Statements[*] executablePart;
 }
 
 //Parameters
@@ -60,15 +64,14 @@ class DataType extends Parameters{
 class Collections extends Parameters{
 	attr String className ="Collection";
 	attr String code = "TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)";
+	attr String typeName;
 }
 
 @gmf.node(label.text="Record")
 class Records extends Parameters{
 	attr String className ="Record";
-	attr String code = "TYPE recordType IS RECORD 
-							(id number(5), 
-							name varchar2(25), 
-							lastName tableA.last_name%type)";
+	attr String code = "TYPE recordType IS RECORD (id number(5), name varchar2(25), lastName tableA.last_name%type)";
+	attr String typeName;
 }
 
 @gmf.node(label.text="Cursor")
@@ -81,86 +84,104 @@ class Cursor extends Parameters {
 @gmf.node(label="description", label.icon="true", label.placement="internal")
 abstract class Statements{
 	attr String description = "Description";
+	attr boolean isStart;
 }
 
 @gmf.node(figure="rectangle")
 class Exception extends Statements{
-	attr String code = "EXCEPTION
-							WHEN no_data_found THEN 
-								DBMS_OUTPUT.PUT_LINE('There aren't data registred')";
+	attr String className ="Exception";
+	attr String code = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE('There aren't data registred')";
 }
 
 @gmf.node(figure="rectangle")
 class If extends Statements{
-	attr String code = "Type the IF condition";
+	attr String className ="If";
+	attr String condition = "Type the IF condition";
+	attr String code = "Type the IF code";
 }
 
 @gmf.node(figure="rectangle")
 class Case extends Statements{
-	attr String code = "Type the CASE expression";
+	attr String className ="Case";
+	attr String condition = "Type the CASE expression";
+	attr String code = "Type the CASE code";
 }
 
 @gmf.node(figure="rectangle")
 class Insert extends Statements{
+	attr String className ="Insert";
 	attr String code = "INSERT INTO tableA (id, name) VALUES (1, 'example')";
 }
 
 @gmf.node(figure="rectangle")
 class Update extends Statements{
+	attr String className ="Update";
 	attr String code = "UPDATE tableA SET name = 'example' WHERE id = 1";
 }
 
 @gmf.node(figure="rectangle")
 class Delete extends Statements{
+	attr String className ="Delete";
 	attr String code = "DELETE FROM tableA WHERE ID = 1";
 }
 
 @gmf.node(figure="rectangle")
 class Select extends Statements{
+	attr String className ="Select";
 	attr String code = "SELECT * FROM tableA WHERE id = 1";
 }
 
 @gmf.node(figure="rectangle")
 class While extends Statements{
-	attr String code = "Type the WHILE condition";
+	attr String className ="While";
+	attr String condition = "Type the WHILE condition";
+	attr String code = "Type the WHILE code";
 }
 
 @gmf.node(figure="rectangle")
 class For extends Statements{
+	attr String className ="For";
 	attr String counter = "Type the name of the FOR counter";
 	attr ForCounter typeCounter;
 	attr int lowestNumber = 0;
 	attr int highestNumber = 0;
+	attr String code = "Type the FOR code";
 }
 
 @gmf.node(figure="rectangle")
 class Loop extends Statements{
+	attr String className ="Loop";
 	attr String code = "Type the code of the Loop statement";
 }
 
 @gmf.node(figure="rectangle")
 class Open extends Statements{
+	attr String className ="Open";
 	attr String code = "OPEN cursorName";
 }
 
 @gmf.node(figure="rectangle")
 class Fetch extends Statements{
+	attr String className ="Fetch";
 	attr String code = "FETCH cursorName INTO variableCursor";
 }
 
 @gmf.node(figure="rectangle")
 class Close extends Statements{
+	attr String className ="Close";
 	attr String code = "CLOSE cursorName";
 }
 
 @gmf.node(figure="rectangle")
 class CallProcedure extends Statements{
-	attr String name;
+	attr String className ="CallProcedure";
+	attr String nameSubroutine;
 }
 
 @gmf.node(figure="rectangle")
 class CallFunction extends Statements{
-	attr String name;
+	attr String className ="CallFunction";
+	attr String nameSubroutine;
 }
 
 @gmf.link(source="source", target="target", incoming="true", target.decoration="arrow", color="0,0,0", width="1")

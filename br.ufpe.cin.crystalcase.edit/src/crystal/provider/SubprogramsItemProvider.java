@@ -91,37 +91,6 @@ public class SubprogramsItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(CrystalPackage.Literals.SUBPROGRAMS__DECLARATIVE_PART);
-			childrenFeatures.add(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -151,10 +120,6 @@ public class SubprogramsItemProvider
 			case CrystalPackage.SUBPROGRAMS__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CrystalPackage.SUBPROGRAMS__DECLARATIVE_PART:
-			case CrystalPackage.SUBPROGRAMS__EXECUTABLE_PART:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -169,101 +134,6 @@ public class SubprogramsItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__DECLARATIVE_PART,
-				 CrystalFactory.eINSTANCE.createDataType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__DECLARATIVE_PART,
-				 CrystalFactory.eINSTANCE.createCollections()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__DECLARATIVE_PART,
-				 CrystalFactory.eINSTANCE.createRecords()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__DECLARATIVE_PART,
-				 CrystalFactory.eINSTANCE.createCursor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createException()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createIf()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createCase()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createInsert()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createUpdate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createDelete()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createSelect()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createWhile()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createFor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createLoop()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createOpen()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createFetch()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createClose()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createCallProcedure()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SUBPROGRAMS__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createCallFunction()));
 	}
 
 	/**
