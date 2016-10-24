@@ -4,14 +4,16 @@
 
 for(element in Procedure.allInstances()) {
 
-	//DECLARAÇÃO DE VARIÁVEIS
-	printDeclarativePart(element);
+	out.println("CREATE OR REPLACE PROCEDURE "+element.name); --static
 	
 	//PARAMETROS
 	printParametersPart(element);
-
-	out.println("CREATE OR REPLACE PROCEDURE "+element.name); --static
+	
 	out.println("AS"); --static
+
+	//DECLARAÇÃO DE VARIÁVEIS
+	printDeclarativePart(element);
+	
 	out.println("BEGIN"); --static
 	
 	//PARTE EXECUTÁVEL
@@ -25,9 +27,6 @@ for(element in Procedure.allInstances()) {
 }
 
 for(element in Function.allInstances()) {
-
-	//DECLARAÇÃO DE VARIÁVEIS
-	printDeclarativePart(element);
 	
 	out.println(); --static
 	out.println("CREATE OR REPLACE FUNCTION " + element.name); --static
@@ -44,6 +43,11 @@ for(element in Function.allInstances()) {
 			out.println("IS " + backStatement.name + " " + backStatement.options + ";");
 		}
 	}
+	
+	out.println("AS"); --static
+
+	//DECLARAÇÃO DE VARIÁVEIS
+	printDeclarativePart(element);
 	
 	out.println("BEGIN"); --static
 	
@@ -79,8 +83,8 @@ operation isEmpty (object) {
 
 operation printDeclarativePart(object) {
 	if(not isEmpty(object.declarativePart)){
-		for(declaration in object.declarativePart){
-			out.println("DECLARE"); --static
+		--out.println("DECLARE"); --static
+		for(declaration in object.declarativePart){	
 			if(not (declaration.className == "DataType")) {
 				out.println("   " + declaration.name + " " + declaration.className + ";");
 			} else {
@@ -123,7 +127,7 @@ operation printExecutablePart(object){
 		out.println("   " + "   " + object.code);
 		out.println("   " + "END LOOP;"); --static
 	} else if (object.className == "For") {
-		out.println("   " + "FOR " + object.counter + "IN " + object.typeCounter + " " + object.lowestNumber + ".." + object.highestNumber);
+		out.println("   " + "FOR " + object.counter + " IN " + object.typeCounter + " " + object.lowestNumber + ".." + object.highestNumber);
 		out.println("   " + "LOOP"); --static
 		out.println("   " + "   " + object.code);
 		out.println("   " + "END LOOP;"); --static
@@ -132,7 +136,7 @@ operation printExecutablePart(object){
 		out.println("   " + "   " + object.code);
 		out.println("   " + "END LOOP;"); --static
 	} else if (object.className == "CallProcedure" or object.className == "CallFunction") {
-		out.println("   " + "EXEC " + object.nameSubroutine);
+		out.println("   " + "EXEC " + object.nameSubroutine + ";");
 	} else {
 		out.println("   " + object.code + ";");	
 	}

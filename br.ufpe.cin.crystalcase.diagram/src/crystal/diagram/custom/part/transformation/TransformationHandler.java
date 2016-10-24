@@ -11,7 +11,9 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
@@ -21,10 +23,16 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.workspace.util.WorkspaceSynchronizer;
 import org.eclipse.epsilon.egl.EglFileGeneratingTemplateFactory;
 import org.eclipse.epsilon.egl.EglTemplateFactoryModuleAdapter;
 import org.eclipse.epsilon.emc.emf.InMemoryEmfModel;
 import org.eclipse.epsilon.eol.exceptions.EolRuntimeException;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
@@ -34,9 +42,12 @@ import org.osgi.framework.Bundle;
 
 import crystal.CrystalPackage;
 import crystal.diagram.part.CrystalDiagramEditor;
+import crystal.diagram.part.CrystalDiagramEditorPlugin;
 
 public class TransformationHandler extends AbstractHandler {
 
+	private static final String MARKER_TYPE = CrystalDiagramEditorPlugin.ID + ".diagnostic"; //$NON-NLS-1$
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		// Get the active editor
@@ -45,37 +56,58 @@ public class TransformationHandler extends AbstractHandler {
 		// This is only meaningful if the editor is a Friends diagram editor
 		if (editor instanceof CrystalDiagramEditor) {
 			CrystalDiagramEditor diagramEditor = (CrystalDiagramEditor) editor;
-		
+
+			diagramEditor.doSave(new NullProgressMonitor());
+			
 			// Get the EMF model under the editor
 			Resource resource = getFirstSemanticModelResource( diagramEditor.getEditingDomain().getResourceSet());
 				if (resource == null) return null;
 			
-			// Wrap it as an InMemoryEmfModel
-			InMemoryEmfModel m = new InMemoryEmfModel("M", resource, CrystalPackage.eINSTANCE);
+			IResource resourceAux = WorkspaceSynchronizer.getFile(resource);
 			
-			// Construct the EGL module
-			EglTemplateFactoryModuleAdapter module = new EglTemplateFactoryModuleAdapter(new EglFileGeneratingTemplateFactory());
-			
-			Bundle bundle = Platform.getBundle("br.ufpe.cin.crystalcase.diagram");
-			URL fileURL = bundle.getEntry("model/crystal.egl");
-			
+			IMarker[] markers = null;
 			try {
-				module.parse(FileLocator.resolve(fileURL).toURI());
-			} catch (Exception e) {
-				e.printStackTrace();
+				markers = resourceAux.findMarkers(MARKER_TYPE, true, IResource.DEPTH_INFINITE);
+			} catch (CoreException e) {
+				CrystalDiagramEditorPlugin.getInstance().logError("Validation markers refresh failure", e); //$NON-NLS-1$
 			}
 			
-			module.getContext().getModelRepository().addModel(m);
-			
-			String out = "Erro";
-			
-			try {
-				out = (String) module.execute();
-			} catch (EolRuntimeException e) {
-				e.printStackTrace();
+			if(markers.length > 0) {
+				
+				Display display = Display.getCurrent();
+				Shell shell = new Shell (display);
+				
+				MessageDialog dialog = new MessageDialog(shell, "Error", null,
+					    "There is(are) error(s) in your code. You have to fix them before try generate the code again.", MessageDialog.ERROR, new String[] { "Ok"}, 0);
+					int result = dialog.open();
+					System.out.println(result);
+			} else {				
+				// Wrap it as an InMemoryEmfModel
+				InMemoryEmfModel m = new InMemoryEmfModel("M", resource, CrystalPackage.eINSTANCE);
+				
+				// Construct the EGL module
+				EglTemplateFactoryModuleAdapter module = new EglTemplateFactoryModuleAdapter(new EglFileGeneratingTemplateFactory());
+				
+				Bundle bundle = Platform.getBundle("br.ufpe.cin.crystalcase.diagram");
+				URL fileURL = bundle.getEntry("model/crystal.egl");
+				
+				try {
+					module.parse(FileLocator.resolve(fileURL).toURI());
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+				module.getContext().getModelRepository().addModel(m);
+				
+				String out = "Erro";
+				
+				try {
+					out = (String) module.execute();
+				} catch (EolRuntimeException e) {
+					e.printStackTrace();
+				}
+				createSQLFile(out, resource);
 			}
-			createSQLFile(out, resource);
-			
 		}
 		return null;
 	}
