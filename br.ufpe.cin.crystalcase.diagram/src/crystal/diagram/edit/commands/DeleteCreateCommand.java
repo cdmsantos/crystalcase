@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
 import crystal.Delete;
+import crystal.If;
 import crystal.Procedure;
 import crystal.Subprograms;
 
@@ -59,8 +60,8 @@ public class DeleteCreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Delete newElement = CrystalFactory.eINSTANCE.createDelete();
 
-		Procedure owner = (Procedure) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getIfs().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

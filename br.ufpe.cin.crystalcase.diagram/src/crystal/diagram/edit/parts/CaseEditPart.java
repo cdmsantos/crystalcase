@@ -8,6 +8,7 @@ import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -26,6 +27,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
 import crystal.diagram.edit.policies.CaseItemSemanticEditPolicy;
+import crystal.diagram.edit.policies.OpenDiagramEditPolicy;
 import crystal.diagram.part.CrystalVisualIDRegistry;
 
 /**
@@ -36,7 +38,7 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3058;
+	public static final int VISUAL_ID = 3183;
 
 	/**
 	 * @generated
@@ -62,7 +64,7 @@ public class CaseEditPart extends ShapeNodeEditPart {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new CaseItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -113,6 +115,12 @@ public class CaseEditPart extends ShapeNodeEditPart {
 			((CaseDescriptionEditPart) childEditPart).setLabel(getPrimaryShape().getFigureCaseLabelFigure());
 			return true;
 		}
+		if (childEditPart instanceof CaseCaseCasesCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseCasesCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((CaseCaseCasesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -121,6 +129,11 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof CaseDescriptionEditPart) {
+			return true;
+		}
+		if (childEditPart instanceof CaseCaseCasesCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseCasesCompartmentFigure();
+			pane.remove(((CaseCaseCasesCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -150,6 +163,9 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof CaseCaseCasesCompartmentEditPart) {
+			return getPrimaryShape().getCaseCasesCompartmentFigure();
+		}
 		return getContentPane();
 	}
 
@@ -257,8 +273,13 @@ public class CaseEditPart extends ShapeNodeEditPart {
 		private WrappingLabel fFigureCaseLabelFigure;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
+		private RectangleFigure fCaseCasesCompartmentFigure;
+
+		/**
+			 * @generated
+			 */
 		public CaseFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -273,8 +294,15 @@ public class CaseEditPart extends ShapeNodeEditPart {
 			fFigureCaseLabelFigure = new WrappingLabel();
 
 			fFigureCaseLabelFigure.setText("Case");
+			fFigureCaseLabelFigure.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
 			this.add(fFigureCaseLabelFigure);
+
+			fCaseCasesCompartmentFigure = new RectangleFigure();
+
+			fCaseCasesCompartmentFigure.setOutline(false);
+
+			this.add(fCaseCasesCompartmentFigure);
 
 		}
 
@@ -283,6 +311,13 @@ public class CaseEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureCaseLabelFigure() {
 			return fFigureCaseLabelFigure;
+		}
+
+		/**
+		* @generated
+		*/
+		public RectangleFigure getCaseCasesCompartmentFigure() {
+			return fCaseCasesCompartmentFigure;
 		}
 
 	}

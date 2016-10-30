@@ -34,7 +34,7 @@ public class ProcedureProcedureDeclarativePartCompartmentEditPart extends ShapeC
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 7020;
+	public static final int VISUAL_ID = 7015;
 
 	/**
 	* @generated

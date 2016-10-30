@@ -66,7 +66,7 @@ public class CollectionsItemProvider extends ParametersItemProvider {
 				 getString("_UI_Collections_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Collections_className_feature", "_UI_Collections_type"),
 				 CrystalPackage.Literals.COLLECTIONS__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

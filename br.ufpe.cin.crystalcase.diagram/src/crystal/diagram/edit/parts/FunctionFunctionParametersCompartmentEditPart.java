@@ -34,7 +34,7 @@ public class FunctionFunctionParametersCompartmentEditPart extends ShapeCompartm
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7016;
+	public static final int VISUAL_ID = 7017;
 
 	/**
 	 * @generated

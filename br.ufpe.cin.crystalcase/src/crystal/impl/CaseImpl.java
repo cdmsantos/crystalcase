@@ -5,11 +5,18 @@ package crystal.impl;
 import crystal.Case;
 import crystal.CrystalPackage;
 
+import crystal.Selector;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link crystal.impl.CaseImpl#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.impl.CaseImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link crystal.impl.CaseImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.impl.CaseImpl#getCases <em>Cases</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,44 +54,14 @@ public class CaseImpl extends StatementsImpl implements Case {
 	protected String className = CLASS_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * The cached value of the '{@link #getCases() <em>Cases</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCondition()
+	 * @see #getCases()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONDITION_EDEFAULT = "Type the CASE expression";
-
-	/**
-	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCondition()
-	 * @generated
-	 * @ordered
-	 */
-	protected String condition = CONDITION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CODE_EDEFAULT = "Type de CASE code";
-
-	/**
-	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected String code = CODE_EDEFAULT;
+	protected EList<Selector> cases;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,20 +96,11 @@ public class CaseImpl extends StatementsImpl implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCondition() {
-		return condition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCondition(String newCondition) {
-		String oldCondition = condition;
-		condition = newCondition;
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CASE__CONDITION, oldCondition, condition));
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CASE__CLASS_NAME, oldClassName, className));
 	}
 
 	/**
@@ -141,8 +108,11 @@ public class CaseImpl extends StatementsImpl implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCode() {
-		return code;
+	public EList<Selector> getCases() {
+		if (cases == null) {
+			cases = new EObjectContainmentEList<Selector>(Selector.class, this, CrystalPackage.CASE__CASES);
+		}
+		return cases;
 	}
 
 	/**
@@ -150,11 +120,13 @@ public class CaseImpl extends StatementsImpl implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCode(String newCode) {
-		String oldCode = code;
-		code = newCode;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CASE__CODE, oldCode, code));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CrystalPackage.CASE__CASES:
+				return ((InternalEList<?>)getCases()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -167,10 +139,8 @@ public class CaseImpl extends StatementsImpl implements Case {
 		switch (featureID) {
 			case CrystalPackage.CASE__CLASS_NAME:
 				return getClassName();
-			case CrystalPackage.CASE__CONDITION:
-				return getCondition();
-			case CrystalPackage.CASE__CODE:
-				return getCode();
+			case CrystalPackage.CASE__CASES:
+				return getCases();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,14 +150,16 @@ public class CaseImpl extends StatementsImpl implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.CASE__CONDITION:
-				setCondition((String)newValue);
+			case CrystalPackage.CASE__CLASS_NAME:
+				setClassName((String)newValue);
 				return;
-			case CrystalPackage.CASE__CODE:
-				setCode((String)newValue);
+			case CrystalPackage.CASE__CASES:
+				getCases().clear();
+				getCases().addAll((Collection<? extends Selector>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -201,11 +173,11 @@ public class CaseImpl extends StatementsImpl implements Case {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.CASE__CONDITION:
-				setCondition(CONDITION_EDEFAULT);
+			case CrystalPackage.CASE__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
 				return;
-			case CrystalPackage.CASE__CODE:
-				setCode(CODE_EDEFAULT);
+			case CrystalPackage.CASE__CASES:
+				getCases().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -221,10 +193,8 @@ public class CaseImpl extends StatementsImpl implements Case {
 		switch (featureID) {
 			case CrystalPackage.CASE__CLASS_NAME:
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
-			case CrystalPackage.CASE__CONDITION:
-				return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
-			case CrystalPackage.CASE__CODE:
-				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+			case CrystalPackage.CASE__CASES:
+				return cases != null && !cases.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -241,10 +211,6 @@ public class CaseImpl extends StatementsImpl implements Case {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (className: ");
 		result.append(className);
-		result.append(", condition: ");
-		result.append(condition);
-		result.append(", code: ");
-		result.append(code);
 		result.append(')');
 		return result.toString();
 	}

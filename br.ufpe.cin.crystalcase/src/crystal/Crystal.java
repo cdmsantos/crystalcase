@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link crystal.Crystal#getProcedures <em>Procedures</em>}</li>
  *   <li>{@link crystal.Crystal#getFunctions <em>Functions</em>}</li>
  *   <li>{@link crystal.Crystal#getBlocks <em>Blocks</em>}</li>
+ *   <li>{@link crystal.Crystal#getSelectorTransitions <em>Selector Transitions</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getCrystal()
@@ -89,5 +90,21 @@ public interface Crystal extends EObject {
 	 * @generated
 	 */
 	EList<AnonymousBlock> getBlocks();
+
+	/**
+	 * Returns the value of the '<em><b>Selector Transitions</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.SelectorTransition}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Selector Transitions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Selector Transitions</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getCrystal_SelectorTransitions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SelectorTransition> getSelectorTransitions();
 
 } // Crystal

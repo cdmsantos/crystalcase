@@ -4,13 +4,14 @@ package crystal;
 @gmf.diagram(foo="bar", rcp="false", onefile="true", diagram.extension="crystal")
 class Crystal {
 	val Transition[*] transitions;
+	val SelectorTransition[*] selectorTransitions;
 	val Procedure[*] procedures;
 	val Function[*] functions;
 	val AnonymousBlock[*] blocks;
 }
 
 //Subprograms
-@gmf.node(figure="rectangle", border.style="dash", border.width="1", label.readOnly = "true")
+@gmf.node(figure="rectangle", border.width="1", label.readOnly = "true")
 abstract class Subprograms{
 	attr String name;
 }
@@ -37,7 +38,7 @@ class Function extends Subprograms {
 	val Statements[*] executablePart;
 }
 
-@gmf.node(label="name", label.text="Anonymous Block", border.color="43,106,215") //verde
+@gmf.node(label="name", label.text="Anonymous Block", border.color="43,106,215", border.style="dash") //verde
 class AnonymousBlock extends Subprograms {
 	@gmf.compartment
 	val Parameters[*] declarativePart;
@@ -64,20 +65,20 @@ class DataType extends Parameters{
 class Collections extends Parameters{
 	attr String className ="Collection";
 	attr String code = "TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)";
-	attr String typeName;
+	attr String typeName = "collectionTypeName";
 }
 
 @gmf.node(label.text="Record")
 class Records extends Parameters{
 	attr String className ="Record";
 	attr String code = "TYPE recordType IS RECORD (id number(5), name varchar2(25), lastName tableA.last_name%type)";
-	attr String typeName;
+	attr String typeName = "recordTypeName";
 }
 
 @gmf.node(label.text="Cursor")
 class Cursor extends Parameters {
 	attr String className ="Cursor";
-	attr String code = "CURSOR cursorName IS selectStatement";
+	attr String cursorQuery = "selectStatement";
 }
 
 //Statements
@@ -97,14 +98,29 @@ class Exception extends Statements{
 class If extends Statements{
 	attr String className ="If";
 	attr String condition = "Type the IF condition";
-	attr String code = "Type the IF code";
+	
+	@gmf.compartment
+	val Statements[*] ifs;
+	@gmf.compartment
+	val Statements[*] elses;
 }
 
 @gmf.node(figure="rectangle")
 class Case extends Statements{
 	attr String className ="Case";
-	attr String condition = "Type the CASE expression";
-	attr String code = "Type the CASE code";
+	
+	@gmf.compartment
+	val Selector[*] cases;
+}
+
+@gmf.node(figure="rectangle", label="description", label.icon="true", label.placement="internal")
+class Selector {
+	attr String className = "Selector";
+	attr String condition = "Type the condition for this Selector";
+	attr String description = "Description";
+	
+	@gmf.compartment
+	val Statements[*] caseStatements;
 }
 
 @gmf.node(figure="rectangle")
@@ -135,7 +151,8 @@ class Select extends Statements{
 class While extends Statements{
 	attr String className ="While";
 	attr String condition = "Type the WHILE condition";
-	attr String code = "Type the WHILE code";
+	@gmf.compartment
+	val Statements[*] whileStatements;
 }
 
 @gmf.node(figure="rectangle")
@@ -145,31 +162,37 @@ class For extends Statements{
 	attr ForCounter typeCounter;
 	attr int lowestNumber = 0;
 	attr int highestNumber = 0;
-	attr String code = "Type the FOR code";
+
+	@gmf.compartment
+	val Statements[*] forStatements;
 }
 
 @gmf.node(figure="rectangle")
 class Loop extends Statements{
 	attr String className ="Loop";
-	attr String code = "Type the code of the Loop statement";
+	attr String breakCondition = "Type the break condition for LOOP";
+	
+	@gmf.compartment
+	val Statements[*] loopStatements;
 }
 
 @gmf.node(figure="rectangle")
 class Open extends Statements{
 	attr String className ="Open";
-	attr String code = "OPEN cursorName";
+	attr String cursorName = "cursorName";
 }
 
 @gmf.node(figure="rectangle")
 class Fetch extends Statements{
 	attr String className ="Fetch";
-	attr String code = "FETCH cursorName INTO variableCursor";
+	attr String cursorName = "cursorName";
+	attr String variableName = "variableCursor";
 }
 
 @gmf.node(figure="rectangle")
 class Close extends Statements{
 	attr String className ="Close";
-	attr String code = "CLOSE cursorName";
+	attr String cursorName = "cursorName";
 }
 
 @gmf.node(figure="rectangle")
@@ -184,11 +207,18 @@ class CallFunction extends Statements{
 	attr String nameSubroutine;
 }
 
-@gmf.link(source="source", target="target", incoming="true", target.decoration="arrow", color="0,0,0", width="1")
+@gmf.link(source="source", target="target", incoming="true", target.decoration="arrow", color="0,0,0", width="1", label="name", label.text="Statement Connection", label.icon="true")
 class Transition{
-    attr String name = "Connection";
+    attr String name = "Statement Connection";
     ref Statements source;
     ref Statements target;
+}
+
+@gmf.link(source="source", target="target", incoming="true", target.decoration="arrow", color="0,0,0", width="1", label="name", label.text="Case Connection", label.icon="true")
+class SelectorTransition{
+    attr String name = "Case Connection";
+    ref Selector source;
+    ref Selector target;
 }
 
 enum ParameterType {

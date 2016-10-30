@@ -59,7 +59,7 @@ public class Collections4CreateCommand extends EditElementCommand {
 		Collections newElement = CrystalFactory.eINSTANCE.createCollections();
 
 		Function owner = (Function) getElementToEdit();
-		owner.getReturnPart().add(newElement);
+		owner.getParameters().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

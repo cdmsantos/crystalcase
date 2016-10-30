@@ -13,7 +13,7 @@ package crystal;
  * </p>
  * <ul>
  *   <li>{@link crystal.Open#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.Open#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.Open#getCursorName <em>Cursor Name</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getOpen()
@@ -31,37 +31,48 @@ public interface Open extends Statements {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getOpen_ClassName()
-	 * @model default="Open" changeable="false"
+	 * @model default="Open"
 	 * @generated
 	 */
 	String getClassName();
 
 	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"OPEN cursorName"</code>.
+	 * Sets the value of the '{@link crystal.Open#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Cursor Name</b></em>' attribute.
+	 * The default value is <code>"cursorName"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Cursor Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see crystal.CrystalPackage#getOpen_Code()
-	 * @model default="OPEN cursorName"
+	 * @return the value of the '<em>Cursor Name</em>' attribute.
+	 * @see #setCursorName(String)
+	 * @see crystal.CrystalPackage#getOpen_CursorName()
+	 * @model default="cursorName"
 	 * @generated
 	 */
-	String getCode();
+	String getCursorName();
 
 	/**
-	 * Sets the value of the '{@link crystal.Open#getCode <em>Code</em>}' attribute.
+	 * Sets the value of the '{@link crystal.Open#getCursorName <em>Cursor Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
+	 * @param value the new value of the '<em>Cursor Name</em>' attribute.
+	 * @see #getCursorName()
 	 * @generated
 	 */
-	void setCode(String value);
+	void setCursorName(String value);
 
 } // Open

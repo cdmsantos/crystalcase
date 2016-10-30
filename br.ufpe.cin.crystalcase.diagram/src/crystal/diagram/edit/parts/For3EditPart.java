@@ -8,6 +8,7 @@ import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -26,6 +27,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
 import crystal.diagram.edit.policies.For3ItemSemanticEditPolicy;
+import crystal.diagram.edit.policies.OpenDiagramEditPolicy;
 import crystal.diagram.part.CrystalVisualIDRegistry;
 
 /**
@@ -36,7 +38,7 @@ public class For3EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3045;
+	public static final int VISUAL_ID = 3167;
 
 	/**
 	* @generated
@@ -62,7 +64,7 @@ public class For3EditPart extends ShapeNodeEditPart {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new For3ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -113,6 +115,12 @@ public class For3EditPart extends ShapeNodeEditPart {
 			((ForDescription3EditPart) childEditPart).setLabel(getPrimaryShape().getFigureForLabelFigure());
 			return true;
 		}
+		if (childEditPart instanceof ForForForStatementsCompartment3EditPart) {
+			IFigure pane = getPrimaryShape().getForForStatementsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((ForForForStatementsCompartment3EditPart) childEditPart).getFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -121,6 +129,11 @@ public class For3EditPart extends ShapeNodeEditPart {
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof ForDescription3EditPart) {
+			return true;
+		}
+		if (childEditPart instanceof ForForForStatementsCompartment3EditPart) {
+			IFigure pane = getPrimaryShape().getForForStatementsCompartmentFigure();
+			pane.remove(((ForForForStatementsCompartment3EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -150,6 +163,9 @@ public class For3EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof ForForForStatementsCompartment3EditPart) {
+			return getPrimaryShape().getForForStatementsCompartmentFigure();
+		}
 		return getContentPane();
 	}
 
@@ -257,8 +273,13 @@ public class For3EditPart extends ShapeNodeEditPart {
 		private WrappingLabel fFigureForLabelFigure;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
+		private RectangleFigure fForForStatementsCompartmentFigure;
+
+		/**
+			 * @generated
+			 */
 		public ForFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -273,8 +294,15 @@ public class For3EditPart extends ShapeNodeEditPart {
 			fFigureForLabelFigure = new WrappingLabel();
 
 			fFigureForLabelFigure.setText("For");
+			fFigureForLabelFigure.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
 			this.add(fFigureForLabelFigure);
+
+			fForForStatementsCompartmentFigure = new RectangleFigure();
+
+			fForForStatementsCompartmentFigure.setOutline(false);
+
+			this.add(fForForStatementsCompartmentFigure);
 
 		}
 
@@ -283,6 +311,13 @@ public class For3EditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureForLabelFigure() {
 			return fFigureForLabelFigure;
+		}
+
+		/**
+		* @generated
+		*/
+		public RectangleFigure getForForStatementsCompartmentFigure() {
+			return fForForStatementsCompartmentFigure;
 		}
 
 	}

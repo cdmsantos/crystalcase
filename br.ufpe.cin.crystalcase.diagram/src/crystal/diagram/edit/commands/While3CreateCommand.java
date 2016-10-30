@@ -17,6 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
+import crystal.Function;
 import crystal.While;
 
 /**
@@ -57,8 +58,8 @@ public class While3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		While newElement = CrystalFactory.eINSTANCE.createWhile();
 
-		AnonymousBlock owner = (AnonymousBlock) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		While owner = (While) getElementToEdit();
+		owner.getWhileStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

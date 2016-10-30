@@ -17,7 +17,9 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
+import crystal.Function;
 import crystal.Select;
+import crystal.While;
 
 /**
  * @generated
@@ -57,8 +59,8 @@ public class Select3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Select newElement = CrystalFactory.eINSTANCE.createSelect();
 
-		AnonymousBlock owner = (AnonymousBlock) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		While owner = (While) getElementToEdit();
+		owner.getWhileStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

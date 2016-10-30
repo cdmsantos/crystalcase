@@ -103,13 +103,22 @@ public interface CrystalPackage extends EPackage {
 	int CRYSTAL__BLOCKS = 3;
 
 	/**
+	 * The feature id for the '<em><b>Selector Transitions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYSTAL__SELECTOR_TRANSITIONS = 4;
+
+	/**
 	 * The number of structural features of the '<em>Crystal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CRYSTAL_FEATURE_COUNT = 4;
+	int CRYSTAL_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link crystal.impl.SubprogramsImpl <em>Subprograms</em>}' class.
@@ -159,22 +168,22 @@ public interface CrystalPackage extends EPackage {
 	int PROCEDURE__NAME = SUBPROGRAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCEDURE__PARAMETERS = SUBPROGRAMS_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Declarative Part</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCEDURE__DECLARATIVE_PART = SUBPROGRAMS_FEATURE_COUNT + 1;
+	int PROCEDURE__DECLARATIVE_PART = SUBPROGRAMS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCEDURE__PARAMETERS = SUBPROGRAMS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Executable Part</b></em>' containment reference list.
@@ -214,31 +223,31 @@ public interface CrystalPackage extends EPackage {
 	int FUNCTION__NAME = SUBPROGRAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__PARAMETERS = SUBPROGRAMS_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Return Part</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__RETURN_PART = SUBPROGRAMS_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Declarative Part</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__DECLARATIVE_PART = SUBPROGRAMS_FEATURE_COUNT + 2;
+	int FUNCTION__DECLARATIVE_PART = SUBPROGRAMS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__PARAMETERS = SUBPROGRAMS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Return Part</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__RETURN_PART = SUBPROGRAMS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Executable Part</b></em>' containment reference list.
@@ -424,6 +433,7 @@ public interface CrystalPackage extends EPackage {
 	 */
 	int COLLECTIONS = 7;
 
+
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -432,6 +442,15 @@ public interface CrystalPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTIONS__NAME = PARAMETERS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	//int COLLECTIONS__NAME = PARAMETERS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -496,6 +515,15 @@ public interface CrystalPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECORDS__NAME = PARAMETERS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	//int RECORDS__NAME = PARAMETERS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -580,13 +608,13 @@ public interface CrystalPackage extends EPackage {
 	int CURSOR__CLASS_NAME = PARAMETERS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Cursor Query</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CURSOR__CODE = PARAMETERS_FEATURE_COUNT + 1;
+	int CURSOR__CURSOR_QUERY = PARAMETERS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Cursor</em>' class.
@@ -736,22 +764,22 @@ public interface CrystalPackage extends EPackage {
 	int IF__CONDITION = STATEMENTS_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Ifs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IF__CODE = STATEMENTS_FEATURE_COUNT + 2;
+	int IF__IFS = STATEMENTS_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Code Else</b></em>' attribute.
+	 * The feature id for the '<em><b>Elses</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IF__CODE_ELSE = STATEMENTS_FEATURE_COUNT + 3;
+	int IF__ELSES = STATEMENTS_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>If</em>' class.
@@ -800,22 +828,13 @@ public interface CrystalPackage extends EPackage {
 	int CASE__CLASS_NAME = STATEMENTS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASE__CONDITION = STATEMENTS_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__CODE = STATEMENTS_FEATURE_COUNT + 2;
+	int CASE__CASES = STATEMENTS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Case</em>' class.
@@ -824,7 +843,7 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASE_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 3;
+	int CASE_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link crystal.impl.InsertImpl <em>Insert</em>}' class.
@@ -834,7 +853,92 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getInsert()
 	 * @generated
 	 */
-	int INSERT = 14;
+	int INSERT = 15;
+
+	/**
+	 * The meta object id for the '{@link crystal.impl.UpdateImpl <em>Update</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see crystal.impl.UpdateImpl
+	 * @see crystal.impl.CrystalPackageImpl#getUpdate()
+	 * @generated
+	 */
+	int UPDATE = 16;
+
+	/**
+	 * The meta object id for the '{@link crystal.impl.DeleteImpl <em>Delete</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see crystal.impl.DeleteImpl
+	 * @see crystal.impl.CrystalPackageImpl#getDelete()
+	 * @generated
+	 */
+	int DELETE = 17;
+
+	/**
+	 * The meta object id for the '{@link crystal.impl.SelectImpl <em>Select</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see crystal.impl.SelectImpl
+	 * @see crystal.impl.CrystalPackageImpl#getSelect()
+	 * @generated
+	 */
+	int SELECT = 18;
+
+	/**
+	 * The meta object id for the '{@link crystal.impl.SelectorImpl <em>Selector</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see crystal.impl.SelectorImpl
+	 * @see crystal.impl.CrystalPackageImpl#getSelector()
+	 * @generated
+	 */
+	int SELECTOR = 14;
+
+	/**
+	 * The feature id for the '<em><b>Class Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTOR__CLASS_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTOR__CONDITION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTOR__DESCRIPTION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Case Statements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTOR__CASE_STATEMENTS = 3;
+
+	/**
+	 * The number of structural features of the '<em>Selector</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTOR_FEATURE_COUNT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -882,16 +986,6 @@ public interface CrystalPackage extends EPackage {
 	int INSERT_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link crystal.impl.UpdateImpl <em>Update</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see crystal.impl.UpdateImpl
-	 * @see crystal.impl.CrystalPackageImpl#getUpdate()
-	 * @generated
-	 */
-	int UPDATE = 15;
-
-	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -937,16 +1031,6 @@ public interface CrystalPackage extends EPackage {
 	int UPDATE_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link crystal.impl.DeleteImpl <em>Delete</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see crystal.impl.DeleteImpl
-	 * @see crystal.impl.CrystalPackageImpl#getDelete()
-	 * @generated
-	 */
-	int DELETE = 16;
-
-	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -990,16 +1074,6 @@ public interface CrystalPackage extends EPackage {
 	 * @ordered
 	 */
 	int DELETE_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link crystal.impl.SelectImpl <em>Select</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see crystal.impl.SelectImpl
-	 * @see crystal.impl.CrystalPackageImpl#getSelect()
-	 * @generated
-	 */
-	int SELECT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1054,7 +1128,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getWhile()
 	 * @generated
 	 */
-	int WHILE = 18;
+	int WHILE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1093,13 +1167,13 @@ public interface CrystalPackage extends EPackage {
 	int WHILE__CONDITION = STATEMENTS_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>While Statements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WHILE__CODE = STATEMENTS_FEATURE_COUNT + 2;
+	int WHILE__WHILE_STATEMENTS = STATEMENTS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>While</em>' class.
@@ -1118,7 +1192,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getFor()
 	 * @generated
 	 */
-	int FOR = 19;
+	int FOR = 20;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1184,13 +1258,13 @@ public interface CrystalPackage extends EPackage {
 	int FOR__HIGHEST_NUMBER = STATEMENTS_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>For Statements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOR__CODE = STATEMENTS_FEATURE_COUNT + 5;
+	int FOR__FOR_STATEMENTS = STATEMENTS_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>For</em>' class.
@@ -1209,7 +1283,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getLoop()
 	 * @generated
 	 */
-	int LOOP = 20;
+	int LOOP = 21;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1239,13 +1313,22 @@ public interface CrystalPackage extends EPackage {
 	int LOOP__CLASS_NAME = STATEMENTS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Break Condition</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP__CODE = STATEMENTS_FEATURE_COUNT + 1;
+	int LOOP__BREAK_CONDITION = STATEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Loop Statements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__LOOP_STATEMENTS = STATEMENTS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Loop</em>' class.
@@ -1254,7 +1337,7 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 2;
+	int LOOP_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link crystal.impl.OpenImpl <em>Open</em>}' class.
@@ -1264,7 +1347,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getOpen()
 	 * @generated
 	 */
-	int OPEN = 21;
+	int OPEN = 22;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1294,13 +1377,13 @@ public interface CrystalPackage extends EPackage {
 	int OPEN__CLASS_NAME = STATEMENTS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Cursor Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPEN__CODE = STATEMENTS_FEATURE_COUNT + 1;
+	int OPEN__CURSOR_NAME = STATEMENTS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Open</em>' class.
@@ -1319,7 +1402,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getFetch()
 	 * @generated
 	 */
-	int FETCH = 22;
+	int FETCH = 23;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1349,13 +1432,22 @@ public interface CrystalPackage extends EPackage {
 	int FETCH__CLASS_NAME = STATEMENTS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Cursor Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FETCH__CODE = STATEMENTS_FEATURE_COUNT + 1;
+	int FETCH__CURSOR_NAME = STATEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Variable Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FETCH__VARIABLE_NAME = STATEMENTS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Fetch</em>' class.
@@ -1364,7 +1456,7 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FETCH_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 2;
+	int FETCH_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link crystal.impl.CloseImpl <em>Close</em>}' class.
@@ -1374,7 +1466,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getClose()
 	 * @generated
 	 */
-	int CLOSE = 23;
+	int CLOSE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1404,13 +1496,13 @@ public interface CrystalPackage extends EPackage {
 	int CLOSE__CLASS_NAME = STATEMENTS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Cursor Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOSE__CODE = STATEMENTS_FEATURE_COUNT + 1;
+	int CLOSE__CURSOR_NAME = STATEMENTS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Close</em>' class.
@@ -1429,7 +1521,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getCallProcedure()
 	 * @generated
 	 */
-	int CALL_PROCEDURE = 24;
+	int CALL_PROCEDURE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1484,7 +1576,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getCallFunction()
 	 * @generated
 	 */
-	int CALL_FUNCTION = 25;
+	int CALL_FUNCTION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1539,7 +1631,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getTransition()
 	 * @generated
 	 */
-	int TRANSITION = 26;
+	int TRANSITION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1578,6 +1670,52 @@ public interface CrystalPackage extends EPackage {
 	int TRANSITION_FEATURE_COUNT = 3;
 
 	/**
+	 * The meta object id for the '{@link crystal.impl.SelectorTransitionImpl <em>Selector Transition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see crystal.impl.SelectorTransitionImpl
+	 * @see crystal.impl.CrystalPackageImpl#getSelectorTransition()
+	 * @generated
+	 */
+	int SELECTOR_TRANSITION = 28;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTOR_TRANSITION__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTOR_TRANSITION__SOURCE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTOR_TRANSITION__TARGET = 2;
+
+	/**
+	 * The number of structural features of the '<em>Selector Transition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTOR_TRANSITION_FEATURE_COUNT = 3;
+
+	/**
 	 * The meta object id for the '{@link crystal.ParameterType <em>Parameter Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1585,7 +1723,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 27;
+	int PARAMETER_TYPE = 29;
 
 	/**
 	 * The meta object id for the '{@link crystal.ForCounter <em>For Counter</em>}' enum.
@@ -1595,7 +1733,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getForCounter()
 	 * @generated
 	 */
-	int FOR_COUNTER = 28;
+	int FOR_COUNTER = 30;
 
 	/**
 	 * The meta object id for the '{@link crystal.DataTypeOptions <em>Data Type Options</em>}' enum.
@@ -1605,7 +1743,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getDataTypeOptions()
 	 * @generated
 	 */
-	int DATA_TYPE_OPTIONS = 29;
+	int DATA_TYPE_OPTIONS = 31;
 
 
 	/**
@@ -1661,6 +1799,17 @@ public interface CrystalPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCrystal_Blocks();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link crystal.Crystal#getSelectorTransitions <em>Selector Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Selector Transitions</em>'.
+	 * @see crystal.Crystal#getSelectorTransitions()
+	 * @see #getCrystal()
+	 * @generated
+	 */
+	EReference getCrystal_SelectorTransitions();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.Subprograms <em>Subprograms</em>}'.
@@ -1759,10 +1908,10 @@ public interface CrystalPackage extends EPackage {
 	EReference getFunction_Parameters();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link crystal.Function#getReturnPart <em>Return Part</em>}'.
+	 * Returns the meta object for the containment reference '{@link crystal.Function#getReturnPart <em>Return Part</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Return Part</em>'.
+	 * @return the meta object for the containment reference '<em>Return Part</em>'.
 	 * @see crystal.Function#getReturnPart()
 	 * @see #getFunction()
 	 * @generated
@@ -2006,15 +2155,15 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getCursor_ClassName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.Cursor#getCode <em>Code</em>}'.
+	 * Returns the meta object for the attribute '{@link crystal.Cursor#getCursorQuery <em>Cursor Query</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see crystal.Cursor#getCode()
+	 * @return the meta object for the attribute '<em>Cursor Query</em>'.
+	 * @see crystal.Cursor#getCursorQuery()
 	 * @see #getCursor()
 	 * @generated
 	 */
-	EAttribute getCursor_Code();
+	EAttribute getCursor_CursorQuery();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.Statements <em>Statements</em>}'.
@@ -2113,26 +2262,26 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getIf_Condition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.If#getCode <em>Code</em>}'.
+	 * Returns the meta object for the containment reference list '{@link crystal.If#getIfs <em>Ifs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see crystal.If#getCode()
+	 * @return the meta object for the containment reference list '<em>Ifs</em>'.
+	 * @see crystal.If#getIfs()
 	 * @see #getIf()
 	 * @generated
 	 */
-	EAttribute getIf_Code();
+	EReference getIf_Ifs();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.If#getCodeElse <em>Code Else</em>}'.
+	 * Returns the meta object for the containment reference list '{@link crystal.If#getElses <em>Elses</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code Else</em>'.
-	 * @see crystal.If#getCodeElse()
+	 * @return the meta object for the containment reference list '<em>Elses</em>'.
+	 * @see crystal.If#getElses()
 	 * @see #getIf()
 	 * @generated
 	 */
-	EAttribute getIf_CodeElse();
+	EReference getIf_Elses();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.Case <em>Case</em>}'.
@@ -2156,26 +2305,15 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getCase_ClassName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.Case#getCondition <em>Condition</em>}'.
+	 * Returns the meta object for the containment reference list '{@link crystal.Case#getCases <em>Cases</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Condition</em>'.
-	 * @see crystal.Case#getCondition()
+	 * @return the meta object for the containment reference list '<em>Cases</em>'.
+	 * @see crystal.Case#getCases()
 	 * @see #getCase()
 	 * @generated
 	 */
-	EAttribute getCase_Condition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link crystal.Case#getCode <em>Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see crystal.Case#getCode()
-	 * @see #getCase()
-	 * @generated
-	 */
-	EAttribute getCase_Code();
+	EReference getCase_Cases();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.Insert <em>Insert</em>}'.
@@ -2306,6 +2444,60 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getSelect_Code();
 
 	/**
+	 * Returns the meta object for class '{@link crystal.Selector <em>Selector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Selector</em>'.
+	 * @see crystal.Selector
+	 * @generated
+	 */
+	EClass getSelector();
+
+	/**
+	 * Returns the meta object for the attribute '{@link crystal.Selector#getClassName <em>Class Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Name</em>'.
+	 * @see crystal.Selector#getClassName()
+	 * @see #getSelector()
+	 * @generated
+	 */
+	EAttribute getSelector_ClassName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link crystal.Selector#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Condition</em>'.
+	 * @see crystal.Selector#getCondition()
+	 * @see #getSelector()
+	 * @generated
+	 */
+	EAttribute getSelector_Condition();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link crystal.Selector#getCaseStatements <em>Case Statements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Case Statements</em>'.
+	 * @see crystal.Selector#getCaseStatements()
+	 * @see #getSelector()
+	 * @generated
+	 */
+	EReference getSelector_CaseStatements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link crystal.Selector#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see crystal.Selector#getDescription()
+	 * @see #getSelector()
+	 * @generated
+	 */
+	EAttribute getSelector_Description();
+
+	/**
 	 * Returns the meta object for class '{@link crystal.While <em>While</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2338,15 +2530,15 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getWhile_Condition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.While#getCode <em>Code</em>}'.
+	 * Returns the meta object for the containment reference list '{@link crystal.While#getWhileStatements <em>While Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see crystal.While#getCode()
+	 * @return the meta object for the containment reference list '<em>While Statements</em>'.
+	 * @see crystal.While#getWhileStatements()
 	 * @see #getWhile()
 	 * @generated
 	 */
-	EAttribute getWhile_Code();
+	EReference getWhile_WhileStatements();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.For <em>For</em>}'.
@@ -2414,15 +2606,15 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getFor_HighestNumber();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.For#getCode <em>Code</em>}'.
+	 * Returns the meta object for the containment reference list '{@link crystal.For#getForStatements <em>For Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see crystal.For#getCode()
+	 * @return the meta object for the containment reference list '<em>For Statements</em>'.
+	 * @see crystal.For#getForStatements()
 	 * @see #getFor()
 	 * @generated
 	 */
-	EAttribute getFor_Code();
+	EReference getFor_ForStatements();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.Loop <em>Loop</em>}'.
@@ -2446,15 +2638,26 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getLoop_ClassName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.Loop#getCode <em>Code</em>}'.
+	 * Returns the meta object for the attribute '{@link crystal.Loop#getBreakCondition <em>Break Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see crystal.Loop#getCode()
+	 * @return the meta object for the attribute '<em>Break Condition</em>'.
+	 * @see crystal.Loop#getBreakCondition()
 	 * @see #getLoop()
 	 * @generated
 	 */
-	EAttribute getLoop_Code();
+	EAttribute getLoop_BreakCondition();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link crystal.Loop#getLoopStatements <em>Loop Statements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Loop Statements</em>'.
+	 * @see crystal.Loop#getLoopStatements()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EReference getLoop_LoopStatements();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.Open <em>Open</em>}'.
@@ -2478,15 +2681,15 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getOpen_ClassName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.Open#getCode <em>Code</em>}'.
+	 * Returns the meta object for the attribute '{@link crystal.Open#getCursorName <em>Cursor Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see crystal.Open#getCode()
+	 * @return the meta object for the attribute '<em>Cursor Name</em>'.
+	 * @see crystal.Open#getCursorName()
 	 * @see #getOpen()
 	 * @generated
 	 */
-	EAttribute getOpen_Code();
+	EAttribute getOpen_CursorName();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.Fetch <em>Fetch</em>}'.
@@ -2510,15 +2713,26 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getFetch_ClassName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.Fetch#getCode <em>Code</em>}'.
+	 * Returns the meta object for the attribute '{@link crystal.Fetch#getCursorName <em>Cursor Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see crystal.Fetch#getCode()
+	 * @return the meta object for the attribute '<em>Cursor Name</em>'.
+	 * @see crystal.Fetch#getCursorName()
 	 * @see #getFetch()
 	 * @generated
 	 */
-	EAttribute getFetch_Code();
+	EAttribute getFetch_CursorName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link crystal.Fetch#getVariableName <em>Variable Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Variable Name</em>'.
+	 * @see crystal.Fetch#getVariableName()
+	 * @see #getFetch()
+	 * @generated
+	 */
+	EAttribute getFetch_VariableName();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.Close <em>Close</em>}'.
@@ -2542,15 +2756,15 @@ public interface CrystalPackage extends EPackage {
 	EAttribute getClose_ClassName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link crystal.Close#getCode <em>Code</em>}'.
+	 * Returns the meta object for the attribute '{@link crystal.Close#getCursorName <em>Cursor Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see crystal.Close#getCode()
+	 * @return the meta object for the attribute '<em>Cursor Name</em>'.
+	 * @see crystal.Close#getCursorName()
 	 * @see #getClose()
 	 * @generated
 	 */
-	EAttribute getClose_Code();
+	EAttribute getClose_CursorName();
 
 	/**
 	 * Returns the meta object for class '{@link crystal.CallProcedure <em>Call Procedure</em>}'.
@@ -2660,6 +2874,49 @@ public interface CrystalPackage extends EPackage {
 	EReference getTransition_Target();
 
 	/**
+	 * Returns the meta object for class '{@link crystal.SelectorTransition <em>Selector Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Selector Transition</em>'.
+	 * @see crystal.SelectorTransition
+	 * @generated
+	 */
+	EClass getSelectorTransition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link crystal.SelectorTransition#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see crystal.SelectorTransition#getName()
+	 * @see #getSelectorTransition()
+	 * @generated
+	 */
+	EAttribute getSelectorTransition_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link crystal.SelectorTransition#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see crystal.SelectorTransition#getSource()
+	 * @see #getSelectorTransition()
+	 * @generated
+	 */
+	EReference getSelectorTransition_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link crystal.SelectorTransition#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see crystal.SelectorTransition#getTarget()
+	 * @see #getSelectorTransition()
+	 * @generated
+	 */
+	EReference getSelectorTransition_Target();
+
+	/**
 	 * Returns the meta object for enum '{@link crystal.ParameterType <em>Parameter Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2754,6 +3011,14 @@ public interface CrystalPackage extends EPackage {
 		EReference CRYSTAL__BLOCKS = eINSTANCE.getCrystal_Blocks();
 
 		/**
+		 * The meta object literal for the '<em><b>Selector Transitions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CRYSTAL__SELECTOR_TRANSITIONS = eINSTANCE.getCrystal_SelectorTransitions();
+
+		/**
 		 * The meta object literal for the '{@link crystal.impl.SubprogramsImpl <em>Subprograms</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2832,7 +3097,7 @@ public interface CrystalPackage extends EPackage {
 		EReference FUNCTION__PARAMETERS = eINSTANCE.getFunction_Parameters();
 
 		/**
-		 * The meta object literal for the '<em><b>Return Part</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Return Part</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3028,12 +3293,12 @@ public interface CrystalPackage extends EPackage {
 		EAttribute CURSOR__CLASS_NAME = eINSTANCE.getCursor_ClassName();
 
 		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cursor Query</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CURSOR__CODE = eINSTANCE.getCursor_Code();
+		EAttribute CURSOR__CURSOR_QUERY = eINSTANCE.getCursor_CursorQuery();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.StatementsImpl <em>Statements</em>}' class.
@@ -3114,20 +3379,20 @@ public interface CrystalPackage extends EPackage {
 		EAttribute IF__CONDITION = eINSTANCE.getIf_Condition();
 
 		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Ifs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IF__CODE = eINSTANCE.getIf_Code();
+		EReference IF__IFS = eINSTANCE.getIf_Ifs();
 
 		/**
-		 * The meta object literal for the '<em><b>Code Else</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Elses</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IF__CODE_ELSE = eINSTANCE.getIf_CodeElse();
+		EReference IF__ELSES = eINSTANCE.getIf_Elses();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.CaseImpl <em>Case</em>}' class.
@@ -3148,20 +3413,12 @@ public interface CrystalPackage extends EPackage {
 		EAttribute CASE__CLASS_NAME = eINSTANCE.getCase_ClassName();
 
 		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cases</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CASE__CONDITION = eINSTANCE.getCase_Condition();
-
-		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CASE__CODE = eINSTANCE.getCase_Code();
+		EReference CASE__CASES = eINSTANCE.getCase_Cases();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.InsertImpl <em>Insert</em>}' class.
@@ -3268,6 +3525,48 @@ public interface CrystalPackage extends EPackage {
 		EAttribute SELECT__CODE = eINSTANCE.getSelect_Code();
 
 		/**
+		 * The meta object literal for the '{@link crystal.impl.SelectorImpl <em>Selector</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see crystal.impl.SelectorImpl
+		 * @see crystal.impl.CrystalPackageImpl#getSelector()
+		 * @generated
+		 */
+		EClass SELECTOR = eINSTANCE.getSelector();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELECTOR__CLASS_NAME = eINSTANCE.getSelector_ClassName();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELECTOR__CONDITION = eINSTANCE.getSelector_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Case Statements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTOR__CASE_STATEMENTS = eINSTANCE.getSelector_CaseStatements();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELECTOR__DESCRIPTION = eINSTANCE.getSelector_Description();
+
+		/**
 		 * The meta object literal for the '{@link crystal.impl.WhileImpl <em>While</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3294,12 +3593,12 @@ public interface CrystalPackage extends EPackage {
 		EAttribute WHILE__CONDITION = eINSTANCE.getWhile_Condition();
 
 		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>While Statements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WHILE__CODE = eINSTANCE.getWhile_Code();
+		EReference WHILE__WHILE_STATEMENTS = eINSTANCE.getWhile_WhileStatements();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.ForImpl <em>For</em>}' class.
@@ -3352,12 +3651,12 @@ public interface CrystalPackage extends EPackage {
 		EAttribute FOR__HIGHEST_NUMBER = eINSTANCE.getFor_HighestNumber();
 
 		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>For Statements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FOR__CODE = eINSTANCE.getFor_Code();
+		EReference FOR__FOR_STATEMENTS = eINSTANCE.getFor_ForStatements();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.LoopImpl <em>Loop</em>}' class.
@@ -3378,12 +3677,20 @@ public interface CrystalPackage extends EPackage {
 		EAttribute LOOP__CLASS_NAME = eINSTANCE.getLoop_ClassName();
 
 		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Break Condition</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOOP__CODE = eINSTANCE.getLoop_Code();
+		EAttribute LOOP__BREAK_CONDITION = eINSTANCE.getLoop_BreakCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Loop Statements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOOP__LOOP_STATEMENTS = eINSTANCE.getLoop_LoopStatements();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.OpenImpl <em>Open</em>}' class.
@@ -3404,12 +3711,12 @@ public interface CrystalPackage extends EPackage {
 		EAttribute OPEN__CLASS_NAME = eINSTANCE.getOpen_ClassName();
 
 		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cursor Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OPEN__CODE = eINSTANCE.getOpen_Code();
+		EAttribute OPEN__CURSOR_NAME = eINSTANCE.getOpen_CursorName();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.FetchImpl <em>Fetch</em>}' class.
@@ -3430,12 +3737,20 @@ public interface CrystalPackage extends EPackage {
 		EAttribute FETCH__CLASS_NAME = eINSTANCE.getFetch_ClassName();
 
 		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cursor Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FETCH__CODE = eINSTANCE.getFetch_Code();
+		EAttribute FETCH__CURSOR_NAME = eINSTANCE.getFetch_CursorName();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FETCH__VARIABLE_NAME = eINSTANCE.getFetch_VariableName();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.CloseImpl <em>Close</em>}' class.
@@ -3456,12 +3771,12 @@ public interface CrystalPackage extends EPackage {
 		EAttribute CLOSE__CLASS_NAME = eINSTANCE.getClose_ClassName();
 
 		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cursor Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CLOSE__CODE = eINSTANCE.getClose_Code();
+		EAttribute CLOSE__CURSOR_NAME = eINSTANCE.getClose_CursorName();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.CallProcedureImpl <em>Call Procedure</em>}' class.
@@ -3548,6 +3863,40 @@ public interface CrystalPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
+
+		/**
+		 * The meta object literal for the '{@link crystal.impl.SelectorTransitionImpl <em>Selector Transition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see crystal.impl.SelectorTransitionImpl
+		 * @see crystal.impl.CrystalPackageImpl#getSelectorTransition()
+		 * @generated
+		 */
+		EClass SELECTOR_TRANSITION = eINSTANCE.getSelectorTransition();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELECTOR_TRANSITION__NAME = eINSTANCE.getSelectorTransition_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTOR_TRANSITION__SOURCE = eINSTANCE.getSelectorTransition_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELECTOR_TRANSITION__TARGET = eINSTANCE.getSelectorTransition_Target();
 
 		/**
 		 * The meta object literal for the '{@link crystal.ParameterType <em>Parameter Type</em>}' enum.

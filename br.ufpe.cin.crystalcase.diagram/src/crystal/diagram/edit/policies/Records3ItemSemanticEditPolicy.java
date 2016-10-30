@@ -22,7 +22,7 @@ public class Records3ItemSemanticEditPolicy extends CrystalBaseItemSemanticEditP
 	 * @generated
 	 */
 	public Records3ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Records_3024);
+		super(CrystalElementTypes.Records_3073);
 	}
 
 	/**

@@ -18,6 +18,8 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.CrystalFactory;
 import crystal.Function;
 import crystal.Loop;
+import crystal.Procedure;
+import crystal.While;
 
 /**
  * @generated
@@ -57,8 +59,8 @@ public class Loop2CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Loop newElement = CrystalFactory.eINSTANCE.createLoop();
 
-		Function owner = (Function) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		While owner = (While) getElementToEdit();
+		owner.getWhileStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

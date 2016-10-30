@@ -99,6 +99,18 @@ public class UpdateImpl extends StatementsImpl implements Update {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.UPDATE__CLASS_NAME, oldClassName, className));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getCode() {
 		return code;
 	}
@@ -139,6 +151,9 @@ public class UpdateImpl extends StatementsImpl implements Update {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.UPDATE__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
 			case CrystalPackage.UPDATE__CODE:
 				setCode((String)newValue);
 				return;
@@ -154,6 +169,9 @@ public class UpdateImpl extends StatementsImpl implements Update {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.UPDATE__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
 			case CrystalPackage.UPDATE__CODE:
 				setCode(CODE_EDEFAULT);
 				return;

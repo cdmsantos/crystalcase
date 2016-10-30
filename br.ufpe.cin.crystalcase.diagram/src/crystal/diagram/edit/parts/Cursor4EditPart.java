@@ -36,7 +36,7 @@ public class Cursor4EditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3029;
+	public static final int VISUAL_ID = 3025;
 
 	/**
 	 * @generated

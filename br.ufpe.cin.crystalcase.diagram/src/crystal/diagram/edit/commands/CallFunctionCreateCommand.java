@@ -18,8 +18,10 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.AnonymousBlock;
 import crystal.CallFunction;
 import crystal.CrystalFactory;
+import crystal.If;
 import crystal.Procedure;
 import crystal.Subprograms;
+import crystal.While;
 
 /**
  * @generated
@@ -59,8 +61,8 @@ public class CallFunctionCreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		CallFunction newElement = CrystalFactory.eINSTANCE.createCallFunction();
 
-		Procedure owner = (Procedure) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getIfs().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

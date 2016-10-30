@@ -46,7 +46,7 @@ public class CursorItemProvider extends ParametersItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassNamePropertyDescriptor(object);
-			addCodePropertyDescriptor(object);
+			addCursorQueryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -65,7 +65,7 @@ public class CursorItemProvider extends ParametersItemProvider {
 				 getString("_UI_Cursor_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Cursor_className_feature", "_UI_Cursor_type"),
 				 CrystalPackage.Literals.CURSOR__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -74,19 +74,19 @@ public class CursorItemProvider extends ParametersItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Code feature.
+	 * This adds a property descriptor for the Cursor Query feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCodePropertyDescriptor(Object object) {
+	protected void addCursorQueryPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Cursor_code_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Cursor_code_feature", "_UI_Cursor_type"),
-				 CrystalPackage.Literals.CURSOR__CODE,
+				 getString("_UI_Cursor_cursorQuery_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Cursor_cursorQuery_feature", "_UI_Cursor_type"),
+				 CrystalPackage.Literals.CURSOR__CURSOR_QUERY,
 				 true,
 				 false,
 				 false,
@@ -134,7 +134,7 @@ public class CursorItemProvider extends ParametersItemProvider {
 
 		switch (notification.getFeatureID(Cursor.class)) {
 			case CrystalPackage.CURSOR__CLASS_NAME:
-			case CrystalPackage.CURSOR__CODE:
+			case CrystalPackage.CURSOR__CURSOR_QUERY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

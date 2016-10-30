@@ -26,20 +26,65 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
 import crystal.diagram.edit.parts.CallFunction2EditPart;
+import crystal.diagram.edit.parts.CallFunction3EditPart;
+import crystal.diagram.edit.parts.CallFunction6EditPart;
+import crystal.diagram.edit.parts.CallFunction8EditPart;
 import crystal.diagram.edit.parts.CallProcedure2EditPart;
+import crystal.diagram.edit.parts.CallProcedure3EditPart;
+import crystal.diagram.edit.parts.CallProcedure6EditPart;
+import crystal.diagram.edit.parts.CallProcedure8EditPart;
 import crystal.diagram.edit.parts.Case2EditPart;
+import crystal.diagram.edit.parts.Case3EditPart;
+import crystal.diagram.edit.parts.Case6EditPart;
+import crystal.diagram.edit.parts.Case8EditPart;
 import crystal.diagram.edit.parts.Close2EditPart;
+import crystal.diagram.edit.parts.Close3EditPart;
+import crystal.diagram.edit.parts.Close6EditPart;
+import crystal.diagram.edit.parts.Close8EditPart;
 import crystal.diagram.edit.parts.Delete2EditPart;
+import crystal.diagram.edit.parts.Delete3EditPart;
+import crystal.diagram.edit.parts.Delete6EditPart;
+import crystal.diagram.edit.parts.Delete8EditPart;
 import crystal.diagram.edit.parts.Exception2EditPart;
+import crystal.diagram.edit.parts.Exception3EditPart;
+import crystal.diagram.edit.parts.Exception6EditPart;
+import crystal.diagram.edit.parts.Exception8EditPart;
 import crystal.diagram.edit.parts.Fetch2EditPart;
+import crystal.diagram.edit.parts.Fetch3EditPart;
+import crystal.diagram.edit.parts.Fetch6EditPart;
+import crystal.diagram.edit.parts.Fetch8EditPart;
 import crystal.diagram.edit.parts.For2EditPart;
+import crystal.diagram.edit.parts.For3EditPart;
+import crystal.diagram.edit.parts.For6EditPart;
+import crystal.diagram.edit.parts.For8EditPart;
 import crystal.diagram.edit.parts.If2EditPart;
+import crystal.diagram.edit.parts.If3EditPart;
+import crystal.diagram.edit.parts.If6EditPart;
+import crystal.diagram.edit.parts.If8EditPart;
 import crystal.diagram.edit.parts.Insert2EditPart;
+import crystal.diagram.edit.parts.Insert3EditPart;
+import crystal.diagram.edit.parts.Insert6EditPart;
+import crystal.diagram.edit.parts.Insert8EditPart;
 import crystal.diagram.edit.parts.Loop2EditPart;
+import crystal.diagram.edit.parts.Loop3EditPart;
+import crystal.diagram.edit.parts.Loop6EditPart;
+import crystal.diagram.edit.parts.Loop8EditPart;
 import crystal.diagram.edit.parts.Open2EditPart;
+import crystal.diagram.edit.parts.Open3EditPart;
+import crystal.diagram.edit.parts.Open6EditPart;
+import crystal.diagram.edit.parts.Open8EditPart;
 import crystal.diagram.edit.parts.Select2EditPart;
+import crystal.diagram.edit.parts.Select3EditPart;
+import crystal.diagram.edit.parts.Select6EditPart;
+import crystal.diagram.edit.parts.Select8EditPart;
 import crystal.diagram.edit.parts.Update2EditPart;
+import crystal.diagram.edit.parts.Update3EditPart;
+import crystal.diagram.edit.parts.Update6EditPart;
+import crystal.diagram.edit.parts.Update8EditPart;
 import crystal.diagram.edit.parts.While2EditPart;
+import crystal.diagram.edit.parts.While3EditPart;
+import crystal.diagram.edit.parts.While6EditPart;
+import crystal.diagram.edit.parts.While8EditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
 import crystal.diagram.part.CrystalVisualIDRegistry;
@@ -97,21 +142,21 @@ public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy extend
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case Exception2EditPart.VISUAL_ID:
-		case If2EditPart.VISUAL_ID:
-		case Case2EditPart.VISUAL_ID:
-		case Insert2EditPart.VISUAL_ID:
-		case Update2EditPart.VISUAL_ID:
-		case Delete2EditPart.VISUAL_ID:
-		case Select2EditPart.VISUAL_ID:
-		case While2EditPart.VISUAL_ID:
-		case For2EditPart.VISUAL_ID:
-		case Loop2EditPart.VISUAL_ID:
-		case Open2EditPart.VISUAL_ID:
-		case Fetch2EditPart.VISUAL_ID:
-		case Close2EditPart.VISUAL_ID:
-		case CallProcedure2EditPart.VISUAL_ID:
-		case CallFunction2EditPart.VISUAL_ID:
+		case Exception8EditPart.VISUAL_ID:
+		case If8EditPart.VISUAL_ID:
+		case Case8EditPart.VISUAL_ID:
+		case Insert8EditPart.VISUAL_ID:
+		case Update8EditPart.VISUAL_ID:
+		case Delete8EditPart.VISUAL_ID:
+		case Select8EditPart.VISUAL_ID:
+		case While8EditPart.VISUAL_ID:
+		case For8EditPart.VISUAL_ID:
+		case Loop8EditPart.VISUAL_ID:
+		case Open8EditPart.VISUAL_ID:
+		case Fetch8EditPart.VISUAL_ID:
+		case Close8EditPart.VISUAL_ID:
+		case CallProcedure8EditPart.VISUAL_ID:
+		case CallFunction8EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

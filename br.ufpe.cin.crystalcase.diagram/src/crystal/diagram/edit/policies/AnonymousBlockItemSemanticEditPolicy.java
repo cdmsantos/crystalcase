@@ -23,12 +23,24 @@ import crystal.diagram.edit.commands.TransitionReorientCommand;
 import crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart;
 import crystal.diagram.edit.parts.AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart;
 import crystal.diagram.edit.parts.CallFunction3EditPart;
+import crystal.diagram.edit.parts.CallFunction4EditPart;
+import crystal.diagram.edit.parts.CallFunction7EditPart;
+import crystal.diagram.edit.parts.CallFunction9EditPart;
 import crystal.diagram.edit.parts.CallFunctionEditPart;
 import crystal.diagram.edit.parts.CallProcedure3EditPart;
+import crystal.diagram.edit.parts.CallProcedure4EditPart;
+import crystal.diagram.edit.parts.CallProcedure7EditPart;
+import crystal.diagram.edit.parts.CallProcedure9EditPart;
 import crystal.diagram.edit.parts.CallProcedureEditPart;
 import crystal.diagram.edit.parts.Case3EditPart;
+import crystal.diagram.edit.parts.Case4EditPart;
+import crystal.diagram.edit.parts.Case7EditPart;
+import crystal.diagram.edit.parts.Case9EditPart;
 import crystal.diagram.edit.parts.CaseEditPart;
 import crystal.diagram.edit.parts.Close3EditPart;
+import crystal.diagram.edit.parts.Close4EditPart;
+import crystal.diagram.edit.parts.Close7EditPart;
+import crystal.diagram.edit.parts.Close9EditPart;
 import crystal.diagram.edit.parts.CloseEditPart;
 import crystal.diagram.edit.parts.Collections4EditPart;
 import crystal.diagram.edit.parts.Collections6EditPart;
@@ -40,30 +52,63 @@ import crystal.diagram.edit.parts.DataType4EditPart;
 import crystal.diagram.edit.parts.DataType6EditPart;
 import crystal.diagram.edit.parts.DataTypeEditPart;
 import crystal.diagram.edit.parts.Delete3EditPart;
+import crystal.diagram.edit.parts.Delete4EditPart;
+import crystal.diagram.edit.parts.Delete7EditPart;
+import crystal.diagram.edit.parts.Delete9EditPart;
 import crystal.diagram.edit.parts.DeleteEditPart;
 import crystal.diagram.edit.parts.Exception3EditPart;
+import crystal.diagram.edit.parts.Exception4EditPart;
+import crystal.diagram.edit.parts.Exception7EditPart;
+import crystal.diagram.edit.parts.Exception9EditPart;
 import crystal.diagram.edit.parts.ExceptionEditPart;
 import crystal.diagram.edit.parts.Fetch3EditPart;
+import crystal.diagram.edit.parts.Fetch4EditPart;
+import crystal.diagram.edit.parts.Fetch7EditPart;
+import crystal.diagram.edit.parts.Fetch9EditPart;
 import crystal.diagram.edit.parts.FetchEditPart;
 import crystal.diagram.edit.parts.For3EditPart;
+import crystal.diagram.edit.parts.For4EditPart;
+import crystal.diagram.edit.parts.For7EditPart;
+import crystal.diagram.edit.parts.For9EditPart;
 import crystal.diagram.edit.parts.ForEditPart;
 import crystal.diagram.edit.parts.If3EditPart;
+import crystal.diagram.edit.parts.If4EditPart;
+import crystal.diagram.edit.parts.If7EditPart;
+import crystal.diagram.edit.parts.If9EditPart;
 import crystal.diagram.edit.parts.IfEditPart;
 import crystal.diagram.edit.parts.Insert3EditPart;
+import crystal.diagram.edit.parts.Insert4EditPart;
+import crystal.diagram.edit.parts.Insert7EditPart;
+import crystal.diagram.edit.parts.Insert9EditPart;
 import crystal.diagram.edit.parts.InsertEditPart;
 import crystal.diagram.edit.parts.Loop3EditPart;
+import crystal.diagram.edit.parts.Loop4EditPart;
+import crystal.diagram.edit.parts.Loop7EditPart;
+import crystal.diagram.edit.parts.Loop9EditPart;
 import crystal.diagram.edit.parts.LoopEditPart;
 import crystal.diagram.edit.parts.Open3EditPart;
+import crystal.diagram.edit.parts.Open4EditPart;
+import crystal.diagram.edit.parts.Open7EditPart;
+import crystal.diagram.edit.parts.Open9EditPart;
 import crystal.diagram.edit.parts.OpenEditPart;
 import crystal.diagram.edit.parts.Records4EditPart;
 import crystal.diagram.edit.parts.Records6EditPart;
 import crystal.diagram.edit.parts.RecordsEditPart;
 import crystal.diagram.edit.parts.Select3EditPart;
+import crystal.diagram.edit.parts.Select4EditPart;
+import crystal.diagram.edit.parts.Select7EditPart;
+import crystal.diagram.edit.parts.Select9EditPart;
 import crystal.diagram.edit.parts.SelectEditPart;
 import crystal.diagram.edit.parts.TransitionEditPart;
 import crystal.diagram.edit.parts.Update3EditPart;
+import crystal.diagram.edit.parts.Update4EditPart;
+import crystal.diagram.edit.parts.Update7EditPart;
+import crystal.diagram.edit.parts.Update9EditPart;
 import crystal.diagram.edit.parts.UpdateEditPart;
 import crystal.diagram.edit.parts.While3EditPart;
+import crystal.diagram.edit.parts.While4EditPart;
+import crystal.diagram.edit.parts.While7EditPart;
+import crystal.diagram.edit.parts.While9EditPart;
 import crystal.diagram.edit.parts.WhileEditPart;
 import crystal.diagram.part.CrystalVisualIDRegistry;
 import crystal.diagram.providers.CrystalElementTypes;
@@ -143,7 +188,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 				for (Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
 					Node cnode = (Node) cit.next();
 					switch (CrystalVisualIDRegistry.getVisualID(cnode)) {
-					case Exception3EditPart.VISUAL_ID:
+					case Exception9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -167,7 +212,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case If3EditPart.VISUAL_ID:
+					case If9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -191,7 +236,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Case3EditPart.VISUAL_ID:
+					case Case9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -215,7 +260,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Insert3EditPart.VISUAL_ID:
+					case Insert9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -239,7 +284,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Update3EditPart.VISUAL_ID:
+					case Update9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -263,7 +308,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Delete3EditPart.VISUAL_ID:
+					case Delete9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -287,7 +332,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Select3EditPart.VISUAL_ID:
+					case Select9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -311,7 +356,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case While3EditPart.VISUAL_ID:
+					case While9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -335,7 +380,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case For3EditPart.VISUAL_ID:
+					case For9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -359,7 +404,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Loop3EditPart.VISUAL_ID:
+					case Loop9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -383,7 +428,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Open3EditPart.VISUAL_ID:
+					case Open9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -407,7 +452,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Fetch3EditPart.VISUAL_ID:
+					case Fetch9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -431,7 +476,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Close3EditPart.VISUAL_ID:
+					case Close9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -455,7 +500,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case CallProcedure3EditPart.VISUAL_ID:
+					case CallProcedure9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {
@@ -479,7 +524,7 @@ public class AnonymousBlockItemSemanticEditPolicy extends CrystalBaseItemSemanti
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case CallFunction3EditPart.VISUAL_ID:
+					case CallFunction9EditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it.hasNext();) {
 							Edge incomingLink = (Edge) it.next();
 							if (CrystalVisualIDRegistry.getVisualID(incomingLink) == TransitionEditPart.VISUAL_ID) {

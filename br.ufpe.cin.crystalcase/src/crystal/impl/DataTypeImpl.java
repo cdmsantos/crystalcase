@@ -142,6 +142,18 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.DATA_TYPE__CLASS_NAME, oldClassName, className));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DataTypeOptions getOptions() {
 		return options;
 	}
@@ -228,6 +240,9 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.DATA_TYPE__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
 			case CrystalPackage.DATA_TYPE__OPTIONS:
 				setOptions((DataTypeOptions)newValue);
 				return;
@@ -249,6 +264,9 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.DATA_TYPE__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
 			case CrystalPackage.DATA_TYPE__OPTIONS:
 				setOptions(OPTIONS_EDEFAULT);
 				return;

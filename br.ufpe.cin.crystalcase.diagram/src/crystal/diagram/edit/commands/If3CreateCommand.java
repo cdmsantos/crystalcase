@@ -17,7 +17,9 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
+import crystal.Function;
 import crystal.If;
+import crystal.Selector;
 
 /**
  * @generated
@@ -57,8 +59,8 @@ public class If3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		If newElement = CrystalFactory.eINSTANCE.createIf();
 
-		AnonymousBlock owner = (AnonymousBlock) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		Selector owner = (Selector) getElementToEdit();
+		owner.getCaseStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

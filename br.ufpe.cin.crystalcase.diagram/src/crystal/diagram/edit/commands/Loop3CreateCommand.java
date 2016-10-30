@@ -17,6 +17,9 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
+import crystal.For;
+import crystal.Function;
+import crystal.If;
 import crystal.Loop;
 
 /**
@@ -57,8 +60,8 @@ public class Loop3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Loop newElement = CrystalFactory.eINSTANCE.createLoop();
 
-		AnonymousBlock owner = (AnonymousBlock) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		For owner = (For) getElementToEdit();
+		owner.getForStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

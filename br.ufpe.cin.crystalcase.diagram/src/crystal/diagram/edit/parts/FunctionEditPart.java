@@ -120,6 +120,12 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 			((FunctionNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureFunctionLabelFigure());
 			return true;
 		}
+		if (childEditPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getFunctionDeclarativePartCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((FunctionFunctionDeclarativePartCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
 		if (childEditPart instanceof FunctionFunctionParametersCompartmentEditPart) {
 			IFigure pane = getPrimaryShape().getFunctionParametersCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
@@ -130,12 +136,6 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 			IFigure pane = getPrimaryShape().getFunctionReturnPartCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(((FunctionFunctionReturnPartCompartmentEditPart) childEditPart).getFigure());
-			return true;
-		}
-		if (childEditPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getFunctionDeclarativePartCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((FunctionFunctionDeclarativePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		if (childEditPart instanceof FunctionFunctionExecutablePartCompartmentEditPart) {
@@ -154,6 +154,11 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof FunctionNameEditPart) {
 			return true;
 		}
+		if (childEditPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getFunctionDeclarativePartCompartmentFigure();
+			pane.remove(((FunctionFunctionDeclarativePartCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
 		if (childEditPart instanceof FunctionFunctionParametersCompartmentEditPart) {
 			IFigure pane = getPrimaryShape().getFunctionParametersCompartmentFigure();
 			pane.remove(((FunctionFunctionParametersCompartmentEditPart) childEditPart).getFigure());
@@ -162,11 +167,6 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof FunctionFunctionReturnPartCompartmentEditPart) {
 			IFigure pane = getPrimaryShape().getFunctionReturnPartCompartmentFigure();
 			pane.remove(((FunctionFunctionReturnPartCompartmentEditPart) childEditPart).getFigure());
-			return true;
-		}
-		if (childEditPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getFunctionDeclarativePartCompartmentFigure();
-			pane.remove(((FunctionFunctionDeclarativePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		if (childEditPart instanceof FunctionFunctionExecutablePartCompartmentEditPart) {
@@ -201,14 +201,14 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
+			return getPrimaryShape().getFunctionDeclarativePartCompartmentFigure();
+		}
 		if (editPart instanceof FunctionFunctionParametersCompartmentEditPart) {
 			return getPrimaryShape().getFunctionParametersCompartmentFigure();
 		}
 		if (editPart instanceof FunctionFunctionReturnPartCompartmentEditPart) {
 			return getPrimaryShape().getFunctionReturnPartCompartmentFigure();
-		}
-		if (editPart instanceof FunctionFunctionDeclarativePartCompartmentEditPart) {
-			return getPrimaryShape().getFunctionDeclarativePartCompartmentFigure();
 		}
 		if (editPart instanceof FunctionFunctionExecutablePartCompartmentEditPart) {
 			return getPrimaryShape().getFunctionExecutablePartCompartmentFigure();
@@ -352,7 +352,6 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 			 * @generated
 			 */
 		public FunctionFigure() {
-			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(THIS_FORE);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -372,6 +371,12 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 
 			this.add(fFigureFunctionLabelFigure);
 
+			fFunctionDeclarativePartCompartmentFigure = new RectangleFigure();
+
+			fFunctionDeclarativePartCompartmentFigure.setOutline(false);
+
+			this.add(fFunctionDeclarativePartCompartmentFigure);
+
 			fFunctionParametersCompartmentFigure = new RectangleFigure();
 
 			fFunctionParametersCompartmentFigure.setOutline(false);
@@ -383,12 +388,6 @@ public class FunctionEditPart extends ShapeNodeEditPart {
 			fFunctionReturnPartCompartmentFigure.setOutline(false);
 
 			this.add(fFunctionReturnPartCompartmentFigure);
-
-			fFunctionDeclarativePartCompartmentFigure = new RectangleFigure();
-
-			fFunctionDeclarativePartCompartmentFigure.setOutline(false);
-
-			this.add(fFunctionDeclarativePartCompartmentFigure);
 
 			fFunctionExecutablePartCompartmentFigure = new RectangleFigure();
 

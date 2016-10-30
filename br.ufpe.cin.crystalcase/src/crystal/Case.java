@@ -2,6 +2,8 @@
  */
 package crystal;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,8 +15,7 @@ package crystal;
  * </p>
  * <ul>
  *   <li>{@link crystal.Case#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.Case#getCondition <em>Condition</em>}</li>
- *   <li>{@link crystal.Case#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.Case#getCases <em>Cases</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getCase()
@@ -32,64 +33,37 @@ public interface Case extends Statements {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCase_ClassName()
-	 * @model default="Case" changeable="false"
+	 * @model default="Case"
 	 * @generated
 	 */
 	String getClassName();
 
 	/**
-	 * Returns the value of the '<em><b>Condition</b></em>' attribute.
-	 * The default value is <code>"Type the CASE expression"</code>.
+	 * Sets the value of the '{@link crystal.Case#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Cases</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.Selector}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Condition</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Cases</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Condition</em>' attribute.
-	 * @see #setCondition(String)
-	 * @see crystal.CrystalPackage#getCase_Condition()
-	 * @model default="Type the CASE expression"
+	 * @return the value of the '<em>Cases</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getCase_Cases()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getCondition();
-
-	/**
-	 * Sets the value of the '{@link crystal.Case#getCondition <em>Condition</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Condition</em>' attribute.
-	 * @see #getCondition()
-	 * @generated
-	 */
-	void setCondition(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"Type de CASE code"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see crystal.CrystalPackage#getCase_Code()
-	 * @model default="Type de CASE code"
-	 * @generated
-	 */
-	String getCode();
-
-	/**
-	 * Sets the value of the '{@link crystal.Case#getCode <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
-	 * @generated
-	 */
-	void setCode(String value);
+	EList<Selector> getCases();
 
 } // Case

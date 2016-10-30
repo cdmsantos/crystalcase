@@ -33,11 +33,22 @@ public interface DataType extends Parameters {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getDataType_ClassName()
-	 * @model default="DataType" changeable="false"
+	 * @model default="DataType"
 	 * @generated
 	 */
 	String getClassName();
+
+	/**
+	 * Sets the value of the '{@link crystal.DataType#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Options</b></em>' attribute.

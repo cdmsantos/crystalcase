@@ -59,7 +59,7 @@ public class Cursor2CreateCommand extends EditElementCommand {
 		Cursor newElement = CrystalFactory.eINSTANCE.createCursor();
 
 		Procedure owner = (Procedure) getElementToEdit();
-		owner.getDeclarativePart().add(newElement);
+		owner.getParameters().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

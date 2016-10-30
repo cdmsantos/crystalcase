@@ -33,3 +33,49 @@ toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'Records');
 toolGroupActivities2.tools.add(toolEntryVariables);
 toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'Cursor');
 toolGroupActivities2.tools.add(toolEntryVariables);
+
+var toolGroupActivities3 = new GmfTool!ToolGroup;
+
+toolGroupActivities3.title := 'Conditional Structures';
+toolGroupActivities3.collapsible := true;
+palette.tools.add(toolGroupActivities3);
+
+var toolEntryVariables;
+
+toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'If');
+toolGroupActivities3.tools.add(toolEntryVariables);
+toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'Case');
+toolGroupActivities3.tools.add(toolEntryVariables);
+toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'Selector');
+toolGroupActivities3.tools.add(toolEntryVariables);
+
+var toolGroupActivities4 = new GmfTool!ToolGroup;
+
+toolGroupActivities4.title := 'Repetition Structures';
+toolGroupActivities4.collapsible := true;
+palette.tools.add(toolGroupActivities4);
+
+var toolEntryVariables;
+
+toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'While');
+toolGroupActivities4.tools.add(toolEntryVariables);
+toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'Loop');
+toolGroupActivities4.tools.add(toolEntryVariables);
+toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'For');
+toolGroupActivities4.tools.add(toolEntryVariables);
+
+
+var toolGroupActivities5 = new GmfTool!ToolGroup;
+
+toolGroupActivities5.title := 'Cursor Manipulation';
+toolGroupActivities5.collapsible := true;
+palette.tools.add(toolGroupActivities5);
+
+var toolEntryVariables;
+
+toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'Open');
+toolGroupActivities5.tools.add(toolEntryVariables);
+toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'Fetch');
+toolGroupActivities5.tools.add(toolEntryVariables);
+toolEntryVariables = toolGroupObjects.tools.selectOne(r|r.title = 'Close');
+toolGroupActivities5.tools.add(toolEntryVariables);

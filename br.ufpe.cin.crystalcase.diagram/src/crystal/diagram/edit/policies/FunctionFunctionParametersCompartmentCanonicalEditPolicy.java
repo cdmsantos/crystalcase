@@ -27,12 +27,16 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.CrystalPackage;
 import crystal.diagram.edit.parts.Collections2EditPart;
 import crystal.diagram.edit.parts.Collections3EditPart;
+import crystal.diagram.edit.parts.Collections4EditPart;
 import crystal.diagram.edit.parts.Cursor2EditPart;
 import crystal.diagram.edit.parts.Cursor3EditPart;
+import crystal.diagram.edit.parts.Cursor4EditPart;
 import crystal.diagram.edit.parts.DataType2EditPart;
 import crystal.diagram.edit.parts.DataType3EditPart;
+import crystal.diagram.edit.parts.DataType4EditPart;
 import crystal.diagram.edit.parts.Records2EditPart;
 import crystal.diagram.edit.parts.Records3EditPart;
+import crystal.diagram.edit.parts.Records4EditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
 import crystal.diagram.part.CrystalVisualIDRegistry;
@@ -69,7 +73,7 @@ public class FunctionFunctionParametersCompartmentCanonicalEditPolicy extends Ca
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getFunctionFunctionParametersCompartment_7016SemanticChildren(viewObject);
+				.getFunctionFunctionParametersCompartment_7017SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -89,10 +93,10 @@ public class FunctionFunctionParametersCompartmentCanonicalEditPolicy extends Ca
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case DataType3EditPart.VISUAL_ID:
-		case Collections3EditPart.VISUAL_ID:
-		case Records3EditPart.VISUAL_ID:
-		case Cursor3EditPart.VISUAL_ID:
+		case DataType4EditPart.VISUAL_ID:
+		case Collections4EditPart.VISUAL_ID:
+		case Records4EditPart.VISUAL_ID:
+		case Cursor4EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -107,7 +111,7 @@ public class FunctionFunctionParametersCompartmentCanonicalEditPolicy extends Ca
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getFunctionFunctionParametersCompartment_7016SemanticChildren((View) getHost().getModel());
+				.getFunctionFunctionParametersCompartment_7017SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

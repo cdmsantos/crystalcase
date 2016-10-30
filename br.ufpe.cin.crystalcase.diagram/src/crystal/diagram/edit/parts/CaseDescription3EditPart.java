@@ -60,7 +60,7 @@ public class CaseDescription3EditPart extends CompartmentEditPart implements ITe
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5043;
+	public static final int VISUAL_ID = 5100;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class CaseDescription3EditPart extends CompartmentEditPart implements ITe
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Case_3039, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Case_3092, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CaseDescription3EditPart.VISUAL_ID));
 		}
 		return parser;

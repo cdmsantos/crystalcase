@@ -2,6 +2,8 @@
  */
 package crystal;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +15,8 @@ package crystal;
  * </p>
  * <ul>
  *   <li>{@link crystal.Loop#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.Loop#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.Loop#getBreakCondition <em>Break Condition</em>}</li>
+ *   <li>{@link crystal.Loop#getLoopStatements <em>Loop Statements</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getLoop()
@@ -32,36 +35,63 @@ public interface Loop extends Statements {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getLoop_ClassName()
-	 * @model default="Loop" changeable="false"
+	 * @model default="Loop"
 	 * @generated
 	 */
 	String getClassName();
 
 	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"Type the code of the Loop statement"</code>.
+	 * Sets the value of the '{@link crystal.Loop#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Break Condition</b></em>' attribute.
+	 * The default value is <code>"Type the break condition for LOOP"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Break Condition</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see crystal.CrystalPackage#getLoop_Code()
-	 * @model default="Type the code of the Loop statement"
+	 * @return the value of the '<em>Break Condition</em>' attribute.
+	 * @see #setBreakCondition(String)
+	 * @see crystal.CrystalPackage#getLoop_BreakCondition()
+	 * @model default="Type the break condition for LOOP"
 	 * @generated
 	 */
-	String getCode();
+	String getBreakCondition();
 
 	/**
-	 * Sets the value of the '{@link crystal.Loop#getCode <em>Code</em>}' attribute.
+	 * Sets the value of the '{@link crystal.Loop#getBreakCondition <em>Break Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
+	 * @param value the new value of the '<em>Break Condition</em>' attribute.
+	 * @see #getBreakCondition()
 	 * @generated
 	 */
-	void setCode(String value);
+	void setBreakCondition(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Loop Statements</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.Statements}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Loop Statements</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Loop Statements</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getLoop_LoopStatements()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Statements> getLoopStatements();
 } // Loop

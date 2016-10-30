@@ -17,6 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.Function;
+import crystal.If;
 import crystal.While;
 
 /**
@@ -57,8 +58,8 @@ public class While2CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		While newElement = CrystalFactory.eINSTANCE.createWhile();
 
-		Function owner = (Function) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getElses().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link crystal.Procedure#getParameters <em>Parameters</em>}</li>
  *   <li>{@link crystal.Procedure#getDeclarativePart <em>Declarative Part</em>}</li>
+ *   <li>{@link crystal.Procedure#getParameters <em>Parameters</em>}</li>
  *   <li>{@link crystal.Procedure#getExecutablePart <em>Executable Part</em>}</li>
  * </ul>
  *

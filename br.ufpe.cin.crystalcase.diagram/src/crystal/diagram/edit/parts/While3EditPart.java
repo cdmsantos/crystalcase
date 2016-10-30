@@ -8,6 +8,7 @@ import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -25,6 +26,7 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
+import crystal.diagram.edit.policies.OpenDiagramEditPolicy;
 import crystal.diagram.edit.policies.While3ItemSemanticEditPolicy;
 import crystal.diagram.part.CrystalVisualIDRegistry;
 
@@ -36,7 +38,7 @@ public class While3EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3044;
+	public static final int VISUAL_ID = 3097;
 
 	/**
 	* @generated
@@ -62,7 +64,7 @@ public class While3EditPart extends ShapeNodeEditPart {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new While3ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -113,6 +115,12 @@ public class While3EditPart extends ShapeNodeEditPart {
 			((WhileDescription3EditPart) childEditPart).setLabel(getPrimaryShape().getFigureWhileLabelFigure());
 			return true;
 		}
+		if (childEditPart instanceof WhileWhileWhileStatementsCompartment3EditPart) {
+			IFigure pane = getPrimaryShape().getWhileWhileStatementsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((WhileWhileWhileStatementsCompartment3EditPart) childEditPart).getFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -121,6 +129,11 @@ public class While3EditPart extends ShapeNodeEditPart {
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof WhileDescription3EditPart) {
+			return true;
+		}
+		if (childEditPart instanceof WhileWhileWhileStatementsCompartment3EditPart) {
+			IFigure pane = getPrimaryShape().getWhileWhileStatementsCompartmentFigure();
+			pane.remove(((WhileWhileWhileStatementsCompartment3EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -150,6 +163,9 @@ public class While3EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof WhileWhileWhileStatementsCompartment3EditPart) {
+			return getPrimaryShape().getWhileWhileStatementsCompartmentFigure();
+		}
 		return getContentPane();
 	}
 
@@ -257,8 +273,13 @@ public class While3EditPart extends ShapeNodeEditPart {
 		private WrappingLabel fFigureWhileLabelFigure;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
+		private RectangleFigure fWhileWhileStatementsCompartmentFigure;
+
+		/**
+			 * @generated
+			 */
 		public WhileFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -273,8 +294,15 @@ public class While3EditPart extends ShapeNodeEditPart {
 			fFigureWhileLabelFigure = new WrappingLabel();
 
 			fFigureWhileLabelFigure.setText("While");
+			fFigureWhileLabelFigure.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
 			this.add(fFigureWhileLabelFigure);
+
+			fWhileWhileStatementsCompartmentFigure = new RectangleFigure();
+
+			fWhileWhileStatementsCompartmentFigure.setOutline(false);
+
+			this.add(fWhileWhileStatementsCompartmentFigure);
 
 		}
 
@@ -283,6 +311,13 @@ public class While3EditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureWhileLabelFigure() {
 			return fFigureWhileLabelFigure;
+		}
+
+		/**
+		* @generated
+		*/
+		public RectangleFigure getWhileWhileStatementsCompartmentFigure() {
+			return fWhileWhileStatementsCompartmentFigure;
 		}
 
 	}

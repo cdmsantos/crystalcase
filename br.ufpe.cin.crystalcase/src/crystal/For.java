@@ -2,6 +2,8 @@
  */
 package crystal;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +19,7 @@ package crystal;
  *   <li>{@link crystal.For#getTypeCounter <em>Type Counter</em>}</li>
  *   <li>{@link crystal.For#getLowestNumber <em>Lowest Number</em>}</li>
  *   <li>{@link crystal.For#getHighestNumber <em>Highest Number</em>}</li>
- *   <li>{@link crystal.For#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.For#getForStatements <em>For Statements</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getFor()
@@ -35,11 +37,22 @@ public interface For extends Statements {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getFor_ClassName()
-	 * @model default="For" changeable="false"
+	 * @model default="For"
 	 * @generated
 	 */
 	String getClassName();
+
+	/**
+	 * Sets the value of the '{@link crystal.For#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Counter</b></em>' attribute.
@@ -152,30 +165,19 @@ public interface For extends Statements {
 	void setHighestNumber(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"Type the FOR code"</code>.
+	 * Returns the value of the '<em><b>For Statements</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.Statements}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
+	 * If the meaning of the '<em>For Statements</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see crystal.CrystalPackage#getFor_Code()
-	 * @model default="Type the FOR code"
+	 * @return the value of the '<em>For Statements</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getFor_ForStatements()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getCode();
-
-	/**
-	 * Sets the value of the '{@link crystal.For#getCode <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
-	 * @generated
-	 */
-	void setCode(String value);
+	EList<Statements> getForStatements();
 
 } // For

@@ -25,6 +25,8 @@ import crystal.Parameters;
 import crystal.Procedure;
 import crystal.Records;
 import crystal.Select;
+import crystal.Selector;
+import crystal.SelectorTransition;
 import crystal.Statements;
 import crystal.Subprograms;
 import crystal.Transition;
@@ -187,6 +189,12 @@ public class CrystalSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CrystalPackage.SELECTOR: {
+				Selector selector = (Selector)theEObject;
+				T result = caseSelector(selector);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CrystalPackage.INSERT: {
 				Insert insert = (Insert)theEObject;
 				T result = caseInsert(insert);
@@ -274,6 +282,12 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.TRANSITION: {
 				Transition transition = (Transition)theEObject;
 				T result = caseTransition(transition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CrystalPackage.SELECTOR_TRANSITION: {
+				SelectorTransition selectorTransition = (SelectorTransition)theEObject;
+				T result = caseSelectorTransition(selectorTransition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -552,6 +566,21 @@ public class CrystalSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Selector</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Selector</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSelector(Selector object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>While</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -683,6 +712,21 @@ public class CrystalSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTransition(Transition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Selector Transition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Selector Transition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSelectorTransition(SelectorTransition object) {
 		return null;
 	}
 

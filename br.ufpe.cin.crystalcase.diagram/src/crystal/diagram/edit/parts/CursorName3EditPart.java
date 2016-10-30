@@ -60,7 +60,7 @@ public class CursorName3EditPart extends CompartmentEditPart implements ITextAwa
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5026;
+	public static final int VISUAL_ID = 5082;
 
 	/**
 	 * @generated
@@ -295,7 +295,7 @@ public class CursorName3EditPart extends CompartmentEditPart implements ITextAwa
 	 */
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Cursor_3025, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Cursor_3074, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CursorName3EditPart.VISUAL_ID));
 		}
 		return parser;

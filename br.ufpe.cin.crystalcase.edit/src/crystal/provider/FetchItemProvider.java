@@ -46,7 +46,8 @@ public class FetchItemProvider extends StatementsItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassNamePropertyDescriptor(object);
-			addCodePropertyDescriptor(object);
+			addCursorNamePropertyDescriptor(object);
+			addVariableNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -65,7 +66,7 @@ public class FetchItemProvider extends StatementsItemProvider {
 				 getString("_UI_Fetch_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Fetch_className_feature", "_UI_Fetch_type"),
 				 CrystalPackage.Literals.FETCH__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -74,19 +75,41 @@ public class FetchItemProvider extends StatementsItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Code feature.
+	 * This adds a property descriptor for the Cursor Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCodePropertyDescriptor(Object object) {
+	protected void addCursorNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Fetch_code_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Fetch_code_feature", "_UI_Fetch_type"),
-				 CrystalPackage.Literals.FETCH__CODE,
+				 getString("_UI_Fetch_cursorName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Fetch_cursorName_feature", "_UI_Fetch_type"),
+				 CrystalPackage.Literals.FETCH__CURSOR_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Variable Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVariableNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Fetch_variableName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Fetch_variableName_feature", "_UI_Fetch_type"),
+				 CrystalPackage.Literals.FETCH__VARIABLE_NAME,
 				 true,
 				 false,
 				 false,
@@ -134,7 +157,8 @@ public class FetchItemProvider extends StatementsItemProvider {
 
 		switch (notification.getFeatureID(Fetch.class)) {
 			case CrystalPackage.FETCH__CLASS_NAME:
-			case CrystalPackage.FETCH__CODE:
+			case CrystalPackage.FETCH__CURSOR_NAME:
+			case CrystalPackage.FETCH__VARIABLE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

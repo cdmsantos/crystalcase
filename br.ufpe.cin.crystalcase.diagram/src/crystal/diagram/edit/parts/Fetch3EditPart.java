@@ -36,7 +36,7 @@ public class Fetch3EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3048;
+	public static final int VISUAL_ID = 3172;
 
 	/**
 	* @generated

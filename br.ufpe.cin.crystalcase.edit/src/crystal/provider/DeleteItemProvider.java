@@ -65,7 +65,7 @@ public class DeleteItemProvider extends StatementsItemProvider {
 				 getString("_UI_Delete_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Delete_className_feature", "_UI_Delete_type"),
 				 CrystalPackage.Literals.DELETE__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

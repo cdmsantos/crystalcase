@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link crystal.impl.CursorImpl#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.impl.CursorImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.impl.CursorImpl#getCursorQuery <em>Cursor Query</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,24 +47,24 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	protected String className = CLASS_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * The default value of the '{@link #getCursorQuery() <em>Cursor Query</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCode()
+	 * @see #getCursorQuery()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "CURSOR cursorName IS selectStatement";
+	protected static final String CURSOR_QUERY_EDEFAULT = "selectStatement";
 
 	/**
-	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * The cached value of the '{@link #getCursorQuery() <em>Cursor Query</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCode()
+	 * @see #getCursorQuery()
 	 * @generated
 	 * @ordered
 	 */
-	protected String code = CODE_EDEFAULT;
+	protected String cursorQuery = CURSOR_QUERY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,8 +99,11 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCode() {
-		return code;
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CURSOR__CLASS_NAME, oldClassName, className));
 	}
 
 	/**
@@ -108,11 +111,20 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCode(String newCode) {
-		String oldCode = code;
-		code = newCode;
+	public String getCursorQuery() {
+		return cursorQuery;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCursorQuery(String newCursorQuery) {
+		String oldCursorQuery = cursorQuery;
+		cursorQuery = newCursorQuery;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CURSOR__CODE, oldCode, code));
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CURSOR__CURSOR_QUERY, oldCursorQuery, cursorQuery));
 	}
 
 	/**
@@ -125,8 +137,8 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 		switch (featureID) {
 			case CrystalPackage.CURSOR__CLASS_NAME:
 				return getClassName();
-			case CrystalPackage.CURSOR__CODE:
-				return getCode();
+			case CrystalPackage.CURSOR__CURSOR_QUERY:
+				return getCursorQuery();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -139,8 +151,11 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.CURSOR__CODE:
-				setCode((String)newValue);
+			case CrystalPackage.CURSOR__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
+			case CrystalPackage.CURSOR__CURSOR_QUERY:
+				setCursorQuery((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -154,8 +169,11 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.CURSOR__CODE:
-				setCode(CODE_EDEFAULT);
+			case CrystalPackage.CURSOR__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
+			case CrystalPackage.CURSOR__CURSOR_QUERY:
+				setCursorQuery(CURSOR_QUERY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -171,8 +189,8 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 		switch (featureID) {
 			case CrystalPackage.CURSOR__CLASS_NAME:
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
-			case CrystalPackage.CURSOR__CODE:
-				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+			case CrystalPackage.CURSOR__CURSOR_QUERY:
+				return CURSOR_QUERY_EDEFAULT == null ? cursorQuery != null : !CURSOR_QUERY_EDEFAULT.equals(cursorQuery);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -189,8 +207,8 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (className: ");
 		result.append(className);
-		result.append(", code: ");
-		result.append(code);
+		result.append(", cursorQuery: ");
+		result.append(cursorQuery);
 		result.append(')');
 		return result.toString();
 	}

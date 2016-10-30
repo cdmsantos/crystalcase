@@ -25,6 +25,8 @@ import crystal.Parameters;
 import crystal.Procedure;
 import crystal.Records;
 import crystal.Select;
+import crystal.Selector;
+import crystal.SelectorTransition;
 import crystal.Statements;
 import crystal.Subprograms;
 import crystal.Transition;
@@ -151,6 +153,10 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 				return createCaseAdapter();
 			}
 			@Override
+			public Adapter caseSelector(Selector object) {
+				return createSelectorAdapter();
+			}
+			@Override
 			public Adapter caseInsert(Insert object) {
 				return createInsertAdapter();
 			}
@@ -201,6 +207,10 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTransition(Transition object) {
 				return createTransitionAdapter();
+			}
+			@Override
+			public Adapter caseSelectorTransition(SelectorTransition object) {
+				return createSelectorTransitionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -475,6 +485,20 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link crystal.Selector <em>Selector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.Selector
+	 * @generated
+	 */
+	public Adapter createSelectorAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link crystal.While <em>While</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -597,6 +621,20 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTransitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link crystal.SelectorTransition <em>Selector Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.SelectorTransition
+	 * @generated
+	 */
+	public Adapter createSelectorTransitionAdapter() {
 		return null;
 	}
 

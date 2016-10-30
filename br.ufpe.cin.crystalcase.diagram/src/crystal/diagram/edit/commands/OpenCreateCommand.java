@@ -17,9 +17,11 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
+import crystal.If;
 import crystal.Open;
 import crystal.Procedure;
 import crystal.Subprograms;
+import crystal.While;
 
 /**
  * @generated
@@ -59,8 +61,8 @@ public class OpenCreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Open newElement = CrystalFactory.eINSTANCE.createOpen();
 
-		Procedure owner = (Procedure) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getIfs().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

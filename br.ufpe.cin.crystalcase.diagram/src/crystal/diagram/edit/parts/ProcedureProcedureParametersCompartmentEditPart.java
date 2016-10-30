@@ -34,7 +34,7 @@ public class ProcedureProcedureParametersCompartmentEditPart extends ShapeCompar
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7015;
+	public static final int VISUAL_ID = 7020;
 
 	/**
 	 * @generated

@@ -18,6 +18,8 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.AnonymousBlock;
 import crystal.Case;
 import crystal.CrystalFactory;
+import crystal.Function;
+import crystal.While;
 
 /**
  * @generated
@@ -57,8 +59,8 @@ public class Case3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Case newElement = CrystalFactory.eINSTANCE.createCase();
 
-		AnonymousBlock owner = (AnonymousBlock) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		While owner = (While) getElementToEdit();
+		owner.getWhileStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -34,7 +34,7 @@ public class FunctionFunctionReturnPartCompartmentEditPart extends ShapeCompartm
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7017;
+	public static final int VISUAL_ID = 7022;
 
 	/**
 	 * @generated

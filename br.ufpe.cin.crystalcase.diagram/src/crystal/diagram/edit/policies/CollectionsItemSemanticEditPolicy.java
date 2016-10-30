@@ -22,7 +22,7 @@ public class CollectionsItemSemanticEditPolicy extends CrystalBaseItemSemanticEd
 	 * @generated
 	 */
 	public CollectionsItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Collections_3019);
+		super(CrystalElementTypes.Collections_3053);
 	}
 
 	/**

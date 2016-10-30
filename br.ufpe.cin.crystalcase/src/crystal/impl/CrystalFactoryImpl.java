@@ -28,6 +28,8 @@ import crystal.ParameterType;
 import crystal.Procedure;
 import crystal.Records;
 import crystal.Select;
+import crystal.Selector;
+import crystal.SelectorTransition;
 import crystal.Transition;
 import crystal.Update;
 import crystal.While;
@@ -96,6 +98,7 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 			case CrystalPackage.EXCEPTION: return createException();
 			case CrystalPackage.IF: return createIf();
 			case CrystalPackage.CASE: return createCase();
+			case CrystalPackage.SELECTOR: return createSelector();
 			case CrystalPackage.INSERT: return createInsert();
 			case CrystalPackage.UPDATE: return createUpdate();
 			case CrystalPackage.DELETE: return createDelete();
@@ -109,6 +112,7 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 			case CrystalPackage.CALL_PROCEDURE: return createCallProcedure();
 			case CrystalPackage.CALL_FUNCTION: return createCallFunction();
 			case CrystalPackage.TRANSITION: return createTransition();
+			case CrystalPackage.SELECTOR_TRANSITION: return createSelectorTransition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -307,6 +311,16 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Selector createSelector() {
+		SelectorImpl selector = new SelectorImpl();
+		return selector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public While createWhile() {
 		WhileImpl while_ = new WhileImpl();
 		return while_;
@@ -390,6 +404,16 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 	public Transition createTransition() {
 		TransitionImpl transition = new TransitionImpl();
 		return transition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SelectorTransition createSelectorTransition() {
+		SelectorTransitionImpl selectorTransition = new SelectorTransitionImpl();
+		return selectorTransition;
 	}
 
 	/**

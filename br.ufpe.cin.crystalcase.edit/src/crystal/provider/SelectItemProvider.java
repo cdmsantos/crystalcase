@@ -65,7 +65,7 @@ public class SelectItemProvider extends StatementsItemProvider {
 				 getString("_UI_Select_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Select_className_feature", "_UI_Select_type"),
 				 CrystalPackage.Literals.SELECT__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

@@ -65,7 +65,7 @@ public class UpdateItemProvider extends StatementsItemProvider {
 				 getString("_UI_Update_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Update_className_feature", "_UI_Update_type"),
 				 CrystalPackage.Literals.UPDATE__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

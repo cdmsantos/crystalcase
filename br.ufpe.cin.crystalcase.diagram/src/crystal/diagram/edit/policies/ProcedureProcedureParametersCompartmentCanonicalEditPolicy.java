@@ -69,7 +69,7 @@ public class ProcedureProcedureParametersCompartmentCanonicalEditPolicy extends 
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getProcedureProcedureParametersCompartment_7015SemanticChildren(viewObject);
+				.getProcedureProcedureParametersCompartment_7020SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -89,10 +89,10 @@ public class ProcedureProcedureParametersCompartmentCanonicalEditPolicy extends 
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case DataTypeEditPart.VISUAL_ID:
-		case CollectionsEditPart.VISUAL_ID:
-		case RecordsEditPart.VISUAL_ID:
-		case CursorEditPart.VISUAL_ID:
+		case DataType2EditPart.VISUAL_ID:
+		case Collections2EditPart.VISUAL_ID:
+		case Records2EditPart.VISUAL_ID:
+		case Cursor2EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -107,7 +107,7 @@ public class ProcedureProcedureParametersCompartmentCanonicalEditPolicy extends 
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getProcedureProcedureParametersCompartment_7015SemanticChildren((View) getHost().getModel());
+				.getProcedureProcedureParametersCompartment_7020SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

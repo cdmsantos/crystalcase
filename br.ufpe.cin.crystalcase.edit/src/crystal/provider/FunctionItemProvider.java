@@ -62,9 +62,9 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART);
 			childrenFeatures.add(CrystalPackage.Literals.FUNCTION__PARAMETERS);
 			childrenFeatures.add(CrystalPackage.Literals.FUNCTION__RETURN_PART);
-			childrenFeatures.add(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART);
 			childrenFeatures.add(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART);
 		}
 		return childrenFeatures;
@@ -121,9 +121,9 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Function.class)) {
+			case CrystalPackage.FUNCTION__DECLARATIVE_PART:
 			case CrystalPackage.FUNCTION__PARAMETERS:
 			case CrystalPackage.FUNCTION__RETURN_PART:
-			case CrystalPackage.FUNCTION__DECLARATIVE_PART:
 			case CrystalPackage.FUNCTION__EXECUTABLE_PART:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -144,6 +144,26 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
+				 CrystalFactory.eINSTANCE.createDataType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
+				 CrystalFactory.eINSTANCE.createCollections()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
+				 CrystalFactory.eINSTANCE.createRecords()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
+				 CrystalFactory.eINSTANCE.createCursor()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(CrystalPackage.Literals.FUNCTION__PARAMETERS,
 				 CrystalFactory.eINSTANCE.createDataType()));
 
@@ -180,26 +200,6 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CrystalPackage.Literals.FUNCTION__RETURN_PART,
-				 CrystalFactory.eINSTANCE.createCursor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
-				 CrystalFactory.eINSTANCE.createDataType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
-				 CrystalFactory.eINSTANCE.createCollections()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
-				 CrystalFactory.eINSTANCE.createRecords()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART,
 				 CrystalFactory.eINSTANCE.createCursor()));
 
 		newChildDescriptors.add
@@ -290,9 +290,9 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
+			childFeature == CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART ||
 			childFeature == CrystalPackage.Literals.FUNCTION__PARAMETERS ||
-			childFeature == CrystalPackage.Literals.FUNCTION__RETURN_PART ||
-			childFeature == CrystalPackage.Literals.FUNCTION__DECLARATIVE_PART;
+			childFeature == CrystalPackage.Literals.FUNCTION__RETURN_PART;
 
 		if (qualify) {
 			return getString

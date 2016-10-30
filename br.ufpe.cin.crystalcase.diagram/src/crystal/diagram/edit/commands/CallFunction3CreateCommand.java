@@ -18,6 +18,9 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.AnonymousBlock;
 import crystal.CallFunction;
 import crystal.CrystalFactory;
+import crystal.Function;
+import crystal.If;
+import crystal.Loop;
 
 /**
  * @generated
@@ -57,8 +60,8 @@ public class CallFunction3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		CallFunction newElement = CrystalFactory.eINSTANCE.createCallFunction();
 
-		AnonymousBlock owner = (AnonymousBlock) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		Loop owner = (Loop) getElementToEdit();
+		owner.getLoopStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

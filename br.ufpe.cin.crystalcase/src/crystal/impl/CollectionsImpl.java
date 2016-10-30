@@ -75,7 +75,7 @@ public class CollectionsImpl extends ParametersImpl implements Collections {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_NAME_EDEFAULT = "";
+	protected static final String TYPE_NAME_EDEFAULT = "collectionTypeName";
 
 	/**
 	 * The cached value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -113,6 +113,18 @@ public class CollectionsImpl extends ParametersImpl implements Collections {
 	 */
 	public String getClassName() {
 		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.COLLECTIONS__CLASS_NAME, oldClassName, className));
 	}
 
 	/**
@@ -183,6 +195,9 @@ public class CollectionsImpl extends ParametersImpl implements Collections {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.COLLECTIONS__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
 			case CrystalPackage.COLLECTIONS__CODE:
 				setCode((String)newValue);
 				return;
@@ -201,6 +216,9 @@ public class CollectionsImpl extends ParametersImpl implements Collections {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.COLLECTIONS__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
 			case CrystalPackage.COLLECTIONS__CODE:
 				setCode(CODE_EDEFAULT);
 				return;

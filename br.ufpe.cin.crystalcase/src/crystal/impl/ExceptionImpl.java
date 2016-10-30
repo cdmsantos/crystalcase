@@ -53,7 +53,7 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There arent data registred\')";
+	protected static final String CODE_EDEFAULT = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There aren\'t data registred\')";
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -91,6 +91,18 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	 */
 	public String getClassName() {
 		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.EXCEPTION__CLASS_NAME, oldClassName, className));
 	}
 
 	/**
@@ -138,6 +150,9 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.EXCEPTION__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
 			case CrystalPackage.EXCEPTION__CODE:
 				setCode((String)newValue);
 				return;
@@ -153,6 +168,9 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.EXCEPTION__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
 			case CrystalPackage.EXCEPTION__CODE:
 				setCode(CODE_EDEFAULT);
 				return;

@@ -62,8 +62,8 @@ public class ProcedureItemProvider extends SubprogramsItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CrystalPackage.Literals.PROCEDURE__PARAMETERS);
 			childrenFeatures.add(CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART);
+			childrenFeatures.add(CrystalPackage.Literals.PROCEDURE__PARAMETERS);
 			childrenFeatures.add(CrystalPackage.Literals.PROCEDURE__EXECUTABLE_PART);
 		}
 		return childrenFeatures;
@@ -120,8 +120,8 @@ public class ProcedureItemProvider extends SubprogramsItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Procedure.class)) {
-			case CrystalPackage.PROCEDURE__PARAMETERS:
 			case CrystalPackage.PROCEDURE__DECLARATIVE_PART:
+			case CrystalPackage.PROCEDURE__PARAMETERS:
 			case CrystalPackage.PROCEDURE__EXECUTABLE_PART:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -142,42 +142,42 @@ public class ProcedureItemProvider extends SubprogramsItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.PROCEDURE__PARAMETERS,
+				(CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART,
 				 CrystalFactory.eINSTANCE.createDataType()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.PROCEDURE__PARAMETERS,
+				(CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART,
 				 CrystalFactory.eINSTANCE.createCollections()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.PROCEDURE__PARAMETERS,
+				(CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART,
 				 CrystalFactory.eINSTANCE.createRecords()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.PROCEDURE__PARAMETERS,
+				(CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART,
 				 CrystalFactory.eINSTANCE.createCursor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART,
+				(CrystalPackage.Literals.PROCEDURE__PARAMETERS,
 				 CrystalFactory.eINSTANCE.createDataType()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART,
+				(CrystalPackage.Literals.PROCEDURE__PARAMETERS,
 				 CrystalFactory.eINSTANCE.createCollections()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART,
+				(CrystalPackage.Literals.PROCEDURE__PARAMETERS,
 				 CrystalFactory.eINSTANCE.createRecords()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART,
+				(CrystalPackage.Literals.PROCEDURE__PARAMETERS,
 				 CrystalFactory.eINSTANCE.createCursor()));
 
 		newChildDescriptors.add
@@ -268,8 +268,8 @@ public class ProcedureItemProvider extends SubprogramsItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == CrystalPackage.Literals.PROCEDURE__PARAMETERS ||
-			childFeature == CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART;
+			childFeature == CrystalPackage.Literals.PROCEDURE__DECLARATIVE_PART ||
+			childFeature == CrystalPackage.Literals.PROCEDURE__PARAMETERS;
 
 		if (qualify) {
 			return getString

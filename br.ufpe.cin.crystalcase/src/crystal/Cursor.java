@@ -13,7 +13,7 @@ package crystal;
  * </p>
  * <ul>
  *   <li>{@link crystal.Cursor#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.Cursor#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.Cursor#getCursorQuery <em>Cursor Query</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getCursor()
@@ -31,37 +31,48 @@ public interface Cursor extends Parameters {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCursor_ClassName()
-	 * @model default="Cursor" changeable="false"
+	 * @model default="Cursor"
 	 * @generated
 	 */
 	String getClassName();
 
 	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"CURSOR cursorName IS selectStatement"</code>.
+	 * Sets the value of the '{@link crystal.Cursor#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Cursor Query</b></em>' attribute.
+	 * The default value is <code>"selectStatement"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Cursor Query</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see crystal.CrystalPackage#getCursor_Code()
-	 * @model default="CURSOR cursorName IS selectStatement"
+	 * @return the value of the '<em>Cursor Query</em>' attribute.
+	 * @see #setCursorQuery(String)
+	 * @see crystal.CrystalPackage#getCursor_CursorQuery()
+	 * @model default="selectStatement"
 	 * @generated
 	 */
-	String getCode();
+	String getCursorQuery();
 
 	/**
-	 * Sets the value of the '{@link crystal.Cursor#getCode <em>Code</em>}' attribute.
+	 * Sets the value of the '{@link crystal.Cursor#getCursorQuery <em>Cursor Query</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
+	 * @param value the new value of the '<em>Cursor Query</em>' attribute.
+	 * @see #getCursorQuery()
 	 * @generated
 	 */
-	void setCode(String value);
+	void setCursorQuery(String value);
 
 } // Cursor

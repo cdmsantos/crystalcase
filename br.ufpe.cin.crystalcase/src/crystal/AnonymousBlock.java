@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see crystal.CrystalPackage#getAnonymousBlock()
- * @model annotation="gmf.node label='name' label.text='Anonymous Block' border.color='43,106,215'"
+ * @model annotation="gmf.node label='name' label.text='Anonymous Block' border.color='43,106,215' border.style='dash'"
  * @generated
  */
 public interface AnonymousBlock extends Subprograms {

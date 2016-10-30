@@ -18,6 +18,8 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.CrystalFactory;
 import crystal.Exception;
 import crystal.Function;
+import crystal.If;
+import crystal.While;
 
 /**
  * @generated
@@ -57,8 +59,8 @@ public class Exception2CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Exception newElement = CrystalFactory.eINSTANCE.createException();
 
-		Function owner = (Function) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getIfs().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

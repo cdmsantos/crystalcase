@@ -60,7 +60,7 @@ public class CallProcedureDescription2EditPart extends CompartmentEditPart imple
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5096;
+	public static final int VISUAL_ID = 5110;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class CallProcedureDescription2EditPart extends CompartmentEditPart imple
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.CallProcedure_3088, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.CallProcedure_3103, getParserElement(),
 					CrystalVisualIDRegistry
 							.getType(crystal.diagram.edit.parts.CallProcedureDescription2EditPart.VISUAL_ID));
 		}

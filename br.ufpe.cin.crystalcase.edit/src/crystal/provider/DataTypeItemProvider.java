@@ -67,7 +67,7 @@ public class DataTypeItemProvider extends ParametersItemProvider {
 				 getString("_UI_DataType_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DataType_className_feature", "_UI_DataType_type"),
 				 CrystalPackage.Literals.DATA_TYPE__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

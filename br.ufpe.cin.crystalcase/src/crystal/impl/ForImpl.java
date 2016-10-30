@@ -6,11 +6,18 @@ import crystal.CrystalPackage;
 import crystal.For;
 import crystal.ForCounter;
 
+import crystal.Statements;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link crystal.impl.ForImpl#getTypeCounter <em>Type Counter</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getLowestNumber <em>Lowest Number</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getHighestNumber <em>Highest Number</em>}</li>
- *   <li>{@link crystal.impl.ForImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.impl.ForImpl#getForStatements <em>For Statements</em>}</li>
  * </ul>
  *
  * @generated
@@ -132,24 +139,14 @@ public class ForImpl extends StatementsImpl implements For {
 	protected int highestNumber = HIGHEST_NUMBER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * The cached value of the '{@link #getForStatements() <em>For Statements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCode()
+	 * @see #getForStatements()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "Type the FOR code";
-
-	/**
-	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected String code = CODE_EDEFAULT;
+	protected EList<Statements> forStatements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,6 +174,18 @@ public class ForImpl extends StatementsImpl implements For {
 	 */
 	public String getClassName() {
 		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.FOR__CLASS_NAME, oldClassName, className));
 	}
 
 	/**
@@ -268,8 +277,11 @@ public class ForImpl extends StatementsImpl implements For {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCode() {
-		return code;
+	public EList<Statements> getForStatements() {
+		if (forStatements == null) {
+			forStatements = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.FOR__FOR_STATEMENTS);
+		}
+		return forStatements;
 	}
 
 	/**
@@ -277,11 +289,13 @@ public class ForImpl extends StatementsImpl implements For {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCode(String newCode) {
-		String oldCode = code;
-		code = newCode;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.FOR__CODE, oldCode, code));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CrystalPackage.FOR__FOR_STATEMENTS:
+				return ((InternalEList<?>)getForStatements()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -302,8 +316,8 @@ public class ForImpl extends StatementsImpl implements For {
 				return getLowestNumber();
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				return getHighestNumber();
-			case CrystalPackage.FOR__CODE:
-				return getCode();
+			case CrystalPackage.FOR__FOR_STATEMENTS:
+				return getForStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -313,9 +327,13 @@ public class ForImpl extends StatementsImpl implements For {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.FOR__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
 			case CrystalPackage.FOR__COUNTER:
 				setCounter((String)newValue);
 				return;
@@ -328,8 +346,9 @@ public class ForImpl extends StatementsImpl implements For {
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				setHighestNumber((Integer)newValue);
 				return;
-			case CrystalPackage.FOR__CODE:
-				setCode((String)newValue);
+			case CrystalPackage.FOR__FOR_STATEMENTS:
+				getForStatements().clear();
+				getForStatements().addAll((Collection<? extends Statements>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -343,6 +362,9 @@ public class ForImpl extends StatementsImpl implements For {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.FOR__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
 			case CrystalPackage.FOR__COUNTER:
 				setCounter(COUNTER_EDEFAULT);
 				return;
@@ -355,8 +377,8 @@ public class ForImpl extends StatementsImpl implements For {
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				setHighestNumber(HIGHEST_NUMBER_EDEFAULT);
 				return;
-			case CrystalPackage.FOR__CODE:
-				setCode(CODE_EDEFAULT);
+			case CrystalPackage.FOR__FOR_STATEMENTS:
+				getForStatements().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -380,8 +402,8 @@ public class ForImpl extends StatementsImpl implements For {
 				return lowestNumber != LOWEST_NUMBER_EDEFAULT;
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				return highestNumber != HIGHEST_NUMBER_EDEFAULT;
-			case CrystalPackage.FOR__CODE:
-				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+			case CrystalPackage.FOR__FOR_STATEMENTS:
+				return forStatements != null && !forStatements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -406,8 +428,6 @@ public class ForImpl extends StatementsImpl implements For {
 		result.append(lowestNumber);
 		result.append(", highestNumber: ");
 		result.append(highestNumber);
-		result.append(", code: ");
-		result.append(code);
 		result.append(')');
 		return result.toString();
 	}

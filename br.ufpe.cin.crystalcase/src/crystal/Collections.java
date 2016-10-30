@@ -32,11 +32,22 @@ public interface Collections extends Parameters {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCollections_ClassName()
-	 * @model default="Collection" changeable="false"
+	 * @model default="Collection"
 	 * @generated
 	 */
 	String getClassName();
+
+	/**
+	 * Sets the value of the '{@link crystal.Collections#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
@@ -67,7 +78,7 @@ public interface Collections extends Parameters {
 
 	/**
 	 * Returns the value of the '<em><b>Type Name</b></em>' attribute.
-	 * The default value is <code>""</code>.
+	 * The default value is <code>"collectionTypeName"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type Name</em>' attribute isn't clear,
@@ -77,7 +88,7 @@ public interface Collections extends Parameters {
 	 * @return the value of the '<em>Type Name</em>' attribute.
 	 * @see #setTypeName(String)
 	 * @see crystal.CrystalPackage#getCollections_TypeName()
-	 * @model default=""
+	 * @model default="collectionTypeName"
 	 * @generated
 	 */
 	String getTypeName();

@@ -64,7 +64,7 @@ public class ExceptionItemProvider extends StatementsItemProvider {
 				 getString("_UI_Exception_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Exception_className_feature", "_UI_Exception_type"),
 				 CrystalPackage.Literals.EXCEPTION__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.AnonymousBlock;
 import crystal.Case;
 import crystal.CrystalFactory;
+import crystal.If;
 import crystal.Procedure;
 import crystal.Subprograms;
 
@@ -59,8 +60,8 @@ public class CaseCreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Case newElement = CrystalFactory.eINSTANCE.createCase();
 
-		Procedure owner = (Procedure) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getIfs().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

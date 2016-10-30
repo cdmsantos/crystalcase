@@ -8,12 +8,16 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
 import crystal.diagram.edit.commands.Collections2CreateCommand;
 import crystal.diagram.edit.commands.Collections3CreateCommand;
+import crystal.diagram.edit.commands.Collections4CreateCommand;
 import crystal.diagram.edit.commands.Cursor2CreateCommand;
 import crystal.diagram.edit.commands.Cursor3CreateCommand;
+import crystal.diagram.edit.commands.Cursor4CreateCommand;
 import crystal.diagram.edit.commands.DataType2CreateCommand;
 import crystal.diagram.edit.commands.DataType3CreateCommand;
+import crystal.diagram.edit.commands.DataType4CreateCommand;
 import crystal.diagram.edit.commands.Records2CreateCommand;
 import crystal.diagram.edit.commands.Records3CreateCommand;
+import crystal.diagram.edit.commands.Records4CreateCommand;
 import crystal.diagram.providers.CrystalElementTypes;
 
 /**
@@ -33,16 +37,16 @@ public class FunctionFunctionParametersCompartmentItemSemanticEditPolicy extends
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
 		if (CrystalElementTypes.DataType_3022 == req.getElementType()) {
-			return getGEFWrapper(new DataType3CreateCommand(req));
+			return getGEFWrapper(new DataType4CreateCommand(req));
 		}
 		if (CrystalElementTypes.Collections_3023 == req.getElementType()) {
-			return getGEFWrapper(new Collections3CreateCommand(req));
+			return getGEFWrapper(new Collections4CreateCommand(req));
 		}
 		if (CrystalElementTypes.Records_3024 == req.getElementType()) {
-			return getGEFWrapper(new Records3CreateCommand(req));
+			return getGEFWrapper(new Records4CreateCommand(req));
 		}
 		if (CrystalElementTypes.Cursor_3025 == req.getElementType()) {
-			return getGEFWrapper(new Cursor3CreateCommand(req));
+			return getGEFWrapper(new Cursor4CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

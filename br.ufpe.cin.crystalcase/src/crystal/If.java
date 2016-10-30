@@ -2,6 +2,8 @@
  */
 package crystal;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -14,8 +16,8 @@ package crystal;
  * <ul>
  *   <li>{@link crystal.If#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.If#getCondition <em>Condition</em>}</li>
- *   <li>{@link crystal.If#getCode <em>Code</em>}</li>
- *   <li>{@link crystal.If#getCodeElse <em>Code Else</em>}</li>
+ *   <li>{@link crystal.If#getIfs <em>Ifs</em>}</li>
+ *   <li>{@link crystal.If#getElses <em>Elses</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getIf()
@@ -33,11 +35,22 @@ public interface If extends Statements {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getIf_ClassName()
-	 * @model default="If" changeable="false"
+	 * @model default="If"
 	 * @generated
 	 */
 	String getClassName();
+
+	/**
+	 * Sets the value of the '{@link crystal.If#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' attribute.
@@ -67,57 +80,35 @@ public interface If extends Statements {
 	void setCondition(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"Type de IF code"</code>.
+	 * Returns the value of the '<em><b>Ifs</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.Statements}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Ifs</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see crystal.CrystalPackage#getIf_Code()
-	 * @model default="Type de IF code"
+	 * @return the value of the '<em>Ifs</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getIf_Ifs()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getCode();
+	EList<Statements> getIfs();
 
 	/**
-	 * Sets the value of the '{@link crystal.If#getCode <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
-	 * @generated
-	 */
-	void setCode(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Code Else</b></em>' attribute.
-	 * The default value is <code>"Type de ELSE code"</code>.
+	 * Returns the value of the '<em><b>Elses</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.Statements}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Code Else</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Elses</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code Else</em>' attribute.
-	 * @see #setCodeElse(String)
-	 * @see crystal.CrystalPackage#getIf_CodeElse()
-	 * @model default="Type de ELSE code"
+	 * @return the value of the '<em>Elses</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getIf_Elses()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getCodeElse();
-
-	/**
-	 * Sets the value of the '{@link crystal.If#getCodeElse <em>Code Else</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code Else</em>' attribute.
-	 * @see #getCodeElse()
-	 * @generated
-	 */
-	void setCodeElse(String value);
+	EList<Statements> getElses();
 
 } // If

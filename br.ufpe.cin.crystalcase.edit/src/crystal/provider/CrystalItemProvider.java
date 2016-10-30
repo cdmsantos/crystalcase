@@ -81,6 +81,7 @@ public class CrystalItemProvider
 			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__PROCEDURES);
 			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__FUNCTIONS);
 			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__BLOCKS);
+			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__SELECTOR_TRANSITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -137,6 +138,7 @@ public class CrystalItemProvider
 			case CrystalPackage.CRYSTAL__PROCEDURES:
 			case CrystalPackage.CRYSTAL__FUNCTIONS:
 			case CrystalPackage.CRYSTAL__BLOCKS:
+			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -173,6 +175,11 @@ public class CrystalItemProvider
 			(createChildParameter
 				(CrystalPackage.Literals.CRYSTAL__BLOCKS,
 				 CrystalFactory.eINSTANCE.createAnonymousBlock()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CRYSTAL__SELECTOR_TRANSITIONS,
+				 CrystalFactory.eINSTANCE.createSelectorTransition()));
 	}
 
 	/**

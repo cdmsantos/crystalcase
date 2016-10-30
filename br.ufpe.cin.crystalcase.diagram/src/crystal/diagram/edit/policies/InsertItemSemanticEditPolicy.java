@@ -31,7 +31,7 @@ public class InsertItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPol
 	 * @generated
 	 */
 	public InsertItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Insert_3059);
+		super(CrystalElementTypes.Insert_3184);
 	}
 
 	/**

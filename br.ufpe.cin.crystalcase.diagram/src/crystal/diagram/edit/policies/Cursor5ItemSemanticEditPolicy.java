@@ -22,7 +22,7 @@ public class Cursor5ItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPo
 	* @generated
 	*/
 	public Cursor5ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Cursor_3074);
+		super(CrystalElementTypes.Cursor_3029);
 	}
 
 	/**

@@ -75,7 +75,7 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_NAME_EDEFAULT = "";
+	protected static final String TYPE_NAME_EDEFAULT = "recordTypeName";
 
 	/**
 	 * The cached value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -113,6 +113,18 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 */
 	public String getClassName() {
 		return className;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.RECORDS__CLASS_NAME, oldClassName, className));
 	}
 
 	/**
@@ -183,6 +195,9 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.RECORDS__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
 			case CrystalPackage.RECORDS__CODE:
 				setCode((String)newValue);
 				return;
@@ -201,6 +216,9 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.RECORDS__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
 			case CrystalPackage.RECORDS__CODE:
 				setCode(CODE_EDEFAULT);
 				return;

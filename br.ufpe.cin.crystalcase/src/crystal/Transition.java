@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see crystal.CrystalPackage#getTransition()
- * @model annotation="gmf.link source='source' target='target' incoming='true' target.decoration='arrow' color='0,0,0' width='1'"
+ * @model annotation="gmf.link source='source' target='target' incoming='true' target.decoration='arrow' color='0,0,0' width='1' label='name' label.text='Statement Connection' label.icon='true'"
  * @generated
  */
 public interface Transition extends EObject {

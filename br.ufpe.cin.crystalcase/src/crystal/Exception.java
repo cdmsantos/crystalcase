@@ -31,15 +31,26 @@ public interface Exception extends Statements {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getException_ClassName()
-	 * @model default="Exception" changeable="false"
+	 * @model default="Exception"
 	 * @generated
 	 */
 	String getClassName();
 
 	/**
+	 * Sets the value of the '{@link crystal.Exception#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There arent data registred\')"</code>.
+	 * The default value is <code>"EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There aren\'t data registred\')"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
@@ -49,7 +60,7 @@ public interface Exception extends Statements {
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(String)
 	 * @see crystal.CrystalPackage#getException_Code()
-	 * @model default="EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There arent data registred\')"
+	 * @model default="EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There aren\'t data registred\')"
 	 * @generated
 	 */
 	String getCode();

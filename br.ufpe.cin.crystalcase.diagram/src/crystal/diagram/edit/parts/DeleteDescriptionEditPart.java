@@ -60,7 +60,7 @@ public class DeleteDescriptionEditPart extends CompartmentEditPart implements IT
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5069;
+	public static final int VISUAL_ID = 5192;
 
 	/**
 	 * @generated
@@ -295,7 +295,7 @@ public class DeleteDescriptionEditPart extends CompartmentEditPart implements IT
 	 */
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Delete_3061, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Delete_3186, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DeleteDescriptionEditPart.VISUAL_ID));
 		}
 		return parser;

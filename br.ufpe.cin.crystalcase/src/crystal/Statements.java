@@ -52,7 +52,6 @@ public interface Statements extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Is Start</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Start</em>' attribute isn't clear,
@@ -62,7 +61,7 @@ public interface Statements extends EObject {
 	 * @return the value of the '<em>Is Start</em>' attribute.
 	 * @see #setIsStart(boolean)
 	 * @see crystal.CrystalPackage#getStatements_IsStart()
-	 * @model default="false"
+	 * @model
 	 * @generated
 	 */
 	boolean isIsStart();

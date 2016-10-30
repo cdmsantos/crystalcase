@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see crystal.CrystalPackage#getSubprograms()
  * @model abstract="true"
- *        annotation="gmf.node figure='rectangle' border.style='dash' border.width='1' label.readOnly='true'"
+ *        annotation="gmf.node figure='rectangle' border.width='1' label.readOnly='true'"
  * @generated
  */
 public interface Subprograms extends EObject {

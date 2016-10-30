@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link crystal.impl.OpenImpl#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.impl.OpenImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link crystal.impl.OpenImpl#getCursorName <em>Cursor Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,24 +47,24 @@ public class OpenImpl extends StatementsImpl implements Open {
 	protected String className = CLASS_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * The default value of the '{@link #getCursorName() <em>Cursor Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCode()
+	 * @see #getCursorName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "OPEN cursorName";
+	protected static final String CURSOR_NAME_EDEFAULT = "cursorName";
 
 	/**
-	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * The cached value of the '{@link #getCursorName() <em>Cursor Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCode()
+	 * @see #getCursorName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String code = CODE_EDEFAULT;
+	protected String cursorName = CURSOR_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,8 +99,11 @@ public class OpenImpl extends StatementsImpl implements Open {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCode() {
-		return code;
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.OPEN__CLASS_NAME, oldClassName, className));
 	}
 
 	/**
@@ -108,11 +111,20 @@ public class OpenImpl extends StatementsImpl implements Open {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCode(String newCode) {
-		String oldCode = code;
-		code = newCode;
+	public String getCursorName() {
+		return cursorName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCursorName(String newCursorName) {
+		String oldCursorName = cursorName;
+		cursorName = newCursorName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.OPEN__CODE, oldCode, code));
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.OPEN__CURSOR_NAME, oldCursorName, cursorName));
 	}
 
 	/**
@@ -125,8 +137,8 @@ public class OpenImpl extends StatementsImpl implements Open {
 		switch (featureID) {
 			case CrystalPackage.OPEN__CLASS_NAME:
 				return getClassName();
-			case CrystalPackage.OPEN__CODE:
-				return getCode();
+			case CrystalPackage.OPEN__CURSOR_NAME:
+				return getCursorName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -139,8 +151,11 @@ public class OpenImpl extends StatementsImpl implements Open {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.OPEN__CODE:
-				setCode((String)newValue);
+			case CrystalPackage.OPEN__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
+			case CrystalPackage.OPEN__CURSOR_NAME:
+				setCursorName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -154,8 +169,11 @@ public class OpenImpl extends StatementsImpl implements Open {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.OPEN__CODE:
-				setCode(CODE_EDEFAULT);
+			case CrystalPackage.OPEN__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
+			case CrystalPackage.OPEN__CURSOR_NAME:
+				setCursorName(CURSOR_NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -171,8 +189,8 @@ public class OpenImpl extends StatementsImpl implements Open {
 		switch (featureID) {
 			case CrystalPackage.OPEN__CLASS_NAME:
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
-			case CrystalPackage.OPEN__CODE:
-				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+			case CrystalPackage.OPEN__CURSOR_NAME:
+				return CURSOR_NAME_EDEFAULT == null ? cursorName != null : !CURSOR_NAME_EDEFAULT.equals(cursorName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -189,8 +207,8 @@ public class OpenImpl extends StatementsImpl implements Open {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (className: ");
 		result.append(className);
-		result.append(", code: ");
-		result.append(code);
+		result.append(", cursorName: ");
+		result.append(cursorName);
 		result.append(')');
 		return result.toString();
 	}

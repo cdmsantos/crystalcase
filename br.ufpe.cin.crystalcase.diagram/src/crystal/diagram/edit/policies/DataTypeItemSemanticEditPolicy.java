@@ -22,7 +22,7 @@ public class DataTypeItemSemanticEditPolicy extends CrystalBaseItemSemanticEditP
 	 * @generated
 	 */
 	public DataTypeItemSemanticEditPolicy() {
-		super(CrystalElementTypes.DataType_3018);
+		super(CrystalElementTypes.DataType_3052);
 	}
 
 	/**

@@ -8,6 +8,7 @@ import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -26,6 +27,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
 import crystal.diagram.edit.policies.Loop2ItemSemanticEditPolicy;
+import crystal.diagram.edit.policies.OpenDiagramEditPolicy;
 import crystal.diagram.part.CrystalVisualIDRegistry;
 
 /**
@@ -36,7 +38,7 @@ public class Loop2EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3084;
+	public static final int VISUAL_ID = 3099;
 
 	/**
 	* @generated
@@ -62,7 +64,7 @@ public class Loop2EditPart extends ShapeNodeEditPart {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new Loop2ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -113,6 +115,12 @@ public class Loop2EditPart extends ShapeNodeEditPart {
 			((LoopDescription2EditPart) childEditPart).setLabel(getPrimaryShape().getFigureLoopLabelFigure());
 			return true;
 		}
+		if (childEditPart instanceof LoopLoopLoopStatementsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getLoopLoopStatementsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((LoopLoopLoopStatementsCompartment2EditPart) childEditPart).getFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -121,6 +129,11 @@ public class Loop2EditPart extends ShapeNodeEditPart {
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof LoopDescription2EditPart) {
+			return true;
+		}
+		if (childEditPart instanceof LoopLoopLoopStatementsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getLoopLoopStatementsCompartmentFigure();
+			pane.remove(((LoopLoopLoopStatementsCompartment2EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -150,6 +163,9 @@ public class Loop2EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof LoopLoopLoopStatementsCompartment2EditPart) {
+			return getPrimaryShape().getLoopLoopStatementsCompartmentFigure();
+		}
 		return getContentPane();
 	}
 
@@ -257,8 +273,13 @@ public class Loop2EditPart extends ShapeNodeEditPart {
 		private WrappingLabel fFigureLoopLabelFigure;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
+		private RectangleFigure fLoopLoopStatementsCompartmentFigure;
+
+		/**
+			 * @generated
+			 */
 		public LoopFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -273,8 +294,15 @@ public class Loop2EditPart extends ShapeNodeEditPart {
 			fFigureLoopLabelFigure = new WrappingLabel();
 
 			fFigureLoopLabelFigure.setText("Loop");
+			fFigureLoopLabelFigure.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
 			this.add(fFigureLoopLabelFigure);
+
+			fLoopLoopStatementsCompartmentFigure = new RectangleFigure();
+
+			fLoopLoopStatementsCompartmentFigure.setOutline(false);
+
+			this.add(fLoopLoopStatementsCompartmentFigure);
 
 		}
 
@@ -283,6 +311,13 @@ public class Loop2EditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureLoopLabelFigure() {
 			return fFigureLoopLabelFigure;
+		}
+
+		/**
+		* @generated
+		*/
+		public RectangleFigure getLoopLoopStatementsCompartmentFigure() {
+			return fLoopLoopStatementsCompartmentFigure;
 		}
 
 	}

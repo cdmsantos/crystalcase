@@ -59,7 +59,7 @@ public class RecordsCreateCommand extends EditElementCommand {
 		Records newElement = CrystalFactory.eINSTANCE.createRecords();
 
 		Procedure owner = (Procedure) getElementToEdit();
-		owner.getParameters().add(newElement);
+		owner.getDeclarativePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

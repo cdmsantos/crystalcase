@@ -65,7 +65,7 @@ public class CallFunctionItemProvider extends StatementsItemProvider {
 				 getString("_UI_CallFunction_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CallFunction_className_feature", "_UI_CallFunction_type"),
 				 CrystalPackage.Literals.CALL_FUNCTION__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

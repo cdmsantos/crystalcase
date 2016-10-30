@@ -32,11 +32,22 @@ public interface CallProcedure extends Statements {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Name</em>' attribute.
+	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCallProcedure_ClassName()
-	 * @model default="CallProcedure" changeable="false"
+	 * @model default="CallProcedure"
 	 * @generated
 	 */
 	String getClassName();
+
+	/**
+	 * Sets the value of the '{@link crystal.CallProcedure#getClassName <em>Class Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Name</em>' attribute.
+	 * @see #getClassName()
+	 * @generated
+	 */
+	void setClassName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name Subroutine</b></em>' attribute.

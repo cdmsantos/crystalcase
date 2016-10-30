@@ -417,6 +417,29 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link crystal.Selector} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SelectorItemProvider selectorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link crystal.Selector}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSelectorAdapter() {
+		if (selectorItemProvider == null) {
+			selectorItemProvider = new SelectorItemProvider(this);
+		}
+
+		return selectorItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link crystal.While} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -624,6 +647,29 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link crystal.SelectorTransition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SelectorTransitionItemProvider selectorTransitionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link crystal.SelectorTransition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSelectorTransitionAdapter() {
+		if (selectorTransitionItemProvider == null) {
+			selectorTransitionItemProvider = new SelectorTransitionItemProvider(this);
+		}
+
+		return selectorTransitionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -733,6 +779,7 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 		if (exceptionItemProvider != null) exceptionItemProvider.dispose();
 		if (ifItemProvider != null) ifItemProvider.dispose();
 		if (caseItemProvider != null) caseItemProvider.dispose();
+		if (selectorItemProvider != null) selectorItemProvider.dispose();
 		if (insertItemProvider != null) insertItemProvider.dispose();
 		if (updateItemProvider != null) updateItemProvider.dispose();
 		if (deleteItemProvider != null) deleteItemProvider.dispose();
@@ -746,6 +793,7 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 		if (callProcedureItemProvider != null) callProcedureItemProvider.dispose();
 		if (callFunctionItemProvider != null) callFunctionItemProvider.dispose();
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
+		if (selectorTransitionItemProvider != null) selectorTransitionItemProvider.dispose();
 	}
 
 }

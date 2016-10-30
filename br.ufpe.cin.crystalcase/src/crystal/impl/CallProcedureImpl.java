@@ -94,6 +94,18 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setClassName(String newClassName) {
+		String oldClassName = className;
+		className = newClassName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CALL_PROCEDURE__CLASS_NAME, oldClassName, className));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getNameSubroutine() {
 		return nameSubroutine;
 	}
@@ -134,6 +146,9 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CrystalPackage.CALL_PROCEDURE__CLASS_NAME:
+				setClassName((String)newValue);
+				return;
 			case CrystalPackage.CALL_PROCEDURE__NAME_SUBROUTINE:
 				setNameSubroutine((String)newValue);
 				return;
@@ -149,6 +164,9 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CrystalPackage.CALL_PROCEDURE__CLASS_NAME:
+				setClassName(CLASS_NAME_EDEFAULT);
+				return;
 			case CrystalPackage.CALL_PROCEDURE__NAME_SUBROUTINE:
 				setNameSubroutine(NAME_SUBROUTINE_EDEFAULT);
 				return;

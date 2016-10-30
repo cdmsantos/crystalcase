@@ -47,6 +47,10 @@ public class DataType5CreateCommand extends EditElementCommand {
 	* @generated
 	*/
 	public boolean canExecute() {
+		Function container = (Function) getElementToEdit();
+		if (container.getReturnPart() != null) {
+			return false;
+		}
 		return true;
 
 	}
@@ -58,7 +62,7 @@ public class DataType5CreateCommand extends EditElementCommand {
 		DataType newElement = CrystalFactory.eINSTANCE.createDataType();
 
 		Function owner = (Function) getElementToEdit();
-		owner.getDeclarativePart().add(newElement);
+		owner.setReturnPart(newElement);
 
 		doConfigure(newElement, monitor, info);
 

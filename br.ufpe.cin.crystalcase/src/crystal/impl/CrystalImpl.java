@@ -7,6 +7,7 @@ import crystal.Crystal;
 import crystal.CrystalPackage;
 import crystal.Function;
 import crystal.Procedure;
+import crystal.SelectorTransition;
 import crystal.Transition;
 
 import java.util.Collection;
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link crystal.impl.CrystalImpl#getProcedures <em>Procedures</em>}</li>
  *   <li>{@link crystal.impl.CrystalImpl#getFunctions <em>Functions</em>}</li>
  *   <li>{@link crystal.impl.CrystalImpl#getBlocks <em>Blocks</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getSelectorTransitions <em>Selector Transitions</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +81,16 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 	 * @ordered
 	 */
 	protected EList<AnonymousBlock> blocks;
+
+	/**
+	 * The cached value of the '{@link #getSelectorTransitions() <em>Selector Transitions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelectorTransitions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SelectorTransition> selectorTransitions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,6 +164,18 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SelectorTransition> getSelectorTransitions() {
+		if (selectorTransitions == null) {
+			selectorTransitions = new EObjectContainmentEList<SelectorTransition>(SelectorTransition.class, this, CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS);
+		}
+		return selectorTransitions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -163,6 +187,8 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 				return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
 			case CrystalPackage.CRYSTAL__BLOCKS:
 				return ((InternalEList<?>)getBlocks()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
+				return ((InternalEList<?>)getSelectorTransitions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -183,6 +209,8 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 				return getFunctions();
 			case CrystalPackage.CRYSTAL__BLOCKS:
 				return getBlocks();
+			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
+				return getSelectorTransitions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,6 +240,10 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 				getBlocks().clear();
 				getBlocks().addAll((Collection<? extends AnonymousBlock>)newValue);
 				return;
+			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
+				getSelectorTransitions().clear();
+				getSelectorTransitions().addAll((Collection<? extends SelectorTransition>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -236,6 +268,9 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 			case CrystalPackage.CRYSTAL__BLOCKS:
 				getBlocks().clear();
 				return;
+			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
+				getSelectorTransitions().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -256,6 +291,8 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 				return functions != null && !functions.isEmpty();
 			case CrystalPackage.CRYSTAL__BLOCKS:
 				return blocks != null && !blocks.isEmpty();
+			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
+				return selectorTransitions != null && !selectorTransitions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

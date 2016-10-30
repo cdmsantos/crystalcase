@@ -60,7 +60,7 @@ public class DataTypeName5EditPart extends CompartmentEditPart implements ITextA
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5079;
+	public static final int VISUAL_ID = 5027;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class DataTypeName5EditPart extends CompartmentEditPart implements ITextA
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.DataType_3071, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.DataType_3026, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DataTypeName5EditPart.VISUAL_ID));
 		}
 		return parser;

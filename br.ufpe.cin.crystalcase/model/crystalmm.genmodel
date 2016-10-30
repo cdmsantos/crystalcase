@@ -49,19 +49,20 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/procedures"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/functions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/blocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/selectorTransitions"/>
     </genClasses>
     <genClasses image="false" ecoreClass="crystalmm.ecore#//Subprograms">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Subprograms/name"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Procedure">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Procedure/parameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Procedure/declarativePart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Procedure/parameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Procedure/executablePart"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Function">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Function/declarativePart"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Function/parameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Function/returnPart"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Function/declarativePart"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Function/executablePart"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//AnonymousBlock">
@@ -73,101 +74,113 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Parameters/type"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//DataType">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//DataType/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//DataType/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//DataType/options"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//DataType/precision"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//DataType/scale"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Collections">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Collections/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Collections/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Collections/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Collections/typeName"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Records">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Records/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Records/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Records/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Records/typeName"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Cursor">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Cursor/className"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Cursor/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Cursor/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Cursor/cursorQuery"/>
     </genClasses>
     <genClasses image="false" ecoreClass="crystalmm.ecore#//Statements">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Statements/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Statements/isStart"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Exception">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Exception/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Exception/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Exception/code"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//If">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//If/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//If/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//If/condition"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//If/code"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//If/codeElse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//If/ifs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//If/elses"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Case">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Case/className"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Case/condition"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Case/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Case/className"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Case/cases"/>
+    </genClasses>
+    <genClasses ecoreClass="crystalmm.ecore#//Selector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Selector/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Selector/condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Selector/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Selector/caseStatements"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Insert">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Insert/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Insert/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Insert/code"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Update">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Update/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Update/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Update/code"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Delete">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Delete/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Delete/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Delete/code"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Select">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Select/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Select/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Select/code"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//While">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//While/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//While/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//While/condition"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//While/code"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//While/whileStatements"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//For">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//For/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//For/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//For/counter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//For/typeCounter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//For/lowestNumber"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//For/highestNumber"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//For/code"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//For/forStatements"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Loop">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Loop/className"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Loop/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Loop/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Loop/breakCondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Loop/loopStatements"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Open">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Open/className"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Open/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Open/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Open/cursorName"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Fetch">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Fetch/className"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Fetch/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Fetch/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Fetch/cursorName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Fetch/variableName"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Close">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Close/className"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Close/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Close/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Close/cursorName"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//CallProcedure">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//CallProcedure/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//CallProcedure/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//CallProcedure/nameSubroutine"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//CallFunction">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//CallFunction/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//CallFunction/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//CallFunction/nameSubroutine"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Transition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Transition/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Transition/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Transition/target"/>
+    </genClasses>
+    <genClasses ecoreClass="crystalmm.ecore#//SelectorTransition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//SelectorTransition/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//SelectorTransition/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//SelectorTransition/target"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

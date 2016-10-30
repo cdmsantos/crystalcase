@@ -58,7 +58,7 @@ public class DataType3CreateCommand extends EditElementCommand {
 		DataType newElement = CrystalFactory.eINSTANCE.createDataType();
 
 		Function owner = (Function) getElementToEdit();
-		owner.getParameters().add(newElement);
+		owner.getDeclarativePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -17,8 +17,8 @@ for(element in Procedure.allInstances()) {
 	out.println("BEGIN"); --static
 	
 	//PARTE EXECUTÁVEL
-	var firstElement = getFirstElement();
-	printExecutablePart(firstElement);
+	var firstElement = getFirstElement(element.executablePart);
+	printStatements(firstElement);
 	printElementsByTransition(firstElement);
 	
 	out.println("END;"); --static
@@ -52,8 +52,8 @@ for(element in Function.allInstances()) {
 	out.println("BEGIN"); --static
 	
 	//PARTE EXECUTÁVEL
-	var firstElement = getFirstElement();
-	printExecutablePart(firstElement);
+	var firstElement = getFirstElement(element.executablePart);
+	printStatements(firstElement);
 	printElementsByTransition(firstElement);
 
 	out.println("RETURN " + returnStatement.name + ";");
@@ -62,9 +62,12 @@ for(element in Function.allInstances()) {
 	out.println(); --static
 }
 
-operation getFirstElement(){
-	return Statements.all.
-		selectOne(s|s.isStart);
+operation getFirstElement(object){
+	for(element in object) {
+		if(element.isStart == true){
+			return element;
+		}
+	}
 }
 
 operation Statements getNext() {
@@ -85,10 +88,13 @@ operation printDeclarativePart(object) {
 	if(not isEmpty(object.declarativePart)){
 		--out.println("DECLARE"); --static
 		for(declaration in object.declarativePart){	
-			if(not (declaration.className == "DataType")) {
-				out.println("   " + declaration.name + " " + declaration.className + ";");
-			} else {
+			if(declaration.className == "DataType") {                
 				out.println("   " + declaration.name + " " + declaration.options + ";");
+			} else if(declaration.className == "Cursor") {
+				out.println("   " + "CURSOR " + declaration.name + " IS " + declaration.cursorQuery + ";");
+			} else {
+				out.println("   " + declaration.code + ";"); //Collections and Records
+				out.println("   " + declaration.name + " " + declaration.typeName + ";");
 			}
 		}
 	}
@@ -104,43 +110,93 @@ operation printElementsByTransition(object) {
 		} else{
 			element = element.first().getNext();
 		}
-		printExecutablePart(element.first());
+		printStatements(element.first());
 	}
 }
 
-operation printExecutablePart(object){
-	if(object.className == "If"){
-		out.println("   " + "IF " + object.condition + " THEN");
-		out.println("   " + "   " + object.code);
-		if(not isEmpty(object.codeElse)) {
-			out.println("   " + "ELSE"); --static
-			out.println("   " + "   " + object.codeElse);
-		}
-		out.println("   " + "END IF;"); --static
-	} else if (object.className == "Case") {
-		out.println("   " + "CASE " + object.condition);
-		out.println("   " + "   " + object.code);
-		out.println("   " + "END;"); --static
-	} else if (object.className == "While") {
-		out.println("   " + "WHILE " + object.condition);
-		out.println("   " + "LOOP");
-		out.println("   " + "   " + object.code);
-		out.println("   " + "END LOOP;"); --static
-	} else if (object.className == "For") {
-		out.println("   " + "FOR " + object.counter + " IN " + object.typeCounter + " " + object.lowestNumber + ".." + object.highestNumber);
-		out.println("   " + "LOOP"); --static
-		out.println("   " + "   " + object.code);
-		out.println("   " + "END LOOP;"); --static
-	} else if (object.className == "Loop") {
-		out.println("   " + "LOOP"); --static
-		out.println("   " + "   " + object.code);
-		out.println("   " + "END LOOP;"); --static
-	} else if (object.className == "CallProcedure" or object.className == "CallFunction") {
-		out.println("   " + "EXEC " + object.nameSubroutine + ";");
-	} else {
-		out.println("   " + object.code + ";");	
+operation printCase(object) {
+	out.println("   " + "CASE");
+	for(selector in object.cases){
+		out.println("      " + "WHEN " + selector.condition + " THEN ");
+		var firstElement = getFirstElement(selector.caseStatements);
+		//out.println(selector);
+		printStatements(firstElement);
+		//printElementsByTransition(firstElement);
 	}
+	out.println("   " + "END;");
+}
+
+operation printIf(object) {
+	out.println("   " + "IF " + object.condition + " THEN");
+	var firstElement = getFirstElement(object.ifs);
+	printStatements(firstElement);
+	//printElementsByTransition(firstElement);
+	if(not isEmpty(object.elses)) {
+		out.println("   " + "ELSE"); --static
+		var firstElement = getFirstElement(object.elses);
+		printStatements(firstElement);
+		//printElementsByTransition(firstElement);
+	}
+	out.println("   " + "END IF;"); --static
+}
+
+operation printWhile(object) {
+	out.println("   " + "WHILE " + object.condition);
+	out.println("   " + "LOOP");
 	
+	var firstElement = getFirstElement(object.whileStatements);
+	printStatements(firstElement);
+	//printElementsByTransition(firstElement);
+	
+	out.println("   " + "END LOOP;"); --static
+}
+
+operation printLoop(object) {
+	out.println("   " + "LOOP"); --static
+	var firstElement = getFirstElement(object.loopStatements);
+	printStatements(firstElement);
+	//printElementsByTransition(firstElement);
+	out.println("   " + "EXIT WHEN " + object.breakCondition + ";");
+	out.println("   " + "END LOOP;"); --static
+}
+
+operation printFor(object) {
+	out.println("   " + "FOR " + object.counter + " IN " + object.typeCounter + " " + object.lowestNumber + ".." + object.highestNumber);
+	out.println("   " + "LOOP"); --static
+	
+	var firstElement = getFirstElement(object.forStatements);
+	printStatements(firstElement);
+	//printElementsByTransition(firstElement);
+	
+	out.println("   " + "END LOOP;"); --static
+}
+
+operation printStatements(object) {
+	if(not (object == null) ) {
+		if(object.className == "If"){
+			printIf(object);
+		} else if (object.className == "Case") {
+			printCase(object);	
+		} else if(object.className == "While") {
+			printWhile(object);
+		} else if(object.className == "Loop") {
+			printLoop(object);
+		} else if(object.className == "For") {
+			printFor(object);
+		} else if(object.className == "CallProcedure" or object.className == "CallFunction") {
+			out.println("      " + "EXEC " + object.nameSubroutine + ";");
+		} else if(object.className == "Open") {
+			out.println("      " + "OPEN " + object.cursorName + ";");
+		} else if(object.className == "Fetch") {
+			out.println("      " + "FETCH " + object.cursorName + " INTO " + object.variableName + ";");
+		} else if(object.className == "Close") {
+			out.println("      " + "CLOSE " + object.cursorName + ";");
+		} else if (object.className == "Selector") {
+			out.println("SELECTOR"); 
+		} else {
+			out.println("      " + object.code + ";");	
+		}
+	}
 	out.println(); --static
 }
 
@@ -150,10 +206,8 @@ operation printParametersPart(object) {
 		for(parameters in object.parameters) {
 			if(parameters.className == "DataType") {
 				out.println("   " + parameters.name + " " + parameters.type + " " + parameters.options);	
-			} else if(parameters.className == "Cursor") {
-				out.println("   " + parameters.name + " " + parameters.type + " SYS_REFCURSOR");
 			} else  {
-				out.println("   " + parameters.name + " " + parameters.typeName);
+				out.println("   " + parameters.code);
 			}
 		}
 		out.println(")"); --static

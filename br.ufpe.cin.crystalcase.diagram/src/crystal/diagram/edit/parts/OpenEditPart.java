@@ -36,7 +36,7 @@ public class OpenEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3066;
+	public static final int VISUAL_ID = 3191;
 
 	/**
 	 * @generated

@@ -33,16 +33,16 @@ public class ProcedureProcedureParametersCompartmentItemSemanticEditPolicy exten
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
 		if (CrystalElementTypes.DataType_3018 == req.getElementType()) {
-			return getGEFWrapper(new DataTypeCreateCommand(req));
+			return getGEFWrapper(new DataType2CreateCommand(req));
 		}
 		if (CrystalElementTypes.Collections_3019 == req.getElementType()) {
-			return getGEFWrapper(new CollectionsCreateCommand(req));
+			return getGEFWrapper(new Collections2CreateCommand(req));
 		}
 		if (CrystalElementTypes.Records_3020 == req.getElementType()) {
-			return getGEFWrapper(new RecordsCreateCommand(req));
+			return getGEFWrapper(new Records2CreateCommand(req));
 		}
 		if (CrystalElementTypes.Cursor_3021 == req.getElementType()) {
-			return getGEFWrapper(new CursorCreateCommand(req));
+			return getGEFWrapper(new Cursor2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

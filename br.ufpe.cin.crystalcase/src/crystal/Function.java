@@ -13,9 +13,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link crystal.Function#getDeclarativePart <em>Declarative Part</em>}</li>
  *   <li>{@link crystal.Function#getParameters <em>Parameters</em>}</li>
  *   <li>{@link crystal.Function#getReturnPart <em>Return Part</em>}</li>
- *   <li>{@link crystal.Function#getDeclarativePart <em>Declarative Part</em>}</li>
  *   <li>{@link crystal.Function#getExecutablePart <em>Executable Part</em>}</li>
  * </ul>
  *
@@ -57,20 +57,30 @@ public interface Function extends Subprograms {
 	EList<Parameters> getParameters();
 
 	/**
-	 * Returns the value of the '<em><b>Return Part</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.Parameters}.
+	 * Returns the value of the '<em><b>Return Part</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Return Part</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Return Part</em>' containment reference list.
+	 * @return the value of the '<em>Return Part</em>' containment reference.
+	 * @see #setReturnPart(Parameters)
 	 * @see crystal.CrystalPackage#getFunction_ReturnPart()
-	 * @model containment="true" transient="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Parameters> getReturnPart();
+	Parameters getReturnPart();
+
+	/**
+	 * Sets the value of the '{@link crystal.Function#getReturnPart <em>Return Part</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Return Part</em>' containment reference.
+	 * @see #getReturnPart()
+	 * @generated
+	 */
+	void setReturnPart(Parameters value);
 
 	/**
 	 * Returns the value of the '<em><b>Executable Part</b></em>' containment reference list.

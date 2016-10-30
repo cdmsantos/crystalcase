@@ -157,6 +157,15 @@ public interface CrystalFactory extends EFactory {
 	Select createSelect();
 
 	/**
+	 * Returns a new object of class '<em>Selector</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Selector</em>'.
+	 * @generated
+	 */
+	Selector createSelector();
+
+	/**
 	 * Returns a new object of class '<em>While</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,6 +245,15 @@ public interface CrystalFactory extends EFactory {
 	 * @generated
 	 */
 	Transition createTransition();
+
+	/**
+	 * Returns a new object of class '<em>Selector Transition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Selector Transition</em>'.
+	 * @generated
+	 */
+	SelectorTransition createSelectorTransition();
 
 	/**
 	 * Returns the package supported by this factory.

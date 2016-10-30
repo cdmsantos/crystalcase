@@ -29,23 +29,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link crystal.impl.ProcedureImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link crystal.impl.ProcedureImpl#getDeclarativePart <em>Declarative Part</em>}</li>
+ *   <li>{@link crystal.impl.ProcedureImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link crystal.impl.ProcedureImpl#getExecutablePart <em>Executable Part</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ProcedureImpl extends SubprogramsImpl implements Procedure {
-	/**
-	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParameters()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Parameters> parameters;
 	/**
 	 * The cached value of the '{@link #getDeclarativePart() <em>Declarative Part</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -55,6 +46,15 @@ public class ProcedureImpl extends SubprogramsImpl implements Procedure {
 	 * @ordered
 	 */
 	protected EList<Parameters> declarativePart;
+	/**
+	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParameters()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Parameters> parameters;
 
 	/**
 	 * The cached value of the '{@link #getExecutablePart() <em>Executable Part</em>}' containment reference list.
@@ -129,10 +129,10 @@ public class ProcedureImpl extends SubprogramsImpl implements Procedure {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CrystalPackage.PROCEDURE__PARAMETERS:
-				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 			case CrystalPackage.PROCEDURE__DECLARATIVE_PART:
 				return ((InternalEList<?>)getDeclarativePart()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.PROCEDURE__PARAMETERS:
+				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 			case CrystalPackage.PROCEDURE__EXECUTABLE_PART:
 				return ((InternalEList<?>)getExecutablePart()).basicRemove(otherEnd, msgs);
 		}
@@ -147,10 +147,10 @@ public class ProcedureImpl extends SubprogramsImpl implements Procedure {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CrystalPackage.PROCEDURE__PARAMETERS:
-				return getParameters();
 			case CrystalPackage.PROCEDURE__DECLARATIVE_PART:
 				return getDeclarativePart();
+			case CrystalPackage.PROCEDURE__PARAMETERS:
+				return getParameters();
 			case CrystalPackage.PROCEDURE__EXECUTABLE_PART:
 				return getExecutablePart();
 		}
@@ -166,13 +166,13 @@ public class ProcedureImpl extends SubprogramsImpl implements Procedure {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.PROCEDURE__PARAMETERS:
-				getParameters().clear();
-				getParameters().addAll((Collection<? extends Parameters>)newValue);
-				return;
 			case CrystalPackage.PROCEDURE__DECLARATIVE_PART:
 				getDeclarativePart().clear();
 				getDeclarativePart().addAll((Collection<? extends Parameters>)newValue);
+				return;
+			case CrystalPackage.PROCEDURE__PARAMETERS:
+				getParameters().clear();
+				getParameters().addAll((Collection<? extends Parameters>)newValue);
 				return;
 			case CrystalPackage.PROCEDURE__EXECUTABLE_PART:
 				getExecutablePart().clear();
@@ -190,11 +190,11 @@ public class ProcedureImpl extends SubprogramsImpl implements Procedure {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.PROCEDURE__PARAMETERS:
-				getParameters().clear();
-				return;
 			case CrystalPackage.PROCEDURE__DECLARATIVE_PART:
 				getDeclarativePart().clear();
+				return;
+			case CrystalPackage.PROCEDURE__PARAMETERS:
+				getParameters().clear();
 				return;
 			case CrystalPackage.PROCEDURE__EXECUTABLE_PART:
 				getExecutablePart().clear();
@@ -211,10 +211,10 @@ public class ProcedureImpl extends SubprogramsImpl implements Procedure {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.PROCEDURE__PARAMETERS:
-				return parameters != null && !parameters.isEmpty();
 			case CrystalPackage.PROCEDURE__DECLARATIVE_PART:
 				return declarativePart != null && !declarativePart.isEmpty();
+			case CrystalPackage.PROCEDURE__PARAMETERS:
+				return parameters != null && !parameters.isEmpty();
 			case CrystalPackage.PROCEDURE__EXECUTABLE_PART:
 				return executablePart != null && !executablePart.isEmpty();
 		}

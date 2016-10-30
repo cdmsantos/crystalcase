@@ -37,6 +37,8 @@ import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
 import crystal.Crystal;
 import crystal.CrystalCase;
+import crystal.Selector;
+import crystal.SelectorTransition;
 import crystal.Statements;
 import crystal.Transition;
 import crystal.diagram.part.CrystalDiagramEditorPlugin;
@@ -319,8 +321,23 @@ public class CrystalBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		* @generated
 		*/
+		public boolean canCreateSelectorTransition_4002(Crystal container, Selector source, Selector target) {
+			return canExistSelectorTransition_4002(container, null, source, target);
+		}
+
+		/**
+			* @generated
+			*/
 		public boolean canExistTransition_4001(Crystal container, Transition linkInstance, Statements source,
 				Statements target) {
+			return true;
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistSelectorTransition_4002(Crystal container, SelectorTransition linkInstance,
+				Selector source, Selector target) {
 			return true;
 		}
 	}

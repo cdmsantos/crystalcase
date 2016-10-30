@@ -26,34 +26,79 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
 import crystal.diagram.edit.parts.CallFunction3EditPart;
+import crystal.diagram.edit.parts.CallFunction4EditPart;
+import crystal.diagram.edit.parts.CallFunction7EditPart;
+import crystal.diagram.edit.parts.CallFunction9EditPart;
 import crystal.diagram.edit.parts.CallFunctionEditPart;
 import crystal.diagram.edit.parts.CallProcedure3EditPart;
+import crystal.diagram.edit.parts.CallProcedure4EditPart;
+import crystal.diagram.edit.parts.CallProcedure7EditPart;
+import crystal.diagram.edit.parts.CallProcedure9EditPart;
 import crystal.diagram.edit.parts.CallProcedureEditPart;
 import crystal.diagram.edit.parts.Case3EditPart;
+import crystal.diagram.edit.parts.Case4EditPart;
+import crystal.diagram.edit.parts.Case7EditPart;
+import crystal.diagram.edit.parts.Case9EditPart;
 import crystal.diagram.edit.parts.CaseEditPart;
 import crystal.diagram.edit.parts.Close3EditPart;
+import crystal.diagram.edit.parts.Close4EditPart;
+import crystal.diagram.edit.parts.Close7EditPart;
+import crystal.diagram.edit.parts.Close9EditPart;
 import crystal.diagram.edit.parts.CloseEditPart;
 import crystal.diagram.edit.parts.Delete3EditPart;
+import crystal.diagram.edit.parts.Delete4EditPart;
+import crystal.diagram.edit.parts.Delete7EditPart;
+import crystal.diagram.edit.parts.Delete9EditPart;
 import crystal.diagram.edit.parts.DeleteEditPart;
 import crystal.diagram.edit.parts.Exception3EditPart;
+import crystal.diagram.edit.parts.Exception4EditPart;
+import crystal.diagram.edit.parts.Exception7EditPart;
+import crystal.diagram.edit.parts.Exception9EditPart;
 import crystal.diagram.edit.parts.ExceptionEditPart;
 import crystal.diagram.edit.parts.Fetch3EditPart;
+import crystal.diagram.edit.parts.Fetch4EditPart;
+import crystal.diagram.edit.parts.Fetch7EditPart;
+import crystal.diagram.edit.parts.Fetch9EditPart;
 import crystal.diagram.edit.parts.FetchEditPart;
 import crystal.diagram.edit.parts.For3EditPart;
+import crystal.diagram.edit.parts.For4EditPart;
+import crystal.diagram.edit.parts.For7EditPart;
+import crystal.diagram.edit.parts.For9EditPart;
 import crystal.diagram.edit.parts.ForEditPart;
 import crystal.diagram.edit.parts.If3EditPart;
+import crystal.diagram.edit.parts.If4EditPart;
+import crystal.diagram.edit.parts.If7EditPart;
+import crystal.diagram.edit.parts.If9EditPart;
 import crystal.diagram.edit.parts.IfEditPart;
 import crystal.diagram.edit.parts.Insert3EditPart;
+import crystal.diagram.edit.parts.Insert4EditPart;
+import crystal.diagram.edit.parts.Insert7EditPart;
+import crystal.diagram.edit.parts.Insert9EditPart;
 import crystal.diagram.edit.parts.InsertEditPart;
 import crystal.diagram.edit.parts.Loop3EditPart;
+import crystal.diagram.edit.parts.Loop4EditPart;
+import crystal.diagram.edit.parts.Loop7EditPart;
+import crystal.diagram.edit.parts.Loop9EditPart;
 import crystal.diagram.edit.parts.LoopEditPart;
 import crystal.diagram.edit.parts.Open3EditPart;
+import crystal.diagram.edit.parts.Open4EditPart;
+import crystal.diagram.edit.parts.Open7EditPart;
+import crystal.diagram.edit.parts.Open9EditPart;
 import crystal.diagram.edit.parts.OpenEditPart;
 import crystal.diagram.edit.parts.Select3EditPart;
+import crystal.diagram.edit.parts.Select4EditPart;
+import crystal.diagram.edit.parts.Select7EditPart;
+import crystal.diagram.edit.parts.Select9EditPart;
 import crystal.diagram.edit.parts.SelectEditPart;
 import crystal.diagram.edit.parts.Update3EditPart;
+import crystal.diagram.edit.parts.Update4EditPart;
+import crystal.diagram.edit.parts.Update7EditPart;
+import crystal.diagram.edit.parts.Update9EditPart;
 import crystal.diagram.edit.parts.UpdateEditPart;
 import crystal.diagram.edit.parts.While3EditPart;
+import crystal.diagram.edit.parts.While4EditPart;
+import crystal.diagram.edit.parts.While7EditPart;
+import crystal.diagram.edit.parts.While9EditPart;
 import crystal.diagram.edit.parts.WhileEditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
@@ -111,21 +156,21 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case Exception3EditPart.VISUAL_ID:
-		case If3EditPart.VISUAL_ID:
-		case Case3EditPart.VISUAL_ID:
-		case Insert3EditPart.VISUAL_ID:
-		case Update3EditPart.VISUAL_ID:
-		case Delete3EditPart.VISUAL_ID:
-		case Select3EditPart.VISUAL_ID:
-		case While3EditPart.VISUAL_ID:
-		case For3EditPart.VISUAL_ID:
-		case Loop3EditPart.VISUAL_ID:
-		case Open3EditPart.VISUAL_ID:
-		case Fetch3EditPart.VISUAL_ID:
-		case Close3EditPart.VISUAL_ID:
-		case CallProcedure3EditPart.VISUAL_ID:
-		case CallFunction3EditPart.VISUAL_ID:
+		case Exception9EditPart.VISUAL_ID:
+		case If9EditPart.VISUAL_ID:
+		case Case9EditPart.VISUAL_ID:
+		case Insert9EditPart.VISUAL_ID:
+		case Update9EditPart.VISUAL_ID:
+		case Delete9EditPart.VISUAL_ID:
+		case Select9EditPart.VISUAL_ID:
+		case While9EditPart.VISUAL_ID:
+		case For9EditPart.VISUAL_ID:
+		case Loop9EditPart.VISUAL_ID:
+		case Open9EditPart.VISUAL_ID:
+		case Fetch9EditPart.VISUAL_ID:
+		case Close9EditPart.VISUAL_ID:
+		case CallProcedure9EditPart.VISUAL_ID:
+		case CallFunction9EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

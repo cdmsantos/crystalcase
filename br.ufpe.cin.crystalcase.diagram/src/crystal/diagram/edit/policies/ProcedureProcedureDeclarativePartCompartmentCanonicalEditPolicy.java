@@ -26,9 +26,13 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
 import crystal.diagram.edit.parts.Collections2EditPart;
+import crystal.diagram.edit.parts.CollectionsEditPart;
 import crystal.diagram.edit.parts.Cursor2EditPart;
+import crystal.diagram.edit.parts.CursorEditPart;
 import crystal.diagram.edit.parts.DataType2EditPart;
+import crystal.diagram.edit.parts.DataTypeEditPart;
 import crystal.diagram.edit.parts.Records2EditPart;
+import crystal.diagram.edit.parts.RecordsEditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
 import crystal.diagram.part.CrystalVisualIDRegistry;
@@ -66,7 +70,7 @@ public class ProcedureProcedureDeclarativePartCompartmentCanonicalEditPolicy ext
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getProcedureProcedureDeclarativePartCompartment_7020SemanticChildren(viewObject);
+				.getProcedureProcedureDeclarativePartCompartment_7015SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -86,10 +90,10 @@ public class ProcedureProcedureDeclarativePartCompartmentCanonicalEditPolicy ext
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case DataType2EditPart.VISUAL_ID:
-		case Collections2EditPart.VISUAL_ID:
-		case Records2EditPart.VISUAL_ID:
-		case Cursor2EditPart.VISUAL_ID:
+		case DataTypeEditPart.VISUAL_ID:
+		case CollectionsEditPart.VISUAL_ID:
+		case RecordsEditPart.VISUAL_ID:
+		case CursorEditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -104,7 +108,7 @@ public class ProcedureProcedureDeclarativePartCompartmentCanonicalEditPolicy ext
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getProcedureProcedureDeclarativePartCompartment_7020SemanticChildren((View) getHost().getModel());
+				.getProcedureProcedureDeclarativePartCompartment_7015SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

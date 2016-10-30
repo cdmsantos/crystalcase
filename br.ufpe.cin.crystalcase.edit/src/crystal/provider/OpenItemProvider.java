@@ -46,7 +46,7 @@ public class OpenItemProvider extends StatementsItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassNamePropertyDescriptor(object);
-			addCodePropertyDescriptor(object);
+			addCursorNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -65,7 +65,7 @@ public class OpenItemProvider extends StatementsItemProvider {
 				 getString("_UI_Open_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Open_className_feature", "_UI_Open_type"),
 				 CrystalPackage.Literals.OPEN__CLASS_NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -74,19 +74,19 @@ public class OpenItemProvider extends StatementsItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Code feature.
+	 * This adds a property descriptor for the Cursor Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCodePropertyDescriptor(Object object) {
+	protected void addCursorNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Open_code_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Open_code_feature", "_UI_Open_type"),
-				 CrystalPackage.Literals.OPEN__CODE,
+				 getString("_UI_Open_cursorName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Open_cursorName_feature", "_UI_Open_type"),
+				 CrystalPackage.Literals.OPEN__CURSOR_NAME,
 				 true,
 				 false,
 				 false,
@@ -134,7 +134,7 @@ public class OpenItemProvider extends StatementsItemProvider {
 
 		switch (notification.getFeatureID(Open.class)) {
 			case CrystalPackage.OPEN__CLASS_NAME:
-			case CrystalPackage.OPEN__CODE:
+			case CrystalPackage.OPEN__CURSOR_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

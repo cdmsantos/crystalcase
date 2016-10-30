@@ -18,6 +18,8 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
 import crystal.Exception;
+import crystal.Function;
+import crystal.Selector;
 
 /**
  * @generated
@@ -57,8 +59,8 @@ public class Exception3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Exception newElement = CrystalFactory.eINSTANCE.createException();
 
-		AnonymousBlock owner = (AnonymousBlock) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		Selector owner = (Selector) getElementToEdit();
+		owner.getCaseStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -47,6 +47,10 @@ public class Records5CreateCommand extends EditElementCommand {
 	* @generated
 	*/
 	public boolean canExecute() {
+		Function container = (Function) getElementToEdit();
+		if (container.getReturnPart() != null) {
+			return false;
+		}
 		return true;
 
 	}
@@ -58,7 +62,7 @@ public class Records5CreateCommand extends EditElementCommand {
 		Records newElement = CrystalFactory.eINSTANCE.createRecords();
 
 		Function owner = (Function) getElementToEdit();
-		owner.getDeclarativePart().add(newElement);
+		owner.setReturnPart(newElement);
 
 		doConfigure(newElement, monitor, info);
 
