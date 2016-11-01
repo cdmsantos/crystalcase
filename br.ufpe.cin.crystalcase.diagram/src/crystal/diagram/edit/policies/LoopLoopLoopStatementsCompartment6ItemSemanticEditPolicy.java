@@ -12,6 +12,7 @@ import crystal.diagram.edit.commands.Case5CreateCommand;
 import crystal.diagram.edit.commands.Close3CreateCommand;
 import crystal.diagram.edit.commands.Delete5CreateCommand;
 import crystal.diagram.edit.commands.Exception6CreateCommand;
+import crystal.diagram.edit.commands.Expression3CreateCommand;
 import crystal.diagram.edit.commands.Fetch3CreateCommand;
 import crystal.diagram.edit.commands.For3CreateCommand;
 import crystal.diagram.edit.commands.If6CreateCommand;
@@ -83,6 +84,9 @@ public class LoopLoopLoopStatementsCompartment6ItemSemanticEditPolicy extends Cr
 		}
 		if (CrystalElementTypes.CallFunction_3175 == req.getElementType()) {
 			return getGEFWrapper(new CallFunction3CreateCommand(req));
+		}
+		if (CrystalElementTypes.Expression_3213 == req.getElementType()) {
+			return getGEFWrapper(new Expression3CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

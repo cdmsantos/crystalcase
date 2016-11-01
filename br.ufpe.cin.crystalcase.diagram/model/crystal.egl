@@ -2,6 +2,24 @@
 
 [%
 
+for(element in AnonymousBlock.allInstances()) {
+	out.println("DECLARE"); --static
+
+	//DECLARAÇÃO DE VARIÁVEIS
+	printDeclarativePart(element);
+	
+	out.println("BEGIN"); --static
+	
+	//PARTE EXECUTÁVEL
+	var firstElement = getFirstElement(element.executablePart);
+	printStatements(firstElement);
+	printElementsByTransition(firstElement);
+	
+	out.println("END;"); --static
+	out.println("/"); --static
+	out.println(); --static
+}
+
 for(element in Procedure.allInstances()) {
 
 	out.println("CREATE OR REPLACE PROCEDURE "+element.name); --static
@@ -44,8 +62,6 @@ for(element in Function.allInstances()) {
 		}
 	}
 	
-	out.println("AS"); --static
-
 	//DECLARAÇÃO DE VARIÁVEIS
 	printDeclarativePart(element);
 	
@@ -118,9 +134,12 @@ operation printCase(object) {
 	out.println("   " + "CASE");
 	for(selector in object.cases){
 		out.println("      " + "WHEN " + selector.condition + " THEN ");
-		var firstElement = getFirstElement(selector.caseStatements);
+		for(statement in object.caseStatements) {
+			printStatements(statement);
+		}
+		//var firstElement = getFirstElement(selector.caseStatements);
 		//out.println(selector);
-		printStatements(firstElement);
+		//printStatements(firstElement);
 		//printElementsByTransition(firstElement);
 	}
 	out.println("   " + "END;");
@@ -128,13 +147,19 @@ operation printCase(object) {
 
 operation printIf(object) {
 	out.println("   " + "IF " + object.condition + " THEN");
-	var firstElement = getFirstElement(object.ifs);
-	printStatements(firstElement);
+	for(statement in object.ifs) {
+		printStatements(statement);
+	}
+	//var firstElement = getFirstElement(object.ifs);
+	//printStatements(firstElement);
 	//printElementsByTransition(firstElement);
 	if(not isEmpty(object.elses)) {
 		out.println("   " + "ELSE"); --static
-		var firstElement = getFirstElement(object.elses);
-		printStatements(firstElement);
+		for(statement in object.elses) {
+			printStatements(statement);
+		}
+		//var firstElement = getFirstElement(object.elses);
+		//printStatements(firstElement);
 		//printElementsByTransition(firstElement);
 	}
 	out.println("   " + "END IF;"); --static
@@ -143,9 +168,11 @@ operation printIf(object) {
 operation printWhile(object) {
 	out.println("   " + "WHILE " + object.condition);
 	out.println("   " + "LOOP");
-	
-	var firstElement = getFirstElement(object.whileStatements);
-	printStatements(firstElement);
+	for(statement in object.whileStatements) {
+		printStatements(statement);
+	}
+	//var firstElement = getFirstElement(object.whileStatements);
+	//printStatements(firstElement);
 	//printElementsByTransition(firstElement);
 	
 	out.println("   " + "END LOOP;"); --static
@@ -153,8 +180,11 @@ operation printWhile(object) {
 
 operation printLoop(object) {
 	out.println("   " + "LOOP"); --static
-	var firstElement = getFirstElement(object.loopStatements);
-	printStatements(firstElement);
+	for(statement in object.loopStatements) {
+		printStatements(statement);
+	}
+	//var firstElement = getFirstElement(object.loopStatements);
+	//printStatements(firstElement);
 	//printElementsByTransition(firstElement);
 	out.println("   " + "EXIT WHEN " + object.breakCondition + ";");
 	out.println("   " + "END LOOP;"); --static
@@ -164,8 +194,12 @@ operation printFor(object) {
 	out.println("   " + "FOR " + object.counter + " IN " + object.typeCounter + " " + object.lowestNumber + ".." + object.highestNumber);
 	out.println("   " + "LOOP"); --static
 	
-	var firstElement = getFirstElement(object.forStatements);
-	printStatements(firstElement);
+	for(statement in object.forStatements) {
+		printStatements(statement);
+	}
+	
+	//var firstElement = getFirstElement(object.forStatements);
+	//printStatements(firstElement);
 	//printElementsByTransition(firstElement);
 	
 	out.println("   " + "END LOOP;"); --static
@@ -193,6 +227,8 @@ operation printStatements(object) {
 			out.println("      " + "CLOSE " + object.cursorName + ";");
 		} else if (object.className == "Selector") {
 			out.println("SELECTOR"); 
+		} else if (object.className == "Expression") {
+			out.println("      " + object.value); 
 		} else {
 			out.println("      " + object.code + ";");	
 		}

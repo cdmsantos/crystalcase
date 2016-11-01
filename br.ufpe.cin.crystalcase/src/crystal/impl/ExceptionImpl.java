@@ -53,7 +53,7 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There aren\'t data registred\')";
+	protected static final String CODE_EDEFAULT = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There isnt data registered\')";
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.

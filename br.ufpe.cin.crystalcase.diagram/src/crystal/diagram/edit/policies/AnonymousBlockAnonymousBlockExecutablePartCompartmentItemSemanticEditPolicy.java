@@ -36,6 +36,7 @@ import crystal.diagram.edit.commands.Exception4CreateCommand;
 import crystal.diagram.edit.commands.Exception7CreateCommand;
 import crystal.diagram.edit.commands.Exception9CreateCommand;
 import crystal.diagram.edit.commands.ExceptionCreateCommand;
+import crystal.diagram.edit.commands.Expression9CreateCommand;
 import crystal.diagram.edit.commands.Fetch3CreateCommand;
 import crystal.diagram.edit.commands.Fetch4CreateCommand;
 import crystal.diagram.edit.commands.Fetch7CreateCommand;
@@ -144,6 +145,9 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentItemSemanticEd
 		}
 		if (CrystalElementTypes.CallFunction_3051 == req.getElementType()) {
 			return getGEFWrapper(new CallFunction9CreateCommand(req));
+		}
+		if (CrystalElementTypes.Expression_3219 == req.getElementType()) {
+			return getGEFWrapper(new Expression9CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

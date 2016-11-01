@@ -45,9 +45,10 @@ public class CrystalPaletteFactory {
 		paletteContainer.add(createCallProcedure2CreationTool());
 		paletteContainer.add(createDelete3CreationTool());
 		paletteContainer.add(createException4CreationTool());
-		paletteContainer.add(createInsert5CreationTool());
-		paletteContainer.add(createSelect6CreationTool());
-		paletteContainer.add(createUpdate7CreationTool());
+		paletteContainer.add(createExpression5CreationTool());
+		paletteContainer.add(createInsert6CreationTool());
+		paletteContainer.add(createSelect7CreationTool());
+		paletteContainer.add(createUpdate8CreationTool());
 		return paletteContainer;
 	}
 
@@ -220,7 +221,29 @@ public class CrystalPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createInsert5CreationTool() {
+	private ToolEntry createExpression5CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		types.add(CrystalElementTypes.Expression_3211);
+		types.add(CrystalElementTypes.Expression_3212);
+		types.add(CrystalElementTypes.Expression_3213);
+		types.add(CrystalElementTypes.Expression_3214);
+		types.add(CrystalElementTypes.Expression_3215);
+		types.add(CrystalElementTypes.Expression_3216);
+		types.add(CrystalElementTypes.Expression_3217);
+		types.add(CrystalElementTypes.Expression_3218);
+		types.add(CrystalElementTypes.Expression_3219);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Expression5CreationTool_title,
+				Messages.Expression5CreationTool_desc, types);
+		entry.setId("createExpression5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CrystalElementTypes.getImageDescriptor(CrystalElementTypes.Expression_3211));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createInsert6CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
 		types.add(CrystalElementTypes.Insert_3184);
 		types.add(CrystalElementTypes.Insert_3199);
@@ -231,9 +254,9 @@ public class CrystalPaletteFactory {
 		types.add(CrystalElementTypes.Insert_3059);
 		types.add(CrystalElementTypes.Insert_3078);
 		types.add(CrystalElementTypes.Insert_3040);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Insert5CreationTool_title,
-				Messages.Insert5CreationTool_desc, types);
-		entry.setId("createInsert5CreationTool"); //$NON-NLS-1$
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Insert6CreationTool_title,
+				Messages.Insert6CreationTool_desc, types);
+		entry.setId("createInsert6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CrystalElementTypes.getImageDescriptor(CrystalElementTypes.Insert_3184));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
@@ -242,7 +265,7 @@ public class CrystalPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createSelect6CreationTool() {
+	private ToolEntry createSelect7CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
 		types.add(CrystalElementTypes.Select_3187);
 		types.add(CrystalElementTypes.Select_3202);
@@ -253,9 +276,9 @@ public class CrystalPaletteFactory {
 		types.add(CrystalElementTypes.Select_3062);
 		types.add(CrystalElementTypes.Select_3081);
 		types.add(CrystalElementTypes.Select_3043);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Select6CreationTool_title,
-				Messages.Select6CreationTool_desc, types);
-		entry.setId("createSelect6CreationTool"); //$NON-NLS-1$
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Select7CreationTool_title,
+				Messages.Select7CreationTool_desc, types);
+		entry.setId("createSelect7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CrystalElementTypes.getImageDescriptor(CrystalElementTypes.Select_3187));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
@@ -264,7 +287,7 @@ public class CrystalPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createUpdate7CreationTool() {
+	private ToolEntry createUpdate8CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
 		types.add(CrystalElementTypes.Update_3185);
 		types.add(CrystalElementTypes.Update_3200);
@@ -275,9 +298,9 @@ public class CrystalPaletteFactory {
 		types.add(CrystalElementTypes.Update_3060);
 		types.add(CrystalElementTypes.Update_3079);
 		types.add(CrystalElementTypes.Update_3041);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Update7CreationTool_title,
-				Messages.Update7CreationTool_desc, types);
-		entry.setId("createUpdate7CreationTool"); //$NON-NLS-1$
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Update8CreationTool_title,
+				Messages.Update8CreationTool_desc, types);
+		entry.setId("createUpdate8CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CrystalElementTypes.getImageDescriptor(CrystalElementTypes.Update_3185));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;

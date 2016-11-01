@@ -182,5 +182,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//SelectorTransition/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//SelectorTransition/target"/>
     </genClasses>
+    <genClasses ecoreClass="crystalmm.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Expression/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Expression/value"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

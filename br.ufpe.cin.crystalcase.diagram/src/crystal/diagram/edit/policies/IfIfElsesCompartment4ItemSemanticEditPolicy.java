@@ -12,6 +12,7 @@ import crystal.diagram.edit.commands.Case2CreateCommand;
 import crystal.diagram.edit.commands.Close5CreateCommand;
 import crystal.diagram.edit.commands.Delete2CreateCommand;
 import crystal.diagram.edit.commands.Exception7CreateCommand;
+import crystal.diagram.edit.commands.Expression5CreateCommand;
 import crystal.diagram.edit.commands.Fetch5CreateCommand;
 import crystal.diagram.edit.commands.For5CreateCommand;
 import crystal.diagram.edit.commands.If7CreateCommand;
@@ -83,6 +84,9 @@ public class IfIfElsesCompartment4ItemSemanticEditPolicy extends CrystalBaseItem
 		}
 		if (CrystalElementTypes.CallFunction_3210 == req.getElementType()) {
 			return getGEFWrapper(new CallFunction5CreateCommand(req));
+		}
+		if (CrystalElementTypes.Expression_3215 == req.getElementType()) {
+			return getGEFWrapper(new Expression5CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

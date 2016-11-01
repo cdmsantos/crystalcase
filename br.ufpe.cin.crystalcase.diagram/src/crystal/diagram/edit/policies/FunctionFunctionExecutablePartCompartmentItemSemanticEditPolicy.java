@@ -36,6 +36,7 @@ import crystal.diagram.edit.commands.Exception3CreateCommand;
 import crystal.diagram.edit.commands.Exception6CreateCommand;
 import crystal.diagram.edit.commands.Exception8CreateCommand;
 import crystal.diagram.edit.commands.ExceptionCreateCommand;
+import crystal.diagram.edit.commands.Expression8CreateCommand;
 import crystal.diagram.edit.commands.Fetch2CreateCommand;
 import crystal.diagram.edit.commands.Fetch3CreateCommand;
 import crystal.diagram.edit.commands.Fetch6CreateCommand;
@@ -143,6 +144,9 @@ public class FunctionFunctionExecutablePartCompartmentItemSemanticEditPolicy ext
 		}
 		if (CrystalElementTypes.CallFunction_3089 == req.getElementType()) {
 			return getGEFWrapper(new CallFunction8CreateCommand(req));
+		}
+		if (CrystalElementTypes.Expression_3218 == req.getElementType()) {
+			return getGEFWrapper(new Expression8CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

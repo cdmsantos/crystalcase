@@ -55,6 +55,7 @@ import crystal.diagram.edit.parts.Exception4EditPart;
 import crystal.diagram.edit.parts.Exception7EditPart;
 import crystal.diagram.edit.parts.Exception9EditPart;
 import crystal.diagram.edit.parts.ExceptionEditPart;
+import crystal.diagram.edit.parts.Expression9EditPart;
 import crystal.diagram.edit.parts.Fetch3EditPart;
 import crystal.diagram.edit.parts.Fetch4EditPart;
 import crystal.diagram.edit.parts.Fetch7EditPart;
@@ -171,6 +172,7 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 		case Close9EditPart.VISUAL_ID:
 		case CallProcedure9EditPart.VISUAL_ID:
 		case CallFunction9EditPart.VISUAL_ID:
+		case Expression9EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

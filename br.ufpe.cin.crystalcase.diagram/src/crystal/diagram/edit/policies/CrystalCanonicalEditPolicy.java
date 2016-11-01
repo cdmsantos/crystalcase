@@ -612,6 +612,13 @@ public class CrystalCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case ExpressionEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CrystalDiagramUpdater.getExpression_3211ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case Exception7EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CrystalDiagramUpdater.getException_3196ContainedLinks(view));
@@ -843,6 +850,13 @@ public class CrystalCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case Expression2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CrystalDiagramUpdater.getExpression_3212ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case For3EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CrystalDiagramUpdater.getFor_3167ContainedLinks(view));
@@ -906,6 +920,13 @@ public class CrystalCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case Expression3EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CrystalDiagramUpdater.getExpression_3213ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case Open4EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CrystalDiagramUpdater.getOpen_3176ContainedLinks(view));
@@ -937,6 +958,13 @@ public class CrystalCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CallFunction4EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CrystalDiagramUpdater.getCallFunction_3180ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case Expression4EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CrystalDiagramUpdater.getExpression_3214ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -986,6 +1014,13 @@ public class CrystalCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CallFunction5EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CrystalDiagramUpdater.getCallFunction_3210ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case Expression5EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CrystalDiagramUpdater.getExpression_3215ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -1081,6 +1116,13 @@ public class CrystalCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case Expression6EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CrystalDiagramUpdater.getExpression_3216ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case Case7EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CrystalDiagramUpdater.getCase_3058ContainedLinks(view));
@@ -1168,6 +1210,13 @@ public class CrystalCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CallFunction7EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CrystalDiagramUpdater.getCallFunction_3070ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case Expression7EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CrystalDiagramUpdater.getExpression_3217ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -1361,6 +1410,13 @@ public class CrystalCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case Expression8EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CrystalDiagramUpdater.getExpression_3218ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case DataType6EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CrystalDiagramUpdater.getDataType_3033ContainedLinks(view));
@@ -1490,6 +1546,13 @@ public class CrystalCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CallFunction9EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CrystalDiagramUpdater.getCallFunction_3051ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case Expression9EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CrystalDiagramUpdater.getExpression_3219ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

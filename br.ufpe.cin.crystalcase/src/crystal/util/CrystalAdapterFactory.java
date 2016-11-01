@@ -14,6 +14,7 @@ import crystal.CrystalPackage;
 import crystal.Cursor;
 import crystal.DataType;
 import crystal.Delete;
+import crystal.Expression;
 import crystal.Fetch;
 import crystal.For;
 import crystal.Function;
@@ -211,6 +212,10 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSelectorTransition(SelectorTransition object) {
 				return createSelectorTransitionAdapter();
+			}
+			@Override
+			public Adapter caseExpression(Expression object) {
+				return createExpressionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -635,6 +640,20 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSelectorTransitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link crystal.Expression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.Expression
+	 * @generated
+	 */
+	public Adapter createExpressionAdapter() {
 		return null;
 	}
 

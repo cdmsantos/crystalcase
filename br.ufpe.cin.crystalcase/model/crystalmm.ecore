@@ -157,7 +157,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="Exception"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE('There aren't data registred')"/>
+        defaultValueLiteral="EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE('There isnt data registered')"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
@@ -402,5 +402,14 @@
         defaultValueLiteral="Connection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Selector"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Selector"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Statements">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="rectangle"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Expression"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Type the expression here"/>
   </eClassifiers>
 </ecore:EPackage>

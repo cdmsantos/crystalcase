@@ -17,6 +17,7 @@ import crystal.diagram.edit.commands.Close6CreateCommand;
 import crystal.diagram.edit.commands.Delete4CreateCommand;
 import crystal.diagram.edit.commands.Delete6CreateCommand;
 import crystal.diagram.edit.commands.Exception3CreateCommand;
+import crystal.diagram.edit.commands.Expression6CreateCommand;
 import crystal.diagram.edit.commands.Fetch4CreateCommand;
 import crystal.diagram.edit.commands.Fetch6CreateCommand;
 import crystal.diagram.edit.commands.For4CreateCommand;
@@ -96,6 +97,9 @@ public class SelectorSelectorCaseStatementsCompartmentItemSemanticEditPolicy ext
 		}
 		if (CrystalElementTypes.CallFunction_3150 == req.getElementType()) {
 			return getGEFWrapper(new CallFunction6CreateCommand(req));
+		}
+		if (CrystalElementTypes.Expression_3216 == req.getElementType()) {
+			return getGEFWrapper(new Expression6CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

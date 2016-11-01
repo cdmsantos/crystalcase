@@ -844,6 +844,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
+	private IParser expressionDescription_5219Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5219Parser() {
+		if (expressionDescription_5219Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5219Parser = parser;
+		}
+		return expressionDescription_5219Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	private IParser exceptionDescription_5199Parser;
 
 	/**
@@ -1405,6 +1422,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
+	private IParser expressionDescription_5220Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5220Parser() {
+		if (expressionDescription_5220Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5220Parser = parser;
+		}
+		return expressionDescription_5220Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	private IParser forDescription_5185Parser;
 
 	/**
@@ -1558,6 +1592,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
+	private IParser expressionDescription_5221Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5221Parser() {
+		if (expressionDescription_5221Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5221Parser = parser;
+		}
+		return expressionDescription_5221Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	private IParser openDescription_5179Parser;
 
 	/**
@@ -1638,6 +1689,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			callFunctionDescription_5183Parser = parser;
 		}
 		return callFunctionDescription_5183Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser expressionDescription_5222Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5222Parser() {
+		if (expressionDescription_5222Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5222Parser = parser;
+		}
+		return expressionDescription_5222Parser;
 	}
 
 	/**
@@ -1757,6 +1825,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			callFunctionDescription_5212Parser = parser;
 		}
 		return callFunctionDescription_5212Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser expressionDescription_5223Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5223Parser() {
+		if (expressionDescription_5223Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5223Parser = parser;
+		}
+		return expressionDescription_5223Parser;
 	}
 
 	/**
@@ -1983,6 +2068,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
+	private IParser expressionDescription_5224Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5224Parser() {
+		if (expressionDescription_5224Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5224Parser = parser;
+		}
+		return expressionDescription_5224Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	private IParser forDescription_5072Parser;
 
 	/**
@@ -2097,6 +2199,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			callFunctionDescription_5078Parser = parser;
 		}
 		return callFunctionDescription_5078Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser expressionDescription_5225Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5225Parser() {
+		if (expressionDescription_5225Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5225Parser = parser;
+		}
+		return expressionDescription_5225Parser;
 	}
 
 	/**
@@ -2561,6 +2680,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
+	private IParser expressionDescription_5226Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5226Parser() {
+		if (expressionDescription_5226Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5226Parser = parser;
+		}
+		return expressionDescription_5226Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	private IParser dataTypeName_5037Parser;
 
 	/**
@@ -2884,6 +3020,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
+	private IParser expressionDescription_5227Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5227Parser() {
+		if (expressionDescription_5227Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5227Parser = parser;
+		}
+		return expressionDescription_5227Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	private IParser transitionName_6001Parser;
 
 	/**
@@ -2994,6 +3147,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5197Parser();
 		case CallFunctionDescriptionEditPart.VISUAL_ID:
 			return getCallFunctionDescription_5198Parser();
+		case ExpressionDescriptionEditPart.VISUAL_ID:
+			return getExpressionDescription_5219Parser();
 		case ExceptionDescription7EditPart.VISUAL_ID:
 			return getExceptionDescription_5199Parser();
 		case IfDescription7EditPart.VISUAL_ID:
@@ -3060,6 +3215,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5110Parser();
 		case CallFunctionDescription2EditPart.VISUAL_ID:
 			return getCallFunctionDescription_5111Parser();
+		case ExpressionDescription2EditPart.VISUAL_ID:
+			return getExpressionDescription_5220Parser();
 		case ForDescription3EditPart.VISUAL_ID:
 			return getForDescription_5185Parser();
 		case ForDescription4EditPart.VISUAL_ID:
@@ -3078,6 +3235,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5175Parser();
 		case CallFunctionDescription3EditPart.VISUAL_ID:
 			return getCallFunctionDescription_5176Parser();
+		case ExpressionDescription3EditPart.VISUAL_ID:
+			return getExpressionDescription_5221Parser();
 		case OpenDescription4EditPart.VISUAL_ID:
 			return getOpenDescription_5179Parser();
 		case FetchDescription4EditPart.VISUAL_ID:
@@ -3088,6 +3247,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5182Parser();
 		case CallFunctionDescription4EditPart.VISUAL_ID:
 			return getCallFunctionDescription_5183Parser();
+		case ExpressionDescription4EditPart.VISUAL_ID:
+			return getExpressionDescription_5222Parser();
 		case ForDescription5EditPart.VISUAL_ID:
 			return getForDescription_5206Parser();
 		case LoopDescription5EditPart.VISUAL_ID:
@@ -3102,6 +3263,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5211Parser();
 		case CallFunctionDescription5EditPart.VISUAL_ID:
 			return getCallFunctionDescription_5212Parser();
+		case ExpressionDescription5EditPart.VISUAL_ID:
+			return getExpressionDescription_5223Parser();
 		case CaseDescription6EditPart.VISUAL_ID:
 			return getCaseDescription_5143Parser();
 		case InsertDescription6EditPart.VISUAL_ID:
@@ -3128,6 +3291,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5154Parser();
 		case CallFunctionDescription6EditPart.VISUAL_ID:
 			return getCallFunctionDescription_5155Parser();
+		case ExpressionDescription6EditPart.VISUAL_ID:
+			return getExpressionDescription_5224Parser();
 		case CaseDescription7EditPart.VISUAL_ID:
 			return getCaseDescription_5066Parser();
 		case InsertDescription7EditPart.VISUAL_ID:
@@ -3154,6 +3319,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5077Parser();
 		case CallFunctionDescription7EditPart.VISUAL_ID:
 			return getCallFunctionDescription_5078Parser();
+		case ExpressionDescription7EditPart.VISUAL_ID:
+			return getExpressionDescription_5225Parser();
 		case DataTypeName3EditPart.VISUAL_ID:
 			return getDataTypeName_5079Parser();
 		case CollectionsName3EditPart.VISUAL_ID:
@@ -3208,6 +3375,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5096Parser();
 		case CallFunctionDescription8EditPart.VISUAL_ID:
 			return getCallFunctionDescription_5097Parser();
+		case ExpressionDescription8EditPart.VISUAL_ID:
+			return getExpressionDescription_5226Parser();
 		case DataTypeName6EditPart.VISUAL_ID:
 			return getDataTypeName_5037Parser();
 		case CollectionsName6EditPart.VISUAL_ID:
@@ -3246,6 +3415,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5054Parser();
 		case CallFunctionDescription9EditPart.VISUAL_ID:
 			return getCallFunctionDescription_5055Parser();
+		case ExpressionDescription9EditPart.VISUAL_ID:
+			return getExpressionDescription_5227Parser();
 		case TransitionNameEditPart.VISUAL_ID:
 			return getTransitionName_6001Parser();
 		case SelectorTransitionNameEditPart.VISUAL_ID:

@@ -140,6 +140,9 @@ public class FunctionFunctionExecutablePartCompartmentEditPart extends ShapeComp
 			if (type == CrystalElementTypes.CallFunction_3089) {
 				return this;
 			}
+			if (type == CrystalElementTypes.Expression_3218) {
+				return this;
+			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {

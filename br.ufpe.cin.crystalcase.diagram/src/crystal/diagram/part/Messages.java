@@ -311,32 +311,42 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String Insert5CreationTool_title;
+	public static String Expression5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Insert5CreationTool_desc;
+	public static String Expression5CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Select6CreationTool_title;
+	public static String Insert6CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Select6CreationTool_desc;
+	public static String Insert6CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Update7CreationTool_title;
+	public static String Select7CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Update7CreationTool_desc;
+	public static String Select7CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Update8CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Update8CreationTool_desc;
 
 	/**
 	* @generated
@@ -2207,6 +2217,96 @@ public class Messages extends NLS {
 	* @generated
 	*/
 	public static String NavigatorGroupName_CallFunction_3210_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3211_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3211_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3212_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3212_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3213_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3213_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3214_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3214_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3215_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3215_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3216_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3216_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3217_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3217_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3218_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3218_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3219_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Expression_3219_outgoinglinks;
 
 	/**
 	 * @generated

@@ -137,6 +137,9 @@ public class WhileWhileWhileStatementsCompartment9EditPart extends ShapeCompartm
 			if (type == CrystalElementTypes.CallFunction_3104) {
 				return this;
 			}
+			if (type == CrystalElementTypes.Expression_3212) {
+				return this;
+			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {

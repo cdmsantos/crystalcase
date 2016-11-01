@@ -12,6 +12,7 @@ import crystal.diagram.edit.commands.Case3CreateCommand;
 import crystal.diagram.edit.commands.Close2CreateCommand;
 import crystal.diagram.edit.commands.Delete3CreateCommand;
 import crystal.diagram.edit.commands.Exception4CreateCommand;
+import crystal.diagram.edit.commands.Expression2CreateCommand;
 import crystal.diagram.edit.commands.Fetch2CreateCommand;
 import crystal.diagram.edit.commands.For2CreateCommand;
 import crystal.diagram.edit.commands.If4CreateCommand;
@@ -83,6 +84,9 @@ public class WhileWhileWhileStatementsCompartment8ItemSemanticEditPolicy extends
 		}
 		if (CrystalElementTypes.CallFunction_3104 == req.getElementType()) {
 			return getGEFWrapper(new CallFunction2CreateCommand(req));
+		}
+		if (CrystalElementTypes.Expression_3212 == req.getElementType()) {
+			return getGEFWrapper(new Expression2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

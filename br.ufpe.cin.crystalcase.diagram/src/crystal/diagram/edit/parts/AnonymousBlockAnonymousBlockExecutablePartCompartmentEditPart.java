@@ -140,6 +140,9 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart exten
 			if (type == CrystalElementTypes.CallFunction_3051) {
 				return this;
 			}
+			if (type == CrystalElementTypes.Expression_3219) {
+				return this;
+			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {

@@ -451,6 +451,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction7EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression7EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			return result.toArray();
 		}
 
@@ -591,6 +596,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction8EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression8EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			return result.toArray();
 		}
 
@@ -690,6 +700,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					.getType(AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction9EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv), CrystalVisualIDRegistry
+					.getType(AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression9EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			return result.toArray();
 		}
@@ -800,6 +815,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfIfsCompartment9EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment9EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
@@ -871,6 +891,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment9EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfElsesCompartment9EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -1100,6 +1125,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(WhileWhileWhileStatementsCompartment9EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -1198,6 +1228,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ForForForStatementsCompartment9EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -1295,6 +1330,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -1542,6 +1582,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfIfsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
@@ -1613,6 +1658,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfElsesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -1842,6 +1892,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(WhileWhileWhileStatementsCompartment7EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -1940,6 +1995,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ForForForStatementsCompartment7EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -2037,6 +2097,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -2284,6 +2349,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfIfsCompartment8EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment8EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
@@ -2355,6 +2425,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment8EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfElsesCompartment8EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -2584,6 +2659,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -2682,6 +2762,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ForForForStatementsCompartment8EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -2779,6 +2864,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -3026,6 +3116,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfIfsCompartment4EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment4EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
@@ -3097,6 +3192,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment4EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfElsesCompartment4EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -3326,6 +3426,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -3424,6 +3529,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ForForForStatementsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -3521,6 +3631,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -3745,6 +3860,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction6EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression6EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(SelectorTransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -3866,6 +3986,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfIfsCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment3EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
@@ -3937,6 +4062,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment3EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfElsesCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -4166,6 +4296,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(WhileWhileWhileStatementsCompartment6EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -4264,6 +4399,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ForForForStatementsCompartment6EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -4361,6 +4501,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -4608,6 +4753,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfIfsCompartment5EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment5EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
@@ -4679,6 +4829,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment5EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfElsesCompartment5EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -4801,6 +4956,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfIfsCompartment6EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment6EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
@@ -4872,6 +5032,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment6EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfElsesCompartment6EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -5101,6 +5266,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(WhileWhileWhileStatementsCompartment4EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -5329,6 +5499,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -5426,6 +5601,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(ForForForStatementsCompartment3EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ForForForStatementsCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -5525,6 +5705,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ForForForStatementsCompartment4EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -5623,6 +5808,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -5720,6 +5910,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -6092,6 +6287,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfIfsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment2EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
@@ -6163,6 +6363,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment2EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfElsesCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -6392,6 +6597,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(WhileWhileWhileStatementsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -6490,6 +6700,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ForForForStatementsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -6587,6 +6802,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -6834,6 +7054,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfIfsCompartment7EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment7EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
@@ -6905,6 +7130,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(IfIfElsesCompartment7EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(IfIfElsesCompartment7EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -7134,6 +7364,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -7232,6 +7467,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(ForForForStatementsCompartment5EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
@@ -7329,6 +7569,11 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
@@ -7470,831 +7715,233 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 			return result.toArray();
 		}
 
-		case TransitionEditPart.VISUAL_ID: {
+		case ExpressionEditPart.VISUAL_ID: {
 			LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			CrystalNavigatorGroup target = new CrystalNavigatorGroup(Messages.NavigatorGroupName_Transition_4001_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			CrystalNavigatorGroup source = new CrystalNavigatorGroup(Messages.NavigatorGroupName_Transition_4001_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Node sv = (Node) view;
+			CrystalNavigatorGroup incominglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3211_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			CrystalNavigatorGroup outgoinglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3211_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
 			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(ExceptionEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(IfEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CaseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(InsertEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(UpdateEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(DeleteEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(SelectEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(WhileEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(ForEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(LoopEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(OpenEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(FetchEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CloseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedureEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction6EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction7EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction8EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction9EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(ExceptionEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(IfEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CaseEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(InsertEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(UpdateEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(DeleteEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(SelectEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(WhileEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(ForEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(LoopEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(OpenEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(FetchEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CloseEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedureEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction6EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction7EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction8EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Exception9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(If9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Case9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Insert9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Update9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Delete9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Select9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(While9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(For9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Loop9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Open9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Fetch9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(Close9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallProcedure9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CrystalVisualIDRegistry.getType(CallFunction9EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source, true));
-			if (!target.isEmpty()) {
-				result.add(target);
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
-			if (!source.isEmpty()) {
-				result.add(source);
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
 			}
 			return result.toArray();
+		}
+
+		case Expression2EditPart.VISUAL_ID: {
+			LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			CrystalNavigatorGroup incominglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3212_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			CrystalNavigatorGroup outgoinglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3212_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case Expression3EditPart.VISUAL_ID: {
+			LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			CrystalNavigatorGroup incominglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3213_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			CrystalNavigatorGroup outgoinglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3213_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case Expression4EditPart.VISUAL_ID: {
+			LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			CrystalNavigatorGroup incominglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3214_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			CrystalNavigatorGroup outgoinglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3214_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case Expression5EditPart.VISUAL_ID: {
+			LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			CrystalNavigatorGroup incominglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3215_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			CrystalNavigatorGroup outgoinglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3215_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case Expression6EditPart.VISUAL_ID: {
+			LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			CrystalNavigatorGroup incominglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3216_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			CrystalNavigatorGroup outgoinglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3216_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case Expression7EditPart.VISUAL_ID: {
+			LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			CrystalNavigatorGroup incominglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3217_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			CrystalNavigatorGroup outgoinglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3217_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case Expression8EditPart.VISUAL_ID: {
+			LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			CrystalNavigatorGroup incominglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3218_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			CrystalNavigatorGroup outgoinglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3218_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case Expression9EditPart.VISUAL_ID: {
+			LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			CrystalNavigatorGroup incominglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3219_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			CrystalNavigatorGroup outgoinglinks = new CrystalNavigatorGroup(
+					Messages.NavigatorGroupName_Expression_3219_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					CrystalVisualIDRegistry.getType(TransitionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case TransitionEditPart.VISUAL_ID: {
+			teste(view, parentElement);
 		}
 
 		case SelectorTransitionEditPart.VISUAL_ID: {
@@ -8323,6 +7970,887 @@ public class CrystalNavigatorContentProvider implements ICommonContentProvider {
 		}
 		}
 		return EMPTY_ARRAY;
+	}
+
+	private Object[] teste(View view, Object parentElement) {
+		LinkedList<CrystalAbstractNavigatorItem> result = new LinkedList<CrystalAbstractNavigatorItem>();
+		Edge sv = (Edge) view;
+		CrystalNavigatorGroup target = new CrystalNavigatorGroup(Messages.NavigatorGroupName_Transition_4001_target,
+				"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+		CrystalNavigatorGroup source = new CrystalNavigatorGroup(Messages.NavigatorGroupName_Transition_4001_source,
+				"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+		Collection<View> connectedViews;
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(ExceptionEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(IfEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CaseEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(InsertEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(UpdateEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(DeleteEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(SelectEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(WhileEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(ForEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(LoopEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(OpenEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(FetchEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CloseEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedureEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression6EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression7EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression8EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksTargetByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression9EditPart.VISUAL_ID));
+		target.addChildren(createNavigatorItems(connectedViews, target, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(ExceptionEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(IfEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CaseEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(InsertEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(UpdateEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(DeleteEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(SelectEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(WhileEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(ForEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(LoopEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(OpenEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(FetchEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CloseEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedureEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunctionEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression6EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression7EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression8EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Exception9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(If9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Case9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Insert9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Update9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Delete9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Select9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(While9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(For9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Loop9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Open9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Fetch9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Close9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallProcedure9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(CallFunction9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		connectedViews = getLinksSourceByType(Collections.singleton(sv),
+				CrystalVisualIDRegistry.getType(Expression9EditPart.VISUAL_ID));
+		source.addChildren(createNavigatorItems(connectedViews, source, true));
+		if (!target.isEmpty()) {
+			result.add(target);
+		}
+		if (!source.isEmpty()) {
+			result.add(source);
+		}
+		return result.toArray();
 	}
 
 	/**

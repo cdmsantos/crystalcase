@@ -261,6 +261,11 @@ public class LoopItemProvider extends StatementsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.LOOP__LOOP_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.LOOP__LOOP_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createExpression()));
 	}
 
 }

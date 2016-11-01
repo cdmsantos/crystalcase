@@ -14,6 +14,7 @@ import crystal.CrystalPackage;
 import crystal.Cursor;
 import crystal.DataType;
 import crystal.Delete;
+import crystal.Expression;
 import crystal.Fetch;
 import crystal.For;
 import crystal.Function;
@@ -288,6 +289,13 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.SELECTOR_TRANSITION: {
 				SelectorTransition selectorTransition = (SelectorTransition)theEObject;
 				T result = caseSelectorTransition(selectorTransition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CrystalPackage.EXPRESSION: {
+				Expression expression = (Expression)theEObject;
+				T result = caseExpression(expression);
+				if (result == null) result = caseStatements(expression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -727,6 +735,21 @@ public class CrystalSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSelectorTransition(SelectorTransition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpression(Expression object) {
 		return null;
 	}
 

@@ -48,6 +48,15 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
+          title="Expression"
+          description="Create new Expression">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="Insert"
           description="Create new Insert">
         <smallIcon

@@ -31,6 +31,7 @@ import crystal.diagram.edit.parts.Case5EditPart;
 import crystal.diagram.edit.parts.Close3EditPart;
 import crystal.diagram.edit.parts.Delete5EditPart;
 import crystal.diagram.edit.parts.Exception6EditPart;
+import crystal.diagram.edit.parts.Expression3EditPart;
 import crystal.diagram.edit.parts.Fetch3EditPart;
 import crystal.diagram.edit.parts.For3EditPart;
 import crystal.diagram.edit.parts.If6EditPart;
@@ -112,6 +113,7 @@ public class LoopLoopLoopStatementsCompartment2CanonicalEditPolicy extends Canon
 		case Close3EditPart.VISUAL_ID:
 		case CallProcedure3EditPart.VISUAL_ID:
 		case CallFunction3EditPart.VISUAL_ID:
+		case Expression3EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

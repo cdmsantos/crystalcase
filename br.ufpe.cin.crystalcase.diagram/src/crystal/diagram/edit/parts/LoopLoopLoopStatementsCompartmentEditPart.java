@@ -138,6 +138,9 @@ public class LoopLoopLoopStatementsCompartmentEditPart extends ShapeCompartmentE
 			if (type == CrystalElementTypes.CallFunction_3175) {
 				return this;
 			}
+			if (type == CrystalElementTypes.Expression_3213) {
+				return this;
+			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {

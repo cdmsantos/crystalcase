@@ -227,6 +227,7 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				case CloseEditPart.VISUAL_ID:
 				case CallProcedureEditPart.VISUAL_ID:
 				case CallFunctionEditPart.VISUAL_ID:
+				case ExpressionEditPart.VISUAL_ID:
 				case DataType2EditPart.VISUAL_ID:
 				case Collections2EditPart.VISUAL_ID:
 				case Records2EditPart.VISUAL_ID:
@@ -274,6 +275,7 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				case Close2EditPart.VISUAL_ID:
 				case CallProcedure2EditPart.VISUAL_ID:
 				case CallFunction2EditPart.VISUAL_ID:
+				case Expression2EditPart.VISUAL_ID:
 				case For3EditPart.VISUAL_ID:
 				case For4EditPart.VISUAL_ID:
 				case Loop3EditPart.VISUAL_ID:
@@ -283,11 +285,13 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				case Close3EditPart.VISUAL_ID:
 				case CallProcedure3EditPart.VISUAL_ID:
 				case CallFunction3EditPart.VISUAL_ID:
+				case Expression3EditPart.VISUAL_ID:
 				case Open4EditPart.VISUAL_ID:
 				case Fetch4EditPart.VISUAL_ID:
 				case Close4EditPart.VISUAL_ID:
 				case CallProcedure4EditPart.VISUAL_ID:
 				case CallFunction4EditPart.VISUAL_ID:
+				case Expression4EditPart.VISUAL_ID:
 				case For5EditPart.VISUAL_ID:
 				case Loop5EditPart.VISUAL_ID:
 				case Open5EditPart.VISUAL_ID:
@@ -295,6 +299,7 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				case Close5EditPart.VISUAL_ID:
 				case CallProcedure5EditPart.VISUAL_ID:
 				case CallFunction5EditPart.VISUAL_ID:
+				case Expression5EditPart.VISUAL_ID:
 				case Case6EditPart.VISUAL_ID:
 				case Insert6EditPart.VISUAL_ID:
 				case Update6EditPart.VISUAL_ID:
@@ -308,6 +313,7 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				case Close6EditPart.VISUAL_ID:
 				case CallProcedure6EditPart.VISUAL_ID:
 				case CallFunction6EditPart.VISUAL_ID:
+				case Expression6EditPart.VISUAL_ID:
 				case Case7EditPart.VISUAL_ID:
 				case Insert7EditPart.VISUAL_ID:
 				case Update7EditPart.VISUAL_ID:
@@ -321,6 +327,7 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				case Close7EditPart.VISUAL_ID:
 				case CallProcedure7EditPart.VISUAL_ID:
 				case CallFunction7EditPart.VISUAL_ID:
+				case Expression7EditPart.VISUAL_ID:
 				case DataType3EditPart.VISUAL_ID:
 				case Collections3EditPart.VISUAL_ID:
 				case Records3EditPart.VISUAL_ID:
@@ -348,6 +355,7 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				case Close8EditPart.VISUAL_ID:
 				case CallProcedure8EditPart.VISUAL_ID:
 				case CallFunction8EditPart.VISUAL_ID:
+				case Expression8EditPart.VISUAL_ID:
 				case DataType6EditPart.VISUAL_ID:
 				case Collections6EditPart.VISUAL_ID:
 				case Records6EditPart.VISUAL_ID:
@@ -367,6 +375,7 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				case Close9EditPart.VISUAL_ID:
 				case CallProcedure9EditPart.VISUAL_ID:
 				case CallFunction9EditPart.VISUAL_ID:
+				case Expression9EditPart.VISUAL_ID:
 					if (domainElement == null || visualID != CrystalVisualIDRegistry
 							.getNodeVisualID(op.getContainerView(), domainElement)) {
 						return false; // visual id in semantic hint should match visual id for domain element
@@ -395,60 +404,64 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				|| Exception6EditPart.VISUAL_ID == visualID || If6EditPart.VISUAL_ID == visualID
 				|| OpenEditPart.VISUAL_ID == visualID || FetchEditPart.VISUAL_ID == visualID
 				|| CloseEditPart.VISUAL_ID == visualID || CallProcedureEditPart.VISUAL_ID == visualID
-				|| CallFunctionEditPart.VISUAL_ID == visualID || Exception7EditPart.VISUAL_ID == visualID
-				|| If7EditPart.VISUAL_ID == visualID || Case2EditPart.VISUAL_ID == visualID
-				|| Insert2EditPart.VISUAL_ID == visualID || Update2EditPart.VISUAL_ID == visualID
-				|| Delete2EditPart.VISUAL_ID == visualID || Select2EditPart.VISUAL_ID == visualID
-				|| While2EditPart.VISUAL_ID == visualID || Case3EditPart.VISUAL_ID == visualID
-				|| Insert3EditPart.VISUAL_ID == visualID || Update3EditPart.VISUAL_ID == visualID
-				|| Delete3EditPart.VISUAL_ID == visualID || Select3EditPart.VISUAL_ID == visualID
-				|| While3EditPart.VISUAL_ID == visualID || For2EditPart.VISUAL_ID == visualID
-				|| Case4EditPart.VISUAL_ID == visualID || Insert4EditPart.VISUAL_ID == visualID
-				|| Update4EditPart.VISUAL_ID == visualID || Delete4EditPart.VISUAL_ID == visualID
-				|| Select4EditPart.VISUAL_ID == visualID || While4EditPart.VISUAL_ID == visualID
-				|| Loop2EditPart.VISUAL_ID == visualID || Case5EditPart.VISUAL_ID == visualID
-				|| Insert5EditPart.VISUAL_ID == visualID || Update5EditPart.VISUAL_ID == visualID
-				|| Delete5EditPart.VISUAL_ID == visualID || Select5EditPart.VISUAL_ID == visualID
-				|| While5EditPart.VISUAL_ID == visualID || Open2EditPart.VISUAL_ID == visualID
-				|| Fetch2EditPart.VISUAL_ID == visualID || Close2EditPart.VISUAL_ID == visualID
-				|| CallProcedure2EditPart.VISUAL_ID == visualID || CallFunction2EditPart.VISUAL_ID == visualID
+				|| CallFunctionEditPart.VISUAL_ID == visualID || ExpressionEditPart.VISUAL_ID == visualID
+				|| Exception7EditPart.VISUAL_ID == visualID || If7EditPart.VISUAL_ID == visualID
+				|| Case2EditPart.VISUAL_ID == visualID || Insert2EditPart.VISUAL_ID == visualID
+				|| Update2EditPart.VISUAL_ID == visualID || Delete2EditPart.VISUAL_ID == visualID
+				|| Select2EditPart.VISUAL_ID == visualID || While2EditPart.VISUAL_ID == visualID
+				|| Case3EditPart.VISUAL_ID == visualID || Insert3EditPart.VISUAL_ID == visualID
+				|| Update3EditPart.VISUAL_ID == visualID || Delete3EditPart.VISUAL_ID == visualID
+				|| Select3EditPart.VISUAL_ID == visualID || While3EditPart.VISUAL_ID == visualID
+				|| For2EditPart.VISUAL_ID == visualID || Case4EditPart.VISUAL_ID == visualID
+				|| Insert4EditPart.VISUAL_ID == visualID || Update4EditPart.VISUAL_ID == visualID
+				|| Delete4EditPart.VISUAL_ID == visualID || Select4EditPart.VISUAL_ID == visualID
+				|| While4EditPart.VISUAL_ID == visualID || Loop2EditPart.VISUAL_ID == visualID
+				|| Case5EditPart.VISUAL_ID == visualID || Insert5EditPart.VISUAL_ID == visualID
+				|| Update5EditPart.VISUAL_ID == visualID || Delete5EditPart.VISUAL_ID == visualID
+				|| Select5EditPart.VISUAL_ID == visualID || While5EditPart.VISUAL_ID == visualID
+				|| Open2EditPart.VISUAL_ID == visualID || Fetch2EditPart.VISUAL_ID == visualID
+				|| Close2EditPart.VISUAL_ID == visualID || CallProcedure2EditPart.VISUAL_ID == visualID
+				|| CallFunction2EditPart.VISUAL_ID == visualID || Expression2EditPart.VISUAL_ID == visualID
 				|| For3EditPart.VISUAL_ID == visualID || For4EditPart.VISUAL_ID == visualID
 				|| Loop3EditPart.VISUAL_ID == visualID || Loop4EditPart.VISUAL_ID == visualID
 				|| Open3EditPart.VISUAL_ID == visualID || Fetch3EditPart.VISUAL_ID == visualID
 				|| Close3EditPart.VISUAL_ID == visualID || CallProcedure3EditPart.VISUAL_ID == visualID
-				|| CallFunction3EditPart.VISUAL_ID == visualID || Open4EditPart.VISUAL_ID == visualID
-				|| Fetch4EditPart.VISUAL_ID == visualID || Close4EditPart.VISUAL_ID == visualID
-				|| CallProcedure4EditPart.VISUAL_ID == visualID || CallFunction4EditPart.VISUAL_ID == visualID
+				|| CallFunction3EditPart.VISUAL_ID == visualID || Expression3EditPart.VISUAL_ID == visualID
+				|| Open4EditPart.VISUAL_ID == visualID || Fetch4EditPart.VISUAL_ID == visualID
+				|| Close4EditPart.VISUAL_ID == visualID || CallProcedure4EditPart.VISUAL_ID == visualID
+				|| CallFunction4EditPart.VISUAL_ID == visualID || Expression4EditPart.VISUAL_ID == visualID
 				|| For5EditPart.VISUAL_ID == visualID || Loop5EditPart.VISUAL_ID == visualID
 				|| Open5EditPart.VISUAL_ID == visualID || Fetch5EditPart.VISUAL_ID == visualID
 				|| Close5EditPart.VISUAL_ID == visualID || CallProcedure5EditPart.VISUAL_ID == visualID
-				|| CallFunction5EditPart.VISUAL_ID == visualID || Case6EditPart.VISUAL_ID == visualID
-				|| Insert6EditPart.VISUAL_ID == visualID || Update6EditPart.VISUAL_ID == visualID
-				|| Delete6EditPart.VISUAL_ID == visualID || Select6EditPart.VISUAL_ID == visualID
-				|| While6EditPart.VISUAL_ID == visualID || For6EditPart.VISUAL_ID == visualID
-				|| Loop6EditPart.VISUAL_ID == visualID || Open6EditPart.VISUAL_ID == visualID
-				|| Fetch6EditPart.VISUAL_ID == visualID || Close6EditPart.VISUAL_ID == visualID
-				|| CallProcedure6EditPart.VISUAL_ID == visualID || CallFunction6EditPart.VISUAL_ID == visualID
+				|| CallFunction5EditPart.VISUAL_ID == visualID || Expression5EditPart.VISUAL_ID == visualID
+				|| Case6EditPart.VISUAL_ID == visualID || Insert6EditPart.VISUAL_ID == visualID
+				|| Update6EditPart.VISUAL_ID == visualID || Delete6EditPart.VISUAL_ID == visualID
+				|| Select6EditPart.VISUAL_ID == visualID || While6EditPart.VISUAL_ID == visualID
+				|| For6EditPart.VISUAL_ID == visualID || Loop6EditPart.VISUAL_ID == visualID
+				|| Open6EditPart.VISUAL_ID == visualID || Fetch6EditPart.VISUAL_ID == visualID
+				|| Close6EditPart.VISUAL_ID == visualID || CallProcedure6EditPart.VISUAL_ID == visualID
+				|| CallFunction6EditPart.VISUAL_ID == visualID || Expression6EditPart.VISUAL_ID == visualID
 				|| Case7EditPart.VISUAL_ID == visualID || Insert7EditPart.VISUAL_ID == visualID
 				|| Update7EditPart.VISUAL_ID == visualID || Delete7EditPart.VISUAL_ID == visualID
 				|| Select7EditPart.VISUAL_ID == visualID || While7EditPart.VISUAL_ID == visualID
 				|| For7EditPart.VISUAL_ID == visualID || Loop7EditPart.VISUAL_ID == visualID
 				|| Open7EditPart.VISUAL_ID == visualID || Fetch7EditPart.VISUAL_ID == visualID
 				|| Close7EditPart.VISUAL_ID == visualID || CallProcedure7EditPart.VISUAL_ID == visualID
-				|| CallFunction7EditPart.VISUAL_ID == visualID || DataType3EditPart.VISUAL_ID == visualID
-				|| Collections3EditPart.VISUAL_ID == visualID || Records3EditPart.VISUAL_ID == visualID
-				|| Cursor3EditPart.VISUAL_ID == visualID || DataType4EditPart.VISUAL_ID == visualID
-				|| Collections4EditPart.VISUAL_ID == visualID || Records4EditPart.VISUAL_ID == visualID
-				|| Cursor4EditPart.VISUAL_ID == visualID || DataType5EditPart.VISUAL_ID == visualID
-				|| Collections5EditPart.VISUAL_ID == visualID || Records5EditPart.VISUAL_ID == visualID
-				|| Cursor5EditPart.VISUAL_ID == visualID || Exception8EditPart.VISUAL_ID == visualID
-				|| If8EditPart.VISUAL_ID == visualID || Case8EditPart.VISUAL_ID == visualID
-				|| Insert8EditPart.VISUAL_ID == visualID || Update8EditPart.VISUAL_ID == visualID
-				|| Delete8EditPart.VISUAL_ID == visualID || Select8EditPart.VISUAL_ID == visualID
-				|| While8EditPart.VISUAL_ID == visualID || For8EditPart.VISUAL_ID == visualID
-				|| Loop8EditPart.VISUAL_ID == visualID || Open8EditPart.VISUAL_ID == visualID
-				|| Fetch8EditPart.VISUAL_ID == visualID || Close8EditPart.VISUAL_ID == visualID
-				|| CallProcedure8EditPart.VISUAL_ID == visualID || CallFunction8EditPart.VISUAL_ID == visualID
+				|| CallFunction7EditPart.VISUAL_ID == visualID || Expression7EditPart.VISUAL_ID == visualID
+				|| DataType3EditPart.VISUAL_ID == visualID || Collections3EditPart.VISUAL_ID == visualID
+				|| Records3EditPart.VISUAL_ID == visualID || Cursor3EditPart.VISUAL_ID == visualID
+				|| DataType4EditPart.VISUAL_ID == visualID || Collections4EditPart.VISUAL_ID == visualID
+				|| Records4EditPart.VISUAL_ID == visualID || Cursor4EditPart.VISUAL_ID == visualID
+				|| DataType5EditPart.VISUAL_ID == visualID || Collections5EditPart.VISUAL_ID == visualID
+				|| Records5EditPart.VISUAL_ID == visualID || Cursor5EditPart.VISUAL_ID == visualID
+				|| Exception8EditPart.VISUAL_ID == visualID || If8EditPart.VISUAL_ID == visualID
+				|| Case8EditPart.VISUAL_ID == visualID || Insert8EditPart.VISUAL_ID == visualID
+				|| Update8EditPart.VISUAL_ID == visualID || Delete8EditPart.VISUAL_ID == visualID
+				|| Select8EditPart.VISUAL_ID == visualID || While8EditPart.VISUAL_ID == visualID
+				|| For8EditPart.VISUAL_ID == visualID || Loop8EditPart.VISUAL_ID == visualID
+				|| Open8EditPart.VISUAL_ID == visualID || Fetch8EditPart.VISUAL_ID == visualID
+				|| Close8EditPart.VISUAL_ID == visualID || CallProcedure8EditPart.VISUAL_ID == visualID
+				|| CallFunction8EditPart.VISUAL_ID == visualID || Expression8EditPart.VISUAL_ID == visualID
 				|| DataType6EditPart.VISUAL_ID == visualID || Collections6EditPart.VISUAL_ID == visualID
 				|| Records6EditPart.VISUAL_ID == visualID || Cursor6EditPart.VISUAL_ID == visualID
 				|| Exception9EditPart.VISUAL_ID == visualID || If9EditPart.VISUAL_ID == visualID
@@ -458,7 +471,7 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 				|| For9EditPart.VISUAL_ID == visualID || Loop9EditPart.VISUAL_ID == visualID
 				|| Open9EditPart.VISUAL_ID == visualID || Fetch9EditPart.VISUAL_ID == visualID
 				|| Close9EditPart.VISUAL_ID == visualID || CallProcedure9EditPart.VISUAL_ID == visualID
-				|| CallFunction9EditPart.VISUAL_ID == visualID;
+				|| CallFunction9EditPart.VISUAL_ID == visualID || Expression9EditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -581,6 +594,8 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 			return createCallProcedure_3194(domainElement, containerView, index, persisted, preferencesHint);
 		case CallFunctionEditPart.VISUAL_ID:
 			return createCallFunction_3195(domainElement, containerView, index, persisted, preferencesHint);
+		case ExpressionEditPart.VISUAL_ID:
+			return createExpression_3211(domainElement, containerView, index, persisted, preferencesHint);
 		case Exception7EditPart.VISUAL_ID:
 			return createException_3196(domainElement, containerView, index, persisted, preferencesHint);
 		case If7EditPart.VISUAL_ID:
@@ -647,6 +662,8 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 			return createCallProcedure_3103(domainElement, containerView, index, persisted, preferencesHint);
 		case CallFunction2EditPart.VISUAL_ID:
 			return createCallFunction_3104(domainElement, containerView, index, persisted, preferencesHint);
+		case Expression2EditPart.VISUAL_ID:
+			return createExpression_3212(domainElement, containerView, index, persisted, preferencesHint);
 		case For3EditPart.VISUAL_ID:
 			return createFor_3167(domainElement, containerView, index, persisted, preferencesHint);
 		case For4EditPart.VISUAL_ID:
@@ -665,6 +682,8 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 			return createCallProcedure_3174(domainElement, containerView, index, persisted, preferencesHint);
 		case CallFunction3EditPart.VISUAL_ID:
 			return createCallFunction_3175(domainElement, containerView, index, persisted, preferencesHint);
+		case Expression3EditPart.VISUAL_ID:
+			return createExpression_3213(domainElement, containerView, index, persisted, preferencesHint);
 		case Open4EditPart.VISUAL_ID:
 			return createOpen_3176(domainElement, containerView, index, persisted, preferencesHint);
 		case Fetch4EditPart.VISUAL_ID:
@@ -675,6 +694,8 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 			return createCallProcedure_3179(domainElement, containerView, index, persisted, preferencesHint);
 		case CallFunction4EditPart.VISUAL_ID:
 			return createCallFunction_3180(domainElement, containerView, index, persisted, preferencesHint);
+		case Expression4EditPart.VISUAL_ID:
+			return createExpression_3214(domainElement, containerView, index, persisted, preferencesHint);
 		case For5EditPart.VISUAL_ID:
 			return createFor_3204(domainElement, containerView, index, persisted, preferencesHint);
 		case Loop5EditPart.VISUAL_ID:
@@ -689,6 +710,8 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 			return createCallProcedure_3209(domainElement, containerView, index, persisted, preferencesHint);
 		case CallFunction5EditPart.VISUAL_ID:
 			return createCallFunction_3210(domainElement, containerView, index, persisted, preferencesHint);
+		case Expression5EditPart.VISUAL_ID:
+			return createExpression_3215(domainElement, containerView, index, persisted, preferencesHint);
 		case Case6EditPart.VISUAL_ID:
 			return createCase_3138(domainElement, containerView, index, persisted, preferencesHint);
 		case Insert6EditPart.VISUAL_ID:
@@ -715,6 +738,8 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 			return createCallProcedure_3149(domainElement, containerView, index, persisted, preferencesHint);
 		case CallFunction6EditPart.VISUAL_ID:
 			return createCallFunction_3150(domainElement, containerView, index, persisted, preferencesHint);
+		case Expression6EditPart.VISUAL_ID:
+			return createExpression_3216(domainElement, containerView, index, persisted, preferencesHint);
 		case Case7EditPart.VISUAL_ID:
 			return createCase_3058(domainElement, containerView, index, persisted, preferencesHint);
 		case Insert7EditPart.VISUAL_ID:
@@ -741,6 +766,8 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 			return createCallProcedure_3069(domainElement, containerView, index, persisted, preferencesHint);
 		case CallFunction7EditPart.VISUAL_ID:
 			return createCallFunction_3070(domainElement, containerView, index, persisted, preferencesHint);
+		case Expression7EditPart.VISUAL_ID:
+			return createExpression_3217(domainElement, containerView, index, persisted, preferencesHint);
 		case DataType3EditPart.VISUAL_ID:
 			return createDataType_3071(domainElement, containerView, index, persisted, preferencesHint);
 		case Collections3EditPart.VISUAL_ID:
@@ -795,6 +822,8 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 			return createCallProcedure_3088(domainElement, containerView, index, persisted, preferencesHint);
 		case CallFunction8EditPart.VISUAL_ID:
 			return createCallFunction_3089(domainElement, containerView, index, persisted, preferencesHint);
+		case Expression8EditPart.VISUAL_ID:
+			return createExpression_3218(domainElement, containerView, index, persisted, preferencesHint);
 		case DataType6EditPart.VISUAL_ID:
 			return createDataType_3033(domainElement, containerView, index, persisted, preferencesHint);
 		case Collections6EditPart.VISUAL_ID:
@@ -833,6 +862,8 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 			return createCallProcedure_3050(domainElement, containerView, index, persisted, preferencesHint);
 		case CallFunction9EditPart.VISUAL_ID:
 			return createCallFunction_3051(domainElement, containerView, index, persisted, preferencesHint);
+		case Expression9EditPart.VISUAL_ID:
+			return createExpression_3219(domainElement, containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -2490,6 +2521,42 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 	/**
 	* @generated
 	*/
+	public Node createExpression_3211(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CrystalVisualIDRegistry.getType(ExpressionEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5219 = createLabel(node, CrystalVisualIDRegistry.getType(ExpressionDescriptionEditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
 	public Node createException_3196(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
@@ -3718,6 +3785,42 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 	/**
 	* @generated
 	*/
+	public Node createExpression_3212(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CrystalVisualIDRegistry.getType(Expression2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5220 = createLabel(node, CrystalVisualIDRegistry.getType(ExpressionDescription2EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
 	public Node createFor_3167(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
@@ -4055,6 +4158,42 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 	/**
 	* @generated
 	*/
+	public Node createExpression_3213(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CrystalVisualIDRegistry.getType(Expression3EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5221 = createLabel(node, CrystalVisualIDRegistry.getType(ExpressionDescription3EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
 	public Node createOpen_3176(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
@@ -4230,6 +4369,42 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5183 = createLabel(node, CrystalVisualIDRegistry.getType(CallFunctionDescription4EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
+	public Node createExpression_3214(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CrystalVisualIDRegistry.getType(Expression4EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5222 = createLabel(node, CrystalVisualIDRegistry.getType(ExpressionDescription4EditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -4489,6 +4664,42 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5212 = createLabel(node, CrystalVisualIDRegistry.getType(CallFunctionDescription5EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
+	public Node createExpression_3215(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CrystalVisualIDRegistry.getType(Expression5EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5223 = createLabel(node, CrystalVisualIDRegistry.getType(ExpressionDescription5EditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -4977,6 +5188,42 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 	/**
 	* @generated
 	*/
+	public Node createExpression_3216(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CrystalVisualIDRegistry.getType(Expression6EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5224 = createLabel(node, CrystalVisualIDRegistry.getType(ExpressionDescription6EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
 	public Node createFor_3064(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
@@ -5230,6 +5477,42 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5078 = createLabel(node, CrystalVisualIDRegistry.getType(CallFunctionDescription7EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
+	public Node createExpression_3217(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CrystalVisualIDRegistry.getType(Expression7EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5225 = createLabel(node, CrystalVisualIDRegistry.getType(ExpressionDescription7EditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -6227,6 +6510,42 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 	/**
 	* @generated
 	*/
+	public Node createExpression_3218(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CrystalVisualIDRegistry.getType(Expression8EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5226 = createLabel(node, CrystalVisualIDRegistry.getType(ExpressionDescription8EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
 	public Node createDataType_3033(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
@@ -6924,6 +7243,42 @@ public class CrystalViewProvider extends AbstractProvider implements IViewProvid
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5055 = createLabel(node, CrystalVisualIDRegistry.getType(CallFunctionDescription9EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
+	public Node createExpression_3219(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CrystalVisualIDRegistry.getType(Expression9EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5227 = createLabel(node, CrystalVisualIDRegistry.getType(ExpressionDescription9EditPart.VISUAL_ID));
 		return node;
 	}
 

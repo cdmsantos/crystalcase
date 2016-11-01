@@ -31,6 +31,7 @@ import crystal.diagram.edit.parts.Case3EditPart;
 import crystal.diagram.edit.parts.Close2EditPart;
 import crystal.diagram.edit.parts.Delete3EditPart;
 import crystal.diagram.edit.parts.Exception4EditPart;
+import crystal.diagram.edit.parts.Expression2EditPart;
 import crystal.diagram.edit.parts.Fetch2EditPart;
 import crystal.diagram.edit.parts.For2EditPart;
 import crystal.diagram.edit.parts.If4EditPart;
@@ -112,6 +113,7 @@ public class WhileWhileWhileStatementsCompartment7CanonicalEditPolicy extends Ca
 		case Close2EditPart.VISUAL_ID:
 		case CallProcedure2EditPart.VISUAL_ID:
 		case CallFunction2EditPart.VISUAL_ID:
+		case Expression2EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

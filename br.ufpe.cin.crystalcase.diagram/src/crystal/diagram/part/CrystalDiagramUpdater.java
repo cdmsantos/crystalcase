@@ -26,6 +26,7 @@ import crystal.CrystalCase;
 import crystal.CrystalPackage;
 import crystal.Delete;
 import crystal.Exception;
+import crystal.Expression;
 import crystal.Fetch;
 import crystal.For;
 import crystal.Function;
@@ -466,6 +467,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -543,6 +548,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunctionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -626,6 +635,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -706,6 +719,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -783,6 +800,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -891,6 +912,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -968,6 +993,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunctionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1051,6 +1080,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -1128,6 +1161,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1211,6 +1248,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -1288,6 +1329,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1371,6 +1416,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -1448,6 +1497,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunctionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1531,6 +1584,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -1608,6 +1665,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1691,6 +1752,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -1768,6 +1833,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1851,6 +1920,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -1928,6 +2001,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2035,6 +2112,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -2139,6 +2220,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -2219,6 +2304,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -2296,6 +2385,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2484,6 +2577,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -2561,6 +2658,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2668,6 +2769,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -2745,6 +2850,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2852,6 +2961,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -2929,6 +3042,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3012,6 +3129,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -3089,6 +3210,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3172,6 +3297,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -3252,6 +3381,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -3329,6 +3462,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3436,6 +3573,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -3516,6 +3657,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -3593,6 +3738,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3701,6 +3850,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -3781,6 +3934,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -3858,6 +4015,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3965,6 +4126,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -4045,6 +4210,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -4122,6 +4291,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4243,6 +4416,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression9EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -4323,6 +4500,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -4400,6 +4581,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4507,6 +4692,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -4587,6 +4776,10 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -4664,6 +4857,10 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4752,6 +4949,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3194ContainedLinks(view);
 		case CallFunctionEditPart.VISUAL_ID:
 			return getCallFunction_3195ContainedLinks(view);
+		case ExpressionEditPart.VISUAL_ID:
+			return getExpression_3211ContainedLinks(view);
 		case Exception7EditPart.VISUAL_ID:
 			return getException_3196ContainedLinks(view);
 		case If7EditPart.VISUAL_ID:
@@ -4818,6 +5017,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3103ContainedLinks(view);
 		case CallFunction2EditPart.VISUAL_ID:
 			return getCallFunction_3104ContainedLinks(view);
+		case Expression2EditPart.VISUAL_ID:
+			return getExpression_3212ContainedLinks(view);
 		case For3EditPart.VISUAL_ID:
 			return getFor_3167ContainedLinks(view);
 		case For4EditPart.VISUAL_ID:
@@ -4836,6 +5037,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3174ContainedLinks(view);
 		case CallFunction3EditPart.VISUAL_ID:
 			return getCallFunction_3175ContainedLinks(view);
+		case Expression3EditPart.VISUAL_ID:
+			return getExpression_3213ContainedLinks(view);
 		case Open4EditPart.VISUAL_ID:
 			return getOpen_3176ContainedLinks(view);
 		case Fetch4EditPart.VISUAL_ID:
@@ -4846,6 +5049,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3179ContainedLinks(view);
 		case CallFunction4EditPart.VISUAL_ID:
 			return getCallFunction_3180ContainedLinks(view);
+		case Expression4EditPart.VISUAL_ID:
+			return getExpression_3214ContainedLinks(view);
 		case For5EditPart.VISUAL_ID:
 			return getFor_3204ContainedLinks(view);
 		case Loop5EditPart.VISUAL_ID:
@@ -4860,6 +5065,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3209ContainedLinks(view);
 		case CallFunction5EditPart.VISUAL_ID:
 			return getCallFunction_3210ContainedLinks(view);
+		case Expression5EditPart.VISUAL_ID:
+			return getExpression_3215ContainedLinks(view);
 		case Case6EditPart.VISUAL_ID:
 			return getCase_3138ContainedLinks(view);
 		case Insert6EditPart.VISUAL_ID:
@@ -4886,6 +5093,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3149ContainedLinks(view);
 		case CallFunction6EditPart.VISUAL_ID:
 			return getCallFunction_3150ContainedLinks(view);
+		case Expression6EditPart.VISUAL_ID:
+			return getExpression_3216ContainedLinks(view);
 		case Case7EditPart.VISUAL_ID:
 			return getCase_3058ContainedLinks(view);
 		case Insert7EditPart.VISUAL_ID:
@@ -4912,6 +5121,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3069ContainedLinks(view);
 		case CallFunction7EditPart.VISUAL_ID:
 			return getCallFunction_3070ContainedLinks(view);
+		case Expression7EditPart.VISUAL_ID:
+			return getExpression_3217ContainedLinks(view);
 		case DataType3EditPart.VISUAL_ID:
 			return getDataType_3071ContainedLinks(view);
 		case Collections3EditPart.VISUAL_ID:
@@ -4966,6 +5177,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3088ContainedLinks(view);
 		case CallFunction8EditPart.VISUAL_ID:
 			return getCallFunction_3089ContainedLinks(view);
+		case Expression8EditPart.VISUAL_ID:
+			return getExpression_3218ContainedLinks(view);
 		case DataType6EditPart.VISUAL_ID:
 			return getDataType_3033ContainedLinks(view);
 		case Collections6EditPart.VISUAL_ID:
@@ -5004,6 +5217,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3050ContainedLinks(view);
 		case CallFunction9EditPart.VISUAL_ID:
 			return getCallFunction_3051ContainedLinks(view);
+		case Expression9EditPart.VISUAL_ID:
+			return getExpression_3219ContainedLinks(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001ContainedLinks(view);
 		case SelectorTransitionEditPart.VISUAL_ID:
@@ -5091,6 +5306,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3194IncomingLinks(view);
 		case CallFunctionEditPart.VISUAL_ID:
 			return getCallFunction_3195IncomingLinks(view);
+		case ExpressionEditPart.VISUAL_ID:
+			return getExpression_3211IncomingLinks(view);
 		case Exception7EditPart.VISUAL_ID:
 			return getException_3196IncomingLinks(view);
 		case If7EditPart.VISUAL_ID:
@@ -5157,6 +5374,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3103IncomingLinks(view);
 		case CallFunction2EditPart.VISUAL_ID:
 			return getCallFunction_3104IncomingLinks(view);
+		case Expression2EditPart.VISUAL_ID:
+			return getExpression_3212IncomingLinks(view);
 		case For3EditPart.VISUAL_ID:
 			return getFor_3167IncomingLinks(view);
 		case For4EditPart.VISUAL_ID:
@@ -5175,6 +5394,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3174IncomingLinks(view);
 		case CallFunction3EditPart.VISUAL_ID:
 			return getCallFunction_3175IncomingLinks(view);
+		case Expression3EditPart.VISUAL_ID:
+			return getExpression_3213IncomingLinks(view);
 		case Open4EditPart.VISUAL_ID:
 			return getOpen_3176IncomingLinks(view);
 		case Fetch4EditPart.VISUAL_ID:
@@ -5185,6 +5406,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3179IncomingLinks(view);
 		case CallFunction4EditPart.VISUAL_ID:
 			return getCallFunction_3180IncomingLinks(view);
+		case Expression4EditPart.VISUAL_ID:
+			return getExpression_3214IncomingLinks(view);
 		case For5EditPart.VISUAL_ID:
 			return getFor_3204IncomingLinks(view);
 		case Loop5EditPart.VISUAL_ID:
@@ -5199,6 +5422,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3209IncomingLinks(view);
 		case CallFunction5EditPart.VISUAL_ID:
 			return getCallFunction_3210IncomingLinks(view);
+		case Expression5EditPart.VISUAL_ID:
+			return getExpression_3215IncomingLinks(view);
 		case Case6EditPart.VISUAL_ID:
 			return getCase_3138IncomingLinks(view);
 		case Insert6EditPart.VISUAL_ID:
@@ -5225,6 +5450,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3149IncomingLinks(view);
 		case CallFunction6EditPart.VISUAL_ID:
 			return getCallFunction_3150IncomingLinks(view);
+		case Expression6EditPart.VISUAL_ID:
+			return getExpression_3216IncomingLinks(view);
 		case Case7EditPart.VISUAL_ID:
 			return getCase_3058IncomingLinks(view);
 		case Insert7EditPart.VISUAL_ID:
@@ -5251,6 +5478,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3069IncomingLinks(view);
 		case CallFunction7EditPart.VISUAL_ID:
 			return getCallFunction_3070IncomingLinks(view);
+		case Expression7EditPart.VISUAL_ID:
+			return getExpression_3217IncomingLinks(view);
 		case DataType3EditPart.VISUAL_ID:
 			return getDataType_3071IncomingLinks(view);
 		case Collections3EditPart.VISUAL_ID:
@@ -5305,6 +5534,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3088IncomingLinks(view);
 		case CallFunction8EditPart.VISUAL_ID:
 			return getCallFunction_3089IncomingLinks(view);
+		case Expression8EditPart.VISUAL_ID:
+			return getExpression_3218IncomingLinks(view);
 		case DataType6EditPart.VISUAL_ID:
 			return getDataType_3033IncomingLinks(view);
 		case Collections6EditPart.VISUAL_ID:
@@ -5343,6 +5574,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3050IncomingLinks(view);
 		case CallFunction9EditPart.VISUAL_ID:
 			return getCallFunction_3051IncomingLinks(view);
+		case Expression9EditPart.VISUAL_ID:
+			return getExpression_3219IncomingLinks(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001IncomingLinks(view);
 		case SelectorTransitionEditPart.VISUAL_ID:
@@ -5430,6 +5663,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3194OutgoingLinks(view);
 		case CallFunctionEditPart.VISUAL_ID:
 			return getCallFunction_3195OutgoingLinks(view);
+		case ExpressionEditPart.VISUAL_ID:
+			return getExpression_3211OutgoingLinks(view);
 		case Exception7EditPart.VISUAL_ID:
 			return getException_3196OutgoingLinks(view);
 		case If7EditPart.VISUAL_ID:
@@ -5496,6 +5731,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3103OutgoingLinks(view);
 		case CallFunction2EditPart.VISUAL_ID:
 			return getCallFunction_3104OutgoingLinks(view);
+		case Expression2EditPart.VISUAL_ID:
+			return getExpression_3212OutgoingLinks(view);
 		case For3EditPart.VISUAL_ID:
 			return getFor_3167OutgoingLinks(view);
 		case For4EditPart.VISUAL_ID:
@@ -5514,6 +5751,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3174OutgoingLinks(view);
 		case CallFunction3EditPart.VISUAL_ID:
 			return getCallFunction_3175OutgoingLinks(view);
+		case Expression3EditPart.VISUAL_ID:
+			return getExpression_3213OutgoingLinks(view);
 		case Open4EditPart.VISUAL_ID:
 			return getOpen_3176OutgoingLinks(view);
 		case Fetch4EditPart.VISUAL_ID:
@@ -5524,6 +5763,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3179OutgoingLinks(view);
 		case CallFunction4EditPart.VISUAL_ID:
 			return getCallFunction_3180OutgoingLinks(view);
+		case Expression4EditPart.VISUAL_ID:
+			return getExpression_3214OutgoingLinks(view);
 		case For5EditPart.VISUAL_ID:
 			return getFor_3204OutgoingLinks(view);
 		case Loop5EditPart.VISUAL_ID:
@@ -5538,6 +5779,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3209OutgoingLinks(view);
 		case CallFunction5EditPart.VISUAL_ID:
 			return getCallFunction_3210OutgoingLinks(view);
+		case Expression5EditPart.VISUAL_ID:
+			return getExpression_3215OutgoingLinks(view);
 		case Case6EditPart.VISUAL_ID:
 			return getCase_3138OutgoingLinks(view);
 		case Insert6EditPart.VISUAL_ID:
@@ -5564,6 +5807,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3149OutgoingLinks(view);
 		case CallFunction6EditPart.VISUAL_ID:
 			return getCallFunction_3150OutgoingLinks(view);
+		case Expression6EditPart.VISUAL_ID:
+			return getExpression_3216OutgoingLinks(view);
 		case Case7EditPart.VISUAL_ID:
 			return getCase_3058OutgoingLinks(view);
 		case Insert7EditPart.VISUAL_ID:
@@ -5590,6 +5835,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3069OutgoingLinks(view);
 		case CallFunction7EditPart.VISUAL_ID:
 			return getCallFunction_3070OutgoingLinks(view);
+		case Expression7EditPart.VISUAL_ID:
+			return getExpression_3217OutgoingLinks(view);
 		case DataType3EditPart.VISUAL_ID:
 			return getDataType_3071OutgoingLinks(view);
 		case Collections3EditPart.VISUAL_ID:
@@ -5644,6 +5891,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3088OutgoingLinks(view);
 		case CallFunction8EditPart.VISUAL_ID:
 			return getCallFunction_3089OutgoingLinks(view);
+		case Expression8EditPart.VISUAL_ID:
+			return getExpression_3218OutgoingLinks(view);
 		case DataType6EditPart.VISUAL_ID:
 			return getDataType_3033OutgoingLinks(view);
 		case Collections6EditPart.VISUAL_ID:
@@ -5682,6 +5931,8 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3050OutgoingLinks(view);
 		case CallFunction9EditPart.VISUAL_ID:
 			return getCallFunction_3051OutgoingLinks(view);
+		case Expression9EditPart.VISUAL_ID:
+			return getExpression_3219OutgoingLinks(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001OutgoingLinks(view);
 		case SelectorTransitionEditPart.VISUAL_ID:
@@ -6005,6 +6256,13 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3211ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getException_3196ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
@@ -6236,6 +6494,13 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3212ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getFor_3167ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
@@ -6299,6 +6564,13 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3213ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getOpen_3176ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
@@ -6328,6 +6600,13 @@ public class CrystalDiagramUpdater {
 	* @generated
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3180ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3214ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -6377,6 +6656,13 @@ public class CrystalDiagramUpdater {
 	* @generated
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3210ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3215ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -6474,6 +6760,13 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3216ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getFor_3064ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
@@ -6517,6 +6810,13 @@ public class CrystalDiagramUpdater {
 	* @generated
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3070ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3217ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -6712,6 +7012,13 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3218ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getDataType_3033ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
@@ -6839,6 +7146,13 @@ public class CrystalDiagramUpdater {
 	* @generated
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3051ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3219ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -7320,6 +7634,18 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3211IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getException_3196IncomingLinks(View view) {
 		Exception modelElement = (Exception) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -7716,6 +8042,18 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3212IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getFor_3167IncomingLinks(View view) {
 		For modelElement = (For) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -7824,6 +8162,18 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3213IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getOpen_3176IncomingLinks(View view) {
 		Open modelElement = (Open) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -7874,6 +8224,18 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3180IncomingLinks(View view) {
 		CallFunction modelElement = (CallFunction) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3214IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -7958,6 +8320,18 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3210IncomingLinks(View view) {
 		CallFunction modelElement = (CallFunction) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3215IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -8124,6 +8498,18 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3216IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getFor_3064IncomingLinks(View view) {
 		For modelElement = (For) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -8198,6 +8584,18 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3070IncomingLinks(View view) {
 		CallFunction modelElement = (CallFunction) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3217IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -8472,6 +8870,18 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3218IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getDataType_3033IncomingLinks(View view) {
 		return Collections.emptyList();
 	}
@@ -8670,6 +9080,18 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3051IncomingLinks(View view) {
 		CallFunction modelElement = (CallFunction) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3219IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -9091,6 +9513,16 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3211OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getException_3196OutgoingLinks(View view) {
 		Exception modelElement = (Exception) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -9421,6 +9853,16 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3212OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getFor_3167OutgoingLinks(View view) {
 		For modelElement = (For) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -9511,6 +9953,16 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3213OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getOpen_3176OutgoingLinks(View view) {
 		Open modelElement = (Open) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -9553,6 +10005,16 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3180OutgoingLinks(View view) {
 		CallFunction modelElement = (CallFunction) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3214OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
 		return result;
@@ -9623,6 +10085,16 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3210OutgoingLinks(View view) {
 		CallFunction modelElement = (CallFunction) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3215OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
 		return result;
@@ -9761,6 +10233,16 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3216OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getFor_3064OutgoingLinks(View view) {
 		For modelElement = (For) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -9823,6 +10305,16 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3070OutgoingLinks(View view) {
 		CallFunction modelElement = (CallFunction) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3217OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
 		return result;
@@ -10065,6 +10557,16 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3218OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getDataType_3033OutgoingLinks(View view) {
 		return Collections.emptyList();
 	}
@@ -10235,6 +10737,16 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCallFunction_3051OutgoingLinks(View view) {
 		CallFunction modelElement = (CallFunction) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3219OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
 		return result;

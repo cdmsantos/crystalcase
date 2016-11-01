@@ -140,6 +140,9 @@ public class SelectorSelectorCaseStatementsCompartmentEditPart extends ShapeComp
 			if (type == CrystalElementTypes.CallFunction_3150) {
 				return this;
 			}
+			if (type == CrystalElementTypes.Expression_3216) {
+				return this;
+			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {

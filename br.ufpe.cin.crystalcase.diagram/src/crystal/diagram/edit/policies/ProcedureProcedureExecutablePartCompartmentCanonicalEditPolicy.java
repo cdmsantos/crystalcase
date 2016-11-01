@@ -44,6 +44,7 @@ import crystal.diagram.edit.parts.Delete5EditPart;
 import crystal.diagram.edit.parts.Delete7EditPart;
 import crystal.diagram.edit.parts.DeleteEditPart;
 import crystal.diagram.edit.parts.ExceptionEditPart;
+import crystal.diagram.edit.parts.Expression7EditPart;
 import crystal.diagram.edit.parts.Fetch2EditPart;
 import crystal.diagram.edit.parts.Fetch5EditPart;
 import crystal.diagram.edit.parts.Fetch7EditPart;
@@ -145,6 +146,7 @@ public class ProcedureProcedureExecutablePartCompartmentCanonicalEditPolicy exte
 		case Close7EditPart.VISUAL_ID:
 		case CallProcedure7EditPart.VISUAL_ID:
 		case CallFunction7EditPart.VISUAL_ID:
+		case Expression7EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

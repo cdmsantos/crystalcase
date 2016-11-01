@@ -250,6 +250,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescriptionEditPart.VISUAL_ID:
 				return new CallFunctionDescriptionEditPart(view);
 
+			case ExpressionEditPart.VISUAL_ID:
+				return new ExpressionEditPart(view);
+
+			case ExpressionDescriptionEditPart.VISUAL_ID:
+				return new ExpressionDescriptionEditPart(view);
+
 			case Exception7EditPart.VISUAL_ID:
 				return new Exception7EditPart(view);
 
@@ -448,6 +454,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription2EditPart.VISUAL_ID:
 				return new CallFunctionDescription2EditPart(view);
 
+			case Expression2EditPart.VISUAL_ID:
+				return new Expression2EditPart(view);
+
+			case ExpressionDescription2EditPart.VISUAL_ID:
+				return new ExpressionDescription2EditPart(view);
+
 			case For3EditPart.VISUAL_ID:
 				return new For3EditPart(view);
 
@@ -502,6 +514,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription3EditPart.VISUAL_ID:
 				return new CallFunctionDescription3EditPart(view);
 
+			case Expression3EditPart.VISUAL_ID:
+				return new Expression3EditPart(view);
+
+			case ExpressionDescription3EditPart.VISUAL_ID:
+				return new ExpressionDescription3EditPart(view);
+
 			case Open4EditPart.VISUAL_ID:
 				return new Open4EditPart(view);
 
@@ -531,6 +549,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case CallFunctionDescription4EditPart.VISUAL_ID:
 				return new CallFunctionDescription4EditPart(view);
+
+			case Expression4EditPart.VISUAL_ID:
+				return new Expression4EditPart(view);
+
+			case ExpressionDescription4EditPart.VISUAL_ID:
+				return new ExpressionDescription4EditPart(view);
 
 			case For5EditPart.VISUAL_ID:
 				return new For5EditPart(view);
@@ -573,6 +597,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case CallFunctionDescription5EditPart.VISUAL_ID:
 				return new CallFunctionDescription5EditPart(view);
+
+			case Expression5EditPart.VISUAL_ID:
+				return new Expression5EditPart(view);
+
+			case ExpressionDescription5EditPart.VISUAL_ID:
+				return new ExpressionDescription5EditPart(view);
 
 			case Case6EditPart.VISUAL_ID:
 				return new Case6EditPart(view);
@@ -652,6 +682,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription6EditPart.VISUAL_ID:
 				return new CallFunctionDescription6EditPart(view);
 
+			case Expression6EditPart.VISUAL_ID:
+				return new Expression6EditPart(view);
+
+			case ExpressionDescription6EditPart.VISUAL_ID:
+				return new ExpressionDescription6EditPart(view);
+
 			case Case7EditPart.VISUAL_ID:
 				return new Case7EditPart(view);
 
@@ -729,6 +765,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case CallFunctionDescription7EditPart.VISUAL_ID:
 				return new CallFunctionDescription7EditPart(view);
+
+			case Expression7EditPart.VISUAL_ID:
+				return new Expression7EditPart(view);
+
+			case ExpressionDescription7EditPart.VISUAL_ID:
+				return new ExpressionDescription7EditPart(view);
 
 			case DataType3EditPart.VISUAL_ID:
 				return new DataType3EditPart(view);
@@ -892,6 +934,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription8EditPart.VISUAL_ID:
 				return new CallFunctionDescription8EditPart(view);
 
+			case Expression8EditPart.VISUAL_ID:
+				return new Expression8EditPart(view);
+
+			case ExpressionDescription8EditPart.VISUAL_ID:
+				return new ExpressionDescription8EditPart(view);
+
 			case DataType6EditPart.VISUAL_ID:
 				return new DataType6EditPart(view);
 
@@ -1005,6 +1053,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case CallFunctionDescription9EditPart.VISUAL_ID:
 				return new CallFunctionDescription9EditPart(view);
+
+			case Expression9EditPart.VISUAL_ID:
+				return new Expression9EditPart(view);
+
+			case ExpressionDescription9EditPart.VISUAL_ID:
+				return new ExpressionDescription9EditPart(view);
 
 			case ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID:
 				return new ProcedureProcedureDeclarativePartCompartmentEditPart(view);

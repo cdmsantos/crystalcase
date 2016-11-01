@@ -670,6 +670,29 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link crystal.Expression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExpressionItemProvider expressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link crystal.Expression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExpressionAdapter() {
+		if (expressionItemProvider == null) {
+			expressionItemProvider = new ExpressionItemProvider(this);
+		}
+
+		return expressionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -794,6 +817,7 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 		if (callFunctionItemProvider != null) callFunctionItemProvider.dispose();
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
 		if (selectorTransitionItemProvider != null) selectorTransitionItemProvider.dispose();
+		if (expressionItemProvider != null) expressionItemProvider.dispose();
 	}
 
 }

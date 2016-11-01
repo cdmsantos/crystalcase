@@ -140,6 +140,9 @@ public class ProcedureProcedureExecutablePartCompartmentEditPart extends ShapeCo
 			if (type == CrystalElementTypes.CallFunction_3070) {
 				return this;
 			}
+			if (type == CrystalElementTypes.Expression_3217) {
+				return this;
+			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {

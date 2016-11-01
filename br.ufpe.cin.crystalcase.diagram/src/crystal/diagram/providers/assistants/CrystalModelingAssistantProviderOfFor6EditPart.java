@@ -130,6 +130,9 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 		if (targetEditPart instanceof CallFunctionEditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
+		if (targetEditPart instanceof ExpressionEditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
 		if (targetEditPart instanceof Exception7EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
@@ -229,6 +232,9 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 		if (targetEditPart instanceof CallFunction2EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
+		if (targetEditPart instanceof Expression2EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
 		if (targetEditPart instanceof For3EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
@@ -256,6 +262,9 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 		if (targetEditPart instanceof CallFunction3EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
+		if (targetEditPart instanceof Expression3EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
 		if (targetEditPart instanceof Open4EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
@@ -269,6 +278,9 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Transition_4001);
 		}
 		if (targetEditPart instanceof CallFunction4EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Expression4EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
 		if (targetEditPart instanceof For5EditPart) {
@@ -290,6 +302,9 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Transition_4001);
 		}
 		if (targetEditPart instanceof CallFunction5EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Expression5EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
 		if (targetEditPart instanceof Case6EditPart) {
@@ -331,6 +346,9 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 		if (targetEditPart instanceof CallFunction6EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
+		if (targetEditPart instanceof Expression6EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
 		if (targetEditPart instanceof Case7EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
@@ -368,6 +386,9 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Transition_4001);
 		}
 		if (targetEditPart instanceof CallFunction7EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Expression7EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
 		if (targetEditPart instanceof Exception8EditPart) {
@@ -415,6 +436,9 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 		if (targetEditPart instanceof CallFunction8EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
+		if (targetEditPart instanceof Expression8EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
 		if (targetEditPart instanceof Exception9EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
@@ -458,6 +482,9 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Transition_4001);
 		}
 		if (targetEditPart instanceof CallFunction9EditPart) {
+			types.add(CrystalElementTypes.Transition_4001);
+		}
+		if (targetEditPart instanceof Expression9EditPart) {
 			types.add(CrystalElementTypes.Transition_4001);
 		}
 		return types;
@@ -504,6 +531,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3193);
 			types.add(CrystalElementTypes.CallProcedure_3194);
 			types.add(CrystalElementTypes.CallFunction_3195);
+			types.add(CrystalElementTypes.Expression_3211);
 			types.add(CrystalElementTypes.Exception_3196);
 			types.add(CrystalElementTypes.If_3197);
 			types.add(CrystalElementTypes.Case_3198);
@@ -537,6 +565,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3102);
 			types.add(CrystalElementTypes.CallProcedure_3103);
 			types.add(CrystalElementTypes.CallFunction_3104);
+			types.add(CrystalElementTypes.Expression_3212);
 			types.add(CrystalElementTypes.For_3167);
 			types.add(CrystalElementTypes.For_3168);
 			types.add(CrystalElementTypes.Loop_3169);
@@ -546,11 +575,13 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3173);
 			types.add(CrystalElementTypes.CallProcedure_3174);
 			types.add(CrystalElementTypes.CallFunction_3175);
+			types.add(CrystalElementTypes.Expression_3213);
 			types.add(CrystalElementTypes.Open_3176);
 			types.add(CrystalElementTypes.Fetch_3177);
 			types.add(CrystalElementTypes.Close_3178);
 			types.add(CrystalElementTypes.CallProcedure_3179);
 			types.add(CrystalElementTypes.CallFunction_3180);
+			types.add(CrystalElementTypes.Expression_3214);
 			types.add(CrystalElementTypes.For_3204);
 			types.add(CrystalElementTypes.Loop_3205);
 			types.add(CrystalElementTypes.Open_3206);
@@ -558,6 +589,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3208);
 			types.add(CrystalElementTypes.CallProcedure_3209);
 			types.add(CrystalElementTypes.CallFunction_3210);
+			types.add(CrystalElementTypes.Expression_3215);
 			types.add(CrystalElementTypes.Case_3138);
 			types.add(CrystalElementTypes.Insert_3139);
 			types.add(CrystalElementTypes.Update_3140);
@@ -571,6 +603,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3148);
 			types.add(CrystalElementTypes.CallProcedure_3149);
 			types.add(CrystalElementTypes.CallFunction_3150);
+			types.add(CrystalElementTypes.Expression_3216);
 			types.add(CrystalElementTypes.Case_3058);
 			types.add(CrystalElementTypes.Insert_3059);
 			types.add(CrystalElementTypes.Update_3060);
@@ -584,6 +617,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3068);
 			types.add(CrystalElementTypes.CallProcedure_3069);
 			types.add(CrystalElementTypes.CallFunction_3070);
+			types.add(CrystalElementTypes.Expression_3217);
 			types.add(CrystalElementTypes.Exception_3075);
 			types.add(CrystalElementTypes.If_3076);
 			types.add(CrystalElementTypes.Case_3077);
@@ -599,6 +633,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3087);
 			types.add(CrystalElementTypes.CallProcedure_3088);
 			types.add(CrystalElementTypes.CallFunction_3089);
+			types.add(CrystalElementTypes.Expression_3218);
 			types.add(CrystalElementTypes.Exception_3037);
 			types.add(CrystalElementTypes.If_3038);
 			types.add(CrystalElementTypes.Case_3039);
@@ -614,6 +649,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3049);
 			types.add(CrystalElementTypes.CallProcedure_3050);
 			types.add(CrystalElementTypes.CallFunction_3051);
+			types.add(CrystalElementTypes.Expression_3219);
 		}
 		return types;
 	}
@@ -678,6 +714,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3193);
 			types.add(CrystalElementTypes.CallProcedure_3194);
 			types.add(CrystalElementTypes.CallFunction_3195);
+			types.add(CrystalElementTypes.Expression_3211);
 			types.add(CrystalElementTypes.Exception_3196);
 			types.add(CrystalElementTypes.If_3197);
 			types.add(CrystalElementTypes.Case_3198);
@@ -711,6 +748,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3102);
 			types.add(CrystalElementTypes.CallProcedure_3103);
 			types.add(CrystalElementTypes.CallFunction_3104);
+			types.add(CrystalElementTypes.Expression_3212);
 			types.add(CrystalElementTypes.For_3167);
 			types.add(CrystalElementTypes.For_3168);
 			types.add(CrystalElementTypes.Loop_3169);
@@ -720,11 +758,13 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3173);
 			types.add(CrystalElementTypes.CallProcedure_3174);
 			types.add(CrystalElementTypes.CallFunction_3175);
+			types.add(CrystalElementTypes.Expression_3213);
 			types.add(CrystalElementTypes.Open_3176);
 			types.add(CrystalElementTypes.Fetch_3177);
 			types.add(CrystalElementTypes.Close_3178);
 			types.add(CrystalElementTypes.CallProcedure_3179);
 			types.add(CrystalElementTypes.CallFunction_3180);
+			types.add(CrystalElementTypes.Expression_3214);
 			types.add(CrystalElementTypes.For_3204);
 			types.add(CrystalElementTypes.Loop_3205);
 			types.add(CrystalElementTypes.Open_3206);
@@ -732,6 +772,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3208);
 			types.add(CrystalElementTypes.CallProcedure_3209);
 			types.add(CrystalElementTypes.CallFunction_3210);
+			types.add(CrystalElementTypes.Expression_3215);
 			types.add(CrystalElementTypes.Case_3138);
 			types.add(CrystalElementTypes.Insert_3139);
 			types.add(CrystalElementTypes.Update_3140);
@@ -745,6 +786,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3148);
 			types.add(CrystalElementTypes.CallProcedure_3149);
 			types.add(CrystalElementTypes.CallFunction_3150);
+			types.add(CrystalElementTypes.Expression_3216);
 			types.add(CrystalElementTypes.Case_3058);
 			types.add(CrystalElementTypes.Insert_3059);
 			types.add(CrystalElementTypes.Update_3060);
@@ -758,6 +800,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3068);
 			types.add(CrystalElementTypes.CallProcedure_3069);
 			types.add(CrystalElementTypes.CallFunction_3070);
+			types.add(CrystalElementTypes.Expression_3217);
 			types.add(CrystalElementTypes.Exception_3075);
 			types.add(CrystalElementTypes.If_3076);
 			types.add(CrystalElementTypes.Case_3077);
@@ -773,6 +816,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3087);
 			types.add(CrystalElementTypes.CallProcedure_3088);
 			types.add(CrystalElementTypes.CallFunction_3089);
+			types.add(CrystalElementTypes.Expression_3218);
 			types.add(CrystalElementTypes.Exception_3037);
 			types.add(CrystalElementTypes.If_3038);
 			types.add(CrystalElementTypes.Case_3039);
@@ -788,6 +832,7 @@ public class CrystalModelingAssistantProviderOfFor6EditPart extends CrystalModel
 			types.add(CrystalElementTypes.Close_3049);
 			types.add(CrystalElementTypes.CallProcedure_3050);
 			types.add(CrystalElementTypes.CallFunction_3051);
+			types.add(CrystalElementTypes.Expression_3219);
 		}
 		return types;
 	}

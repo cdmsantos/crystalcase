@@ -31,6 +31,7 @@ import crystal.diagram.edit.parts.Case4EditPart;
 import crystal.diagram.edit.parts.Close4EditPart;
 import crystal.diagram.edit.parts.Delete4EditPart;
 import crystal.diagram.edit.parts.Exception5EditPart;
+import crystal.diagram.edit.parts.Expression4EditPart;
 import crystal.diagram.edit.parts.Fetch4EditPart;
 import crystal.diagram.edit.parts.For4EditPart;
 import crystal.diagram.edit.parts.If5EditPart;
@@ -112,6 +113,7 @@ public class ForForForStatementsCompartment2CanonicalEditPolicy extends Canonica
 		case Close4EditPart.VISUAL_ID:
 		case CallProcedure4EditPart.VISUAL_ID:
 		case CallFunction4EditPart.VISUAL_ID:
+		case Expression4EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

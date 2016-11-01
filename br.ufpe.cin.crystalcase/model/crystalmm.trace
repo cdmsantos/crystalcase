@@ -1336,6 +1336,69 @@
         visualID="5212"
         queryText="true"/>
   </childNodeTraces>
+  <childNodeTraces
+      visualID="3211"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'If') and _containmentMF_.name = 'ifs')">
+    <nodeLabelTraces
+        visualID="5219"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3212"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'While') and _containmentMF_.name = 'whileStatements')">
+    <nodeLabelTraces
+        visualID="5220"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3213"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Loop') and _containmentMF_.name = 'loopStatements')">
+    <nodeLabelTraces
+        visualID="5221"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3214"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'For') and _containmentMF_.name = 'forStatements')">
+    <nodeLabelTraces
+        visualID="5222"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3215"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'If') and _containmentMF_.name = 'elses')">
+    <nodeLabelTraces
+        visualID="5223"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3216"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Selector') and _containmentMF_.name = 'caseStatements')">
+    <nodeLabelTraces
+        visualID="5224"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3217"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Procedure') and _containmentMF_.name = 'executablePart')">
+    <nodeLabelTraces
+        visualID="5225"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3218"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Function') and _containmentMF_.name = 'executablePart')">
+    <nodeLabelTraces
+        visualID="5226"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3219"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'AnonymousBlock') and _containmentMF_.name = 'executablePart')">
+    <nodeLabelTraces
+        visualID="5227"
+        queryText="true"/>
+  </childNodeTraces>
   <linkTraces
       visualID="4001"
       queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Transition')">

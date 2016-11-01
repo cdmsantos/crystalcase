@@ -49,6 +49,7 @@ import crystal.diagram.edit.parts.Exception2EditPart;
 import crystal.diagram.edit.parts.Exception3EditPart;
 import crystal.diagram.edit.parts.Exception6EditPart;
 import crystal.diagram.edit.parts.Exception8EditPart;
+import crystal.diagram.edit.parts.Expression8EditPart;
 import crystal.diagram.edit.parts.Fetch2EditPart;
 import crystal.diagram.edit.parts.Fetch3EditPart;
 import crystal.diagram.edit.parts.Fetch6EditPart;
@@ -157,6 +158,7 @@ public class FunctionFunctionExecutablePartCompartmentCanonicalEditPolicy extend
 		case Close8EditPart.VISUAL_ID:
 		case CallProcedure8EditPart.VISUAL_ID:
 		case CallFunction8EditPart.VISUAL_ID:
+		case Expression8EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

@@ -88,10 +88,16 @@ abstract class Statements{
 	attr boolean isStart;
 }
 
+@gmf.node(figure="rectangle") 
+class Expression extends Statements {
+	attr String className ="Expression";
+	attr String value = "Type the expression here";
+}
+
 @gmf.node(figure="rectangle")
 class Exception extends Statements{
 	attr String className ="Exception";
-	attr String code = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE('There aren't data registred')";
+	attr String code = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE('There isnt data registered')";
 }
 
 @gmf.node(figure="rectangle")

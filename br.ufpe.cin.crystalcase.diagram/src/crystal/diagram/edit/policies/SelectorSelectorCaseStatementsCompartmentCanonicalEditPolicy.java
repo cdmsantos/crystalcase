@@ -36,6 +36,7 @@ import crystal.diagram.edit.parts.Close6EditPart;
 import crystal.diagram.edit.parts.Delete4EditPart;
 import crystal.diagram.edit.parts.Delete6EditPart;
 import crystal.diagram.edit.parts.Exception3EditPart;
+import crystal.diagram.edit.parts.Expression6EditPart;
 import crystal.diagram.edit.parts.Fetch4EditPart;
 import crystal.diagram.edit.parts.Fetch6EditPart;
 import crystal.diagram.edit.parts.For4EditPart;
@@ -125,6 +126,7 @@ public class SelectorSelectorCaseStatementsCompartmentCanonicalEditPolicy extend
 		case Close6EditPart.VISUAL_ID:
 		case CallProcedure6EditPart.VISUAL_ID:
 		case CallFunction6EditPart.VISUAL_ID:
+		case Expression6EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

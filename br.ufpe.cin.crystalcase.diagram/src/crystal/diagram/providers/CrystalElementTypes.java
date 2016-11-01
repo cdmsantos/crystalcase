@@ -361,6 +361,12 @@ public class CrystalElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType Expression_3211 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3211"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static final IElementType Exception_3196 = getElementType("br.ufpe.cin.crystalcase.diagram.Exception_3196"); //$NON-NLS-1$
 
 	/**
@@ -528,6 +534,12 @@ public class CrystalElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType Expression_3212 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3212"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static final IElementType For_3167 = getElementType("br.ufpe.cin.crystalcase.diagram.For_3167"); //$NON-NLS-1$
 
 	/**
@@ -575,6 +587,12 @@ public class CrystalElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType Expression_3213 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3213"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static final IElementType Open_3176 = getElementType("br.ufpe.cin.crystalcase.diagram.Open_3176"); //$NON-NLS-1$
 
 	/**
@@ -598,6 +616,12 @@ public class CrystalElementTypes {
 	*/
 	public static final IElementType CallFunction_3180 = getElementType(
 			"br.ufpe.cin.crystalcase.diagram.CallFunction_3180"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Expression_3214 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3214"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -635,6 +659,12 @@ public class CrystalElementTypes {
 	*/
 	public static final IElementType CallFunction_3210 = getElementType(
 			"br.ufpe.cin.crystalcase.diagram.CallFunction_3210"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Expression_3215 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3215"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -706,6 +736,12 @@ public class CrystalElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType Expression_3216 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3216"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static final IElementType For_3064 = getElementType("br.ufpe.cin.crystalcase.diagram.For_3064"); //$NON-NLS-1$
 
 	/**
@@ -739,6 +775,12 @@ public class CrystalElementTypes {
 	*/
 	public static final IElementType CallFunction_3070 = getElementType(
 			"br.ufpe.cin.crystalcase.diagram.CallFunction_3070"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Expression_3217 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3217"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -875,6 +917,12 @@ public class CrystalElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType Expression_3218 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3218"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static final IElementType DataType_3033 = getElementType("br.ufpe.cin.crystalcase.diagram.DataType_3033"); //$NON-NLS-1$
 
 	/**
@@ -969,6 +1017,12 @@ public class CrystalElementTypes {
 	*/
 	public static final IElementType CallFunction_3051 = getElementType(
 			"br.ufpe.cin.crystalcase.diagram.CallFunction_3051"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Expression_3219 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3219"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -1096,6 +1150,8 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3195, CrystalPackage.eINSTANCE.getCallFunction());
 
+			elements.put(Expression_3211, CrystalPackage.eINSTANCE.getExpression());
+
 			elements.put(Exception_3196, CrystalPackage.eINSTANCE.getException());
 
 			elements.put(If_3197, CrystalPackage.eINSTANCE.getIf());
@@ -1162,6 +1218,8 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3104, CrystalPackage.eINSTANCE.getCallFunction());
 
+			elements.put(Expression_3212, CrystalPackage.eINSTANCE.getExpression());
+
 			elements.put(For_3167, CrystalPackage.eINSTANCE.getFor());
 
 			elements.put(For_3168, CrystalPackage.eINSTANCE.getFor());
@@ -1180,6 +1238,8 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3175, CrystalPackage.eINSTANCE.getCallFunction());
 
+			elements.put(Expression_3213, CrystalPackage.eINSTANCE.getExpression());
+
 			elements.put(Open_3176, CrystalPackage.eINSTANCE.getOpen());
 
 			elements.put(Fetch_3177, CrystalPackage.eINSTANCE.getFetch());
@@ -1189,6 +1249,8 @@ public class CrystalElementTypes {
 			elements.put(CallProcedure_3179, CrystalPackage.eINSTANCE.getCallProcedure());
 
 			elements.put(CallFunction_3180, CrystalPackage.eINSTANCE.getCallFunction());
+
+			elements.put(Expression_3214, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(For_3204, CrystalPackage.eINSTANCE.getFor());
 
@@ -1203,6 +1265,8 @@ public class CrystalElementTypes {
 			elements.put(CallProcedure_3209, CrystalPackage.eINSTANCE.getCallProcedure());
 
 			elements.put(CallFunction_3210, CrystalPackage.eINSTANCE.getCallFunction());
+
+			elements.put(Expression_3215, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(Case_3138, CrystalPackage.eINSTANCE.getCase());
 
@@ -1230,6 +1294,8 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3150, CrystalPackage.eINSTANCE.getCallFunction());
 
+			elements.put(Expression_3216, CrystalPackage.eINSTANCE.getExpression());
+
 			elements.put(Case_3058, CrystalPackage.eINSTANCE.getCase());
 
 			elements.put(Insert_3059, CrystalPackage.eINSTANCE.getInsert());
@@ -1255,6 +1321,8 @@ public class CrystalElementTypes {
 			elements.put(CallProcedure_3069, CrystalPackage.eINSTANCE.getCallProcedure());
 
 			elements.put(CallFunction_3070, CrystalPackage.eINSTANCE.getCallFunction());
+
+			elements.put(Expression_3217, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(DataType_3071, CrystalPackage.eINSTANCE.getDataType());
 
@@ -1310,6 +1378,8 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3089, CrystalPackage.eINSTANCE.getCallFunction());
 
+			elements.put(Expression_3218, CrystalPackage.eINSTANCE.getExpression());
+
 			elements.put(DataType_3033, CrystalPackage.eINSTANCE.getDataType());
 
 			elements.put(Collections_3034, CrystalPackage.eINSTANCE.getCollections());
@@ -1347,6 +1417,8 @@ public class CrystalElementTypes {
 			elements.put(CallProcedure_3050, CrystalPackage.eINSTANCE.getCallProcedure());
 
 			elements.put(CallFunction_3051, CrystalPackage.eINSTANCE.getCallFunction());
+
+			elements.put(Expression_3219, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(Transition_4001, CrystalPackage.eINSTANCE.getTransition());
 
@@ -1406,6 +1478,7 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3193);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3194);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3195);
+			KNOWN_ELEMENT_TYPES.add(Expression_3211);
 			KNOWN_ELEMENT_TYPES.add(Exception_3196);
 			KNOWN_ELEMENT_TYPES.add(If_3197);
 			KNOWN_ELEMENT_TYPES.add(Case_3198);
@@ -1439,6 +1512,7 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3102);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3103);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3104);
+			KNOWN_ELEMENT_TYPES.add(Expression_3212);
 			KNOWN_ELEMENT_TYPES.add(For_3167);
 			KNOWN_ELEMENT_TYPES.add(For_3168);
 			KNOWN_ELEMENT_TYPES.add(Loop_3169);
@@ -1448,11 +1522,13 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3173);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3174);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3175);
+			KNOWN_ELEMENT_TYPES.add(Expression_3213);
 			KNOWN_ELEMENT_TYPES.add(Open_3176);
 			KNOWN_ELEMENT_TYPES.add(Fetch_3177);
 			KNOWN_ELEMENT_TYPES.add(Close_3178);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3179);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3180);
+			KNOWN_ELEMENT_TYPES.add(Expression_3214);
 			KNOWN_ELEMENT_TYPES.add(For_3204);
 			KNOWN_ELEMENT_TYPES.add(Loop_3205);
 			KNOWN_ELEMENT_TYPES.add(Open_3206);
@@ -1460,6 +1536,7 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3208);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3209);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3210);
+			KNOWN_ELEMENT_TYPES.add(Expression_3215);
 			KNOWN_ELEMENT_TYPES.add(Case_3138);
 			KNOWN_ELEMENT_TYPES.add(Insert_3139);
 			KNOWN_ELEMENT_TYPES.add(Update_3140);
@@ -1473,6 +1550,7 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3148);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3149);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3150);
+			KNOWN_ELEMENT_TYPES.add(Expression_3216);
 			KNOWN_ELEMENT_TYPES.add(Case_3058);
 			KNOWN_ELEMENT_TYPES.add(Insert_3059);
 			KNOWN_ELEMENT_TYPES.add(Update_3060);
@@ -1486,6 +1564,7 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3068);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3069);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3070);
+			KNOWN_ELEMENT_TYPES.add(Expression_3217);
 			KNOWN_ELEMENT_TYPES.add(DataType_3071);
 			KNOWN_ELEMENT_TYPES.add(Collections_3072);
 			KNOWN_ELEMENT_TYPES.add(Records_3073);
@@ -1513,6 +1592,7 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3087);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3088);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3089);
+			KNOWN_ELEMENT_TYPES.add(Expression_3218);
 			KNOWN_ELEMENT_TYPES.add(DataType_3033);
 			KNOWN_ELEMENT_TYPES.add(Collections_3034);
 			KNOWN_ELEMENT_TYPES.add(Records_3035);
@@ -1532,6 +1612,7 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3049);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3050);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3051);
+			KNOWN_ELEMENT_TYPES.add(Expression_3219);
 			KNOWN_ELEMENT_TYPES.add(Transition_4001);
 			KNOWN_ELEMENT_TYPES.add(SelectorTransition_4002);
 		}
@@ -1619,6 +1700,8 @@ public class CrystalElementTypes {
 			return CallProcedure_3194;
 		case CallFunctionEditPart.VISUAL_ID:
 			return CallFunction_3195;
+		case ExpressionEditPart.VISUAL_ID:
+			return Expression_3211;
 		case Exception7EditPart.VISUAL_ID:
 			return Exception_3196;
 		case If7EditPart.VISUAL_ID:
@@ -1685,6 +1768,8 @@ public class CrystalElementTypes {
 			return CallProcedure_3103;
 		case CallFunction2EditPart.VISUAL_ID:
 			return CallFunction_3104;
+		case Expression2EditPart.VISUAL_ID:
+			return Expression_3212;
 		case For3EditPart.VISUAL_ID:
 			return For_3167;
 		case For4EditPart.VISUAL_ID:
@@ -1703,6 +1788,8 @@ public class CrystalElementTypes {
 			return CallProcedure_3174;
 		case CallFunction3EditPart.VISUAL_ID:
 			return CallFunction_3175;
+		case Expression3EditPart.VISUAL_ID:
+			return Expression_3213;
 		case Open4EditPart.VISUAL_ID:
 			return Open_3176;
 		case Fetch4EditPart.VISUAL_ID:
@@ -1713,6 +1800,8 @@ public class CrystalElementTypes {
 			return CallProcedure_3179;
 		case CallFunction4EditPart.VISUAL_ID:
 			return CallFunction_3180;
+		case Expression4EditPart.VISUAL_ID:
+			return Expression_3214;
 		case For5EditPart.VISUAL_ID:
 			return For_3204;
 		case Loop5EditPart.VISUAL_ID:
@@ -1727,6 +1816,8 @@ public class CrystalElementTypes {
 			return CallProcedure_3209;
 		case CallFunction5EditPart.VISUAL_ID:
 			return CallFunction_3210;
+		case Expression5EditPart.VISUAL_ID:
+			return Expression_3215;
 		case Case6EditPart.VISUAL_ID:
 			return Case_3138;
 		case Insert6EditPart.VISUAL_ID:
@@ -1753,6 +1844,8 @@ public class CrystalElementTypes {
 			return CallProcedure_3149;
 		case CallFunction6EditPart.VISUAL_ID:
 			return CallFunction_3150;
+		case Expression6EditPart.VISUAL_ID:
+			return Expression_3216;
 		case Case7EditPart.VISUAL_ID:
 			return Case_3058;
 		case Insert7EditPart.VISUAL_ID:
@@ -1779,6 +1872,8 @@ public class CrystalElementTypes {
 			return CallProcedure_3069;
 		case CallFunction7EditPart.VISUAL_ID:
 			return CallFunction_3070;
+		case Expression7EditPart.VISUAL_ID:
+			return Expression_3217;
 		case DataType3EditPart.VISUAL_ID:
 			return DataType_3071;
 		case Collections3EditPart.VISUAL_ID:
@@ -1833,6 +1928,8 @@ public class CrystalElementTypes {
 			return CallProcedure_3088;
 		case CallFunction8EditPart.VISUAL_ID:
 			return CallFunction_3089;
+		case Expression8EditPart.VISUAL_ID:
+			return Expression_3218;
 		case DataType6EditPart.VISUAL_ID:
 			return DataType_3033;
 		case Collections6EditPart.VISUAL_ID:
@@ -1871,6 +1968,8 @@ public class CrystalElementTypes {
 			return CallProcedure_3050;
 		case CallFunction9EditPart.VISUAL_ID:
 			return CallFunction_3051;
+		case Expression9EditPart.VISUAL_ID:
+			return Expression_3219;
 		case TransitionEditPart.VISUAL_ID:
 			return Transition_4001;
 		case SelectorTransitionEditPart.VISUAL_ID:

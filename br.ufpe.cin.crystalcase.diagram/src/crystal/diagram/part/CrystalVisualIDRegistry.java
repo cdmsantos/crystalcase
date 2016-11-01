@@ -276,6 +276,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction7EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfIfsCompartmentEditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -322,6 +325,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
 			}
 			break;
 		case IfIfElsesCompartmentEditPart.VISUAL_ID:
@@ -370,6 +376,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction5EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfIfsCompartment2EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -417,6 +426,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfElsesCompartment2EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -463,6 +475,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
 			}
 			break;
 		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
@@ -516,6 +531,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction6EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfIfsCompartment3EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -562,6 +580,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
 			}
 			break;
 		case IfIfElsesCompartment3EditPart.VISUAL_ID:
@@ -610,6 +631,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction5EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
 			break;
 		case WhileWhileWhileStatementsCompartmentEditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -656,6 +680,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
 			}
 			break;
 		case IfIfIfsCompartment4EditPart.VISUAL_ID:
@@ -704,6 +731,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfElsesCompartment4EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -750,6 +780,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
 			}
 			break;
 		case ForForForStatementsCompartmentEditPart.VISUAL_ID:
@@ -798,6 +831,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction4EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfIfsCompartment5EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -844,6 +880,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
 			}
 			break;
 		case IfIfElsesCompartment5EditPart.VISUAL_ID:
@@ -892,6 +931,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction5EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartmentEditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -938,6 +980,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
 			}
 			break;
 		case IfIfIfsCompartment6EditPart.VISUAL_ID:
@@ -986,6 +1031,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfElsesCompartment6EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1032,6 +1080,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
 			}
 			break;
 		case IfIfIfsCompartment7EditPart.VISUAL_ID:
@@ -1080,6 +1131,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfElsesCompartment7EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1126,6 +1180,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
 			}
 			break;
 		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
@@ -1179,6 +1236,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
 			break;
 		case CaseCaseCasesCompartment3EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
@@ -1231,6 +1291,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
 			break;
 		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1277,6 +1340,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
 			}
 			break;
 		case CaseCaseCasesCompartment4EditPart.VISUAL_ID:
@@ -1330,6 +1396,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1376,6 +1445,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
 			}
 			break;
 		case CaseCaseCasesCompartment5EditPart.VISUAL_ID:
@@ -1429,6 +1501,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
 			break;
 		case ForForForStatementsCompartment3EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1475,6 +1550,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
 			}
 			break;
 		case ForForForStatementsCompartment4EditPart.VISUAL_ID:
@@ -1523,6 +1601,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction4EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1569,6 +1650,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
 			}
 			break;
 		case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
@@ -1617,6 +1701,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
 			break;
 		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1664,6 +1751,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction4EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1710,6 +1800,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
 			}
 			break;
 		case CaseCaseCasesCompartment6EditPart.VISUAL_ID:
@@ -1763,6 +1856,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
 			break;
 		case ForForForStatementsCompartment6EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1810,6 +1906,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction4EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1856,6 +1955,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
 			}
 			break;
 		case CaseCaseCasesCompartment7EditPart.VISUAL_ID:
@@ -1909,6 +2011,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
 			break;
 		case ForForForStatementsCompartment7EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -1956,6 +2061,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction4EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -2002,6 +2110,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
 			}
 			break;
 		case FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
@@ -2092,6 +2203,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction8EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression8EditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfIfsCompartment8EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -2139,6 +2253,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfElsesCompartment8EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -2185,6 +2302,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
 			}
 			break;
 		case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
@@ -2238,6 +2358,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
 			break;
 		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -2285,6 +2408,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction4EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -2331,6 +2457,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
 			}
 			break;
 		case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
@@ -2393,6 +2522,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction9EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression9EditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfIfsCompartment9EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -2440,6 +2572,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
+			}
 			break;
 		case IfIfElsesCompartment9EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -2486,6 +2621,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
 			}
 			break;
 		case CaseCaseCasesCompartment9EditPart.VISUAL_ID:
@@ -2539,6 +2677,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
 			break;
 		case ForForForStatementsCompartment9EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -2586,6 +2727,9 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction4EditPart.VISUAL_ID;
 			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
@@ -2632,6 +2776,9 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -2931,6 +3078,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
+		case ExpressionEditPart.VISUAL_ID:
+			if (ExpressionDescriptionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case Exception7EditPart.VISUAL_ID:
 			if (ExceptionDescription7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -3132,6 +3284,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Expression2EditPart.VISUAL_ID:
+			if (ExpressionDescription2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case For3EditPart.VISUAL_ID:
 			if (ForDescription3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -3189,6 +3346,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Expression3EditPart.VISUAL_ID:
+			if (ExpressionDescription3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case Open4EditPart.VISUAL_ID:
 			if (OpenDescription4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -3211,6 +3373,11 @@ public class CrystalVisualIDRegistry {
 			break;
 		case CallFunction4EditPart.VISUAL_ID:
 			if (CallFunctionDescription4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Expression4EditPart.VISUAL_ID:
+			if (ExpressionDescription4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3252,6 +3419,11 @@ public class CrystalVisualIDRegistry {
 			break;
 		case CallFunction5EditPart.VISUAL_ID:
 			if (CallFunctionDescription5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Expression5EditPart.VISUAL_ID:
+			if (ExpressionDescription5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3332,6 +3504,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Expression6EditPart.VISUAL_ID:
+			if (ExpressionDescription6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case Case7EditPart.VISUAL_ID:
 			if (CaseDescription7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -3406,6 +3583,11 @@ public class CrystalVisualIDRegistry {
 			break;
 		case CallFunction7EditPart.VISUAL_ID:
 			if (CallFunctionDescription7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Expression7EditPart.VISUAL_ID:
+			if (ExpressionDescription7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3562,6 +3744,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Expression8EditPart.VISUAL_ID:
+			if (ExpressionDescription8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case DataType6EditPart.VISUAL_ID:
 			if (DataTypeName6EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -3675,6 +3862,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Expression9EditPart.VISUAL_ID:
+			if (ExpressionDescription9EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID:
 			if (DataTypeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -3749,6 +3941,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfIfsCompartmentEditPart.VISUAL_ID:
 			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
@@ -3794,6 +3989,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3843,6 +4041,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfIfsCompartment2EditPart.VISUAL_ID:
 			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
@@ -3890,6 +4091,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfElsesCompartment2EditPart.VISUAL_ID:
 			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
@@ -3935,6 +4139,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3989,6 +4196,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfIfsCompartment3EditPart.VISUAL_ID:
 			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
@@ -4034,6 +4244,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4083,6 +4296,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case WhileWhileWhileStatementsCompartmentEditPart.VISUAL_ID:
 			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
@@ -4128,6 +4344,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4177,6 +4396,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfElsesCompartment4EditPart.VISUAL_ID:
 			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
@@ -4222,6 +4444,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4271,6 +4496,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfIfsCompartment5EditPart.VISUAL_ID:
 			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
@@ -4316,6 +4544,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4365,6 +4596,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartmentEditPart.VISUAL_ID:
 			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
@@ -4410,6 +4644,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4459,6 +4696,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfElsesCompartment6EditPart.VISUAL_ID:
 			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
@@ -4504,6 +4744,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4553,6 +4796,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfElsesCompartment7EditPart.VISUAL_ID:
 			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
@@ -4598,6 +4844,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4652,6 +4901,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case CaseCaseCasesCompartment3EditPart.VISUAL_ID:
 			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
@@ -4704,6 +4956,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
 			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
@@ -4749,6 +5004,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4803,6 +5061,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
 			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
@@ -4848,6 +5109,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4902,6 +5166,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case ForForForStatementsCompartment3EditPart.VISUAL_ID:
 			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
@@ -4947,6 +5214,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -4996,6 +5266,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
 			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
@@ -5041,6 +5314,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -5090,6 +5366,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
 			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
@@ -5137,6 +5416,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
 			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
@@ -5182,6 +5464,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -5236,6 +5521,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case ForForForStatementsCompartment6EditPart.VISUAL_ID:
 			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
@@ -5283,6 +5571,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID:
 			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
@@ -5328,6 +5619,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -5382,6 +5676,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case ForForForStatementsCompartment7EditPart.VISUAL_ID:
 			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
@@ -5429,6 +5726,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID:
 			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
@@ -5474,6 +5774,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -5565,6 +5868,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction8EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfIfsCompartment8EditPart.VISUAL_ID:
 			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
@@ -5612,6 +5918,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfElsesCompartment8EditPart.VISUAL_ID:
 			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
@@ -5657,6 +5966,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -5711,6 +6023,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
 			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
@@ -5758,6 +6073,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
 			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
@@ -5803,6 +6121,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -5866,6 +6187,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction9EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression9EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfIfsCompartment9EditPart.VISUAL_ID:
 			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
@@ -5913,6 +6237,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case IfIfElsesCompartment9EditPart.VISUAL_ID:
 			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
@@ -5958,6 +6285,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -6012,6 +6342,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case ForForForStatementsCompartment9EditPart.VISUAL_ID:
 			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
@@ -6059,6 +6392,9 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
 			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
@@ -6104,6 +6440,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -6356,6 +6695,15 @@ public class CrystalVisualIDRegistry {
 		case Close5EditPart.VISUAL_ID:
 		case CallProcedure5EditPart.VISUAL_ID:
 		case CallFunction5EditPart.VISUAL_ID:
+		case ExpressionEditPart.VISUAL_ID:
+		case Expression2EditPart.VISUAL_ID:
+		case Expression3EditPart.VISUAL_ID:
+		case Expression4EditPart.VISUAL_ID:
+		case Expression5EditPart.VISUAL_ID:
+		case Expression6EditPart.VISUAL_ID:
+		case Expression7EditPart.VISUAL_ID:
+		case Expression8EditPart.VISUAL_ID:
+		case Expression9EditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

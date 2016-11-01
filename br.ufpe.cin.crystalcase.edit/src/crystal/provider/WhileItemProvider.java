@@ -261,6 +261,11 @@ public class WhileItemProvider extends StatementsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.WHILE__WHILE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.WHILE__WHILE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createExpression()));
 	}
 
 }

@@ -135,6 +135,9 @@ public class ForForForStatementsCompartment7EditPart extends ShapeCompartmentEdi
 			if (type == CrystalElementTypes.CallFunction_3180) {
 				return this;
 			}
+			if (type == CrystalElementTypes.Expression_3214) {
+				return this;
+			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {

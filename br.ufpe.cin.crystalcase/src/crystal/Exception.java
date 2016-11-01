@@ -50,7 +50,7 @@ public interface Exception extends Statements {
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There aren\'t data registred\')"</code>.
+	 * The default value is <code>"EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There isnt data registered\')"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
@@ -60,7 +60,7 @@ public interface Exception extends Statements {
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(String)
 	 * @see crystal.CrystalPackage#getException_Code()
-	 * @model default="EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There aren\'t data registred\')"
+	 * @model default="EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There isnt data registered\')"
 	 * @generated
 	 */
 	String getCode();

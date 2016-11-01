@@ -1716,6 +1716,61 @@ public interface CrystalPackage extends EPackage {
 	int SELECTOR_TRANSITION_FEATURE_COUNT = 3;
 
 	/**
+	 * The meta object id for the '{@link crystal.impl.ExpressionImpl <em>Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see crystal.impl.ExpressionImpl
+	 * @see crystal.impl.CrystalPackageImpl#getExpression()
+	 * @generated
+	 */
+	int EXPRESSION = 29;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__DESCRIPTION = STATEMENTS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Start</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__IS_START = STATEMENTS__IS_START;
+
+	/**
+	 * The feature id for the '<em><b>Class Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__CLASS_NAME = STATEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__VALUE = STATEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link crystal.ParameterType <em>Parameter Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1723,7 +1778,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 29;
+	int PARAMETER_TYPE = 30;
 
 	/**
 	 * The meta object id for the '{@link crystal.ForCounter <em>For Counter</em>}' enum.
@@ -1733,7 +1788,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getForCounter()
 	 * @generated
 	 */
-	int FOR_COUNTER = 30;
+	int FOR_COUNTER = 31;
 
 	/**
 	 * The meta object id for the '{@link crystal.DataTypeOptions <em>Data Type Options</em>}' enum.
@@ -1743,7 +1798,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getDataTypeOptions()
 	 * @generated
 	 */
-	int DATA_TYPE_OPTIONS = 31;
+	int DATA_TYPE_OPTIONS = 32;
 
 
 	/**
@@ -2917,6 +2972,38 @@ public interface CrystalPackage extends EPackage {
 	EReference getSelectorTransition_Target();
 
 	/**
+	 * Returns the meta object for class '{@link crystal.Expression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expression</em>'.
+	 * @see crystal.Expression
+	 * @generated
+	 */
+	EClass getExpression();
+
+	/**
+	 * Returns the meta object for the attribute '{@link crystal.Expression#getClassName <em>Class Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Name</em>'.
+	 * @see crystal.Expression#getClassName()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EAttribute getExpression_ClassName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link crystal.Expression#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see crystal.Expression#getValue()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EAttribute getExpression_Value();
+
+	/**
 	 * Returns the meta object for enum '{@link crystal.ParameterType <em>Parameter Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3897,6 +3984,32 @@ public interface CrystalPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SELECTOR_TRANSITION__TARGET = eINSTANCE.getSelectorTransition_Target();
+
+		/**
+		 * The meta object literal for the '{@link crystal.impl.ExpressionImpl <em>Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see crystal.impl.ExpressionImpl
+		 * @see crystal.impl.CrystalPackageImpl#getExpression()
+		 * @generated
+		 */
+		EClass EXPRESSION = eINSTANCE.getExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION__CLASS_NAME = eINSTANCE.getExpression_ClassName();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION__VALUE = eINSTANCE.getExpression_Value();
 
 		/**
 		 * The meta object literal for the '{@link crystal.ParameterType <em>Parameter Type</em>}' enum.

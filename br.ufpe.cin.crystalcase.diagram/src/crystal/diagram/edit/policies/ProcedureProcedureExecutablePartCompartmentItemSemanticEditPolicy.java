@@ -25,6 +25,7 @@ import crystal.diagram.edit.commands.Delete5CreateCommand;
 import crystal.diagram.edit.commands.Delete7CreateCommand;
 import crystal.diagram.edit.commands.DeleteCreateCommand;
 import crystal.diagram.edit.commands.ExceptionCreateCommand;
+import crystal.diagram.edit.commands.Expression7CreateCommand;
 import crystal.diagram.edit.commands.Fetch2CreateCommand;
 import crystal.diagram.edit.commands.Fetch5CreateCommand;
 import crystal.diagram.edit.commands.Fetch7CreateCommand;
@@ -117,6 +118,9 @@ public class ProcedureProcedureExecutablePartCompartmentItemSemanticEditPolicy
 		}
 		if (CrystalElementTypes.CallFunction_3070 == req.getElementType()) {
 			return getGEFWrapper(new CallFunction7CreateCommand(req));
+		}
+		if (CrystalElementTypes.Expression_3217 == req.getElementType()) {
+			return getGEFWrapper(new Expression7CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

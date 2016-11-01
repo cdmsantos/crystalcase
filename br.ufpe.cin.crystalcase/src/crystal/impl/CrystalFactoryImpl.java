@@ -16,6 +16,7 @@ import crystal.Cursor;
 import crystal.DataType;
 import crystal.DataTypeOptions;
 import crystal.Delete;
+import crystal.Expression;
 import crystal.Fetch;
 import crystal.For;
 import crystal.ForCounter;
@@ -113,6 +114,7 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 			case CrystalPackage.CALL_FUNCTION: return createCallFunction();
 			case CrystalPackage.TRANSITION: return createTransition();
 			case CrystalPackage.SELECTOR_TRANSITION: return createSelectorTransition();
+			case CrystalPackage.EXPRESSION: return createExpression();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -414,6 +416,16 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 	public SelectorTransition createSelectorTransition() {
 		SelectorTransitionImpl selectorTransition = new SelectorTransitionImpl();
 		return selectorTransition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Expression createExpression() {
+		ExpressionImpl expression = new ExpressionImpl();
+		return expression;
 	}
 
 	/**

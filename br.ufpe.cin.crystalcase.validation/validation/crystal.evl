@@ -59,7 +59,12 @@ context Subprograms {
 
 context Function {
 	constraint HasReturn {
-		check : not self.returnPart.isEmpty()
+		check { 
+			if(not (self.returnPart.size() > 0)) {
+				return false;
+			}
+			return true;
+		}
 		message : '(CR05) You must have one statemenet at Return Part because it is required for the '+self.eclass().name + '.'
 	}
 
@@ -70,7 +75,7 @@ context Parameters {
 		check{
 			if(((self.eclass().name =="Collections") and self.code.size() < 0) or
 				((self.eclass().name =="Records" and self.code.size() < 0)) or
-				((self.eclass().name =="Cursor" and self.code.size() < 0))){
+				((self.eclass().name =="Cursor" and self.cursorQuery.size() < 0))){
 				return false;
 			}
 			return true;

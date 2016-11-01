@@ -16,6 +16,7 @@ import crystal.Cursor;
 import crystal.DataType;
 import crystal.DataTypeOptions;
 import crystal.Delete;
+import crystal.Expression;
 import crystal.Fetch;
 import crystal.For;
 import crystal.ForCounter;
@@ -254,6 +255,13 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * @generated
 	 */
 	private EClass selectorTransitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass expressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1323,6 +1331,33 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getExpression() {
+		return expressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExpression_ClassName() {
+		return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExpression_Value() {
+		return (EAttribute)expressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getParameterType() {
 		return parameterTypeEEnum;
 	}
@@ -1511,6 +1546,10 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		createEReference(selectorTransitionEClass, SELECTOR_TRANSITION__SOURCE);
 		createEReference(selectorTransitionEClass, SELECTOR_TRANSITION__TARGET);
 
+		expressionEClass = createEClass(EXPRESSION);
+		createEAttribute(expressionEClass, EXPRESSION__CLASS_NAME);
+		createEAttribute(expressionEClass, EXPRESSION__VALUE);
+
 		// Create enums
 		parameterTypeEEnum = createEEnum(PARAMETER_TYPE);
 		forCounterEEnum = createEEnum(FOR_COUNTER);
@@ -1567,6 +1606,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		closeEClass.getESuperTypes().add(this.getStatements());
 		callProcedureEClass.getESuperTypes().add(this.getStatements());
 		callFunctionEClass.getESuperTypes().add(this.getStatements());
+		expressionEClass.getESuperTypes().add(this.getStatements());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(crystalEClass, Crystal.class, "Crystal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1624,7 +1664,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 
 		initEClass(exceptionEClass, crystal.Exception.class, "Exception", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getException_ClassName(), ecorePackage.getEString(), "className", "Exception", 0, 1, crystal.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getException_Code(), ecorePackage.getEString(), "code", "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There aren\'t data registred\')", 0, 1, crystal.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getException_Code(), ecorePackage.getEString(), "code", "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There isnt data registered\')", 0, 1, crystal.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ifEClass, If.class, "If", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIf_ClassName(), ecorePackage.getEString(), "className", "If", 0, 1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1706,6 +1746,10 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		initEAttribute(getSelectorTransition_Name(), ecorePackage.getEString(), "name", "Connection", 0, 1, SelectorTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSelectorTransition_Source(), this.getSelector(), null, "source", null, 0, 1, SelectorTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSelectorTransition_Target(), this.getSelector(), null, "target", null, 0, 1, SelectorTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExpression_ClassName(), ecorePackage.getEString(), "className", "Expression", 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExpression_Value(), ecorePackage.getEString(), "value", "Type the expression here", 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(parameterTypeEEnum, ParameterType.class, "ParameterType");
@@ -1959,6 +2003,12 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		   });	
 		addAnnotation
 		  (callFunctionEClass, 
+		   source, 
+		   new String[] {
+			 "figure", "rectangle"
+		   });	
+		addAnnotation
+		  (expressionEClass, 
 		   source, 
 		   new String[] {
 			 "figure", "rectangle"

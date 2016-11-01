@@ -31,6 +31,7 @@ import crystal.diagram.edit.parts.CaseEditPart;
 import crystal.diagram.edit.parts.CloseEditPart;
 import crystal.diagram.edit.parts.DeleteEditPart;
 import crystal.diagram.edit.parts.Exception2EditPart;
+import crystal.diagram.edit.parts.ExpressionEditPart;
 import crystal.diagram.edit.parts.FetchEditPart;
 import crystal.diagram.edit.parts.ForEditPart;
 import crystal.diagram.edit.parts.If2EditPart;
@@ -112,6 +113,7 @@ public class IfIfIfsCompartment6CanonicalEditPolicy extends CanonicalEditPolicy 
 		case CloseEditPart.VISUAL_ID:
 		case CallProcedureEditPart.VISUAL_ID:
 		case CallFunctionEditPart.VISUAL_ID:
+		case ExpressionEditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

@@ -486,6 +486,24 @@ public class CrystalNavigatorLabelProvider extends LabelProvider
 			return getImage("Navigator?Node?crystal?CallProcedure", CrystalElementTypes.CallProcedure_3209); //$NON-NLS-1$
 		case CallFunction5EditPart.VISUAL_ID:
 			return getImage("Navigator?Node?crystal?CallFunction", CrystalElementTypes.CallFunction_3210); //$NON-NLS-1$
+		case ExpressionEditPart.VISUAL_ID:
+			return getImage("Navigator?Node?crystal?Expression", CrystalElementTypes.Expression_3211); //$NON-NLS-1$
+		case Expression2EditPart.VISUAL_ID:
+			return getImage("Navigator?Node?crystal?Expression", CrystalElementTypes.Expression_3212); //$NON-NLS-1$
+		case Expression3EditPart.VISUAL_ID:
+			return getImage("Navigator?Node?crystal?Expression", CrystalElementTypes.Expression_3213); //$NON-NLS-1$
+		case Expression4EditPart.VISUAL_ID:
+			return getImage("Navigator?Node?crystal?Expression", CrystalElementTypes.Expression_3214); //$NON-NLS-1$
+		case Expression5EditPart.VISUAL_ID:
+			return getImage("Navigator?Node?crystal?Expression", CrystalElementTypes.Expression_3215); //$NON-NLS-1$
+		case Expression6EditPart.VISUAL_ID:
+			return getImage("Navigator?Node?crystal?Expression", CrystalElementTypes.Expression_3216); //$NON-NLS-1$
+		case Expression7EditPart.VISUAL_ID:
+			return getImage("Navigator?Node?crystal?Expression", CrystalElementTypes.Expression_3217); //$NON-NLS-1$
+		case Expression8EditPart.VISUAL_ID:
+			return getImage("Navigator?Node?crystal?Expression", CrystalElementTypes.Expression_3218); //$NON-NLS-1$
+		case Expression9EditPart.VISUAL_ID:
+			return getImage("Navigator?Node?crystal?Expression", CrystalElementTypes.Expression_3219); //$NON-NLS-1$
 		case TransitionEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?crystal?Transition", CrystalElementTypes.Transition_4001); //$NON-NLS-1$
 		case SelectorTransitionEditPart.VISUAL_ID:
@@ -876,6 +894,24 @@ public class CrystalNavigatorLabelProvider extends LabelProvider
 			return getCallProcedure_3209Text(view);
 		case CallFunction5EditPart.VISUAL_ID:
 			return getCallFunction_3210Text(view);
+		case ExpressionEditPart.VISUAL_ID:
+			return getExpression_3211Text(view);
+		case Expression2EditPart.VISUAL_ID:
+			return getExpression_3212Text(view);
+		case Expression3EditPart.VISUAL_ID:
+			return getExpression_3213Text(view);
+		case Expression4EditPart.VISUAL_ID:
+			return getExpression_3214Text(view);
+		case Expression5EditPart.VISUAL_ID:
+			return getExpression_3215Text(view);
+		case Expression6EditPart.VISUAL_ID:
+			return getExpression_3216Text(view);
+		case Expression7EditPart.VISUAL_ID:
+			return getExpression_3217Text(view);
+		case Expression8EditPart.VISUAL_ID:
+			return getExpression_3218Text(view);
+		case Expression9EditPart.VISUAL_ID:
+			return getExpression_3219Text(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001Text(view);
 		case SelectorTransitionEditPart.VISUAL_ID:
@@ -3495,6 +3531,150 @@ public class CrystalNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5212); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getExpression_3211Text(View view) {
+		IParser parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3211,
+				view.getElement() != null ? view.getElement() : view,
+				CrystalVisualIDRegistry.getType(ExpressionDescriptionEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5219); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getExpression_3212Text(View view) {
+		IParser parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3212,
+				view.getElement() != null ? view.getElement() : view,
+				CrystalVisualIDRegistry.getType(ExpressionDescription2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5220); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getExpression_3213Text(View view) {
+		IParser parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3213,
+				view.getElement() != null ? view.getElement() : view,
+				CrystalVisualIDRegistry.getType(ExpressionDescription3EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5221); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getExpression_3214Text(View view) {
+		IParser parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3214,
+				view.getElement() != null ? view.getElement() : view,
+				CrystalVisualIDRegistry.getType(ExpressionDescription4EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5222); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getExpression_3215Text(View view) {
+		IParser parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3215,
+				view.getElement() != null ? view.getElement() : view,
+				CrystalVisualIDRegistry.getType(ExpressionDescription5EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5223); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getExpression_3216Text(View view) {
+		IParser parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3216,
+				view.getElement() != null ? view.getElement() : view,
+				CrystalVisualIDRegistry.getType(ExpressionDescription6EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5224); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getExpression_3217Text(View view) {
+		IParser parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3217,
+				view.getElement() != null ? view.getElement() : view,
+				CrystalVisualIDRegistry.getType(ExpressionDescription7EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5225); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getExpression_3218Text(View view) {
+		IParser parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3218,
+				view.getElement() != null ? view.getElement() : view,
+				CrystalVisualIDRegistry.getType(ExpressionDescription8EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5226); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getExpression_3219Text(View view) {
+		IParser parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3219,
+				view.getElement() != null ? view.getElement() : view,
+				CrystalVisualIDRegistry.getType(ExpressionDescription9EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CrystalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5227); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

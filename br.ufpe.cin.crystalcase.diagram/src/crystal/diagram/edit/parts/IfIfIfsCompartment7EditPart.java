@@ -135,6 +135,9 @@ public class IfIfIfsCompartment7EditPart extends ShapeCompartmentEditPart {
 			if (type == CrystalElementTypes.CallFunction_3195) {
 				return this;
 			}
+			if (type == CrystalElementTypes.Expression_3211) {
+				return this;
+			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {
