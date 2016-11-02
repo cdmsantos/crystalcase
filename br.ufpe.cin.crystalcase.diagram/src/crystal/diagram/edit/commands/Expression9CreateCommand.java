@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
 import crystal.Expression;
+import crystal.Function;
 
 /**
  * @generated
@@ -57,7 +58,7 @@ public class Expression9CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Expression newElement = CrystalFactory.eINSTANCE.createExpression();
 
-		AnonymousBlock owner = (AnonymousBlock) getElementToEdit();
+		Function owner = (Function) getElementToEdit();
 		owner.getExecutablePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);

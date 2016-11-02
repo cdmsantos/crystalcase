@@ -31,7 +31,7 @@ public class CallFunction4ItemSemanticEditPolicy extends CrystalBaseItemSemantic
 	* @generated
 	*/
 	public CallFunction4ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.CallFunction_3180);
+		super(CrystalElementTypes.CallFunction_3175);
 	}
 
 	/**

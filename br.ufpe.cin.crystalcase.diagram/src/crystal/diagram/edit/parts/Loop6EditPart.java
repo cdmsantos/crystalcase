@@ -38,7 +38,7 @@ public class Loop6EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3145;
+	public static final int VISUAL_ID = 3205;
 
 	/**
 	* @generated

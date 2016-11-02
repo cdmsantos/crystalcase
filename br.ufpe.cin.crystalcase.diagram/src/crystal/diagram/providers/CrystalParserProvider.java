@@ -385,6 +385,57 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
+	private IParser expressionDescription_5228Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExpressionDescription_5228Parser() {
+		if (expressionDescription_5228Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			expressionDescription_5228Parser = parser;
+		}
+		return expressionDescription_5228Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser exceptionDescription_5229Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getExceptionDescription_5229Parser() {
+		if (exceptionDescription_5229Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			exceptionDescription_5229Parser = parser;
+		}
+		return exceptionDescription_5229Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser ifDescription_5243Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getIfDescription_5243Parser() {
+		if (ifDescription_5243Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			ifDescription_5243Parser = parser;
+		}
+		return ifDescription_5243Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	private IParser selectorDescription_5156Parser;
 
 	/**
@@ -912,6 +963,108 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
+	private IParser caseDescription_5242Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getCaseDescription_5242Parser() {
+		if (caseDescription_5242Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			caseDescription_5242Parser = parser;
+		}
+		return caseDescription_5242Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser insertDescription_5230Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getInsertDescription_5230Parser() {
+		if (insertDescription_5230Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			insertDescription_5230Parser = parser;
+		}
+		return insertDescription_5230Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser updateDescription_5231Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getUpdateDescription_5231Parser() {
+		if (updateDescription_5231Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			updateDescription_5231Parser = parser;
+		}
+		return updateDescription_5231Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser deleteDescription_5232Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getDeleteDescription_5232Parser() {
+		if (deleteDescription_5232Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			deleteDescription_5232Parser = parser;
+		}
+		return deleteDescription_5232Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser selectDescription_5233Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getSelectDescription_5233Parser() {
+		if (selectDescription_5233Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			selectDescription_5233Parser = parser;
+		}
+		return selectDescription_5233Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser whileDescription_5241Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getWhileDescription_5241Parser() {
+		if (whileDescription_5241Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			whileDescription_5241Parser = parser;
+		}
+		return whileDescription_5241Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	private IParser insertDescription_5201Parser;
 
 	/**
@@ -1009,6 +1162,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			caseDescription_5100Parser = parser;
 		}
 		return caseDescription_5100Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser forDescription_5240Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getForDescription_5240Parser() {
+		if (forDescription_5240Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			forDescription_5240Parser = parser;
+		}
+		return forDescription_5240Parser;
 	}
 
 	/**
@@ -1133,6 +1303,23 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
+	private IParser loopDescription_5239Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getLoopDescription_5239Parser() {
+		if (loopDescription_5239Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			loopDescription_5239Parser = parser;
+		}
+		return loopDescription_5239Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	private IParser insertDescription_5162Parser;
 
 	/**
@@ -1247,6 +1434,91 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			caseDescription_5166Parser = parser;
 		}
 		return caseDescription_5166Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser openDescription_5234Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getOpenDescription_5234Parser() {
+		if (openDescription_5234Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			openDescription_5234Parser = parser;
+		}
+		return openDescription_5234Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser fetchDescription_5235Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getFetchDescription_5235Parser() {
+		if (fetchDescription_5235Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			fetchDescription_5235Parser = parser;
+		}
+		return fetchDescription_5235Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser closeDescription_5236Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getCloseDescription_5236Parser() {
+		if (closeDescription_5236Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			closeDescription_5236Parser = parser;
+		}
+		return closeDescription_5236Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser callProcedureDescription_5237Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getCallProcedureDescription_5237Parser() {
+		if (callProcedureDescription_5237Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			callProcedureDescription_5237Parser = parser;
+		}
+		return callProcedureDescription_5237Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser callFunctionDescription_5238Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getCallFunctionDescription_5238Parser() {
+		if (callFunctionDescription_5238Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			callFunctionDescription_5238Parser = parser;
+		}
+		return callFunctionDescription_5238Parser;
 	}
 
 	/**
@@ -3095,22 +3367,26 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getRecordsName_5020Parser();
 		case CursorName2EditPart.VISUAL_ID:
 			return getCursorName_5021Parser();
+		case ExpressionDescriptionEditPart.VISUAL_ID:
+			return getExpressionDescription_5225Parser();
 		case ExceptionDescriptionEditPart.VISUAL_ID:
 			return getExceptionDescription_5064Parser();
 		case IfDescriptionEditPart.VISUAL_ID:
 			return getIfDescription_5065Parser();
+		case ExpressionDescription2EditPart.VISUAL_ID:
+			return getExpressionDescription_5219Parser();
 		case ExceptionDescription2EditPart.VISUAL_ID:
 			return getExceptionDescription_5189Parser();
 		case IfDescription2EditPart.VISUAL_ID:
 			return getIfDescription_5218Parser();
 		case CaseDescriptionEditPart.VISUAL_ID:
 			return getCaseDescription_5217Parser();
-		case SelectorDescriptionEditPart.VISUAL_ID:
-			return getSelectorDescription_5156Parser();
+		case ExpressionDescription3EditPart.VISUAL_ID:
+			return getExpressionDescription_5228Parser();
 		case ExceptionDescription3EditPart.VISUAL_ID:
-			return getExceptionDescription_5114Parser();
+			return getExceptionDescription_5229Parser();
 		case IfDescription3EditPart.VISUAL_ID:
-			return getIfDescription_5142Parser();
+			return getIfDescription_5243Parser();
 		case InsertDescriptionEditPart.VISUAL_ID:
 			return getInsertDescription_5190Parser();
 		case UpdateDescriptionEditPart.VISUAL_ID:
@@ -3121,18 +3397,24 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getSelectDescription_5193Parser();
 		case WhileDescriptionEditPart.VISUAL_ID:
 			return getWhileDescription_5216Parser();
+		case ExpressionDescription4EditPart.VISUAL_ID:
+			return getExpressionDescription_5220Parser();
 		case ExceptionDescription4EditPart.VISUAL_ID:
 			return getExceptionDescription_5098Parser();
 		case IfDescription4EditPart.VISUAL_ID:
 			return getIfDescription_5099Parser();
 		case ForDescriptionEditPart.VISUAL_ID:
 			return getForDescription_5215Parser();
+		case ExpressionDescription5EditPart.VISUAL_ID:
+			return getExpressionDescription_5222Parser();
 		case ExceptionDescription5EditPart.VISUAL_ID:
 			return getExceptionDescription_5159Parser();
 		case IfDescription5EditPart.VISUAL_ID:
 			return getIfDescription_5188Parser();
 		case LoopDescriptionEditPart.VISUAL_ID:
 			return getLoopDescription_5214Parser();
+		case ExpressionDescription6EditPart.VISUAL_ID:
+			return getExpressionDescription_5221Parser();
 		case ExceptionDescription6EditPart.VISUAL_ID:
 			return getExceptionDescription_5160Parser();
 		case IfDescription6EditPart.VISUAL_ID:
@@ -3147,180 +3429,202 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getCallProcedureDescription_5197Parser();
 		case CallFunctionDescriptionEditPart.VISUAL_ID:
 			return getCallFunctionDescription_5198Parser();
-		case ExpressionDescriptionEditPart.VISUAL_ID:
-			return getExpressionDescription_5219Parser();
+		case ExpressionDescription7EditPart.VISUAL_ID:
+			return getExpressionDescription_5223Parser();
 		case ExceptionDescription7EditPart.VISUAL_ID:
 			return getExceptionDescription_5199Parser();
 		case IfDescription7EditPart.VISUAL_ID:
 			return getIfDescription_5213Parser();
 		case CaseDescription2EditPart.VISUAL_ID:
 			return getCaseDescription_5200Parser();
-		case InsertDescription2EditPart.VISUAL_ID:
-			return getInsertDescription_5201Parser();
-		case UpdateDescription2EditPart.VISUAL_ID:
-			return getUpdateDescription_5202Parser();
-		case DeleteDescription2EditPart.VISUAL_ID:
-			return getDeleteDescription_5203Parser();
-		case SelectDescription2EditPart.VISUAL_ID:
-			return getSelectDescription_5204Parser();
-		case WhileDescription2EditPart.VISUAL_ID:
-			return getWhileDescription_5205Parser();
 		case CaseDescription3EditPart.VISUAL_ID:
-			return getCaseDescription_5100Parser();
-		case InsertDescription3EditPart.VISUAL_ID:
-			return getInsertDescription_5101Parser();
-		case UpdateDescription3EditPart.VISUAL_ID:
-			return getUpdateDescription_5102Parser();
-		case DeleteDescription3EditPart.VISUAL_ID:
-			return getDeleteDescription_5103Parser();
-		case SelectDescription3EditPart.VISUAL_ID:
-			return getSelectDescription_5104Parser();
-		case WhileDescription3EditPart.VISUAL_ID:
-			return getWhileDescription_5112Parser();
-		case ForDescription2EditPart.VISUAL_ID:
-			return getForDescription_5105Parser();
+			return getCaseDescription_5242Parser();
+		case InsertDescription2EditPart.VISUAL_ID:
+			return getInsertDescription_5230Parser();
+		case UpdateDescription2EditPart.VISUAL_ID:
+			return getUpdateDescription_5231Parser();
+		case DeleteDescription2EditPart.VISUAL_ID:
+			return getDeleteDescription_5232Parser();
+		case SelectDescription2EditPart.VISUAL_ID:
+			return getSelectDescription_5233Parser();
+		case WhileDescription2EditPart.VISUAL_ID:
+			return getWhileDescription_5241Parser();
 		case CaseDescription4EditPart.VISUAL_ID:
-			return getCaseDescription_5161Parser();
-		case InsertDescription4EditPart.VISUAL_ID:
-			return getInsertDescription_5162Parser();
-		case UpdateDescription4EditPart.VISUAL_ID:
-			return getUpdateDescription_5163Parser();
-		case DeleteDescription4EditPart.VISUAL_ID:
-			return getDeleteDescription_5164Parser();
-		case SelectDescription4EditPart.VISUAL_ID:
-			return getSelectDescription_5165Parser();
-		case WhileDescription4EditPart.VISUAL_ID:
-			return getWhileDescription_5186Parser();
-		case LoopDescription2EditPart.VISUAL_ID:
-			return getLoopDescription_5106Parser();
+			return getCaseDescription_5100Parser();
+		case ForDescription2EditPart.VISUAL_ID:
+			return getForDescription_5240Parser();
 		case CaseDescription5EditPart.VISUAL_ID:
-			return getCaseDescription_5166Parser();
-		case InsertDescription5EditPart.VISUAL_ID:
-			return getInsertDescription_5167Parser();
-		case UpdateDescription5EditPart.VISUAL_ID:
-			return getUpdateDescription_5168Parser();
-		case DeleteDescription5EditPart.VISUAL_ID:
-			return getDeleteDescription_5169Parser();
-		case SelectDescription5EditPart.VISUAL_ID:
-			return getSelectDescription_5170Parser();
-		case WhileDescription5EditPart.VISUAL_ID:
-			return getWhileDescription_5171Parser();
-		case OpenDescription2EditPart.VISUAL_ID:
-			return getOpenDescription_5107Parser();
-		case FetchDescription2EditPart.VISUAL_ID:
-			return getFetchDescription_5108Parser();
-		case CloseDescription2EditPart.VISUAL_ID:
-			return getCloseDescription_5109Parser();
-		case CallProcedureDescription2EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5110Parser();
-		case CallFunctionDescription2EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5111Parser();
-		case ExpressionDescription2EditPart.VISUAL_ID:
-			return getExpressionDescription_5220Parser();
-		case ForDescription3EditPart.VISUAL_ID:
-			return getForDescription_5185Parser();
-		case ForDescription4EditPart.VISUAL_ID:
-			return getForDescription_5184Parser();
-		case LoopDescription3EditPart.VISUAL_ID:
-			return getLoopDescription_5178Parser();
-		case LoopDescription4EditPart.VISUAL_ID:
-			return getLoopDescription_5177Parser();
-		case OpenDescription3EditPart.VISUAL_ID:
-			return getOpenDescription_5172Parser();
-		case FetchDescription3EditPart.VISUAL_ID:
-			return getFetchDescription_5173Parser();
-		case CloseDescription3EditPart.VISUAL_ID:
-			return getCloseDescription_5174Parser();
-		case CallProcedureDescription3EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5175Parser();
-		case CallFunctionDescription3EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5176Parser();
-		case ExpressionDescription3EditPart.VISUAL_ID:
-			return getExpressionDescription_5221Parser();
-		case OpenDescription4EditPart.VISUAL_ID:
-			return getOpenDescription_5179Parser();
-		case FetchDescription4EditPart.VISUAL_ID:
-			return getFetchDescription_5180Parser();
-		case CloseDescription4EditPart.VISUAL_ID:
-			return getCloseDescription_5181Parser();
-		case CallProcedureDescription4EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5182Parser();
-		case CallFunctionDescription4EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5183Parser();
-		case ExpressionDescription4EditPart.VISUAL_ID:
-			return getExpressionDescription_5222Parser();
-		case ForDescription5EditPart.VISUAL_ID:
-			return getForDescription_5206Parser();
-		case LoopDescription5EditPart.VISUAL_ID:
-			return getLoopDescription_5207Parser();
-		case OpenDescription5EditPart.VISUAL_ID:
-			return getOpenDescription_5208Parser();
-		case FetchDescription5EditPart.VISUAL_ID:
-			return getFetchDescription_5209Parser();
-		case CloseDescription5EditPart.VISUAL_ID:
-			return getCloseDescription_5210Parser();
-		case CallProcedureDescription5EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5211Parser();
-		case CallFunctionDescription5EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5212Parser();
-		case ExpressionDescription5EditPart.VISUAL_ID:
-			return getExpressionDescription_5223Parser();
+			return getCaseDescription_5161Parser();
+		case LoopDescription2EditPart.VISUAL_ID:
+			return getLoopDescription_5239Parser();
 		case CaseDescription6EditPart.VISUAL_ID:
-			return getCaseDescription_5143Parser();
-		case InsertDescription6EditPart.VISUAL_ID:
-			return getInsertDescription_5144Parser();
-		case UpdateDescription6EditPart.VISUAL_ID:
-			return getUpdateDescription_5145Parser();
-		case DeleteDescription6EditPart.VISUAL_ID:
-			return getDeleteDescription_5146Parser();
-		case SelectDescription6EditPart.VISUAL_ID:
-			return getSelectDescription_5147Parser();
-		case WhileDescription6EditPart.VISUAL_ID:
-			return getWhileDescription_5148Parser();
-		case ForDescription6EditPart.VISUAL_ID:
-			return getForDescription_5149Parser();
-		case LoopDescription6EditPart.VISUAL_ID:
-			return getLoopDescription_5150Parser();
-		case OpenDescription6EditPart.VISUAL_ID:
-			return getOpenDescription_5151Parser();
-		case FetchDescription6EditPart.VISUAL_ID:
-			return getFetchDescription_5152Parser();
-		case CloseDescription6EditPart.VISUAL_ID:
-			return getCloseDescription_5153Parser();
-		case CallProcedureDescription6EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5154Parser();
-		case CallFunctionDescription6EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5155Parser();
-		case ExpressionDescription6EditPart.VISUAL_ID:
+			return getCaseDescription_5166Parser();
+		case OpenDescription2EditPart.VISUAL_ID:
+			return getOpenDescription_5234Parser();
+		case FetchDescription2EditPart.VISUAL_ID:
+			return getFetchDescription_5235Parser();
+		case CloseDescription2EditPart.VISUAL_ID:
+			return getCloseDescription_5236Parser();
+		case CallProcedureDescription2EditPart.VISUAL_ID:
+			return getCallProcedureDescription_5237Parser();
+		case CallFunctionDescription2EditPart.VISUAL_ID:
+			return getCallFunctionDescription_5238Parser();
+		case SelectorDescriptionEditPart.VISUAL_ID:
+			return getSelectorDescription_5156Parser();
+		case ExpressionDescription8EditPart.VISUAL_ID:
 			return getExpressionDescription_5224Parser();
+		case ExceptionDescription8EditPart.VISUAL_ID:
+			return getExceptionDescription_5114Parser();
+		case IfDescription8EditPart.VISUAL_ID:
+			return getIfDescription_5142Parser();
+		case InsertDescription3EditPart.VISUAL_ID:
+			return getInsertDescription_5201Parser();
+		case UpdateDescription3EditPart.VISUAL_ID:
+			return getUpdateDescription_5202Parser();
+		case DeleteDescription3EditPart.VISUAL_ID:
+			return getDeleteDescription_5203Parser();
+		case SelectDescription3EditPart.VISUAL_ID:
+			return getSelectDescription_5204Parser();
+		case WhileDescription3EditPart.VISUAL_ID:
+			return getWhileDescription_5205Parser();
+		case InsertDescription4EditPart.VISUAL_ID:
+			return getInsertDescription_5101Parser();
+		case UpdateDescription4EditPart.VISUAL_ID:
+			return getUpdateDescription_5102Parser();
+		case DeleteDescription4EditPart.VISUAL_ID:
+			return getDeleteDescription_5103Parser();
+		case SelectDescription4EditPart.VISUAL_ID:
+			return getSelectDescription_5104Parser();
+		case WhileDescription4EditPart.VISUAL_ID:
+			return getWhileDescription_5112Parser();
+		case ForDescription3EditPart.VISUAL_ID:
+			return getForDescription_5105Parser();
+		case InsertDescription5EditPart.VISUAL_ID:
+			return getInsertDescription_5162Parser();
+		case UpdateDescription5EditPart.VISUAL_ID:
+			return getUpdateDescription_5163Parser();
+		case DeleteDescription5EditPart.VISUAL_ID:
+			return getDeleteDescription_5164Parser();
+		case SelectDescription5EditPart.VISUAL_ID:
+			return getSelectDescription_5165Parser();
+		case WhileDescription5EditPart.VISUAL_ID:
+			return getWhileDescription_5186Parser();
+		case LoopDescription3EditPart.VISUAL_ID:
+			return getLoopDescription_5106Parser();
+		case InsertDescription6EditPart.VISUAL_ID:
+			return getInsertDescription_5167Parser();
+		case UpdateDescription6EditPart.VISUAL_ID:
+			return getUpdateDescription_5168Parser();
+		case DeleteDescription6EditPart.VISUAL_ID:
+			return getDeleteDescription_5169Parser();
+		case SelectDescription6EditPart.VISUAL_ID:
+			return getSelectDescription_5170Parser();
+		case WhileDescription6EditPart.VISUAL_ID:
+			return getWhileDescription_5171Parser();
+		case OpenDescription3EditPart.VISUAL_ID:
+			return getOpenDescription_5107Parser();
+		case FetchDescription3EditPart.VISUAL_ID:
+			return getFetchDescription_5108Parser();
+		case CloseDescription3EditPart.VISUAL_ID:
+			return getCloseDescription_5109Parser();
+		case CallProcedureDescription3EditPart.VISUAL_ID:
+			return getCallProcedureDescription_5110Parser();
+		case CallFunctionDescription3EditPart.VISUAL_ID:
+			return getCallFunctionDescription_5111Parser();
+		case ForDescription4EditPart.VISUAL_ID:
+			return getForDescription_5185Parser();
+		case ForDescription5EditPart.VISUAL_ID:
+			return getForDescription_5184Parser();
+		case LoopDescription4EditPart.VISUAL_ID:
+			return getLoopDescription_5178Parser();
+		case LoopDescription5EditPart.VISUAL_ID:
+			return getLoopDescription_5177Parser();
+		case OpenDescription4EditPart.VISUAL_ID:
+			return getOpenDescription_5172Parser();
+		case FetchDescription4EditPart.VISUAL_ID:
+			return getFetchDescription_5173Parser();
+		case CloseDescription4EditPart.VISUAL_ID:
+			return getCloseDescription_5174Parser();
+		case CallProcedureDescription4EditPart.VISUAL_ID:
+			return getCallProcedureDescription_5175Parser();
+		case CallFunctionDescription4EditPart.VISUAL_ID:
+			return getCallFunctionDescription_5176Parser();
+		case OpenDescription5EditPart.VISUAL_ID:
+			return getOpenDescription_5179Parser();
+		case FetchDescription5EditPart.VISUAL_ID:
+			return getFetchDescription_5180Parser();
+		case CloseDescription5EditPart.VISUAL_ID:
+			return getCloseDescription_5181Parser();
+		case CallProcedureDescription5EditPart.VISUAL_ID:
+			return getCallProcedureDescription_5182Parser();
+		case CallFunctionDescription5EditPart.VISUAL_ID:
+			return getCallFunctionDescription_5183Parser();
+		case ForDescription6EditPart.VISUAL_ID:
+			return getForDescription_5206Parser();
+		case LoopDescription6EditPart.VISUAL_ID:
+			return getLoopDescription_5207Parser();
+		case OpenDescription6EditPart.VISUAL_ID:
+			return getOpenDescription_5208Parser();
+		case FetchDescription6EditPart.VISUAL_ID:
+			return getFetchDescription_5209Parser();
+		case CloseDescription6EditPart.VISUAL_ID:
+			return getCloseDescription_5210Parser();
+		case CallProcedureDescription6EditPart.VISUAL_ID:
+			return getCallProcedureDescription_5211Parser();
+		case CallFunctionDescription6EditPart.VISUAL_ID:
+			return getCallFunctionDescription_5212Parser();
 		case CaseDescription7EditPart.VISUAL_ID:
-			return getCaseDescription_5066Parser();
+			return getCaseDescription_5143Parser();
 		case InsertDescription7EditPart.VISUAL_ID:
-			return getInsertDescription_5067Parser();
+			return getInsertDescription_5144Parser();
 		case UpdateDescription7EditPart.VISUAL_ID:
-			return getUpdateDescription_5068Parser();
+			return getUpdateDescription_5145Parser();
 		case DeleteDescription7EditPart.VISUAL_ID:
-			return getDeleteDescription_5069Parser();
+			return getDeleteDescription_5146Parser();
 		case SelectDescription7EditPart.VISUAL_ID:
-			return getSelectDescription_5070Parser();
+			return getSelectDescription_5147Parser();
 		case WhileDescription7EditPart.VISUAL_ID:
-			return getWhileDescription_5071Parser();
+			return getWhileDescription_5148Parser();
 		case ForDescription7EditPart.VISUAL_ID:
-			return getForDescription_5072Parser();
+			return getForDescription_5149Parser();
 		case LoopDescription7EditPart.VISUAL_ID:
-			return getLoopDescription_5073Parser();
+			return getLoopDescription_5150Parser();
 		case OpenDescription7EditPart.VISUAL_ID:
-			return getOpenDescription_5074Parser();
+			return getOpenDescription_5151Parser();
 		case FetchDescription7EditPart.VISUAL_ID:
-			return getFetchDescription_5075Parser();
+			return getFetchDescription_5152Parser();
 		case CloseDescription7EditPart.VISUAL_ID:
-			return getCloseDescription_5076Parser();
+			return getCloseDescription_5153Parser();
 		case CallProcedureDescription7EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5077Parser();
+			return getCallProcedureDescription_5154Parser();
 		case CallFunctionDescription7EditPart.VISUAL_ID:
+			return getCallFunctionDescription_5155Parser();
+		case CaseDescription8EditPart.VISUAL_ID:
+			return getCaseDescription_5066Parser();
+		case InsertDescription8EditPart.VISUAL_ID:
+			return getInsertDescription_5067Parser();
+		case UpdateDescription8EditPart.VISUAL_ID:
+			return getUpdateDescription_5068Parser();
+		case DeleteDescription8EditPart.VISUAL_ID:
+			return getDeleteDescription_5069Parser();
+		case SelectDescription8EditPart.VISUAL_ID:
+			return getSelectDescription_5070Parser();
+		case WhileDescription8EditPart.VISUAL_ID:
+			return getWhileDescription_5071Parser();
+		case ForDescription8EditPart.VISUAL_ID:
+			return getForDescription_5072Parser();
+		case LoopDescription8EditPart.VISUAL_ID:
+			return getLoopDescription_5073Parser();
+		case OpenDescription8EditPart.VISUAL_ID:
+			return getOpenDescription_5074Parser();
+		case FetchDescription8EditPart.VISUAL_ID:
+			return getFetchDescription_5075Parser();
+		case CloseDescription8EditPart.VISUAL_ID:
+			return getCloseDescription_5076Parser();
+		case CallProcedureDescription8EditPart.VISUAL_ID:
+			return getCallProcedureDescription_5077Parser();
+		case CallFunctionDescription8EditPart.VISUAL_ID:
 			return getCallFunctionDescription_5078Parser();
-		case ExpressionDescription7EditPart.VISUAL_ID:
-			return getExpressionDescription_5225Parser();
 		case DataTypeName3EditPart.VISUAL_ID:
 			return getDataTypeName_5079Parser();
 		case CollectionsName3EditPart.VISUAL_ID:
@@ -3345,38 +3649,38 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getRecordsName_5029Parser();
 		case CursorName5EditPart.VISUAL_ID:
 			return getCursorName_5030Parser();
-		case ExceptionDescription8EditPart.VISUAL_ID:
-			return getExceptionDescription_5083Parser();
-		case IfDescription8EditPart.VISUAL_ID:
-			return getIfDescription_5084Parser();
-		case CaseDescription8EditPart.VISUAL_ID:
-			return getCaseDescription_5085Parser();
-		case InsertDescription8EditPart.VISUAL_ID:
-			return getInsertDescription_5086Parser();
-		case UpdateDescription8EditPart.VISUAL_ID:
-			return getUpdateDescription_5087Parser();
-		case DeleteDescription8EditPart.VISUAL_ID:
-			return getDeleteDescription_5088Parser();
-		case SelectDescription8EditPart.VISUAL_ID:
-			return getSelectDescription_5089Parser();
-		case WhileDescription8EditPart.VISUAL_ID:
-			return getWhileDescription_5090Parser();
-		case ForDescription8EditPart.VISUAL_ID:
-			return getForDescription_5091Parser();
-		case LoopDescription8EditPart.VISUAL_ID:
-			return getLoopDescription_5092Parser();
-		case OpenDescription8EditPart.VISUAL_ID:
-			return getOpenDescription_5093Parser();
-		case FetchDescription8EditPart.VISUAL_ID:
-			return getFetchDescription_5094Parser();
-		case CloseDescription8EditPart.VISUAL_ID:
-			return getCloseDescription_5095Parser();
-		case CallProcedureDescription8EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5096Parser();
-		case CallFunctionDescription8EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5097Parser();
-		case ExpressionDescription8EditPart.VISUAL_ID:
+		case ExpressionDescription9EditPart.VISUAL_ID:
 			return getExpressionDescription_5226Parser();
+		case ExceptionDescription9EditPart.VISUAL_ID:
+			return getExceptionDescription_5083Parser();
+		case IfDescription9EditPart.VISUAL_ID:
+			return getIfDescription_5084Parser();
+		case CaseDescription9EditPart.VISUAL_ID:
+			return getCaseDescription_5085Parser();
+		case InsertDescription9EditPart.VISUAL_ID:
+			return getInsertDescription_5086Parser();
+		case UpdateDescription9EditPart.VISUAL_ID:
+			return getUpdateDescription_5087Parser();
+		case DeleteDescription9EditPart.VISUAL_ID:
+			return getDeleteDescription_5088Parser();
+		case SelectDescription9EditPart.VISUAL_ID:
+			return getSelectDescription_5089Parser();
+		case WhileDescription9EditPart.VISUAL_ID:
+			return getWhileDescription_5090Parser();
+		case ForDescription9EditPart.VISUAL_ID:
+			return getForDescription_5091Parser();
+		case LoopDescription9EditPart.VISUAL_ID:
+			return getLoopDescription_5092Parser();
+		case OpenDescription9EditPart.VISUAL_ID:
+			return getOpenDescription_5093Parser();
+		case FetchDescription9EditPart.VISUAL_ID:
+			return getFetchDescription_5094Parser();
+		case CloseDescription9EditPart.VISUAL_ID:
+			return getCloseDescription_5095Parser();
+		case CallProcedureDescription9EditPart.VISUAL_ID:
+			return getCallProcedureDescription_5096Parser();
+		case CallFunctionDescription9EditPart.VISUAL_ID:
+			return getCallFunctionDescription_5097Parser();
 		case DataTypeName6EditPart.VISUAL_ID:
 			return getDataTypeName_5037Parser();
 		case CollectionsName6EditPart.VISUAL_ID:
@@ -3385,38 +3689,38 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 			return getRecordsName_5039Parser();
 		case CursorName6EditPart.VISUAL_ID:
 			return getCursorName_5040Parser();
-		case ExceptionDescription9EditPart.VISUAL_ID:
-			return getExceptionDescription_5041Parser();
-		case IfDescription9EditPart.VISUAL_ID:
-			return getIfDescription_5042Parser();
-		case CaseDescription9EditPart.VISUAL_ID:
-			return getCaseDescription_5043Parser();
-		case InsertDescription9EditPart.VISUAL_ID:
-			return getInsertDescription_5044Parser();
-		case UpdateDescription9EditPart.VISUAL_ID:
-			return getUpdateDescription_5045Parser();
-		case DeleteDescription9EditPart.VISUAL_ID:
-			return getDeleteDescription_5046Parser();
-		case SelectDescription9EditPart.VISUAL_ID:
-			return getSelectDescription_5047Parser();
-		case WhileDescription9EditPart.VISUAL_ID:
-			return getWhileDescription_5048Parser();
-		case ForDescription9EditPart.VISUAL_ID:
-			return getForDescription_5049Parser();
-		case LoopDescription9EditPart.VISUAL_ID:
-			return getLoopDescription_5050Parser();
-		case OpenDescription9EditPart.VISUAL_ID:
-			return getOpenDescription_5051Parser();
-		case FetchDescription9EditPart.VISUAL_ID:
-			return getFetchDescription_5052Parser();
-		case CloseDescription9EditPart.VISUAL_ID:
-			return getCloseDescription_5053Parser();
-		case CallProcedureDescription9EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5054Parser();
-		case CallFunctionDescription9EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5055Parser();
-		case ExpressionDescription9EditPart.VISUAL_ID:
+		case ExpressionDescription10EditPart.VISUAL_ID:
 			return getExpressionDescription_5227Parser();
+		case ExceptionDescription10EditPart.VISUAL_ID:
+			return getExceptionDescription_5041Parser();
+		case IfDescription10EditPart.VISUAL_ID:
+			return getIfDescription_5042Parser();
+		case CaseDescription10EditPart.VISUAL_ID:
+			return getCaseDescription_5043Parser();
+		case InsertDescription10EditPart.VISUAL_ID:
+			return getInsertDescription_5044Parser();
+		case UpdateDescription10EditPart.VISUAL_ID:
+			return getUpdateDescription_5045Parser();
+		case DeleteDescription10EditPart.VISUAL_ID:
+			return getDeleteDescription_5046Parser();
+		case SelectDescription10EditPart.VISUAL_ID:
+			return getSelectDescription_5047Parser();
+		case WhileDescription10EditPart.VISUAL_ID:
+			return getWhileDescription_5048Parser();
+		case ForDescription10EditPart.VISUAL_ID:
+			return getForDescription_5049Parser();
+		case LoopDescription10EditPart.VISUAL_ID:
+			return getLoopDescription_5050Parser();
+		case OpenDescription10EditPart.VISUAL_ID:
+			return getOpenDescription_5051Parser();
+		case FetchDescription10EditPart.VISUAL_ID:
+			return getFetchDescription_5052Parser();
+		case CloseDescription10EditPart.VISUAL_ID:
+			return getCloseDescription_5053Parser();
+		case CallProcedureDescription10EditPart.VISUAL_ID:
+			return getCallProcedureDescription_5054Parser();
+		case CallFunctionDescription10EditPart.VISUAL_ID:
+			return getCallFunctionDescription_5055Parser();
 		case TransitionNameEditPart.VISUAL_ID:
 			return getTransitionName_6001Parser();
 		case SelectorTransitionNameEditPart.VISUAL_ID:

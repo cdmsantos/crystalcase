@@ -58,8 +58,8 @@ public class For5CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		For newElement = CrystalFactory.eINSTANCE.createFor();
 
-		If owner = (If) getElementToEdit();
-		owner.getElses().add(newElement);
+		For owner = (For) getElementToEdit();
+		owner.getForStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

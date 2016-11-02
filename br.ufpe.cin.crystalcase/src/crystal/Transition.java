@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Transition extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"Connection"</code>.
+	 * The default value is <code>"Statement Connection"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -35,7 +35,7 @@ public interface Transition extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see crystal.CrystalPackage#getTransition_Name()
-	 * @model default="Connection"
+	 * @model default="Statement Connection"
 	 * @generated
 	 */
 	String getName();

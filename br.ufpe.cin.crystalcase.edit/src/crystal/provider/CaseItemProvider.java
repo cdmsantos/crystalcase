@@ -87,6 +87,7 @@ public class CaseItemProvider extends StatementsItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CrystalPackage.Literals.CASE__CASES);
+			childrenFeatures.add(CrystalPackage.Literals.CASE__ELSE_STATEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -146,6 +147,7 @@ public class CaseItemProvider extends StatementsItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CrystalPackage.CASE__CASES:
+			case CrystalPackage.CASE__ELSE_STATEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -167,6 +169,86 @@ public class CaseItemProvider extends StatementsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.CASE__CASES,
 				 CrystalFactory.eINSTANCE.createSelector()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createException()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createIf()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createCase()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createInsert()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createUpdate()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createDelete()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createSelect()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createWhile()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createFor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createLoop()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createOpen()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createFetch()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createClose()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createCallProcedure()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createCallFunction()));
 	}
 
 }

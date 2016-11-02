@@ -21,6 +21,7 @@ import crystal.Fetch;
 import crystal.Function;
 import crystal.If;
 import crystal.Loop;
+import crystal.While;
 
 /**
  * @generated
@@ -60,8 +61,8 @@ public class Fetch3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Fetch newElement = CrystalFactory.eINSTANCE.createFetch();
 
-		Loop owner = (Loop) getElementToEdit();
-		owner.getLoopStatements().add(newElement);
+		While owner = (While) getElementToEdit();
+		owner.getWhileStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

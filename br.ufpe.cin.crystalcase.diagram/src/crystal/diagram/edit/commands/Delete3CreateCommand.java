@@ -19,6 +19,7 @@ import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
 import crystal.Delete;
 import crystal.Function;
+import crystal.If;
 import crystal.While;
 
 /**
@@ -59,8 +60,8 @@ public class Delete3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Delete newElement = CrystalFactory.eINSTANCE.createDelete();
 
-		While owner = (While) getElementToEdit();
-		owner.getWhileStatements().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getElses().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

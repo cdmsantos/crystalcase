@@ -17,6 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.Function;
+import crystal.Loop;
 import crystal.Selector;
 import crystal.Update;
 
@@ -58,8 +59,8 @@ public class Update6CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Update newElement = CrystalFactory.eINSTANCE.createUpdate();
 
-		Selector owner = (Selector) getElementToEdit();
-		owner.getCaseStatements().add(newElement);
+		Loop owner = (Loop) getElementToEdit();
+		owner.getLoopStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

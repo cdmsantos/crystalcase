@@ -192,6 +192,11 @@ public class IfItemProvider extends StatementsItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CrystalPackage.Literals.IF__IFS,
+				 CrystalFactory.eINSTANCE.createExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.IF__IFS,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
@@ -266,7 +271,7 @@ public class IfItemProvider extends StatementsItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__ELSES,
 				 CrystalFactory.eINSTANCE.createExpression()));
 
 		newChildDescriptors.add
@@ -343,11 +348,6 @@ public class IfItemProvider extends StatementsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.IF__ELSES,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
-				 CrystalFactory.eINSTANCE.createExpression()));
 	}
 
 	/**

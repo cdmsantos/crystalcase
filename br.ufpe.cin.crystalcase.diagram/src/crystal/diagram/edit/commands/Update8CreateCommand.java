@@ -17,6 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.Function;
+import crystal.Procedure;
 import crystal.Update;
 
 /**
@@ -57,7 +58,7 @@ public class Update8CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Update newElement = CrystalFactory.eINSTANCE.createUpdate();
 
-		Function owner = (Function) getElementToEdit();
+		Procedure owner = (Procedure) getElementToEdit();
 		owner.getExecutablePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);

@@ -16,6 +16,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.AnonymousBlock;
+import crystal.Case;
 import crystal.CrystalFactory;
 import crystal.Exception;
 import crystal.Function;
@@ -59,8 +60,8 @@ public class Exception3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Exception newElement = CrystalFactory.eINSTANCE.createException();
 
-		Selector owner = (Selector) getElementToEdit();
-		owner.getCaseStatements().add(newElement);
+		Case owner = (Case) getElementToEdit();
+		owner.getElseStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

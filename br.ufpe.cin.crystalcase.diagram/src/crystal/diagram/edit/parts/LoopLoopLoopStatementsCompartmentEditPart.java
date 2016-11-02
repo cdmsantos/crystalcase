@@ -93,6 +93,9 @@ public class LoopLoopLoopStatementsCompartmentEditPart extends ShapeCompartmentE
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3213) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3153) {
 				return this;
 			}
@@ -136,9 +139,6 @@ public class LoopLoopLoopStatementsCompartmentEditPart extends ShapeCompartmentE
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3175) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3213) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

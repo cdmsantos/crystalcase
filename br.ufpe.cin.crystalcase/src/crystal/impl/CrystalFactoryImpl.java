@@ -96,6 +96,7 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 			case CrystalPackage.COLLECTIONS: return createCollections();
 			case CrystalPackage.RECORDS: return createRecords();
 			case CrystalPackage.CURSOR: return createCursor();
+			case CrystalPackage.EXPRESSION: return createExpression();
 			case CrystalPackage.EXCEPTION: return createException();
 			case CrystalPackage.IF: return createIf();
 			case CrystalPackage.CASE: return createCase();
@@ -114,7 +115,6 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 			case CrystalPackage.CALL_FUNCTION: return createCallFunction();
 			case CrystalPackage.TRANSITION: return createTransition();
 			case CrystalPackage.SELECTOR_TRANSITION: return createSelectorTransition();
-			case CrystalPackage.EXPRESSION: return createExpression();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

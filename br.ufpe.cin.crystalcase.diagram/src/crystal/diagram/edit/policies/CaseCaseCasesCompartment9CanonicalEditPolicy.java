@@ -63,7 +63,7 @@ public class CaseCaseCasesCompartment9CanonicalEditPolicy extends CanonicalEditP
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getCaseCaseCasesCompartment_7052SemanticChildren(viewObject);
+				.getCaseCaseCasesCompartment_7049SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -93,7 +93,7 @@ public class CaseCaseCasesCompartment9CanonicalEditPolicy extends CanonicalEditP
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getCaseCaseCasesCompartment_7052SemanticChildren((View) getHost().getModel());
+				.getCaseCaseCasesCompartment_7049SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

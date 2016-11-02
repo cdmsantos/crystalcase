@@ -121,6 +121,12 @@ public class CaseEditPart extends ShapeNodeEditPart {
 			pane.add(((CaseCaseCasesCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
+		if (childEditPart instanceof CaseCaseElseStatementsCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseElseStatementsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((CaseCaseElseStatementsCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -134,6 +140,11 @@ public class CaseEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof CaseCaseCasesCompartmentEditPart) {
 			IFigure pane = getPrimaryShape().getCaseCasesCompartmentFigure();
 			pane.remove(((CaseCaseCasesCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof CaseCaseElseStatementsCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseElseStatementsCompartmentFigure();
+			pane.remove(((CaseCaseElseStatementsCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -165,6 +176,9 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
 		if (editPart instanceof CaseCaseCasesCompartmentEditPart) {
 			return getPrimaryShape().getCaseCasesCompartmentFigure();
+		}
+		if (editPart instanceof CaseCaseElseStatementsCompartmentEditPart) {
+			return getPrimaryShape().getCaseElseStatementsCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -278,8 +292,13 @@ public class CaseEditPart extends ShapeNodeEditPart {
 		private RectangleFigure fCaseCasesCompartmentFigure;
 
 		/**
-			 * @generated
-			 */
+		* @generated
+		*/
+		private RectangleFigure fCaseElseStatementsCompartmentFigure;
+
+		/**
+				 * @generated
+				 */
 		public CaseFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -304,6 +323,12 @@ public class CaseEditPart extends ShapeNodeEditPart {
 
 			this.add(fCaseCasesCompartmentFigure);
 
+			fCaseElseStatementsCompartmentFigure = new RectangleFigure();
+
+			fCaseElseStatementsCompartmentFigure.setOutline(false);
+
+			this.add(fCaseElseStatementsCompartmentFigure);
+
 		}
 
 		/**
@@ -318,6 +343,13 @@ public class CaseEditPart extends ShapeNodeEditPart {
 		*/
 		public RectangleFigure getCaseCasesCompartmentFigure() {
 			return fCaseCasesCompartmentFigure;
+		}
+
+		/**
+		* @generated
+		*/
+		public RectangleFigure getCaseElseStatementsCompartmentFigure() {
+			return fCaseElseStatementsCompartmentFigure;
 		}
 
 	}

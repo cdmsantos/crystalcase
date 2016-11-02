@@ -21,6 +21,7 @@ import crystal.CrystalFactory;
 import crystal.Function;
 import crystal.If;
 import crystal.Loop;
+import crystal.While;
 
 /**
  * @generated
@@ -60,8 +61,8 @@ public class CallProcedure3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		CallProcedure newElement = CrystalFactory.eINSTANCE.createCallProcedure();
 
-		Loop owner = (Loop) getElementToEdit();
-		owner.getLoopStatements().add(newElement);
+		While owner = (While) getElementToEdit();
+		owner.getWhileStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

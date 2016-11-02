@@ -46,10 +46,10 @@
     </genEnums>
     <genClasses ecoreClass="crystalmm.ecore#//Crystal">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/selectorTransitions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/procedures"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/functions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/blocks"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Crystal/selectorTransitions"/>
     </genClasses>
     <genClasses image="false" ecoreClass="crystalmm.ecore#//Subprograms">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Subprograms/name"/>
@@ -97,6 +97,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Statements/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Statements/isStart"/>
     </genClasses>
+    <genClasses ecoreClass="crystalmm.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Expression/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Expression/value"/>
+    </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Exception">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Exception/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Exception/code"/>
@@ -110,6 +114,7 @@
     <genClasses ecoreClass="crystalmm.ecore#//Case">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Case/className"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Case/cases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crystalmm.ecore#//Case/elseStatements"/>
     </genClasses>
     <genClasses ecoreClass="crystalmm.ecore#//Selector">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Selector/className"/>
@@ -181,10 +186,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//SelectorTransition/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//SelectorTransition/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//SelectorTransition/target"/>
-    </genClasses>
-    <genClasses ecoreClass="crystalmm.ecore#//Expression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Expression/className"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crystalmm.ecore#//Expression/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

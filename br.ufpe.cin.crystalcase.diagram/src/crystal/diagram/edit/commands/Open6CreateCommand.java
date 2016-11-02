@@ -17,6 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.Function;
+import crystal.If;
 import crystal.Open;
 import crystal.Selector;
 
@@ -58,8 +59,8 @@ public class Open6CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Open newElement = CrystalFactory.eINSTANCE.createOpen();
 
-		Selector owner = (Selector) getElementToEdit();
-		owner.getCaseStatements().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getElses().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

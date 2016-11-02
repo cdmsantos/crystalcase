@@ -38,7 +38,7 @@ public class While6EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3143;
+	public static final int VISUAL_ID = 3166;
 
 	/**
 	* @generated

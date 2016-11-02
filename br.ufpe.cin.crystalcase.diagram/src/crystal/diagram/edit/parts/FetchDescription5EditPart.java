@@ -60,7 +60,7 @@ public class FetchDescription5EditPart extends CompartmentEditPart implements IT
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5209;
+	public static final int VISUAL_ID = 5180;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class FetchDescription5EditPart extends CompartmentEditPart implements IT
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Fetch_3207, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Fetch_3177, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FetchDescription5EditPart.VISUAL_ID));
 		}
 		return parser;

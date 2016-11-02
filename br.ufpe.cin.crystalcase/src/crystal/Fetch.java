@@ -51,7 +51,7 @@ public interface Fetch extends Statements {
 
 	/**
 	 * Returns the value of the '<em><b>Cursor Name</b></em>' attribute.
-	 * The default value is <code>"FETCH cursorName INTO variableCursor"</code>.
+	 * The default value is <code>"cursorName"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cursor Name</em>' attribute isn't clear,
@@ -61,7 +61,7 @@ public interface Fetch extends Statements {
 	 * @return the value of the '<em>Cursor Name</em>' attribute.
 	 * @see #setCursorName(String)
 	 * @see crystal.CrystalPackage#getFetch_CursorName()
-	 * @model default="FETCH cursorName INTO variableCursor"
+	 * @model default="cursorName"
 	 * @generated
 	 */
 	String getCursorName();
@@ -78,7 +78,7 @@ public interface Fetch extends Statements {
 
 	/**
 	 * Returns the value of the '<em><b>Variable Name</b></em>' attribute.
-	 * The default value is <code>"FETCH cursorName INTO variableCursor"</code>.
+	 * The default value is <code>"variableCursor"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Variable Name</em>' attribute isn't clear,
@@ -88,7 +88,7 @@ public interface Fetch extends Statements {
 	 * @return the value of the '<em>Variable Name</em>' attribute.
 	 * @see #setVariableName(String)
 	 * @see crystal.CrystalPackage#getFetch_VariableName()
-	 * @model default="FETCH cursorName INTO variableCursor"
+	 * @model default="variableCursor"
 	 * @generated
 	 */
 	String getVariableName();

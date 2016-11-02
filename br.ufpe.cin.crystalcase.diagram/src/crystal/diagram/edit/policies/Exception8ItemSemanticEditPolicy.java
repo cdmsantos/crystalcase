@@ -31,7 +31,7 @@ public class Exception8ItemSemanticEditPolicy extends CrystalBaseItemSemanticEdi
 	* @generated
 	*/
 	public Exception8ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Exception_3075);
+		super(CrystalElementTypes.Exception_3109);
 	}
 
 	/**

@@ -134,8 +134,9 @@ public class CrystalPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createCallFunction1CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.CallFunction_3195);
+		types.add(CrystalElementTypes.CallFunction_3235);
 		types.add(CrystalElementTypes.CallFunction_3104);
 		types.add(CrystalElementTypes.CallFunction_3175);
 		types.add(CrystalElementTypes.CallFunction_3180);
@@ -156,8 +157,9 @@ public class CrystalPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createCallProcedure2CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.CallProcedure_3194);
+		types.add(CrystalElementTypes.CallProcedure_3234);
 		types.add(CrystalElementTypes.CallProcedure_3103);
 		types.add(CrystalElementTypes.CallProcedure_3174);
 		types.add(CrystalElementTypes.CallProcedure_3179);
@@ -178,8 +180,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createDelete3CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Delete_3186);
+		types.add(CrystalElementTypes.Delete_3226);
 		types.add(CrystalElementTypes.Delete_3201);
 		types.add(CrystalElementTypes.Delete_3095);
 		types.add(CrystalElementTypes.Delete_3158);
@@ -200,14 +203,15 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createException4CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Exception_3056);
 		types.add(CrystalElementTypes.Exception_3181);
-		types.add(CrystalElementTypes.Exception_3109);
+		types.add(CrystalElementTypes.Exception_3221);
 		types.add(CrystalElementTypes.Exception_3090);
 		types.add(CrystalElementTypes.Exception_3151);
 		types.add(CrystalElementTypes.Exception_3153);
 		types.add(CrystalElementTypes.Exception_3196);
+		types.add(CrystalElementTypes.Exception_3109);
 		types.add(CrystalElementTypes.Exception_3075);
 		types.add(CrystalElementTypes.Exception_3037);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Exception4CreationTool_title,
@@ -222,20 +226,21 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createExpression5CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
+		types.add(CrystalElementTypes.Expression_3217);
 		types.add(CrystalElementTypes.Expression_3211);
+		types.add(CrystalElementTypes.Expression_3220);
 		types.add(CrystalElementTypes.Expression_3212);
-		types.add(CrystalElementTypes.Expression_3213);
 		types.add(CrystalElementTypes.Expression_3214);
+		types.add(CrystalElementTypes.Expression_3213);
 		types.add(CrystalElementTypes.Expression_3215);
 		types.add(CrystalElementTypes.Expression_3216);
-		types.add(CrystalElementTypes.Expression_3217);
 		types.add(CrystalElementTypes.Expression_3218);
 		types.add(CrystalElementTypes.Expression_3219);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Expression5CreationTool_title,
 				Messages.Expression5CreationTool_desc, types);
 		entry.setId("createExpression5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CrystalElementTypes.getImageDescriptor(CrystalElementTypes.Expression_3211));
+		entry.setSmallIcon(CrystalElementTypes.getImageDescriptor(CrystalElementTypes.Expression_3217));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -244,8 +249,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createInsert6CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Insert_3184);
+		types.add(CrystalElementTypes.Insert_3224);
 		types.add(CrystalElementTypes.Insert_3199);
 		types.add(CrystalElementTypes.Insert_3093);
 		types.add(CrystalElementTypes.Insert_3156);
@@ -266,8 +272,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createSelect7CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Select_3187);
+		types.add(CrystalElementTypes.Select_3227);
 		types.add(CrystalElementTypes.Select_3202);
 		types.add(CrystalElementTypes.Select_3096);
 		types.add(CrystalElementTypes.Select_3159);
@@ -288,8 +295,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createUpdate8CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Update_3185);
+		types.add(CrystalElementTypes.Update_3225);
 		types.add(CrystalElementTypes.Update_3200);
 		types.add(CrystalElementTypes.Update_3094);
 		types.add(CrystalElementTypes.Update_3157);
@@ -448,14 +456,15 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createIf1CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.If_3057);
 		types.add(CrystalElementTypes.If_3182);
-		types.add(CrystalElementTypes.If_3110);
+		types.add(CrystalElementTypes.If_3222);
 		types.add(CrystalElementTypes.If_3091);
 		types.add(CrystalElementTypes.If_3152);
 		types.add(CrystalElementTypes.If_3154);
 		types.add(CrystalElementTypes.If_3197);
+		types.add(CrystalElementTypes.If_3110);
 		types.add(CrystalElementTypes.If_3076);
 		types.add(CrystalElementTypes.If_3038);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.If1CreationTool_title,
@@ -470,9 +479,10 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createCase2CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Case_3183);
 		types.add(CrystalElementTypes.Case_3198);
+		types.add(CrystalElementTypes.Case_3223);
 		types.add(CrystalElementTypes.Case_3092);
 		types.add(CrystalElementTypes.Case_3155);
 		types.add(CrystalElementTypes.Case_3161);
@@ -504,8 +514,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createWhile1CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.While_3188);
+		types.add(CrystalElementTypes.While_3228);
 		types.add(CrystalElementTypes.While_3203);
 		types.add(CrystalElementTypes.While_3097);
 		types.add(CrystalElementTypes.While_3160);
@@ -526,8 +537,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createLoop2CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Loop_3190);
+		types.add(CrystalElementTypes.Loop_3230);
 		types.add(CrystalElementTypes.Loop_3099);
 		types.add(CrystalElementTypes.Loop_3169);
 		types.add(CrystalElementTypes.Loop_3170);
@@ -548,8 +560,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createFor3CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.For_3189);
+		types.add(CrystalElementTypes.For_3229);
 		types.add(CrystalElementTypes.For_3098);
 		types.add(CrystalElementTypes.For_3167);
 		types.add(CrystalElementTypes.For_3168);
@@ -570,8 +583,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createOpen1CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Open_3191);
+		types.add(CrystalElementTypes.Open_3231);
 		types.add(CrystalElementTypes.Open_3100);
 		types.add(CrystalElementTypes.Open_3171);
 		types.add(CrystalElementTypes.Open_3176);
@@ -592,8 +606,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createFetch2CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Fetch_3192);
+		types.add(CrystalElementTypes.Fetch_3232);
 		types.add(CrystalElementTypes.Fetch_3101);
 		types.add(CrystalElementTypes.Fetch_3172);
 		types.add(CrystalElementTypes.Fetch_3177);
@@ -614,8 +629,9 @@ public class CrystalPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createClose3CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(10);
 		types.add(CrystalElementTypes.Close_3193);
+		types.add(CrystalElementTypes.Close_3233);
 		types.add(CrystalElementTypes.Close_3102);
 		types.add(CrystalElementTypes.Close_3173);
 		types.add(CrystalElementTypes.Close_3178);

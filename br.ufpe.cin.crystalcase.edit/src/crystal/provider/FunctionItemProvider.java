@@ -205,6 +205,11 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
@@ -276,11 +281,6 @@ public class FunctionItemProvider extends SubprogramsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FUNCTION__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createExpression()));
 	}
 
 	/**

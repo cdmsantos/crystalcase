@@ -94,6 +94,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CursorName2EditPart.VISUAL_ID:
 				return new CursorName2EditPart(view);
 
+			case ExpressionEditPart.VISUAL_ID:
+				return new ExpressionEditPart(view);
+
+			case ExpressionDescriptionEditPart.VISUAL_ID:
+				return new ExpressionDescriptionEditPart(view);
+
 			case ExceptionEditPart.VISUAL_ID:
 				return new ExceptionEditPart(view);
 
@@ -105,6 +111,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case IfDescriptionEditPart.VISUAL_ID:
 				return new IfDescriptionEditPart(view);
+
+			case Expression2EditPart.VISUAL_ID:
+				return new Expression2EditPart(view);
+
+			case ExpressionDescription2EditPart.VISUAL_ID:
+				return new ExpressionDescription2EditPart(view);
 
 			case Exception2EditPart.VISUAL_ID:
 				return new Exception2EditPart(view);
@@ -124,11 +136,11 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CaseDescriptionEditPart.VISUAL_ID:
 				return new CaseDescriptionEditPart(view);
 
-			case SelectorEditPart.VISUAL_ID:
-				return new SelectorEditPart(view);
+			case Expression3EditPart.VISUAL_ID:
+				return new Expression3EditPart(view);
 
-			case SelectorDescriptionEditPart.VISUAL_ID:
-				return new SelectorDescriptionEditPart(view);
+			case ExpressionDescription3EditPart.VISUAL_ID:
+				return new ExpressionDescription3EditPart(view);
 
 			case Exception3EditPart.VISUAL_ID:
 				return new Exception3EditPart(view);
@@ -172,6 +184,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case WhileDescriptionEditPart.VISUAL_ID:
 				return new WhileDescriptionEditPart(view);
 
+			case Expression4EditPart.VISUAL_ID:
+				return new Expression4EditPart(view);
+
+			case ExpressionDescription4EditPart.VISUAL_ID:
+				return new ExpressionDescription4EditPart(view);
+
 			case Exception4EditPart.VISUAL_ID:
 				return new Exception4EditPart(view);
 
@@ -190,6 +208,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case ForDescriptionEditPart.VISUAL_ID:
 				return new ForDescriptionEditPart(view);
 
+			case Expression5EditPart.VISUAL_ID:
+				return new Expression5EditPart(view);
+
+			case ExpressionDescription5EditPart.VISUAL_ID:
+				return new ExpressionDescription5EditPart(view);
+
 			case Exception5EditPart.VISUAL_ID:
 				return new Exception5EditPart(view);
 
@@ -207,6 +231,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case LoopDescriptionEditPart.VISUAL_ID:
 				return new LoopDescriptionEditPart(view);
+
+			case Expression6EditPart.VISUAL_ID:
+				return new Expression6EditPart(view);
+
+			case ExpressionDescription6EditPart.VISUAL_ID:
+				return new ExpressionDescription6EditPart(view);
 
 			case Exception6EditPart.VISUAL_ID:
 				return new Exception6EditPart(view);
@@ -250,11 +280,11 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescriptionEditPart.VISUAL_ID:
 				return new CallFunctionDescriptionEditPart(view);
 
-			case ExpressionEditPart.VISUAL_ID:
-				return new ExpressionEditPart(view);
+			case Expression7EditPart.VISUAL_ID:
+				return new Expression7EditPart(view);
 
-			case ExpressionDescriptionEditPart.VISUAL_ID:
-				return new ExpressionDescriptionEditPart(view);
+			case ExpressionDescription7EditPart.VISUAL_ID:
+				return new ExpressionDescription7EditPart(view);
 
 			case Exception7EditPart.VISUAL_ID:
 				return new Exception7EditPart(view);
@@ -273,6 +303,12 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case CaseDescription2EditPart.VISUAL_ID:
 				return new CaseDescription2EditPart(view);
+
+			case Case3EditPart.VISUAL_ID:
+				return new Case3EditPart(view);
+
+			case CaseDescription3EditPart.VISUAL_ID:
+				return new CaseDescription3EditPart(view);
 
 			case Insert2EditPart.VISUAL_ID:
 				return new Insert2EditPart(view);
@@ -304,41 +340,11 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case WhileDescription2EditPart.VISUAL_ID:
 				return new WhileDescription2EditPart(view);
 
-			case Case3EditPart.VISUAL_ID:
-				return new Case3EditPart(view);
+			case Case4EditPart.VISUAL_ID:
+				return new Case4EditPart(view);
 
-			case CaseDescription3EditPart.VISUAL_ID:
-				return new CaseDescription3EditPart(view);
-
-			case Insert3EditPart.VISUAL_ID:
-				return new Insert3EditPart(view);
-
-			case InsertDescription3EditPart.VISUAL_ID:
-				return new InsertDescription3EditPart(view);
-
-			case Update3EditPart.VISUAL_ID:
-				return new Update3EditPart(view);
-
-			case UpdateDescription3EditPart.VISUAL_ID:
-				return new UpdateDescription3EditPart(view);
-
-			case Delete3EditPart.VISUAL_ID:
-				return new Delete3EditPart(view);
-
-			case DeleteDescription3EditPart.VISUAL_ID:
-				return new DeleteDescription3EditPart(view);
-
-			case Select3EditPart.VISUAL_ID:
-				return new Select3EditPart(view);
-
-			case SelectDescription3EditPart.VISUAL_ID:
-				return new SelectDescription3EditPart(view);
-
-			case While3EditPart.VISUAL_ID:
-				return new While3EditPart(view);
-
-			case WhileDescription3EditPart.VISUAL_ID:
-				return new WhileDescription3EditPart(view);
+			case CaseDescription4EditPart.VISUAL_ID:
+				return new CaseDescription4EditPart(view);
 
 			case For2EditPart.VISUAL_ID:
 				return new For2EditPart(view);
@@ -346,41 +352,11 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case ForDescription2EditPart.VISUAL_ID:
 				return new ForDescription2EditPart(view);
 
-			case Case4EditPart.VISUAL_ID:
-				return new Case4EditPart(view);
+			case Case5EditPart.VISUAL_ID:
+				return new Case5EditPart(view);
 
-			case CaseDescription4EditPart.VISUAL_ID:
-				return new CaseDescription4EditPart(view);
-
-			case Insert4EditPart.VISUAL_ID:
-				return new Insert4EditPart(view);
-
-			case InsertDescription4EditPart.VISUAL_ID:
-				return new InsertDescription4EditPart(view);
-
-			case Update4EditPart.VISUAL_ID:
-				return new Update4EditPart(view);
-
-			case UpdateDescription4EditPart.VISUAL_ID:
-				return new UpdateDescription4EditPart(view);
-
-			case Delete4EditPart.VISUAL_ID:
-				return new Delete4EditPart(view);
-
-			case DeleteDescription4EditPart.VISUAL_ID:
-				return new DeleteDescription4EditPart(view);
-
-			case Select4EditPart.VISUAL_ID:
-				return new Select4EditPart(view);
-
-			case SelectDescription4EditPart.VISUAL_ID:
-				return new SelectDescription4EditPart(view);
-
-			case While4EditPart.VISUAL_ID:
-				return new While4EditPart(view);
-
-			case WhileDescription4EditPart.VISUAL_ID:
-				return new WhileDescription4EditPart(view);
+			case CaseDescription5EditPart.VISUAL_ID:
+				return new CaseDescription5EditPart(view);
 
 			case Loop2EditPart.VISUAL_ID:
 				return new Loop2EditPart(view);
@@ -388,41 +364,11 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case LoopDescription2EditPart.VISUAL_ID:
 				return new LoopDescription2EditPart(view);
 
-			case Case5EditPart.VISUAL_ID:
-				return new Case5EditPart(view);
+			case Case6EditPart.VISUAL_ID:
+				return new Case6EditPart(view);
 
-			case CaseDescription5EditPart.VISUAL_ID:
-				return new CaseDescription5EditPart(view);
-
-			case Insert5EditPart.VISUAL_ID:
-				return new Insert5EditPart(view);
-
-			case InsertDescription5EditPart.VISUAL_ID:
-				return new InsertDescription5EditPart(view);
-
-			case Update5EditPart.VISUAL_ID:
-				return new Update5EditPart(view);
-
-			case UpdateDescription5EditPart.VISUAL_ID:
-				return new UpdateDescription5EditPart(view);
-
-			case Delete5EditPart.VISUAL_ID:
-				return new Delete5EditPart(view);
-
-			case DeleteDescription5EditPart.VISUAL_ID:
-				return new DeleteDescription5EditPart(view);
-
-			case Select5EditPart.VISUAL_ID:
-				return new Select5EditPart(view);
-
-			case SelectDescription5EditPart.VISUAL_ID:
-				return new SelectDescription5EditPart(view);
-
-			case While5EditPart.VISUAL_ID:
-				return new While5EditPart(view);
-
-			case WhileDescription5EditPart.VISUAL_ID:
-				return new WhileDescription5EditPart(view);
+			case CaseDescription6EditPart.VISUAL_ID:
+				return new CaseDescription6EditPart(view);
 
 			case Open2EditPart.VISUAL_ID:
 				return new Open2EditPart(view);
@@ -454,11 +400,89 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription2EditPart.VISUAL_ID:
 				return new CallFunctionDescription2EditPart(view);
 
-			case Expression2EditPart.VISUAL_ID:
-				return new Expression2EditPart(view);
+			case SelectorEditPart.VISUAL_ID:
+				return new SelectorEditPart(view);
 
-			case ExpressionDescription2EditPart.VISUAL_ID:
-				return new ExpressionDescription2EditPart(view);
+			case SelectorDescriptionEditPart.VISUAL_ID:
+				return new SelectorDescriptionEditPart(view);
+
+			case Expression8EditPart.VISUAL_ID:
+				return new Expression8EditPart(view);
+
+			case ExpressionDescription8EditPart.VISUAL_ID:
+				return new ExpressionDescription8EditPart(view);
+
+			case Exception8EditPart.VISUAL_ID:
+				return new Exception8EditPart(view);
+
+			case ExceptionDescription8EditPart.VISUAL_ID:
+				return new ExceptionDescription8EditPart(view);
+
+			case If8EditPart.VISUAL_ID:
+				return new If8EditPart(view);
+
+			case IfDescription8EditPart.VISUAL_ID:
+				return new IfDescription8EditPart(view);
+
+			case Insert3EditPart.VISUAL_ID:
+				return new Insert3EditPart(view);
+
+			case InsertDescription3EditPart.VISUAL_ID:
+				return new InsertDescription3EditPart(view);
+
+			case Update3EditPart.VISUAL_ID:
+				return new Update3EditPart(view);
+
+			case UpdateDescription3EditPart.VISUAL_ID:
+				return new UpdateDescription3EditPart(view);
+
+			case Delete3EditPart.VISUAL_ID:
+				return new Delete3EditPart(view);
+
+			case DeleteDescription3EditPart.VISUAL_ID:
+				return new DeleteDescription3EditPart(view);
+
+			case Select3EditPart.VISUAL_ID:
+				return new Select3EditPart(view);
+
+			case SelectDescription3EditPart.VISUAL_ID:
+				return new SelectDescription3EditPart(view);
+
+			case While3EditPart.VISUAL_ID:
+				return new While3EditPart(view);
+
+			case WhileDescription3EditPart.VISUAL_ID:
+				return new WhileDescription3EditPart(view);
+
+			case Insert4EditPart.VISUAL_ID:
+				return new Insert4EditPart(view);
+
+			case InsertDescription4EditPart.VISUAL_ID:
+				return new InsertDescription4EditPart(view);
+
+			case Update4EditPart.VISUAL_ID:
+				return new Update4EditPart(view);
+
+			case UpdateDescription4EditPart.VISUAL_ID:
+				return new UpdateDescription4EditPart(view);
+
+			case Delete4EditPart.VISUAL_ID:
+				return new Delete4EditPart(view);
+
+			case DeleteDescription4EditPart.VISUAL_ID:
+				return new DeleteDescription4EditPart(view);
+
+			case Select4EditPart.VISUAL_ID:
+				return new Select4EditPart(view);
+
+			case SelectDescription4EditPart.VISUAL_ID:
+				return new SelectDescription4EditPart(view);
+
+			case While4EditPart.VISUAL_ID:
+				return new While4EditPart(view);
+
+			case WhileDescription4EditPart.VISUAL_ID:
+				return new WhileDescription4EditPart(view);
 
 			case For3EditPart.VISUAL_ID:
 				return new For3EditPart(view);
@@ -466,11 +490,35 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case ForDescription3EditPart.VISUAL_ID:
 				return new ForDescription3EditPart(view);
 
-			case For4EditPart.VISUAL_ID:
-				return new For4EditPart(view);
+			case Insert5EditPart.VISUAL_ID:
+				return new Insert5EditPart(view);
 
-			case ForDescription4EditPart.VISUAL_ID:
-				return new ForDescription4EditPart(view);
+			case InsertDescription5EditPart.VISUAL_ID:
+				return new InsertDescription5EditPart(view);
+
+			case Update5EditPart.VISUAL_ID:
+				return new Update5EditPart(view);
+
+			case UpdateDescription5EditPart.VISUAL_ID:
+				return new UpdateDescription5EditPart(view);
+
+			case Delete5EditPart.VISUAL_ID:
+				return new Delete5EditPart(view);
+
+			case DeleteDescription5EditPart.VISUAL_ID:
+				return new DeleteDescription5EditPart(view);
+
+			case Select5EditPart.VISUAL_ID:
+				return new Select5EditPart(view);
+
+			case SelectDescription5EditPart.VISUAL_ID:
+				return new SelectDescription5EditPart(view);
+
+			case While5EditPart.VISUAL_ID:
+				return new While5EditPart(view);
+
+			case WhileDescription5EditPart.VISUAL_ID:
+				return new WhileDescription5EditPart(view);
 
 			case Loop3EditPart.VISUAL_ID:
 				return new Loop3EditPart(view);
@@ -478,11 +526,35 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case LoopDescription3EditPart.VISUAL_ID:
 				return new LoopDescription3EditPart(view);
 
-			case Loop4EditPart.VISUAL_ID:
-				return new Loop4EditPart(view);
+			case Insert6EditPart.VISUAL_ID:
+				return new Insert6EditPart(view);
 
-			case LoopDescription4EditPart.VISUAL_ID:
-				return new LoopDescription4EditPart(view);
+			case InsertDescription6EditPart.VISUAL_ID:
+				return new InsertDescription6EditPart(view);
+
+			case Update6EditPart.VISUAL_ID:
+				return new Update6EditPart(view);
+
+			case UpdateDescription6EditPart.VISUAL_ID:
+				return new UpdateDescription6EditPart(view);
+
+			case Delete6EditPart.VISUAL_ID:
+				return new Delete6EditPart(view);
+
+			case DeleteDescription6EditPart.VISUAL_ID:
+				return new DeleteDescription6EditPart(view);
+
+			case Select6EditPart.VISUAL_ID:
+				return new Select6EditPart(view);
+
+			case SelectDescription6EditPart.VISUAL_ID:
+				return new SelectDescription6EditPart(view);
+
+			case While6EditPart.VISUAL_ID:
+				return new While6EditPart(view);
+
+			case WhileDescription6EditPart.VISUAL_ID:
+				return new WhileDescription6EditPart(view);
 
 			case Open3EditPart.VISUAL_ID:
 				return new Open3EditPart(view);
@@ -514,11 +586,29 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription3EditPart.VISUAL_ID:
 				return new CallFunctionDescription3EditPart(view);
 
-			case Expression3EditPart.VISUAL_ID:
-				return new Expression3EditPart(view);
+			case For4EditPart.VISUAL_ID:
+				return new For4EditPart(view);
 
-			case ExpressionDescription3EditPart.VISUAL_ID:
-				return new ExpressionDescription3EditPart(view);
+			case ForDescription4EditPart.VISUAL_ID:
+				return new ForDescription4EditPart(view);
+
+			case For5EditPart.VISUAL_ID:
+				return new For5EditPart(view);
+
+			case ForDescription5EditPart.VISUAL_ID:
+				return new ForDescription5EditPart(view);
+
+			case Loop4EditPart.VISUAL_ID:
+				return new Loop4EditPart(view);
+
+			case LoopDescription4EditPart.VISUAL_ID:
+				return new LoopDescription4EditPart(view);
+
+			case Loop5EditPart.VISUAL_ID:
+				return new Loop5EditPart(view);
+
+			case LoopDescription5EditPart.VISUAL_ID:
+				return new LoopDescription5EditPart(view);
 
 			case Open4EditPart.VISUAL_ID:
 				return new Open4EditPart(view);
@@ -550,24 +640,6 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription4EditPart.VISUAL_ID:
 				return new CallFunctionDescription4EditPart(view);
 
-			case Expression4EditPart.VISUAL_ID:
-				return new Expression4EditPart(view);
-
-			case ExpressionDescription4EditPart.VISUAL_ID:
-				return new ExpressionDescription4EditPart(view);
-
-			case For5EditPart.VISUAL_ID:
-				return new For5EditPart(view);
-
-			case ForDescription5EditPart.VISUAL_ID:
-				return new ForDescription5EditPart(view);
-
-			case Loop5EditPart.VISUAL_ID:
-				return new Loop5EditPart(view);
-
-			case LoopDescription5EditPart.VISUAL_ID:
-				return new LoopDescription5EditPart(view);
-
 			case Open5EditPart.VISUAL_ID:
 				return new Open5EditPart(view);
 
@@ -597,48 +669,6 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case CallFunctionDescription5EditPart.VISUAL_ID:
 				return new CallFunctionDescription5EditPart(view);
-
-			case Expression5EditPart.VISUAL_ID:
-				return new Expression5EditPart(view);
-
-			case ExpressionDescription5EditPart.VISUAL_ID:
-				return new ExpressionDescription5EditPart(view);
-
-			case Case6EditPart.VISUAL_ID:
-				return new Case6EditPart(view);
-
-			case CaseDescription6EditPart.VISUAL_ID:
-				return new CaseDescription6EditPart(view);
-
-			case Insert6EditPart.VISUAL_ID:
-				return new Insert6EditPart(view);
-
-			case InsertDescription6EditPart.VISUAL_ID:
-				return new InsertDescription6EditPart(view);
-
-			case Update6EditPart.VISUAL_ID:
-				return new Update6EditPart(view);
-
-			case UpdateDescription6EditPart.VISUAL_ID:
-				return new UpdateDescription6EditPart(view);
-
-			case Delete6EditPart.VISUAL_ID:
-				return new Delete6EditPart(view);
-
-			case DeleteDescription6EditPart.VISUAL_ID:
-				return new DeleteDescription6EditPart(view);
-
-			case Select6EditPart.VISUAL_ID:
-				return new Select6EditPart(view);
-
-			case SelectDescription6EditPart.VISUAL_ID:
-				return new SelectDescription6EditPart(view);
-
-			case While6EditPart.VISUAL_ID:
-				return new While6EditPart(view);
-
-			case WhileDescription6EditPart.VISUAL_ID:
-				return new WhileDescription6EditPart(view);
 
 			case For6EditPart.VISUAL_ID:
 				return new For6EditPart(view);
@@ -681,12 +711,6 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case CallFunctionDescription6EditPart.VISUAL_ID:
 				return new CallFunctionDescription6EditPart(view);
-
-			case Expression6EditPart.VISUAL_ID:
-				return new Expression6EditPart(view);
-
-			case ExpressionDescription6EditPart.VISUAL_ID:
-				return new ExpressionDescription6EditPart(view);
 
 			case Case7EditPart.VISUAL_ID:
 				return new Case7EditPart(view);
@@ -766,96 +790,6 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription7EditPart.VISUAL_ID:
 				return new CallFunctionDescription7EditPart(view);
 
-			case Expression7EditPart.VISUAL_ID:
-				return new Expression7EditPart(view);
-
-			case ExpressionDescription7EditPart.VISUAL_ID:
-				return new ExpressionDescription7EditPart(view);
-
-			case DataType3EditPart.VISUAL_ID:
-				return new DataType3EditPart(view);
-
-			case DataTypeName3EditPart.VISUAL_ID:
-				return new DataTypeName3EditPart(view);
-
-			case Collections3EditPart.VISUAL_ID:
-				return new Collections3EditPart(view);
-
-			case CollectionsName3EditPart.VISUAL_ID:
-				return new CollectionsName3EditPart(view);
-
-			case Records3EditPart.VISUAL_ID:
-				return new Records3EditPart(view);
-
-			case RecordsName3EditPart.VISUAL_ID:
-				return new RecordsName3EditPart(view);
-
-			case Cursor3EditPart.VISUAL_ID:
-				return new Cursor3EditPart(view);
-
-			case CursorName3EditPart.VISUAL_ID:
-				return new CursorName3EditPart(view);
-
-			case DataType4EditPart.VISUAL_ID:
-				return new DataType4EditPart(view);
-
-			case DataTypeName4EditPart.VISUAL_ID:
-				return new DataTypeName4EditPart(view);
-
-			case Collections4EditPart.VISUAL_ID:
-				return new Collections4EditPart(view);
-
-			case CollectionsName4EditPart.VISUAL_ID:
-				return new CollectionsName4EditPart(view);
-
-			case Records4EditPart.VISUAL_ID:
-				return new Records4EditPart(view);
-
-			case RecordsName4EditPart.VISUAL_ID:
-				return new RecordsName4EditPart(view);
-
-			case Cursor4EditPart.VISUAL_ID:
-				return new Cursor4EditPart(view);
-
-			case CursorName4EditPart.VISUAL_ID:
-				return new CursorName4EditPart(view);
-
-			case DataType5EditPart.VISUAL_ID:
-				return new DataType5EditPart(view);
-
-			case DataTypeName5EditPart.VISUAL_ID:
-				return new DataTypeName5EditPart(view);
-
-			case Collections5EditPart.VISUAL_ID:
-				return new Collections5EditPart(view);
-
-			case CollectionsName5EditPart.VISUAL_ID:
-				return new CollectionsName5EditPart(view);
-
-			case Records5EditPart.VISUAL_ID:
-				return new Records5EditPart(view);
-
-			case RecordsName5EditPart.VISUAL_ID:
-				return new RecordsName5EditPart(view);
-
-			case Cursor5EditPart.VISUAL_ID:
-				return new Cursor5EditPart(view);
-
-			case CursorName5EditPart.VISUAL_ID:
-				return new CursorName5EditPart(view);
-
-			case Exception8EditPart.VISUAL_ID:
-				return new Exception8EditPart(view);
-
-			case ExceptionDescription8EditPart.VISUAL_ID:
-				return new ExceptionDescription8EditPart(view);
-
-			case If8EditPart.VISUAL_ID:
-				return new If8EditPart(view);
-
-			case IfDescription8EditPart.VISUAL_ID:
-				return new IfDescription8EditPart(view);
-
 			case Case8EditPart.VISUAL_ID:
 				return new Case8EditPart(view);
 
@@ -934,35 +868,83 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription8EditPart.VISUAL_ID:
 				return new CallFunctionDescription8EditPart(view);
 
-			case Expression8EditPart.VISUAL_ID:
-				return new Expression8EditPart(view);
+			case DataType3EditPart.VISUAL_ID:
+				return new DataType3EditPart(view);
 
-			case ExpressionDescription8EditPart.VISUAL_ID:
-				return new ExpressionDescription8EditPart(view);
+			case DataTypeName3EditPart.VISUAL_ID:
+				return new DataTypeName3EditPart(view);
 
-			case DataType6EditPart.VISUAL_ID:
-				return new DataType6EditPart(view);
+			case Collections3EditPart.VISUAL_ID:
+				return new Collections3EditPart(view);
 
-			case DataTypeName6EditPart.VISUAL_ID:
-				return new DataTypeName6EditPart(view);
+			case CollectionsName3EditPart.VISUAL_ID:
+				return new CollectionsName3EditPart(view);
 
-			case Collections6EditPart.VISUAL_ID:
-				return new Collections6EditPart(view);
+			case Records3EditPart.VISUAL_ID:
+				return new Records3EditPart(view);
 
-			case CollectionsName6EditPart.VISUAL_ID:
-				return new CollectionsName6EditPart(view);
+			case RecordsName3EditPart.VISUAL_ID:
+				return new RecordsName3EditPart(view);
 
-			case Records6EditPart.VISUAL_ID:
-				return new Records6EditPart(view);
+			case Cursor3EditPart.VISUAL_ID:
+				return new Cursor3EditPart(view);
 
-			case RecordsName6EditPart.VISUAL_ID:
-				return new RecordsName6EditPart(view);
+			case CursorName3EditPart.VISUAL_ID:
+				return new CursorName3EditPart(view);
 
-			case Cursor6EditPart.VISUAL_ID:
-				return new Cursor6EditPart(view);
+			case DataType4EditPart.VISUAL_ID:
+				return new DataType4EditPart(view);
 
-			case CursorName6EditPart.VISUAL_ID:
-				return new CursorName6EditPart(view);
+			case DataTypeName4EditPart.VISUAL_ID:
+				return new DataTypeName4EditPart(view);
+
+			case Collections4EditPart.VISUAL_ID:
+				return new Collections4EditPart(view);
+
+			case CollectionsName4EditPart.VISUAL_ID:
+				return new CollectionsName4EditPart(view);
+
+			case Records4EditPart.VISUAL_ID:
+				return new Records4EditPart(view);
+
+			case RecordsName4EditPart.VISUAL_ID:
+				return new RecordsName4EditPart(view);
+
+			case Cursor4EditPart.VISUAL_ID:
+				return new Cursor4EditPart(view);
+
+			case CursorName4EditPart.VISUAL_ID:
+				return new CursorName4EditPart(view);
+
+			case DataType5EditPart.VISUAL_ID:
+				return new DataType5EditPart(view);
+
+			case DataTypeName5EditPart.VISUAL_ID:
+				return new DataTypeName5EditPart(view);
+
+			case Collections5EditPart.VISUAL_ID:
+				return new Collections5EditPart(view);
+
+			case CollectionsName5EditPart.VISUAL_ID:
+				return new CollectionsName5EditPart(view);
+
+			case Records5EditPart.VISUAL_ID:
+				return new Records5EditPart(view);
+
+			case RecordsName5EditPart.VISUAL_ID:
+				return new RecordsName5EditPart(view);
+
+			case Cursor5EditPart.VISUAL_ID:
+				return new Cursor5EditPart(view);
+
+			case CursorName5EditPart.VISUAL_ID:
+				return new CursorName5EditPart(view);
+
+			case Expression9EditPart.VISUAL_ID:
+				return new Expression9EditPart(view);
+
+			case ExpressionDescription9EditPart.VISUAL_ID:
+				return new ExpressionDescription9EditPart(view);
 
 			case Exception9EditPart.VISUAL_ID:
 				return new Exception9EditPart(view);
@@ -1054,11 +1036,125 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CallFunctionDescription9EditPart.VISUAL_ID:
 				return new CallFunctionDescription9EditPart(view);
 
-			case Expression9EditPart.VISUAL_ID:
-				return new Expression9EditPart(view);
+			case DataType6EditPart.VISUAL_ID:
+				return new DataType6EditPart(view);
 
-			case ExpressionDescription9EditPart.VISUAL_ID:
-				return new ExpressionDescription9EditPart(view);
+			case DataTypeName6EditPart.VISUAL_ID:
+				return new DataTypeName6EditPart(view);
+
+			case Collections6EditPart.VISUAL_ID:
+				return new Collections6EditPart(view);
+
+			case CollectionsName6EditPart.VISUAL_ID:
+				return new CollectionsName6EditPart(view);
+
+			case Records6EditPart.VISUAL_ID:
+				return new Records6EditPart(view);
+
+			case RecordsName6EditPart.VISUAL_ID:
+				return new RecordsName6EditPart(view);
+
+			case Cursor6EditPart.VISUAL_ID:
+				return new Cursor6EditPart(view);
+
+			case CursorName6EditPart.VISUAL_ID:
+				return new CursorName6EditPart(view);
+
+			case Expression10EditPart.VISUAL_ID:
+				return new Expression10EditPart(view);
+
+			case ExpressionDescription10EditPart.VISUAL_ID:
+				return new ExpressionDescription10EditPart(view);
+
+			case Exception10EditPart.VISUAL_ID:
+				return new Exception10EditPart(view);
+
+			case ExceptionDescription10EditPart.VISUAL_ID:
+				return new ExceptionDescription10EditPart(view);
+
+			case If10EditPart.VISUAL_ID:
+				return new If10EditPart(view);
+
+			case IfDescription10EditPart.VISUAL_ID:
+				return new IfDescription10EditPart(view);
+
+			case Case10EditPart.VISUAL_ID:
+				return new Case10EditPart(view);
+
+			case CaseDescription10EditPart.VISUAL_ID:
+				return new CaseDescription10EditPart(view);
+
+			case Insert10EditPart.VISUAL_ID:
+				return new Insert10EditPart(view);
+
+			case InsertDescription10EditPart.VISUAL_ID:
+				return new InsertDescription10EditPart(view);
+
+			case Update10EditPart.VISUAL_ID:
+				return new Update10EditPart(view);
+
+			case UpdateDescription10EditPart.VISUAL_ID:
+				return new UpdateDescription10EditPart(view);
+
+			case Delete10EditPart.VISUAL_ID:
+				return new Delete10EditPart(view);
+
+			case DeleteDescription10EditPart.VISUAL_ID:
+				return new DeleteDescription10EditPart(view);
+
+			case Select10EditPart.VISUAL_ID:
+				return new Select10EditPart(view);
+
+			case SelectDescription10EditPart.VISUAL_ID:
+				return new SelectDescription10EditPart(view);
+
+			case While10EditPart.VISUAL_ID:
+				return new While10EditPart(view);
+
+			case WhileDescription10EditPart.VISUAL_ID:
+				return new WhileDescription10EditPart(view);
+
+			case For10EditPart.VISUAL_ID:
+				return new For10EditPart(view);
+
+			case ForDescription10EditPart.VISUAL_ID:
+				return new ForDescription10EditPart(view);
+
+			case Loop10EditPart.VISUAL_ID:
+				return new Loop10EditPart(view);
+
+			case LoopDescription10EditPart.VISUAL_ID:
+				return new LoopDescription10EditPart(view);
+
+			case Open10EditPart.VISUAL_ID:
+				return new Open10EditPart(view);
+
+			case OpenDescription10EditPart.VISUAL_ID:
+				return new OpenDescription10EditPart(view);
+
+			case Fetch10EditPart.VISUAL_ID:
+				return new Fetch10EditPart(view);
+
+			case FetchDescription10EditPart.VISUAL_ID:
+				return new FetchDescription10EditPart(view);
+
+			case Close10EditPart.VISUAL_ID:
+				return new Close10EditPart(view);
+
+			case CloseDescription10EditPart.VISUAL_ID:
+				return new CloseDescription10EditPart(view);
+
+			case CallProcedure10EditPart.VISUAL_ID:
+				return new CallProcedure10EditPart(view);
+
+			case CallProcedureDescription10EditPart.VISUAL_ID:
+				return new CallProcedureDescription10EditPart(view);
+
+			case CallFunction10EditPart.VISUAL_ID:
+				return new CallFunction10EditPart(view);
+
+			case CallFunctionDescription10EditPart.VISUAL_ID:
+				return new CallFunctionDescription10EditPart(view);
 
 			case ProcedureProcedureDeclarativePartCompartmentEditPart.VISUAL_ID:
 				return new ProcedureProcedureDeclarativePartCompartmentEditPart(view);
@@ -1084,8 +1180,8 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
 				return new CaseCaseCasesCompartmentEditPart(view);
 
-			case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
-				return new SelectorSelectorCaseStatementsCompartmentEditPart(view);
+			case CaseCaseElseStatementsCompartmentEditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartmentEditPart(view);
 
 			case IfIfIfsCompartment3EditPart.VISUAL_ID:
 				return new IfIfIfsCompartment3EditPart(view);
@@ -1129,56 +1225,80 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
 				return new CaseCaseCasesCompartment2EditPart(view);
 
-			case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
-				return new WhileWhileWhileStatementsCompartment2EditPart(view);
+			case CaseCaseElseStatementsCompartment2EditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartment2EditPart(view);
 
 			case CaseCaseCasesCompartment3EditPart.VISUAL_ID:
 				return new CaseCaseCasesCompartment3EditPart(view);
 
-			case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
-				return new WhileWhileWhileStatementsCompartment3EditPart(view);
+			case CaseCaseElseStatementsCompartment3EditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartment3EditPart(view);
 
-			case ForForForStatementsCompartment2EditPart.VISUAL_ID:
-				return new ForForForStatementsCompartment2EditPart(view);
+			case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
+				return new WhileWhileWhileStatementsCompartment2EditPart(view);
 
 			case CaseCaseCasesCompartment4EditPart.VISUAL_ID:
 				return new CaseCaseCasesCompartment4EditPart(view);
 
-			case WhileWhileWhileStatementsCompartment4EditPart.VISUAL_ID:
-				return new WhileWhileWhileStatementsCompartment4EditPart(view);
+			case CaseCaseElseStatementsCompartment4EditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartment4EditPart(view);
 
-			case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
-				return new LoopLoopLoopStatementsCompartment2EditPart(view);
+			case ForForForStatementsCompartment2EditPart.VISUAL_ID:
+				return new ForForForStatementsCompartment2EditPart(view);
 
 			case CaseCaseCasesCompartment5EditPart.VISUAL_ID:
 				return new CaseCaseCasesCompartment5EditPart(view);
 
-			case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
-				return new WhileWhileWhileStatementsCompartment5EditPart(view);
+			case CaseCaseElseStatementsCompartment5EditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartment5EditPart(view);
 
-			case ForForForStatementsCompartment3EditPart.VISUAL_ID:
-				return new ForForForStatementsCompartment3EditPart(view);
-
-			case ForForForStatementsCompartment4EditPart.VISUAL_ID:
-				return new ForForForStatementsCompartment4EditPart(view);
-
-			case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
-				return new LoopLoopLoopStatementsCompartment3EditPart(view);
-
-			case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
-				return new LoopLoopLoopStatementsCompartment4EditPart(view);
-
-			case ForForForStatementsCompartment5EditPart.VISUAL_ID:
-				return new ForForForStatementsCompartment5EditPart(view);
-
-			case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
-				return new LoopLoopLoopStatementsCompartment5EditPart(view);
+			case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
+				return new LoopLoopLoopStatementsCompartment2EditPart(view);
 
 			case CaseCaseCasesCompartment6EditPart.VISUAL_ID:
 				return new CaseCaseCasesCompartment6EditPart(view);
 
+			case CaseCaseElseStatementsCompartment6EditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartment6EditPart(view);
+
+			case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
+				return new SelectorSelectorCaseStatementsCompartmentEditPart(view);
+
+			case IfIfIfsCompartment8EditPart.VISUAL_ID:
+				return new IfIfIfsCompartment8EditPart(view);
+
+			case IfIfElsesCompartment8EditPart.VISUAL_ID:
+				return new IfIfElsesCompartment8EditPart(view);
+
+			case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
+				return new WhileWhileWhileStatementsCompartment3EditPart(view);
+
+			case WhileWhileWhileStatementsCompartment4EditPart.VISUAL_ID:
+				return new WhileWhileWhileStatementsCompartment4EditPart(view);
+
+			case ForForForStatementsCompartment3EditPart.VISUAL_ID:
+				return new ForForForStatementsCompartment3EditPart(view);
+
+			case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
+				return new WhileWhileWhileStatementsCompartment5EditPart(view);
+
+			case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
+				return new LoopLoopLoopStatementsCompartment3EditPart(view);
+
 			case WhileWhileWhileStatementsCompartment6EditPart.VISUAL_ID:
 				return new WhileWhileWhileStatementsCompartment6EditPart(view);
+
+			case ForForForStatementsCompartment4EditPart.VISUAL_ID:
+				return new ForForForStatementsCompartment4EditPart(view);
+
+			case ForForForStatementsCompartment5EditPart.VISUAL_ID:
+				return new ForForForStatementsCompartment5EditPart(view);
+
+			case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
+				return new LoopLoopLoopStatementsCompartment4EditPart(view);
+
+			case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
+				return new LoopLoopLoopStatementsCompartment5EditPart(view);
 
 			case ForForForStatementsCompartment6EditPart.VISUAL_ID:
 				return new ForForForStatementsCompartment6EditPart(view);
@@ -1189,6 +1309,9 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CaseCaseCasesCompartment7EditPart.VISUAL_ID:
 				return new CaseCaseCasesCompartment7EditPart(view);
 
+			case CaseCaseElseStatementsCompartment7EditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartment7EditPart(view);
+
 			case WhileWhileWhileStatementsCompartment7EditPart.VISUAL_ID:
 				return new WhileWhileWhileStatementsCompartment7EditPart(view);
 
@@ -1197,6 +1320,21 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID:
 				return new LoopLoopLoopStatementsCompartment7EditPart(view);
+
+			case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
+				return new CaseCaseCasesCompartment8EditPart(view);
+
+			case CaseCaseElseStatementsCompartment8EditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartment8EditPart(view);
+
+			case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
+				return new WhileWhileWhileStatementsCompartment8EditPart(view);
+
+			case ForForForStatementsCompartment8EditPart.VISUAL_ID:
+				return new ForForForStatementsCompartment8EditPart(view);
+
+			case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
+				return new LoopLoopLoopStatementsCompartment8EditPart(view);
 
 			case FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
 				return new FunctionFunctionDeclarativePartCompartmentEditPart(view);
@@ -1210,30 +1348,6 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
 				return new FunctionFunctionExecutablePartCompartmentEditPart(view);
 
-			case IfIfIfsCompartment8EditPart.VISUAL_ID:
-				return new IfIfIfsCompartment8EditPart(view);
-
-			case IfIfElsesCompartment8EditPart.VISUAL_ID:
-				return new IfIfElsesCompartment8EditPart(view);
-
-			case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
-				return new CaseCaseCasesCompartment8EditPart(view);
-
-			case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
-				return new WhileWhileWhileStatementsCompartment8EditPart(view);
-
-			case ForForForStatementsCompartment8EditPart.VISUAL_ID:
-				return new ForForForStatementsCompartment8EditPart(view);
-
-			case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
-				return new LoopLoopLoopStatementsCompartment8EditPart(view);
-
-			case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
-				return new AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart(view);
-
-			case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
-				return new AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart(view);
-
 			case IfIfIfsCompartment9EditPart.VISUAL_ID:
 				return new IfIfIfsCompartment9EditPart(view);
 
@@ -1243,6 +1357,9 @@ public class CrystalEditPartFactory implements EditPartFactory {
 			case CaseCaseCasesCompartment9EditPart.VISUAL_ID:
 				return new CaseCaseCasesCompartment9EditPart(view);
 
+			case CaseCaseElseStatementsCompartment9EditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartment9EditPart(view);
+
 			case WhileWhileWhileStatementsCompartment9EditPart.VISUAL_ID:
 				return new WhileWhileWhileStatementsCompartment9EditPart(view);
 
@@ -1251,6 +1368,33 @@ public class CrystalEditPartFactory implements EditPartFactory {
 
 			case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
 				return new LoopLoopLoopStatementsCompartment9EditPart(view);
+
+			case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
+				return new AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart(view);
+
+			case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
+				return new AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart(view);
+
+			case IfIfIfsCompartment10EditPart.VISUAL_ID:
+				return new IfIfIfsCompartment10EditPart(view);
+
+			case IfIfElsesCompartment10EditPart.VISUAL_ID:
+				return new IfIfElsesCompartment10EditPart(view);
+
+			case CaseCaseCasesCompartment10EditPart.VISUAL_ID:
+				return new CaseCaseCasesCompartment10EditPart(view);
+
+			case CaseCaseElseStatementsCompartment10EditPart.VISUAL_ID:
+				return new CaseCaseElseStatementsCompartment10EditPart(view);
+
+			case WhileWhileWhileStatementsCompartment10EditPart.VISUAL_ID:
+				return new WhileWhileWhileStatementsCompartment10EditPart(view);
+
+			case ForForForStatementsCompartment10EditPart.VISUAL_ID:
+				return new ForForForStatementsCompartment10EditPart(view);
+
+			case LoopLoopLoopStatementsCompartment10EditPart.VISUAL_ID:
+				return new LoopLoopLoopStatementsCompartment10EditPart(view);
 
 			case TransitionEditPart.VISUAL_ID:
 				return new TransitionEditPart(view);

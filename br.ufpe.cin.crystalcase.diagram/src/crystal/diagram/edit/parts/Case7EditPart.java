@@ -38,7 +38,7 @@ public class Case7EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3058;
+	public static final int VISUAL_ID = 3138;
 
 	/**
 	* @generated
@@ -121,6 +121,12 @@ public class Case7EditPart extends ShapeNodeEditPart {
 			pane.add(((CaseCaseCasesCompartment7EditPart) childEditPart).getFigure());
 			return true;
 		}
+		if (childEditPart instanceof CaseCaseElseStatementsCompartment7EditPart) {
+			IFigure pane = getPrimaryShape().getCaseElseStatementsCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((CaseCaseElseStatementsCompartment7EditPart) childEditPart).getFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -134,6 +140,11 @@ public class Case7EditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof CaseCaseCasesCompartment7EditPart) {
 			IFigure pane = getPrimaryShape().getCaseCasesCompartmentFigure();
 			pane.remove(((CaseCaseCasesCompartment7EditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof CaseCaseElseStatementsCompartment7EditPart) {
+			IFigure pane = getPrimaryShape().getCaseElseStatementsCompartmentFigure();
+			pane.remove(((CaseCaseElseStatementsCompartment7EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -165,6 +176,9 @@ public class Case7EditPart extends ShapeNodeEditPart {
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
 		if (editPart instanceof CaseCaseCasesCompartment7EditPart) {
 			return getPrimaryShape().getCaseCasesCompartmentFigure();
+		}
+		if (editPart instanceof CaseCaseElseStatementsCompartment7EditPart) {
+			return getPrimaryShape().getCaseElseStatementsCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -277,8 +291,13 @@ public class Case7EditPart extends ShapeNodeEditPart {
 		private RectangleFigure fCaseCasesCompartmentFigure;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
+		private RectangleFigure fCaseElseStatementsCompartmentFigure;
+
+		/**
+			 * @generated
+			 */
 		public CaseFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -303,6 +322,12 @@ public class Case7EditPart extends ShapeNodeEditPart {
 
 			this.add(fCaseCasesCompartmentFigure);
 
+			fCaseElseStatementsCompartmentFigure = new RectangleFigure();
+
+			fCaseElseStatementsCompartmentFigure.setOutline(false);
+
+			this.add(fCaseElseStatementsCompartmentFigure);
+
 		}
 
 		/**
@@ -317,6 +342,13 @@ public class Case7EditPart extends ShapeNodeEditPart {
 		 */
 		public RectangleFigure getCaseCasesCompartmentFigure() {
 			return fCaseCasesCompartmentFigure;
+		}
+
+		/**
+		* @generated
+		*/
+		public RectangleFigure getCaseElseStatementsCompartmentFigure() {
+			return fCaseElseStatementsCompartmentFigure;
 		}
 
 	}

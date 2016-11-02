@@ -162,6 +162,11 @@ public class AnonymousBlockItemProvider extends SubprogramsItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CrystalPackage.Literals.ANONYMOUS_BLOCK__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.ANONYMOUS_BLOCK__EXECUTABLE_PART,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
@@ -233,11 +238,6 @@ public class AnonymousBlockItemProvider extends SubprogramsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.ANONYMOUS_BLOCK__EXECUTABLE_PART,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.ANONYMOUS_BLOCK__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createExpression()));
 	}
 
 }

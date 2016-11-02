@@ -190,6 +190,11 @@ public class WhileItemProvider extends StatementsItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CrystalPackage.Literals.WHILE__WHILE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.WHILE__WHILE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
@@ -261,11 +266,6 @@ public class WhileItemProvider extends StatementsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.WHILE__WHILE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.WHILE__WHILE_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createExpression()));
 	}
 
 }

@@ -230,6 +230,11 @@ public class SelectorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(CrystalPackage.Literals.SELECTOR__CASE_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.SELECTOR__CASE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
@@ -301,11 +306,6 @@ public class SelectorItemProvider
 			(createChildParameter
 				(CrystalPackage.Literals.SELECTOR__CASE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.SELECTOR__CASE_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createExpression()));
 	}
 
 	/**

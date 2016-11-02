@@ -183,6 +183,11 @@ public class ProcedureItemProvider extends SubprogramsItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CrystalPackage.Literals.PROCEDURE__EXECUTABLE_PART,
+				 CrystalFactory.eINSTANCE.createExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.PROCEDURE__EXECUTABLE_PART,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
@@ -254,11 +259,6 @@ public class ProcedureItemProvider extends SubprogramsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.PROCEDURE__EXECUTABLE_PART,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.PROCEDURE__EXECUTABLE_PART,
-				 CrystalFactory.eINSTANCE.createExpression()));
 	}
 
 	/**

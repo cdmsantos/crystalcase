@@ -35,7 +35,7 @@ public class CaseCaseCasesCompartment4EditPart extends ShapeCompartmentEditPart 
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 7060;
+	public static final int VISUAL_ID = 7043;
 
 	/**
 	* @generated

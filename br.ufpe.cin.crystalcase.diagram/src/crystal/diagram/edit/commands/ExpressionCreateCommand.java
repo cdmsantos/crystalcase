@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.CrystalFactory;
 import crystal.Expression;
 import crystal.If;
+import crystal.Procedure;
 
 /**
  * @generated
@@ -57,8 +58,8 @@ public class ExpressionCreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Expression newElement = CrystalFactory.eINSTANCE.createExpression();
 
-		If owner = (If) getElementToEdit();
-		owner.getIfs().add(newElement);
+		Procedure owner = (Procedure) getElementToEdit();
+		owner.getExecutablePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

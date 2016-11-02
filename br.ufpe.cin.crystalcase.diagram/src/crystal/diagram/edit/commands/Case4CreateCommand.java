@@ -20,6 +20,7 @@ import crystal.Case;
 import crystal.CrystalFactory;
 import crystal.For;
 import crystal.Selector;
+import crystal.While;
 
 /**
  * @generated
@@ -59,8 +60,8 @@ public class Case4CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Case newElement = CrystalFactory.eINSTANCE.createCase();
 
-		For owner = (For) getElementToEdit();
-		owner.getForStatements().add(newElement);
+		While owner = (While) getElementToEdit();
+		owner.getWhileStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

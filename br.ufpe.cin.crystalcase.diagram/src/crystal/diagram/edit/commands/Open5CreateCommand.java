@@ -16,6 +16,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
+import crystal.For;
 import crystal.If;
 import crystal.Open;
 import crystal.Procedure;
@@ -58,8 +59,8 @@ public class Open5CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Open newElement = CrystalFactory.eINSTANCE.createOpen();
 
-		If owner = (If) getElementToEdit();
-		owner.getElses().add(newElement);
+		For owner = (For) getElementToEdit();
+		owner.getForStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

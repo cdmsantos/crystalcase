@@ -93,6 +93,9 @@ public class IfIfIfsCompartmentEditPart extends ShapeCompartmentEditPart {
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3211) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3181) {
 				return this;
 			}
@@ -136,9 +139,6 @@ public class IfIfIfsCompartmentEditPart extends ShapeCompartmentEditPart {
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3195) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3211) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

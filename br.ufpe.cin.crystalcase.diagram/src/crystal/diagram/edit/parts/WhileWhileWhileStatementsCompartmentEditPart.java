@@ -95,6 +95,9 @@ public class WhileWhileWhileStatementsCompartmentEditPart extends ShapeCompartme
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3212) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3090) {
 				return this;
 			}
@@ -138,9 +141,6 @@ public class WhileWhileWhileStatementsCompartmentEditPart extends ShapeCompartme
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3104) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3212) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

@@ -20,6 +20,7 @@ import crystal.CrystalFactory;
 import crystal.For;
 import crystal.Selector;
 import crystal.Update;
+import crystal.While;
 
 /**
  * @generated
@@ -59,8 +60,8 @@ public class Update4CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Update newElement = CrystalFactory.eINSTANCE.createUpdate();
 
-		For owner = (For) getElementToEdit();
-		owner.getForStatements().add(newElement);
+		While owner = (While) getElementToEdit();
+		owner.getWhileStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

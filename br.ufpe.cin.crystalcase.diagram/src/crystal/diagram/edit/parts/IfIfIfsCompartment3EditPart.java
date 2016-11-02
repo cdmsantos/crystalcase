@@ -35,7 +35,7 @@ public class IfIfIfsCompartment3EditPart extends ShapeCompartmentEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 7034;
+	public static final int VISUAL_ID = 7092;
 
 	/**
 	* @generated
@@ -90,6 +90,9 @@ public class IfIfIfsCompartment3EditPart extends ShapeCompartmentEditPart {
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3211) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3181) {
 				return this;
 			}
@@ -133,9 +136,6 @@ public class IfIfIfsCompartment3EditPart extends ShapeCompartmentEditPart {
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3195) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3211) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

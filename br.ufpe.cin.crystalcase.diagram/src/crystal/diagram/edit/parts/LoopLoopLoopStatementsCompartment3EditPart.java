@@ -35,7 +35,7 @@ public class LoopLoopLoopStatementsCompartment3EditPart extends ShapeCompartment
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 7067;
+	public static final int VISUAL_ID = 7062;
 
 	/**
 	* @generated
@@ -91,6 +91,9 @@ public class LoopLoopLoopStatementsCompartment3EditPart extends ShapeCompartment
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3213) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3153) {
 				return this;
 			}
@@ -134,9 +137,6 @@ public class LoopLoopLoopStatementsCompartment3EditPart extends ShapeCompartment
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3175) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3213) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

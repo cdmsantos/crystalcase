@@ -313,7 +313,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Crystal"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2007,2008,2009,3052,3053,3054,3055,3018,3019,3020,3021,3056,3057,3181,3182,3183,3108,3109,3110,3184,3185,3186,3187,3188,3090,3091,3189,3151,3152,3190,3153,3154,3191,3192,3193,3194,3195,3211,3196,3197,3198,3199,3200,3201,3202,3203,3092,3093,3094,3095,3096,3097,3098,3155,3156,3157,3158,3159,3160,3099,3161,3162,3163,3164,3165,3166,3100,3101,3102,3103,3104,3212,3167,3168,3169,3170,3171,3172,3173,3174,3175,3213,3176,3177,3178,3179,3180,3214,3204,3205,3206,3207,3208,3209,3210,3215,3138,3139,3140,3141,3142,3143,3144,3145,3146,3147,3148,3149,3150,3216,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3217,3071,3072,3073,3074,3022,3023,3024,3025,3026,3027,3028,3029,3075,3076,3077,3078,3079,3080,3081,3082,3083,3084,3085,3086,3087,3088,3089,3218,3033,3034,3035,3036,3037,3038,3039,3040,3041,3042,3043,3044,3045,3046,3047,3048,3049,3050,3051,3219"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2007,2008,2009,3052,3053,3054,3055,3018,3019,3020,3021,3217,3056,3057,3211,3181,3182,3183,3220,3221,3222,3184,3185,3186,3187,3188,3212,3090,3091,3189,3214,3151,3152,3190,3213,3153,3154,3191,3192,3193,3194,3195,3215,3196,3197,3198,3223,3224,3225,3226,3227,3228,3092,3229,3155,3230,3161,3231,3232,3233,3234,3235,3108,3216,3109,3110,3199,3200,3201,3202,3203,3093,3094,3095,3096,3097,3098,3156,3157,3158,3159,3160,3099,3162,3163,3164,3165,3166,3100,3101,3102,3103,3104,3167,3168,3169,3170,3171,3172,3173,3174,3175,3176,3177,3178,3179,3180,3204,3205,3206,3207,3208,3209,3210,3138,3139,3140,3141,3142,3143,3144,3145,3146,3147,3148,3149,3150,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3071,3072,3073,3074,3022,3023,3024,3025,3026,3027,3028,3029,3218,3075,3076,3077,3078,3079,3080,3081,3082,3083,3084,3085,3086,3087,3088,3089,3033,3034,3035,3036,3219,3037,3038,3039,3040,3041,3042,3043,3044,3045,3046,3047,3048,3049,3050,3051"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002"/>
       </viewProvider>
    </extension>
@@ -326,16 +326,16 @@
             <method name="getType()" value="Crystal"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2007,2008,2009,3052,3053,3054,3055,3018,3019,3020,3021,3056,3057,3181,3182,3183,3108,3109,3110,3184,3185,3186,3187,3188,3090,3091,3189,3151,3152,3190,3153,3154,3191,3192,3193,3194,3195,3211,3196,3197,3198,3199,3200,3201,3202,3203,3092,3093,3094,3095,3096,3097,3098,3155,3156,3157,3158,3159,3160,3099,3161,3162,3163,3164,3165,3166,3100,3101,3102,3103,3104,3212,3167,3168,3169,3170,3171,3172,3173,3174,3175,3213,3176,3177,3178,3179,3180,3214,3204,3205,3206,3207,3208,3209,3210,3215,3138,3139,3140,3141,3142,3143,3144,3145,3146,3147,3148,3149,3150,3216,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3217,3071,3072,3073,3074,3022,3023,3024,3025,3026,3027,3028,3029,3075,3076,3077,3078,3079,3080,3081,3082,3083,3084,3085,3086,3087,3088,3089,3218,3033,3034,3035,3036,3037,3038,3039,3040,3041,3042,3043,3044,3045,3046,3047,3048,3049,3050,3051,3219"/>
+            <method name="getType()" value="2007,2008,2009,3052,3053,3054,3055,3018,3019,3020,3021,3217,3056,3057,3211,3181,3182,3183,3220,3221,3222,3184,3185,3186,3187,3188,3212,3090,3091,3189,3214,3151,3152,3190,3213,3153,3154,3191,3192,3193,3194,3195,3215,3196,3197,3198,3223,3224,3225,3226,3227,3228,3092,3229,3155,3230,3161,3231,3232,3233,3234,3235,3108,3216,3109,3110,3199,3200,3201,3202,3203,3093,3094,3095,3096,3097,3098,3156,3157,3158,3159,3160,3099,3162,3163,3164,3165,3166,3100,3101,3102,3103,3104,3167,3168,3169,3170,3171,3172,3173,3174,3175,3176,3177,3178,3179,3180,3204,3205,3206,3207,3208,3209,3210,3138,3139,3140,3141,3142,3143,3144,3145,3146,3147,3148,3149,3150,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3071,3072,3073,3074,3022,3023,3024,3025,3026,3027,3028,3029,3218,3075,3076,3077,3078,3079,3080,3081,3082,3083,3084,3085,3086,3087,3088,3089,3033,3034,3035,3036,3219,3037,3038,3039,3040,3041,3042,3043,3044,3045,3046,3047,3048,3049,3050,3051"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5057,5058,5059,5060,5061,5062,5063,5018,5019,5020,5021,5064,5065,5189,5218,5217,5156,5114,5142,5190,5191,5192,5193,5216,5098,5099,5215,5159,5188,5214,5160,5187,5194,5195,5196,5197,5198,5219,5199,5213,5200,5201,5202,5203,5204,5205,5100,5101,5102,5103,5104,5112,5105,5161,5162,5163,5164,5165,5186,5106,5166,5167,5168,5169,5170,5171,5107,5108,5109,5110,5111,5220,5185,5184,5178,5177,5172,5173,5174,5175,5176,5221,5179,5180,5181,5182,5183,5222,5206,5207,5208,5209,5210,5211,5212,5223,5143,5144,5145,5146,5147,5148,5149,5150,5151,5152,5153,5154,5155,5224,5066,5067,5068,5069,5070,5071,5072,5073,5074,5075,5076,5077,5078,5225,5079,5080,5081,5082,5023,5024,5025,5026,5027,5028,5029,5030,5083,5084,5085,5086,5087,5088,5089,5090,5091,5092,5093,5094,5095,5096,5097,5226,5037,5038,5039,5040,5041,5042,5043,5044,5045,5046,5047,5048,5049,5050,5051,5052,5053,5054,5055,5227"/>
+            <method name="getType()" value="5057,5058,5059,5060,5061,5062,5063,5018,5019,5020,5021,5225,5064,5065,5219,5189,5218,5217,5228,5229,5243,5190,5191,5192,5193,5216,5220,5098,5099,5215,5222,5159,5188,5214,5221,5160,5187,5194,5195,5196,5197,5198,5223,5199,5213,5200,5242,5230,5231,5232,5233,5241,5100,5240,5161,5239,5166,5234,5235,5236,5237,5238,5156,5224,5114,5142,5201,5202,5203,5204,5205,5101,5102,5103,5104,5112,5105,5162,5163,5164,5165,5186,5106,5167,5168,5169,5170,5171,5107,5108,5109,5110,5111,5185,5184,5178,5177,5172,5173,5174,5175,5176,5179,5180,5181,5182,5183,5206,5207,5208,5209,5210,5211,5212,5143,5144,5145,5146,5147,5148,5149,5150,5151,5152,5153,5154,5155,5066,5067,5068,5069,5070,5071,5072,5073,5074,5075,5076,5077,5078,5079,5080,5081,5082,5023,5024,5025,5026,5027,5028,5029,5030,5226,5083,5084,5085,5086,5087,5088,5089,5090,5091,5092,5093,5094,5095,5096,5097,5037,5038,5039,5040,5227,5041,5042,5043,5044,5045,5046,5047,5048,5049,5050,5051,5052,5053,5054,5055"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value="7015,7020,7021,7028,7029,7079,7080,7081,7033,7034,7035,7082,7037,7038,7083,7054,7055,7084,7057,7058,7085,7086,7087,7088,7043,7025,7059,7060,7061,7062,7063,7064,7065,7066,7067,7068,7089,7090,7044,7045,7071,7072,7046,7024,7073,7074,7016,7017,7022,7023,7047,7048,7049,7026,7075,7076,7018,7019,7050,7051,7052,7027,7077,7078"/>
+            <method name="getType()" value="7015,7020,7021,7028,7029,7079,7080,7081,7091,7092,7093,7082,7037,7038,7083,7054,7055,7084,7057,7058,7085,7086,7087,7094,7095,7096,7097,7043,7098,7099,7060,7100,7101,7063,7102,7033,7034,7035,7088,7025,7059,7061,7062,7064,7065,7066,7067,7068,7089,7090,7044,7103,7045,7071,7072,7046,7104,7024,7073,7074,7016,7017,7022,7023,7047,7048,7049,7105,7026,7075,7076,7018,7019,7050,7051,7052,7106,7027,7077,7078"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -404,6 +404,11 @@
          <object class="crystal.diagram.edit.parts.Cursor2EditPart" id="Cursor_3021"/>
          <context elements="Cursor_3021"/>
       </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpressionEditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.ExpressionEditPart" id="Expression_3217"/>
+         <context elements="Expression_3217"/>
+      </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExceptionEditPart">
          <Priority name="Lowest"/>
          <object class="crystal.diagram.edit.parts.ExceptionEditPart" id="Exception_3056"/>
@@ -413,6 +418,11 @@
          <Priority name="Lowest"/>
          <object class="crystal.diagram.edit.parts.IfEditPart" id="If_3057"/>
          <context elements="If_3057"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression2EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Expression2EditPart" id="Expression_3211"/>
+         <context elements="Expression_3211"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException2EditPart">
          <Priority name="Lowest"/>
@@ -429,20 +439,20 @@
          <object class="crystal.diagram.edit.parts.CaseEditPart" id="Case_3183"/>
          <context elements="Case_3183"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelectorEditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression3EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.SelectorEditPart" id="Selector_3108"/>
-         <context elements="Selector_3108"/>
+         <object class="crystal.diagram.edit.parts.Expression3EditPart" id="Expression_3220"/>
+         <context elements="Expression_3220"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException3EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Exception3EditPart" id="Exception_3109"/>
-         <context elements="Exception_3109"/>
+         <object class="crystal.diagram.edit.parts.Exception3EditPart" id="Exception_3221"/>
+         <context elements="Exception_3221"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfIf3EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.If3EditPart" id="If_3110"/>
-         <context elements="If_3110"/>
+         <object class="crystal.diagram.edit.parts.If3EditPart" id="If_3222"/>
+         <context elements="If_3222"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsertEditPart">
          <Priority name="Lowest"/>
@@ -469,6 +479,11 @@
          <object class="crystal.diagram.edit.parts.WhileEditPart" id="While_3188"/>
          <context elements="While_3188"/>
       </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Expression4EditPart" id="Expression_3212"/>
+         <context elements="Expression_3212"/>
+      </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException4EditPart">
          <Priority name="Lowest"/>
          <object class="crystal.diagram.edit.parts.Exception4EditPart" id="Exception_3090"/>
@@ -484,6 +499,11 @@
          <object class="crystal.diagram.edit.parts.ForEditPart" id="For_3189"/>
          <context elements="For_3189"/>
       </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Expression5EditPart" id="Expression_3214"/>
+         <context elements="Expression_3214"/>
+      </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException5EditPart">
          <Priority name="Lowest"/>
          <object class="crystal.diagram.edit.parts.Exception5EditPart" id="Exception_3151"/>
@@ -498,6 +518,11 @@
          <Priority name="Lowest"/>
          <object class="crystal.diagram.edit.parts.LoopEditPart" id="Loop_3190"/>
          <context elements="Loop_3190"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression6EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Expression6EditPart" id="Expression_3213"/>
+         <context elements="Expression_3213"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException6EditPart">
          <Priority name="Lowest"/>
@@ -534,10 +559,10 @@
          <object class="crystal.diagram.edit.parts.CallFunctionEditPart" id="CallFunction_3195"/>
          <context elements="CallFunction_3195"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpressionEditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.ExpressionEditPart" id="Expression_3211"/>
-         <context elements="Expression_3211"/>
+         <object class="crystal.diagram.edit.parts.Expression7EditPart" id="Expression_3215"/>
+         <context elements="Expression_3215"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException7EditPart">
          <Priority name="Lowest"/>
@@ -554,420 +579,475 @@
          <object class="crystal.diagram.edit.parts.Case2EditPart" id="Case_3198"/>
          <context elements="Case_3198"/>
       </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Case3EditPart" id="Case_3223"/>
+         <context elements="Case_3223"/>
+      </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert2EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Insert2EditPart" id="Insert_3199"/>
-         <context elements="Insert_3199"/>
+         <object class="crystal.diagram.edit.parts.Insert2EditPart" id="Insert_3224"/>
+         <context elements="Insert_3224"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate2EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Update2EditPart" id="Update_3200"/>
-         <context elements="Update_3200"/>
+         <object class="crystal.diagram.edit.parts.Update2EditPart" id="Update_3225"/>
+         <context elements="Update_3225"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete2EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Delete2EditPart" id="Delete_3201"/>
-         <context elements="Delete_3201"/>
+         <object class="crystal.diagram.edit.parts.Delete2EditPart" id="Delete_3226"/>
+         <context elements="Delete_3226"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect2EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Select2EditPart" id="Select_3202"/>
-         <context elements="Select_3202"/>
+         <object class="crystal.diagram.edit.parts.Select2EditPart" id="Select_3227"/>
+         <context elements="Select_3227"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile2EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.While2EditPart" id="While_3203"/>
-         <context elements="While_3203"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Case3EditPart" id="Case_3092"/>
-         <context elements="Case_3092"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Insert3EditPart" id="Insert_3093"/>
-         <context elements="Insert_3093"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Update3EditPart" id="Update_3094"/>
-         <context elements="Update_3094"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Delete3EditPart" id="Delete_3095"/>
-         <context elements="Delete_3095"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Select3EditPart" id="Select_3096"/>
-         <context elements="Select_3096"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.While3EditPart" id="While_3097"/>
-         <context elements="While_3097"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor2EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.For2EditPart" id="For_3098"/>
-         <context elements="For_3098"/>
+         <object class="crystal.diagram.edit.parts.While2EditPart" id="While_3228"/>
+         <context elements="While_3228"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase4EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Case4EditPart" id="Case_3155"/>
-         <context elements="Case_3155"/>
+         <object class="crystal.diagram.edit.parts.Case4EditPart" id="Case_3092"/>
+         <context elements="Case_3092"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert4EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor2EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Insert4EditPart" id="Insert_3156"/>
-         <context elements="Insert_3156"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Update4EditPart" id="Update_3157"/>
-         <context elements="Update_3157"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Delete4EditPart" id="Delete_3158"/>
-         <context elements="Delete_3158"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Select4EditPart" id="Select_3159"/>
-         <context elements="Select_3159"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.While4EditPart" id="While_3160"/>
-         <context elements="While_3160"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop2EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Loop2EditPart" id="Loop_3099"/>
-         <context elements="Loop_3099"/>
+         <object class="crystal.diagram.edit.parts.For2EditPart" id="For_3229"/>
+         <context elements="For_3229"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase5EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Case5EditPart" id="Case_3161"/>
-         <context elements="Case_3161"/>
+         <object class="crystal.diagram.edit.parts.Case5EditPart" id="Case_3155"/>
+         <context elements="Case_3155"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert5EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop2EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Insert5EditPart" id="Insert_3162"/>
-         <context elements="Insert_3162"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Update5EditPart" id="Update_3163"/>
-         <context elements="Update_3163"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Delete5EditPart" id="Delete_3164"/>
-         <context elements="Delete_3164"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Select5EditPart" id="Select_3165"/>
-         <context elements="Select_3165"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.While5EditPart" id="While_3166"/>
-         <context elements="While_3166"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen2EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Open2EditPart" id="Open_3100"/>
-         <context elements="Open_3100"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch2EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Fetch2EditPart" id="Fetch_3101"/>
-         <context elements="Fetch_3101"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose2EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Close2EditPart" id="Close_3102"/>
-         <context elements="Close_3102"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure2EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallProcedure2EditPart" id="CallProcedure_3103"/>
-         <context elements="CallProcedure_3103"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction2EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallFunction2EditPart" id="CallFunction_3104"/>
-         <context elements="CallFunction_3104"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression2EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Expression2EditPart" id="Expression_3212"/>
-         <context elements="Expression_3212"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.For3EditPart" id="For_3167"/>
-         <context elements="For_3167"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.For4EditPart" id="For_3168"/>
-         <context elements="For_3168"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Loop3EditPart" id="Loop_3169"/>
-         <context elements="Loop_3169"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Loop4EditPart" id="Loop_3170"/>
-         <context elements="Loop_3170"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Open3EditPart" id="Open_3171"/>
-         <context elements="Open_3171"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Fetch3EditPart" id="Fetch_3172"/>
-         <context elements="Fetch_3172"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Close3EditPart" id="Close_3173"/>
-         <context elements="Close_3173"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallProcedure3EditPart" id="CallProcedure_3174"/>
-         <context elements="CallProcedure_3174"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallFunction3EditPart" id="CallFunction_3175"/>
-         <context elements="CallFunction_3175"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression3EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Expression3EditPart" id="Expression_3213"/>
-         <context elements="Expression_3213"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Open4EditPart" id="Open_3176"/>
-         <context elements="Open_3176"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Fetch4EditPart" id="Fetch_3177"/>
-         <context elements="Fetch_3177"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Close4EditPart" id="Close_3178"/>
-         <context elements="Close_3178"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallProcedure4EditPart" id="CallProcedure_3179"/>
-         <context elements="CallProcedure_3179"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallFunction4EditPart" id="CallFunction_3180"/>
-         <context elements="CallFunction_3180"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression4EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Expression4EditPart" id="Expression_3214"/>
-         <context elements="Expression_3214"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.For5EditPart" id="For_3204"/>
-         <context elements="For_3204"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Loop5EditPart" id="Loop_3205"/>
-         <context elements="Loop_3205"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Open5EditPart" id="Open_3206"/>
-         <context elements="Open_3206"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Fetch5EditPart" id="Fetch_3207"/>
-         <context elements="Fetch_3207"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Close5EditPart" id="Close_3208"/>
-         <context elements="Close_3208"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallProcedure5EditPart" id="CallProcedure_3209"/>
-         <context elements="CallProcedure_3209"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallFunction5EditPart" id="CallFunction_3210"/>
-         <context elements="CallFunction_3210"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression5EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Expression5EditPart" id="Expression_3215"/>
-         <context elements="Expression_3215"/>
+         <object class="crystal.diagram.edit.parts.Loop2EditPart" id="Loop_3230"/>
+         <context elements="Loop_3230"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Case6EditPart" id="Case_3138"/>
-         <context elements="Case_3138"/>
+         <object class="crystal.diagram.edit.parts.Case6EditPart" id="Case_3161"/>
+         <context elements="Case_3161"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen2EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Open2EditPart" id="Open_3231"/>
+         <context elements="Open_3231"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch2EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Fetch2EditPart" id="Fetch_3232"/>
+         <context elements="Fetch_3232"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose2EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Close2EditPart" id="Close_3233"/>
+         <context elements="Close_3233"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure2EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallProcedure2EditPart" id="CallProcedure_3234"/>
+         <context elements="CallProcedure_3234"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction2EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallFunction2EditPart" id="CallFunction_3235"/>
+         <context elements="CallFunction_3235"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelectorEditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.SelectorEditPart" id="Selector_3108"/>
+         <context elements="Selector_3108"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Expression8EditPart" id="Expression_3216"/>
+         <context elements="Expression_3216"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Exception8EditPart" id="Exception_3109"/>
+         <context elements="Exception_3109"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfIf8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.If8EditPart" id="If_3110"/>
+         <context elements="If_3110"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Insert3EditPart" id="Insert_3199"/>
+         <context elements="Insert_3199"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Update3EditPart" id="Update_3200"/>
+         <context elements="Update_3200"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Delete3EditPart" id="Delete_3201"/>
+         <context elements="Delete_3201"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Select3EditPart" id="Select_3202"/>
+         <context elements="Select_3202"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.While3EditPart" id="While_3203"/>
+         <context elements="While_3203"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Insert4EditPart" id="Insert_3093"/>
+         <context elements="Insert_3093"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Update4EditPart" id="Update_3094"/>
+         <context elements="Update_3094"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Delete4EditPart" id="Delete_3095"/>
+         <context elements="Delete_3095"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Select4EditPart" id="Select_3096"/>
+         <context elements="Select_3096"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.While4EditPart" id="While_3097"/>
+         <context elements="While_3097"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.For3EditPart" id="For_3098"/>
+         <context elements="For_3098"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Insert5EditPart" id="Insert_3156"/>
+         <context elements="Insert_3156"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Update5EditPart" id="Update_3157"/>
+         <context elements="Update_3157"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Delete5EditPart" id="Delete_3158"/>
+         <context elements="Delete_3158"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Select5EditPart" id="Select_3159"/>
+         <context elements="Select_3159"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.While5EditPart" id="While_3160"/>
+         <context elements="While_3160"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Loop3EditPart" id="Loop_3099"/>
+         <context elements="Loop_3099"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Insert6EditPart" id="Insert_3139"/>
-         <context elements="Insert_3139"/>
+         <object class="crystal.diagram.edit.parts.Insert6EditPart" id="Insert_3162"/>
+         <context elements="Insert_3162"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Update6EditPart" id="Update_3140"/>
-         <context elements="Update_3140"/>
+         <object class="crystal.diagram.edit.parts.Update6EditPart" id="Update_3163"/>
+         <context elements="Update_3163"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Delete6EditPart" id="Delete_3141"/>
-         <context elements="Delete_3141"/>
+         <object class="crystal.diagram.edit.parts.Delete6EditPart" id="Delete_3164"/>
+         <context elements="Delete_3164"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Select6EditPart" id="Select_3142"/>
-         <context elements="Select_3142"/>
+         <object class="crystal.diagram.edit.parts.Select6EditPart" id="Select_3165"/>
+         <context elements="Select_3165"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.While6EditPart" id="While_3143"/>
-         <context elements="While_3143"/>
+         <object class="crystal.diagram.edit.parts.While6EditPart" id="While_3166"/>
+         <context elements="While_3166"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Open3EditPart" id="Open_3100"/>
+         <context elements="Open_3100"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Fetch3EditPart" id="Fetch_3101"/>
+         <context elements="Fetch_3101"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Close3EditPart" id="Close_3102"/>
+         <context elements="Close_3102"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallProcedure3EditPart" id="CallProcedure_3103"/>
+         <context elements="CallProcedure_3103"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction3EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallFunction3EditPart" id="CallFunction_3104"/>
+         <context elements="CallFunction_3104"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.For4EditPart" id="For_3167"/>
+         <context elements="For_3167"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.For5EditPart" id="For_3168"/>
+         <context elements="For_3168"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Loop4EditPart" id="Loop_3169"/>
+         <context elements="Loop_3169"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Loop5EditPart" id="Loop_3170"/>
+         <context elements="Loop_3170"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Open4EditPart" id="Open_3171"/>
+         <context elements="Open_3171"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Fetch4EditPart" id="Fetch_3172"/>
+         <context elements="Fetch_3172"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Close4EditPart" id="Close_3173"/>
+         <context elements="Close_3173"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallProcedure4EditPart" id="CallProcedure_3174"/>
+         <context elements="CallProcedure_3174"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction4EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallFunction4EditPart" id="CallFunction_3175"/>
+         <context elements="CallFunction_3175"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Open5EditPart" id="Open_3176"/>
+         <context elements="Open_3176"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Fetch5EditPart" id="Fetch_3177"/>
+         <context elements="Fetch_3177"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Close5EditPart" id="Close_3178"/>
+         <context elements="Close_3178"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallProcedure5EditPart" id="CallProcedure_3179"/>
+         <context elements="CallProcedure_3179"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction5EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallFunction5EditPart" id="CallFunction_3180"/>
+         <context elements="CallFunction_3180"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.For6EditPart" id="For_3144"/>
-         <context elements="For_3144"/>
+         <object class="crystal.diagram.edit.parts.For6EditPart" id="For_3204"/>
+         <context elements="For_3204"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Loop6EditPart" id="Loop_3145"/>
-         <context elements="Loop_3145"/>
+         <object class="crystal.diagram.edit.parts.Loop6EditPart" id="Loop_3205"/>
+         <context elements="Loop_3205"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Open6EditPart" id="Open_3146"/>
-         <context elements="Open_3146"/>
+         <object class="crystal.diagram.edit.parts.Open6EditPart" id="Open_3206"/>
+         <context elements="Open_3206"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Fetch6EditPart" id="Fetch_3147"/>
-         <context elements="Fetch_3147"/>
+         <object class="crystal.diagram.edit.parts.Fetch6EditPart" id="Fetch_3207"/>
+         <context elements="Fetch_3207"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Close6EditPart" id="Close_3148"/>
-         <context elements="Close_3148"/>
+         <object class="crystal.diagram.edit.parts.Close6EditPart" id="Close_3208"/>
+         <context elements="Close_3208"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallProcedure6EditPart" id="CallProcedure_3149"/>
-         <context elements="CallProcedure_3149"/>
+         <object class="crystal.diagram.edit.parts.CallProcedure6EditPart" id="CallProcedure_3209"/>
+         <context elements="CallProcedure_3209"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction6EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallFunction6EditPart" id="CallFunction_3150"/>
-         <context elements="CallFunction_3150"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression6EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Expression6EditPart" id="Expression_3216"/>
-         <context elements="Expression_3216"/>
+         <object class="crystal.diagram.edit.parts.CallFunction6EditPart" id="CallFunction_3210"/>
+         <context elements="CallFunction_3210"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Case7EditPart" id="Case_3058"/>
-         <context elements="Case_3058"/>
+         <object class="crystal.diagram.edit.parts.Case7EditPart" id="Case_3138"/>
+         <context elements="Case_3138"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Insert7EditPart" id="Insert_3059"/>
-         <context elements="Insert_3059"/>
+         <object class="crystal.diagram.edit.parts.Insert7EditPart" id="Insert_3139"/>
+         <context elements="Insert_3139"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Update7EditPart" id="Update_3060"/>
-         <context elements="Update_3060"/>
+         <object class="crystal.diagram.edit.parts.Update7EditPart" id="Update_3140"/>
+         <context elements="Update_3140"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Delete7EditPart" id="Delete_3061"/>
-         <context elements="Delete_3061"/>
+         <object class="crystal.diagram.edit.parts.Delete7EditPart" id="Delete_3141"/>
+         <context elements="Delete_3141"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Select7EditPart" id="Select_3062"/>
-         <context elements="Select_3062"/>
+         <object class="crystal.diagram.edit.parts.Select7EditPart" id="Select_3142"/>
+         <context elements="Select_3142"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.While7EditPart" id="While_3063"/>
-         <context elements="While_3063"/>
+         <object class="crystal.diagram.edit.parts.While7EditPart" id="While_3143"/>
+         <context elements="While_3143"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.For7EditPart" id="For_3064"/>
-         <context elements="For_3064"/>
+         <object class="crystal.diagram.edit.parts.For7EditPart" id="For_3144"/>
+         <context elements="For_3144"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Loop7EditPart" id="Loop_3065"/>
-         <context elements="Loop_3065"/>
+         <object class="crystal.diagram.edit.parts.Loop7EditPart" id="Loop_3145"/>
+         <context elements="Loop_3145"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Open7EditPart" id="Open_3066"/>
-         <context elements="Open_3066"/>
+         <object class="crystal.diagram.edit.parts.Open7EditPart" id="Open_3146"/>
+         <context elements="Open_3146"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Fetch7EditPart" id="Fetch_3067"/>
-         <context elements="Fetch_3067"/>
+         <object class="crystal.diagram.edit.parts.Fetch7EditPart" id="Fetch_3147"/>
+         <context elements="Fetch_3147"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Close7EditPart" id="Close_3068"/>
-         <context elements="Close_3068"/>
+         <object class="crystal.diagram.edit.parts.Close7EditPart" id="Close_3148"/>
+         <context elements="Close_3148"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallProcedure7EditPart" id="CallProcedure_3069"/>
-         <context elements="CallProcedure_3069"/>
+         <object class="crystal.diagram.edit.parts.CallProcedure7EditPart" id="CallProcedure_3149"/>
+         <context elements="CallProcedure_3149"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction7EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallFunction7EditPart" id="CallFunction_3070"/>
-         <context elements="CallFunction_3070"/>
+         <object class="crystal.diagram.edit.parts.CallFunction7EditPart" id="CallFunction_3150"/>
+         <context elements="CallFunction_3150"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression7EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase8EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Expression7EditPart" id="Expression_3217"/>
-         <context elements="Expression_3217"/>
+         <object class="crystal.diagram.edit.parts.Case8EditPart" id="Case_3058"/>
+         <context elements="Case_3058"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Insert8EditPart" id="Insert_3059"/>
+         <context elements="Insert_3059"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Update8EditPart" id="Update_3060"/>
+         <context elements="Update_3060"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Delete8EditPart" id="Delete_3061"/>
+         <context elements="Delete_3061"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Select8EditPart" id="Select_3062"/>
+         <context elements="Select_3062"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.While8EditPart" id="While_3063"/>
+         <context elements="While_3063"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.For8EditPart" id="For_3064"/>
+         <context elements="For_3064"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Loop8EditPart" id="Loop_3065"/>
+         <context elements="Loop_3065"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Open8EditPart" id="Open_3066"/>
+         <context elements="Open_3066"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Fetch8EditPart" id="Fetch_3067"/>
+         <context elements="Fetch_3067"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Close8EditPart" id="Close_3068"/>
+         <context elements="Close_3068"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallProcedure8EditPart" id="CallProcedure_3069"/>
+         <context elements="CallProcedure_3069"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction8EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.CallFunction8EditPart" id="CallFunction_3070"/>
+         <context elements="CallFunction_3070"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDataType3EditPart">
          <Priority name="Lowest"/>
@@ -1029,85 +1109,85 @@
          <object class="crystal.diagram.edit.parts.Cursor5EditPart" id="Cursor_3029"/>
          <context elements="Cursor_3029"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Exception8EditPart" id="Exception_3075"/>
+         <object class="crystal.diagram.edit.parts.Expression9EditPart" id="Expression_3218"/>
+         <context elements="Expression_3218"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException9EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Exception9EditPart" id="Exception_3075"/>
          <context elements="Exception_3075"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfIf8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfIf9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.If8EditPart" id="If_3076"/>
+         <object class="crystal.diagram.edit.parts.If9EditPart" id="If_3076"/>
          <context elements="If_3076"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Case8EditPart" id="Case_3077"/>
+         <object class="crystal.diagram.edit.parts.Case9EditPart" id="Case_3077"/>
          <context elements="Case_3077"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Insert8EditPart" id="Insert_3078"/>
+         <object class="crystal.diagram.edit.parts.Insert9EditPart" id="Insert_3078"/>
          <context elements="Insert_3078"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Update8EditPart" id="Update_3079"/>
+         <object class="crystal.diagram.edit.parts.Update9EditPart" id="Update_3079"/>
          <context elements="Update_3079"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Delete8EditPart" id="Delete_3080"/>
+         <object class="crystal.diagram.edit.parts.Delete9EditPart" id="Delete_3080"/>
          <context elements="Delete_3080"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Select8EditPart" id="Select_3081"/>
+         <object class="crystal.diagram.edit.parts.Select9EditPart" id="Select_3081"/>
          <context elements="Select_3081"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.While8EditPart" id="While_3082"/>
+         <object class="crystal.diagram.edit.parts.While9EditPart" id="While_3082"/>
          <context elements="While_3082"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.For8EditPart" id="For_3083"/>
+         <object class="crystal.diagram.edit.parts.For9EditPart" id="For_3083"/>
          <context elements="For_3083"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Loop8EditPart" id="Loop_3084"/>
+         <object class="crystal.diagram.edit.parts.Loop9EditPart" id="Loop_3084"/>
          <context elements="Loop_3084"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Open8EditPart" id="Open_3085"/>
+         <object class="crystal.diagram.edit.parts.Open9EditPart" id="Open_3085"/>
          <context elements="Open_3085"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Fetch8EditPart" id="Fetch_3086"/>
+         <object class="crystal.diagram.edit.parts.Fetch9EditPart" id="Fetch_3086"/>
          <context elements="Fetch_3086"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Close8EditPart" id="Close_3087"/>
+         <object class="crystal.diagram.edit.parts.Close9EditPart" id="Close_3087"/>
          <context elements="Close_3087"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallProcedure8EditPart" id="CallProcedure_3088"/>
+         <object class="crystal.diagram.edit.parts.CallProcedure9EditPart" id="CallProcedure_3088"/>
          <context elements="CallProcedure_3088"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction8EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction9EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallFunction8EditPart" id="CallFunction_3089"/>
+         <object class="crystal.diagram.edit.parts.CallFunction9EditPart" id="CallFunction_3089"/>
          <context elements="CallFunction_3089"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression8EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Expression8EditPart" id="Expression_3218"/>
-         <context elements="Expression_3218"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDataType6EditPart">
          <Priority name="Lowest"/>
@@ -1129,85 +1209,85 @@
          <object class="crystal.diagram.edit.parts.Cursor6EditPart" id="Cursor_3036"/>
          <context elements="Cursor_3036"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Exception9EditPart" id="Exception_3037"/>
+         <object class="crystal.diagram.edit.parts.Expression10EditPart" id="Expression_3219"/>
+         <context elements="Expression_3219"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfException10EditPart">
+         <Priority name="Lowest"/>
+         <object class="crystal.diagram.edit.parts.Exception10EditPart" id="Exception_3037"/>
          <context elements="Exception_3037"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfIf9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfIf10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.If9EditPart" id="If_3038"/>
+         <object class="crystal.diagram.edit.parts.If10EditPart" id="If_3038"/>
          <context elements="If_3038"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCase10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Case9EditPart" id="Case_3039"/>
+         <object class="crystal.diagram.edit.parts.Case10EditPart" id="Case_3039"/>
          <context elements="Case_3039"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfInsert10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Insert9EditPart" id="Insert_3040"/>
+         <object class="crystal.diagram.edit.parts.Insert10EditPart" id="Insert_3040"/>
          <context elements="Insert_3040"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfUpdate10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Update9EditPart" id="Update_3041"/>
+         <object class="crystal.diagram.edit.parts.Update10EditPart" id="Update_3041"/>
          <context elements="Update_3041"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfDelete10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Delete9EditPart" id="Delete_3042"/>
+         <object class="crystal.diagram.edit.parts.Delete10EditPart" id="Delete_3042"/>
          <context elements="Delete_3042"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfSelect10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Select9EditPart" id="Select_3043"/>
+         <object class="crystal.diagram.edit.parts.Select10EditPart" id="Select_3043"/>
          <context elements="Select_3043"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfWhile10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.While9EditPart" id="While_3044"/>
+         <object class="crystal.diagram.edit.parts.While10EditPart" id="While_3044"/>
          <context elements="While_3044"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFor10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.For9EditPart" id="For_3045"/>
+         <object class="crystal.diagram.edit.parts.For10EditPart" id="For_3045"/>
          <context elements="For_3045"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfLoop10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Loop9EditPart" id="Loop_3046"/>
+         <object class="crystal.diagram.edit.parts.Loop10EditPart" id="Loop_3046"/>
          <context elements="Loop_3046"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfOpen10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Open9EditPart" id="Open_3047"/>
+         <object class="crystal.diagram.edit.parts.Open10EditPart" id="Open_3047"/>
          <context elements="Open_3047"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfFetch10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Fetch9EditPart" id="Fetch_3048"/>
+         <object class="crystal.diagram.edit.parts.Fetch10EditPart" id="Fetch_3048"/>
          <context elements="Fetch_3048"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfClose10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Close9EditPart" id="Close_3049"/>
+         <object class="crystal.diagram.edit.parts.Close10EditPart" id="Close_3049"/>
          <context elements="Close_3049"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallProcedure10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallProcedure9EditPart" id="CallProcedure_3050"/>
+         <object class="crystal.diagram.edit.parts.CallProcedure10EditPart" id="CallProcedure_3050"/>
          <context elements="CallProcedure_3050"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction9EditPart">
+            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfCallFunction10EditPart">
          <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.CallFunction9EditPart" id="CallFunction_3051"/>
+         <object class="crystal.diagram.edit.parts.CallFunction10EditPart" id="CallFunction_3051"/>
          <context elements="CallFunction_3051"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="crystal.diagram.providers.assistants.CrystalModelingAssistantProviderOfExpression9EditPart">
-         <Priority name="Lowest"/>
-         <object class="crystal.diagram.edit.parts.Expression9EditPart" id="Expression_3219"/>
-         <context elements="Expression_3219"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -1358,6 +1438,16 @@
       </metamodel>
       <metamodel nsURI="crystal">
          <metamodelType
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3217"
+               name="%metatype.name.Expression_3217"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Expression"
+               edithelper="crystal.diagram.edit.helpers.ExpressionEditHelper">
+            <param name="semanticHint" value="3217"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <metamodelType
                id="br.ufpe.cin.crystalcase.diagram.Exception_3056"
                name="%metatype.name.Exception_3056"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
@@ -1375,6 +1465,15 @@
                edithelper="crystal.diagram.edit.helpers.IfEditHelper">
             <param name="semanticHint" value="3057"/>
          </metamodelType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3211"
+               name="%metatype.name.Expression_3211"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
+            <param name="semanticHint" value="3211"/>
+         </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
@@ -1405,31 +1504,30 @@
          </metamodelType>
       </metamodel>
       <metamodel nsURI="crystal">
-         <metamodelType
-               id="br.ufpe.cin.crystalcase.diagram.Selector_3108"
-               name="%metatype.name.Selector_3108"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Selector"
-               edithelper="crystal.diagram.edit.helpers.SelectorEditHelper">
-            <param name="semanticHint" value="3108"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="crystal">
          <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Exception_3109"
-               name="%metatype.name.Exception_3109"
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3220"
+               name="%metatype.name.Expression_3220"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Exception_3056"/>
-            <param name="semanticHint" value="3109"/>
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
+            <param name="semanticHint" value="3220"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.If_3110"
-               name="%metatype.name.If_3110"
+               id="br.ufpe.cin.crystalcase.diagram.Exception_3221"
+               name="%metatype.name.Exception_3221"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Exception_3056"/>
+            <param name="semanticHint" value="3221"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.If_3222"
+               name="%metatype.name.If_3222"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="br.ufpe.cin.crystalcase.diagram.If_3057"/>
-            <param name="semanticHint" value="3110"/>
+            <param name="semanticHint" value="3222"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
@@ -1484,6 +1582,15 @@
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3212"
+               name="%metatype.name.Expression_3212"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
+            <param name="semanticHint" value="3212"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
                id="br.ufpe.cin.crystalcase.diagram.Exception_3090"
                name="%metatype.name.Exception_3090"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
@@ -1512,6 +1619,15 @@
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3214"
+               name="%metatype.name.Expression_3214"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
+            <param name="semanticHint" value="3214"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
                id="br.ufpe.cin.crystalcase.diagram.Exception_3151"
                name="%metatype.name.Exception_3151"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
@@ -1537,6 +1653,15 @@
                edithelper="crystal.diagram.edit.helpers.LoopEditHelper">
             <param name="semanticHint" value="3190"/>
          </metamodelType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3213"
+               name="%metatype.name.Expression_3213"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
+            <param name="semanticHint" value="3213"/>
+         </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
@@ -1607,14 +1732,13 @@
          </metamodelType>
       </metamodel>
       <metamodel nsURI="crystal">
-         <metamodelType
-               id="br.ufpe.cin.crystalcase.diagram.Expression_3211"
-               name="%metatype.name.Expression_3211"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Expression"
-               edithelper="crystal.diagram.edit.helpers.ExpressionEditHelper">
-            <param name="semanticHint" value="3211"/>
-         </metamodelType>
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3215"
+               name="%metatype.name.Expression_3215"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
+            <param name="semanticHint" value="3215"/>
+         </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
@@ -1641,6 +1765,187 @@
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="br.ufpe.cin.crystalcase.diagram.Case_3183"/>
             <param name="semanticHint" value="3198"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Case_3223"
+               name="%metatype.name.Case_3223"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Case_3183"/>
+            <param name="semanticHint" value="3223"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Insert_3224"
+               name="%metatype.name.Insert_3224"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Insert_3184"/>
+            <param name="semanticHint" value="3224"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Update_3225"
+               name="%metatype.name.Update_3225"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Update_3185"/>
+            <param name="semanticHint" value="3225"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Delete_3226"
+               name="%metatype.name.Delete_3226"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Delete_3186"/>
+            <param name="semanticHint" value="3226"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Select_3227"
+               name="%metatype.name.Select_3227"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Select_3187"/>
+            <param name="semanticHint" value="3227"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.While_3228"
+               name="%metatype.name.While_3228"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.While_3188"/>
+            <param name="semanticHint" value="3228"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Case_3092"
+               name="%metatype.name.Case_3092"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Case_3183"/>
+            <param name="semanticHint" value="3092"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.For_3229"
+               name="%metatype.name.For_3229"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.For_3189"/>
+            <param name="semanticHint" value="3229"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Case_3155"
+               name="%metatype.name.Case_3155"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Case_3183"/>
+            <param name="semanticHint" value="3155"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Loop_3230"
+               name="%metatype.name.Loop_3230"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Loop_3190"/>
+            <param name="semanticHint" value="3230"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Case_3161"
+               name="%metatype.name.Case_3161"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Case_3183"/>
+            <param name="semanticHint" value="3161"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Open_3231"
+               name="%metatype.name.Open_3231"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Open_3191"/>
+            <param name="semanticHint" value="3231"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Fetch_3232"
+               name="%metatype.name.Fetch_3232"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Fetch_3192"/>
+            <param name="semanticHint" value="3232"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Close_3233"
+               name="%metatype.name.Close_3233"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Close_3193"/>
+            <param name="semanticHint" value="3233"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.CallProcedure_3234"
+               name="%metatype.name.CallProcedure_3234"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.CallProcedure_3194"/>
+            <param name="semanticHint" value="3234"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.CallFunction_3235"
+               name="%metatype.name.CallFunction_3235"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.CallFunction_3195"/>
+            <param name="semanticHint" value="3235"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <metamodelType
+               id="br.ufpe.cin.crystalcase.diagram.Selector_3108"
+               name="%metatype.name.Selector_3108"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Selector"
+               edithelper="crystal.diagram.edit.helpers.SelectorEditHelper">
+            <param name="semanticHint" value="3108"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3216"
+               name="%metatype.name.Expression_3216"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
+            <param name="semanticHint" value="3216"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Exception_3109"
+               name="%metatype.name.Exception_3109"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Exception_3056"/>
+            <param name="semanticHint" value="3109"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.If_3110"
+               name="%metatype.name.If_3110"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.If_3057"/>
+            <param name="semanticHint" value="3110"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
@@ -1686,15 +1991,6 @@
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="br.ufpe.cin.crystalcase.diagram.While_3188"/>
             <param name="semanticHint" value="3203"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Case_3092"
-               name="%metatype.name.Case_3092"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Case_3183"/>
-            <param name="semanticHint" value="3092"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
@@ -1753,15 +2049,6 @@
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Case_3155"
-               name="%metatype.name.Case_3155"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Case_3183"/>
-            <param name="semanticHint" value="3155"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
                id="br.ufpe.cin.crystalcase.diagram.Insert_3156"
                name="%metatype.name.Insert_3156"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
@@ -1812,15 +2099,6 @@
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="br.ufpe.cin.crystalcase.diagram.Loop_3190"/>
             <param name="semanticHint" value="3099"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Case_3161"
-               name="%metatype.name.Case_3161"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Case_3183"/>
-            <param name="semanticHint" value="3161"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
@@ -1915,15 +2193,6 @@
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Expression_3212"
-               name="%metatype.name.Expression_3212"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
-            <param name="semanticHint" value="3212"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
                id="br.ufpe.cin.crystalcase.diagram.For_3167"
                name="%metatype.name.For_3167"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
@@ -2005,15 +2274,6 @@
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Expression_3213"
-               name="%metatype.name.Expression_3213"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
-            <param name="semanticHint" value="3213"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
                id="br.ufpe.cin.crystalcase.diagram.Open_3176"
                name="%metatype.name.Open_3176"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
@@ -2055,15 +2315,6 @@
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="br.ufpe.cin.crystalcase.diagram.CallFunction_3195"/>
             <param name="semanticHint" value="3180"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Expression_3214"
-               name="%metatype.name.Expression_3214"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
-            <param name="semanticHint" value="3214"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
@@ -2127,15 +2378,6 @@
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="br.ufpe.cin.crystalcase.diagram.CallFunction_3195"/>
             <param name="semanticHint" value="3210"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Expression_3215"
-               name="%metatype.name.Expression_3215"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
-            <param name="semanticHint" value="3215"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
@@ -2257,15 +2499,6 @@
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Expression_3216"
-               name="%metatype.name.Expression_3216"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
-            <param name="semanticHint" value="3216"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
                id="br.ufpe.cin.crystalcase.diagram.Case_3058"
                name="%metatype.name.Case_3058"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
@@ -2383,15 +2616,6 @@
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Expression_3217"
-               name="%metatype.name.Expression_3217"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
-            <param name="semanticHint" value="3217"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
                id="br.ufpe.cin.crystalcase.diagram.DataType_3071"
                name="%metatype.name.DataType_3071"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
@@ -2496,6 +2720,15 @@
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="br.ufpe.cin.crystalcase.diagram.Cursor_3055"/>
             <param name="semanticHint" value="3029"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3218"
+               name="%metatype.name.Expression_3218"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
+            <param name="semanticHint" value="3218"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
@@ -2635,15 +2868,6 @@
       </metamodel>
       <metamodel nsURI="crystal">
          <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Expression_3218"
-               name="%metatype.name.Expression_3218"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
-            <param name="semanticHint" value="3218"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
-         <specializationType
                id="br.ufpe.cin.crystalcase.diagram.DataType_3033"
                name="%metatype.name.DataType_3033"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
@@ -2676,6 +2900,15 @@
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="br.ufpe.cin.crystalcase.diagram.Cursor_3055"/>
             <param name="semanticHint" value="3036"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="crystal">
+         <specializationType
+               id="br.ufpe.cin.crystalcase.diagram.Expression_3219"
+               name="%metatype.name.Expression_3219"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
+            <param name="semanticHint" value="3219"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
@@ -2814,15 +3047,6 @@
          </specializationType>
       </metamodel>
       <metamodel nsURI="crystal">
-         <specializationType
-               id="br.ufpe.cin.crystalcase.diagram.Expression_3219"
-               name="%metatype.name.Expression_3219"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
-            <param name="semanticHint" value="3219"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="crystal">
          <metamodelType
                id="br.ufpe.cin.crystalcase.diagram.Transition_4001"
                name="%metatype.name.Transition_4001"
@@ -2866,25 +3090,30 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Collections_3019"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Records_3020"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Cursor_3021"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3056"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3057"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3181"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3182"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3183"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Selector_3108"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3109"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3110"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3220"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3221"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3222"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Insert_3184"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Update_3185"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Delete_3186"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Select_3187"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.While_3188"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3212"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3090"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3091"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.For_3189"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3214"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3151"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3152"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Loop_3190"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3213"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3153"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3154"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Open_3191"/>
@@ -2892,30 +3121,47 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3193"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3194"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3195"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3211"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3215"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3196"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3197"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3198"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3223"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Insert_3224"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Update_3225"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Delete_3226"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Select_3227"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.While_3228"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3092"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.For_3229"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3155"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Loop_3230"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3161"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Open_3231"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Fetch_3232"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3233"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3234"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3235"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Selector_3108"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3216"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3109"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3110"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Insert_3199"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Update_3200"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Delete_3201"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Select_3202"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.While_3203"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3092"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Insert_3093"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Update_3094"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Delete_3095"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Select_3096"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.While_3097"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.For_3098"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3155"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Insert_3156"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Update_3157"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Delete_3158"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Select_3159"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.While_3160"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Loop_3099"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3161"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Insert_3162"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Update_3163"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Delete_3164"/>
@@ -2926,7 +3172,6 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3102"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3103"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3104"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3212"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.For_3167"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.For_3168"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Loop_3169"/>
@@ -2936,13 +3181,11 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3173"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3174"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3175"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3213"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Open_3176"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Fetch_3177"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3178"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3179"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3180"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3214"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.For_3204"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Loop_3205"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Open_3206"/>
@@ -2950,7 +3193,6 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3208"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3209"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3210"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3215"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3138"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Insert_3139"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Update_3140"/>
@@ -2964,7 +3206,6 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3148"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3149"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3150"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3216"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3058"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Insert_3059"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Update_3060"/>
@@ -2978,7 +3219,6 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3068"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3069"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3070"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3217"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.DataType_3071"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Collections_3072"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Records_3073"/>
@@ -2991,6 +3231,7 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Collections_3027"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Records_3028"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Cursor_3029"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3218"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3075"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3076"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3077"/>
@@ -3006,11 +3247,11 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3087"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3088"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3089"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3218"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.DataType_3033"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Collections_3034"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Records_3035"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Cursor_3036"/>
+         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3219"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Exception_3037"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.If_3038"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Case_3039"/>
@@ -3026,7 +3267,6 @@
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Close_3049"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallProcedure_3050"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.CallFunction_3051"/>
-         <elementType ref="br.ufpe.cin.crystalcase.diagram.Expression_3219"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.Transition_4001"/>
          <elementType ref="br.ufpe.cin.crystalcase.diagram.SelectorTransition_4002"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>

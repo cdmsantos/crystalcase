@@ -31,7 +31,7 @@ public class Select4ItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPo
 	* @generated
 	*/
 	public Select4ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Select_3159);
+		super(CrystalElementTypes.Select_3096);
 	}
 
 	/**

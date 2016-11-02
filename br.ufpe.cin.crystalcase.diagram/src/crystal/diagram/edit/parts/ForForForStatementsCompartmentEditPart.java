@@ -93,6 +93,9 @@ public class ForForForStatementsCompartmentEditPart extends ShapeCompartmentEdit
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3214) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3151) {
 				return this;
 			}
@@ -136,9 +139,6 @@ public class ForForForStatementsCompartmentEditPart extends ShapeCompartmentEdit
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3180) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3214) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

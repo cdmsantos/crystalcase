@@ -95,6 +95,9 @@ public class FunctionFunctionExecutablePartCompartmentEditPart extends ShapeComp
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3218) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3075) {
 				return this;
 			}
@@ -138,9 +141,6 @@ public class FunctionFunctionExecutablePartCompartmentEditPart extends ShapeComp
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3089) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3218) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

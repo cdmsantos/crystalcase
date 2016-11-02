@@ -169,6 +169,13 @@ public class CrystalSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CrystalPackage.EXPRESSION: {
+				Expression expression = (Expression)theEObject;
+				T result = caseExpression(expression);
+				if (result == null) result = caseStatements(expression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CrystalPackage.EXCEPTION: {
 				crystal.Exception exception = (crystal.Exception)theEObject;
 				T result = caseException(exception);
@@ -289,13 +296,6 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.SELECTOR_TRANSITION: {
 				SelectorTransition selectorTransition = (SelectorTransition)theEObject;
 				T result = caseSelectorTransition(selectorTransition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CrystalPackage.EXPRESSION: {
-				Expression expression = (Expression)theEObject;
-				T result = caseExpression(expression);
-				if (result == null) result = caseStatements(expression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.AnonymousBlock;
 import crystal.CallProcedure;
 import crystal.CrystalFactory;
+import crystal.Function;
 
 /**
  * @generated
@@ -57,7 +58,7 @@ public class CallProcedure9CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		CallProcedure newElement = CrystalFactory.eINSTANCE.createCallProcedure();
 
-		AnonymousBlock owner = (AnonymousBlock) getElementToEdit();
+		Function owner = (Function) getElementToEdit();
 		owner.getExecutablePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);

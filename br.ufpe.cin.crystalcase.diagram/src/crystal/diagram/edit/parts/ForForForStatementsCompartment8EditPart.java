@@ -35,7 +35,7 @@ public class ForForForStatementsCompartment8EditPart extends ShapeCompartmentEdi
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 7075;
+	public static final int VISUAL_ID = 7073;
 
 	/**
 	* @generated
@@ -90,6 +90,9 @@ public class ForForForStatementsCompartment8EditPart extends ShapeCompartmentEdi
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3214) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3151) {
 				return this;
 			}
@@ -133,9 +136,6 @@ public class ForForForStatementsCompartment8EditPart extends ShapeCompartmentEdi
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3180) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3214) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

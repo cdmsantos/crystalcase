@@ -164,12 +164,12 @@ public class CrystalDiagramUpdater {
 			return getIfIfElsesCompartment_7080SemanticChildren(view);
 		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
 			return getCaseCaseCasesCompartment_7081SemanticChildren(view);
-		case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
-			return getSelectorSelectorCaseStatementsCompartment_7033SemanticChildren(view);
+		case CaseCaseElseStatementsCompartmentEditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7091SemanticChildren(view);
 		case IfIfIfsCompartment3EditPart.VISUAL_ID:
-			return getIfIfIfsCompartment_7034SemanticChildren(view);
+			return getIfIfIfsCompartment_7092SemanticChildren(view);
 		case IfIfElsesCompartment3EditPart.VISUAL_ID:
-			return getIfIfElsesCompartment_7035SemanticChildren(view);
+			return getIfIfElsesCompartment_7093SemanticChildren(view);
 		case WhileWhileWhileStatementsCompartmentEditPart.VISUAL_ID:
 			return getWhileWhileWhileStatementsCompartment_7082SemanticChildren(view);
 		case IfIfIfsCompartment4EditPart.VISUAL_ID:
@@ -194,51 +194,79 @@ public class CrystalDiagramUpdater {
 			return getIfIfElsesCompartment_7086SemanticChildren(view);
 		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
 			return getCaseCaseCasesCompartment_7087SemanticChildren(view);
-		case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
-			return getWhileWhileWhileStatementsCompartment_7088SemanticChildren(view);
+		case CaseCaseElseStatementsCompartment2EditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7094SemanticChildren(view);
 		case CaseCaseCasesCompartment3EditPart.VISUAL_ID:
-			return getCaseCaseCasesCompartment_7043SemanticChildren(view);
-		case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
-			return getWhileWhileWhileStatementsCompartment_7025SemanticChildren(view);
-		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
-			return getForForForStatementsCompartment_7059SemanticChildren(view);
+			return getCaseCaseCasesCompartment_7095SemanticChildren(view);
+		case CaseCaseElseStatementsCompartment3EditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7096SemanticChildren(view);
+		case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
+			return getWhileWhileWhileStatementsCompartment_7097SemanticChildren(view);
 		case CaseCaseCasesCompartment4EditPart.VISUAL_ID:
-			return getCaseCaseCasesCompartment_7060SemanticChildren(view);
-		case WhileWhileWhileStatementsCompartment4EditPart.VISUAL_ID:
-			return getWhileWhileWhileStatementsCompartment_7061SemanticChildren(view);
-		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
-			return getLoopLoopLoopStatementsCompartment_7062SemanticChildren(view);
+			return getCaseCaseCasesCompartment_7043SemanticChildren(view);
+		case CaseCaseElseStatementsCompartment4EditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7098SemanticChildren(view);
+		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
+			return getForForForStatementsCompartment_7099SemanticChildren(view);
 		case CaseCaseCasesCompartment5EditPart.VISUAL_ID:
-			return getCaseCaseCasesCompartment_7063SemanticChildren(view);
-		case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
-			return getWhileWhileWhileStatementsCompartment_7064SemanticChildren(view);
-		case ForForForStatementsCompartment3EditPart.VISUAL_ID:
-			return getForForForStatementsCompartment_7065SemanticChildren(view);
-		case ForForForStatementsCompartment4EditPart.VISUAL_ID:
-			return getForForForStatementsCompartment_7066SemanticChildren(view);
-		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
-			return getLoopLoopLoopStatementsCompartment_7067SemanticChildren(view);
-		case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
-			return getLoopLoopLoopStatementsCompartment_7068SemanticChildren(view);
-		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
-			return getForForForStatementsCompartment_7089SemanticChildren(view);
-		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
-			return getLoopLoopLoopStatementsCompartment_7090SemanticChildren(view);
+			return getCaseCaseCasesCompartment_7060SemanticChildren(view);
+		case CaseCaseElseStatementsCompartment5EditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7100SemanticChildren(view);
+		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
+			return getLoopLoopLoopStatementsCompartment_7101SemanticChildren(view);
 		case CaseCaseCasesCompartment6EditPart.VISUAL_ID:
-			return getCaseCaseCasesCompartment_7044SemanticChildren(view);
+			return getCaseCaseCasesCompartment_7063SemanticChildren(view);
+		case CaseCaseElseStatementsCompartment6EditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7102SemanticChildren(view);
+		case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
+			return getSelectorSelectorCaseStatementsCompartment_7033SemanticChildren(view);
+		case IfIfIfsCompartment8EditPart.VISUAL_ID:
+			return getIfIfIfsCompartment_7034SemanticChildren(view);
+		case IfIfElsesCompartment8EditPart.VISUAL_ID:
+			return getIfIfElsesCompartment_7035SemanticChildren(view);
+		case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
+			return getWhileWhileWhileStatementsCompartment_7088SemanticChildren(view);
+		case WhileWhileWhileStatementsCompartment4EditPart.VISUAL_ID:
+			return getWhileWhileWhileStatementsCompartment_7025SemanticChildren(view);
+		case ForForForStatementsCompartment3EditPart.VISUAL_ID:
+			return getForForForStatementsCompartment_7059SemanticChildren(view);
+		case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
+			return getWhileWhileWhileStatementsCompartment_7061SemanticChildren(view);
+		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
+			return getLoopLoopLoopStatementsCompartment_7062SemanticChildren(view);
 		case WhileWhileWhileStatementsCompartment6EditPart.VISUAL_ID:
-			return getWhileWhileWhileStatementsCompartment_7045SemanticChildren(view);
+			return getWhileWhileWhileStatementsCompartment_7064SemanticChildren(view);
+		case ForForForStatementsCompartment4EditPart.VISUAL_ID:
+			return getForForForStatementsCompartment_7065SemanticChildren(view);
+		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
+			return getForForForStatementsCompartment_7066SemanticChildren(view);
+		case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
+			return getLoopLoopLoopStatementsCompartment_7067SemanticChildren(view);
+		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
+			return getLoopLoopLoopStatementsCompartment_7068SemanticChildren(view);
 		case ForForForStatementsCompartment6EditPart.VISUAL_ID:
-			return getForForForStatementsCompartment_7071SemanticChildren(view);
+			return getForForForStatementsCompartment_7089SemanticChildren(view);
 		case LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID:
-			return getLoopLoopLoopStatementsCompartment_7072SemanticChildren(view);
+			return getLoopLoopLoopStatementsCompartment_7090SemanticChildren(view);
 		case CaseCaseCasesCompartment7EditPart.VISUAL_ID:
-			return getCaseCaseCasesCompartment_7046SemanticChildren(view);
+			return getCaseCaseCasesCompartment_7044SemanticChildren(view);
+		case CaseCaseElseStatementsCompartment7EditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7103SemanticChildren(view);
 		case WhileWhileWhileStatementsCompartment7EditPart.VISUAL_ID:
-			return getWhileWhileWhileStatementsCompartment_7024SemanticChildren(view);
+			return getWhileWhileWhileStatementsCompartment_7045SemanticChildren(view);
 		case ForForForStatementsCompartment7EditPart.VISUAL_ID:
-			return getForForForStatementsCompartment_7073SemanticChildren(view);
+			return getForForForStatementsCompartment_7071SemanticChildren(view);
 		case LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID:
+			return getLoopLoopLoopStatementsCompartment_7072SemanticChildren(view);
+		case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
+			return getCaseCaseCasesCompartment_7046SemanticChildren(view);
+		case CaseCaseElseStatementsCompartment8EditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7104SemanticChildren(view);
+		case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
+			return getWhileWhileWhileStatementsCompartment_7024SemanticChildren(view);
+		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
+			return getForForForStatementsCompartment_7073SemanticChildren(view);
+		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
 			return getLoopLoopLoopStatementsCompartment_7074SemanticChildren(view);
 		case FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
 			return getFunctionFunctionDeclarativePartCompartment_7016SemanticChildren(view);
@@ -248,33 +276,37 @@ public class CrystalDiagramUpdater {
 			return getFunctionFunctionReturnPartCompartment_7022SemanticChildren(view);
 		case FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
 			return getFunctionFunctionExecutablePartCompartment_7023SemanticChildren(view);
-		case IfIfIfsCompartment8EditPart.VISUAL_ID:
+		case IfIfIfsCompartment9EditPart.VISUAL_ID:
 			return getIfIfIfsCompartment_7047SemanticChildren(view);
-		case IfIfElsesCompartment8EditPart.VISUAL_ID:
+		case IfIfElsesCompartment9EditPart.VISUAL_ID:
 			return getIfIfElsesCompartment_7048SemanticChildren(view);
-		case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
+		case CaseCaseCasesCompartment9EditPart.VISUAL_ID:
 			return getCaseCaseCasesCompartment_7049SemanticChildren(view);
-		case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment9EditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7105SemanticChildren(view);
+		case WhileWhileWhileStatementsCompartment9EditPart.VISUAL_ID:
 			return getWhileWhileWhileStatementsCompartment_7026SemanticChildren(view);
-		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment9EditPart.VISUAL_ID:
 			return getForForForStatementsCompartment_7075SemanticChildren(view);
-		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
+		case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
 			return getLoopLoopLoopStatementsCompartment_7076SemanticChildren(view);
 		case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
 			return getAnonymousBlockAnonymousBlockDeclarativePartCompartment_7018SemanticChildren(view);
 		case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
 			return getAnonymousBlockAnonymousBlockExecutablePartCompartment_7019SemanticChildren(view);
-		case IfIfIfsCompartment9EditPart.VISUAL_ID:
+		case IfIfIfsCompartment10EditPart.VISUAL_ID:
 			return getIfIfIfsCompartment_7050SemanticChildren(view);
-		case IfIfElsesCompartment9EditPart.VISUAL_ID:
+		case IfIfElsesCompartment10EditPart.VISUAL_ID:
 			return getIfIfElsesCompartment_7051SemanticChildren(view);
-		case CaseCaseCasesCompartment9EditPart.VISUAL_ID:
+		case CaseCaseCasesCompartment10EditPart.VISUAL_ID:
 			return getCaseCaseCasesCompartment_7052SemanticChildren(view);
-		case WhileWhileWhileStatementsCompartment9EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment10EditPart.VISUAL_ID:
+			return getCaseCaseElseStatementsCompartment_7106SemanticChildren(view);
+		case WhileWhileWhileStatementsCompartment10EditPart.VISUAL_ID:
 			return getWhileWhileWhileStatementsCompartment_7027SemanticChildren(view);
-		case ForForForStatementsCompartment9EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment10EditPart.VISUAL_ID:
 			return getForForForStatementsCompartment_7077SemanticChildren(view);
-		case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
+		case LoopLoopLoopStatementsCompartment10EditPart.VISUAL_ID:
 			return getLoopLoopLoopStatementsCompartment_7078SemanticChildren(view);
 		}
 		return Collections.emptyList();
@@ -407,11 +439,712 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getExecutablePart().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == ExpressionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == ExceptionEditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
 			if (visualID == IfEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7028SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CaseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == InsertEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == UpdateEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeleteEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SelectEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == WhileEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ForEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == LoopEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == OpenEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FetchEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CloseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedureEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunctionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7029SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7079SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CaseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == InsertEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == UpdateEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeleteEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SelectEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == WhileEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ForEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == LoopEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == OpenEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FetchEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CloseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedureEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunctionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7080SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getCaseCaseCasesCompartment_7081SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Case modelElement = (Case) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getCases().iterator(); it.hasNext();) {
+			Selector childElement = (Selector) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == SelectorEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7091SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Case modelElement = (Case) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7092SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CaseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == InsertEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == UpdateEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeleteEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SelectEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == WhileEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ForEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == LoopEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == OpenEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FetchEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CloseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedureEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunctionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7093SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getSelectorSelectorCaseStatementsCompartment_7033SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Selector modelElement = (Selector) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getCaseStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception8EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If8EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -467,114 +1200,114 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7034SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CaseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == InsertEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == UpdateEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeleteEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SelectEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == WhileEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ForEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == LoopEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == OpenEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FetchEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CloseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedureEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunctionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7035SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
 			if (visualID == Expression7EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7028SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		If modelElement = (If) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CaseEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == InsertEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == UpdateEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == DeleteEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == SelectEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == WhileEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == ForEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == LoopEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == OpenEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == FetchEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CloseEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedureEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunctionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == ExpressionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7029SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		If modelElement = (If) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
 			if (visualID == Exception7EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -587,300 +1320,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert2EditPart.VISUAL_ID) {
+			if (visualID == Insert3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update2EditPart.VISUAL_ID) {
+			if (visualID == Update3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete2EditPart.VISUAL_ID) {
+			if (visualID == Delete3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select2EditPart.VISUAL_ID) {
+			if (visualID == Select3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == For5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Loop5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Open5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fetch5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Close5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunction5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7079SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		If modelElement = (If) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CaseEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == InsertEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == UpdateEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == DeleteEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == SelectEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == WhileEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == ForEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == LoopEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == OpenEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == FetchEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CloseEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedureEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunctionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == ExpressionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7080SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		If modelElement = (If) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception7EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If7EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Case2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Insert2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Update2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Delete2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Select2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == While2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == For5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Loop5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Open5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fetch5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Close5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunction5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getCaseCaseCasesCompartment_7081SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		Case modelElement = (Case) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getCases().iterator(); it.hasNext();) {
-			Selector childElement = (Selector) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == SelectorEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getSelectorSelectorCaseStatementsCompartment_7033SemanticChildren(
-			View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		Selector modelElement = (Selector) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getCaseStatements().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Case6EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Insert6EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Update6EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Delete6EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Select6EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == While6EditPart.VISUAL_ID) {
+			if (visualID == While3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -912,178 +1368,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression6EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7034SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		If modelElement = (If) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CaseEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == InsertEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == UpdateEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == DeleteEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == SelectEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == WhileEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == ForEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == LoopEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == OpenEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == FetchEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CloseEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedureEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunctionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == ExpressionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7035SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		If modelElement = (If) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception7EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If7EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Case2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Insert2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Update2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Delete2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Select2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == While2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == For5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Loop5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Open5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fetch5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Close5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunction5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -1104,263 +1388,15 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
 			if (visualID == If4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Case3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Insert3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Update3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Delete3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Select3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == While3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == For2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Loop2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Open2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fetch2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Close2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedure2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunction2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7037SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		If modelElement = (If) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CaseEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == InsertEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == UpdateEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == DeleteEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == SelectEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == WhileEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == ForEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == LoopEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == OpenEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == FetchEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CloseEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedureEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunctionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == ExpressionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7038SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		If modelElement = (If) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception7EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If7EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Case2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Insert2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Update2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Delete2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Select2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == While2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == For5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Loop5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Open5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fetch5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Close5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunction5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7083SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		For modelElement = (For) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1388,7 +1424,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For4EditPart.VISUAL_ID) {
+			if (visualID == For3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1396,27 +1432,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open4EditPart.VISUAL_ID) {
+			if (visualID == Open3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch4EditPart.VISUAL_ID) {
+			if (visualID == Fetch3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close4EditPart.VISUAL_ID) {
+			if (visualID == Close3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression4EditPart.VISUAL_ID) {
+			if (visualID == CallFunction3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1427,7 +1459,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7054SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7037SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -1440,6 +1472,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -1500,10 +1536,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == ExpressionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -1511,7 +1543,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7055SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7038SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -1524,6 +1556,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception7EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -1536,55 +1572,51 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert2EditPart.VISUAL_ID) {
+			if (visualID == Insert3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update2EditPart.VISUAL_ID) {
+			if (visualID == Update3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete2EditPart.VISUAL_ID) {
+			if (visualID == Delete3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select2EditPart.VISUAL_ID) {
+			if (visualID == Select3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While2EditPart.VISUAL_ID) {
+			if (visualID == While3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For5EditPart.VISUAL_ID) {
+			if (visualID == For6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop5EditPart.VISUAL_ID) {
+			if (visualID == Loop6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open5EditPart.VISUAL_ID) {
+			if (visualID == Open6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch5EditPart.VISUAL_ID) {
+			if (visualID == Fetch6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close5EditPart.VISUAL_ID) {
+			if (visualID == Close6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression5EditPart.VISUAL_ID) {
+			if (visualID == CallFunction6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1595,7 +1627,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7084SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7083SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -1603,16 +1635,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Loop modelElement = (Loop) containerView.getElement();
+		For modelElement = (For) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception6EditPart.VISUAL_ID) {
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If6EditPart.VISUAL_ID) {
+			if (visualID == Exception5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1640,7 +1676,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For3EditPart.VISUAL_ID) {
+			if (visualID == For5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1648,27 +1684,275 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open3EditPart.VISUAL_ID) {
+			if (visualID == Open5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch3EditPart.VISUAL_ID) {
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close3EditPart.VISUAL_ID) {
+			if (visualID == Close5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression3EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfIfsCompartment_7054SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CaseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == InsertEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == UpdateEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == DeleteEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SelectEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == WhileEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ForEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == LoopEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == OpenEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == FetchEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CloseEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedureEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunctionEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getIfIfElsesCompartment_7055SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		If modelElement = (If) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7084SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Loop modelElement = (Loop) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1692,6 +1976,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -1749,10 +2037,6 @@ public class CrystalDiagramUpdater {
 				continue;
 			}
 			if (visualID == CallFunctionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == ExpressionEditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1776,6 +2060,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception7EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -1788,55 +2076,51 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert2EditPart.VISUAL_ID) {
+			if (visualID == Insert3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update2EditPart.VISUAL_ID) {
+			if (visualID == Update3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete2EditPart.VISUAL_ID) {
+			if (visualID == Delete3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select2EditPart.VISUAL_ID) {
+			if (visualID == Select3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While2EditPart.VISUAL_ID) {
+			if (visualID == While3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For5EditPart.VISUAL_ID) {
+			if (visualID == For6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop5EditPart.VISUAL_ID) {
+			if (visualID == Loop6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open5EditPart.VISUAL_ID) {
+			if (visualID == Open6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch5EditPart.VISUAL_ID) {
+			if (visualID == Fetch6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close5EditPart.VISUAL_ID) {
+			if (visualID == Close6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression5EditPart.VISUAL_ID) {
+			if (visualID == CallFunction6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -1860,6 +2144,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -1920,10 +2208,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == ExpressionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -1944,6 +2228,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception7EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -1956,55 +2244,51 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert2EditPart.VISUAL_ID) {
+			if (visualID == Insert3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update2EditPart.VISUAL_ID) {
+			if (visualID == Update3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete2EditPart.VISUAL_ID) {
+			if (visualID == Delete3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select2EditPart.VISUAL_ID) {
+			if (visualID == Select3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While2EditPart.VISUAL_ID) {
+			if (visualID == While3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For5EditPart.VISUAL_ID) {
+			if (visualID == For6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop5EditPart.VISUAL_ID) {
+			if (visualID == Loop6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open5EditPart.VISUAL_ID) {
+			if (visualID == Open6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch5EditPart.VISUAL_ID) {
+			if (visualID == Fetch6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close5EditPart.VISUAL_ID) {
+			if (visualID == Close6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression5EditPart.VISUAL_ID) {
+			if (visualID == CallFunction6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2039,7 +2323,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7088SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7094SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -2047,16 +2331,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		While modelElement = (While) containerView.getElement();
+		Case modelElement = (Case) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception4EditPart.VISUAL_ID) {
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If4EditPart.VISUAL_ID) {
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2064,23 +2352,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert3EditPart.VISUAL_ID) {
+			if (visualID == Insert2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update3EditPart.VISUAL_ID) {
+			if (visualID == Update2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete3EditPart.VISUAL_ID) {
+			if (visualID == Delete2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select3EditPart.VISUAL_ID) {
+			if (visualID == Select2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While3EditPart.VISUAL_ID) {
+			if (visualID == While2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2112,7 +2400,279 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression2EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getCaseCaseCasesCompartment_7095SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Case modelElement = (Case) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getCases().iterator(); it.hasNext();) {
+			Selector childElement = (Selector) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == SelectorEditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7096SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Case modelElement = (Case) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7097SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		While modelElement = (While) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7088SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		While modelElement = (While) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2147,7 +2707,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7024SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7098SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -2155,16 +2715,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		While modelElement = (While) containerView.getElement();
+		Case modelElement = (Case) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception4EditPart.VISUAL_ID) {
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If4EditPart.VISUAL_ID) {
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2172,23 +2736,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert3EditPart.VISUAL_ID) {
+			if (visualID == Insert2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update3EditPart.VISUAL_ID) {
+			if (visualID == Update2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete3EditPart.VISUAL_ID) {
+			if (visualID == Delete2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select3EditPart.VISUAL_ID) {
+			if (visualID == Select2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While3EditPart.VISUAL_ID) {
+			if (visualID == While2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2220,10 +2784,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -2231,7 +2791,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7073SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7099SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -2244,95 +2804,15 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
 			if (visualID == If5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Case4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Insert4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Update4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Delete4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Select4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == While4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == For4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Loop3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Open4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fetch4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Close4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunction4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7074SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		Loop modelElement = (Loop) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception6EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2360,11 +2840,95 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For3EditPart.VISUAL_ID) {
+			if (visualID == For5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
 			if (visualID == Loop4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7024SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		While modelElement = (While) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2388,7 +2952,171 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression3EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7073SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		For modelElement = (For) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7074SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Loop modelElement = (Loop) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2517,95 +3245,15 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
 			if (visualID == If4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Case3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Insert3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Update3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Delete3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Select3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == While3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == For2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Loop2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Open2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fetch2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Close2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedure2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunction2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7059SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		For modelElement = (For) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2633,7 +3281,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For4EditPart.VISUAL_ID) {
+			if (visualID == For3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2641,27 +3289,107 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open4EditPart.VISUAL_ID) {
+			if (visualID == Open3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch4EditPart.VISUAL_ID) {
+			if (visualID == Fetch3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close4EditPart.VISUAL_ID) {
+			if (visualID == Close3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction4EditPart.VISUAL_ID) {
+			if (visualID == CallFunction3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression4EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7059SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		For modelElement = (For) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2696,7 +3424,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7061SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7100SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -2704,16 +3432,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		While modelElement = (While) containerView.getElement();
+		Case modelElement = (Case) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception4EditPart.VISUAL_ID) {
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If4EditPart.VISUAL_ID) {
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2721,23 +3453,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert3EditPart.VISUAL_ID) {
+			if (visualID == Insert2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update3EditPart.VISUAL_ID) {
+			if (visualID == Update2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete3EditPart.VISUAL_ID) {
+			if (visualID == Delete2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select3EditPart.VISUAL_ID) {
+			if (visualID == Select2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While3EditPart.VISUAL_ID) {
+			if (visualID == While2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2769,10 +3501,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -2780,7 +3508,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7062SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7101SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -2793,6 +3521,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -2801,27 +3533,111 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Case5EditPart.VISUAL_ID) {
+			if (visualID == Case6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert5EditPart.VISUAL_ID) {
+			if (visualID == Insert6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update5EditPart.VISUAL_ID) {
+			if (visualID == Update6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete5EditPart.VISUAL_ID) {
+			if (visualID == Delete6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select5EditPart.VISUAL_ID) {
+			if (visualID == Select6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While5EditPart.VISUAL_ID) {
+			if (visualID == While6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7061SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		While modelElement = (While) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2829,7 +3645,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop4EditPart.VISUAL_ID) {
+			if (visualID == Loop3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2853,7 +3669,87 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression3EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7062SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Loop modelElement = (Loop) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2888,7 +3784,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7064SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7102SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -2896,16 +3792,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		While modelElement = (While) containerView.getElement();
+		Case modelElement = (Case) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception4EditPart.VISUAL_ID) {
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If4EditPart.VISUAL_ID) {
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2913,23 +3813,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert3EditPart.VISUAL_ID) {
+			if (visualID == Insert2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update3EditPart.VISUAL_ID) {
+			if (visualID == Update2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete3EditPart.VISUAL_ID) {
+			if (visualID == Delete2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select3EditPart.VISUAL_ID) {
+			if (visualID == Select2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While3EditPart.VISUAL_ID) {
+			if (visualID == While2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2961,7 +3861,87 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression2EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7064SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		While modelElement = (While) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -2985,6 +3965,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -2993,59 +3977,55 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Case4EditPart.VISUAL_ID) {
+			if (visualID == Case5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert4EditPart.VISUAL_ID) {
+			if (visualID == Insert5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update4EditPart.VISUAL_ID) {
+			if (visualID == Update5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete4EditPart.VISUAL_ID) {
+			if (visualID == Delete5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select4EditPart.VISUAL_ID) {
+			if (visualID == Select5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While4EditPart.VISUAL_ID) {
+			if (visualID == While5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For4EditPart.VISUAL_ID) {
+			if (visualID == For5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop3EditPart.VISUAL_ID) {
+			if (visualID == Loop4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open4EditPart.VISUAL_ID) {
+			if (visualID == Open5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch4EditPart.VISUAL_ID) {
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close4EditPart.VISUAL_ID) {
+			if (visualID == Close5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression4EditPart.VISUAL_ID) {
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3069,6 +4049,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -3077,59 +4061,55 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Case4EditPart.VISUAL_ID) {
+			if (visualID == Case5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert4EditPart.VISUAL_ID) {
+			if (visualID == Insert5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update4EditPart.VISUAL_ID) {
+			if (visualID == Update5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete4EditPart.VISUAL_ID) {
+			if (visualID == Delete5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select4EditPart.VISUAL_ID) {
+			if (visualID == Select5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While4EditPart.VISUAL_ID) {
+			if (visualID == While5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For4EditPart.VISUAL_ID) {
+			if (visualID == For5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop3EditPart.VISUAL_ID) {
+			if (visualID == Loop4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open4EditPart.VISUAL_ID) {
+			if (visualID == Open5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch4EditPart.VISUAL_ID) {
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close4EditPart.VISUAL_ID) {
+			if (visualID == Close5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression4EditPart.VISUAL_ID) {
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3153,6 +4133,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -3161,195 +4145,27 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Case5EditPart.VISUAL_ID) {
+			if (visualID == Case6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert5EditPart.VISUAL_ID) {
+			if (visualID == Insert6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update5EditPart.VISUAL_ID) {
+			if (visualID == Update6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete5EditPart.VISUAL_ID) {
+			if (visualID == Delete6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select5EditPart.VISUAL_ID) {
+			if (visualID == Select6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == For3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Loop4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Open3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fetch3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Close3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunction3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7068SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		Loop modelElement = (Loop) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception6EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If6EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Case5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Insert5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Update5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Delete5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Select5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == While5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == For3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Loop4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Open3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Fetch3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Close3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == CallFunction3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression3EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7089SemanticChildren(View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		For modelElement = (For) containerView.getElement();
-		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
-			Statements childElement = (Statements) it.next();
-			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == If5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Case4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Insert4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Update4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Delete4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Select4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == While4EditPart.VISUAL_ID) {
+			if (visualID == While6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3357,7 +4173,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop3EditPart.VISUAL_ID) {
+			if (visualID == Loop5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3381,10 +4197,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -3392,7 +4204,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7090SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7068SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -3405,11 +4217,99 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
 			if (visualID == If6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7089SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		For modelElement = (For) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3437,7 +4337,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For3EditPart.VISUAL_ID) {
+			if (visualID == For5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3445,27 +4345,107 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open3EditPart.VISUAL_ID) {
+			if (visualID == Open5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch3EditPart.VISUAL_ID) {
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close3EditPart.VISUAL_ID) {
+			if (visualID == Close5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression3EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7090SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Loop modelElement = (Loop) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3500,7 +4480,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7045SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7103SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -3508,16 +4488,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		While modelElement = (While) containerView.getElement();
+		Case modelElement = (Case) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception4EditPart.VISUAL_ID) {
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If4EditPart.VISUAL_ID) {
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3525,23 +4509,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert3EditPart.VISUAL_ID) {
+			if (visualID == Insert2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update3EditPart.VISUAL_ID) {
+			if (visualID == Update2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete3EditPart.VISUAL_ID) {
+			if (visualID == Delete2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select3EditPart.VISUAL_ID) {
+			if (visualID == Select2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While3EditPart.VISUAL_ID) {
+			if (visualID == While2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3573,10 +4557,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -3584,7 +4564,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7071SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7045SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -3592,16 +4572,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		For modelElement = (For) containerView.getElement();
+		While modelElement = (While) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception5EditPart.VISUAL_ID) {
+			if (visualID == Expression4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If5EditPart.VISUAL_ID) {
+			if (visualID == Exception4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3629,7 +4613,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For4EditPart.VISUAL_ID) {
+			if (visualID == For3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3637,27 +4621,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open4EditPart.VISUAL_ID) {
+			if (visualID == Open3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch4EditPart.VISUAL_ID) {
+			if (visualID == Fetch3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close4EditPart.VISUAL_ID) {
+			if (visualID == Close3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression4EditPart.VISUAL_ID) {
+			if (visualID == CallFunction3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3668,7 +4648,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7072SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7071SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -3676,16 +4656,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Loop modelElement = (Loop) containerView.getElement();
+		For modelElement = (For) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception6EditPart.VISUAL_ID) {
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If6EditPart.VISUAL_ID) {
+			if (visualID == Exception5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3713,7 +4697,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For3EditPart.VISUAL_ID) {
+			if (visualID == For5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3721,27 +4705,107 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open3EditPart.VISUAL_ID) {
+			if (visualID == Open5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch3EditPart.VISUAL_ID) {
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close3EditPart.VISUAL_ID) {
+			if (visualID == Close5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression3EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7072SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Loop modelElement = (Loop) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3776,6 +4840,90 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7104SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Case modelElement = (Case) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalNodeDescriptor> getFunctionFunctionExecutablePartCompartment_7023SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
@@ -3790,67 +4938,67 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getExecutablePart().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception8EditPart.VISUAL_ID) {
+			if (visualID == Expression9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If8EditPart.VISUAL_ID) {
+			if (visualID == Exception9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Case8EditPart.VISUAL_ID) {
+			if (visualID == If9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert8EditPart.VISUAL_ID) {
+			if (visualID == Case9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update8EditPart.VISUAL_ID) {
+			if (visualID == Insert9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete8EditPart.VISUAL_ID) {
+			if (visualID == Update9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select8EditPart.VISUAL_ID) {
+			if (visualID == Delete9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While8EditPart.VISUAL_ID) {
+			if (visualID == Select9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For8EditPart.VISUAL_ID) {
+			if (visualID == While9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop8EditPart.VISUAL_ID) {
+			if (visualID == For9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open8EditPart.VISUAL_ID) {
+			if (visualID == Loop9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch8EditPart.VISUAL_ID) {
+			if (visualID == Open9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close8EditPart.VISUAL_ID) {
+			if (visualID == Fetch9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure8EditPart.VISUAL_ID) {
+			if (visualID == Close9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction8EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression8EditPart.VISUAL_ID) {
+			if (visualID == CallFunction9EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -3874,6 +5022,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -3934,10 +5086,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == ExpressionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -3958,6 +5106,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception7EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -3970,55 +5122,51 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert2EditPart.VISUAL_ID) {
+			if (visualID == Insert3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update2EditPart.VISUAL_ID) {
+			if (visualID == Update3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete2EditPart.VISUAL_ID) {
+			if (visualID == Delete3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select2EditPart.VISUAL_ID) {
+			if (visualID == Select3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While2EditPart.VISUAL_ID) {
+			if (visualID == While3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For5EditPart.VISUAL_ID) {
+			if (visualID == For6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop5EditPart.VISUAL_ID) {
+			if (visualID == Loop6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open5EditPart.VISUAL_ID) {
+			if (visualID == Open6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch5EditPart.VISUAL_ID) {
+			if (visualID == Fetch6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close5EditPart.VISUAL_ID) {
+			if (visualID == Close6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression5EditPart.VISUAL_ID) {
+			if (visualID == CallFunction6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4053,7 +5201,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7026SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7105SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -4061,16 +5209,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		While modelElement = (While) containerView.getElement();
+		Case modelElement = (Case) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception4EditPart.VISUAL_ID) {
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If4EditPart.VISUAL_ID) {
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4078,23 +5230,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert3EditPart.VISUAL_ID) {
+			if (visualID == Insert2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update3EditPart.VISUAL_ID) {
+			if (visualID == Update2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete3EditPart.VISUAL_ID) {
+			if (visualID == Delete2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select3EditPart.VISUAL_ID) {
+			if (visualID == Select2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While3EditPart.VISUAL_ID) {
+			if (visualID == While2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4126,10 +5278,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -4137,7 +5285,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7075SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7026SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -4145,16 +5293,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		For modelElement = (For) containerView.getElement();
+		While modelElement = (While) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception5EditPart.VISUAL_ID) {
+			if (visualID == Expression4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If5EditPart.VISUAL_ID) {
+			if (visualID == Exception4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4182,7 +5334,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For4EditPart.VISUAL_ID) {
+			if (visualID == For3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4190,27 +5342,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open4EditPart.VISUAL_ID) {
+			if (visualID == Open3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch4EditPart.VISUAL_ID) {
+			if (visualID == Fetch3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close4EditPart.VISUAL_ID) {
+			if (visualID == Close3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression4EditPart.VISUAL_ID) {
+			if (visualID == CallFunction3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4221,7 +5369,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7076SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7075SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -4229,16 +5377,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Loop modelElement = (Loop) containerView.getElement();
+		For modelElement = (For) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception6EditPart.VISUAL_ID) {
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If6EditPart.VISUAL_ID) {
+			if (visualID == Exception5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4266,7 +5418,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For3EditPart.VISUAL_ID) {
+			if (visualID == For5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4274,27 +5426,107 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open3EditPart.VISUAL_ID) {
+			if (visualID == Open5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch3EditPart.VISUAL_ID) {
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close3EditPart.VISUAL_ID) {
+			if (visualID == Close5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression3EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7076SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Loop modelElement = (Loop) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4356,67 +5588,67 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getExecutablePart().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception9EditPart.VISUAL_ID) {
+			if (visualID == Expression10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If9EditPart.VISUAL_ID) {
+			if (visualID == Exception10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Case9EditPart.VISUAL_ID) {
+			if (visualID == If10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert9EditPart.VISUAL_ID) {
+			if (visualID == Case10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update9EditPart.VISUAL_ID) {
+			if (visualID == Insert10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete9EditPart.VISUAL_ID) {
+			if (visualID == Update10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select9EditPart.VISUAL_ID) {
+			if (visualID == Delete10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While9EditPart.VISUAL_ID) {
+			if (visualID == Select10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For9EditPart.VISUAL_ID) {
+			if (visualID == While10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop9EditPart.VISUAL_ID) {
+			if (visualID == For10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open9EditPart.VISUAL_ID) {
+			if (visualID == Loop10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch9EditPart.VISUAL_ID) {
+			if (visualID == Open10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close9EditPart.VISUAL_ID) {
+			if (visualID == Fetch10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure9EditPart.VISUAL_ID) {
+			if (visualID == Close10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction9EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression9EditPart.VISUAL_ID) {
+			if (visualID == CallFunction10EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4440,6 +5672,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getIfs().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression2EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -4500,10 +5736,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == ExpressionEditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -4524,6 +5756,10 @@ public class CrystalDiagramUpdater {
 		for (Iterator<?> it = modelElement.getElses().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression7EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == Exception7EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
@@ -4536,55 +5772,51 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert2EditPart.VISUAL_ID) {
+			if (visualID == Insert3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update2EditPart.VISUAL_ID) {
+			if (visualID == Update3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete2EditPart.VISUAL_ID) {
+			if (visualID == Delete3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select2EditPart.VISUAL_ID) {
+			if (visualID == Select3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While2EditPart.VISUAL_ID) {
+			if (visualID == While3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For5EditPart.VISUAL_ID) {
+			if (visualID == For6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Loop5EditPart.VISUAL_ID) {
+			if (visualID == Loop6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open5EditPart.VISUAL_ID) {
+			if (visualID == Open6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch5EditPart.VISUAL_ID) {
+			if (visualID == Fetch6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close5EditPart.VISUAL_ID) {
+			if (visualID == Close6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction5EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression5EditPart.VISUAL_ID) {
+			if (visualID == CallFunction6EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4619,7 +5851,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7027SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getCaseCaseElseStatementsCompartment_7106SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -4627,16 +5859,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		While modelElement = (While) containerView.getElement();
+		Case modelElement = (Case) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getElseStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception4EditPart.VISUAL_ID) {
+			if (visualID == Expression3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If4EditPart.VISUAL_ID) {
+			if (visualID == Exception3EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4644,23 +5880,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Insert3EditPart.VISUAL_ID) {
+			if (visualID == Insert2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Update3EditPart.VISUAL_ID) {
+			if (visualID == Update2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Delete3EditPart.VISUAL_ID) {
+			if (visualID == Delete2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Select3EditPart.VISUAL_ID) {
+			if (visualID == Select2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == While3EditPart.VISUAL_ID) {
+			if (visualID == While2EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4692,10 +5928,6 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression2EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
 		}
 		return result;
 	}
@@ -4703,7 +5935,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7077SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getWhileWhileWhileStatementsCompartment_7027SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -4711,16 +5943,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		For modelElement = (For) containerView.getElement();
+		While modelElement = (While) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getWhileStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception5EditPart.VISUAL_ID) {
+			if (visualID == Expression4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If5EditPart.VISUAL_ID) {
+			if (visualID == Exception4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4748,7 +5984,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For4EditPart.VISUAL_ID) {
+			if (visualID == For3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4756,27 +5992,23 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open4EditPart.VISUAL_ID) {
+			if (visualID == Open3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch4EditPart.VISUAL_ID) {
+			if (visualID == Fetch3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close4EditPart.VISUAL_ID) {
+			if (visualID == Close3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction4EditPart.VISUAL_ID) {
-				result.add(new CrystalNodeDescriptor(childElement, visualID));
-				continue;
-			}
-			if (visualID == Expression4EditPart.VISUAL_ID) {
+			if (visualID == CallFunction3EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4787,7 +6019,7 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7078SemanticChildren(View view) {
+	public static List<CrystalNodeDescriptor> getForForForStatementsCompartment_7077SemanticChildren(View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
 		}
@@ -4795,16 +6027,20 @@ public class CrystalDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Loop modelElement = (Loop) containerView.getElement();
+		For modelElement = (For) containerView.getElement();
 		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getForStatements().iterator(); it.hasNext();) {
 			Statements childElement = (Statements) it.next();
 			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
-			if (visualID == Exception6EditPart.VISUAL_ID) {
+			if (visualID == Expression5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == If6EditPart.VISUAL_ID) {
+			if (visualID == Exception5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4832,7 +6068,7 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == For3EditPart.VISUAL_ID) {
+			if (visualID == For5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4840,27 +6076,107 @@ public class CrystalDiagramUpdater {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Open3EditPart.VISUAL_ID) {
+			if (visualID == Open5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Fetch3EditPart.VISUAL_ID) {
+			if (visualID == Fetch5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Close3EditPart.VISUAL_ID) {
+			if (visualID == Close5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallProcedure3EditPart.VISUAL_ID) {
+			if (visualID == CallProcedure5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CallFunction3EditPart.VISUAL_ID) {
+			if (visualID == CallFunction5EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == Expression3EditPart.VISUAL_ID) {
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalNodeDescriptor> getLoopLoopLoopStatementsCompartment_7078SemanticChildren(View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Loop modelElement = (Loop) containerView.getElement();
+		LinkedList<CrystalNodeDescriptor> result = new LinkedList<CrystalNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getLoopStatements().iterator(); it.hasNext();) {
+			Statements childElement = (Statements) it.next();
+			int visualID = CrystalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Expression6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Exception6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == If6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Case6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Insert6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Update6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Delete6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Select6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == While6EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == For4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Loop5EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Open4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Fetch4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == Close4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallProcedure4EditPart.VISUAL_ID) {
+				result.add(new CrystalNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == CallFunction4EditPart.VISUAL_ID) {
 				result.add(new CrystalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -4897,22 +6213,26 @@ public class CrystalDiagramUpdater {
 			return getRecords_3020ContainedLinks(view);
 		case Cursor2EditPart.VISUAL_ID:
 			return getCursor_3021ContainedLinks(view);
+		case ExpressionEditPart.VISUAL_ID:
+			return getExpression_3217ContainedLinks(view);
 		case ExceptionEditPart.VISUAL_ID:
 			return getException_3056ContainedLinks(view);
 		case IfEditPart.VISUAL_ID:
 			return getIf_3057ContainedLinks(view);
+		case Expression2EditPart.VISUAL_ID:
+			return getExpression_3211ContainedLinks(view);
 		case Exception2EditPart.VISUAL_ID:
 			return getException_3181ContainedLinks(view);
 		case If2EditPart.VISUAL_ID:
 			return getIf_3182ContainedLinks(view);
 		case CaseEditPart.VISUAL_ID:
 			return getCase_3183ContainedLinks(view);
-		case SelectorEditPart.VISUAL_ID:
-			return getSelector_3108ContainedLinks(view);
+		case Expression3EditPart.VISUAL_ID:
+			return getExpression_3220ContainedLinks(view);
 		case Exception3EditPart.VISUAL_ID:
-			return getException_3109ContainedLinks(view);
+			return getException_3221ContainedLinks(view);
 		case If3EditPart.VISUAL_ID:
-			return getIf_3110ContainedLinks(view);
+			return getIf_3222ContainedLinks(view);
 		case InsertEditPart.VISUAL_ID:
 			return getInsert_3184ContainedLinks(view);
 		case UpdateEditPart.VISUAL_ID:
@@ -4923,18 +6243,24 @@ public class CrystalDiagramUpdater {
 			return getSelect_3187ContainedLinks(view);
 		case WhileEditPart.VISUAL_ID:
 			return getWhile_3188ContainedLinks(view);
+		case Expression4EditPart.VISUAL_ID:
+			return getExpression_3212ContainedLinks(view);
 		case Exception4EditPart.VISUAL_ID:
 			return getException_3090ContainedLinks(view);
 		case If4EditPart.VISUAL_ID:
 			return getIf_3091ContainedLinks(view);
 		case ForEditPart.VISUAL_ID:
 			return getFor_3189ContainedLinks(view);
+		case Expression5EditPart.VISUAL_ID:
+			return getExpression_3214ContainedLinks(view);
 		case Exception5EditPart.VISUAL_ID:
 			return getException_3151ContainedLinks(view);
 		case If5EditPart.VISUAL_ID:
 			return getIf_3152ContainedLinks(view);
 		case LoopEditPart.VISUAL_ID:
 			return getLoop_3190ContainedLinks(view);
+		case Expression6EditPart.VISUAL_ID:
+			return getExpression_3213ContainedLinks(view);
 		case Exception6EditPart.VISUAL_ID:
 			return getException_3153ContainedLinks(view);
 		case If6EditPart.VISUAL_ID:
@@ -4949,180 +6275,202 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3194ContainedLinks(view);
 		case CallFunctionEditPart.VISUAL_ID:
 			return getCallFunction_3195ContainedLinks(view);
-		case ExpressionEditPart.VISUAL_ID:
-			return getExpression_3211ContainedLinks(view);
+		case Expression7EditPart.VISUAL_ID:
+			return getExpression_3215ContainedLinks(view);
 		case Exception7EditPart.VISUAL_ID:
 			return getException_3196ContainedLinks(view);
 		case If7EditPart.VISUAL_ID:
 			return getIf_3197ContainedLinks(view);
 		case Case2EditPart.VISUAL_ID:
 			return getCase_3198ContainedLinks(view);
-		case Insert2EditPart.VISUAL_ID:
-			return getInsert_3199ContainedLinks(view);
-		case Update2EditPart.VISUAL_ID:
-			return getUpdate_3200ContainedLinks(view);
-		case Delete2EditPart.VISUAL_ID:
-			return getDelete_3201ContainedLinks(view);
-		case Select2EditPart.VISUAL_ID:
-			return getSelect_3202ContainedLinks(view);
-		case While2EditPart.VISUAL_ID:
-			return getWhile_3203ContainedLinks(view);
 		case Case3EditPart.VISUAL_ID:
-			return getCase_3092ContainedLinks(view);
-		case Insert3EditPart.VISUAL_ID:
-			return getInsert_3093ContainedLinks(view);
-		case Update3EditPart.VISUAL_ID:
-			return getUpdate_3094ContainedLinks(view);
-		case Delete3EditPart.VISUAL_ID:
-			return getDelete_3095ContainedLinks(view);
-		case Select3EditPart.VISUAL_ID:
-			return getSelect_3096ContainedLinks(view);
-		case While3EditPart.VISUAL_ID:
-			return getWhile_3097ContainedLinks(view);
-		case For2EditPart.VISUAL_ID:
-			return getFor_3098ContainedLinks(view);
+			return getCase_3223ContainedLinks(view);
+		case Insert2EditPart.VISUAL_ID:
+			return getInsert_3224ContainedLinks(view);
+		case Update2EditPart.VISUAL_ID:
+			return getUpdate_3225ContainedLinks(view);
+		case Delete2EditPart.VISUAL_ID:
+			return getDelete_3226ContainedLinks(view);
+		case Select2EditPart.VISUAL_ID:
+			return getSelect_3227ContainedLinks(view);
+		case While2EditPart.VISUAL_ID:
+			return getWhile_3228ContainedLinks(view);
 		case Case4EditPart.VISUAL_ID:
-			return getCase_3155ContainedLinks(view);
-		case Insert4EditPart.VISUAL_ID:
-			return getInsert_3156ContainedLinks(view);
-		case Update4EditPart.VISUAL_ID:
-			return getUpdate_3157ContainedLinks(view);
-		case Delete4EditPart.VISUAL_ID:
-			return getDelete_3158ContainedLinks(view);
-		case Select4EditPart.VISUAL_ID:
-			return getSelect_3159ContainedLinks(view);
-		case While4EditPart.VISUAL_ID:
-			return getWhile_3160ContainedLinks(view);
-		case Loop2EditPart.VISUAL_ID:
-			return getLoop_3099ContainedLinks(view);
+			return getCase_3092ContainedLinks(view);
+		case For2EditPart.VISUAL_ID:
+			return getFor_3229ContainedLinks(view);
 		case Case5EditPart.VISUAL_ID:
-			return getCase_3161ContainedLinks(view);
-		case Insert5EditPart.VISUAL_ID:
-			return getInsert_3162ContainedLinks(view);
-		case Update5EditPart.VISUAL_ID:
-			return getUpdate_3163ContainedLinks(view);
-		case Delete5EditPart.VISUAL_ID:
-			return getDelete_3164ContainedLinks(view);
-		case Select5EditPart.VISUAL_ID:
-			return getSelect_3165ContainedLinks(view);
-		case While5EditPart.VISUAL_ID:
-			return getWhile_3166ContainedLinks(view);
-		case Open2EditPart.VISUAL_ID:
-			return getOpen_3100ContainedLinks(view);
-		case Fetch2EditPart.VISUAL_ID:
-			return getFetch_3101ContainedLinks(view);
-		case Close2EditPart.VISUAL_ID:
-			return getClose_3102ContainedLinks(view);
-		case CallProcedure2EditPart.VISUAL_ID:
-			return getCallProcedure_3103ContainedLinks(view);
-		case CallFunction2EditPart.VISUAL_ID:
-			return getCallFunction_3104ContainedLinks(view);
-		case Expression2EditPart.VISUAL_ID:
-			return getExpression_3212ContainedLinks(view);
-		case For3EditPart.VISUAL_ID:
-			return getFor_3167ContainedLinks(view);
-		case For4EditPart.VISUAL_ID:
-			return getFor_3168ContainedLinks(view);
-		case Loop3EditPart.VISUAL_ID:
-			return getLoop_3169ContainedLinks(view);
-		case Loop4EditPart.VISUAL_ID:
-			return getLoop_3170ContainedLinks(view);
-		case Open3EditPart.VISUAL_ID:
-			return getOpen_3171ContainedLinks(view);
-		case Fetch3EditPart.VISUAL_ID:
-			return getFetch_3172ContainedLinks(view);
-		case Close3EditPart.VISUAL_ID:
-			return getClose_3173ContainedLinks(view);
-		case CallProcedure3EditPart.VISUAL_ID:
-			return getCallProcedure_3174ContainedLinks(view);
-		case CallFunction3EditPart.VISUAL_ID:
-			return getCallFunction_3175ContainedLinks(view);
-		case Expression3EditPart.VISUAL_ID:
-			return getExpression_3213ContainedLinks(view);
-		case Open4EditPart.VISUAL_ID:
-			return getOpen_3176ContainedLinks(view);
-		case Fetch4EditPart.VISUAL_ID:
-			return getFetch_3177ContainedLinks(view);
-		case Close4EditPart.VISUAL_ID:
-			return getClose_3178ContainedLinks(view);
-		case CallProcedure4EditPart.VISUAL_ID:
-			return getCallProcedure_3179ContainedLinks(view);
-		case CallFunction4EditPart.VISUAL_ID:
-			return getCallFunction_3180ContainedLinks(view);
-		case Expression4EditPart.VISUAL_ID:
-			return getExpression_3214ContainedLinks(view);
-		case For5EditPart.VISUAL_ID:
-			return getFor_3204ContainedLinks(view);
-		case Loop5EditPart.VISUAL_ID:
-			return getLoop_3205ContainedLinks(view);
-		case Open5EditPart.VISUAL_ID:
-			return getOpen_3206ContainedLinks(view);
-		case Fetch5EditPart.VISUAL_ID:
-			return getFetch_3207ContainedLinks(view);
-		case Close5EditPart.VISUAL_ID:
-			return getClose_3208ContainedLinks(view);
-		case CallProcedure5EditPart.VISUAL_ID:
-			return getCallProcedure_3209ContainedLinks(view);
-		case CallFunction5EditPart.VISUAL_ID:
-			return getCallFunction_3210ContainedLinks(view);
-		case Expression5EditPart.VISUAL_ID:
-			return getExpression_3215ContainedLinks(view);
+			return getCase_3155ContainedLinks(view);
+		case Loop2EditPart.VISUAL_ID:
+			return getLoop_3230ContainedLinks(view);
 		case Case6EditPart.VISUAL_ID:
-			return getCase_3138ContainedLinks(view);
-		case Insert6EditPart.VISUAL_ID:
-			return getInsert_3139ContainedLinks(view);
-		case Update6EditPart.VISUAL_ID:
-			return getUpdate_3140ContainedLinks(view);
-		case Delete6EditPart.VISUAL_ID:
-			return getDelete_3141ContainedLinks(view);
-		case Select6EditPart.VISUAL_ID:
-			return getSelect_3142ContainedLinks(view);
-		case While6EditPart.VISUAL_ID:
-			return getWhile_3143ContainedLinks(view);
-		case For6EditPart.VISUAL_ID:
-			return getFor_3144ContainedLinks(view);
-		case Loop6EditPart.VISUAL_ID:
-			return getLoop_3145ContainedLinks(view);
-		case Open6EditPart.VISUAL_ID:
-			return getOpen_3146ContainedLinks(view);
-		case Fetch6EditPart.VISUAL_ID:
-			return getFetch_3147ContainedLinks(view);
-		case Close6EditPart.VISUAL_ID:
-			return getClose_3148ContainedLinks(view);
-		case CallProcedure6EditPart.VISUAL_ID:
-			return getCallProcedure_3149ContainedLinks(view);
-		case CallFunction6EditPart.VISUAL_ID:
-			return getCallFunction_3150ContainedLinks(view);
-		case Expression6EditPart.VISUAL_ID:
+			return getCase_3161ContainedLinks(view);
+		case Open2EditPart.VISUAL_ID:
+			return getOpen_3231ContainedLinks(view);
+		case Fetch2EditPart.VISUAL_ID:
+			return getFetch_3232ContainedLinks(view);
+		case Close2EditPart.VISUAL_ID:
+			return getClose_3233ContainedLinks(view);
+		case CallProcedure2EditPart.VISUAL_ID:
+			return getCallProcedure_3234ContainedLinks(view);
+		case CallFunction2EditPart.VISUAL_ID:
+			return getCallFunction_3235ContainedLinks(view);
+		case SelectorEditPart.VISUAL_ID:
+			return getSelector_3108ContainedLinks(view);
+		case Expression8EditPart.VISUAL_ID:
 			return getExpression_3216ContainedLinks(view);
+		case Exception8EditPart.VISUAL_ID:
+			return getException_3109ContainedLinks(view);
+		case If8EditPart.VISUAL_ID:
+			return getIf_3110ContainedLinks(view);
+		case Insert3EditPart.VISUAL_ID:
+			return getInsert_3199ContainedLinks(view);
+		case Update3EditPart.VISUAL_ID:
+			return getUpdate_3200ContainedLinks(view);
+		case Delete3EditPart.VISUAL_ID:
+			return getDelete_3201ContainedLinks(view);
+		case Select3EditPart.VISUAL_ID:
+			return getSelect_3202ContainedLinks(view);
+		case While3EditPart.VISUAL_ID:
+			return getWhile_3203ContainedLinks(view);
+		case Insert4EditPart.VISUAL_ID:
+			return getInsert_3093ContainedLinks(view);
+		case Update4EditPart.VISUAL_ID:
+			return getUpdate_3094ContainedLinks(view);
+		case Delete4EditPart.VISUAL_ID:
+			return getDelete_3095ContainedLinks(view);
+		case Select4EditPart.VISUAL_ID:
+			return getSelect_3096ContainedLinks(view);
+		case While4EditPart.VISUAL_ID:
+			return getWhile_3097ContainedLinks(view);
+		case For3EditPart.VISUAL_ID:
+			return getFor_3098ContainedLinks(view);
+		case Insert5EditPart.VISUAL_ID:
+			return getInsert_3156ContainedLinks(view);
+		case Update5EditPart.VISUAL_ID:
+			return getUpdate_3157ContainedLinks(view);
+		case Delete5EditPart.VISUAL_ID:
+			return getDelete_3158ContainedLinks(view);
+		case Select5EditPart.VISUAL_ID:
+			return getSelect_3159ContainedLinks(view);
+		case While5EditPart.VISUAL_ID:
+			return getWhile_3160ContainedLinks(view);
+		case Loop3EditPart.VISUAL_ID:
+			return getLoop_3099ContainedLinks(view);
+		case Insert6EditPart.VISUAL_ID:
+			return getInsert_3162ContainedLinks(view);
+		case Update6EditPart.VISUAL_ID:
+			return getUpdate_3163ContainedLinks(view);
+		case Delete6EditPart.VISUAL_ID:
+			return getDelete_3164ContainedLinks(view);
+		case Select6EditPart.VISUAL_ID:
+			return getSelect_3165ContainedLinks(view);
+		case While6EditPart.VISUAL_ID:
+			return getWhile_3166ContainedLinks(view);
+		case Open3EditPart.VISUAL_ID:
+			return getOpen_3100ContainedLinks(view);
+		case Fetch3EditPart.VISUAL_ID:
+			return getFetch_3101ContainedLinks(view);
+		case Close3EditPart.VISUAL_ID:
+			return getClose_3102ContainedLinks(view);
+		case CallProcedure3EditPart.VISUAL_ID:
+			return getCallProcedure_3103ContainedLinks(view);
+		case CallFunction3EditPart.VISUAL_ID:
+			return getCallFunction_3104ContainedLinks(view);
+		case For4EditPart.VISUAL_ID:
+			return getFor_3167ContainedLinks(view);
+		case For5EditPart.VISUAL_ID:
+			return getFor_3168ContainedLinks(view);
+		case Loop4EditPart.VISUAL_ID:
+			return getLoop_3169ContainedLinks(view);
+		case Loop5EditPart.VISUAL_ID:
+			return getLoop_3170ContainedLinks(view);
+		case Open4EditPart.VISUAL_ID:
+			return getOpen_3171ContainedLinks(view);
+		case Fetch4EditPart.VISUAL_ID:
+			return getFetch_3172ContainedLinks(view);
+		case Close4EditPart.VISUAL_ID:
+			return getClose_3173ContainedLinks(view);
+		case CallProcedure4EditPart.VISUAL_ID:
+			return getCallProcedure_3174ContainedLinks(view);
+		case CallFunction4EditPart.VISUAL_ID:
+			return getCallFunction_3175ContainedLinks(view);
+		case Open5EditPart.VISUAL_ID:
+			return getOpen_3176ContainedLinks(view);
+		case Fetch5EditPart.VISUAL_ID:
+			return getFetch_3177ContainedLinks(view);
+		case Close5EditPart.VISUAL_ID:
+			return getClose_3178ContainedLinks(view);
+		case CallProcedure5EditPart.VISUAL_ID:
+			return getCallProcedure_3179ContainedLinks(view);
+		case CallFunction5EditPart.VISUAL_ID:
+			return getCallFunction_3180ContainedLinks(view);
+		case For6EditPart.VISUAL_ID:
+			return getFor_3204ContainedLinks(view);
+		case Loop6EditPart.VISUAL_ID:
+			return getLoop_3205ContainedLinks(view);
+		case Open6EditPart.VISUAL_ID:
+			return getOpen_3206ContainedLinks(view);
+		case Fetch6EditPart.VISUAL_ID:
+			return getFetch_3207ContainedLinks(view);
+		case Close6EditPart.VISUAL_ID:
+			return getClose_3208ContainedLinks(view);
+		case CallProcedure6EditPart.VISUAL_ID:
+			return getCallProcedure_3209ContainedLinks(view);
+		case CallFunction6EditPart.VISUAL_ID:
+			return getCallFunction_3210ContainedLinks(view);
 		case Case7EditPart.VISUAL_ID:
-			return getCase_3058ContainedLinks(view);
+			return getCase_3138ContainedLinks(view);
 		case Insert7EditPart.VISUAL_ID:
-			return getInsert_3059ContainedLinks(view);
+			return getInsert_3139ContainedLinks(view);
 		case Update7EditPart.VISUAL_ID:
-			return getUpdate_3060ContainedLinks(view);
+			return getUpdate_3140ContainedLinks(view);
 		case Delete7EditPart.VISUAL_ID:
-			return getDelete_3061ContainedLinks(view);
+			return getDelete_3141ContainedLinks(view);
 		case Select7EditPart.VISUAL_ID:
-			return getSelect_3062ContainedLinks(view);
+			return getSelect_3142ContainedLinks(view);
 		case While7EditPart.VISUAL_ID:
-			return getWhile_3063ContainedLinks(view);
+			return getWhile_3143ContainedLinks(view);
 		case For7EditPart.VISUAL_ID:
-			return getFor_3064ContainedLinks(view);
+			return getFor_3144ContainedLinks(view);
 		case Loop7EditPart.VISUAL_ID:
-			return getLoop_3065ContainedLinks(view);
+			return getLoop_3145ContainedLinks(view);
 		case Open7EditPart.VISUAL_ID:
-			return getOpen_3066ContainedLinks(view);
+			return getOpen_3146ContainedLinks(view);
 		case Fetch7EditPart.VISUAL_ID:
-			return getFetch_3067ContainedLinks(view);
+			return getFetch_3147ContainedLinks(view);
 		case Close7EditPart.VISUAL_ID:
-			return getClose_3068ContainedLinks(view);
+			return getClose_3148ContainedLinks(view);
 		case CallProcedure7EditPart.VISUAL_ID:
-			return getCallProcedure_3069ContainedLinks(view);
+			return getCallProcedure_3149ContainedLinks(view);
 		case CallFunction7EditPart.VISUAL_ID:
+			return getCallFunction_3150ContainedLinks(view);
+		case Case8EditPart.VISUAL_ID:
+			return getCase_3058ContainedLinks(view);
+		case Insert8EditPart.VISUAL_ID:
+			return getInsert_3059ContainedLinks(view);
+		case Update8EditPart.VISUAL_ID:
+			return getUpdate_3060ContainedLinks(view);
+		case Delete8EditPart.VISUAL_ID:
+			return getDelete_3061ContainedLinks(view);
+		case Select8EditPart.VISUAL_ID:
+			return getSelect_3062ContainedLinks(view);
+		case While8EditPart.VISUAL_ID:
+			return getWhile_3063ContainedLinks(view);
+		case For8EditPart.VISUAL_ID:
+			return getFor_3064ContainedLinks(view);
+		case Loop8EditPart.VISUAL_ID:
+			return getLoop_3065ContainedLinks(view);
+		case Open8EditPart.VISUAL_ID:
+			return getOpen_3066ContainedLinks(view);
+		case Fetch8EditPart.VISUAL_ID:
+			return getFetch_3067ContainedLinks(view);
+		case Close8EditPart.VISUAL_ID:
+			return getClose_3068ContainedLinks(view);
+		case CallProcedure8EditPart.VISUAL_ID:
+			return getCallProcedure_3069ContainedLinks(view);
+		case CallFunction8EditPart.VISUAL_ID:
 			return getCallFunction_3070ContainedLinks(view);
-		case Expression7EditPart.VISUAL_ID:
-			return getExpression_3217ContainedLinks(view);
 		case DataType3EditPart.VISUAL_ID:
 			return getDataType_3071ContainedLinks(view);
 		case Collections3EditPart.VISUAL_ID:
@@ -5147,38 +6495,38 @@ public class CrystalDiagramUpdater {
 			return getRecords_3028ContainedLinks(view);
 		case Cursor5EditPart.VISUAL_ID:
 			return getCursor_3029ContainedLinks(view);
-		case Exception8EditPart.VISUAL_ID:
-			return getException_3075ContainedLinks(view);
-		case If8EditPart.VISUAL_ID:
-			return getIf_3076ContainedLinks(view);
-		case Case8EditPart.VISUAL_ID:
-			return getCase_3077ContainedLinks(view);
-		case Insert8EditPart.VISUAL_ID:
-			return getInsert_3078ContainedLinks(view);
-		case Update8EditPart.VISUAL_ID:
-			return getUpdate_3079ContainedLinks(view);
-		case Delete8EditPart.VISUAL_ID:
-			return getDelete_3080ContainedLinks(view);
-		case Select8EditPart.VISUAL_ID:
-			return getSelect_3081ContainedLinks(view);
-		case While8EditPart.VISUAL_ID:
-			return getWhile_3082ContainedLinks(view);
-		case For8EditPart.VISUAL_ID:
-			return getFor_3083ContainedLinks(view);
-		case Loop8EditPart.VISUAL_ID:
-			return getLoop_3084ContainedLinks(view);
-		case Open8EditPart.VISUAL_ID:
-			return getOpen_3085ContainedLinks(view);
-		case Fetch8EditPart.VISUAL_ID:
-			return getFetch_3086ContainedLinks(view);
-		case Close8EditPart.VISUAL_ID:
-			return getClose_3087ContainedLinks(view);
-		case CallProcedure8EditPart.VISUAL_ID:
-			return getCallProcedure_3088ContainedLinks(view);
-		case CallFunction8EditPart.VISUAL_ID:
-			return getCallFunction_3089ContainedLinks(view);
-		case Expression8EditPart.VISUAL_ID:
+		case Expression9EditPart.VISUAL_ID:
 			return getExpression_3218ContainedLinks(view);
+		case Exception9EditPart.VISUAL_ID:
+			return getException_3075ContainedLinks(view);
+		case If9EditPart.VISUAL_ID:
+			return getIf_3076ContainedLinks(view);
+		case Case9EditPart.VISUAL_ID:
+			return getCase_3077ContainedLinks(view);
+		case Insert9EditPart.VISUAL_ID:
+			return getInsert_3078ContainedLinks(view);
+		case Update9EditPart.VISUAL_ID:
+			return getUpdate_3079ContainedLinks(view);
+		case Delete9EditPart.VISUAL_ID:
+			return getDelete_3080ContainedLinks(view);
+		case Select9EditPart.VISUAL_ID:
+			return getSelect_3081ContainedLinks(view);
+		case While9EditPart.VISUAL_ID:
+			return getWhile_3082ContainedLinks(view);
+		case For9EditPart.VISUAL_ID:
+			return getFor_3083ContainedLinks(view);
+		case Loop9EditPart.VISUAL_ID:
+			return getLoop_3084ContainedLinks(view);
+		case Open9EditPart.VISUAL_ID:
+			return getOpen_3085ContainedLinks(view);
+		case Fetch9EditPart.VISUAL_ID:
+			return getFetch_3086ContainedLinks(view);
+		case Close9EditPart.VISUAL_ID:
+			return getClose_3087ContainedLinks(view);
+		case CallProcedure9EditPart.VISUAL_ID:
+			return getCallProcedure_3088ContainedLinks(view);
+		case CallFunction9EditPart.VISUAL_ID:
+			return getCallFunction_3089ContainedLinks(view);
 		case DataType6EditPart.VISUAL_ID:
 			return getDataType_3033ContainedLinks(view);
 		case Collections6EditPart.VISUAL_ID:
@@ -5187,38 +6535,38 @@ public class CrystalDiagramUpdater {
 			return getRecords_3035ContainedLinks(view);
 		case Cursor6EditPart.VISUAL_ID:
 			return getCursor_3036ContainedLinks(view);
-		case Exception9EditPart.VISUAL_ID:
-			return getException_3037ContainedLinks(view);
-		case If9EditPart.VISUAL_ID:
-			return getIf_3038ContainedLinks(view);
-		case Case9EditPart.VISUAL_ID:
-			return getCase_3039ContainedLinks(view);
-		case Insert9EditPart.VISUAL_ID:
-			return getInsert_3040ContainedLinks(view);
-		case Update9EditPart.VISUAL_ID:
-			return getUpdate_3041ContainedLinks(view);
-		case Delete9EditPart.VISUAL_ID:
-			return getDelete_3042ContainedLinks(view);
-		case Select9EditPart.VISUAL_ID:
-			return getSelect_3043ContainedLinks(view);
-		case While9EditPart.VISUAL_ID:
-			return getWhile_3044ContainedLinks(view);
-		case For9EditPart.VISUAL_ID:
-			return getFor_3045ContainedLinks(view);
-		case Loop9EditPart.VISUAL_ID:
-			return getLoop_3046ContainedLinks(view);
-		case Open9EditPart.VISUAL_ID:
-			return getOpen_3047ContainedLinks(view);
-		case Fetch9EditPart.VISUAL_ID:
-			return getFetch_3048ContainedLinks(view);
-		case Close9EditPart.VISUAL_ID:
-			return getClose_3049ContainedLinks(view);
-		case CallProcedure9EditPart.VISUAL_ID:
-			return getCallProcedure_3050ContainedLinks(view);
-		case CallFunction9EditPart.VISUAL_ID:
-			return getCallFunction_3051ContainedLinks(view);
-		case Expression9EditPart.VISUAL_ID:
+		case Expression10EditPart.VISUAL_ID:
 			return getExpression_3219ContainedLinks(view);
+		case Exception10EditPart.VISUAL_ID:
+			return getException_3037ContainedLinks(view);
+		case If10EditPart.VISUAL_ID:
+			return getIf_3038ContainedLinks(view);
+		case Case10EditPart.VISUAL_ID:
+			return getCase_3039ContainedLinks(view);
+		case Insert10EditPart.VISUAL_ID:
+			return getInsert_3040ContainedLinks(view);
+		case Update10EditPart.VISUAL_ID:
+			return getUpdate_3041ContainedLinks(view);
+		case Delete10EditPart.VISUAL_ID:
+			return getDelete_3042ContainedLinks(view);
+		case Select10EditPart.VISUAL_ID:
+			return getSelect_3043ContainedLinks(view);
+		case While10EditPart.VISUAL_ID:
+			return getWhile_3044ContainedLinks(view);
+		case For10EditPart.VISUAL_ID:
+			return getFor_3045ContainedLinks(view);
+		case Loop10EditPart.VISUAL_ID:
+			return getLoop_3046ContainedLinks(view);
+		case Open10EditPart.VISUAL_ID:
+			return getOpen_3047ContainedLinks(view);
+		case Fetch10EditPart.VISUAL_ID:
+			return getFetch_3048ContainedLinks(view);
+		case Close10EditPart.VISUAL_ID:
+			return getClose_3049ContainedLinks(view);
+		case CallProcedure10EditPart.VISUAL_ID:
+			return getCallProcedure_3050ContainedLinks(view);
+		case CallFunction10EditPart.VISUAL_ID:
+			return getCallFunction_3051ContainedLinks(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001ContainedLinks(view);
 		case SelectorTransitionEditPart.VISUAL_ID:
@@ -5254,22 +6602,26 @@ public class CrystalDiagramUpdater {
 			return getRecords_3020IncomingLinks(view);
 		case Cursor2EditPart.VISUAL_ID:
 			return getCursor_3021IncomingLinks(view);
+		case ExpressionEditPart.VISUAL_ID:
+			return getExpression_3217IncomingLinks(view);
 		case ExceptionEditPart.VISUAL_ID:
 			return getException_3056IncomingLinks(view);
 		case IfEditPart.VISUAL_ID:
 			return getIf_3057IncomingLinks(view);
+		case Expression2EditPart.VISUAL_ID:
+			return getExpression_3211IncomingLinks(view);
 		case Exception2EditPart.VISUAL_ID:
 			return getException_3181IncomingLinks(view);
 		case If2EditPart.VISUAL_ID:
 			return getIf_3182IncomingLinks(view);
 		case CaseEditPart.VISUAL_ID:
 			return getCase_3183IncomingLinks(view);
-		case SelectorEditPart.VISUAL_ID:
-			return getSelector_3108IncomingLinks(view);
+		case Expression3EditPart.VISUAL_ID:
+			return getExpression_3220IncomingLinks(view);
 		case Exception3EditPart.VISUAL_ID:
-			return getException_3109IncomingLinks(view);
+			return getException_3221IncomingLinks(view);
 		case If3EditPart.VISUAL_ID:
-			return getIf_3110IncomingLinks(view);
+			return getIf_3222IncomingLinks(view);
 		case InsertEditPart.VISUAL_ID:
 			return getInsert_3184IncomingLinks(view);
 		case UpdateEditPart.VISUAL_ID:
@@ -5280,18 +6632,24 @@ public class CrystalDiagramUpdater {
 			return getSelect_3187IncomingLinks(view);
 		case WhileEditPart.VISUAL_ID:
 			return getWhile_3188IncomingLinks(view);
+		case Expression4EditPart.VISUAL_ID:
+			return getExpression_3212IncomingLinks(view);
 		case Exception4EditPart.VISUAL_ID:
 			return getException_3090IncomingLinks(view);
 		case If4EditPart.VISUAL_ID:
 			return getIf_3091IncomingLinks(view);
 		case ForEditPart.VISUAL_ID:
 			return getFor_3189IncomingLinks(view);
+		case Expression5EditPart.VISUAL_ID:
+			return getExpression_3214IncomingLinks(view);
 		case Exception5EditPart.VISUAL_ID:
 			return getException_3151IncomingLinks(view);
 		case If5EditPart.VISUAL_ID:
 			return getIf_3152IncomingLinks(view);
 		case LoopEditPart.VISUAL_ID:
 			return getLoop_3190IncomingLinks(view);
+		case Expression6EditPart.VISUAL_ID:
+			return getExpression_3213IncomingLinks(view);
 		case Exception6EditPart.VISUAL_ID:
 			return getException_3153IncomingLinks(view);
 		case If6EditPart.VISUAL_ID:
@@ -5306,180 +6664,202 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3194IncomingLinks(view);
 		case CallFunctionEditPart.VISUAL_ID:
 			return getCallFunction_3195IncomingLinks(view);
-		case ExpressionEditPart.VISUAL_ID:
-			return getExpression_3211IncomingLinks(view);
+		case Expression7EditPart.VISUAL_ID:
+			return getExpression_3215IncomingLinks(view);
 		case Exception7EditPart.VISUAL_ID:
 			return getException_3196IncomingLinks(view);
 		case If7EditPart.VISUAL_ID:
 			return getIf_3197IncomingLinks(view);
 		case Case2EditPart.VISUAL_ID:
 			return getCase_3198IncomingLinks(view);
-		case Insert2EditPart.VISUAL_ID:
-			return getInsert_3199IncomingLinks(view);
-		case Update2EditPart.VISUAL_ID:
-			return getUpdate_3200IncomingLinks(view);
-		case Delete2EditPart.VISUAL_ID:
-			return getDelete_3201IncomingLinks(view);
-		case Select2EditPart.VISUAL_ID:
-			return getSelect_3202IncomingLinks(view);
-		case While2EditPart.VISUAL_ID:
-			return getWhile_3203IncomingLinks(view);
 		case Case3EditPart.VISUAL_ID:
-			return getCase_3092IncomingLinks(view);
-		case Insert3EditPart.VISUAL_ID:
-			return getInsert_3093IncomingLinks(view);
-		case Update3EditPart.VISUAL_ID:
-			return getUpdate_3094IncomingLinks(view);
-		case Delete3EditPart.VISUAL_ID:
-			return getDelete_3095IncomingLinks(view);
-		case Select3EditPart.VISUAL_ID:
-			return getSelect_3096IncomingLinks(view);
-		case While3EditPart.VISUAL_ID:
-			return getWhile_3097IncomingLinks(view);
-		case For2EditPart.VISUAL_ID:
-			return getFor_3098IncomingLinks(view);
+			return getCase_3223IncomingLinks(view);
+		case Insert2EditPart.VISUAL_ID:
+			return getInsert_3224IncomingLinks(view);
+		case Update2EditPart.VISUAL_ID:
+			return getUpdate_3225IncomingLinks(view);
+		case Delete2EditPart.VISUAL_ID:
+			return getDelete_3226IncomingLinks(view);
+		case Select2EditPart.VISUAL_ID:
+			return getSelect_3227IncomingLinks(view);
+		case While2EditPart.VISUAL_ID:
+			return getWhile_3228IncomingLinks(view);
 		case Case4EditPart.VISUAL_ID:
-			return getCase_3155IncomingLinks(view);
-		case Insert4EditPart.VISUAL_ID:
-			return getInsert_3156IncomingLinks(view);
-		case Update4EditPart.VISUAL_ID:
-			return getUpdate_3157IncomingLinks(view);
-		case Delete4EditPart.VISUAL_ID:
-			return getDelete_3158IncomingLinks(view);
-		case Select4EditPart.VISUAL_ID:
-			return getSelect_3159IncomingLinks(view);
-		case While4EditPart.VISUAL_ID:
-			return getWhile_3160IncomingLinks(view);
-		case Loop2EditPart.VISUAL_ID:
-			return getLoop_3099IncomingLinks(view);
+			return getCase_3092IncomingLinks(view);
+		case For2EditPart.VISUAL_ID:
+			return getFor_3229IncomingLinks(view);
 		case Case5EditPart.VISUAL_ID:
-			return getCase_3161IncomingLinks(view);
-		case Insert5EditPart.VISUAL_ID:
-			return getInsert_3162IncomingLinks(view);
-		case Update5EditPart.VISUAL_ID:
-			return getUpdate_3163IncomingLinks(view);
-		case Delete5EditPart.VISUAL_ID:
-			return getDelete_3164IncomingLinks(view);
-		case Select5EditPart.VISUAL_ID:
-			return getSelect_3165IncomingLinks(view);
-		case While5EditPart.VISUAL_ID:
-			return getWhile_3166IncomingLinks(view);
-		case Open2EditPart.VISUAL_ID:
-			return getOpen_3100IncomingLinks(view);
-		case Fetch2EditPart.VISUAL_ID:
-			return getFetch_3101IncomingLinks(view);
-		case Close2EditPart.VISUAL_ID:
-			return getClose_3102IncomingLinks(view);
-		case CallProcedure2EditPart.VISUAL_ID:
-			return getCallProcedure_3103IncomingLinks(view);
-		case CallFunction2EditPart.VISUAL_ID:
-			return getCallFunction_3104IncomingLinks(view);
-		case Expression2EditPart.VISUAL_ID:
-			return getExpression_3212IncomingLinks(view);
-		case For3EditPart.VISUAL_ID:
-			return getFor_3167IncomingLinks(view);
-		case For4EditPart.VISUAL_ID:
-			return getFor_3168IncomingLinks(view);
-		case Loop3EditPart.VISUAL_ID:
-			return getLoop_3169IncomingLinks(view);
-		case Loop4EditPart.VISUAL_ID:
-			return getLoop_3170IncomingLinks(view);
-		case Open3EditPart.VISUAL_ID:
-			return getOpen_3171IncomingLinks(view);
-		case Fetch3EditPart.VISUAL_ID:
-			return getFetch_3172IncomingLinks(view);
-		case Close3EditPart.VISUAL_ID:
-			return getClose_3173IncomingLinks(view);
-		case CallProcedure3EditPart.VISUAL_ID:
-			return getCallProcedure_3174IncomingLinks(view);
-		case CallFunction3EditPart.VISUAL_ID:
-			return getCallFunction_3175IncomingLinks(view);
-		case Expression3EditPart.VISUAL_ID:
-			return getExpression_3213IncomingLinks(view);
-		case Open4EditPart.VISUAL_ID:
-			return getOpen_3176IncomingLinks(view);
-		case Fetch4EditPart.VISUAL_ID:
-			return getFetch_3177IncomingLinks(view);
-		case Close4EditPart.VISUAL_ID:
-			return getClose_3178IncomingLinks(view);
-		case CallProcedure4EditPart.VISUAL_ID:
-			return getCallProcedure_3179IncomingLinks(view);
-		case CallFunction4EditPart.VISUAL_ID:
-			return getCallFunction_3180IncomingLinks(view);
-		case Expression4EditPart.VISUAL_ID:
-			return getExpression_3214IncomingLinks(view);
-		case For5EditPart.VISUAL_ID:
-			return getFor_3204IncomingLinks(view);
-		case Loop5EditPart.VISUAL_ID:
-			return getLoop_3205IncomingLinks(view);
-		case Open5EditPart.VISUAL_ID:
-			return getOpen_3206IncomingLinks(view);
-		case Fetch5EditPart.VISUAL_ID:
-			return getFetch_3207IncomingLinks(view);
-		case Close5EditPart.VISUAL_ID:
-			return getClose_3208IncomingLinks(view);
-		case CallProcedure5EditPart.VISUAL_ID:
-			return getCallProcedure_3209IncomingLinks(view);
-		case CallFunction5EditPart.VISUAL_ID:
-			return getCallFunction_3210IncomingLinks(view);
-		case Expression5EditPart.VISUAL_ID:
-			return getExpression_3215IncomingLinks(view);
+			return getCase_3155IncomingLinks(view);
+		case Loop2EditPart.VISUAL_ID:
+			return getLoop_3230IncomingLinks(view);
 		case Case6EditPart.VISUAL_ID:
-			return getCase_3138IncomingLinks(view);
-		case Insert6EditPart.VISUAL_ID:
-			return getInsert_3139IncomingLinks(view);
-		case Update6EditPart.VISUAL_ID:
-			return getUpdate_3140IncomingLinks(view);
-		case Delete6EditPart.VISUAL_ID:
-			return getDelete_3141IncomingLinks(view);
-		case Select6EditPart.VISUAL_ID:
-			return getSelect_3142IncomingLinks(view);
-		case While6EditPart.VISUAL_ID:
-			return getWhile_3143IncomingLinks(view);
-		case For6EditPart.VISUAL_ID:
-			return getFor_3144IncomingLinks(view);
-		case Loop6EditPart.VISUAL_ID:
-			return getLoop_3145IncomingLinks(view);
-		case Open6EditPart.VISUAL_ID:
-			return getOpen_3146IncomingLinks(view);
-		case Fetch6EditPart.VISUAL_ID:
-			return getFetch_3147IncomingLinks(view);
-		case Close6EditPart.VISUAL_ID:
-			return getClose_3148IncomingLinks(view);
-		case CallProcedure6EditPart.VISUAL_ID:
-			return getCallProcedure_3149IncomingLinks(view);
-		case CallFunction6EditPart.VISUAL_ID:
-			return getCallFunction_3150IncomingLinks(view);
-		case Expression6EditPart.VISUAL_ID:
+			return getCase_3161IncomingLinks(view);
+		case Open2EditPart.VISUAL_ID:
+			return getOpen_3231IncomingLinks(view);
+		case Fetch2EditPart.VISUAL_ID:
+			return getFetch_3232IncomingLinks(view);
+		case Close2EditPart.VISUAL_ID:
+			return getClose_3233IncomingLinks(view);
+		case CallProcedure2EditPart.VISUAL_ID:
+			return getCallProcedure_3234IncomingLinks(view);
+		case CallFunction2EditPart.VISUAL_ID:
+			return getCallFunction_3235IncomingLinks(view);
+		case SelectorEditPart.VISUAL_ID:
+			return getSelector_3108IncomingLinks(view);
+		case Expression8EditPart.VISUAL_ID:
 			return getExpression_3216IncomingLinks(view);
+		case Exception8EditPart.VISUAL_ID:
+			return getException_3109IncomingLinks(view);
+		case If8EditPart.VISUAL_ID:
+			return getIf_3110IncomingLinks(view);
+		case Insert3EditPart.VISUAL_ID:
+			return getInsert_3199IncomingLinks(view);
+		case Update3EditPart.VISUAL_ID:
+			return getUpdate_3200IncomingLinks(view);
+		case Delete3EditPart.VISUAL_ID:
+			return getDelete_3201IncomingLinks(view);
+		case Select3EditPart.VISUAL_ID:
+			return getSelect_3202IncomingLinks(view);
+		case While3EditPart.VISUAL_ID:
+			return getWhile_3203IncomingLinks(view);
+		case Insert4EditPart.VISUAL_ID:
+			return getInsert_3093IncomingLinks(view);
+		case Update4EditPart.VISUAL_ID:
+			return getUpdate_3094IncomingLinks(view);
+		case Delete4EditPart.VISUAL_ID:
+			return getDelete_3095IncomingLinks(view);
+		case Select4EditPart.VISUAL_ID:
+			return getSelect_3096IncomingLinks(view);
+		case While4EditPart.VISUAL_ID:
+			return getWhile_3097IncomingLinks(view);
+		case For3EditPart.VISUAL_ID:
+			return getFor_3098IncomingLinks(view);
+		case Insert5EditPart.VISUAL_ID:
+			return getInsert_3156IncomingLinks(view);
+		case Update5EditPart.VISUAL_ID:
+			return getUpdate_3157IncomingLinks(view);
+		case Delete5EditPart.VISUAL_ID:
+			return getDelete_3158IncomingLinks(view);
+		case Select5EditPart.VISUAL_ID:
+			return getSelect_3159IncomingLinks(view);
+		case While5EditPart.VISUAL_ID:
+			return getWhile_3160IncomingLinks(view);
+		case Loop3EditPart.VISUAL_ID:
+			return getLoop_3099IncomingLinks(view);
+		case Insert6EditPart.VISUAL_ID:
+			return getInsert_3162IncomingLinks(view);
+		case Update6EditPart.VISUAL_ID:
+			return getUpdate_3163IncomingLinks(view);
+		case Delete6EditPart.VISUAL_ID:
+			return getDelete_3164IncomingLinks(view);
+		case Select6EditPart.VISUAL_ID:
+			return getSelect_3165IncomingLinks(view);
+		case While6EditPart.VISUAL_ID:
+			return getWhile_3166IncomingLinks(view);
+		case Open3EditPart.VISUAL_ID:
+			return getOpen_3100IncomingLinks(view);
+		case Fetch3EditPart.VISUAL_ID:
+			return getFetch_3101IncomingLinks(view);
+		case Close3EditPart.VISUAL_ID:
+			return getClose_3102IncomingLinks(view);
+		case CallProcedure3EditPart.VISUAL_ID:
+			return getCallProcedure_3103IncomingLinks(view);
+		case CallFunction3EditPart.VISUAL_ID:
+			return getCallFunction_3104IncomingLinks(view);
+		case For4EditPart.VISUAL_ID:
+			return getFor_3167IncomingLinks(view);
+		case For5EditPart.VISUAL_ID:
+			return getFor_3168IncomingLinks(view);
+		case Loop4EditPart.VISUAL_ID:
+			return getLoop_3169IncomingLinks(view);
+		case Loop5EditPart.VISUAL_ID:
+			return getLoop_3170IncomingLinks(view);
+		case Open4EditPart.VISUAL_ID:
+			return getOpen_3171IncomingLinks(view);
+		case Fetch4EditPart.VISUAL_ID:
+			return getFetch_3172IncomingLinks(view);
+		case Close4EditPart.VISUAL_ID:
+			return getClose_3173IncomingLinks(view);
+		case CallProcedure4EditPart.VISUAL_ID:
+			return getCallProcedure_3174IncomingLinks(view);
+		case CallFunction4EditPart.VISUAL_ID:
+			return getCallFunction_3175IncomingLinks(view);
+		case Open5EditPart.VISUAL_ID:
+			return getOpen_3176IncomingLinks(view);
+		case Fetch5EditPart.VISUAL_ID:
+			return getFetch_3177IncomingLinks(view);
+		case Close5EditPart.VISUAL_ID:
+			return getClose_3178IncomingLinks(view);
+		case CallProcedure5EditPart.VISUAL_ID:
+			return getCallProcedure_3179IncomingLinks(view);
+		case CallFunction5EditPart.VISUAL_ID:
+			return getCallFunction_3180IncomingLinks(view);
+		case For6EditPart.VISUAL_ID:
+			return getFor_3204IncomingLinks(view);
+		case Loop6EditPart.VISUAL_ID:
+			return getLoop_3205IncomingLinks(view);
+		case Open6EditPart.VISUAL_ID:
+			return getOpen_3206IncomingLinks(view);
+		case Fetch6EditPart.VISUAL_ID:
+			return getFetch_3207IncomingLinks(view);
+		case Close6EditPart.VISUAL_ID:
+			return getClose_3208IncomingLinks(view);
+		case CallProcedure6EditPart.VISUAL_ID:
+			return getCallProcedure_3209IncomingLinks(view);
+		case CallFunction6EditPart.VISUAL_ID:
+			return getCallFunction_3210IncomingLinks(view);
 		case Case7EditPart.VISUAL_ID:
-			return getCase_3058IncomingLinks(view);
+			return getCase_3138IncomingLinks(view);
 		case Insert7EditPart.VISUAL_ID:
-			return getInsert_3059IncomingLinks(view);
+			return getInsert_3139IncomingLinks(view);
 		case Update7EditPart.VISUAL_ID:
-			return getUpdate_3060IncomingLinks(view);
+			return getUpdate_3140IncomingLinks(view);
 		case Delete7EditPart.VISUAL_ID:
-			return getDelete_3061IncomingLinks(view);
+			return getDelete_3141IncomingLinks(view);
 		case Select7EditPart.VISUAL_ID:
-			return getSelect_3062IncomingLinks(view);
+			return getSelect_3142IncomingLinks(view);
 		case While7EditPart.VISUAL_ID:
-			return getWhile_3063IncomingLinks(view);
+			return getWhile_3143IncomingLinks(view);
 		case For7EditPart.VISUAL_ID:
-			return getFor_3064IncomingLinks(view);
+			return getFor_3144IncomingLinks(view);
 		case Loop7EditPart.VISUAL_ID:
-			return getLoop_3065IncomingLinks(view);
+			return getLoop_3145IncomingLinks(view);
 		case Open7EditPart.VISUAL_ID:
-			return getOpen_3066IncomingLinks(view);
+			return getOpen_3146IncomingLinks(view);
 		case Fetch7EditPart.VISUAL_ID:
-			return getFetch_3067IncomingLinks(view);
+			return getFetch_3147IncomingLinks(view);
 		case Close7EditPart.VISUAL_ID:
-			return getClose_3068IncomingLinks(view);
+			return getClose_3148IncomingLinks(view);
 		case CallProcedure7EditPart.VISUAL_ID:
-			return getCallProcedure_3069IncomingLinks(view);
+			return getCallProcedure_3149IncomingLinks(view);
 		case CallFunction7EditPart.VISUAL_ID:
+			return getCallFunction_3150IncomingLinks(view);
+		case Case8EditPart.VISUAL_ID:
+			return getCase_3058IncomingLinks(view);
+		case Insert8EditPart.VISUAL_ID:
+			return getInsert_3059IncomingLinks(view);
+		case Update8EditPart.VISUAL_ID:
+			return getUpdate_3060IncomingLinks(view);
+		case Delete8EditPart.VISUAL_ID:
+			return getDelete_3061IncomingLinks(view);
+		case Select8EditPart.VISUAL_ID:
+			return getSelect_3062IncomingLinks(view);
+		case While8EditPart.VISUAL_ID:
+			return getWhile_3063IncomingLinks(view);
+		case For8EditPart.VISUAL_ID:
+			return getFor_3064IncomingLinks(view);
+		case Loop8EditPart.VISUAL_ID:
+			return getLoop_3065IncomingLinks(view);
+		case Open8EditPart.VISUAL_ID:
+			return getOpen_3066IncomingLinks(view);
+		case Fetch8EditPart.VISUAL_ID:
+			return getFetch_3067IncomingLinks(view);
+		case Close8EditPart.VISUAL_ID:
+			return getClose_3068IncomingLinks(view);
+		case CallProcedure8EditPart.VISUAL_ID:
+			return getCallProcedure_3069IncomingLinks(view);
+		case CallFunction8EditPart.VISUAL_ID:
 			return getCallFunction_3070IncomingLinks(view);
-		case Expression7EditPart.VISUAL_ID:
-			return getExpression_3217IncomingLinks(view);
 		case DataType3EditPart.VISUAL_ID:
 			return getDataType_3071IncomingLinks(view);
 		case Collections3EditPart.VISUAL_ID:
@@ -5504,38 +6884,38 @@ public class CrystalDiagramUpdater {
 			return getRecords_3028IncomingLinks(view);
 		case Cursor5EditPart.VISUAL_ID:
 			return getCursor_3029IncomingLinks(view);
-		case Exception8EditPart.VISUAL_ID:
-			return getException_3075IncomingLinks(view);
-		case If8EditPart.VISUAL_ID:
-			return getIf_3076IncomingLinks(view);
-		case Case8EditPart.VISUAL_ID:
-			return getCase_3077IncomingLinks(view);
-		case Insert8EditPart.VISUAL_ID:
-			return getInsert_3078IncomingLinks(view);
-		case Update8EditPart.VISUAL_ID:
-			return getUpdate_3079IncomingLinks(view);
-		case Delete8EditPart.VISUAL_ID:
-			return getDelete_3080IncomingLinks(view);
-		case Select8EditPart.VISUAL_ID:
-			return getSelect_3081IncomingLinks(view);
-		case While8EditPart.VISUAL_ID:
-			return getWhile_3082IncomingLinks(view);
-		case For8EditPart.VISUAL_ID:
-			return getFor_3083IncomingLinks(view);
-		case Loop8EditPart.VISUAL_ID:
-			return getLoop_3084IncomingLinks(view);
-		case Open8EditPart.VISUAL_ID:
-			return getOpen_3085IncomingLinks(view);
-		case Fetch8EditPart.VISUAL_ID:
-			return getFetch_3086IncomingLinks(view);
-		case Close8EditPart.VISUAL_ID:
-			return getClose_3087IncomingLinks(view);
-		case CallProcedure8EditPart.VISUAL_ID:
-			return getCallProcedure_3088IncomingLinks(view);
-		case CallFunction8EditPart.VISUAL_ID:
-			return getCallFunction_3089IncomingLinks(view);
-		case Expression8EditPart.VISUAL_ID:
+		case Expression9EditPart.VISUAL_ID:
 			return getExpression_3218IncomingLinks(view);
+		case Exception9EditPart.VISUAL_ID:
+			return getException_3075IncomingLinks(view);
+		case If9EditPart.VISUAL_ID:
+			return getIf_3076IncomingLinks(view);
+		case Case9EditPart.VISUAL_ID:
+			return getCase_3077IncomingLinks(view);
+		case Insert9EditPart.VISUAL_ID:
+			return getInsert_3078IncomingLinks(view);
+		case Update9EditPart.VISUAL_ID:
+			return getUpdate_3079IncomingLinks(view);
+		case Delete9EditPart.VISUAL_ID:
+			return getDelete_3080IncomingLinks(view);
+		case Select9EditPart.VISUAL_ID:
+			return getSelect_3081IncomingLinks(view);
+		case While9EditPart.VISUAL_ID:
+			return getWhile_3082IncomingLinks(view);
+		case For9EditPart.VISUAL_ID:
+			return getFor_3083IncomingLinks(view);
+		case Loop9EditPart.VISUAL_ID:
+			return getLoop_3084IncomingLinks(view);
+		case Open9EditPart.VISUAL_ID:
+			return getOpen_3085IncomingLinks(view);
+		case Fetch9EditPart.VISUAL_ID:
+			return getFetch_3086IncomingLinks(view);
+		case Close9EditPart.VISUAL_ID:
+			return getClose_3087IncomingLinks(view);
+		case CallProcedure9EditPart.VISUAL_ID:
+			return getCallProcedure_3088IncomingLinks(view);
+		case CallFunction9EditPart.VISUAL_ID:
+			return getCallFunction_3089IncomingLinks(view);
 		case DataType6EditPart.VISUAL_ID:
 			return getDataType_3033IncomingLinks(view);
 		case Collections6EditPart.VISUAL_ID:
@@ -5544,38 +6924,38 @@ public class CrystalDiagramUpdater {
 			return getRecords_3035IncomingLinks(view);
 		case Cursor6EditPart.VISUAL_ID:
 			return getCursor_3036IncomingLinks(view);
-		case Exception9EditPart.VISUAL_ID:
-			return getException_3037IncomingLinks(view);
-		case If9EditPart.VISUAL_ID:
-			return getIf_3038IncomingLinks(view);
-		case Case9EditPart.VISUAL_ID:
-			return getCase_3039IncomingLinks(view);
-		case Insert9EditPart.VISUAL_ID:
-			return getInsert_3040IncomingLinks(view);
-		case Update9EditPart.VISUAL_ID:
-			return getUpdate_3041IncomingLinks(view);
-		case Delete9EditPart.VISUAL_ID:
-			return getDelete_3042IncomingLinks(view);
-		case Select9EditPart.VISUAL_ID:
-			return getSelect_3043IncomingLinks(view);
-		case While9EditPart.VISUAL_ID:
-			return getWhile_3044IncomingLinks(view);
-		case For9EditPart.VISUAL_ID:
-			return getFor_3045IncomingLinks(view);
-		case Loop9EditPart.VISUAL_ID:
-			return getLoop_3046IncomingLinks(view);
-		case Open9EditPart.VISUAL_ID:
-			return getOpen_3047IncomingLinks(view);
-		case Fetch9EditPart.VISUAL_ID:
-			return getFetch_3048IncomingLinks(view);
-		case Close9EditPart.VISUAL_ID:
-			return getClose_3049IncomingLinks(view);
-		case CallProcedure9EditPart.VISUAL_ID:
-			return getCallProcedure_3050IncomingLinks(view);
-		case CallFunction9EditPart.VISUAL_ID:
-			return getCallFunction_3051IncomingLinks(view);
-		case Expression9EditPart.VISUAL_ID:
+		case Expression10EditPart.VISUAL_ID:
 			return getExpression_3219IncomingLinks(view);
+		case Exception10EditPart.VISUAL_ID:
+			return getException_3037IncomingLinks(view);
+		case If10EditPart.VISUAL_ID:
+			return getIf_3038IncomingLinks(view);
+		case Case10EditPart.VISUAL_ID:
+			return getCase_3039IncomingLinks(view);
+		case Insert10EditPart.VISUAL_ID:
+			return getInsert_3040IncomingLinks(view);
+		case Update10EditPart.VISUAL_ID:
+			return getUpdate_3041IncomingLinks(view);
+		case Delete10EditPart.VISUAL_ID:
+			return getDelete_3042IncomingLinks(view);
+		case Select10EditPart.VISUAL_ID:
+			return getSelect_3043IncomingLinks(view);
+		case While10EditPart.VISUAL_ID:
+			return getWhile_3044IncomingLinks(view);
+		case For10EditPart.VISUAL_ID:
+			return getFor_3045IncomingLinks(view);
+		case Loop10EditPart.VISUAL_ID:
+			return getLoop_3046IncomingLinks(view);
+		case Open10EditPart.VISUAL_ID:
+			return getOpen_3047IncomingLinks(view);
+		case Fetch10EditPart.VISUAL_ID:
+			return getFetch_3048IncomingLinks(view);
+		case Close10EditPart.VISUAL_ID:
+			return getClose_3049IncomingLinks(view);
+		case CallProcedure10EditPart.VISUAL_ID:
+			return getCallProcedure_3050IncomingLinks(view);
+		case CallFunction10EditPart.VISUAL_ID:
+			return getCallFunction_3051IncomingLinks(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001IncomingLinks(view);
 		case SelectorTransitionEditPart.VISUAL_ID:
@@ -5611,22 +6991,26 @@ public class CrystalDiagramUpdater {
 			return getRecords_3020OutgoingLinks(view);
 		case Cursor2EditPart.VISUAL_ID:
 			return getCursor_3021OutgoingLinks(view);
+		case ExpressionEditPart.VISUAL_ID:
+			return getExpression_3217OutgoingLinks(view);
 		case ExceptionEditPart.VISUAL_ID:
 			return getException_3056OutgoingLinks(view);
 		case IfEditPart.VISUAL_ID:
 			return getIf_3057OutgoingLinks(view);
+		case Expression2EditPart.VISUAL_ID:
+			return getExpression_3211OutgoingLinks(view);
 		case Exception2EditPart.VISUAL_ID:
 			return getException_3181OutgoingLinks(view);
 		case If2EditPart.VISUAL_ID:
 			return getIf_3182OutgoingLinks(view);
 		case CaseEditPart.VISUAL_ID:
 			return getCase_3183OutgoingLinks(view);
-		case SelectorEditPart.VISUAL_ID:
-			return getSelector_3108OutgoingLinks(view);
+		case Expression3EditPart.VISUAL_ID:
+			return getExpression_3220OutgoingLinks(view);
 		case Exception3EditPart.VISUAL_ID:
-			return getException_3109OutgoingLinks(view);
+			return getException_3221OutgoingLinks(view);
 		case If3EditPart.VISUAL_ID:
-			return getIf_3110OutgoingLinks(view);
+			return getIf_3222OutgoingLinks(view);
 		case InsertEditPart.VISUAL_ID:
 			return getInsert_3184OutgoingLinks(view);
 		case UpdateEditPart.VISUAL_ID:
@@ -5637,18 +7021,24 @@ public class CrystalDiagramUpdater {
 			return getSelect_3187OutgoingLinks(view);
 		case WhileEditPart.VISUAL_ID:
 			return getWhile_3188OutgoingLinks(view);
+		case Expression4EditPart.VISUAL_ID:
+			return getExpression_3212OutgoingLinks(view);
 		case Exception4EditPart.VISUAL_ID:
 			return getException_3090OutgoingLinks(view);
 		case If4EditPart.VISUAL_ID:
 			return getIf_3091OutgoingLinks(view);
 		case ForEditPart.VISUAL_ID:
 			return getFor_3189OutgoingLinks(view);
+		case Expression5EditPart.VISUAL_ID:
+			return getExpression_3214OutgoingLinks(view);
 		case Exception5EditPart.VISUAL_ID:
 			return getException_3151OutgoingLinks(view);
 		case If5EditPart.VISUAL_ID:
 			return getIf_3152OutgoingLinks(view);
 		case LoopEditPart.VISUAL_ID:
 			return getLoop_3190OutgoingLinks(view);
+		case Expression6EditPart.VISUAL_ID:
+			return getExpression_3213OutgoingLinks(view);
 		case Exception6EditPart.VISUAL_ID:
 			return getException_3153OutgoingLinks(view);
 		case If6EditPart.VISUAL_ID:
@@ -5663,180 +7053,202 @@ public class CrystalDiagramUpdater {
 			return getCallProcedure_3194OutgoingLinks(view);
 		case CallFunctionEditPart.VISUAL_ID:
 			return getCallFunction_3195OutgoingLinks(view);
-		case ExpressionEditPart.VISUAL_ID:
-			return getExpression_3211OutgoingLinks(view);
+		case Expression7EditPart.VISUAL_ID:
+			return getExpression_3215OutgoingLinks(view);
 		case Exception7EditPart.VISUAL_ID:
 			return getException_3196OutgoingLinks(view);
 		case If7EditPart.VISUAL_ID:
 			return getIf_3197OutgoingLinks(view);
 		case Case2EditPart.VISUAL_ID:
 			return getCase_3198OutgoingLinks(view);
-		case Insert2EditPart.VISUAL_ID:
-			return getInsert_3199OutgoingLinks(view);
-		case Update2EditPart.VISUAL_ID:
-			return getUpdate_3200OutgoingLinks(view);
-		case Delete2EditPart.VISUAL_ID:
-			return getDelete_3201OutgoingLinks(view);
-		case Select2EditPart.VISUAL_ID:
-			return getSelect_3202OutgoingLinks(view);
-		case While2EditPart.VISUAL_ID:
-			return getWhile_3203OutgoingLinks(view);
 		case Case3EditPart.VISUAL_ID:
-			return getCase_3092OutgoingLinks(view);
-		case Insert3EditPart.VISUAL_ID:
-			return getInsert_3093OutgoingLinks(view);
-		case Update3EditPart.VISUAL_ID:
-			return getUpdate_3094OutgoingLinks(view);
-		case Delete3EditPart.VISUAL_ID:
-			return getDelete_3095OutgoingLinks(view);
-		case Select3EditPart.VISUAL_ID:
-			return getSelect_3096OutgoingLinks(view);
-		case While3EditPart.VISUAL_ID:
-			return getWhile_3097OutgoingLinks(view);
-		case For2EditPart.VISUAL_ID:
-			return getFor_3098OutgoingLinks(view);
+			return getCase_3223OutgoingLinks(view);
+		case Insert2EditPart.VISUAL_ID:
+			return getInsert_3224OutgoingLinks(view);
+		case Update2EditPart.VISUAL_ID:
+			return getUpdate_3225OutgoingLinks(view);
+		case Delete2EditPart.VISUAL_ID:
+			return getDelete_3226OutgoingLinks(view);
+		case Select2EditPart.VISUAL_ID:
+			return getSelect_3227OutgoingLinks(view);
+		case While2EditPart.VISUAL_ID:
+			return getWhile_3228OutgoingLinks(view);
 		case Case4EditPart.VISUAL_ID:
-			return getCase_3155OutgoingLinks(view);
-		case Insert4EditPart.VISUAL_ID:
-			return getInsert_3156OutgoingLinks(view);
-		case Update4EditPart.VISUAL_ID:
-			return getUpdate_3157OutgoingLinks(view);
-		case Delete4EditPart.VISUAL_ID:
-			return getDelete_3158OutgoingLinks(view);
-		case Select4EditPart.VISUAL_ID:
-			return getSelect_3159OutgoingLinks(view);
-		case While4EditPart.VISUAL_ID:
-			return getWhile_3160OutgoingLinks(view);
-		case Loop2EditPart.VISUAL_ID:
-			return getLoop_3099OutgoingLinks(view);
+			return getCase_3092OutgoingLinks(view);
+		case For2EditPart.VISUAL_ID:
+			return getFor_3229OutgoingLinks(view);
 		case Case5EditPart.VISUAL_ID:
-			return getCase_3161OutgoingLinks(view);
-		case Insert5EditPart.VISUAL_ID:
-			return getInsert_3162OutgoingLinks(view);
-		case Update5EditPart.VISUAL_ID:
-			return getUpdate_3163OutgoingLinks(view);
-		case Delete5EditPart.VISUAL_ID:
-			return getDelete_3164OutgoingLinks(view);
-		case Select5EditPart.VISUAL_ID:
-			return getSelect_3165OutgoingLinks(view);
-		case While5EditPart.VISUAL_ID:
-			return getWhile_3166OutgoingLinks(view);
-		case Open2EditPart.VISUAL_ID:
-			return getOpen_3100OutgoingLinks(view);
-		case Fetch2EditPart.VISUAL_ID:
-			return getFetch_3101OutgoingLinks(view);
-		case Close2EditPart.VISUAL_ID:
-			return getClose_3102OutgoingLinks(view);
-		case CallProcedure2EditPart.VISUAL_ID:
-			return getCallProcedure_3103OutgoingLinks(view);
-		case CallFunction2EditPart.VISUAL_ID:
-			return getCallFunction_3104OutgoingLinks(view);
-		case Expression2EditPart.VISUAL_ID:
-			return getExpression_3212OutgoingLinks(view);
-		case For3EditPart.VISUAL_ID:
-			return getFor_3167OutgoingLinks(view);
-		case For4EditPart.VISUAL_ID:
-			return getFor_3168OutgoingLinks(view);
-		case Loop3EditPart.VISUAL_ID:
-			return getLoop_3169OutgoingLinks(view);
-		case Loop4EditPart.VISUAL_ID:
-			return getLoop_3170OutgoingLinks(view);
-		case Open3EditPart.VISUAL_ID:
-			return getOpen_3171OutgoingLinks(view);
-		case Fetch3EditPart.VISUAL_ID:
-			return getFetch_3172OutgoingLinks(view);
-		case Close3EditPart.VISUAL_ID:
-			return getClose_3173OutgoingLinks(view);
-		case CallProcedure3EditPart.VISUAL_ID:
-			return getCallProcedure_3174OutgoingLinks(view);
-		case CallFunction3EditPart.VISUAL_ID:
-			return getCallFunction_3175OutgoingLinks(view);
-		case Expression3EditPart.VISUAL_ID:
-			return getExpression_3213OutgoingLinks(view);
-		case Open4EditPart.VISUAL_ID:
-			return getOpen_3176OutgoingLinks(view);
-		case Fetch4EditPart.VISUAL_ID:
-			return getFetch_3177OutgoingLinks(view);
-		case Close4EditPart.VISUAL_ID:
-			return getClose_3178OutgoingLinks(view);
-		case CallProcedure4EditPart.VISUAL_ID:
-			return getCallProcedure_3179OutgoingLinks(view);
-		case CallFunction4EditPart.VISUAL_ID:
-			return getCallFunction_3180OutgoingLinks(view);
-		case Expression4EditPart.VISUAL_ID:
-			return getExpression_3214OutgoingLinks(view);
-		case For5EditPart.VISUAL_ID:
-			return getFor_3204OutgoingLinks(view);
-		case Loop5EditPart.VISUAL_ID:
-			return getLoop_3205OutgoingLinks(view);
-		case Open5EditPart.VISUAL_ID:
-			return getOpen_3206OutgoingLinks(view);
-		case Fetch5EditPart.VISUAL_ID:
-			return getFetch_3207OutgoingLinks(view);
-		case Close5EditPart.VISUAL_ID:
-			return getClose_3208OutgoingLinks(view);
-		case CallProcedure5EditPart.VISUAL_ID:
-			return getCallProcedure_3209OutgoingLinks(view);
-		case CallFunction5EditPart.VISUAL_ID:
-			return getCallFunction_3210OutgoingLinks(view);
-		case Expression5EditPart.VISUAL_ID:
-			return getExpression_3215OutgoingLinks(view);
+			return getCase_3155OutgoingLinks(view);
+		case Loop2EditPart.VISUAL_ID:
+			return getLoop_3230OutgoingLinks(view);
 		case Case6EditPart.VISUAL_ID:
-			return getCase_3138OutgoingLinks(view);
-		case Insert6EditPart.VISUAL_ID:
-			return getInsert_3139OutgoingLinks(view);
-		case Update6EditPart.VISUAL_ID:
-			return getUpdate_3140OutgoingLinks(view);
-		case Delete6EditPart.VISUAL_ID:
-			return getDelete_3141OutgoingLinks(view);
-		case Select6EditPart.VISUAL_ID:
-			return getSelect_3142OutgoingLinks(view);
-		case While6EditPart.VISUAL_ID:
-			return getWhile_3143OutgoingLinks(view);
-		case For6EditPart.VISUAL_ID:
-			return getFor_3144OutgoingLinks(view);
-		case Loop6EditPart.VISUAL_ID:
-			return getLoop_3145OutgoingLinks(view);
-		case Open6EditPart.VISUAL_ID:
-			return getOpen_3146OutgoingLinks(view);
-		case Fetch6EditPart.VISUAL_ID:
-			return getFetch_3147OutgoingLinks(view);
-		case Close6EditPart.VISUAL_ID:
-			return getClose_3148OutgoingLinks(view);
-		case CallProcedure6EditPart.VISUAL_ID:
-			return getCallProcedure_3149OutgoingLinks(view);
-		case CallFunction6EditPart.VISUAL_ID:
-			return getCallFunction_3150OutgoingLinks(view);
-		case Expression6EditPart.VISUAL_ID:
+			return getCase_3161OutgoingLinks(view);
+		case Open2EditPart.VISUAL_ID:
+			return getOpen_3231OutgoingLinks(view);
+		case Fetch2EditPart.VISUAL_ID:
+			return getFetch_3232OutgoingLinks(view);
+		case Close2EditPart.VISUAL_ID:
+			return getClose_3233OutgoingLinks(view);
+		case CallProcedure2EditPart.VISUAL_ID:
+			return getCallProcedure_3234OutgoingLinks(view);
+		case CallFunction2EditPart.VISUAL_ID:
+			return getCallFunction_3235OutgoingLinks(view);
+		case SelectorEditPart.VISUAL_ID:
+			return getSelector_3108OutgoingLinks(view);
+		case Expression8EditPart.VISUAL_ID:
 			return getExpression_3216OutgoingLinks(view);
+		case Exception8EditPart.VISUAL_ID:
+			return getException_3109OutgoingLinks(view);
+		case If8EditPart.VISUAL_ID:
+			return getIf_3110OutgoingLinks(view);
+		case Insert3EditPart.VISUAL_ID:
+			return getInsert_3199OutgoingLinks(view);
+		case Update3EditPart.VISUAL_ID:
+			return getUpdate_3200OutgoingLinks(view);
+		case Delete3EditPart.VISUAL_ID:
+			return getDelete_3201OutgoingLinks(view);
+		case Select3EditPart.VISUAL_ID:
+			return getSelect_3202OutgoingLinks(view);
+		case While3EditPart.VISUAL_ID:
+			return getWhile_3203OutgoingLinks(view);
+		case Insert4EditPart.VISUAL_ID:
+			return getInsert_3093OutgoingLinks(view);
+		case Update4EditPart.VISUAL_ID:
+			return getUpdate_3094OutgoingLinks(view);
+		case Delete4EditPart.VISUAL_ID:
+			return getDelete_3095OutgoingLinks(view);
+		case Select4EditPart.VISUAL_ID:
+			return getSelect_3096OutgoingLinks(view);
+		case While4EditPart.VISUAL_ID:
+			return getWhile_3097OutgoingLinks(view);
+		case For3EditPart.VISUAL_ID:
+			return getFor_3098OutgoingLinks(view);
+		case Insert5EditPart.VISUAL_ID:
+			return getInsert_3156OutgoingLinks(view);
+		case Update5EditPart.VISUAL_ID:
+			return getUpdate_3157OutgoingLinks(view);
+		case Delete5EditPart.VISUAL_ID:
+			return getDelete_3158OutgoingLinks(view);
+		case Select5EditPart.VISUAL_ID:
+			return getSelect_3159OutgoingLinks(view);
+		case While5EditPart.VISUAL_ID:
+			return getWhile_3160OutgoingLinks(view);
+		case Loop3EditPart.VISUAL_ID:
+			return getLoop_3099OutgoingLinks(view);
+		case Insert6EditPart.VISUAL_ID:
+			return getInsert_3162OutgoingLinks(view);
+		case Update6EditPart.VISUAL_ID:
+			return getUpdate_3163OutgoingLinks(view);
+		case Delete6EditPart.VISUAL_ID:
+			return getDelete_3164OutgoingLinks(view);
+		case Select6EditPart.VISUAL_ID:
+			return getSelect_3165OutgoingLinks(view);
+		case While6EditPart.VISUAL_ID:
+			return getWhile_3166OutgoingLinks(view);
+		case Open3EditPart.VISUAL_ID:
+			return getOpen_3100OutgoingLinks(view);
+		case Fetch3EditPart.VISUAL_ID:
+			return getFetch_3101OutgoingLinks(view);
+		case Close3EditPart.VISUAL_ID:
+			return getClose_3102OutgoingLinks(view);
+		case CallProcedure3EditPart.VISUAL_ID:
+			return getCallProcedure_3103OutgoingLinks(view);
+		case CallFunction3EditPart.VISUAL_ID:
+			return getCallFunction_3104OutgoingLinks(view);
+		case For4EditPart.VISUAL_ID:
+			return getFor_3167OutgoingLinks(view);
+		case For5EditPart.VISUAL_ID:
+			return getFor_3168OutgoingLinks(view);
+		case Loop4EditPart.VISUAL_ID:
+			return getLoop_3169OutgoingLinks(view);
+		case Loop5EditPart.VISUAL_ID:
+			return getLoop_3170OutgoingLinks(view);
+		case Open4EditPart.VISUAL_ID:
+			return getOpen_3171OutgoingLinks(view);
+		case Fetch4EditPart.VISUAL_ID:
+			return getFetch_3172OutgoingLinks(view);
+		case Close4EditPart.VISUAL_ID:
+			return getClose_3173OutgoingLinks(view);
+		case CallProcedure4EditPart.VISUAL_ID:
+			return getCallProcedure_3174OutgoingLinks(view);
+		case CallFunction4EditPart.VISUAL_ID:
+			return getCallFunction_3175OutgoingLinks(view);
+		case Open5EditPart.VISUAL_ID:
+			return getOpen_3176OutgoingLinks(view);
+		case Fetch5EditPart.VISUAL_ID:
+			return getFetch_3177OutgoingLinks(view);
+		case Close5EditPart.VISUAL_ID:
+			return getClose_3178OutgoingLinks(view);
+		case CallProcedure5EditPart.VISUAL_ID:
+			return getCallProcedure_3179OutgoingLinks(view);
+		case CallFunction5EditPart.VISUAL_ID:
+			return getCallFunction_3180OutgoingLinks(view);
+		case For6EditPart.VISUAL_ID:
+			return getFor_3204OutgoingLinks(view);
+		case Loop6EditPart.VISUAL_ID:
+			return getLoop_3205OutgoingLinks(view);
+		case Open6EditPart.VISUAL_ID:
+			return getOpen_3206OutgoingLinks(view);
+		case Fetch6EditPart.VISUAL_ID:
+			return getFetch_3207OutgoingLinks(view);
+		case Close6EditPart.VISUAL_ID:
+			return getClose_3208OutgoingLinks(view);
+		case CallProcedure6EditPart.VISUAL_ID:
+			return getCallProcedure_3209OutgoingLinks(view);
+		case CallFunction6EditPart.VISUAL_ID:
+			return getCallFunction_3210OutgoingLinks(view);
 		case Case7EditPart.VISUAL_ID:
-			return getCase_3058OutgoingLinks(view);
+			return getCase_3138OutgoingLinks(view);
 		case Insert7EditPart.VISUAL_ID:
-			return getInsert_3059OutgoingLinks(view);
+			return getInsert_3139OutgoingLinks(view);
 		case Update7EditPart.VISUAL_ID:
-			return getUpdate_3060OutgoingLinks(view);
+			return getUpdate_3140OutgoingLinks(view);
 		case Delete7EditPart.VISUAL_ID:
-			return getDelete_3061OutgoingLinks(view);
+			return getDelete_3141OutgoingLinks(view);
 		case Select7EditPart.VISUAL_ID:
-			return getSelect_3062OutgoingLinks(view);
+			return getSelect_3142OutgoingLinks(view);
 		case While7EditPart.VISUAL_ID:
-			return getWhile_3063OutgoingLinks(view);
+			return getWhile_3143OutgoingLinks(view);
 		case For7EditPart.VISUAL_ID:
-			return getFor_3064OutgoingLinks(view);
+			return getFor_3144OutgoingLinks(view);
 		case Loop7EditPart.VISUAL_ID:
-			return getLoop_3065OutgoingLinks(view);
+			return getLoop_3145OutgoingLinks(view);
 		case Open7EditPart.VISUAL_ID:
-			return getOpen_3066OutgoingLinks(view);
+			return getOpen_3146OutgoingLinks(view);
 		case Fetch7EditPart.VISUAL_ID:
-			return getFetch_3067OutgoingLinks(view);
+			return getFetch_3147OutgoingLinks(view);
 		case Close7EditPart.VISUAL_ID:
-			return getClose_3068OutgoingLinks(view);
+			return getClose_3148OutgoingLinks(view);
 		case CallProcedure7EditPart.VISUAL_ID:
-			return getCallProcedure_3069OutgoingLinks(view);
+			return getCallProcedure_3149OutgoingLinks(view);
 		case CallFunction7EditPart.VISUAL_ID:
+			return getCallFunction_3150OutgoingLinks(view);
+		case Case8EditPart.VISUAL_ID:
+			return getCase_3058OutgoingLinks(view);
+		case Insert8EditPart.VISUAL_ID:
+			return getInsert_3059OutgoingLinks(view);
+		case Update8EditPart.VISUAL_ID:
+			return getUpdate_3060OutgoingLinks(view);
+		case Delete8EditPart.VISUAL_ID:
+			return getDelete_3061OutgoingLinks(view);
+		case Select8EditPart.VISUAL_ID:
+			return getSelect_3062OutgoingLinks(view);
+		case While8EditPart.VISUAL_ID:
+			return getWhile_3063OutgoingLinks(view);
+		case For8EditPart.VISUAL_ID:
+			return getFor_3064OutgoingLinks(view);
+		case Loop8EditPart.VISUAL_ID:
+			return getLoop_3065OutgoingLinks(view);
+		case Open8EditPart.VISUAL_ID:
+			return getOpen_3066OutgoingLinks(view);
+		case Fetch8EditPart.VISUAL_ID:
+			return getFetch_3067OutgoingLinks(view);
+		case Close8EditPart.VISUAL_ID:
+			return getClose_3068OutgoingLinks(view);
+		case CallProcedure8EditPart.VISUAL_ID:
+			return getCallProcedure_3069OutgoingLinks(view);
+		case CallFunction8EditPart.VISUAL_ID:
 			return getCallFunction_3070OutgoingLinks(view);
-		case Expression7EditPart.VISUAL_ID:
-			return getExpression_3217OutgoingLinks(view);
 		case DataType3EditPart.VISUAL_ID:
 			return getDataType_3071OutgoingLinks(view);
 		case Collections3EditPart.VISUAL_ID:
@@ -5861,38 +7273,38 @@ public class CrystalDiagramUpdater {
 			return getRecords_3028OutgoingLinks(view);
 		case Cursor5EditPart.VISUAL_ID:
 			return getCursor_3029OutgoingLinks(view);
-		case Exception8EditPart.VISUAL_ID:
-			return getException_3075OutgoingLinks(view);
-		case If8EditPart.VISUAL_ID:
-			return getIf_3076OutgoingLinks(view);
-		case Case8EditPart.VISUAL_ID:
-			return getCase_3077OutgoingLinks(view);
-		case Insert8EditPart.VISUAL_ID:
-			return getInsert_3078OutgoingLinks(view);
-		case Update8EditPart.VISUAL_ID:
-			return getUpdate_3079OutgoingLinks(view);
-		case Delete8EditPart.VISUAL_ID:
-			return getDelete_3080OutgoingLinks(view);
-		case Select8EditPart.VISUAL_ID:
-			return getSelect_3081OutgoingLinks(view);
-		case While8EditPart.VISUAL_ID:
-			return getWhile_3082OutgoingLinks(view);
-		case For8EditPart.VISUAL_ID:
-			return getFor_3083OutgoingLinks(view);
-		case Loop8EditPart.VISUAL_ID:
-			return getLoop_3084OutgoingLinks(view);
-		case Open8EditPart.VISUAL_ID:
-			return getOpen_3085OutgoingLinks(view);
-		case Fetch8EditPart.VISUAL_ID:
-			return getFetch_3086OutgoingLinks(view);
-		case Close8EditPart.VISUAL_ID:
-			return getClose_3087OutgoingLinks(view);
-		case CallProcedure8EditPart.VISUAL_ID:
-			return getCallProcedure_3088OutgoingLinks(view);
-		case CallFunction8EditPart.VISUAL_ID:
-			return getCallFunction_3089OutgoingLinks(view);
-		case Expression8EditPart.VISUAL_ID:
+		case Expression9EditPart.VISUAL_ID:
 			return getExpression_3218OutgoingLinks(view);
+		case Exception9EditPart.VISUAL_ID:
+			return getException_3075OutgoingLinks(view);
+		case If9EditPart.VISUAL_ID:
+			return getIf_3076OutgoingLinks(view);
+		case Case9EditPart.VISUAL_ID:
+			return getCase_3077OutgoingLinks(view);
+		case Insert9EditPart.VISUAL_ID:
+			return getInsert_3078OutgoingLinks(view);
+		case Update9EditPart.VISUAL_ID:
+			return getUpdate_3079OutgoingLinks(view);
+		case Delete9EditPart.VISUAL_ID:
+			return getDelete_3080OutgoingLinks(view);
+		case Select9EditPart.VISUAL_ID:
+			return getSelect_3081OutgoingLinks(view);
+		case While9EditPart.VISUAL_ID:
+			return getWhile_3082OutgoingLinks(view);
+		case For9EditPart.VISUAL_ID:
+			return getFor_3083OutgoingLinks(view);
+		case Loop9EditPart.VISUAL_ID:
+			return getLoop_3084OutgoingLinks(view);
+		case Open9EditPart.VISUAL_ID:
+			return getOpen_3085OutgoingLinks(view);
+		case Fetch9EditPart.VISUAL_ID:
+			return getFetch_3086OutgoingLinks(view);
+		case Close9EditPart.VISUAL_ID:
+			return getClose_3087OutgoingLinks(view);
+		case CallProcedure9EditPart.VISUAL_ID:
+			return getCallProcedure_3088OutgoingLinks(view);
+		case CallFunction9EditPart.VISUAL_ID:
+			return getCallFunction_3089OutgoingLinks(view);
 		case DataType6EditPart.VISUAL_ID:
 			return getDataType_3033OutgoingLinks(view);
 		case Collections6EditPart.VISUAL_ID:
@@ -5901,38 +7313,38 @@ public class CrystalDiagramUpdater {
 			return getRecords_3035OutgoingLinks(view);
 		case Cursor6EditPart.VISUAL_ID:
 			return getCursor_3036OutgoingLinks(view);
-		case Exception9EditPart.VISUAL_ID:
-			return getException_3037OutgoingLinks(view);
-		case If9EditPart.VISUAL_ID:
-			return getIf_3038OutgoingLinks(view);
-		case Case9EditPart.VISUAL_ID:
-			return getCase_3039OutgoingLinks(view);
-		case Insert9EditPart.VISUAL_ID:
-			return getInsert_3040OutgoingLinks(view);
-		case Update9EditPart.VISUAL_ID:
-			return getUpdate_3041OutgoingLinks(view);
-		case Delete9EditPart.VISUAL_ID:
-			return getDelete_3042OutgoingLinks(view);
-		case Select9EditPart.VISUAL_ID:
-			return getSelect_3043OutgoingLinks(view);
-		case While9EditPart.VISUAL_ID:
-			return getWhile_3044OutgoingLinks(view);
-		case For9EditPart.VISUAL_ID:
-			return getFor_3045OutgoingLinks(view);
-		case Loop9EditPart.VISUAL_ID:
-			return getLoop_3046OutgoingLinks(view);
-		case Open9EditPart.VISUAL_ID:
-			return getOpen_3047OutgoingLinks(view);
-		case Fetch9EditPart.VISUAL_ID:
-			return getFetch_3048OutgoingLinks(view);
-		case Close9EditPart.VISUAL_ID:
-			return getClose_3049OutgoingLinks(view);
-		case CallProcedure9EditPart.VISUAL_ID:
-			return getCallProcedure_3050OutgoingLinks(view);
-		case CallFunction9EditPart.VISUAL_ID:
-			return getCallFunction_3051OutgoingLinks(view);
-		case Expression9EditPart.VISUAL_ID:
+		case Expression10EditPart.VISUAL_ID:
 			return getExpression_3219OutgoingLinks(view);
+		case Exception10EditPart.VISUAL_ID:
+			return getException_3037OutgoingLinks(view);
+		case If10EditPart.VISUAL_ID:
+			return getIf_3038OutgoingLinks(view);
+		case Case10EditPart.VISUAL_ID:
+			return getCase_3039OutgoingLinks(view);
+		case Insert10EditPart.VISUAL_ID:
+			return getInsert_3040OutgoingLinks(view);
+		case Update10EditPart.VISUAL_ID:
+			return getUpdate_3041OutgoingLinks(view);
+		case Delete10EditPart.VISUAL_ID:
+			return getDelete_3042OutgoingLinks(view);
+		case Select10EditPart.VISUAL_ID:
+			return getSelect_3043OutgoingLinks(view);
+		case While10EditPart.VISUAL_ID:
+			return getWhile_3044OutgoingLinks(view);
+		case For10EditPart.VISUAL_ID:
+			return getFor_3045OutgoingLinks(view);
+		case Loop10EditPart.VISUAL_ID:
+			return getLoop_3046OutgoingLinks(view);
+		case Open10EditPart.VISUAL_ID:
+			return getOpen_3047OutgoingLinks(view);
+		case Fetch10EditPart.VISUAL_ID:
+			return getFetch_3048OutgoingLinks(view);
+		case Close10EditPart.VISUAL_ID:
+			return getClose_3049OutgoingLinks(view);
+		case CallProcedure10EditPart.VISUAL_ID:
+			return getCallProcedure_3050OutgoingLinks(view);
+		case CallFunction10EditPart.VISUAL_ID:
+			return getCallFunction_3051OutgoingLinks(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001OutgoingLinks(view);
 		case SelectorTransitionEditPart.VISUAL_ID:
@@ -6061,6 +7473,27 @@ public class CrystalDiagramUpdater {
 	* @generated
 	*/
 	public static List<CrystalLinkDescriptor> getCase_3183ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getExpression_3220ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getException_3221ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getIf_3222ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -6284,6 +7717,48 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getCase_3223ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getInsert_3224ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getUpdate_3225ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getDelete_3226ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getSelect_3227ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getWhile_3228ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getInsert_3199ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
@@ -6320,6 +7795,13 @@ public class CrystalDiagramUpdater {
 	* @generated
 	*/
 	public static List<CrystalLinkDescriptor> getCase_3092ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getFor_3229ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -6375,6 +7857,13 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getLoop_3230ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getInsert_3156ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
@@ -6418,6 +7907,41 @@ public class CrystalDiagramUpdater {
 	* @generated
 	*/
 	public static List<CrystalLinkDescriptor> getCase_3161ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getOpen_3231ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getFetch_3232ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getClose_3233ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getCallProcedure_3234ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getCallFunction_3235ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -7310,6 +8834,42 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3220IncomingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getException_3221IncomingLinks(View view) {
+		Exception modelElement = (Exception) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getIf_3222IncomingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getSelector_3108IncomingLinks(View view) {
 		Selector modelElement = (Selector) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -7682,6 +9242,78 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getCase_3223IncomingLinks(View view) {
+		Case modelElement = (Case) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getInsert_3224IncomingLinks(View view) {
+		Insert modelElement = (Insert) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getUpdate_3225IncomingLinks(View view) {
+		Update modelElement = (Update) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getDelete_3226IncomingLinks(View view) {
+		Delete modelElement = (Delete) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getSelect_3227IncomingLinks(View view) {
+		Select modelElement = (Select) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getWhile_3228IncomingLinks(View view) {
+		While modelElement = (While) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getInsert_3199IncomingLinks(View view) {
 		Insert modelElement = (Insert) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -7744,6 +9376,18 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCase_3092IncomingLinks(View view) {
 		Case modelElement = (Case) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getFor_3229IncomingLinks(View view) {
+		For modelElement = (For) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -7838,6 +9482,18 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getLoop_3230IncomingLinks(View view) {
+		Loop modelElement = (Loop) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getInsert_3156IncomingLinks(View view) {
 		Insert modelElement = (Insert) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -7912,6 +9568,66 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCase_3161IncomingLinks(View view) {
 		Case modelElement = (Case) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getOpen_3231IncomingLinks(View view) {
+		Open modelElement = (Open) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getFetch_3232IncomingLinks(View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getClose_3233IncomingLinks(View view) {
+		Close modelElement = (Close) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getCallProcedure_3234IncomingLinks(View view) {
+		CallProcedure modelElement = (CallProcedure) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getCallFunction_3235IncomingLinks(View view) {
+		CallFunction modelElement = (CallFunction) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -9243,6 +10959,36 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getExpression_3220OutgoingLinks(View view) {
+		Expression modelElement = (Expression) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getException_3221OutgoingLinks(View view) {
+		Exception modelElement = (Exception) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getIf_3222OutgoingLinks(View view) {
+		If modelElement = (If) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getSelector_3108OutgoingLinks(View view) {
 		Selector modelElement = (Selector) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -9553,6 +11299,66 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getCase_3223OutgoingLinks(View view) {
+		Case modelElement = (Case) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getInsert_3224OutgoingLinks(View view) {
+		Insert modelElement = (Insert) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getUpdate_3225OutgoingLinks(View view) {
+		Update modelElement = (Update) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getDelete_3226OutgoingLinks(View view) {
+		Delete modelElement = (Delete) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getSelect_3227OutgoingLinks(View view) {
+		Select modelElement = (Select) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getWhile_3228OutgoingLinks(View view) {
+		While modelElement = (While) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getInsert_3199OutgoingLinks(View view) {
 		Insert modelElement = (Insert) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -9605,6 +11411,16 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCase_3092OutgoingLinks(View view) {
 		Case modelElement = (Case) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getFor_3229OutgoingLinks(View view) {
+		For modelElement = (For) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
 		return result;
@@ -9683,6 +11499,16 @@ public class CrystalDiagramUpdater {
 	/**
 	* @generated
 	*/
+	public static List<CrystalLinkDescriptor> getLoop_3230OutgoingLinks(View view) {
+		Loop modelElement = (Loop) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static List<CrystalLinkDescriptor> getInsert_3156OutgoingLinks(View view) {
 		Insert modelElement = (Insert) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
@@ -9745,6 +11571,56 @@ public class CrystalDiagramUpdater {
 	*/
 	public static List<CrystalLinkDescriptor> getCase_3161OutgoingLinks(View view) {
 		Case modelElement = (Case) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getOpen_3231OutgoingLinks(View view) {
+		Open modelElement = (Open) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getFetch_3232OutgoingLinks(View view) {
+		Fetch modelElement = (Fetch) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getClose_3233OutgoingLinks(View view) {
+		Close modelElement = (Close) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getCallProcedure_3234OutgoingLinks(View view) {
+		CallProcedure modelElement = (CallProcedure) view.getElement();
+		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<CrystalLinkDescriptor> getCallFunction_3235OutgoingLinks(View view) {
+		CallFunction modelElement = (CallFunction) view.getElement();
 		LinkedList<CrystalLinkDescriptor> result = new LinkedList<CrystalLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
 		return result;

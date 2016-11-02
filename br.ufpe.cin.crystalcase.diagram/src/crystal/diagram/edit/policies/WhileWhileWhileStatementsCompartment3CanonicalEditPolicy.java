@@ -26,36 +26,50 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
 import crystal.diagram.edit.parts.CallFunction2EditPart;
+import crystal.diagram.edit.parts.CallFunction3EditPart;
 import crystal.diagram.edit.parts.CallFunctionEditPart;
 import crystal.diagram.edit.parts.CallProcedure2EditPart;
+import crystal.diagram.edit.parts.CallProcedure3EditPart;
 import crystal.diagram.edit.parts.CallProcedureEditPart;
 import crystal.diagram.edit.parts.Case2EditPart;
 import crystal.diagram.edit.parts.Case3EditPart;
+import crystal.diagram.edit.parts.Case4EditPart;
 import crystal.diagram.edit.parts.Close2EditPart;
+import crystal.diagram.edit.parts.Close3EditPart;
 import crystal.diagram.edit.parts.CloseEditPart;
 import crystal.diagram.edit.parts.Delete2EditPart;
 import crystal.diagram.edit.parts.Delete3EditPart;
+import crystal.diagram.edit.parts.Delete4EditPart;
 import crystal.diagram.edit.parts.Exception2EditPart;
 import crystal.diagram.edit.parts.Exception4EditPart;
 import crystal.diagram.edit.parts.Expression2EditPart;
+import crystal.diagram.edit.parts.Expression4EditPart;
 import crystal.diagram.edit.parts.Fetch2EditPart;
+import crystal.diagram.edit.parts.Fetch3EditPart;
 import crystal.diagram.edit.parts.FetchEditPart;
 import crystal.diagram.edit.parts.For2EditPart;
+import crystal.diagram.edit.parts.For3EditPart;
 import crystal.diagram.edit.parts.ForEditPart;
 import crystal.diagram.edit.parts.If2EditPart;
 import crystal.diagram.edit.parts.If4EditPart;
 import crystal.diagram.edit.parts.Insert2EditPart;
 import crystal.diagram.edit.parts.Insert3EditPart;
+import crystal.diagram.edit.parts.Insert4EditPart;
 import crystal.diagram.edit.parts.Loop2EditPart;
+import crystal.diagram.edit.parts.Loop3EditPart;
 import crystal.diagram.edit.parts.LoopEditPart;
 import crystal.diagram.edit.parts.Open2EditPart;
+import crystal.diagram.edit.parts.Open3EditPart;
 import crystal.diagram.edit.parts.OpenEditPart;
 import crystal.diagram.edit.parts.Select2EditPart;
 import crystal.diagram.edit.parts.Select3EditPart;
+import crystal.diagram.edit.parts.Select4EditPart;
 import crystal.diagram.edit.parts.Update2EditPart;
 import crystal.diagram.edit.parts.Update3EditPart;
+import crystal.diagram.edit.parts.Update4EditPart;
 import crystal.diagram.edit.parts.While2EditPart;
 import crystal.diagram.edit.parts.While3EditPart;
+import crystal.diagram.edit.parts.While4EditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
 import crystal.diagram.part.CrystalVisualIDRegistry;
@@ -93,7 +107,7 @@ public class WhileWhileWhileStatementsCompartment3CanonicalEditPolicy extends Ca
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getWhileWhileWhileStatementsCompartment_7025SemanticChildren(viewObject);
+				.getWhileWhileWhileStatementsCompartment_7088SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -113,22 +127,22 @@ public class WhileWhileWhileStatementsCompartment3CanonicalEditPolicy extends Ca
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
+		case Expression4EditPart.VISUAL_ID:
 		case Exception4EditPart.VISUAL_ID:
 		case If4EditPart.VISUAL_ID:
-		case Case3EditPart.VISUAL_ID:
-		case Insert3EditPart.VISUAL_ID:
-		case Update3EditPart.VISUAL_ID:
-		case Delete3EditPart.VISUAL_ID:
-		case Select3EditPart.VISUAL_ID:
-		case While3EditPart.VISUAL_ID:
-		case For2EditPart.VISUAL_ID:
-		case Loop2EditPart.VISUAL_ID:
-		case Open2EditPart.VISUAL_ID:
-		case Fetch2EditPart.VISUAL_ID:
-		case Close2EditPart.VISUAL_ID:
-		case CallProcedure2EditPart.VISUAL_ID:
-		case CallFunction2EditPart.VISUAL_ID:
-		case Expression2EditPart.VISUAL_ID:
+		case Case4EditPart.VISUAL_ID:
+		case Insert4EditPart.VISUAL_ID:
+		case Update4EditPart.VISUAL_ID:
+		case Delete4EditPart.VISUAL_ID:
+		case Select4EditPart.VISUAL_ID:
+		case While4EditPart.VISUAL_ID:
+		case For3EditPart.VISUAL_ID:
+		case Loop3EditPart.VISUAL_ID:
+		case Open3EditPart.VISUAL_ID:
+		case Fetch3EditPart.VISUAL_ID:
+		case Close3EditPart.VISUAL_ID:
+		case CallProcedure3EditPart.VISUAL_ID:
+		case CallFunction3EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -143,7 +157,7 @@ public class WhileWhileWhileStatementsCompartment3CanonicalEditPolicy extends Ca
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getWhileWhileWhileStatementsCompartment_7025SemanticChildren((View) getHost().getModel());
+				.getWhileWhileWhileStatementsCompartment_7088SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

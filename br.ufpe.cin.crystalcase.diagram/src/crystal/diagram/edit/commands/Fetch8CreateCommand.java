@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.CrystalFactory;
 import crystal.Fetch;
 import crystal.Function;
+import crystal.Procedure;
 
 /**
  * @generated
@@ -57,7 +58,7 @@ public class Fetch8CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Fetch newElement = CrystalFactory.eINSTANCE.createFetch();
 
-		Function owner = (Function) getElementToEdit();
+		Procedure owner = (Procedure) getElementToEdit();
 		owner.getExecutablePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);

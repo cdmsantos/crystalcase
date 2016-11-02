@@ -262,6 +262,11 @@ public class ForItemProvider extends StatementsItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
+				 CrystalFactory.eINSTANCE.createExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
@@ -333,11 +338,6 @@ public class ForItemProvider extends StatementsItemProvider {
 			(createChildParameter
 				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createExpression()));
 	}
 
 }

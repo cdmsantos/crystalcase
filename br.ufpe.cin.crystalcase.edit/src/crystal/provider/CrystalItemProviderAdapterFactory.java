@@ -799,6 +799,7 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 		if (collectionsItemProvider != null) collectionsItemProvider.dispose();
 		if (recordsItemProvider != null) recordsItemProvider.dispose();
 		if (cursorItemProvider != null) cursorItemProvider.dispose();
+		if (expressionItemProvider != null) expressionItemProvider.dispose();
 		if (exceptionItemProvider != null) exceptionItemProvider.dispose();
 		if (ifItemProvider != null) ifItemProvider.dispose();
 		if (caseItemProvider != null) caseItemProvider.dispose();
@@ -817,7 +818,6 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 		if (callFunctionItemProvider != null) callFunctionItemProvider.dispose();
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
 		if (selectorTransitionItemProvider != null) selectorTransitionItemProvider.dispose();
-		if (expressionItemProvider != null) expressionItemProvider.dispose();
 	}
 
 }

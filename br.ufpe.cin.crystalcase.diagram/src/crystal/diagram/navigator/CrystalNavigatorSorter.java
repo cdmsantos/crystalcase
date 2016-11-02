@@ -15,12 +15,12 @@ public class CrystalNavigatorSorter extends ViewerSorter {
 	/**
 	 * @generated
 	 */
-	private static final int GROUP_CATEGORY = 7092;
+	private static final int GROUP_CATEGORY = 7108;
 
 	/**
 	 * @generated
 	 */
-	private static final int SHORTCUTS_CATEGORY = 7091;
+	private static final int SHORTCUTS_CATEGORY = 7107;
 
 	/**
 	 * @generated

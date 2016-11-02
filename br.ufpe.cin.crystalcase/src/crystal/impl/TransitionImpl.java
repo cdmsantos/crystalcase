@@ -38,7 +38,7 @@ public class TransitionImpl extends EObjectImpl implements Transition {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "Connection";
+	protected static final String NAME_EDEFAULT = "Statement Connection";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.

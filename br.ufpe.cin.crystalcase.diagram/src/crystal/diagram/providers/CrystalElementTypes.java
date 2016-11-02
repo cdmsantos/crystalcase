@@ -224,6 +224,22 @@ public class CrystalElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType Expression_3220 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.Expression_3220"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Exception_3221 = getElementType("br.ufpe.cin.crystalcase.diagram.Exception_3221"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType If_3222 = getElementType("br.ufpe.cin.crystalcase.diagram.If_3222"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static final IElementType Selector_3108 = getElementType("br.ufpe.cin.crystalcase.diagram.Selector_3108"); //$NON-NLS-1$
 
 	/**
@@ -382,6 +398,36 @@ public class CrystalElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType Case_3223 = getElementType("br.ufpe.cin.crystalcase.diagram.Case_3223"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Insert_3224 = getElementType("br.ufpe.cin.crystalcase.diagram.Insert_3224"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Update_3225 = getElementType("br.ufpe.cin.crystalcase.diagram.Update_3225"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Delete_3226 = getElementType("br.ufpe.cin.crystalcase.diagram.Delete_3226"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Select_3227 = getElementType("br.ufpe.cin.crystalcase.diagram.Select_3227"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType While_3228 = getElementType("br.ufpe.cin.crystalcase.diagram.While_3228"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static final IElementType Insert_3199 = getElementType("br.ufpe.cin.crystalcase.diagram.Insert_3199"); //$NON-NLS-1$
 
 	/**
@@ -408,6 +454,11 @@ public class CrystalElementTypes {
 	* @generated
 	*/
 	public static final IElementType Case_3092 = getElementType("br.ufpe.cin.crystalcase.diagram.Case_3092"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType For_3229 = getElementType("br.ufpe.cin.crystalcase.diagram.For_3229"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -447,6 +498,11 @@ public class CrystalElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType Loop_3230 = getElementType("br.ufpe.cin.crystalcase.diagram.Loop_3230"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static final IElementType Insert_3156 = getElementType("br.ufpe.cin.crystalcase.diagram.Insert_3156"); //$NON-NLS-1$
 
 	/**
@@ -478,6 +534,33 @@ public class CrystalElementTypes {
 	* @generated
 	*/
 	public static final IElementType Case_3161 = getElementType("br.ufpe.cin.crystalcase.diagram.Case_3161"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Open_3231 = getElementType("br.ufpe.cin.crystalcase.diagram.Open_3231"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Fetch_3232 = getElementType("br.ufpe.cin.crystalcase.diagram.Fetch_3232"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType Close_3233 = getElementType("br.ufpe.cin.crystalcase.diagram.Close_3233"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType CallProcedure_3234 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.CallProcedure_3234"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType CallFunction_3235 = getElementType(
+			"br.ufpe.cin.crystalcase.diagram.CallFunction_3235"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -1098,9 +1181,13 @@ public class CrystalElementTypes {
 
 			elements.put(Cursor_3021, CrystalPackage.eINSTANCE.getCursor());
 
+			elements.put(Expression_3217, CrystalPackage.eINSTANCE.getExpression());
+
 			elements.put(Exception_3056, CrystalPackage.eINSTANCE.getException());
 
 			elements.put(If_3057, CrystalPackage.eINSTANCE.getIf());
+
+			elements.put(Expression_3211, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(Exception_3181, CrystalPackage.eINSTANCE.getException());
 
@@ -1108,11 +1195,11 @@ public class CrystalElementTypes {
 
 			elements.put(Case_3183, CrystalPackage.eINSTANCE.getCase());
 
-			elements.put(Selector_3108, CrystalPackage.eINSTANCE.getSelector());
+			elements.put(Expression_3220, CrystalPackage.eINSTANCE.getExpression());
 
-			elements.put(Exception_3109, CrystalPackage.eINSTANCE.getException());
+			elements.put(Exception_3221, CrystalPackage.eINSTANCE.getException());
 
-			elements.put(If_3110, CrystalPackage.eINSTANCE.getIf());
+			elements.put(If_3222, CrystalPackage.eINSTANCE.getIf());
 
 			elements.put(Insert_3184, CrystalPackage.eINSTANCE.getInsert());
 
@@ -1124,17 +1211,23 @@ public class CrystalElementTypes {
 
 			elements.put(While_3188, CrystalPackage.eINSTANCE.getWhile());
 
+			elements.put(Expression_3212, CrystalPackage.eINSTANCE.getExpression());
+
 			elements.put(Exception_3090, CrystalPackage.eINSTANCE.getException());
 
 			elements.put(If_3091, CrystalPackage.eINSTANCE.getIf());
 
 			elements.put(For_3189, CrystalPackage.eINSTANCE.getFor());
 
+			elements.put(Expression_3214, CrystalPackage.eINSTANCE.getExpression());
+
 			elements.put(Exception_3151, CrystalPackage.eINSTANCE.getException());
 
 			elements.put(If_3152, CrystalPackage.eINSTANCE.getIf());
 
 			elements.put(Loop_3190, CrystalPackage.eINSTANCE.getLoop());
+
+			elements.put(Expression_3213, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(Exception_3153, CrystalPackage.eINSTANCE.getException());
 
@@ -1150,13 +1243,53 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3195, CrystalPackage.eINSTANCE.getCallFunction());
 
-			elements.put(Expression_3211, CrystalPackage.eINSTANCE.getExpression());
+			elements.put(Expression_3215, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(Exception_3196, CrystalPackage.eINSTANCE.getException());
 
 			elements.put(If_3197, CrystalPackage.eINSTANCE.getIf());
 
 			elements.put(Case_3198, CrystalPackage.eINSTANCE.getCase());
+
+			elements.put(Case_3223, CrystalPackage.eINSTANCE.getCase());
+
+			elements.put(Insert_3224, CrystalPackage.eINSTANCE.getInsert());
+
+			elements.put(Update_3225, CrystalPackage.eINSTANCE.getUpdate());
+
+			elements.put(Delete_3226, CrystalPackage.eINSTANCE.getDelete());
+
+			elements.put(Select_3227, CrystalPackage.eINSTANCE.getSelect());
+
+			elements.put(While_3228, CrystalPackage.eINSTANCE.getWhile());
+
+			elements.put(Case_3092, CrystalPackage.eINSTANCE.getCase());
+
+			elements.put(For_3229, CrystalPackage.eINSTANCE.getFor());
+
+			elements.put(Case_3155, CrystalPackage.eINSTANCE.getCase());
+
+			elements.put(Loop_3230, CrystalPackage.eINSTANCE.getLoop());
+
+			elements.put(Case_3161, CrystalPackage.eINSTANCE.getCase());
+
+			elements.put(Open_3231, CrystalPackage.eINSTANCE.getOpen());
+
+			elements.put(Fetch_3232, CrystalPackage.eINSTANCE.getFetch());
+
+			elements.put(Close_3233, CrystalPackage.eINSTANCE.getClose());
+
+			elements.put(CallProcedure_3234, CrystalPackage.eINSTANCE.getCallProcedure());
+
+			elements.put(CallFunction_3235, CrystalPackage.eINSTANCE.getCallFunction());
+
+			elements.put(Selector_3108, CrystalPackage.eINSTANCE.getSelector());
+
+			elements.put(Expression_3216, CrystalPackage.eINSTANCE.getExpression());
+
+			elements.put(Exception_3109, CrystalPackage.eINSTANCE.getException());
+
+			elements.put(If_3110, CrystalPackage.eINSTANCE.getIf());
 
 			elements.put(Insert_3199, CrystalPackage.eINSTANCE.getInsert());
 
@@ -1167,8 +1300,6 @@ public class CrystalElementTypes {
 			elements.put(Select_3202, CrystalPackage.eINSTANCE.getSelect());
 
 			elements.put(While_3203, CrystalPackage.eINSTANCE.getWhile());
-
-			elements.put(Case_3092, CrystalPackage.eINSTANCE.getCase());
 
 			elements.put(Insert_3093, CrystalPackage.eINSTANCE.getInsert());
 
@@ -1182,8 +1313,6 @@ public class CrystalElementTypes {
 
 			elements.put(For_3098, CrystalPackage.eINSTANCE.getFor());
 
-			elements.put(Case_3155, CrystalPackage.eINSTANCE.getCase());
-
 			elements.put(Insert_3156, CrystalPackage.eINSTANCE.getInsert());
 
 			elements.put(Update_3157, CrystalPackage.eINSTANCE.getUpdate());
@@ -1195,8 +1324,6 @@ public class CrystalElementTypes {
 			elements.put(While_3160, CrystalPackage.eINSTANCE.getWhile());
 
 			elements.put(Loop_3099, CrystalPackage.eINSTANCE.getLoop());
-
-			elements.put(Case_3161, CrystalPackage.eINSTANCE.getCase());
 
 			elements.put(Insert_3162, CrystalPackage.eINSTANCE.getInsert());
 
@@ -1218,8 +1345,6 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3104, CrystalPackage.eINSTANCE.getCallFunction());
 
-			elements.put(Expression_3212, CrystalPackage.eINSTANCE.getExpression());
-
 			elements.put(For_3167, CrystalPackage.eINSTANCE.getFor());
 
 			elements.put(For_3168, CrystalPackage.eINSTANCE.getFor());
@@ -1238,8 +1363,6 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3175, CrystalPackage.eINSTANCE.getCallFunction());
 
-			elements.put(Expression_3213, CrystalPackage.eINSTANCE.getExpression());
-
 			elements.put(Open_3176, CrystalPackage.eINSTANCE.getOpen());
 
 			elements.put(Fetch_3177, CrystalPackage.eINSTANCE.getFetch());
@@ -1249,8 +1372,6 @@ public class CrystalElementTypes {
 			elements.put(CallProcedure_3179, CrystalPackage.eINSTANCE.getCallProcedure());
 
 			elements.put(CallFunction_3180, CrystalPackage.eINSTANCE.getCallFunction());
-
-			elements.put(Expression_3214, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(For_3204, CrystalPackage.eINSTANCE.getFor());
 
@@ -1265,8 +1386,6 @@ public class CrystalElementTypes {
 			elements.put(CallProcedure_3209, CrystalPackage.eINSTANCE.getCallProcedure());
 
 			elements.put(CallFunction_3210, CrystalPackage.eINSTANCE.getCallFunction());
-
-			elements.put(Expression_3215, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(Case_3138, CrystalPackage.eINSTANCE.getCase());
 
@@ -1294,8 +1413,6 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3150, CrystalPackage.eINSTANCE.getCallFunction());
 
-			elements.put(Expression_3216, CrystalPackage.eINSTANCE.getExpression());
-
 			elements.put(Case_3058, CrystalPackage.eINSTANCE.getCase());
 
 			elements.put(Insert_3059, CrystalPackage.eINSTANCE.getInsert());
@@ -1322,8 +1439,6 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3070, CrystalPackage.eINSTANCE.getCallFunction());
 
-			elements.put(Expression_3217, CrystalPackage.eINSTANCE.getExpression());
-
 			elements.put(DataType_3071, CrystalPackage.eINSTANCE.getDataType());
 
 			elements.put(Collections_3072, CrystalPackage.eINSTANCE.getCollections());
@@ -1347,6 +1462,8 @@ public class CrystalElementTypes {
 			elements.put(Records_3028, CrystalPackage.eINSTANCE.getRecords());
 
 			elements.put(Cursor_3029, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(Expression_3218, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(Exception_3075, CrystalPackage.eINSTANCE.getException());
 
@@ -1378,8 +1495,6 @@ public class CrystalElementTypes {
 
 			elements.put(CallFunction_3089, CrystalPackage.eINSTANCE.getCallFunction());
 
-			elements.put(Expression_3218, CrystalPackage.eINSTANCE.getExpression());
-
 			elements.put(DataType_3033, CrystalPackage.eINSTANCE.getDataType());
 
 			elements.put(Collections_3034, CrystalPackage.eINSTANCE.getCollections());
@@ -1387,6 +1502,8 @@ public class CrystalElementTypes {
 			elements.put(Records_3035, CrystalPackage.eINSTANCE.getRecords());
 
 			elements.put(Cursor_3036, CrystalPackage.eINSTANCE.getCursor());
+
+			elements.put(Expression_3219, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(Exception_3037, CrystalPackage.eINSTANCE.getException());
 
@@ -1417,8 +1534,6 @@ public class CrystalElementTypes {
 			elements.put(CallProcedure_3050, CrystalPackage.eINSTANCE.getCallProcedure());
 
 			elements.put(CallFunction_3051, CrystalPackage.eINSTANCE.getCallFunction());
-
-			elements.put(Expression_3219, CrystalPackage.eINSTANCE.getExpression());
 
 			elements.put(Transition_4001, CrystalPackage.eINSTANCE.getTransition());
 
@@ -1452,25 +1567,30 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Collections_3019);
 			KNOWN_ELEMENT_TYPES.add(Records_3020);
 			KNOWN_ELEMENT_TYPES.add(Cursor_3021);
+			KNOWN_ELEMENT_TYPES.add(Expression_3217);
 			KNOWN_ELEMENT_TYPES.add(Exception_3056);
 			KNOWN_ELEMENT_TYPES.add(If_3057);
+			KNOWN_ELEMENT_TYPES.add(Expression_3211);
 			KNOWN_ELEMENT_TYPES.add(Exception_3181);
 			KNOWN_ELEMENT_TYPES.add(If_3182);
 			KNOWN_ELEMENT_TYPES.add(Case_3183);
-			KNOWN_ELEMENT_TYPES.add(Selector_3108);
-			KNOWN_ELEMENT_TYPES.add(Exception_3109);
-			KNOWN_ELEMENT_TYPES.add(If_3110);
+			KNOWN_ELEMENT_TYPES.add(Expression_3220);
+			KNOWN_ELEMENT_TYPES.add(Exception_3221);
+			KNOWN_ELEMENT_TYPES.add(If_3222);
 			KNOWN_ELEMENT_TYPES.add(Insert_3184);
 			KNOWN_ELEMENT_TYPES.add(Update_3185);
 			KNOWN_ELEMENT_TYPES.add(Delete_3186);
 			KNOWN_ELEMENT_TYPES.add(Select_3187);
 			KNOWN_ELEMENT_TYPES.add(While_3188);
+			KNOWN_ELEMENT_TYPES.add(Expression_3212);
 			KNOWN_ELEMENT_TYPES.add(Exception_3090);
 			KNOWN_ELEMENT_TYPES.add(If_3091);
 			KNOWN_ELEMENT_TYPES.add(For_3189);
+			KNOWN_ELEMENT_TYPES.add(Expression_3214);
 			KNOWN_ELEMENT_TYPES.add(Exception_3151);
 			KNOWN_ELEMENT_TYPES.add(If_3152);
 			KNOWN_ELEMENT_TYPES.add(Loop_3190);
+			KNOWN_ELEMENT_TYPES.add(Expression_3213);
 			KNOWN_ELEMENT_TYPES.add(Exception_3153);
 			KNOWN_ELEMENT_TYPES.add(If_3154);
 			KNOWN_ELEMENT_TYPES.add(Open_3191);
@@ -1478,30 +1598,47 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3193);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3194);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3195);
-			KNOWN_ELEMENT_TYPES.add(Expression_3211);
+			KNOWN_ELEMENT_TYPES.add(Expression_3215);
 			KNOWN_ELEMENT_TYPES.add(Exception_3196);
 			KNOWN_ELEMENT_TYPES.add(If_3197);
 			KNOWN_ELEMENT_TYPES.add(Case_3198);
+			KNOWN_ELEMENT_TYPES.add(Case_3223);
+			KNOWN_ELEMENT_TYPES.add(Insert_3224);
+			KNOWN_ELEMENT_TYPES.add(Update_3225);
+			KNOWN_ELEMENT_TYPES.add(Delete_3226);
+			KNOWN_ELEMENT_TYPES.add(Select_3227);
+			KNOWN_ELEMENT_TYPES.add(While_3228);
+			KNOWN_ELEMENT_TYPES.add(Case_3092);
+			KNOWN_ELEMENT_TYPES.add(For_3229);
+			KNOWN_ELEMENT_TYPES.add(Case_3155);
+			KNOWN_ELEMENT_TYPES.add(Loop_3230);
+			KNOWN_ELEMENT_TYPES.add(Case_3161);
+			KNOWN_ELEMENT_TYPES.add(Open_3231);
+			KNOWN_ELEMENT_TYPES.add(Fetch_3232);
+			KNOWN_ELEMENT_TYPES.add(Close_3233);
+			KNOWN_ELEMENT_TYPES.add(CallProcedure_3234);
+			KNOWN_ELEMENT_TYPES.add(CallFunction_3235);
+			KNOWN_ELEMENT_TYPES.add(Selector_3108);
+			KNOWN_ELEMENT_TYPES.add(Expression_3216);
+			KNOWN_ELEMENT_TYPES.add(Exception_3109);
+			KNOWN_ELEMENT_TYPES.add(If_3110);
 			KNOWN_ELEMENT_TYPES.add(Insert_3199);
 			KNOWN_ELEMENT_TYPES.add(Update_3200);
 			KNOWN_ELEMENT_TYPES.add(Delete_3201);
 			KNOWN_ELEMENT_TYPES.add(Select_3202);
 			KNOWN_ELEMENT_TYPES.add(While_3203);
-			KNOWN_ELEMENT_TYPES.add(Case_3092);
 			KNOWN_ELEMENT_TYPES.add(Insert_3093);
 			KNOWN_ELEMENT_TYPES.add(Update_3094);
 			KNOWN_ELEMENT_TYPES.add(Delete_3095);
 			KNOWN_ELEMENT_TYPES.add(Select_3096);
 			KNOWN_ELEMENT_TYPES.add(While_3097);
 			KNOWN_ELEMENT_TYPES.add(For_3098);
-			KNOWN_ELEMENT_TYPES.add(Case_3155);
 			KNOWN_ELEMENT_TYPES.add(Insert_3156);
 			KNOWN_ELEMENT_TYPES.add(Update_3157);
 			KNOWN_ELEMENT_TYPES.add(Delete_3158);
 			KNOWN_ELEMENT_TYPES.add(Select_3159);
 			KNOWN_ELEMENT_TYPES.add(While_3160);
 			KNOWN_ELEMENT_TYPES.add(Loop_3099);
-			KNOWN_ELEMENT_TYPES.add(Case_3161);
 			KNOWN_ELEMENT_TYPES.add(Insert_3162);
 			KNOWN_ELEMENT_TYPES.add(Update_3163);
 			KNOWN_ELEMENT_TYPES.add(Delete_3164);
@@ -1512,7 +1649,6 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3102);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3103);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3104);
-			KNOWN_ELEMENT_TYPES.add(Expression_3212);
 			KNOWN_ELEMENT_TYPES.add(For_3167);
 			KNOWN_ELEMENT_TYPES.add(For_3168);
 			KNOWN_ELEMENT_TYPES.add(Loop_3169);
@@ -1522,13 +1658,11 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3173);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3174);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3175);
-			KNOWN_ELEMENT_TYPES.add(Expression_3213);
 			KNOWN_ELEMENT_TYPES.add(Open_3176);
 			KNOWN_ELEMENT_TYPES.add(Fetch_3177);
 			KNOWN_ELEMENT_TYPES.add(Close_3178);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3179);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3180);
-			KNOWN_ELEMENT_TYPES.add(Expression_3214);
 			KNOWN_ELEMENT_TYPES.add(For_3204);
 			KNOWN_ELEMENT_TYPES.add(Loop_3205);
 			KNOWN_ELEMENT_TYPES.add(Open_3206);
@@ -1536,7 +1670,6 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3208);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3209);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3210);
-			KNOWN_ELEMENT_TYPES.add(Expression_3215);
 			KNOWN_ELEMENT_TYPES.add(Case_3138);
 			KNOWN_ELEMENT_TYPES.add(Insert_3139);
 			KNOWN_ELEMENT_TYPES.add(Update_3140);
@@ -1550,7 +1683,6 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3148);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3149);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3150);
-			KNOWN_ELEMENT_TYPES.add(Expression_3216);
 			KNOWN_ELEMENT_TYPES.add(Case_3058);
 			KNOWN_ELEMENT_TYPES.add(Insert_3059);
 			KNOWN_ELEMENT_TYPES.add(Update_3060);
@@ -1564,7 +1696,6 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3068);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3069);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3070);
-			KNOWN_ELEMENT_TYPES.add(Expression_3217);
 			KNOWN_ELEMENT_TYPES.add(DataType_3071);
 			KNOWN_ELEMENT_TYPES.add(Collections_3072);
 			KNOWN_ELEMENT_TYPES.add(Records_3073);
@@ -1577,6 +1708,7 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Collections_3027);
 			KNOWN_ELEMENT_TYPES.add(Records_3028);
 			KNOWN_ELEMENT_TYPES.add(Cursor_3029);
+			KNOWN_ELEMENT_TYPES.add(Expression_3218);
 			KNOWN_ELEMENT_TYPES.add(Exception_3075);
 			KNOWN_ELEMENT_TYPES.add(If_3076);
 			KNOWN_ELEMENT_TYPES.add(Case_3077);
@@ -1592,11 +1724,11 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3087);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3088);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3089);
-			KNOWN_ELEMENT_TYPES.add(Expression_3218);
 			KNOWN_ELEMENT_TYPES.add(DataType_3033);
 			KNOWN_ELEMENT_TYPES.add(Collections_3034);
 			KNOWN_ELEMENT_TYPES.add(Records_3035);
 			KNOWN_ELEMENT_TYPES.add(Cursor_3036);
+			KNOWN_ELEMENT_TYPES.add(Expression_3219);
 			KNOWN_ELEMENT_TYPES.add(Exception_3037);
 			KNOWN_ELEMENT_TYPES.add(If_3038);
 			KNOWN_ELEMENT_TYPES.add(Case_3039);
@@ -1612,7 +1744,6 @@ public class CrystalElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Close_3049);
 			KNOWN_ELEMENT_TYPES.add(CallProcedure_3050);
 			KNOWN_ELEMENT_TYPES.add(CallFunction_3051);
-			KNOWN_ELEMENT_TYPES.add(Expression_3219);
 			KNOWN_ELEMENT_TYPES.add(Transition_4001);
 			KNOWN_ELEMENT_TYPES.add(SelectorTransition_4002);
 		}
@@ -1648,22 +1779,26 @@ public class CrystalElementTypes {
 			return Records_3020;
 		case Cursor2EditPart.VISUAL_ID:
 			return Cursor_3021;
+		case ExpressionEditPart.VISUAL_ID:
+			return Expression_3217;
 		case ExceptionEditPart.VISUAL_ID:
 			return Exception_3056;
 		case IfEditPart.VISUAL_ID:
 			return If_3057;
+		case Expression2EditPart.VISUAL_ID:
+			return Expression_3211;
 		case Exception2EditPart.VISUAL_ID:
 			return Exception_3181;
 		case If2EditPart.VISUAL_ID:
 			return If_3182;
 		case CaseEditPart.VISUAL_ID:
 			return Case_3183;
-		case SelectorEditPart.VISUAL_ID:
-			return Selector_3108;
+		case Expression3EditPart.VISUAL_ID:
+			return Expression_3220;
 		case Exception3EditPart.VISUAL_ID:
-			return Exception_3109;
+			return Exception_3221;
 		case If3EditPart.VISUAL_ID:
-			return If_3110;
+			return If_3222;
 		case InsertEditPart.VISUAL_ID:
 			return Insert_3184;
 		case UpdateEditPart.VISUAL_ID:
@@ -1674,18 +1809,24 @@ public class CrystalElementTypes {
 			return Select_3187;
 		case WhileEditPart.VISUAL_ID:
 			return While_3188;
+		case Expression4EditPart.VISUAL_ID:
+			return Expression_3212;
 		case Exception4EditPart.VISUAL_ID:
 			return Exception_3090;
 		case If4EditPart.VISUAL_ID:
 			return If_3091;
 		case ForEditPart.VISUAL_ID:
 			return For_3189;
+		case Expression5EditPart.VISUAL_ID:
+			return Expression_3214;
 		case Exception5EditPart.VISUAL_ID:
 			return Exception_3151;
 		case If5EditPart.VISUAL_ID:
 			return If_3152;
 		case LoopEditPart.VISUAL_ID:
 			return Loop_3190;
+		case Expression6EditPart.VISUAL_ID:
+			return Expression_3213;
 		case Exception6EditPart.VISUAL_ID:
 			return Exception_3153;
 		case If6EditPart.VISUAL_ID:
@@ -1700,180 +1841,202 @@ public class CrystalElementTypes {
 			return CallProcedure_3194;
 		case CallFunctionEditPart.VISUAL_ID:
 			return CallFunction_3195;
-		case ExpressionEditPart.VISUAL_ID:
-			return Expression_3211;
+		case Expression7EditPart.VISUAL_ID:
+			return Expression_3215;
 		case Exception7EditPart.VISUAL_ID:
 			return Exception_3196;
 		case If7EditPart.VISUAL_ID:
 			return If_3197;
 		case Case2EditPart.VISUAL_ID:
 			return Case_3198;
-		case Insert2EditPart.VISUAL_ID:
-			return Insert_3199;
-		case Update2EditPart.VISUAL_ID:
-			return Update_3200;
-		case Delete2EditPart.VISUAL_ID:
-			return Delete_3201;
-		case Select2EditPart.VISUAL_ID:
-			return Select_3202;
-		case While2EditPart.VISUAL_ID:
-			return While_3203;
 		case Case3EditPart.VISUAL_ID:
-			return Case_3092;
-		case Insert3EditPart.VISUAL_ID:
-			return Insert_3093;
-		case Update3EditPart.VISUAL_ID:
-			return Update_3094;
-		case Delete3EditPart.VISUAL_ID:
-			return Delete_3095;
-		case Select3EditPart.VISUAL_ID:
-			return Select_3096;
-		case While3EditPart.VISUAL_ID:
-			return While_3097;
-		case For2EditPart.VISUAL_ID:
-			return For_3098;
+			return Case_3223;
+		case Insert2EditPart.VISUAL_ID:
+			return Insert_3224;
+		case Update2EditPart.VISUAL_ID:
+			return Update_3225;
+		case Delete2EditPart.VISUAL_ID:
+			return Delete_3226;
+		case Select2EditPart.VISUAL_ID:
+			return Select_3227;
+		case While2EditPart.VISUAL_ID:
+			return While_3228;
 		case Case4EditPart.VISUAL_ID:
-			return Case_3155;
-		case Insert4EditPart.VISUAL_ID:
-			return Insert_3156;
-		case Update4EditPart.VISUAL_ID:
-			return Update_3157;
-		case Delete4EditPart.VISUAL_ID:
-			return Delete_3158;
-		case Select4EditPart.VISUAL_ID:
-			return Select_3159;
-		case While4EditPart.VISUAL_ID:
-			return While_3160;
-		case Loop2EditPart.VISUAL_ID:
-			return Loop_3099;
+			return Case_3092;
+		case For2EditPart.VISUAL_ID:
+			return For_3229;
 		case Case5EditPart.VISUAL_ID:
-			return Case_3161;
-		case Insert5EditPart.VISUAL_ID:
-			return Insert_3162;
-		case Update5EditPart.VISUAL_ID:
-			return Update_3163;
-		case Delete5EditPart.VISUAL_ID:
-			return Delete_3164;
-		case Select5EditPart.VISUAL_ID:
-			return Select_3165;
-		case While5EditPart.VISUAL_ID:
-			return While_3166;
-		case Open2EditPart.VISUAL_ID:
-			return Open_3100;
-		case Fetch2EditPart.VISUAL_ID:
-			return Fetch_3101;
-		case Close2EditPart.VISUAL_ID:
-			return Close_3102;
-		case CallProcedure2EditPart.VISUAL_ID:
-			return CallProcedure_3103;
-		case CallFunction2EditPart.VISUAL_ID:
-			return CallFunction_3104;
-		case Expression2EditPart.VISUAL_ID:
-			return Expression_3212;
-		case For3EditPart.VISUAL_ID:
-			return For_3167;
-		case For4EditPart.VISUAL_ID:
-			return For_3168;
-		case Loop3EditPart.VISUAL_ID:
-			return Loop_3169;
-		case Loop4EditPart.VISUAL_ID:
-			return Loop_3170;
-		case Open3EditPart.VISUAL_ID:
-			return Open_3171;
-		case Fetch3EditPart.VISUAL_ID:
-			return Fetch_3172;
-		case Close3EditPart.VISUAL_ID:
-			return Close_3173;
-		case CallProcedure3EditPart.VISUAL_ID:
-			return CallProcedure_3174;
-		case CallFunction3EditPart.VISUAL_ID:
-			return CallFunction_3175;
-		case Expression3EditPart.VISUAL_ID:
-			return Expression_3213;
-		case Open4EditPart.VISUAL_ID:
-			return Open_3176;
-		case Fetch4EditPart.VISUAL_ID:
-			return Fetch_3177;
-		case Close4EditPart.VISUAL_ID:
-			return Close_3178;
-		case CallProcedure4EditPart.VISUAL_ID:
-			return CallProcedure_3179;
-		case CallFunction4EditPart.VISUAL_ID:
-			return CallFunction_3180;
-		case Expression4EditPart.VISUAL_ID:
-			return Expression_3214;
-		case For5EditPart.VISUAL_ID:
-			return For_3204;
-		case Loop5EditPart.VISUAL_ID:
-			return Loop_3205;
-		case Open5EditPart.VISUAL_ID:
-			return Open_3206;
-		case Fetch5EditPart.VISUAL_ID:
-			return Fetch_3207;
-		case Close5EditPart.VISUAL_ID:
-			return Close_3208;
-		case CallProcedure5EditPart.VISUAL_ID:
-			return CallProcedure_3209;
-		case CallFunction5EditPart.VISUAL_ID:
-			return CallFunction_3210;
-		case Expression5EditPart.VISUAL_ID:
-			return Expression_3215;
+			return Case_3155;
+		case Loop2EditPart.VISUAL_ID:
+			return Loop_3230;
 		case Case6EditPart.VISUAL_ID:
-			return Case_3138;
-		case Insert6EditPart.VISUAL_ID:
-			return Insert_3139;
-		case Update6EditPart.VISUAL_ID:
-			return Update_3140;
-		case Delete6EditPart.VISUAL_ID:
-			return Delete_3141;
-		case Select6EditPart.VISUAL_ID:
-			return Select_3142;
-		case While6EditPart.VISUAL_ID:
-			return While_3143;
-		case For6EditPart.VISUAL_ID:
-			return For_3144;
-		case Loop6EditPart.VISUAL_ID:
-			return Loop_3145;
-		case Open6EditPart.VISUAL_ID:
-			return Open_3146;
-		case Fetch6EditPart.VISUAL_ID:
-			return Fetch_3147;
-		case Close6EditPart.VISUAL_ID:
-			return Close_3148;
-		case CallProcedure6EditPart.VISUAL_ID:
-			return CallProcedure_3149;
-		case CallFunction6EditPart.VISUAL_ID:
-			return CallFunction_3150;
-		case Expression6EditPart.VISUAL_ID:
+			return Case_3161;
+		case Open2EditPart.VISUAL_ID:
+			return Open_3231;
+		case Fetch2EditPart.VISUAL_ID:
+			return Fetch_3232;
+		case Close2EditPart.VISUAL_ID:
+			return Close_3233;
+		case CallProcedure2EditPart.VISUAL_ID:
+			return CallProcedure_3234;
+		case CallFunction2EditPart.VISUAL_ID:
+			return CallFunction_3235;
+		case SelectorEditPart.VISUAL_ID:
+			return Selector_3108;
+		case Expression8EditPart.VISUAL_ID:
 			return Expression_3216;
+		case Exception8EditPart.VISUAL_ID:
+			return Exception_3109;
+		case If8EditPart.VISUAL_ID:
+			return If_3110;
+		case Insert3EditPart.VISUAL_ID:
+			return Insert_3199;
+		case Update3EditPart.VISUAL_ID:
+			return Update_3200;
+		case Delete3EditPart.VISUAL_ID:
+			return Delete_3201;
+		case Select3EditPart.VISUAL_ID:
+			return Select_3202;
+		case While3EditPart.VISUAL_ID:
+			return While_3203;
+		case Insert4EditPart.VISUAL_ID:
+			return Insert_3093;
+		case Update4EditPart.VISUAL_ID:
+			return Update_3094;
+		case Delete4EditPart.VISUAL_ID:
+			return Delete_3095;
+		case Select4EditPart.VISUAL_ID:
+			return Select_3096;
+		case While4EditPart.VISUAL_ID:
+			return While_3097;
+		case For3EditPart.VISUAL_ID:
+			return For_3098;
+		case Insert5EditPart.VISUAL_ID:
+			return Insert_3156;
+		case Update5EditPart.VISUAL_ID:
+			return Update_3157;
+		case Delete5EditPart.VISUAL_ID:
+			return Delete_3158;
+		case Select5EditPart.VISUAL_ID:
+			return Select_3159;
+		case While5EditPart.VISUAL_ID:
+			return While_3160;
+		case Loop3EditPart.VISUAL_ID:
+			return Loop_3099;
+		case Insert6EditPart.VISUAL_ID:
+			return Insert_3162;
+		case Update6EditPart.VISUAL_ID:
+			return Update_3163;
+		case Delete6EditPart.VISUAL_ID:
+			return Delete_3164;
+		case Select6EditPart.VISUAL_ID:
+			return Select_3165;
+		case While6EditPart.VISUAL_ID:
+			return While_3166;
+		case Open3EditPart.VISUAL_ID:
+			return Open_3100;
+		case Fetch3EditPart.VISUAL_ID:
+			return Fetch_3101;
+		case Close3EditPart.VISUAL_ID:
+			return Close_3102;
+		case CallProcedure3EditPart.VISUAL_ID:
+			return CallProcedure_3103;
+		case CallFunction3EditPart.VISUAL_ID:
+			return CallFunction_3104;
+		case For4EditPart.VISUAL_ID:
+			return For_3167;
+		case For5EditPart.VISUAL_ID:
+			return For_3168;
+		case Loop4EditPart.VISUAL_ID:
+			return Loop_3169;
+		case Loop5EditPart.VISUAL_ID:
+			return Loop_3170;
+		case Open4EditPart.VISUAL_ID:
+			return Open_3171;
+		case Fetch4EditPart.VISUAL_ID:
+			return Fetch_3172;
+		case Close4EditPart.VISUAL_ID:
+			return Close_3173;
+		case CallProcedure4EditPart.VISUAL_ID:
+			return CallProcedure_3174;
+		case CallFunction4EditPart.VISUAL_ID:
+			return CallFunction_3175;
+		case Open5EditPart.VISUAL_ID:
+			return Open_3176;
+		case Fetch5EditPart.VISUAL_ID:
+			return Fetch_3177;
+		case Close5EditPart.VISUAL_ID:
+			return Close_3178;
+		case CallProcedure5EditPart.VISUAL_ID:
+			return CallProcedure_3179;
+		case CallFunction5EditPart.VISUAL_ID:
+			return CallFunction_3180;
+		case For6EditPart.VISUAL_ID:
+			return For_3204;
+		case Loop6EditPart.VISUAL_ID:
+			return Loop_3205;
+		case Open6EditPart.VISUAL_ID:
+			return Open_3206;
+		case Fetch6EditPart.VISUAL_ID:
+			return Fetch_3207;
+		case Close6EditPart.VISUAL_ID:
+			return Close_3208;
+		case CallProcedure6EditPart.VISUAL_ID:
+			return CallProcedure_3209;
+		case CallFunction6EditPart.VISUAL_ID:
+			return CallFunction_3210;
 		case Case7EditPart.VISUAL_ID:
-			return Case_3058;
+			return Case_3138;
 		case Insert7EditPart.VISUAL_ID:
-			return Insert_3059;
+			return Insert_3139;
 		case Update7EditPart.VISUAL_ID:
-			return Update_3060;
+			return Update_3140;
 		case Delete7EditPart.VISUAL_ID:
-			return Delete_3061;
+			return Delete_3141;
 		case Select7EditPart.VISUAL_ID:
-			return Select_3062;
+			return Select_3142;
 		case While7EditPart.VISUAL_ID:
-			return While_3063;
+			return While_3143;
 		case For7EditPart.VISUAL_ID:
-			return For_3064;
+			return For_3144;
 		case Loop7EditPart.VISUAL_ID:
-			return Loop_3065;
+			return Loop_3145;
 		case Open7EditPart.VISUAL_ID:
-			return Open_3066;
+			return Open_3146;
 		case Fetch7EditPart.VISUAL_ID:
-			return Fetch_3067;
+			return Fetch_3147;
 		case Close7EditPart.VISUAL_ID:
-			return Close_3068;
+			return Close_3148;
 		case CallProcedure7EditPart.VISUAL_ID:
-			return CallProcedure_3069;
+			return CallProcedure_3149;
 		case CallFunction7EditPart.VISUAL_ID:
+			return CallFunction_3150;
+		case Case8EditPart.VISUAL_ID:
+			return Case_3058;
+		case Insert8EditPart.VISUAL_ID:
+			return Insert_3059;
+		case Update8EditPart.VISUAL_ID:
+			return Update_3060;
+		case Delete8EditPart.VISUAL_ID:
+			return Delete_3061;
+		case Select8EditPart.VISUAL_ID:
+			return Select_3062;
+		case While8EditPart.VISUAL_ID:
+			return While_3063;
+		case For8EditPart.VISUAL_ID:
+			return For_3064;
+		case Loop8EditPart.VISUAL_ID:
+			return Loop_3065;
+		case Open8EditPart.VISUAL_ID:
+			return Open_3066;
+		case Fetch8EditPart.VISUAL_ID:
+			return Fetch_3067;
+		case Close8EditPart.VISUAL_ID:
+			return Close_3068;
+		case CallProcedure8EditPart.VISUAL_ID:
+			return CallProcedure_3069;
+		case CallFunction8EditPart.VISUAL_ID:
 			return CallFunction_3070;
-		case Expression7EditPart.VISUAL_ID:
-			return Expression_3217;
 		case DataType3EditPart.VISUAL_ID:
 			return DataType_3071;
 		case Collections3EditPart.VISUAL_ID:
@@ -1898,38 +2061,38 @@ public class CrystalElementTypes {
 			return Records_3028;
 		case Cursor5EditPart.VISUAL_ID:
 			return Cursor_3029;
-		case Exception8EditPart.VISUAL_ID:
-			return Exception_3075;
-		case If8EditPart.VISUAL_ID:
-			return If_3076;
-		case Case8EditPart.VISUAL_ID:
-			return Case_3077;
-		case Insert8EditPart.VISUAL_ID:
-			return Insert_3078;
-		case Update8EditPart.VISUAL_ID:
-			return Update_3079;
-		case Delete8EditPart.VISUAL_ID:
-			return Delete_3080;
-		case Select8EditPart.VISUAL_ID:
-			return Select_3081;
-		case While8EditPart.VISUAL_ID:
-			return While_3082;
-		case For8EditPart.VISUAL_ID:
-			return For_3083;
-		case Loop8EditPart.VISUAL_ID:
-			return Loop_3084;
-		case Open8EditPart.VISUAL_ID:
-			return Open_3085;
-		case Fetch8EditPart.VISUAL_ID:
-			return Fetch_3086;
-		case Close8EditPart.VISUAL_ID:
-			return Close_3087;
-		case CallProcedure8EditPart.VISUAL_ID:
-			return CallProcedure_3088;
-		case CallFunction8EditPart.VISUAL_ID:
-			return CallFunction_3089;
-		case Expression8EditPart.VISUAL_ID:
+		case Expression9EditPart.VISUAL_ID:
 			return Expression_3218;
+		case Exception9EditPart.VISUAL_ID:
+			return Exception_3075;
+		case If9EditPart.VISUAL_ID:
+			return If_3076;
+		case Case9EditPart.VISUAL_ID:
+			return Case_3077;
+		case Insert9EditPart.VISUAL_ID:
+			return Insert_3078;
+		case Update9EditPart.VISUAL_ID:
+			return Update_3079;
+		case Delete9EditPart.VISUAL_ID:
+			return Delete_3080;
+		case Select9EditPart.VISUAL_ID:
+			return Select_3081;
+		case While9EditPart.VISUAL_ID:
+			return While_3082;
+		case For9EditPart.VISUAL_ID:
+			return For_3083;
+		case Loop9EditPart.VISUAL_ID:
+			return Loop_3084;
+		case Open9EditPart.VISUAL_ID:
+			return Open_3085;
+		case Fetch9EditPart.VISUAL_ID:
+			return Fetch_3086;
+		case Close9EditPart.VISUAL_ID:
+			return Close_3087;
+		case CallProcedure9EditPart.VISUAL_ID:
+			return CallProcedure_3088;
+		case CallFunction9EditPart.VISUAL_ID:
+			return CallFunction_3089;
 		case DataType6EditPart.VISUAL_ID:
 			return DataType_3033;
 		case Collections6EditPart.VISUAL_ID:
@@ -1938,38 +2101,38 @@ public class CrystalElementTypes {
 			return Records_3035;
 		case Cursor6EditPart.VISUAL_ID:
 			return Cursor_3036;
-		case Exception9EditPart.VISUAL_ID:
-			return Exception_3037;
-		case If9EditPart.VISUAL_ID:
-			return If_3038;
-		case Case9EditPart.VISUAL_ID:
-			return Case_3039;
-		case Insert9EditPart.VISUAL_ID:
-			return Insert_3040;
-		case Update9EditPart.VISUAL_ID:
-			return Update_3041;
-		case Delete9EditPart.VISUAL_ID:
-			return Delete_3042;
-		case Select9EditPart.VISUAL_ID:
-			return Select_3043;
-		case While9EditPart.VISUAL_ID:
-			return While_3044;
-		case For9EditPart.VISUAL_ID:
-			return For_3045;
-		case Loop9EditPart.VISUAL_ID:
-			return Loop_3046;
-		case Open9EditPart.VISUAL_ID:
-			return Open_3047;
-		case Fetch9EditPart.VISUAL_ID:
-			return Fetch_3048;
-		case Close9EditPart.VISUAL_ID:
-			return Close_3049;
-		case CallProcedure9EditPart.VISUAL_ID:
-			return CallProcedure_3050;
-		case CallFunction9EditPart.VISUAL_ID:
-			return CallFunction_3051;
-		case Expression9EditPart.VISUAL_ID:
+		case Expression10EditPart.VISUAL_ID:
 			return Expression_3219;
+		case Exception10EditPart.VISUAL_ID:
+			return Exception_3037;
+		case If10EditPart.VISUAL_ID:
+			return If_3038;
+		case Case10EditPart.VISUAL_ID:
+			return Case_3039;
+		case Insert10EditPart.VISUAL_ID:
+			return Insert_3040;
+		case Update10EditPart.VISUAL_ID:
+			return Update_3041;
+		case Delete10EditPart.VISUAL_ID:
+			return Delete_3042;
+		case Select10EditPart.VISUAL_ID:
+			return Select_3043;
+		case While10EditPart.VISUAL_ID:
+			return While_3044;
+		case For10EditPart.VISUAL_ID:
+			return For_3045;
+		case Loop10EditPart.VISUAL_ID:
+			return Loop_3046;
+		case Open10EditPart.VISUAL_ID:
+			return Open_3047;
+		case Fetch10EditPart.VISUAL_ID:
+			return Fetch_3048;
+		case Close10EditPart.VISUAL_ID:
+			return Close_3049;
+		case CallProcedure10EditPart.VISUAL_ID:
+			return CallProcedure_3050;
+		case CallFunction10EditPart.VISUAL_ID:
+			return CallFunction_3051;
 		case TransitionEditPart.VISUAL_ID:
 			return Transition_4001;
 		case SelectorTransitionEditPart.VISUAL_ID:

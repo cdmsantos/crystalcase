@@ -231,11 +231,1394 @@ public class CrystalVisualIDRegistry {
 			}
 			break;
 		case ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return ExpressionEditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
 				return ExceptionEditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
 				return IfEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction8EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return OpenEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return FetchEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return CloseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedureEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunctionEditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfElsesCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction6EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartment2EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return OpenEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return FetchEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return CloseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedureEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunctionEditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfElsesCompartment2EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction6EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
+				return SelectorEditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseElseStatementsCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction2EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartment3EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return OpenEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return FetchEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return CloseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedureEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunctionEditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfElsesCompartment3EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction6EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction3EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartment4EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return OpenEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return FetchEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return CloseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedureEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunctionEditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfElsesCompartment4EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction6EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForForStatementsCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction5EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartment5EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return OpenEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return FetchEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return CloseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedureEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunctionEditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfElsesCompartment5EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction6EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartment6EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return OpenEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return FetchEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return CloseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedureEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunctionEditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfElsesCompartment6EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction6EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartment7EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return OpenEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return FetchEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return CloseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedureEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunctionEditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfElsesCompartment7EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction6EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
+				return SelectorEditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment2EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction2EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartment3EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
+				return SelectorEditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment3EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction3EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartment4EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
+				return SelectorEditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment4EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction2EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction5EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartment5EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
+				return SelectorEditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment5EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction2EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartment6EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
+				return SelectorEditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment6EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction2EditPart.VISUAL_ID;
+			}
+			break;
+		case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception8EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If8EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case7EditPart.VISUAL_ID;
@@ -276,61 +1659,61 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction7EditPart.VISUAL_ID;
 			}
+			break;
+		case IfIfIfsCompartment8EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return OpenEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return FetchEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return CloseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedureEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunctionEditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfElsesCompartment8EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
 				return Expression7EditPart.VISUAL_ID;
 			}
-			break;
-		case IfIfIfsCompartmentEditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return CaseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return InsertEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return UpdateEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return DeleteEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return SelectEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return WhileEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return ForEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return LoopEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return OpenEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return FetchEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return CloseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedureEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunctionEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return ExpressionEditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfElsesCompartmentEditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
 				return Exception7EditPart.VISUAL_ID;
 			}
@@ -341,174 +1724,19 @@ public class CrystalVisualIDRegistry {
 				return Case2EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert2EditPart.VISUAL_ID;
+				return Insert3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update2EditPart.VISUAL_ID;
+				return Update3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete2EditPart.VISUAL_ID;
+				return Delete3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select2EditPart.VISUAL_ID;
+				return Select3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression5EditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfIfsCompartment2EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return CaseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return InsertEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return UpdateEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return DeleteEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return SelectEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return WhileEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return ForEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return LoopEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return OpenEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return FetchEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return CloseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedureEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunctionEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return ExpressionEditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfElsesCompartment2EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression5EditPart.VISUAL_ID;
-			}
-			break;
-		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
-				return SelectorEditPart.VISUAL_ID;
-			}
-			break;
-		case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While6EditPart.VISUAL_ID;
+				return While3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
 				return For6EditPart.VISUAL_ID;
@@ -531,266 +1759,16 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction6EditPart.VISUAL_ID;
 			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression6EditPart.VISUAL_ID;
-			}
 			break;
-		case IfIfIfsCompartment3EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return CaseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return InsertEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return UpdateEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return DeleteEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return SelectEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return WhileEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return ForEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return LoopEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return OpenEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return FetchEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return CloseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedureEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunctionEditPart.VISUAL_ID;
-			}
+		case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return ExpressionEditPart.VISUAL_ID;
+				return Expression4EditPart.VISUAL_ID;
 			}
-			break;
-		case IfIfElsesCompartment3EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression5EditPart.VISUAL_ID;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartmentEditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
 				return Exception4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
 				return If4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression2EditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfIfsCompartment4EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return CaseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return InsertEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return UpdateEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return DeleteEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return SelectEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return WhileEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return ForEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return LoopEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return OpenEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return FetchEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return CloseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedureEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunctionEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return ExpressionEditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfElsesCompartment4EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression5EditPart.VISUAL_ID;
-			}
-			break;
-		case ForForForStatementsCompartmentEditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case4EditPart.VISUAL_ID;
@@ -811,160 +1789,10 @@ public class CrystalVisualIDRegistry {
 				return While4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression4EditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfIfsCompartment5EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return CaseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return InsertEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return UpdateEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return DeleteEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return SelectEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return WhileEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return ForEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return LoopEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return OpenEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return FetchEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return CloseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedureEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunctionEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return ExpressionEditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfElsesCompartment5EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression5EditPart.VISUAL_ID;
-			}
-			break;
-		case LoopLoopLoopStatementsCompartmentEditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
 				return For3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop4EditPart.VISUAL_ID;
+				return Loop3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
 				return Open3EditPart.VISUAL_ID;
@@ -980,377 +1808,12 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression3EditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfIfsCompartment6EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return CaseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return InsertEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return UpdateEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return DeleteEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return SelectEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return WhileEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return ForEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return LoopEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return OpenEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return FetchEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return CloseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedureEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunctionEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return ExpressionEditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfElsesCompartment6EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression5EditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfIfsCompartment7EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return CaseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return InsertEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return UpdateEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return DeleteEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return SelectEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return WhileEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return ForEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return LoopEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return OpenEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return FetchEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return CloseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedureEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunctionEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return ExpressionEditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfElsesCompartment7EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression5EditPart.VISUAL_ID;
-			}
-			break;
-		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
-				return SelectorEditPart.VISUAL_ID;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression2EditPart.VISUAL_ID;
-			}
-			break;
-		case CaseCaseCasesCompartment3EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
-				return SelectorEditPart.VISUAL_ID;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression2EditPart.VISUAL_ID;
-			}
-			break;
-		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression4EditPart.VISUAL_ID;
-			}
-			break;
-		case CaseCaseCasesCompartment4EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
-				return SelectorEditPart.VISUAL_ID;
 			}
 			break;
 		case WhileWhileWhileStatementsCompartment4EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
 				return Exception4EditPart.VISUAL_ID;
 			}
@@ -1358,78 +1821,28 @@ public class CrystalVisualIDRegistry {
 				return If4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case3EditPart.VISUAL_ID;
+				return Case4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert3EditPart.VISUAL_ID;
+				return Insert4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update3EditPart.VISUAL_ID;
+				return Update4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete3EditPart.VISUAL_ID;
+				return Delete4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select3EditPart.VISUAL_ID;
+				return Select4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression2EditPart.VISUAL_ID;
-			}
-			break;
-		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While5EditPart.VISUAL_ID;
+				return While4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
 				return For3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop4EditPart.VISUAL_ID;
+				return Loop3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
 				return Open3EditPart.VISUAL_ID;
@@ -1445,172 +1858,17 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression3EditPart.VISUAL_ID;
-			}
-			break;
-		case CaseCaseCasesCompartment5EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
-				return SelectorEditPart.VISUAL_ID;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression2EditPart.VISUAL_ID;
 			}
 			break;
 		case ForForForStatementsCompartment3EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
 				return Exception5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
 				return If5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression4EditPart.VISUAL_ID;
-			}
-			break;
-		case ForForForStatementsCompartment4EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression4EditPart.VISUAL_ID;
-			}
-			break;
-		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If6EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case5EditPart.VISUAL_ID;
@@ -1631,186 +1889,31 @@ public class CrystalVisualIDRegistry {
 				return While5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For3EditPart.VISUAL_ID;
+				return For5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
 				return Loop4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open3EditPart.VISUAL_ID;
+				return Open5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch3EditPart.VISUAL_ID;
+				return Fetch5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close3EditPart.VISUAL_ID;
+				return Close5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure3EditPart.VISUAL_ID;
+				return CallProcedure5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression3EditPart.VISUAL_ID;
+				return CallFunction5EditPart.VISUAL_ID;
 			}
 			break;
-		case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression3EditPart.VISUAL_ID;
-			}
-			break;
-		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction4EditPart.VISUAL_ID;
-			}
+		case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
 				return Expression4EditPart.VISUAL_ID;
 			}
-			break;
-		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression3EditPart.VISUAL_ID;
-			}
-			break;
-		case CaseCaseCasesCompartment6EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
-				return SelectorEditPart.VISUAL_ID;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment6EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
 				return Exception4EditPart.VISUAL_ID;
 			}
@@ -1818,54 +1921,104 @@ public class CrystalVisualIDRegistry {
 				return If4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case3EditPart.VISUAL_ID;
+				return Case4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert3EditPart.VISUAL_ID;
+				return Insert4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update3EditPart.VISUAL_ID;
+				return Update4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete3EditPart.VISUAL_ID;
+				return Delete4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select3EditPart.VISUAL_ID;
+				return Select4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While3EditPart.VISUAL_ID;
+				return While4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For2EditPart.VISUAL_ID;
+				return For3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop2EditPart.VISUAL_ID;
+				return Loop3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open2EditPart.VISUAL_ID;
+				return Open3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch2EditPart.VISUAL_ID;
+				return Fetch3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close2EditPart.VISUAL_ID;
+				return Close3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure2EditPart.VISUAL_ID;
+				return CallProcedure3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression2EditPart.VISUAL_ID;
+				return CallFunction3EditPart.VISUAL_ID;
 			}
 			break;
-		case ForForForStatementsCompartment6EditPart.VISUAL_ID:
+		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception5EditPart.VISUAL_ID;
+				return Exception6EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If5EditPart.VISUAL_ID;
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartment6EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case4EditPart.VISUAL_ID;
@@ -1886,36 +2039,36 @@ public class CrystalVisualIDRegistry {
 				return While4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For4EditPart.VISUAL_ID;
+				return For3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
 				return Loop3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open4EditPart.VISUAL_ID;
+				return Open3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch4EditPart.VISUAL_ID;
+				return Fetch3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close4EditPart.VISUAL_ID;
+				return Close3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure4EditPart.VISUAL_ID;
+				return CallProcedure3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression4EditPart.VISUAL_ID;
+				return CallFunction3EditPart.VISUAL_ID;
 			}
 			break;
-		case LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment4EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception6EditPart.VISUAL_ID;
+				return Exception5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If6EditPart.VISUAL_ID;
+				return If5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case5EditPart.VISUAL_ID;
@@ -1936,28 +2089,275 @@ public class CrystalVisualIDRegistry {
 				return While5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For3EditPart.VISUAL_ID;
+				return For5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
 				return Loop4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open3EditPart.VISUAL_ID;
+				return Open5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch3EditPart.VISUAL_ID;
+				return Fetch5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close3EditPart.VISUAL_ID;
+				return Close5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure3EditPart.VISUAL_ID;
+				return CallProcedure5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction3EditPart.VISUAL_ID;
+				return CallFunction5EditPart.VISUAL_ID;
 			}
+			break;
+		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression3EditPart.VISUAL_ID;
+				return Expression5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction5EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
+			}
+			break;
+		case ForForForStatementsCompartment6EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction5EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
 			}
 			break;
 		case CaseCaseCasesCompartment7EditPart.VISUAL_ID:
@@ -1965,30 +2365,33 @@ public class CrystalVisualIDRegistry {
 				return SelectorEditPart.VISUAL_ID;
 			}
 			break;
-		case WhileWhileWhileStatementsCompartment7EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment7EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception4EditPart.VISUAL_ID;
+				return Exception3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If4EditPart.VISUAL_ID;
+				return If3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert3EditPart.VISUAL_ID;
+				return Insert2EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update3EditPart.VISUAL_ID;
+				return Update2EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete3EditPart.VISUAL_ID;
+				return Delete2EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select3EditPart.VISUAL_ID;
+				return Select2EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While3EditPart.VISUAL_ID;
+				return While2EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
 				return For2EditPart.VISUAL_ID;
@@ -2011,16 +2414,16 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression2EditPart.VISUAL_ID;
-			}
 			break;
-		case ForForForStatementsCompartment7EditPart.VISUAL_ID:
+		case WhileWhileWhileStatementsCompartment7EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception5EditPart.VISUAL_ID;
+				return Exception4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If5EditPart.VISUAL_ID;
+				return If4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case4EditPart.VISUAL_ID;
@@ -2041,36 +2444,36 @@ public class CrystalVisualIDRegistry {
 				return While4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For4EditPart.VISUAL_ID;
+				return For3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
 				return Loop3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open4EditPart.VISUAL_ID;
+				return Open3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch4EditPart.VISUAL_ID;
+				return Fetch3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close4EditPart.VISUAL_ID;
+				return Close3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure4EditPart.VISUAL_ID;
+				return CallProcedure3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression4EditPart.VISUAL_ID;
+				return CallFunction3EditPart.VISUAL_ID;
 			}
 			break;
-		case LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment7EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception6EditPart.VISUAL_ID;
+				return Exception5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If6EditPart.VISUAL_ID;
+				return If5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case5EditPart.VISUAL_ID;
@@ -2091,10 +2494,165 @@ public class CrystalVisualIDRegistry {
 				return While5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For3EditPart.VISUAL_ID;
+				return For5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
 				return Loop4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction5EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
+				return SelectorEditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment8EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
 				return Open3EditPart.VISUAL_ID;
@@ -2111,8 +2669,105 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
 			}
+			break;
+		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression3EditPart.VISUAL_ID;
+				return Expression5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction5EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
 			}
 			break;
 		case FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
@@ -2158,325 +2813,9 @@ public class CrystalVisualIDRegistry {
 			}
 			break;
 		case FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure8EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction8EditPart.VISUAL_ID;
-			}
 			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression8EditPart.VISUAL_ID;
+				return Expression9EditPart.VISUAL_ID;
 			}
-			break;
-		case IfIfIfsCompartment8EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return CaseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return InsertEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return UpdateEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return DeleteEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return SelectEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return WhileEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return ForEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return LoopEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return OpenEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return FetchEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return CloseEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedureEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunctionEditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return ExpressionEditPart.VISUAL_ID;
-			}
-			break;
-		case IfIfElsesCompartment8EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If7EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression5EditPart.VISUAL_ID;
-			}
-			break;
-		case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
-				return SelectorEditPart.VISUAL_ID;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression2EditPart.VISUAL_ID;
-			}
-			break;
-		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression4EditPart.VISUAL_ID;
-			}
-			break;
-		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction3EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression3EditPart.VISUAL_ID;
-			}
-			break;
-		case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getDataType().isSuperTypeOf(domainElement.eClass())) {
-				return DataType6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCollections().isSuperTypeOf(domainElement.eClass())) {
-				return Collections6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getRecords().isSuperTypeOf(domainElement.eClass())) {
-				return Records6EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCursor().isSuperTypeOf(domainElement.eClass())) {
-				return Cursor6EditPart.VISUAL_ID;
-			}
-			break;
-		case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
 				return Exception9EditPart.VISUAL_ID;
 			}
@@ -2522,11 +2861,11 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction9EditPart.VISUAL_ID;
 			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression9EditPart.VISUAL_ID;
-			}
 			break;
 		case IfIfIfsCompartment9EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
 				return Exception2EditPart.VISUAL_ID;
 			}
@@ -2572,11 +2911,11 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunctionEditPart.VISUAL_ID;
 			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return ExpressionEditPart.VISUAL_ID;
-			}
 			break;
 		case IfIfElsesCompartment9EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
 				return Exception7EditPart.VISUAL_ID;
 			}
@@ -2585,61 +2924,6 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
-				return Insert2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
-				return Update2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
-				return Delete2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
-				return Select2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
-				return While2EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
-				return Loop5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction5EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression5EditPart.VISUAL_ID;
-			}
-			break;
-		case CaseCaseCasesCompartment9EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
-				return SelectorEditPart.VISUAL_ID;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment9EditPart.VISUAL_ID:
-			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
-				return Case3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
 				return Insert3EditPart.VISUAL_ID;
@@ -2655,6 +2939,61 @@ public class CrystalVisualIDRegistry {
 			}
 			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
 				return While3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction6EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartment9EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
+				return SelectorEditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment9EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
 				return For2EditPart.VISUAL_ID;
@@ -2677,16 +3016,16 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction2EditPart.VISUAL_ID;
 			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression2EditPart.VISUAL_ID;
-			}
 			break;
-		case ForForForStatementsCompartment9EditPart.VISUAL_ID:
+		case WhileWhileWhileStatementsCompartment9EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception5EditPart.VISUAL_ID;
+				return Exception4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If5EditPart.VISUAL_ID;
+				return If4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case4EditPart.VISUAL_ID;
@@ -2707,36 +3046,36 @@ public class CrystalVisualIDRegistry {
 				return While4EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For4EditPart.VISUAL_ID;
+				return For3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
 				return Loop3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
-				return Open4EditPart.VISUAL_ID;
+				return Open3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
-				return Fetch4EditPart.VISUAL_ID;
+				return Fetch3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
-				return Close4EditPart.VISUAL_ID;
+				return Close3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
-				return CallProcedure4EditPart.VISUAL_ID;
+				return CallProcedure3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
-				return CallFunction4EditPart.VISUAL_ID;
-			}
-			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression4EditPart.VISUAL_ID;
+				return CallFunction3EditPart.VISUAL_ID;
 			}
 			break;
-		case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment9EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression5EditPart.VISUAL_ID;
+			}
 			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
-				return Exception6EditPart.VISUAL_ID;
+				return Exception5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
-				return If6EditPart.VISUAL_ID;
+				return If5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
 				return Case5EditPart.VISUAL_ID;
@@ -2757,10 +3096,329 @@ public class CrystalVisualIDRegistry {
 				return While5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
-				return For3EditPart.VISUAL_ID;
+				return For5EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
 				return Loop4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction5EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
+			}
+			break;
+		case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getDataType().isSuperTypeOf(domainElement.eClass())) {
+				return DataType6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCollections().isSuperTypeOf(domainElement.eClass())) {
+				return Collections6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getRecords().isSuperTypeOf(domainElement.eClass())) {
+				return Records6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCursor().isSuperTypeOf(domainElement.eClass())) {
+				return Cursor6EditPart.VISUAL_ID;
+			}
+			break;
+		case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure10EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction10EditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfIfsCompartment10EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return CaseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return InsertEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return UpdateEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return DeleteEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return SelectEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return WhileEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return ForEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return LoopEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return OpenEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return FetchEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return CloseEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedureEditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunctionEditPart.VISUAL_ID;
+			}
+			break;
+		case IfIfElsesCompartment10EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If7EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction6EditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseCasesCompartment10EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getSelector().isSuperTypeOf(domainElement.eClass())) {
+				return SelectorEditPart.VISUAL_ID;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment10EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure2EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction2EditPart.VISUAL_ID;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartment10EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For3EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop3EditPart.VISUAL_ID;
 			}
 			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
 				return Open3EditPart.VISUAL_ID;
@@ -2777,8 +3435,105 @@ public class CrystalVisualIDRegistry {
 			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
 				return CallFunction3EditPart.VISUAL_ID;
 			}
+			break;
+		case ForForForStatementsCompartment10EditPart.VISUAL_ID:
 			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
-				return Expression3EditPart.VISUAL_ID;
+				return Expression5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction5EditPart.VISUAL_ID;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment10EditPart.VISUAL_ID:
+			if (CrystalPackage.eINSTANCE.getExpression().isSuperTypeOf(domainElement.eClass())) {
+				return Expression6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getException().isSuperTypeOf(domainElement.eClass())) {
+				return Exception6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getIf().isSuperTypeOf(domainElement.eClass())) {
+				return If6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCase().isSuperTypeOf(domainElement.eClass())) {
+				return Case6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getInsert().isSuperTypeOf(domainElement.eClass())) {
+				return Insert6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getUpdate().isSuperTypeOf(domainElement.eClass())) {
+				return Update6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getDelete().isSuperTypeOf(domainElement.eClass())) {
+				return Delete6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getSelect().isSuperTypeOf(domainElement.eClass())) {
+				return Select6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getWhile().isSuperTypeOf(domainElement.eClass())) {
+				return While6EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFor().isSuperTypeOf(domainElement.eClass())) {
+				return For4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getLoop().isSuperTypeOf(domainElement.eClass())) {
+				return Loop5EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getOpen().isSuperTypeOf(domainElement.eClass())) {
+				return Open4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getFetch().isSuperTypeOf(domainElement.eClass())) {
+				return Fetch4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getClose().isSuperTypeOf(domainElement.eClass())) {
+				return Close4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallProcedure().isSuperTypeOf(domainElement.eClass())) {
+				return CallProcedure4EditPart.VISUAL_ID;
+			}
+			if (CrystalPackage.eINSTANCE.getCallFunction().isSuperTypeOf(domainElement.eClass())) {
+				return CallFunction4EditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -2897,6 +3652,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
+		case ExpressionEditPart.VISUAL_ID:
+			if (ExpressionDescriptionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case ExceptionEditPart.VISUAL_ID:
 			if (ExceptionDescriptionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -2910,6 +3670,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (IfIfElsesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Expression2EditPart.VISUAL_ID:
+			if (ExpressionDescription2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -2936,12 +3701,12 @@ public class CrystalVisualIDRegistry {
 			if (CaseCaseCasesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			break;
-		case SelectorEditPart.VISUAL_ID:
-			if (SelectorDescriptionEditPart.VISUAL_ID == nodeVisualID) {
+			if (CaseCaseElseStatementsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+			break;
+		case Expression3EditPart.VISUAL_ID:
+			if (ExpressionDescription3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -2989,6 +3754,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Expression4EditPart.VISUAL_ID:
+			if (ExpressionDescription4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case Exception4EditPart.VISUAL_ID:
 			if (ExceptionDescription4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -3013,6 +3783,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
+		case Expression5EditPart.VISUAL_ID:
+			if (ExpressionDescription5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case Exception5EditPart.VISUAL_ID:
 			if (ExceptionDescription5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -3034,6 +3809,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (LoopLoopLoopStatementsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Expression6EditPart.VISUAL_ID:
+			if (ExpressionDescription6EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3078,8 +3858,8 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case ExpressionEditPart.VISUAL_ID:
-			if (ExpressionDescriptionEditPart.VISUAL_ID == nodeVisualID) {
+		case Expression7EditPart.VISUAL_ID:
+			if (ExpressionDescription7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3104,6 +3884,20 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CaseCaseCasesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseElseStatementsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Case3EditPart.VISUAL_ID:
+			if (CaseDescription3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseCasesCompartment3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseElseStatementsCompartment3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3135,11 +3929,106 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Case3EditPart.VISUAL_ID:
-			if (CaseDescription3EditPart.VISUAL_ID == nodeVisualID) {
+		case Case4EditPart.VISUAL_ID:
+			if (CaseDescription4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CaseCaseCasesCompartment3EditPart.VISUAL_ID == nodeVisualID) {
+			if (CaseCaseCasesCompartment4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseElseStatementsCompartment4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case For2EditPart.VISUAL_ID:
+			if (ForDescription2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForForStatementsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Case5EditPart.VISUAL_ID:
+			if (CaseDescription5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseCasesCompartment5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseElseStatementsCompartment5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Loop2EditPart.VISUAL_ID:
+			if (LoopDescription2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Case6EditPart.VISUAL_ID:
+			if (CaseDescription6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseCasesCompartment6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseElseStatementsCompartment6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Open2EditPart.VISUAL_ID:
+			if (OpenDescription2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Fetch2EditPart.VISUAL_ID:
+			if (FetchDescription2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Close2EditPart.VISUAL_ID:
+			if (CloseDescription2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallProcedure2EditPart.VISUAL_ID:
+			if (CallProcedureDescription2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallFunction2EditPart.VISUAL_ID:
+			if (CallFunctionDescription2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectorEditPart.VISUAL_ID:
+			if (SelectorDescriptionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Expression8EditPart.VISUAL_ID:
+			if (ExpressionDescription8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Exception8EditPart.VISUAL_ID:
+			if (ExceptionDescription8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case If8EditPart.VISUAL_ID:
+			if (IfDescription8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfIfsCompartment8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfElsesCompartment8EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3171,22 +4060,6 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case For2EditPart.VISUAL_ID:
-			if (ForDescription2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForForForStatementsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Case4EditPart.VISUAL_ID:
-			if (CaseDescription4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseCaseCasesCompartment4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case Insert4EditPart.VISUAL_ID:
 			if (InsertDescription4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -3215,19 +4088,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Loop2EditPart.VISUAL_ID:
-			if (LoopDescription2EditPart.VISUAL_ID == nodeVisualID) {
+		case For3EditPart.VISUAL_ID:
+			if (ForDescription3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Case5EditPart.VISUAL_ID:
-			if (CaseDescription5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseCaseCasesCompartment5EditPart.VISUAL_ID == nodeVisualID) {
+			if (ForForForStatementsCompartment3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3259,179 +4124,11 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Open2EditPart.VISUAL_ID:
-			if (OpenDescription2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Fetch2EditPart.VISUAL_ID:
-			if (FetchDescription2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Close2EditPart.VISUAL_ID:
-			if (CloseDescription2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CallProcedure2EditPart.VISUAL_ID:
-			if (CallProcedureDescription2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CallFunction2EditPart.VISUAL_ID:
-			if (CallFunctionDescription2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Expression2EditPart.VISUAL_ID:
-			if (ExpressionDescription2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case For3EditPart.VISUAL_ID:
-			if (ForDescription3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForForForStatementsCompartment3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case For4EditPart.VISUAL_ID:
-			if (ForDescription4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForForForStatementsCompartment4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case Loop3EditPart.VISUAL_ID:
 			if (LoopDescription3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Loop4EditPart.VISUAL_ID:
-			if (LoopDescription4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Open3EditPart.VISUAL_ID:
-			if (OpenDescription3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Fetch3EditPart.VISUAL_ID:
-			if (FetchDescription3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Close3EditPart.VISUAL_ID:
-			if (CloseDescription3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CallProcedure3EditPart.VISUAL_ID:
-			if (CallProcedureDescription3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CallFunction3EditPart.VISUAL_ID:
-			if (CallFunctionDescription3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Expression3EditPart.VISUAL_ID:
-			if (ExpressionDescription3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Open4EditPart.VISUAL_ID:
-			if (OpenDescription4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Fetch4EditPart.VISUAL_ID:
-			if (FetchDescription4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Close4EditPart.VISUAL_ID:
-			if (CloseDescription4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CallProcedure4EditPart.VISUAL_ID:
-			if (CallProcedureDescription4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CallFunction4EditPart.VISUAL_ID:
-			if (CallFunctionDescription4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Expression4EditPart.VISUAL_ID:
-			if (ExpressionDescription4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case For5EditPart.VISUAL_ID:
-			if (ForDescription5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForForForStatementsCompartment5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Loop5EditPart.VISUAL_ID:
-			if (LoopDescription5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Open5EditPart.VISUAL_ID:
-			if (OpenDescription5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Fetch5EditPart.VISUAL_ID:
-			if (FetchDescription5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Close5EditPart.VISUAL_ID:
-			if (CloseDescription5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CallProcedure5EditPart.VISUAL_ID:
-			if (CallProcedureDescription5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CallFunction5EditPart.VISUAL_ID:
-			if (CallFunctionDescription5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Expression5EditPart.VISUAL_ID:
-			if (ExpressionDescription5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Case6EditPart.VISUAL_ID:
-			if (CaseDescription6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseCaseCasesCompartment6EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3460,6 +4157,113 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (WhileWhileWhileStatementsCompartment6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Open3EditPart.VISUAL_ID:
+			if (OpenDescription3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Fetch3EditPart.VISUAL_ID:
+			if (FetchDescription3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Close3EditPart.VISUAL_ID:
+			if (CloseDescription3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallProcedure3EditPart.VISUAL_ID:
+			if (CallProcedureDescription3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallFunction3EditPart.VISUAL_ID:
+			if (CallFunctionDescription3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case For4EditPart.VISUAL_ID:
+			if (ForDescription4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForForStatementsCompartment4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case For5EditPart.VISUAL_ID:
+			if (ForDescription5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForForStatementsCompartment5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Loop4EditPart.VISUAL_ID:
+			if (LoopDescription4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Loop5EditPart.VISUAL_ID:
+			if (LoopDescription5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Open4EditPart.VISUAL_ID:
+			if (OpenDescription4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Fetch4EditPart.VISUAL_ID:
+			if (FetchDescription4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Close4EditPart.VISUAL_ID:
+			if (CloseDescription4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallProcedure4EditPart.VISUAL_ID:
+			if (CallProcedureDescription4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallFunction4EditPart.VISUAL_ID:
+			if (CallFunctionDescription4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Open5EditPart.VISUAL_ID:
+			if (OpenDescription5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Fetch5EditPart.VISUAL_ID:
+			if (FetchDescription5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Close5EditPart.VISUAL_ID:
+			if (CloseDescription5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallProcedure5EditPart.VISUAL_ID:
+			if (CallProcedureDescription5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallFunction5EditPart.VISUAL_ID:
+			if (CallFunctionDescription5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3504,16 +4308,14 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Expression6EditPart.VISUAL_ID:
-			if (ExpressionDescription6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case Case7EditPart.VISUAL_ID:
 			if (CaseDescription7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (CaseCaseCasesCompartment7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseElseStatementsCompartment7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3586,92 +4388,14 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Expression7EditPart.VISUAL_ID:
-			if (ExpressionDescription7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case DataType3EditPart.VISUAL_ID:
-			if (DataTypeName3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Collections3EditPart.VISUAL_ID:
-			if (CollectionsName3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Records3EditPart.VISUAL_ID:
-			if (RecordsName3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Cursor3EditPart.VISUAL_ID:
-			if (CursorName3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case DataType4EditPart.VISUAL_ID:
-			if (DataTypeName4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Collections4EditPart.VISUAL_ID:
-			if (CollectionsName4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Records4EditPart.VISUAL_ID:
-			if (RecordsName4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Cursor4EditPart.VISUAL_ID:
-			if (CursorName4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case DataType5EditPart.VISUAL_ID:
-			if (DataTypeName5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Collections5EditPart.VISUAL_ID:
-			if (CollectionsName5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Records5EditPart.VISUAL_ID:
-			if (RecordsName5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Cursor5EditPart.VISUAL_ID:
-			if (CursorName5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case Exception8EditPart.VISUAL_ID:
-			if (ExceptionDescription8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case If8EditPart.VISUAL_ID:
-			if (IfDescription8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (IfIfIfsCompartment8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (IfIfElsesCompartment8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case Case8EditPart.VISUAL_ID:
 			if (CaseDescription8EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (CaseCaseCasesCompartment8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseElseStatementsCompartment8EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3744,28 +4468,68 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Expression8EditPart.VISUAL_ID:
-			if (ExpressionDescription8EditPart.VISUAL_ID == nodeVisualID) {
+		case DataType3EditPart.VISUAL_ID:
+			if (DataTypeName3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case DataType6EditPart.VISUAL_ID:
-			if (DataTypeName6EditPart.VISUAL_ID == nodeVisualID) {
+		case Collections3EditPart.VISUAL_ID:
+			if (CollectionsName3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case Collections6EditPart.VISUAL_ID:
-			if (CollectionsName6EditPart.VISUAL_ID == nodeVisualID) {
+		case Records3EditPart.VISUAL_ID:
+			if (RecordsName3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case Records6EditPart.VISUAL_ID:
-			if (RecordsName6EditPart.VISUAL_ID == nodeVisualID) {
+		case Cursor3EditPart.VISUAL_ID:
+			if (CursorName3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case Cursor6EditPart.VISUAL_ID:
-			if (CursorName6EditPart.VISUAL_ID == nodeVisualID) {
+		case DataType4EditPart.VISUAL_ID:
+			if (DataTypeName4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Collections4EditPart.VISUAL_ID:
+			if (CollectionsName4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Records4EditPart.VISUAL_ID:
+			if (RecordsName4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Cursor4EditPart.VISUAL_ID:
+			if (CursorName4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case DataType5EditPart.VISUAL_ID:
+			if (DataTypeName5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Collections5EditPart.VISUAL_ID:
+			if (CollectionsName5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Records5EditPart.VISUAL_ID:
+			if (RecordsName5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Cursor5EditPart.VISUAL_ID:
+			if (CursorName5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Expression9EditPart.VISUAL_ID:
+			if (ExpressionDescription9EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3790,6 +4554,9 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CaseCaseCasesCompartment9EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseElseStatementsCompartment9EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3862,8 +4629,124 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Expression9EditPart.VISUAL_ID:
-			if (ExpressionDescription9EditPart.VISUAL_ID == nodeVisualID) {
+		case DataType6EditPart.VISUAL_ID:
+			if (DataTypeName6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Collections6EditPart.VISUAL_ID:
+			if (CollectionsName6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Records6EditPart.VISUAL_ID:
+			if (RecordsName6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Cursor6EditPart.VISUAL_ID:
+			if (CursorName6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Expression10EditPart.VISUAL_ID:
+			if (ExpressionDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Exception10EditPart.VISUAL_ID:
+			if (ExceptionDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case If10EditPart.VISUAL_ID:
+			if (IfDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfIfsCompartment10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (IfIfElsesCompartment10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Case10EditPart.VISUAL_ID:
+			if (CaseDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseCasesCompartment10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseCaseElseStatementsCompartment10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Insert10EditPart.VISUAL_ID:
+			if (InsertDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Update10EditPart.VISUAL_ID:
+			if (UpdateDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Delete10EditPart.VISUAL_ID:
+			if (DeleteDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Select10EditPart.VISUAL_ID:
+			if (SelectDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case While10EditPart.VISUAL_ID:
+			if (WhileDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileWhileWhileStatementsCompartment10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case For10EditPart.VISUAL_ID:
+			if (ForDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForForForStatementsCompartment10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Loop10EditPart.VISUAL_ID:
+			if (LoopDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopLoopLoopStatementsCompartment10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Open10EditPart.VISUAL_ID:
+			if (OpenDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Fetch10EditPart.VISUAL_ID:
+			if (FetchDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Close10EditPart.VISUAL_ID:
+			if (CloseDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallProcedure10EditPart.VISUAL_ID:
+			if (CallProcedureDescription10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CallFunction10EditPart.VISUAL_ID:
+			if (CallFunctionDescription10EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -3896,10 +4779,1393 @@ public class CrystalVisualIDRegistry {
 			}
 			break;
 		case ProcedureProcedureExecutablePartCompartmentEditPart.VISUAL_ID:
+			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			if (ExceptionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (IfEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartmentEditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfElsesCompartmentEditPart.VISUAL_ID:
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartment2EditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfElsesCompartment2EditPart.VISUAL_ID:
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
+			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseElseStatementsCompartmentEditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartment3EditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfElsesCompartment3EditPart.VISUAL_ID:
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartmentEditPart.VISUAL_ID:
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartment4EditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfElsesCompartment4EditPart.VISUAL_ID:
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForForStatementsCompartmentEditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartment5EditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfElsesCompartment5EditPart.VISUAL_ID:
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartmentEditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartment6EditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfElsesCompartment6EditPart.VISUAL_ID:
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartment7EditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfElsesCompartment7EditPart.VISUAL_ID:
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
+			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment2EditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartment3EditPart.VISUAL_ID:
+			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment3EditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartment4EditPart.VISUAL_ID:
+			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment4EditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartment5EditPart.VISUAL_ID:
+			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment5EditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartment6EditPart.VISUAL_ID:
+			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment6EditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
+			if (Expression8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception8EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If8EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case7EditPart.VISUAL_ID == nodeVisualID) {
@@ -3941,61 +6207,61 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			break;
+		case IfIfIfsCompartment8EditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfElsesCompartment8EditPart.VISUAL_ID:
 			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			break;
-		case IfIfIfsCompartmentEditPart.VISUAL_ID:
-			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfElsesCompartmentEditPart.VISUAL_ID:
 			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -4005,174 +6271,19 @@ public class CrystalVisualIDRegistry {
 			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (While2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfIfsCompartment2EditPart.VISUAL_ID:
-			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfElsesCompartment2EditPart.VISUAL_ID:
-			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
-			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
-			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+			if (While3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (For6EditPart.VISUAL_ID == nodeVisualID) {
@@ -4196,265 +6307,15 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
-		case IfIfIfsCompartment3EditPart.VISUAL_ID:
-			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+		case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (If2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfElsesCompartment3EditPart.VISUAL_ID:
-			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartmentEditPart.VISUAL_ID:
 			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (If4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfIfsCompartment4EditPart.VISUAL_ID:
-			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfElsesCompartment4EditPart.VISUAL_ID:
-			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case ForForForStatementsCompartmentEditPart.VISUAL_ID:
-			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
@@ -4475,160 +6336,10 @@ public class CrystalVisualIDRegistry {
 			if (While4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (For4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfIfsCompartment5EditPart.VISUAL_ID:
-			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfElsesCompartment5EditPart.VISUAL_ID:
-			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case LoopLoopLoopStatementsCompartmentEditPart.VISUAL_ID:
-			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			if (For3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
@@ -4644,456 +6355,41 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfIfsCompartment6EditPart.VISUAL_ID:
-			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfElsesCompartment6EditPart.VISUAL_ID:
-			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfIfsCompartment7EditPart.VISUAL_ID:
-			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfElsesCompartment7EditPart.VISUAL_ID:
-			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
-			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
-			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CaseCaseCasesCompartment3EditPart.VISUAL_ID:
-			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
-			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
-			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CaseCaseCasesCompartment4EditPart.VISUAL_ID:
-			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case WhileWhileWhileStatementsCompartment4EditPart.VISUAL_ID:
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (If4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (While3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
-			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While5EditPart.VISUAL_ID == nodeVisualID) {
+			if (While4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (For3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
@@ -5109,172 +6405,17 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CaseCaseCasesCompartment5EditPart.VISUAL_ID:
-			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
-			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case ForForForStatementsCompartment3EditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (If5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case ForForForStatementsCompartment4EditPart.VISUAL_ID:
-			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
-			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If6EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
@@ -5295,241 +6436,136 @@ public class CrystalVisualIDRegistry {
 			if (While5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (For3EditPart.VISUAL_ID == nodeVisualID) {
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
-			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
-			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
+		case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
 			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			break;
-		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
-			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CaseCaseCasesCompartment6EditPart.VISUAL_ID:
-			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment6EditPart.VISUAL_ID:
 			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (If4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+			if (While4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+			if (For3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
+			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case ForForForStatementsCompartment6EditPart.VISUAL_ID:
-			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (If5EditPart.VISUAL_ID == nodeVisualID) {
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartment6EditPart.VISUAL_ID:
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
@@ -5550,36 +6586,36 @@ public class CrystalVisualIDRegistry {
 			if (While4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+			if (For3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID:
-			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+		case ForForForStatementsCompartment4EditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
@@ -5600,28 +6636,275 @@ public class CrystalVisualIDRegistry {
 			if (While5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (For3EditPart.VISUAL_ID == nodeVisualID) {
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+			break;
+		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForForForStatementsCompartment6EditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -5630,29 +6913,32 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case WhileWhileWhileStatementsCompartment7EditPart.VISUAL_ID:
-			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
+		case CaseCaseElseStatementsCompartment7EditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (If4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (For2EditPart.VISUAL_ID == nodeVisualID) {
@@ -5676,15 +6962,15 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
-		case ForForForStatementsCompartment7EditPart.VISUAL_ID:
-			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+		case WhileWhileWhileStatementsCompartment7EditPart.VISUAL_ID:
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (If5EditPart.VISUAL_ID == nodeVisualID) {
+			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
@@ -5705,36 +6991,36 @@ public class CrystalVisualIDRegistry {
 			if (While4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+			if (For3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID:
-			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+		case ForForForStatementsCompartment7EditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
@@ -5755,10 +7041,165 @@ public class CrystalVisualIDRegistry {
 			if (While5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (For3EditPart.VISUAL_ID == nodeVisualID) {
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
+			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment8EditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
@@ -5776,7 +7217,104 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+			break;
+		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -5823,325 +7361,9 @@ public class CrystalVisualIDRegistry {
 			}
 			break;
 		case FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
-			if (Exception8EditPart.VISUAL_ID == nodeVisualID) {
+			if (Expression9EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (If8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression8EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfIfsCompartment8EditPart.VISUAL_ID:
-			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ForEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case IfIfElsesCompartment8EditPart.VISUAL_ID:
-			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If7EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
-			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
-			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
-			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
-			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
-			if (DataType6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Collections6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Records6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Cursor6EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
 			if (Exception9EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -6187,11 +7409,11 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction9EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Expression9EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
 		case IfIfIfsCompartment9EditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -6237,11 +7459,11 @@ public class CrystalVisualIDRegistry {
 			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (ExpressionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
 		case IfIfElsesCompartment9EditPart.VISUAL_ID:
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -6249,61 +7471,6 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (While2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (For5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CaseCaseCasesCompartment9EditPart.VISUAL_ID:
-			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case WhileWhileWhileStatementsCompartment9EditPart.VISUAL_ID:
-			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (If4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
@@ -6319,6 +7486,61 @@ public class CrystalVisualIDRegistry {
 				return true;
 			}
 			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartment9EditPart.VISUAL_ID:
+			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment9EditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (For2EditPart.VISUAL_ID == nodeVisualID) {
@@ -6342,15 +7564,15 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			break;
-		case ForForForStatementsCompartment9EditPart.VISUAL_ID:
-			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+		case WhileWhileWhileStatementsCompartment9EditPart.VISUAL_ID:
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (If5EditPart.VISUAL_ID == nodeVisualID) {
+			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
@@ -6371,36 +7593,36 @@ public class CrystalVisualIDRegistry {
 			if (While4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+			if (For3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Fetch3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+			if (Close3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallProcedure3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
-			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+		case ForForForStatementsCompartment9EditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
@@ -6421,10 +7643,329 @@ public class CrystalVisualIDRegistry {
 			if (While5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (For3EditPart.VISUAL_ID == nodeVisualID) {
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
+			if (DataType6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Collections6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Records6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Cursor6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
+			if (Expression10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction10EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfIfsCompartment10EditPart.VISUAL_ID:
+			if (Expression2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InsertEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UpdateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DeleteEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SelectEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (WhileEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (OpenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FetchEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CloseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedureEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case IfIfElsesCompartment10EditPart.VISUAL_ID:
+			if (Expression7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If7EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseCasesCompartment10EditPart.VISUAL_ID:
+			if (SelectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CaseCaseElseStatementsCompartment10EditPart.VISUAL_ID:
+			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case WhileWhileWhileStatementsCompartment10EditPart.VISUAL_ID:
+			if (Expression4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (Open3EditPart.VISUAL_ID == nodeVisualID) {
@@ -6442,7 +7983,104 @@ public class CrystalVisualIDRegistry {
 			if (CallFunction3EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Expression3EditPart.VISUAL_ID == nodeVisualID) {
+			break;
+		case ForForForStatementsCompartment10EditPart.VISUAL_ID:
+			if (Expression5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LoopLoopLoopStatementsCompartment10EditPart.VISUAL_ID:
+			if (Expression6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Exception6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (If6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Case6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Insert6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Update6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Delete6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Select6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (While6EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (For4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Loop5EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Open4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Fetch4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Close4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallProcedure4EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CallFunction4EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -6511,7 +8149,7 @@ public class CrystalVisualIDRegistry {
 		case IfIfIfsCompartment2EditPart.VISUAL_ID:
 		case IfIfElsesCompartment2EditPart.VISUAL_ID:
 		case CaseCaseCasesCompartmentEditPart.VISUAL_ID:
-		case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartmentEditPart.VISUAL_ID:
 		case IfIfIfsCompartment3EditPart.VISUAL_ID:
 		case IfIfElsesCompartment3EditPart.VISUAL_ID:
 		case WhileWhileWhileStatementsCompartmentEditPart.VISUAL_ID:
@@ -6526,47 +8164,63 @@ public class CrystalVisualIDRegistry {
 		case IfIfIfsCompartment7EditPart.VISUAL_ID:
 		case IfIfElsesCompartment7EditPart.VISUAL_ID:
 		case CaseCaseCasesCompartment2EditPart.VISUAL_ID:
-		case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment2EditPart.VISUAL_ID:
 		case CaseCaseCasesCompartment3EditPart.VISUAL_ID:
-		case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
-		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment3EditPart.VISUAL_ID:
+		case WhileWhileWhileStatementsCompartment2EditPart.VISUAL_ID:
 		case CaseCaseCasesCompartment4EditPart.VISUAL_ID:
-		case WhileWhileWhileStatementsCompartment4EditPart.VISUAL_ID:
-		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment4EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment2EditPart.VISUAL_ID:
 		case CaseCaseCasesCompartment5EditPart.VISUAL_ID:
-		case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
-		case ForForForStatementsCompartment3EditPart.VISUAL_ID:
-		case ForForForStatementsCompartment4EditPart.VISUAL_ID:
-		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
-		case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
-		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
-		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment5EditPart.VISUAL_ID:
+		case LoopLoopLoopStatementsCompartment2EditPart.VISUAL_ID:
 		case CaseCaseCasesCompartment6EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment6EditPart.VISUAL_ID:
+		case SelectorSelectorCaseStatementsCompartmentEditPart.VISUAL_ID:
+		case IfIfIfsCompartment8EditPart.VISUAL_ID:
+		case IfIfElsesCompartment8EditPart.VISUAL_ID:
+		case WhileWhileWhileStatementsCompartment3EditPart.VISUAL_ID:
+		case WhileWhileWhileStatementsCompartment4EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment3EditPart.VISUAL_ID:
+		case WhileWhileWhileStatementsCompartment5EditPart.VISUAL_ID:
+		case LoopLoopLoopStatementsCompartment3EditPart.VISUAL_ID:
 		case WhileWhileWhileStatementsCompartment6EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment4EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment5EditPart.VISUAL_ID:
+		case LoopLoopLoopStatementsCompartment4EditPart.VISUAL_ID:
+		case LoopLoopLoopStatementsCompartment5EditPart.VISUAL_ID:
 		case ForForForStatementsCompartment6EditPart.VISUAL_ID:
 		case LoopLoopLoopStatementsCompartment6EditPart.VISUAL_ID:
 		case CaseCaseCasesCompartment7EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment7EditPart.VISUAL_ID:
 		case WhileWhileWhileStatementsCompartment7EditPart.VISUAL_ID:
 		case ForForForStatementsCompartment7EditPart.VISUAL_ID:
 		case LoopLoopLoopStatementsCompartment7EditPart.VISUAL_ID:
+		case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment8EditPart.VISUAL_ID:
+		case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
+		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
 		case FunctionFunctionDeclarativePartCompartmentEditPart.VISUAL_ID:
 		case FunctionFunctionParametersCompartmentEditPart.VISUAL_ID:
 		case FunctionFunctionReturnPartCompartmentEditPart.VISUAL_ID:
 		case FunctionFunctionExecutablePartCompartmentEditPart.VISUAL_ID:
-		case IfIfIfsCompartment8EditPart.VISUAL_ID:
-		case IfIfElsesCompartment8EditPart.VISUAL_ID:
-		case CaseCaseCasesCompartment8EditPart.VISUAL_ID:
-		case WhileWhileWhileStatementsCompartment8EditPart.VISUAL_ID:
-		case ForForForStatementsCompartment8EditPart.VISUAL_ID:
-		case LoopLoopLoopStatementsCompartment8EditPart.VISUAL_ID:
-		case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
-		case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
 		case IfIfIfsCompartment9EditPart.VISUAL_ID:
 		case IfIfElsesCompartment9EditPart.VISUAL_ID:
 		case CaseCaseCasesCompartment9EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment9EditPart.VISUAL_ID:
 		case WhileWhileWhileStatementsCompartment9EditPart.VISUAL_ID:
 		case ForForForStatementsCompartment9EditPart.VISUAL_ID:
 		case LoopLoopLoopStatementsCompartment9EditPart.VISUAL_ID:
+		case AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart.VISUAL_ID:
+		case AnonymousBlockAnonymousBlockExecutablePartCompartmentEditPart.VISUAL_ID:
+		case IfIfIfsCompartment10EditPart.VISUAL_ID:
+		case IfIfElsesCompartment10EditPart.VISUAL_ID:
+		case CaseCaseCasesCompartment10EditPart.VISUAL_ID:
+		case CaseCaseElseStatementsCompartment10EditPart.VISUAL_ID:
+		case WhileWhileWhileStatementsCompartment10EditPart.VISUAL_ID:
+		case ForForForStatementsCompartment10EditPart.VISUAL_ID:
+		case LoopLoopLoopStatementsCompartment10EditPart.VISUAL_ID:
 			return true;
 		default:
 			break;
@@ -6597,6 +8251,34 @@ public class CrystalVisualIDRegistry {
 		case Collections6EditPart.VISUAL_ID:
 		case Records6EditPart.VISUAL_ID:
 		case Cursor6EditPart.VISUAL_ID:
+		case Exception10EditPart.VISUAL_ID:
+		case Insert10EditPart.VISUAL_ID:
+		case Update10EditPart.VISUAL_ID:
+		case Delete10EditPart.VISUAL_ID:
+		case Select10EditPart.VISUAL_ID:
+		case Open10EditPart.VISUAL_ID:
+		case Fetch10EditPart.VISUAL_ID:
+		case Close10EditPart.VISUAL_ID:
+		case CallProcedure10EditPart.VISUAL_ID:
+		case CallFunction10EditPart.VISUAL_ID:
+		case DataTypeEditPart.VISUAL_ID:
+		case CollectionsEditPart.VISUAL_ID:
+		case RecordsEditPart.VISUAL_ID:
+		case CursorEditPart.VISUAL_ID:
+		case ExceptionEditPart.VISUAL_ID:
+		case Insert8EditPart.VISUAL_ID:
+		case Update8EditPart.VISUAL_ID:
+		case Delete8EditPart.VISUAL_ID:
+		case Select8EditPart.VISUAL_ID:
+		case Open8EditPart.VISUAL_ID:
+		case Fetch8EditPart.VISUAL_ID:
+		case Close8EditPart.VISUAL_ID:
+		case CallProcedure8EditPart.VISUAL_ID:
+		case CallFunction8EditPart.VISUAL_ID:
+		case DataType3EditPart.VISUAL_ID:
+		case Collections3EditPart.VISUAL_ID:
+		case Records3EditPart.VISUAL_ID:
+		case Cursor3EditPart.VISUAL_ID:
 		case Exception9EditPart.VISUAL_ID:
 		case Insert9EditPart.VISUAL_ID:
 		case Update9EditPart.VISUAL_ID:
@@ -6607,11 +8289,17 @@ public class CrystalVisualIDRegistry {
 		case Close9EditPart.VISUAL_ID:
 		case CallProcedure9EditPart.VISUAL_ID:
 		case CallFunction9EditPart.VISUAL_ID:
-		case DataTypeEditPart.VISUAL_ID:
-		case CollectionsEditPart.VISUAL_ID:
-		case RecordsEditPart.VISUAL_ID:
-		case CursorEditPart.VISUAL_ID:
-		case ExceptionEditPart.VISUAL_ID:
+		case Exception4EditPart.VISUAL_ID:
+		case Insert4EditPart.VISUAL_ID:
+		case Update4EditPart.VISUAL_ID:
+		case Delete4EditPart.VISUAL_ID:
+		case Select4EditPart.VISUAL_ID:
+		case Open3EditPart.VISUAL_ID:
+		case Fetch3EditPart.VISUAL_ID:
+		case Close3EditPart.VISUAL_ID:
+		case CallProcedure3EditPart.VISUAL_ID:
+		case CallFunction3EditPart.VISUAL_ID:
+		case Exception8EditPart.VISUAL_ID:
 		case Insert7EditPart.VISUAL_ID:
 		case Update7EditPart.VISUAL_ID:
 		case Delete7EditPart.VISUAL_ID:
@@ -6621,60 +8309,26 @@ public class CrystalVisualIDRegistry {
 		case Close7EditPart.VISUAL_ID:
 		case CallProcedure7EditPart.VISUAL_ID:
 		case CallFunction7EditPart.VISUAL_ID:
-		case DataType3EditPart.VISUAL_ID:
-		case Collections3EditPart.VISUAL_ID:
-		case Records3EditPart.VISUAL_ID:
-		case Cursor3EditPart.VISUAL_ID:
-		case Exception8EditPart.VISUAL_ID:
-		case Insert8EditPart.VISUAL_ID:
-		case Update8EditPart.VISUAL_ID:
-		case Delete8EditPart.VISUAL_ID:
-		case Select8EditPart.VISUAL_ID:
-		case Open8EditPart.VISUAL_ID:
-		case Fetch8EditPart.VISUAL_ID:
-		case Close8EditPart.VISUAL_ID:
-		case CallProcedure8EditPart.VISUAL_ID:
-		case CallFunction8EditPart.VISUAL_ID:
-		case Exception4EditPart.VISUAL_ID:
-		case Insert3EditPart.VISUAL_ID:
-		case Update3EditPart.VISUAL_ID:
-		case Delete3EditPart.VISUAL_ID:
-		case Select3EditPart.VISUAL_ID:
-		case Open2EditPart.VISUAL_ID:
-		case Fetch2EditPart.VISUAL_ID:
-		case Close2EditPart.VISUAL_ID:
-		case CallProcedure2EditPart.VISUAL_ID:
-		case CallFunction2EditPart.VISUAL_ID:
-		case Exception3EditPart.VISUAL_ID:
-		case Insert6EditPart.VISUAL_ID:
-		case Update6EditPart.VISUAL_ID:
-		case Delete6EditPart.VISUAL_ID:
-		case Select6EditPart.VISUAL_ID:
-		case Open6EditPart.VISUAL_ID:
-		case Fetch6EditPart.VISUAL_ID:
-		case Close6EditPart.VISUAL_ID:
-		case CallProcedure6EditPart.VISUAL_ID:
-		case CallFunction6EditPart.VISUAL_ID:
 		case Exception5EditPart.VISUAL_ID:
 		case Exception6EditPart.VISUAL_ID:
-		case Insert4EditPart.VISUAL_ID:
-		case Update4EditPart.VISUAL_ID:
-		case Delete4EditPart.VISUAL_ID:
-		case Select4EditPart.VISUAL_ID:
 		case Insert5EditPart.VISUAL_ID:
 		case Update5EditPart.VISUAL_ID:
 		case Delete5EditPart.VISUAL_ID:
 		case Select5EditPart.VISUAL_ID:
-		case Open3EditPart.VISUAL_ID:
-		case Fetch3EditPart.VISUAL_ID:
-		case Close3EditPart.VISUAL_ID:
-		case CallProcedure3EditPart.VISUAL_ID:
-		case CallFunction3EditPart.VISUAL_ID:
+		case Insert6EditPart.VISUAL_ID:
+		case Update6EditPart.VISUAL_ID:
+		case Delete6EditPart.VISUAL_ID:
+		case Select6EditPart.VISUAL_ID:
 		case Open4EditPart.VISUAL_ID:
 		case Fetch4EditPart.VISUAL_ID:
 		case Close4EditPart.VISUAL_ID:
 		case CallProcedure4EditPart.VISUAL_ID:
 		case CallFunction4EditPart.VISUAL_ID:
+		case Open5EditPart.VISUAL_ID:
+		case Fetch5EditPart.VISUAL_ID:
+		case Close5EditPart.VISUAL_ID:
+		case CallProcedure5EditPart.VISUAL_ID:
+		case CallFunction5EditPart.VISUAL_ID:
 		case Exception2EditPart.VISUAL_ID:
 		case InsertEditPart.VISUAL_ID:
 		case UpdateEditPart.VISUAL_ID:
@@ -6686,24 +8340,35 @@ public class CrystalVisualIDRegistry {
 		case CallProcedureEditPart.VISUAL_ID:
 		case CallFunctionEditPart.VISUAL_ID:
 		case Exception7EditPart.VISUAL_ID:
+		case Insert3EditPart.VISUAL_ID:
+		case Update3EditPart.VISUAL_ID:
+		case Delete3EditPart.VISUAL_ID:
+		case Select3EditPart.VISUAL_ID:
+		case Open6EditPart.VISUAL_ID:
+		case Fetch6EditPart.VISUAL_ID:
+		case Close6EditPart.VISUAL_ID:
+		case CallProcedure6EditPart.VISUAL_ID:
+		case CallFunction6EditPart.VISUAL_ID:
+		case Expression2EditPart.VISUAL_ID:
+		case Expression4EditPart.VISUAL_ID:
+		case Expression6EditPart.VISUAL_ID:
+		case Expression5EditPart.VISUAL_ID:
+		case Expression7EditPart.VISUAL_ID:
+		case Expression8EditPart.VISUAL_ID:
+		case ExpressionEditPart.VISUAL_ID:
+		case Expression9EditPart.VISUAL_ID:
+		case Expression10EditPart.VISUAL_ID:
+		case Expression3EditPart.VISUAL_ID:
+		case Exception3EditPart.VISUAL_ID:
 		case Insert2EditPart.VISUAL_ID:
 		case Update2EditPart.VISUAL_ID:
 		case Delete2EditPart.VISUAL_ID:
 		case Select2EditPart.VISUAL_ID:
-		case Open5EditPart.VISUAL_ID:
-		case Fetch5EditPart.VISUAL_ID:
-		case Close5EditPart.VISUAL_ID:
-		case CallProcedure5EditPart.VISUAL_ID:
-		case CallFunction5EditPart.VISUAL_ID:
-		case ExpressionEditPart.VISUAL_ID:
-		case Expression2EditPart.VISUAL_ID:
-		case Expression3EditPart.VISUAL_ID:
-		case Expression4EditPart.VISUAL_ID:
-		case Expression5EditPart.VISUAL_ID:
-		case Expression6EditPart.VISUAL_ID:
-		case Expression7EditPart.VISUAL_ID:
-		case Expression8EditPart.VISUAL_ID:
-		case Expression9EditPart.VISUAL_ID:
+		case Open2EditPart.VISUAL_ID:
+		case Fetch2EditPart.VISUAL_ID:
+		case Close2EditPart.VISUAL_ID:
+		case CallProcedure2EditPart.VISUAL_ID:
+		case CallFunction2EditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

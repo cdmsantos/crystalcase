@@ -78,10 +78,10 @@ public class CrystalItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__TRANSITIONS);
+			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__SELECTOR_TRANSITIONS);
 			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__PROCEDURES);
 			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__FUNCTIONS);
 			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__BLOCKS);
-			childrenFeatures.add(CrystalPackage.Literals.CRYSTAL__SELECTOR_TRANSITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -135,10 +135,10 @@ public class CrystalItemProvider
 
 		switch (notification.getFeatureID(Crystal.class)) {
 			case CrystalPackage.CRYSTAL__TRANSITIONS:
+			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
 			case CrystalPackage.CRYSTAL__PROCEDURES:
 			case CrystalPackage.CRYSTAL__FUNCTIONS:
 			case CrystalPackage.CRYSTAL__BLOCKS:
-			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -163,6 +163,11 @@ public class CrystalItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(CrystalPackage.Literals.CRYSTAL__SELECTOR_TRANSITIONS,
+				 CrystalFactory.eINSTANCE.createSelectorTransition()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(CrystalPackage.Literals.CRYSTAL__PROCEDURES,
 				 CrystalFactory.eINSTANCE.createProcedure()));
 
@@ -175,11 +180,6 @@ public class CrystalItemProvider
 			(createChildParameter
 				(CrystalPackage.Literals.CRYSTAL__BLOCKS,
 				 CrystalFactory.eINSTANCE.createAnonymousBlock()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.CRYSTAL__SELECTOR_TRANSITIONS,
-				 CrystalFactory.eINSTANCE.createSelectorTransition()));
 	}
 
 	/**

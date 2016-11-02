@@ -16,6 +16,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CallFunction;
+import crystal.Case;
 import crystal.CrystalFactory;
 import crystal.Function;
 import crystal.Procedure;
@@ -59,8 +60,8 @@ public class CallFunction2CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		CallFunction newElement = CrystalFactory.eINSTANCE.createCallFunction();
 
-		While owner = (While) getElementToEdit();
-		owner.getWhileStatements().add(newElement);
+		Case owner = (Case) getElementToEdit();
+		owner.getElseStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

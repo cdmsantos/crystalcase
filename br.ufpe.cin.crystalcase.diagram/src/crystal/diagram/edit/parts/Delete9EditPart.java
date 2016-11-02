@@ -36,7 +36,7 @@ public class Delete9EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3042;
+	public static final int VISUAL_ID = 3080;
 
 	/**
 	* @generated

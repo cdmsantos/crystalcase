@@ -36,7 +36,7 @@ public class CallFunction8EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3089;
+	public static final int VISUAL_ID = 3070;
 
 	/**
 	* @generated

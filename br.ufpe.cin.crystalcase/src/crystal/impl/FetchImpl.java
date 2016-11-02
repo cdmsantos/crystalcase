@@ -55,7 +55,7 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CURSOR_NAME_EDEFAULT = "FETCH cursorName INTO variableCursor";
+	protected static final String CURSOR_NAME_EDEFAULT = "cursorName";
 
 	/**
 	 * The cached value of the '{@link #getCursorName() <em>Cursor Name</em>}' attribute.
@@ -75,7 +75,7 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VARIABLE_NAME_EDEFAULT = "FETCH cursorName INTO variableCursor";
+	protected static final String VARIABLE_NAME_EDEFAULT = "variableCursor";
 
 	/**
 	 * The cached value of the '{@link #getVariableName() <em>Variable Name</em>}' attribute.

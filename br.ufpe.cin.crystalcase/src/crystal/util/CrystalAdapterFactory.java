@@ -142,6 +142,10 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 				return createStatementsAdapter();
 			}
 			@Override
+			public Adapter caseExpression(Expression object) {
+				return createExpressionAdapter();
+			}
+			@Override
 			public Adapter caseException(crystal.Exception object) {
 				return createExceptionAdapter();
 			}
@@ -212,10 +216,6 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSelectorTransition(SelectorTransition object) {
 				return createSelectorTransitionAdapter();
-			}
-			@Override
-			public Adapter caseExpression(Expression object) {
-				return createExpressionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {

@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.Close;
 import crystal.CrystalFactory;
 import crystal.Function;
+import crystal.Procedure;
 
 /**
  * @generated
@@ -57,7 +58,7 @@ public class Close8CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Close newElement = CrystalFactory.eINSTANCE.createClose();
 
-		Function owner = (Function) getElementToEdit();
+		Procedure owner = (Procedure) getElementToEdit();
 		owner.getExecutablePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);

@@ -38,7 +38,7 @@ public class If9EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3038;
+	public static final int VISUAL_ID = 3076;
 
 	/**
 	* @generated

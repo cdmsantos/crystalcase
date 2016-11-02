@@ -20,6 +20,7 @@ import crystal.CrystalFactory;
 import crystal.Delete;
 import crystal.For;
 import crystal.Selector;
+import crystal.While;
 
 /**
  * @generated
@@ -59,8 +60,8 @@ public class Delete4CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Delete newElement = CrystalFactory.eINSTANCE.createDelete();
 
-		For owner = (For) getElementToEdit();
-		owner.getForStatements().add(newElement);
+		While owner = (While) getElementToEdit();
+		owner.getWhileStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

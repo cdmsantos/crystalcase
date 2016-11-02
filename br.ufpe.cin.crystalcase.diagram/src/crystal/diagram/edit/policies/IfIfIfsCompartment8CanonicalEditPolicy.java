@@ -31,6 +31,7 @@ import crystal.diagram.edit.parts.CaseEditPart;
 import crystal.diagram.edit.parts.CloseEditPart;
 import crystal.diagram.edit.parts.DeleteEditPart;
 import crystal.diagram.edit.parts.Exception2EditPart;
+import crystal.diagram.edit.parts.Expression2EditPart;
 import crystal.diagram.edit.parts.ExpressionEditPart;
 import crystal.diagram.edit.parts.FetchEditPart;
 import crystal.diagram.edit.parts.ForEditPart;
@@ -78,7 +79,7 @@ public class IfIfIfsCompartment8CanonicalEditPolicy extends CanonicalEditPolicy 
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getIfIfIfsCompartment_7047SemanticChildren(viewObject);
+				.getIfIfIfsCompartment_7034SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -98,6 +99,7 @@ public class IfIfIfsCompartment8CanonicalEditPolicy extends CanonicalEditPolicy 
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
+		case Expression2EditPart.VISUAL_ID:
 		case Exception2EditPart.VISUAL_ID:
 		case If2EditPart.VISUAL_ID:
 		case CaseEditPart.VISUAL_ID:
@@ -113,7 +115,6 @@ public class IfIfIfsCompartment8CanonicalEditPolicy extends CanonicalEditPolicy 
 		case CloseEditPart.VISUAL_ID:
 		case CallProcedureEditPart.VISUAL_ID:
 		case CallFunctionEditPart.VISUAL_ID:
-		case ExpressionEditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -128,7 +129,7 @@ public class IfIfIfsCompartment8CanonicalEditPolicy extends CanonicalEditPolicy 
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getIfIfIfsCompartment_7047SemanticChildren((View) getHost().getModel());
+				.getIfIfIfsCompartment_7034SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

@@ -31,7 +31,7 @@ public class Expression9ItemSemanticEditPolicy extends CrystalBaseItemSemanticEd
 	* @generated
 	*/
 	public Expression9ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Expression_3219);
+		super(CrystalElementTypes.Expression_3218);
 	}
 
 	/**

@@ -10,14 +10,14 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
         eType="#//Transition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectorTransitions" upperBound="-1"
+        eType="#//SelectorTransition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="procedures" upperBound="-1"
         eType="#//Procedure" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
         eType="#//Function" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="blocks" upperBound="-1"
         eType="#//AnonymousBlock" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectorTransitions" upperBound="-1"
-        eType="#//SelectorTransition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Subprograms" abstract="true">
     <eAnnotations source="gmf.node">
@@ -25,7 +25,6 @@
       <details key="border.width" value="1"/>
       <details key="label.readOnly" value="true"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Procedure" eSuperTypes="#//Subprograms">
     <eAnnotations source="gmf.node">
@@ -94,51 +93,26 @@
       <details key="label.readOnly" value="true"/>
       <details key="label.placement" value="internal"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ParameterType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Parameters">
     <eAnnotations source="gmf.node">
       <details key="label.text" value="Data Type"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="DataType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="options" eType="#//DataTypeOptions"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="precision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="1"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Collections" eSuperTypes="#//Parameters">
     <eAnnotations source="gmf.node">
       <details key="label.text" value="Collection"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Collection"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="collectionTypeName"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Records" eSuperTypes="#//Parameters">
     <eAnnotations source="gmf.node">
       <details key="label.text" value="Record"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Record"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="TYPE recordType IS RECORD (id number(5), name varchar2(25), lastName tableA.last_name%type)"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="recordTypeName"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cursor" eSuperTypes="#//Parameters">
     <eAnnotations source="gmf.node">
       <details key="label.text" value="Cursor"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Cursor"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cursorQuery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="selectStatement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Statements" abstract="true">
     <eAnnotations source="gmf.node">
@@ -146,27 +120,16 @@
       <details key="label.icon" value="true"/>
       <details key="label.placement" value="internal"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Description"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Exception" eSuperTypes="#//Statements">
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Exception"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE('There isnt data registered')"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="If"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Type the IF condition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ifs" upperBound="-1" eType="#//Statements"
         containment="true">
       <eAnnotations source="gmf.compartment"/>
@@ -180,10 +143,12 @@
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Case"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cases" upperBound="-1"
         eType="#//Selector" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elseStatements" upperBound="-1"
+        eType="#//Statements" containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -194,12 +159,6 @@
       <details key="label.icon" value="true"/>
       <details key="label.placement" value="internal"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Selector"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Type the condition for this Selector"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Description"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="caseStatements" upperBound="-1"
         eType="#//Statements" containment="true">
       <eAnnotations source="gmf.compartment"/>
@@ -209,46 +168,26 @@
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Insert"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="INSERT INTO tableA (id, name) VALUES (1, 'example')"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Update"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="UPDATE tableA SET name = 'example' WHERE id = 1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Delete"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="DELETE FROM tableA WHERE ID = 1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Select"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="SELECT * FROM tableA WHERE id = 1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="While" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="While"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Type the WHILE condition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="whileStatements" upperBound="-1"
         eType="#//Statements" containment="true">
       <eAnnotations source="gmf.compartment"/>
@@ -258,15 +197,6 @@
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="For"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="counter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Type the name of the FOR counter"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeCounter" eType="#//ForCounter"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowestNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="highestNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="forStatements" upperBound="-1"
         eType="#//Statements" containment="true">
       <eAnnotations source="gmf.compartment"/>
@@ -276,10 +206,6 @@
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Loop"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="breakCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Type the break condition for LOOP"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loopStatements" upperBound="-1"
         eType="#//Statements" containment="true">
       <eAnnotations source="gmf.compartment"/>
@@ -289,46 +215,26 @@
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Open"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cursorName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="cursorName"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fetch" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Fetch"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cursorName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="FETCH cursorName INTO variableCursor"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variableName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="FETCH cursorName INTO variableCursor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Close" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Close"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cursorName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="cursorName"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CallProcedure" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="CallProcedure"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameSubroutine" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CallFunction" eSuperTypes="#//Statements">
     <eAnnotations source="gmf.node">
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="CallFunction"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameSubroutine" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
     <eAnnotations source="gmf.link">
@@ -342,10 +248,23 @@
       <details key="label.text" value="Statement Connection"/>
       <details key="label.icon" value="true"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Connection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Statements"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Statements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelectorTransition">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="incoming" value="true"/>
+      <details key="target.decoration" value="arrow"/>
+      <details key="color" value="0,0,0"/>
+      <details key="width" value="1"/>
+      <details key="label" value="name"/>
+      <details key="label.text" value="Case Connection"/>
+      <details key="label.icon" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Selector"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Selector"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ParameterType">
     <eLiterals name="IN"/>
@@ -385,31 +304,5 @@
     <eLiterals name="NCLOB" value="25"/>
     <eLiterals name="ROWID" value="26"/>
     <eLiterals name="UROWID" value="27"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SelectorTransition">
-    <eAnnotations source="gmf.link">
-      <details key="source" value="source"/>
-      <details key="target" value="target"/>
-      <details key="incoming" value="true"/>
-      <details key="target.decoration" value="arrow"/>
-      <details key="color" value="0,0,0"/>
-      <details key="width" value="1"/>
-      <details key="label" value="name"/>
-      <details key="label.text" value="Case Connection"/>
-      <details key="label.icon" value="true"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Connection"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Selector"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Selector"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Statements">
-    <eAnnotations source="gmf.node">
-      <details key="figure" value="rectangle"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Expression"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Type the expression here"/>
   </eClassifiers>
 </ecore:EPackage>

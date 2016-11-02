@@ -19,6 +19,7 @@ import crystal.AnonymousBlock;
 import crystal.CallFunction;
 import crystal.CrystalFactory;
 import crystal.For;
+import crystal.Loop;
 import crystal.Selector;
 
 /**
@@ -59,8 +60,8 @@ public class CallFunction4CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		CallFunction newElement = CrystalFactory.eINSTANCE.createCallFunction();
 
-		For owner = (For) getElementToEdit();
-		owner.getForStatements().add(newElement);
+		Loop owner = (Loop) getElementToEdit();
+		owner.getLoopStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -31,7 +31,7 @@ public class Delete8ItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPo
 	* @generated
 	*/
 	public Delete8ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Delete_3080);
+		super(CrystalElementTypes.Delete_3061);
 	}
 
 	/**

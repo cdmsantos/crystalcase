@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link crystal.Crystal#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link crystal.Crystal#getSelectorTransitions <em>Selector Transitions</em>}</li>
  *   <li>{@link crystal.Crystal#getProcedures <em>Procedures</em>}</li>
  *   <li>{@link crystal.Crystal#getFunctions <em>Functions</em>}</li>
  *   <li>{@link crystal.Crystal#getBlocks <em>Blocks</em>}</li>
- *   <li>{@link crystal.Crystal#getSelectorTransitions <em>Selector Transitions</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getCrystal()

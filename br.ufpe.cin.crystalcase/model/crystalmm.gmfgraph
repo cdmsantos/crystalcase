@@ -93,6 +93,15 @@
       </actualFigure>
       <accessors accessor="getFigureCursorLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
     </descriptors>
+    <descriptors name="ExpressionFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ExpressionFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ExpressionLabelFigure" text="Expression"/>
+      </actualFigure>
+      <accessors accessor="getFigureExpressionLabelFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+    </descriptors>
     <descriptors name="ExceptionFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="ExceptionFigure">
         <border xsi:type="gmfgraph:MarginBorder">
@@ -100,7 +109,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="ExceptionLabelFigure" text="Exception"/>
       </actualFigure>
-      <accessors accessor="getFigureExceptionLabelFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureExceptionLabelFigure" figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="IfFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="IfFigure">
@@ -113,9 +122,9 @@
         <children xsi:type="gmfgraph:Rectangle" name="IfIfsCompartmentFigure" outline="false"/>
         <children xsi:type="gmfgraph:Rectangle" name="IfElsesCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getFigureIfLabelFigure" figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
-      <accessors accessor="getIfIfsCompartmentFigure" figure="//@figures.0/@descriptors.8/@actualFigure/@children.1"/>
-      <accessors accessor="getIfElsesCompartmentFigure" figure="//@figures.0/@descriptors.8/@actualFigure/@children.2"/>
+      <accessors accessor="getFigureIfLabelFigure" figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+      <accessors accessor="getIfIfsCompartmentFigure" figure="//@figures.0/@descriptors.9/@actualFigure/@children.1"/>
+      <accessors accessor="getIfElsesCompartmentFigure" figure="//@figures.0/@descriptors.9/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors name="CaseFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="CaseFigure">
@@ -126,9 +135,11 @@
           <maximumSize dx="10000" dy="50"/>
         </children>
         <children xsi:type="gmfgraph:Rectangle" name="CaseCasesCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="CaseElseStatementsCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getFigureCaseLabelFigure" figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
-      <accessors accessor="getCaseCasesCompartmentFigure" figure="//@figures.0/@descriptors.9/@actualFigure/@children.1"/>
+      <accessors accessor="getFigureCaseLabelFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
+      <accessors accessor="getCaseCasesCompartmentFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.1"/>
+      <accessors accessor="getCaseElseStatementsCompartmentFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors name="SelectorFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="SelectorFigure">
@@ -140,8 +151,8 @@
         </children>
         <children xsi:type="gmfgraph:Rectangle" name="SelectorCaseStatementsCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getFigureSelectorLabelFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
-      <accessors accessor="getSelectorCaseStatementsCompartmentFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.1"/>
+      <accessors accessor="getFigureSelectorLabelFigure" figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+      <accessors accessor="getSelectorCaseStatementsCompartmentFigure" figure="//@figures.0/@descriptors.11/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors name="InsertFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="InsertFigure">
@@ -150,7 +161,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="InsertLabelFigure" text="Insert"/>
       </actualFigure>
-      <accessors accessor="getFigureInsertLabelFigure" figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureInsertLabelFigure" figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="UpdateFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="UpdateFigure">
@@ -159,7 +170,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="UpdateLabelFigure" text="Update"/>
       </actualFigure>
-      <accessors accessor="getFigureUpdateLabelFigure" figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureUpdateLabelFigure" figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="DeleteFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="DeleteFigure">
@@ -168,7 +179,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="DeleteLabelFigure" text="Delete"/>
       </actualFigure>
-      <accessors accessor="getFigureDeleteLabelFigure" figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureDeleteLabelFigure" figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="SelectFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="SelectFigure">
@@ -177,7 +188,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="SelectLabelFigure" text="Select"/>
       </actualFigure>
-      <accessors accessor="getFigureSelectLabelFigure" figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureSelectLabelFigure" figure="//@figures.0/@descriptors.15/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="WhileFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="WhileFigure">
@@ -189,8 +200,8 @@
         </children>
         <children xsi:type="gmfgraph:Rectangle" name="WhileWhileStatementsCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getFigureWhileLabelFigure" figure="//@figures.0/@descriptors.15/@actualFigure/@children.0"/>
-      <accessors accessor="getWhileWhileStatementsCompartmentFigure" figure="//@figures.0/@descriptors.15/@actualFigure/@children.1"/>
+      <accessors accessor="getFigureWhileLabelFigure" figure="//@figures.0/@descriptors.16/@actualFigure/@children.0"/>
+      <accessors accessor="getWhileWhileStatementsCompartmentFigure" figure="//@figures.0/@descriptors.16/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors name="ForFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="ForFigure">
@@ -202,8 +213,8 @@
         </children>
         <children xsi:type="gmfgraph:Rectangle" name="ForForStatementsCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getFigureForLabelFigure" figure="//@figures.0/@descriptors.16/@actualFigure/@children.0"/>
-      <accessors accessor="getForForStatementsCompartmentFigure" figure="//@figures.0/@descriptors.16/@actualFigure/@children.1"/>
+      <accessors accessor="getFigureForLabelFigure" figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
+      <accessors accessor="getForForStatementsCompartmentFigure" figure="//@figures.0/@descriptors.17/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors name="LoopFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="LoopFigure">
@@ -215,8 +226,8 @@
         </children>
         <children xsi:type="gmfgraph:Rectangle" name="LoopLoopStatementsCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getFigureLoopLabelFigure" figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
-      <accessors accessor="getLoopLoopStatementsCompartmentFigure" figure="//@figures.0/@descriptors.17/@actualFigure/@children.1"/>
+      <accessors accessor="getFigureLoopLabelFigure" figure="//@figures.0/@descriptors.18/@actualFigure/@children.0"/>
+      <accessors accessor="getLoopLoopStatementsCompartmentFigure" figure="//@figures.0/@descriptors.18/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors name="OpenFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="OpenFigure">
@@ -225,7 +236,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="OpenLabelFigure" text="Open"/>
       </actualFigure>
-      <accessors accessor="getFigureOpenLabelFigure" figure="//@figures.0/@descriptors.18/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureOpenLabelFigure" figure="//@figures.0/@descriptors.19/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="FetchFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="FetchFigure">
@@ -234,7 +245,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="FetchLabelFigure" text="Fetch"/>
       </actualFigure>
-      <accessors accessor="getFigureFetchLabelFigure" figure="//@figures.0/@descriptors.19/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureFetchLabelFigure" figure="//@figures.0/@descriptors.20/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="CloseFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="CloseFigure">
@@ -243,7 +254,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="CloseLabelFigure" text="Close"/>
       </actualFigure>
-      <accessors accessor="getFigureCloseLabelFigure" figure="//@figures.0/@descriptors.20/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureCloseLabelFigure" figure="//@figures.0/@descriptors.21/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="CallProcedureFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="CallProcedureFigure">
@@ -252,7 +263,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="CallProcedureLabelFigure" text="CallProcedure"/>
       </actualFigure>
-      <accessors accessor="getFigureCallProcedureLabelFigure" figure="//@figures.0/@descriptors.21/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureCallProcedureLabelFigure" figure="//@figures.0/@descriptors.22/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="CallFunctionFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="CallFunctionFigure">
@@ -261,16 +272,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="CallFunctionLabelFigure" text="CallFunction"/>
       </actualFigure>
-      <accessors accessor="getFigureCallFunctionLabelFigure" figure="//@figures.0/@descriptors.22/@actualFigure/@children.0"/>
-    </descriptors>
-    <descriptors name="ExpressionFigure">
-      <actualFigure xsi:type="gmfgraph:Rectangle" name="ExpressionFigure">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-        <children xsi:type="gmfgraph:Label" name="ExpressionLabelFigure" text="Expression"/>
-      </actualFigure>
-      <accessors accessor="getFigureExpressionLabelFigure" figure="//@figures.0/@descriptors.23/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureCallFunctionLabelFigure" figure="//@figures.0/@descriptors.23/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="TransitionFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TransitionFigure" targetDecoration="//@figures.0/@figures.0">
@@ -296,6 +298,7 @@
   <nodes name="Collections" figure="CollectionsFigure"/>
   <nodes name="Records" figure="RecordsFigure"/>
   <nodes name="Cursor" figure="CursorFigure"/>
+  <nodes name="Expression" figure="ExpressionFigure"/>
   <nodes name="Exception" figure="ExceptionFigure"/>
   <nodes name="If" figure="IfFigure"/>
   <nodes name="Case" figure="CaseFigure"/>
@@ -312,7 +315,6 @@
   <nodes name="Close" figure="CloseFigure"/>
   <nodes name="CallProcedure" figure="CallProcedureFigure"/>
   <nodes name="CallFunction" figure="CallFunctionFigure"/>
-  <nodes name="Expression" figure="ExpressionFigure"/>
   <connections name="Transition" figure="TransitionFigure"/>
   <connections name="SelectorTransition" figure="SelectorTransitionFigure"/>
   <compartments name="ProcedureDeclarativePartCompartment" figure="ProcedureFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
@@ -324,13 +326,14 @@
   <compartments name="FunctionExecutablePartCompartment" figure="FunctionFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.4"/>
   <compartments name="AnonymousBlockDeclarativePartCompartment" figure="AnonymousBlockFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
   <compartments name="AnonymousBlockExecutablePartCompartment" figure="AnonymousBlockFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.2"/>
-  <compartments name="IfIfsCompartment" figure="IfFigure" collapsible="true" accessor="//@figures.0/@descriptors.8/@accessors.1"/>
-  <compartments name="IfElsesCompartment" figure="IfFigure" collapsible="true" accessor="//@figures.0/@descriptors.8/@accessors.2"/>
-  <compartments name="CaseCasesCompartment" figure="CaseFigure" collapsible="true" accessor="//@figures.0/@descriptors.9/@accessors.1"/>
-  <compartments name="SelectorCaseStatementsCompartment" figure="SelectorFigure" collapsible="true" accessor="//@figures.0/@descriptors.10/@accessors.1"/>
-  <compartments name="WhileWhileStatementsCompartment" figure="WhileFigure" collapsible="true" accessor="//@figures.0/@descriptors.15/@accessors.1"/>
-  <compartments name="ForForStatementsCompartment" figure="ForFigure" collapsible="true" accessor="//@figures.0/@descriptors.16/@accessors.1"/>
-  <compartments name="LoopLoopStatementsCompartment" figure="LoopFigure" collapsible="true" accessor="//@figures.0/@descriptors.17/@accessors.1"/>
+  <compartments name="IfIfsCompartment" figure="IfFigure" collapsible="true" accessor="//@figures.0/@descriptors.9/@accessors.1"/>
+  <compartments name="IfElsesCompartment" figure="IfFigure" collapsible="true" accessor="//@figures.0/@descriptors.9/@accessors.2"/>
+  <compartments name="CaseCasesCompartment" figure="CaseFigure" collapsible="true" accessor="//@figures.0/@descriptors.10/@accessors.1"/>
+  <compartments name="CaseElseStatementsCompartment" figure="CaseFigure" collapsible="true" accessor="//@figures.0/@descriptors.10/@accessors.2"/>
+  <compartments name="SelectorCaseStatementsCompartment" figure="SelectorFigure" collapsible="true" accessor="//@figures.0/@descriptors.11/@accessors.1"/>
+  <compartments name="WhileWhileStatementsCompartment" figure="WhileFigure" collapsible="true" accessor="//@figures.0/@descriptors.16/@accessors.1"/>
+  <compartments name="ForForStatementsCompartment" figure="ForFigure" collapsible="true" accessor="//@figures.0/@descriptors.17/@accessors.1"/>
+  <compartments name="LoopLoopStatementsCompartment" figure="LoopFigure" collapsible="true" accessor="//@figures.0/@descriptors.18/@accessors.1"/>
   <labels name="ProcedureLabel" figure="ProcedureFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels name="FunctionLabel" figure="FunctionFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels name="AnonymousBlockLabel" figure="AnonymousBlockFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
@@ -338,23 +341,23 @@
   <labels name="CollectionsLabel" figure="CollectionsFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
   <labels name="RecordsLabel" figure="RecordsFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
   <labels name="CursorLabel" figure="CursorFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
-  <labels name="ExceptionLabel" figure="ExceptionFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
-  <labels name="IfLabel" figure="IfFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
-  <labels name="CaseLabel" figure="CaseFigure" accessor="//@figures.0/@descriptors.9/@accessors.0"/>
-  <labels name="SelectorLabel" figure="SelectorFigure" accessor="//@figures.0/@descriptors.10/@accessors.0"/>
-  <labels name="InsertLabel" figure="InsertFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
-  <labels name="UpdateLabel" figure="UpdateFigure" accessor="//@figures.0/@descriptors.12/@accessors.0"/>
-  <labels name="DeleteLabel" figure="DeleteFigure" accessor="//@figures.0/@descriptors.13/@accessors.0"/>
-  <labels name="SelectLabel" figure="SelectFigure" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
-  <labels name="WhileLabel" figure="WhileFigure" accessor="//@figures.0/@descriptors.15/@accessors.0"/>
-  <labels name="ForLabel" figure="ForFigure" accessor="//@figures.0/@descriptors.16/@accessors.0"/>
-  <labels name="LoopLabel" figure="LoopFigure" accessor="//@figures.0/@descriptors.17/@accessors.0"/>
-  <labels name="OpenLabel" figure="OpenFigure" accessor="//@figures.0/@descriptors.18/@accessors.0"/>
-  <labels name="FetchLabel" figure="FetchFigure" accessor="//@figures.0/@descriptors.19/@accessors.0"/>
-  <labels name="CloseLabel" figure="CloseFigure" accessor="//@figures.0/@descriptors.20/@accessors.0"/>
-  <labels name="CallProcedureLabel" figure="CallProcedureFigure" accessor="//@figures.0/@descriptors.21/@accessors.0"/>
-  <labels name="CallFunctionLabel" figure="CallFunctionFigure" accessor="//@figures.0/@descriptors.22/@accessors.0"/>
-  <labels name="ExpressionLabel" figure="ExpressionFigure" accessor="//@figures.0/@descriptors.23/@accessors.0"/>
+  <labels name="ExpressionLabel" figure="ExpressionFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <labels name="ExceptionLabel" figure="ExceptionFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="IfLabel" figure="IfFigure" accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+  <labels name="CaseLabel" figure="CaseFigure" accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+  <labels name="SelectorLabel" figure="SelectorFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+  <labels name="InsertLabel" figure="InsertFigure" accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <labels name="UpdateLabel" figure="UpdateFigure" accessor="//@figures.0/@descriptors.13/@accessors.0"/>
+  <labels name="DeleteLabel" figure="DeleteFigure" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
+  <labels name="SelectLabel" figure="SelectFigure" accessor="//@figures.0/@descriptors.15/@accessors.0"/>
+  <labels name="WhileLabel" figure="WhileFigure" accessor="//@figures.0/@descriptors.16/@accessors.0"/>
+  <labels name="ForLabel" figure="ForFigure" accessor="//@figures.0/@descriptors.17/@accessors.0"/>
+  <labels name="LoopLabel" figure="LoopFigure" accessor="//@figures.0/@descriptors.18/@accessors.0"/>
+  <labels name="OpenLabel" figure="OpenFigure" accessor="//@figures.0/@descriptors.19/@accessors.0"/>
+  <labels name="FetchLabel" figure="FetchFigure" accessor="//@figures.0/@descriptors.20/@accessors.0"/>
+  <labels name="CloseLabel" figure="CloseFigure" accessor="//@figures.0/@descriptors.21/@accessors.0"/>
+  <labels name="CallProcedureLabel" figure="CallProcedureFigure" accessor="//@figures.0/@descriptors.22/@accessors.0"/>
+  <labels name="CallFunctionLabel" figure="CallFunctionFigure" accessor="//@figures.0/@descriptors.23/@accessors.0"/>
   <labels name="TransitionLabel" figure="TransitionLabelFigure"/>
   <labels name="SelectorTransitionLabel" figure="SelectorTransitionLabelFigure"/>
 </gmfgraph:Canvas>

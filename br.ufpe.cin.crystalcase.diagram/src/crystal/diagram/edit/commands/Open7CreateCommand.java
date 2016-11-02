@@ -19,6 +19,7 @@ import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
 import crystal.Open;
 import crystal.Procedure;
+import crystal.Selector;
 
 /**
  * @generated
@@ -58,8 +59,8 @@ public class Open7CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Open newElement = CrystalFactory.eINSTANCE.createOpen();
 
-		Procedure owner = (Procedure) getElementToEdit();
-		owner.getExecutablePart().add(newElement);
+		Selector owner = (Selector) getElementToEdit();
+		owner.getCaseStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

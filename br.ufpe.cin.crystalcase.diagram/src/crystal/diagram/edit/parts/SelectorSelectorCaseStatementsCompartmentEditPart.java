@@ -95,6 +95,9 @@ public class SelectorSelectorCaseStatementsCompartmentEditPart extends ShapeComp
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3216) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3109) {
 				return this;
 			}
@@ -138,9 +141,6 @@ public class SelectorSelectorCaseStatementsCompartmentEditPart extends ShapeComp
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3150) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3216) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

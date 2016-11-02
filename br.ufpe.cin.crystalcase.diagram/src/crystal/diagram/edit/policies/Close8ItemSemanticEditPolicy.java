@@ -31,7 +31,7 @@ public class Close8ItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPol
 	* @generated
 	*/
 	public Close8ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Close_3087);
+		super(CrystalElementTypes.Close_3068);
 	}
 
 	/**

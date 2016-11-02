@@ -38,7 +38,7 @@ public class SelectorTransitionImpl extends EObjectImpl implements SelectorTrans
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "Connection";
+	protected static final String NAME_EDEFAULT = "Case Connection";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.

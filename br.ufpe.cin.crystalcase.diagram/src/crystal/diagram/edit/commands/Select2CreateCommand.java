@@ -15,6 +15,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
+import crystal.Case;
 import crystal.CrystalFactory;
 import crystal.Function;
 import crystal.If;
@@ -59,8 +60,8 @@ public class Select2CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Select newElement = CrystalFactory.eINSTANCE.createSelect();
 
-		If owner = (If) getElementToEdit();
-		owner.getElses().add(newElement);
+		Case owner = (Case) getElementToEdit();
+		owner.getElseStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -12,6 +12,7 @@ import crystal.diagram.edit.commands.CaseCreateCommand;
 import crystal.diagram.edit.commands.CloseCreateCommand;
 import crystal.diagram.edit.commands.DeleteCreateCommand;
 import crystal.diagram.edit.commands.Exception2CreateCommand;
+import crystal.diagram.edit.commands.Expression2CreateCommand;
 import crystal.diagram.edit.commands.ExpressionCreateCommand;
 import crystal.diagram.edit.commands.FetchCreateCommand;
 import crystal.diagram.edit.commands.ForCreateCommand;
@@ -33,13 +34,16 @@ public class IfIfIfsCompartment3ItemSemanticEditPolicy extends CrystalBaseItemSe
 	* @generated
 	*/
 	public IfIfIfsCompartment3ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.If_3110);
+		super(CrystalElementTypes.If_3222);
 	}
 
 	/**
 	* @generated
 	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
+		if (CrystalElementTypes.Expression_3211 == req.getElementType()) {
+			return getGEFWrapper(new Expression2CreateCommand(req));
+		}
 		if (CrystalElementTypes.Exception_3181 == req.getElementType()) {
 			return getGEFWrapper(new Exception2CreateCommand(req));
 		}
@@ -84,9 +88,6 @@ public class IfIfIfsCompartment3ItemSemanticEditPolicy extends CrystalBaseItemSe
 		}
 		if (CrystalElementTypes.CallFunction_3195 == req.getElementType()) {
 			return getGEFWrapper(new CallFunctionCreateCommand(req));
-		}
-		if (CrystalElementTypes.Expression_3211 == req.getElementType()) {
-			return getGEFWrapper(new ExpressionCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

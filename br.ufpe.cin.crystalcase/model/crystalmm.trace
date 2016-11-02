@@ -192,6 +192,9 @@
     <compartmentTraces
         visualID="7052"
         queryText="true"/>
+    <compartmentTraces
+        visualID="7106"
+        queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3040"
@@ -342,6 +345,9 @@
         queryText="true"/>
     <compartmentTraces
         visualID="7046"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7104"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
@@ -494,6 +500,9 @@
     <compartmentTraces
         visualID="7049"
         queryText="true"/>
+    <compartmentTraces
+        visualID="7105"
+        queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3078"
@@ -616,6 +625,9 @@
         queryText="true"/>
     <compartmentTraces
         visualID="7043"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7098"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
@@ -749,6 +761,9 @@
         queryText="true"/>
     <compartmentTraces
         visualID="7044"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7103"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
@@ -893,6 +908,9 @@
     <compartmentTraces
         visualID="7060"
         queryText="true"/>
+    <compartmentTraces
+        visualID="7100"
+        queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3156"
@@ -940,6 +958,9 @@
         queryText="true"/>
     <compartmentTraces
         visualID="7063"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7102"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
@@ -1119,6 +1140,9 @@
     <compartmentTraces
         visualID="7081"
         queryText="true"/>
+    <compartmentTraces
+        visualID="7091"
+        queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3184"
@@ -1241,6 +1265,9 @@
         queryText="true"/>
     <compartmentTraces
         visualID="7087"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7094"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
@@ -1397,6 +1424,139 @@
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'AnonymousBlock') and _containmentMF_.name = 'executablePart')">
     <nodeLabelTraces
         visualID="5227"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3220"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Expression') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5228"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3221"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Exception') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5229"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3222"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'If') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5243"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7092"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7093"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3223"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5242"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7095"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7096"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3224"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Insert') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5230"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3225"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Update') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5231"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3226"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Delete') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5232"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3227"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Select') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5233"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3228"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'While') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5241"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7097"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3229"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'For') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5240"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7099"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3230"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Loop') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5239"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7101"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3231"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Open') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5234"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3232"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Fetch') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5235"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3233"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Close') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5236"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3234"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'CallProcedure') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5237"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3235"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'CallFunction') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'crystal' and _eClass_.name = 'Case') and _containmentMF_.name = 'elseStatements')">
+    <nodeLabelTraces
+        visualID="5238"
         queryText="true"/>
   </childNodeTraces>
   <linkTraces

@@ -31,7 +31,7 @@ public class Fetch7ItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPol
 	* @generated
 	*/
 	public Fetch7ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Fetch_3067);
+		super(CrystalElementTypes.Fetch_3147);
 	}
 
 	/**

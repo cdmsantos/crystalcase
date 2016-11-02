@@ -26,21 +26,35 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
 import crystal.diagram.edit.parts.CallFunction3EditPart;
+import crystal.diagram.edit.parts.CallFunction4EditPart;
 import crystal.diagram.edit.parts.CallProcedure3EditPart;
+import crystal.diagram.edit.parts.CallProcedure4EditPart;
 import crystal.diagram.edit.parts.Case5EditPart;
+import crystal.diagram.edit.parts.Case6EditPart;
 import crystal.diagram.edit.parts.Close3EditPart;
+import crystal.diagram.edit.parts.Close4EditPart;
 import crystal.diagram.edit.parts.Delete5EditPart;
+import crystal.diagram.edit.parts.Delete6EditPart;
 import crystal.diagram.edit.parts.Exception6EditPart;
 import crystal.diagram.edit.parts.Expression3EditPart;
+import crystal.diagram.edit.parts.Expression6EditPart;
 import crystal.diagram.edit.parts.Fetch3EditPart;
+import crystal.diagram.edit.parts.Fetch4EditPart;
 import crystal.diagram.edit.parts.For3EditPart;
+import crystal.diagram.edit.parts.For4EditPart;
 import crystal.diagram.edit.parts.If6EditPart;
 import crystal.diagram.edit.parts.Insert5EditPart;
+import crystal.diagram.edit.parts.Insert6EditPart;
 import crystal.diagram.edit.parts.Loop4EditPart;
+import crystal.diagram.edit.parts.Loop5EditPart;
 import crystal.diagram.edit.parts.Open3EditPart;
+import crystal.diagram.edit.parts.Open4EditPart;
 import crystal.diagram.edit.parts.Select5EditPart;
+import crystal.diagram.edit.parts.Select6EditPart;
 import crystal.diagram.edit.parts.Update5EditPart;
+import crystal.diagram.edit.parts.Update6EditPart;
 import crystal.diagram.edit.parts.While5EditPart;
+import crystal.diagram.edit.parts.While6EditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
 import crystal.diagram.part.CrystalVisualIDRegistry;
@@ -78,7 +92,7 @@ public class LoopLoopLoopStatementsCompartment5CanonicalEditPolicy extends Canon
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getLoopLoopLoopStatementsCompartment_7090SemanticChildren(viewObject);
+				.getLoopLoopLoopStatementsCompartment_7068SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -98,22 +112,22 @@ public class LoopLoopLoopStatementsCompartment5CanonicalEditPolicy extends Canon
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
+		case Expression6EditPart.VISUAL_ID:
 		case Exception6EditPart.VISUAL_ID:
 		case If6EditPart.VISUAL_ID:
-		case Case5EditPart.VISUAL_ID:
-		case Insert5EditPart.VISUAL_ID:
-		case Update5EditPart.VISUAL_ID:
-		case Delete5EditPart.VISUAL_ID:
-		case Select5EditPart.VISUAL_ID:
-		case While5EditPart.VISUAL_ID:
-		case For3EditPart.VISUAL_ID:
-		case Loop4EditPart.VISUAL_ID:
-		case Open3EditPart.VISUAL_ID:
-		case Fetch3EditPart.VISUAL_ID:
-		case Close3EditPart.VISUAL_ID:
-		case CallProcedure3EditPart.VISUAL_ID:
-		case CallFunction3EditPart.VISUAL_ID:
-		case Expression3EditPart.VISUAL_ID:
+		case Case6EditPart.VISUAL_ID:
+		case Insert6EditPart.VISUAL_ID:
+		case Update6EditPart.VISUAL_ID:
+		case Delete6EditPart.VISUAL_ID:
+		case Select6EditPart.VISUAL_ID:
+		case While6EditPart.VISUAL_ID:
+		case For4EditPart.VISUAL_ID:
+		case Loop5EditPart.VISUAL_ID:
+		case Open4EditPart.VISUAL_ID:
+		case Fetch4EditPart.VISUAL_ID:
+		case Close4EditPart.VISUAL_ID:
+		case CallProcedure4EditPart.VISUAL_ID:
+		case CallFunction4EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -128,7 +142,7 @@ public class LoopLoopLoopStatementsCompartment5CanonicalEditPolicy extends Canon
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getLoopLoopLoopStatementsCompartment_7090SemanticChildren((View) getHost().getModel());
+				.getLoopLoopLoopStatementsCompartment_7068SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

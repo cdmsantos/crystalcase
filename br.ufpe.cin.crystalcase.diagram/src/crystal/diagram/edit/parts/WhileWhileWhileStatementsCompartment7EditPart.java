@@ -35,7 +35,7 @@ public class WhileWhileWhileStatementsCompartment7EditPart extends ShapeCompartm
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 7024;
+	public static final int VISUAL_ID = 7045;
 
 	/**
 	* @generated
@@ -92,6 +92,9 @@ public class WhileWhileWhileStatementsCompartment7EditPart extends ShapeCompartm
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
+			if (type == CrystalElementTypes.Expression_3212) {
+				return this;
+			}
 			if (type == CrystalElementTypes.Exception_3090) {
 				return this;
 			}
@@ -135,9 +138,6 @@ public class WhileWhileWhileStatementsCompartment7EditPart extends ShapeCompartm
 				return this;
 			}
 			if (type == CrystalElementTypes.CallFunction_3104) {
-				return this;
-			}
-			if (type == CrystalElementTypes.Expression_3212) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

@@ -15,6 +15,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
+import crystal.Case;
 import crystal.Close;
 import crystal.CrystalFactory;
 import crystal.Function;
@@ -59,8 +60,8 @@ public class Close2CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Close newElement = CrystalFactory.eINSTANCE.createClose();
 
-		While owner = (While) getElementToEdit();
-		owner.getWhileStatements().add(newElement);
+		Case owner = (Case) getElementToEdit();
+		owner.getElseStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -31,7 +31,7 @@ public class Open3ItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPoli
 	* @generated
 	*/
 	public Open3ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Open_3171);
+		super(CrystalElementTypes.Open_3100);
 	}
 
 	/**

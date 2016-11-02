@@ -36,7 +36,7 @@ public class Insert5EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3162;
+	public static final int VISUAL_ID = 3156;
 
 	/**
 	* @generated

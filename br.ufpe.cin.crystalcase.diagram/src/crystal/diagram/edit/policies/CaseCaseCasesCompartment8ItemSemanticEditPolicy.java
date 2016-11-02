@@ -18,7 +18,7 @@ public class CaseCaseCasesCompartment8ItemSemanticEditPolicy extends CrystalBase
 	* @generated
 	*/
 	public CaseCaseCasesCompartment8ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Case_3077);
+		super(CrystalElementTypes.Case_3058);
 	}
 
 	/**

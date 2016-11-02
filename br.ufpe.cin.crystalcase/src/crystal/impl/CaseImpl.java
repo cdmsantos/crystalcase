@@ -6,6 +6,7 @@ import crystal.Case;
 import crystal.CrystalPackage;
 
 import crystal.Selector;
+import crystal.Statements;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link crystal.impl.CaseImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.CaseImpl#getCases <em>Cases</em>}</li>
+ *   <li>{@link crystal.impl.CaseImpl#getElseStatements <em>Else Statements</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,6 +64,16 @@ public class CaseImpl extends StatementsImpl implements Case {
 	 * @ordered
 	 */
 	protected EList<Selector> cases;
+
+	/**
+	 * The cached value of the '{@link #getElseStatements() <em>Else Statements</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElseStatements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Statements> elseStatements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,11 +132,25 @@ public class CaseImpl extends StatementsImpl implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Statements> getElseStatements() {
+		if (elseStatements == null) {
+			elseStatements = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.CASE__ELSE_STATEMENTS);
+		}
+		return elseStatements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CrystalPackage.CASE__CASES:
 				return ((InternalEList<?>)getCases()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CASE__ELSE_STATEMENTS:
+				return ((InternalEList<?>)getElseStatements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -141,6 +167,8 @@ public class CaseImpl extends StatementsImpl implements Case {
 				return getClassName();
 			case CrystalPackage.CASE__CASES:
 				return getCases();
+			case CrystalPackage.CASE__ELSE_STATEMENTS:
+				return getElseStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,6 +189,10 @@ public class CaseImpl extends StatementsImpl implements Case {
 				getCases().clear();
 				getCases().addAll((Collection<? extends Selector>)newValue);
 				return;
+			case CrystalPackage.CASE__ELSE_STATEMENTS:
+				getElseStatements().clear();
+				getElseStatements().addAll((Collection<? extends Statements>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -179,6 +211,9 @@ public class CaseImpl extends StatementsImpl implements Case {
 			case CrystalPackage.CASE__CASES:
 				getCases().clear();
 				return;
+			case CrystalPackage.CASE__ELSE_STATEMENTS:
+				getElseStatements().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -195,6 +230,8 @@ public class CaseImpl extends StatementsImpl implements Case {
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.CASE__CASES:
 				return cases != null && !cases.isEmpty();
+			case CrystalPackage.CASE__ELSE_STATEMENTS:
+				return elseStatements != null && !elseStatements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

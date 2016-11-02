@@ -19,6 +19,7 @@ import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
 import crystal.Fetch;
 import crystal.For;
+import crystal.Loop;
 import crystal.Selector;
 
 /**
@@ -59,8 +60,8 @@ public class Fetch4CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Fetch newElement = CrystalFactory.eINSTANCE.createFetch();
 
-		For owner = (For) getElementToEdit();
-		owner.getForStatements().add(newElement);
+		Loop owner = (Loop) getElementToEdit();
+		owner.getLoopStatements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 
