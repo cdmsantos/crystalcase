@@ -17,9 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.Exception;
-import crystal.Function;
 import crystal.If;
-import crystal.While;
 
 /**
  * @generated
@@ -60,7 +58,7 @@ public class Exception2CreateCommand extends EditElementCommand {
 		Exception newElement = CrystalFactory.eINSTANCE.createException();
 
 		If owner = (If) getElementToEdit();
-		owner.getIfs().add(newElement);
+		owner.getTrue_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -26,12 +26,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link crystal.impl.LoopImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.LoopImpl#getBreakCondition <em>Break Condition</em>}</li>
- *   <li>{@link crystal.impl.LoopImpl#getLoopStatements <em>Loop Statements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LoopImpl extends StatementsImpl implements Loop {
+public class LoopImpl extends IterationStructuresImpl implements Loop {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -40,7 +39,7 @@ public class LoopImpl extends StatementsImpl implements Loop {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "Loop";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,7 +57,7 @@ public class LoopImpl extends StatementsImpl implements Loop {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String BREAK_CONDITION_EDEFAULT = "Type the break condition for LOOP";
+	protected static final String BREAK_CONDITION_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getBreakCondition() <em>Break Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,15 +67,6 @@ public class LoopImpl extends StatementsImpl implements Loop {
 	 * @ordered
 	 */
 	protected String breakCondition = BREAK_CONDITION_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getLoopStatements() <em>Loop Statements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLoopStatements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Statements> loopStatements;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -143,32 +133,6 @@ public class LoopImpl extends StatementsImpl implements Loop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Statements> getLoopStatements() {
-		if (loopStatements == null) {
-			loopStatements = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.LOOP__LOOP_STATEMENTS);
-		}
-		return loopStatements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CrystalPackage.LOOP__LOOP_STATEMENTS:
-				return ((InternalEList<?>)getLoopStatements()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -176,8 +140,6 @@ public class LoopImpl extends StatementsImpl implements Loop {
 				return getClassName();
 			case CrystalPackage.LOOP__BREAK_CONDITION:
 				return getBreakCondition();
-			case CrystalPackage.LOOP__LOOP_STATEMENTS:
-				return getLoopStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,10 +159,6 @@ public class LoopImpl extends StatementsImpl implements Loop {
 			case CrystalPackage.LOOP__BREAK_CONDITION:
 				setBreakCondition((String)newValue);
 				return;
-			case CrystalPackage.LOOP__LOOP_STATEMENTS:
-				getLoopStatements().clear();
-				getLoopStatements().addAll((Collection<? extends Statements>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -219,9 +177,6 @@ public class LoopImpl extends StatementsImpl implements Loop {
 			case CrystalPackage.LOOP__BREAK_CONDITION:
 				setBreakCondition(BREAK_CONDITION_EDEFAULT);
 				return;
-			case CrystalPackage.LOOP__LOOP_STATEMENTS:
-				getLoopStatements().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -238,8 +193,6 @@ public class LoopImpl extends StatementsImpl implements Loop {
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.LOOP__BREAK_CONDITION:
 				return BREAK_CONDITION_EDEFAULT == null ? breakCondition != null : !BREAK_CONDITION_EDEFAULT.equals(breakCondition);
-			case CrystalPackage.LOOP__LOOP_STATEMENTS:
-				return loopStatements != null && !loopStatements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

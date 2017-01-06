@@ -15,10 +15,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
-import crystal.Function;
-import crystal.If;
+import crystal.IterationStructures;
 import crystal.While;
 
 /**
@@ -59,8 +57,8 @@ public class While3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		While newElement = CrystalFactory.eINSTANCE.createWhile();
 
-		If owner = (If) getElementToEdit();
-		owner.getElses().add(newElement);
+		IterationStructures owner = (IterationStructures) getElementToEdit();
+		owner.getInterations_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

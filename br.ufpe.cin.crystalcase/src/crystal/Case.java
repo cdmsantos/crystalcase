@@ -15,18 +15,17 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link crystal.Case#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.Case#getCases <em>Cases</em>}</li>
- *   <li>{@link crystal.Case#getElseStatements <em>Else Statements</em>}</li>
+ *   <li>{@link crystal.Case#getOptions <em>Options</em>}</li>
+ *   <li>{@link crystal.Case#getDefault_statements <em>Default statements</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getCase()
  * @model annotation="gmf.node figure='rectangle'"
  * @generated
  */
-public interface Case extends Statements {
+public interface Case extends ConditionalStructures {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
-	 * The default value is <code>"Case"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -36,7 +35,7 @@ public interface Case extends Statements {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCase_ClassName()
-	 * @model default="Case"
+	 * @model
 	 * @generated
 	 */
 	String getClassName();
@@ -52,35 +51,35 @@ public interface Case extends Statements {
 	void setClassName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Cases</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.Selector}.
+	 * Returns the value of the '<em><b>Options</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.Options}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Cases</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Options</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cases</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getCase_Cases()
+	 * @return the value of the '<em>Options</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getCase_Options()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Selector> getCases();
+	EList<Options> getOptions();
 
 	/**
-	 * Returns the value of the '<em><b>Else Statements</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Default statements</b></em>' containment reference list.
 	 * The list contents are of type {@link crystal.Statements}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Else Statements</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Default statements</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Else Statements</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getCase_ElseStatements()
+	 * @return the value of the '<em>Default statements</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getCase_Default_statements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Statements> getElseStatements();
+	EList<Statements> getDefault_statements();
 
 } // Case

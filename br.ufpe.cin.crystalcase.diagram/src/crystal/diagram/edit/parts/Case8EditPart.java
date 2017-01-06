@@ -26,7 +26,6 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import crystal.diagram.edit.policies.Case8ItemSemanticEditPolicy;
 import crystal.diagram.edit.policies.OpenDiagramEditPolicy;
 import crystal.diagram.part.CrystalVisualIDRegistry;
 
@@ -62,7 +61,6 @@ public class Case8EditPart extends ShapeNodeEditPart {
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new Case8ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -115,18 +113,6 @@ public class Case8EditPart extends ShapeNodeEditPart {
 			((CaseDescription8EditPart) childEditPart).setLabel(getPrimaryShape().getFigureCaseLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof CaseCaseCasesCompartment8EditPart) {
-			IFigure pane = getPrimaryShape().getCaseCasesCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((CaseCaseCasesCompartment8EditPart) childEditPart).getFigure());
-			return true;
-		}
-		if (childEditPart instanceof CaseCaseElseStatementsCompartment8EditPart) {
-			IFigure pane = getPrimaryShape().getCaseElseStatementsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((CaseCaseElseStatementsCompartment8EditPart) childEditPart).getFigure());
-			return true;
-		}
 		return false;
 	}
 
@@ -135,16 +121,6 @@ public class Case8EditPart extends ShapeNodeEditPart {
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof CaseDescription8EditPart) {
-			return true;
-		}
-		if (childEditPart instanceof CaseCaseCasesCompartment8EditPart) {
-			IFigure pane = getPrimaryShape().getCaseCasesCompartmentFigure();
-			pane.remove(((CaseCaseCasesCompartment8EditPart) childEditPart).getFigure());
-			return true;
-		}
-		if (childEditPart instanceof CaseCaseElseStatementsCompartment8EditPart) {
-			IFigure pane = getPrimaryShape().getCaseElseStatementsCompartmentFigure();
-			pane.remove(((CaseCaseElseStatementsCompartment8EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -174,12 +150,7 @@ public class Case8EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof CaseCaseCasesCompartment8EditPart) {
-			return getPrimaryShape().getCaseCasesCompartmentFigure();
-		}
-		if (editPart instanceof CaseCaseElseStatementsCompartment8EditPart) {
-			return getPrimaryShape().getCaseElseStatementsCompartmentFigure();
-		}
+
 		return getContentPane();
 	}
 

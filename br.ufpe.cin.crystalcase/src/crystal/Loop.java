@@ -16,18 +16,16 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link crystal.Loop#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.Loop#getBreakCondition <em>Break Condition</em>}</li>
- *   <li>{@link crystal.Loop#getLoopStatements <em>Loop Statements</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getLoop()
  * @model annotation="gmf.node figure='rectangle'"
  * @generated
  */
-public interface Loop extends Statements {
+public interface Loop extends IterationStructures {
 
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
-	 * The default value is <code>"Loop"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -37,7 +35,7 @@ public interface Loop extends Statements {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getLoop_ClassName()
-	 * @model default="Loop"
+	 * @model
 	 * @generated
 	 */
 	String getClassName();
@@ -54,7 +52,6 @@ public interface Loop extends Statements {
 
 	/**
 	 * Returns the value of the '<em><b>Break Condition</b></em>' attribute.
-	 * The default value is <code>"Type the break condition for LOOP"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Break Condition</em>' attribute isn't clear,
@@ -64,7 +61,7 @@ public interface Loop extends Statements {
 	 * @return the value of the '<em>Break Condition</em>' attribute.
 	 * @see #setBreakCondition(String)
 	 * @see crystal.CrystalPackage#getLoop_BreakCondition()
-	 * @model default="Type the break condition for LOOP"
+	 * @model
 	 * @generated
 	 */
 	String getBreakCondition();
@@ -78,20 +75,4 @@ public interface Loop extends Statements {
 	 * @generated
 	 */
 	void setBreakCondition(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Loop Statements</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.Statements}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Loop Statements</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Loop Statements</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getLoop_LoopStatements()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Statements> getLoopStatements();
 } // Loop

@@ -2,16 +2,21 @@
  */
 package crystal.util;
 
+import crystal.AdditionalOperations;
 import crystal.AnonymousBlock;
+import crystal.CallBlocks;
 import crystal.CallFunction;
 import crystal.CallProcedure;
 import crystal.Case;
 import crystal.Close;
 import crystal.Collections;
+import crystal.ConditionalStructures;
 import crystal.Crystal;
 import crystal.CrystalCase;
 import crystal.CrystalPackage;
 import crystal.Cursor;
+import crystal.CursorOperations;
+import crystal.DataAbstractions;
 import crystal.DataType;
 import crystal.Delete;
 import crystal.Expression;
@@ -20,11 +25,17 @@ import crystal.For;
 import crystal.Function;
 import crystal.If;
 import crystal.Insert;
+import crystal.IterationStructures;
+import crystal.Links;
 import crystal.Loop;
+import crystal.NamedBlocks;
 import crystal.Open;
+import crystal.Options;
+import crystal.OptionsTransition;
 import crystal.Parameters;
 import crystal.Procedure;
 import crystal.Records;
+import crystal.SQLOperations;
 import crystal.Select;
 import crystal.Selector;
 import crystal.SelectorTransition;
@@ -108,9 +119,17 @@ public class CrystalSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CrystalPackage.NAMED_BLOCKS: {
+				NamedBlocks namedBlocks = (NamedBlocks)theEObject;
+				T result = caseNamedBlocks(namedBlocks);
+				if (result == null) result = caseSubprograms(namedBlocks);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CrystalPackage.PROCEDURE: {
 				Procedure procedure = (Procedure)theEObject;
 				T result = caseProcedure(procedure);
+				if (result == null) result = caseNamedBlocks(procedure);
 				if (result == null) result = caseSubprograms(procedure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -118,6 +137,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.FUNCTION: {
 				Function function = (Function)theEObject;
 				T result = caseFunction(function);
+				if (result == null) result = caseNamedBlocks(function);
 				if (result == null) result = caseSubprograms(function);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -129,37 +149,37 @@ public class CrystalSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CrystalPackage.PARAMETERS: {
-				Parameters parameters = (Parameters)theEObject;
-				T result = caseParameters(parameters);
+			case CrystalPackage.DATA_ABSTRACTIONS: {
+				DataAbstractions dataAbstractions = (DataAbstractions)theEObject;
+				T result = caseDataAbstractions(dataAbstractions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case CrystalPackage.DATA_TYPE: {
 				DataType dataType = (DataType)theEObject;
 				T result = caseDataType(dataType);
-				if (result == null) result = caseParameters(dataType);
+				if (result == null) result = caseDataAbstractions(dataType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case CrystalPackage.COLLECTIONS: {
 				Collections collections = (Collections)theEObject;
 				T result = caseCollections(collections);
-				if (result == null) result = caseParameters(collections);
+				if (result == null) result = caseDataAbstractions(collections);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case CrystalPackage.RECORDS: {
 				Records records = (Records)theEObject;
 				T result = caseRecords(records);
-				if (result == null) result = caseParameters(records);
+				if (result == null) result = caseDataAbstractions(records);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case CrystalPackage.CURSOR: {
 				Cursor cursor = (Cursor)theEObject;
 				T result = caseCursor(cursor);
-				if (result == null) result = caseParameters(cursor);
+				if (result == null) result = caseDataAbstractions(cursor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -169,9 +189,52 @@ public class CrystalSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CrystalPackage.CALL_BLOCKS: {
+				CallBlocks callBlocks = (CallBlocks)theEObject;
+				T result = caseCallBlocks(callBlocks);
+				if (result == null) result = caseStatements(callBlocks);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CrystalPackage.CURSOR_OPERATIONS: {
+				CursorOperations cursorOperations = (CursorOperations)theEObject;
+				T result = caseCursorOperations(cursorOperations);
+				if (result == null) result = caseStatements(cursorOperations);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CrystalPackage.SQL_OPERATIONS: {
+				SQLOperations sqlOperations = (SQLOperations)theEObject;
+				T result = caseSQLOperations(sqlOperations);
+				if (result == null) result = caseStatements(sqlOperations);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CrystalPackage.ITERATION_STRUCTURES: {
+				IterationStructures iterationStructures = (IterationStructures)theEObject;
+				T result = caseIterationStructures(iterationStructures);
+				if (result == null) result = caseStatements(iterationStructures);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CrystalPackage.CONDITIONAL_STRUCTURES: {
+				ConditionalStructures conditionalStructures = (ConditionalStructures)theEObject;
+				T result = caseConditionalStructures(conditionalStructures);
+				if (result == null) result = caseStatements(conditionalStructures);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CrystalPackage.ADDITIONAL_OPERATIONS: {
+				AdditionalOperations additionalOperations = (AdditionalOperations)theEObject;
+				T result = caseAdditionalOperations(additionalOperations);
+				if (result == null) result = caseStatements(additionalOperations);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CrystalPackage.EXPRESSION: {
 				Expression expression = (Expression)theEObject;
 				T result = caseExpression(expression);
+				if (result == null) result = caseAdditionalOperations(expression);
 				if (result == null) result = caseStatements(expression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -179,6 +242,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.EXCEPTION: {
 				crystal.Exception exception = (crystal.Exception)theEObject;
 				T result = caseException(exception);
+				if (result == null) result = caseAdditionalOperations(exception);
 				if (result == null) result = caseStatements(exception);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -186,6 +250,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.IF: {
 				If if_ = (If)theEObject;
 				T result = caseIf(if_);
+				if (result == null) result = caseConditionalStructures(if_);
 				if (result == null) result = caseStatements(if_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -193,19 +258,21 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.CASE: {
 				Case case_ = (Case)theEObject;
 				T result = caseCase(case_);
+				if (result == null) result = caseConditionalStructures(case_);
 				if (result == null) result = caseStatements(case_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CrystalPackage.SELECTOR: {
-				Selector selector = (Selector)theEObject;
-				T result = caseSelector(selector);
+			case CrystalPackage.OPTIONS: {
+				Options options = (Options)theEObject;
+				T result = caseOptions(options);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case CrystalPackage.INSERT: {
 				Insert insert = (Insert)theEObject;
 				T result = caseInsert(insert);
+				if (result == null) result = caseSQLOperations(insert);
 				if (result == null) result = caseStatements(insert);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -213,6 +280,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.UPDATE: {
 				Update update = (Update)theEObject;
 				T result = caseUpdate(update);
+				if (result == null) result = caseSQLOperations(update);
 				if (result == null) result = caseStatements(update);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -220,6 +288,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.DELETE: {
 				Delete delete = (Delete)theEObject;
 				T result = caseDelete(delete);
+				if (result == null) result = caseSQLOperations(delete);
 				if (result == null) result = caseStatements(delete);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -227,6 +296,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.SELECT: {
 				Select select = (Select)theEObject;
 				T result = caseSelect(select);
+				if (result == null) result = caseSQLOperations(select);
 				if (result == null) result = caseStatements(select);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -234,6 +304,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.WHILE: {
 				While while_ = (While)theEObject;
 				T result = caseWhile(while_);
+				if (result == null) result = caseIterationStructures(while_);
 				if (result == null) result = caseStatements(while_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -241,6 +312,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.FOR: {
 				For for_ = (For)theEObject;
 				T result = caseFor(for_);
+				if (result == null) result = caseIterationStructures(for_);
 				if (result == null) result = caseStatements(for_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -248,6 +320,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.LOOP: {
 				Loop loop = (Loop)theEObject;
 				T result = caseLoop(loop);
+				if (result == null) result = caseIterationStructures(loop);
 				if (result == null) result = caseStatements(loop);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -255,6 +328,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.OPEN: {
 				Open open = (Open)theEObject;
 				T result = caseOpen(open);
+				if (result == null) result = caseCursorOperations(open);
 				if (result == null) result = caseStatements(open);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -262,6 +336,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.FETCH: {
 				Fetch fetch = (Fetch)theEObject;
 				T result = caseFetch(fetch);
+				if (result == null) result = caseCursorOperations(fetch);
 				if (result == null) result = caseStatements(fetch);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -269,6 +344,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.CLOSE: {
 				Close close = (Close)theEObject;
 				T result = caseClose(close);
+				if (result == null) result = caseCursorOperations(close);
 				if (result == null) result = caseStatements(close);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -276,6 +352,7 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.CALL_PROCEDURE: {
 				CallProcedure callProcedure = (CallProcedure)theEObject;
 				T result = caseCallProcedure(callProcedure);
+				if (result == null) result = caseCallBlocks(callProcedure);
 				if (result == null) result = caseStatements(callProcedure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -283,19 +360,28 @@ public class CrystalSwitch<T> extends Switch<T> {
 			case CrystalPackage.CALL_FUNCTION: {
 				CallFunction callFunction = (CallFunction)theEObject;
 				T result = caseCallFunction(callFunction);
+				if (result == null) result = caseCallBlocks(callFunction);
 				if (result == null) result = caseStatements(callFunction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CrystalPackage.LINKS: {
+				Links links = (Links)theEObject;
+				T result = caseLinks(links);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case CrystalPackage.TRANSITION: {
 				Transition transition = (Transition)theEObject;
 				T result = caseTransition(transition);
+				if (result == null) result = caseLinks(transition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CrystalPackage.SELECTOR_TRANSITION: {
-				SelectorTransition selectorTransition = (SelectorTransition)theEObject;
-				T result = caseSelectorTransition(selectorTransition);
+			case CrystalPackage.OPTIONS_TRANSITION: {
+				OptionsTransition optionsTransition = (OptionsTransition)theEObject;
+				T result = caseOptionsTransition(optionsTransition);
+				if (result == null) result = caseLinks(optionsTransition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -330,6 +416,21 @@ public class CrystalSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSubprograms(Subprograms object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Blocks</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Blocks</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedBlocks(NamedBlocks object) {
 		return null;
 	}
 
@@ -379,17 +480,17 @@ public class CrystalSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameters</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Data Abstractions</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameters</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Data Abstractions</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameters(Parameters object) {
+	public T caseDataAbstractions(DataAbstractions object) {
 		return null;
 	}
 
@@ -469,6 +570,96 @@ public class CrystalSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Call Blocks</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Call Blocks</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCallBlocks(CallBlocks object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cursor Operations</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cursor Operations</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCursorOperations(CursorOperations object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SQL Operations</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SQL Operations</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSQLOperations(SQLOperations object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Iteration Structures</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Iteration Structures</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIterationStructures(IterationStructures object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Conditional Structures</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Conditional Structures</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConditionalStructures(ConditionalStructures object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Additional Operations</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Additional Operations</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAdditionalOperations(AdditionalOperations object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Exception</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -510,6 +701,21 @@ public class CrystalSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCase(Case object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Options</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Options</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOptions(Options object) {
 		return null;
 	}
 
@@ -570,21 +776,6 @@ public class CrystalSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSelect(Select object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Selector</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Selector</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSelector(Selector object) {
 		return null;
 	}
 
@@ -709,6 +900,21 @@ public class CrystalSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Links</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Links</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinks(Links object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Transition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -724,17 +930,17 @@ public class CrystalSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Selector Transition</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Options Transition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Selector Transition</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Options Transition</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSelectorTransition(SelectorTransition object) {
+	public T caseOptionsTransition(OptionsTransition object) {
 		return null;
 	}
 

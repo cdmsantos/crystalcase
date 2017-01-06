@@ -17,9 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.Case;
 import crystal.CrystalFactory;
-import crystal.For;
-import crystal.Loop;
-import crystal.Procedure;
+import crystal.Options;
 
 /**
  * @generated
@@ -59,8 +57,8 @@ public class Case5CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Case newElement = CrystalFactory.eINSTANCE.createCase();
 
-		For owner = (For) getElementToEdit();
-		owner.getForStatements().add(newElement);
+		Options owner = (Options) getElementToEdit();
+		owner.getCase_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

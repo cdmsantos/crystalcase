@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class RecordsImpl extends ParametersImpl implements Records {
+public class RecordsImpl extends DataAbstractionsImpl implements Records {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "Record";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -55,7 +55,7 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "TYPE recordType IS RECORD (id number(5), name varchar2(25), lastName tableA.last_name%type)";
+	protected static final String CODE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -75,7 +75,7 @@ public class RecordsImpl extends ParametersImpl implements Records {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_NAME_EDEFAULT = "recordTypeName";
+	protected static final String TYPE_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.

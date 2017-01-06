@@ -38,7 +38,7 @@ public class For4EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3167;
+	public static final int VISUAL_ID = 3300;
 
 	/**
 	* @generated
@@ -115,10 +115,10 @@ public class For4EditPart extends ShapeNodeEditPart {
 			((ForDescription4EditPart) childEditPart).setLabel(getPrimaryShape().getFigureForLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof ForForForStatementsCompartment4EditPart) {
-			IFigure pane = getPrimaryShape().getForForStatementsCompartmentFigure();
+		if (childEditPart instanceof ForForInterations_statementsCompartment4EditPart) {
+			IFigure pane = getPrimaryShape().getForInterations_statementsCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((ForForForStatementsCompartment4EditPart) childEditPart).getFigure());
+			pane.add(((ForForInterations_statementsCompartment4EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -131,9 +131,9 @@ public class For4EditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof ForDescription4EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof ForForForStatementsCompartment4EditPart) {
-			IFigure pane = getPrimaryShape().getForForStatementsCompartmentFigure();
-			pane.remove(((ForForForStatementsCompartment4EditPart) childEditPart).getFigure());
+		if (childEditPart instanceof ForForInterations_statementsCompartment4EditPart) {
+			IFigure pane = getPrimaryShape().getForInterations_statementsCompartmentFigure();
+			pane.remove(((ForForInterations_statementsCompartment4EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -163,8 +163,8 @@ public class For4EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof ForForForStatementsCompartment4EditPart) {
-			return getPrimaryShape().getForForStatementsCompartmentFigure();
+		if (editPart instanceof ForForInterations_statementsCompartment4EditPart) {
+			return getPrimaryShape().getForInterations_statementsCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -275,11 +275,11 @@ public class For4EditPart extends ShapeNodeEditPart {
 		/**
 		* @generated
 		*/
-		private RectangleFigure fForForStatementsCompartmentFigure;
+		private RectangleFigure fForInterations_statementsCompartmentFigure;
 
 		/**
-			 * @generated
-			 */
+				 * @generated
+				 */
 		public ForFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -298,11 +298,11 @@ public class For4EditPart extends ShapeNodeEditPart {
 
 			this.add(fFigureForLabelFigure);
 
-			fForForStatementsCompartmentFigure = new RectangleFigure();
+			fForInterations_statementsCompartmentFigure = new RectangleFigure();
 
-			fForForStatementsCompartmentFigure.setOutline(false);
+			fForInterations_statementsCompartmentFigure.setOutline(false);
 
-			this.add(fForForStatementsCompartmentFigure);
+			this.add(fForInterations_statementsCompartmentFigure);
 
 		}
 
@@ -316,8 +316,8 @@ public class For4EditPart extends ShapeNodeEditPart {
 		/**
 		* @generated
 		*/
-		public RectangleFigure getForForStatementsCompartmentFigure() {
-			return fForForStatementsCompartmentFigure;
+		public RectangleFigure getForInterations_statementsCompartmentFigure() {
+			return fForInterations_statementsCompartmentFigure;
 		}
 
 	}

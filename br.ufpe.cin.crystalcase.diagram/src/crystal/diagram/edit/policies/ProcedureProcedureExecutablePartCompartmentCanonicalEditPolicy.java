@@ -25,69 +25,22 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
-import crystal.diagram.edit.parts.CallFunction2EditPart;
-import crystal.diagram.edit.parts.CallFunction5EditPart;
-import crystal.diagram.edit.parts.CallFunction7EditPart;
-import crystal.diagram.edit.parts.CallFunction8EditPart;
-import crystal.diagram.edit.parts.CallFunctionEditPart;
-import crystal.diagram.edit.parts.CallProcedure2EditPart;
-import crystal.diagram.edit.parts.CallProcedure5EditPart;
-import crystal.diagram.edit.parts.CallProcedure7EditPart;
-import crystal.diagram.edit.parts.CallProcedure8EditPart;
-import crystal.diagram.edit.parts.CallProcedureEditPart;
-import crystal.diagram.edit.parts.Case5EditPart;
-import crystal.diagram.edit.parts.Case7EditPart;
-import crystal.diagram.edit.parts.Case8EditPart;
-import crystal.diagram.edit.parts.CaseEditPart;
-import crystal.diagram.edit.parts.Close2EditPart;
-import crystal.diagram.edit.parts.Close5EditPart;
-import crystal.diagram.edit.parts.Close7EditPart;
-import crystal.diagram.edit.parts.Close8EditPart;
-import crystal.diagram.edit.parts.CloseEditPart;
-import crystal.diagram.edit.parts.Delete5EditPart;
-import crystal.diagram.edit.parts.Delete7EditPart;
-import crystal.diagram.edit.parts.Delete8EditPart;
-import crystal.diagram.edit.parts.DeleteEditPart;
+import crystal.diagram.edit.parts.CallFunction6EditPart;
+import crystal.diagram.edit.parts.CallProcedure6EditPart;
+import crystal.diagram.edit.parts.Case6EditPart;
+import crystal.diagram.edit.parts.Close6EditPart;
+import crystal.diagram.edit.parts.Delete6EditPart;
 import crystal.diagram.edit.parts.ExceptionEditPart;
-import crystal.diagram.edit.parts.Expression7EditPart;
 import crystal.diagram.edit.parts.ExpressionEditPart;
-import crystal.diagram.edit.parts.Fetch2EditPart;
-import crystal.diagram.edit.parts.Fetch5EditPart;
-import crystal.diagram.edit.parts.Fetch7EditPart;
-import crystal.diagram.edit.parts.Fetch8EditPart;
-import crystal.diagram.edit.parts.FetchEditPart;
-import crystal.diagram.edit.parts.For2EditPart;
-import crystal.diagram.edit.parts.For5EditPart;
-import crystal.diagram.edit.parts.For7EditPart;
-import crystal.diagram.edit.parts.For8EditPart;
-import crystal.diagram.edit.parts.ForEditPart;
+import crystal.diagram.edit.parts.Fetch6EditPart;
+import crystal.diagram.edit.parts.For6EditPart;
 import crystal.diagram.edit.parts.IfEditPart;
-import crystal.diagram.edit.parts.Insert5EditPart;
-import crystal.diagram.edit.parts.Insert7EditPart;
-import crystal.diagram.edit.parts.Insert8EditPart;
-import crystal.diagram.edit.parts.InsertEditPart;
-import crystal.diagram.edit.parts.Loop2EditPart;
-import crystal.diagram.edit.parts.Loop5EditPart;
-import crystal.diagram.edit.parts.Loop7EditPart;
-import crystal.diagram.edit.parts.Loop8EditPart;
-import crystal.diagram.edit.parts.LoopEditPart;
-import crystal.diagram.edit.parts.Open2EditPart;
-import crystal.diagram.edit.parts.Open5EditPart;
-import crystal.diagram.edit.parts.Open7EditPart;
-import crystal.diagram.edit.parts.Open8EditPart;
-import crystal.diagram.edit.parts.OpenEditPart;
-import crystal.diagram.edit.parts.Select5EditPart;
-import crystal.diagram.edit.parts.Select7EditPart;
-import crystal.diagram.edit.parts.Select8EditPart;
-import crystal.diagram.edit.parts.SelectEditPart;
-import crystal.diagram.edit.parts.Update5EditPart;
-import crystal.diagram.edit.parts.Update7EditPart;
-import crystal.diagram.edit.parts.Update8EditPart;
-import crystal.diagram.edit.parts.UpdateEditPart;
-import crystal.diagram.edit.parts.While5EditPart;
-import crystal.diagram.edit.parts.While7EditPart;
-import crystal.diagram.edit.parts.While8EditPart;
-import crystal.diagram.edit.parts.WhileEditPart;
+import crystal.diagram.edit.parts.Insert6EditPart;
+import crystal.diagram.edit.parts.Loop6EditPart;
+import crystal.diagram.edit.parts.Open6EditPart;
+import crystal.diagram.edit.parts.Select6EditPart;
+import crystal.diagram.edit.parts.Update6EditPart;
+import crystal.diagram.edit.parts.While6EditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
 import crystal.diagram.part.CrystalVisualIDRegistry;
@@ -113,7 +66,7 @@ public class ProcedureProcedureExecutablePartCompartmentCanonicalEditPolicy exte
 	* @generated
 	*/
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return CrystalPackage.eINSTANCE.getProcedure_ExecutablePart();
+		return CrystalPackage.eINSTANCE.getSubprograms_ExecutablePart();
 	}
 
 	/**
@@ -125,7 +78,7 @@ public class ProcedureProcedureExecutablePartCompartmentCanonicalEditPolicy exte
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getProcedureProcedureExecutablePartCompartment_7021SemanticChildren(viewObject);
+				.getProcedureProcedureExecutablePartCompartment_7108SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -148,19 +101,19 @@ public class ProcedureProcedureExecutablePartCompartmentCanonicalEditPolicy exte
 		case ExpressionEditPart.VISUAL_ID:
 		case ExceptionEditPart.VISUAL_ID:
 		case IfEditPart.VISUAL_ID:
-		case Case8EditPart.VISUAL_ID:
-		case Insert8EditPart.VISUAL_ID:
-		case Update8EditPart.VISUAL_ID:
-		case Delete8EditPart.VISUAL_ID:
-		case Select8EditPart.VISUAL_ID:
-		case While8EditPart.VISUAL_ID:
-		case For8EditPart.VISUAL_ID:
-		case Loop8EditPart.VISUAL_ID:
-		case Open8EditPart.VISUAL_ID:
-		case Fetch8EditPart.VISUAL_ID:
-		case Close8EditPart.VISUAL_ID:
-		case CallProcedure8EditPart.VISUAL_ID:
-		case CallFunction8EditPart.VISUAL_ID:
+		case Case6EditPart.VISUAL_ID:
+		case Insert6EditPart.VISUAL_ID:
+		case Update6EditPart.VISUAL_ID:
+		case Delete6EditPart.VISUAL_ID:
+		case Select6EditPart.VISUAL_ID:
+		case While6EditPart.VISUAL_ID:
+		case For6EditPart.VISUAL_ID:
+		case Loop6EditPart.VISUAL_ID:
+		case Open6EditPart.VISUAL_ID:
+		case Fetch6EditPart.VISUAL_ID:
+		case Close6EditPart.VISUAL_ID:
+		case CallProcedure6EditPart.VISUAL_ID:
+		case CallFunction6EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -175,7 +128,7 @@ public class ProcedureProcedureExecutablePartCompartmentCanonicalEditPolicy exte
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getProcedureProcedureExecutablePartCompartment_7021SemanticChildren((View) getHost().getModel());
+				.getProcedureProcedureExecutablePartCompartment_7108SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

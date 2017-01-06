@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CallFunctionItemProvider extends StatementsItemProvider {
+public class CallFunctionItemProvider extends CallBlocksItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,7 +46,6 @@ public class CallFunctionItemProvider extends StatementsItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassNamePropertyDescriptor(object);
-			addNameSubroutinePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -65,28 +64,6 @@ public class CallFunctionItemProvider extends StatementsItemProvider {
 				 getString("_UI_CallFunction_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CallFunction_className_feature", "_UI_CallFunction_type"),
 				 CrystalPackage.Literals.CALL_FUNCTION__CLASS_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name Subroutine feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNameSubroutinePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CallFunction_nameSubroutine_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CallFunction_nameSubroutine_feature", "_UI_CallFunction_type"),
-				 CrystalPackage.Literals.CALL_FUNCTION__NAME_SUBROUTINE,
 				 true,
 				 false,
 				 false,
@@ -134,7 +111,6 @@ public class CallFunctionItemProvider extends StatementsItemProvider {
 
 		switch (notification.getFeatureID(CallFunction.class)) {
 			case CrystalPackage.CALL_FUNCTION__CLASS_NAME:
-			case CrystalPackage.CALL_FUNCTION__NAME_SUBROUTINE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

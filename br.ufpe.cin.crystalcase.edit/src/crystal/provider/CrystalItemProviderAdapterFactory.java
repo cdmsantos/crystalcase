@@ -325,6 +325,29 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link crystal.Options} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OptionsItemProvider optionsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link crystal.Options}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOptionsAdapter() {
+		if (optionsItemProvider == null) {
+			optionsItemProvider = new OptionsItemProvider(this);
+		}
+
+		return optionsItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link crystal.Insert} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -414,29 +437,6 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 		}
 
 		return selectItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link crystal.Selector} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SelectorItemProvider selectorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link crystal.Selector}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSelectorAdapter() {
-		if (selectorItemProvider == null) {
-			selectorItemProvider = new SelectorItemProvider(this);
-		}
-
-		return selectorItemProvider;
 	}
 
 	/**
@@ -647,26 +647,26 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link crystal.SelectorTransition} instances.
+	 * This keeps track of the one adapter used for all {@link crystal.OptionsTransition} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SelectorTransitionItemProvider selectorTransitionItemProvider;
+	protected OptionsTransitionItemProvider optionsTransitionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link crystal.SelectorTransition}.
+	 * This creates an adapter for a {@link crystal.OptionsTransition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSelectorTransitionAdapter() {
-		if (selectorTransitionItemProvider == null) {
-			selectorTransitionItemProvider = new SelectorTransitionItemProvider(this);
+	public Adapter createOptionsTransitionAdapter() {
+		if (optionsTransitionItemProvider == null) {
+			optionsTransitionItemProvider = new OptionsTransitionItemProvider(this);
 		}
 
-		return selectorTransitionItemProvider;
+		return optionsTransitionItemProvider;
 	}
 
 	/**
@@ -803,7 +803,7 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 		if (exceptionItemProvider != null) exceptionItemProvider.dispose();
 		if (ifItemProvider != null) ifItemProvider.dispose();
 		if (caseItemProvider != null) caseItemProvider.dispose();
-		if (selectorItemProvider != null) selectorItemProvider.dispose();
+		if (optionsItemProvider != null) optionsItemProvider.dispose();
 		if (insertItemProvider != null) insertItemProvider.dispose();
 		if (updateItemProvider != null) updateItemProvider.dispose();
 		if (deleteItemProvider != null) deleteItemProvider.dispose();
@@ -817,7 +817,7 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 		if (callProcedureItemProvider != null) callProcedureItemProvider.dispose();
 		if (callFunctionItemProvider != null) callFunctionItemProvider.dispose();
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
-		if (selectorTransitionItemProvider != null) selectorTransitionItemProvider.dispose();
+		if (optionsTransitionItemProvider != null) optionsTransitionItemProvider.dispose();
 	}
 
 }

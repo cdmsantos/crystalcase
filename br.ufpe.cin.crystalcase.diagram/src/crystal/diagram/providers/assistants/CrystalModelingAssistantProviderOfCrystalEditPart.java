@@ -18,14 +18,15 @@ import crystal.diagram.providers.CrystalModelingAssistantProvider;
 public class CrystalModelingAssistantProviderOfCrystalEditPart extends CrystalModelingAssistantProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	@Override
+
 	public List<IElementType> getTypesForPopupBar(IAdaptable host) {
 		List<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(CrystalElementTypes.Procedure_2007);
-		types.add(CrystalElementTypes.Function_2008);
-		types.add(CrystalElementTypes.AnonymousBlock_2009);
+		types.add(CrystalElementTypes.Procedure_2010);
+		types.add(CrystalElementTypes.Function_2011);
+		types.add(CrystalElementTypes.AnonymousBlock_2012);
 		return types;
 	}
 

@@ -27,7 +27,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
 import crystal.diagram.edit.policies.OpenDiagramEditPolicy;
-import crystal.diagram.edit.policies.While10ItemSemanticEditPolicy;
 import crystal.diagram.part.CrystalVisualIDRegistry;
 
 /**
@@ -62,7 +61,6 @@ public class While10EditPart extends ShapeNodeEditPart {
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new While10ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -115,12 +113,6 @@ public class While10EditPart extends ShapeNodeEditPart {
 			((WhileDescription10EditPart) childEditPart).setLabel(getPrimaryShape().getFigureWhileLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof WhileWhileWhileStatementsCompartment10EditPart) {
-			IFigure pane = getPrimaryShape().getWhileWhileStatementsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((WhileWhileWhileStatementsCompartment10EditPart) childEditPart).getFigure());
-			return true;
-		}
 		return false;
 	}
 
@@ -129,11 +121,6 @@ public class While10EditPart extends ShapeNodeEditPart {
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof WhileDescription10EditPart) {
-			return true;
-		}
-		if (childEditPart instanceof WhileWhileWhileStatementsCompartment10EditPart) {
-			IFigure pane = getPrimaryShape().getWhileWhileStatementsCompartmentFigure();
-			pane.remove(((WhileWhileWhileStatementsCompartment10EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -163,9 +150,7 @@ public class While10EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof WhileWhileWhileStatementsCompartment10EditPart) {
-			return getPrimaryShape().getWhileWhileStatementsCompartmentFigure();
-		}
+
 		return getContentPane();
 	}
 

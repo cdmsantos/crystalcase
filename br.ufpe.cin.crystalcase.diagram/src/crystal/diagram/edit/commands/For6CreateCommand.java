@@ -17,9 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.For;
-import crystal.Function;
-import crystal.If;
-import crystal.Selector;
+import crystal.Subprograms;
 
 /**
  * @generated
@@ -59,8 +57,8 @@ public class For6CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		For newElement = CrystalFactory.eINSTANCE.createFor();
 
-		If owner = (If) getElementToEdit();
-		owner.getElses().add(newElement);
+		Subprograms owner = (Subprograms) getElementToEdit();
+		owner.getExecutablePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

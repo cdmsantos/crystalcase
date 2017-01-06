@@ -38,7 +38,7 @@ public class While2EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3228;
+	public static final int VISUAL_ID = 3261;
 
 	/**
 	* @generated
@@ -115,10 +115,10 @@ public class While2EditPart extends ShapeNodeEditPart {
 			((WhileDescription2EditPart) childEditPart).setLabel(getPrimaryShape().getFigureWhileLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof WhileWhileWhileStatementsCompartment2EditPart) {
-			IFigure pane = getPrimaryShape().getWhileWhileStatementsCompartmentFigure();
+		if (childEditPart instanceof WhileWhileInterations_statementsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileInterations_statementsCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((WhileWhileWhileStatementsCompartment2EditPart) childEditPart).getFigure());
+			pane.add(((WhileWhileInterations_statementsCompartment2EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -131,9 +131,9 @@ public class While2EditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof WhileDescription2EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof WhileWhileWhileStatementsCompartment2EditPart) {
-			IFigure pane = getPrimaryShape().getWhileWhileStatementsCompartmentFigure();
-			pane.remove(((WhileWhileWhileStatementsCompartment2EditPart) childEditPart).getFigure());
+		if (childEditPart instanceof WhileWhileInterations_statementsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getWhileInterations_statementsCompartmentFigure();
+			pane.remove(((WhileWhileInterations_statementsCompartment2EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -163,8 +163,8 @@ public class While2EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof WhileWhileWhileStatementsCompartment2EditPart) {
-			return getPrimaryShape().getWhileWhileStatementsCompartmentFigure();
+		if (editPart instanceof WhileWhileInterations_statementsCompartment2EditPart) {
+			return getPrimaryShape().getWhileInterations_statementsCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -275,11 +275,11 @@ public class While2EditPart extends ShapeNodeEditPart {
 		/**
 		* @generated
 		*/
-		private RectangleFigure fWhileWhileStatementsCompartmentFigure;
+		private RectangleFigure fWhileInterations_statementsCompartmentFigure;
 
 		/**
-			 * @generated
-			 */
+				 * @generated
+				 */
 		public WhileFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -298,11 +298,11 @@ public class While2EditPart extends ShapeNodeEditPart {
 
 			this.add(fFigureWhileLabelFigure);
 
-			fWhileWhileStatementsCompartmentFigure = new RectangleFigure();
+			fWhileInterations_statementsCompartmentFigure = new RectangleFigure();
 
-			fWhileWhileStatementsCompartmentFigure.setOutline(false);
+			fWhileInterations_statementsCompartmentFigure.setOutline(false);
 
-			this.add(fWhileWhileStatementsCompartmentFigure);
+			this.add(fWhileInterations_statementsCompartmentFigure);
 
 		}
 
@@ -316,8 +316,8 @@ public class While2EditPart extends ShapeNodeEditPart {
 		/**
 		* @generated
 		*/
-		public RectangleFigure getWhileWhileStatementsCompartmentFigure() {
-			return fWhileWhileStatementsCompartmentFigure;
+		public RectangleFigure getWhileInterations_statementsCompartmentFigure() {
+			return fWhileInterations_statementsCompartmentFigure;
 		}
 
 	}

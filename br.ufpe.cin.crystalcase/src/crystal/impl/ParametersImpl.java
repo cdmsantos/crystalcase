@@ -76,17 +76,7 @@ public abstract class ParametersImpl extends EObjectImpl implements Parameters {
 	protected ParametersImpl() {
 		super();
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return CrystalPackage.Literals.PARAMETERS;
-	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,100 +91,8 @@ public abstract class ParametersImpl extends EObjectImpl implements Parameters {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.PARAMETERS__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ParameterType getType() {
 		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(ParameterType newType) {
-		ParameterType oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.PARAMETERS__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case CrystalPackage.PARAMETERS__NAME:
-				return getName();
-			case CrystalPackage.PARAMETERS__TYPE:
-				return getType();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case CrystalPackage.PARAMETERS__NAME:
-				setName((String)newValue);
-				return;
-			case CrystalPackage.PARAMETERS__TYPE:
-				setType((ParameterType)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case CrystalPackage.PARAMETERS__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case CrystalPackage.PARAMETERS__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case CrystalPackage.PARAMETERS__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case CrystalPackage.PARAMETERS__TYPE:
-				return type != TYPE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
 	}
 
 	/**

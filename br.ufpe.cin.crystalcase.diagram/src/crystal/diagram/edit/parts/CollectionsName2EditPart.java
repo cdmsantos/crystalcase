@@ -60,7 +60,7 @@ public class CollectionsName2EditPart extends CompartmentEditPart implements ITe
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5019;
+	public static final int VISUAL_ID = 5346;
 
 	/**
 	 * @generated
@@ -295,7 +295,7 @@ public class CollectionsName2EditPart extends CompartmentEditPart implements ITe
 	 */
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Collections_3019, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Collections_3338, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CollectionsName2EditPart.VISUAL_ID));
 		}
 		return parser;

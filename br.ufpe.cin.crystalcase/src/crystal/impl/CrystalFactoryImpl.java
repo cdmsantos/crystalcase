@@ -25,6 +25,8 @@ import crystal.If;
 import crystal.Insert;
 import crystal.Loop;
 import crystal.Open;
+import crystal.Options;
+import crystal.OptionsTransition;
 import crystal.ParameterType;
 import crystal.Procedure;
 import crystal.Records;
@@ -100,7 +102,7 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 			case CrystalPackage.EXCEPTION: return createException();
 			case CrystalPackage.IF: return createIf();
 			case CrystalPackage.CASE: return createCase();
-			case CrystalPackage.SELECTOR: return createSelector();
+			case CrystalPackage.OPTIONS: return createOptions();
 			case CrystalPackage.INSERT: return createInsert();
 			case CrystalPackage.UPDATE: return createUpdate();
 			case CrystalPackage.DELETE: return createDelete();
@@ -114,7 +116,7 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 			case CrystalPackage.CALL_PROCEDURE: return createCallProcedure();
 			case CrystalPackage.CALL_FUNCTION: return createCallFunction();
 			case CrystalPackage.TRANSITION: return createTransition();
-			case CrystalPackage.SELECTOR_TRANSITION: return createSelectorTransition();
+			case CrystalPackage.OPTIONS_TRANSITION: return createOptionsTransition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -273,6 +275,16 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Options createOptions() {
+		OptionsImpl options = new OptionsImpl();
+		return options;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Insert createInsert() {
 		InsertImpl insert = new InsertImpl();
 		return insert;
@@ -306,16 +318,6 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 	public Select createSelect() {
 		SelectImpl select = new SelectImpl();
 		return select;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Selector createSelector() {
-		SelectorImpl selector = new SelectorImpl();
-		return selector;
 	}
 
 	/**
@@ -413,9 +415,9 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SelectorTransition createSelectorTransition() {
-		SelectorTransitionImpl selectorTransition = new SelectorTransitionImpl();
-		return selectorTransition;
+	public OptionsTransition createOptionsTransition() {
+		OptionsTransitionImpl optionsTransition = new OptionsTransitionImpl();
+		return optionsTransition;
 	}
 
 	/**

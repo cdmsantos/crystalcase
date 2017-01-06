@@ -20,12 +20,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link crystal.impl.OpenImpl#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.impl.OpenImpl#getCursorName <em>Cursor Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class OpenImpl extends StatementsImpl implements Open {
+public class OpenImpl extends CursorOperationsImpl implements Open {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,7 +33,7 @@ public class OpenImpl extends StatementsImpl implements Open {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "Open";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -45,26 +44,6 @@ public class OpenImpl extends StatementsImpl implements Open {
 	 * @ordered
 	 */
 	protected String className = CLASS_NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCursorName() <em>Cursor Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCursorName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CURSOR_NAME_EDEFAULT = "cursorName";
-
-	/**
-	 * The cached value of the '{@link #getCursorName() <em>Cursor Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCursorName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String cursorName = CURSOR_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,34 +90,11 @@ public class OpenImpl extends StatementsImpl implements Open {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCursorName() {
-		return cursorName;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCursorName(String newCursorName) {
-		String oldCursorName = cursorName;
-		cursorName = newCursorName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.OPEN__CURSOR_NAME, oldCursorName, cursorName));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CrystalPackage.OPEN__CLASS_NAME:
 				return getClassName();
-			case CrystalPackage.OPEN__CURSOR_NAME:
-				return getCursorName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -153,9 +109,6 @@ public class OpenImpl extends StatementsImpl implements Open {
 		switch (featureID) {
 			case CrystalPackage.OPEN__CLASS_NAME:
 				setClassName((String)newValue);
-				return;
-			case CrystalPackage.OPEN__CURSOR_NAME:
-				setCursorName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -172,9 +125,6 @@ public class OpenImpl extends StatementsImpl implements Open {
 			case CrystalPackage.OPEN__CLASS_NAME:
 				setClassName(CLASS_NAME_EDEFAULT);
 				return;
-			case CrystalPackage.OPEN__CURSOR_NAME:
-				setCursorName(CURSOR_NAME_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -189,8 +139,6 @@ public class OpenImpl extends StatementsImpl implements Open {
 		switch (featureID) {
 			case CrystalPackage.OPEN__CLASS_NAME:
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
-			case CrystalPackage.OPEN__CURSOR_NAME:
-				return CURSOR_NAME_EDEFAULT == null ? cursorName != null : !CURSOR_NAME_EDEFAULT.equals(cursorName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -207,8 +155,6 @@ public class OpenImpl extends StatementsImpl implements Open {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (className: ");
 		result.append(className);
-		result.append(", cursorName: ");
-		result.append(cursorName);
 		result.append(')');
 		return result.toString();
 	}

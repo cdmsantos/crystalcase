@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.edit.policies;
 
 import java.util.ArrayList;
@@ -26,13 +26,9 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
 import crystal.diagram.edit.parts.Collections2EditPart;
-import crystal.diagram.edit.parts.CollectionsEditPart;
 import crystal.diagram.edit.parts.Cursor2EditPart;
-import crystal.diagram.edit.parts.CursorEditPart;
 import crystal.diagram.edit.parts.DataType2EditPart;
-import crystal.diagram.edit.parts.DataTypeEditPart;
 import crystal.diagram.edit.parts.Records2EditPart;
-import crystal.diagram.edit.parts.RecordsEditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
 import crystal.diagram.part.CrystalVisualIDRegistry;
@@ -43,8 +39,8 @@ import crystal.diagram.part.CrystalVisualIDRegistry;
 public class ProcedureProcedureParametersCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void refreshOnActivate() {
 		// Need to activate editpart children before invoking the canonical refresh for EditParts to add event listeners
 		List<?> c = getHost().getChildren();
@@ -55,21 +51,22 @@ public class ProcedureProcedureParametersCompartmentCanonicalEditPolicy extends 
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return CrystalPackage.eINSTANCE.getProcedure_Parameters();
+		return CrystalPackage.eINSTANCE.getNamedBlocks_Parameters();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	@SuppressWarnings("rawtypes")
+
 	protected List getSemanticChildrenList() {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getProcedureProcedureParametersCompartment_7020SemanticChildren(viewObject);
+				.getProcedureProcedureParametersCompartment_7109SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -77,15 +74,15 @@ public class ProcedureProcedureParametersCompartmentCanonicalEditPolicy extends 
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean isOrphaned(Collection<EObject> semanticChildren, final View view) {
 		return isMyDiagramElement(view) && !semanticChildren.contains(view.getElement());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
@@ -99,15 +96,15 @@ public class ProcedureProcedureParametersCompartmentCanonicalEditPolicy extends 
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void refreshSemantic() {
 		if (resolveSemanticElement() == null) {
 			return;
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getProcedureProcedureParametersCompartment_7020SemanticChildren((View) getHost().getModel());
+				.getProcedureProcedureParametersCompartment_7109SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

@@ -26,7 +26,6 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import crystal.diagram.edit.policies.For7ItemSemanticEditPolicy;
 import crystal.diagram.edit.policies.OpenDiagramEditPolicy;
 import crystal.diagram.part.CrystalVisualIDRegistry;
 
@@ -62,7 +61,6 @@ public class For7EditPart extends ShapeNodeEditPart {
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new For7ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -115,12 +113,6 @@ public class For7EditPart extends ShapeNodeEditPart {
 			((ForDescription7EditPart) childEditPart).setLabel(getPrimaryShape().getFigureForLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof ForForForStatementsCompartment7EditPart) {
-			IFigure pane = getPrimaryShape().getForForStatementsCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((ForForForStatementsCompartment7EditPart) childEditPart).getFigure());
-			return true;
-		}
 		return false;
 	}
 
@@ -129,11 +121,6 @@ public class For7EditPart extends ShapeNodeEditPart {
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof ForDescription7EditPart) {
-			return true;
-		}
-		if (childEditPart instanceof ForForForStatementsCompartment7EditPart) {
-			IFigure pane = getPrimaryShape().getForForStatementsCompartmentFigure();
-			pane.remove(((ForForForStatementsCompartment7EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -163,9 +150,7 @@ public class For7EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof ForForForStatementsCompartment7EditPart) {
-			return getPrimaryShape().getForForStatementsCompartmentFigure();
-		}
+
 		return getContentPane();
 	}
 

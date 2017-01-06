@@ -13,8 +13,8 @@ import crystal.diagram.part.CrystalDiagramEditorPlugin;
 public class DiagramGeneralPreferencePage extends DiagramsPreferencePage {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public DiagramGeneralPreferencePage() {
 		setPreferenceStore(CrystalDiagramEditorPlugin.getInstance().getPreferenceStore());
 	}

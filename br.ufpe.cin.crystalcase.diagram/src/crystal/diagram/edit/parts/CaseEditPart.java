@@ -38,7 +38,7 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3183;
+	public static final int VISUAL_ID = 3242;
 
 	/**
 	 * @generated
@@ -115,16 +115,16 @@ public class CaseEditPart extends ShapeNodeEditPart {
 			((CaseDescriptionEditPart) childEditPart).setLabel(getPrimaryShape().getFigureCaseLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof CaseCaseCasesCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getCaseCasesCompartmentFigure();
+		if (childEditPart instanceof CaseCaseOptionsCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseOptionsCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((CaseCaseCasesCompartmentEditPart) childEditPart).getFigure());
+			pane.add(((CaseCaseOptionsCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof CaseCaseElseStatementsCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getCaseElseStatementsCompartmentFigure();
+		if (childEditPart instanceof CaseCaseDefault_statementsCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseDefault_statementsCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((CaseCaseElseStatementsCompartmentEditPart) childEditPart).getFigure());
+			pane.add(((CaseCaseDefault_statementsCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -137,14 +137,14 @@ public class CaseEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof CaseDescriptionEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof CaseCaseCasesCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getCaseCasesCompartmentFigure();
-			pane.remove(((CaseCaseCasesCompartmentEditPart) childEditPart).getFigure());
+		if (childEditPart instanceof CaseCaseOptionsCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseOptionsCompartmentFigure();
+			pane.remove(((CaseCaseOptionsCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof CaseCaseElseStatementsCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getCaseElseStatementsCompartmentFigure();
-			pane.remove(((CaseCaseElseStatementsCompartmentEditPart) childEditPart).getFigure());
+		if (childEditPart instanceof CaseCaseDefault_statementsCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseDefault_statementsCompartmentFigure();
+			pane.remove(((CaseCaseDefault_statementsCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -174,11 +174,11 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof CaseCaseCasesCompartmentEditPart) {
-			return getPrimaryShape().getCaseCasesCompartmentFigure();
+		if (editPart instanceof CaseCaseOptionsCompartmentEditPart) {
+			return getPrimaryShape().getCaseOptionsCompartmentFigure();
 		}
-		if (editPart instanceof CaseCaseElseStatementsCompartmentEditPart) {
-			return getPrimaryShape().getCaseElseStatementsCompartmentFigure();
+		if (editPart instanceof CaseCaseDefault_statementsCompartmentEditPart) {
+			return getPrimaryShape().getCaseDefault_statementsCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -289,16 +289,16 @@ public class CaseEditPart extends ShapeNodeEditPart {
 		/**
 		* @generated
 		*/
-		private RectangleFigure fCaseCasesCompartmentFigure;
+		private RectangleFigure fCaseOptionsCompartmentFigure;
 
 		/**
 		* @generated
 		*/
-		private RectangleFigure fCaseElseStatementsCompartmentFigure;
+		private RectangleFigure fCaseDefault_statementsCompartmentFigure;
 
 		/**
-				 * @generated
-				 */
+					 * @generated
+					 */
 		public CaseFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -317,17 +317,17 @@ public class CaseEditPart extends ShapeNodeEditPart {
 
 			this.add(fFigureCaseLabelFigure);
 
-			fCaseCasesCompartmentFigure = new RectangleFigure();
+			fCaseOptionsCompartmentFigure = new RectangleFigure();
 
-			fCaseCasesCompartmentFigure.setOutline(false);
+			fCaseOptionsCompartmentFigure.setOutline(false);
 
-			this.add(fCaseCasesCompartmentFigure);
+			this.add(fCaseOptionsCompartmentFigure);
 
-			fCaseElseStatementsCompartmentFigure = new RectangleFigure();
+			fCaseDefault_statementsCompartmentFigure = new RectangleFigure();
 
-			fCaseElseStatementsCompartmentFigure.setOutline(false);
+			fCaseDefault_statementsCompartmentFigure.setOutline(false);
 
-			this.add(fCaseElseStatementsCompartmentFigure);
+			this.add(fCaseDefault_statementsCompartmentFigure);
 
 		}
 
@@ -341,15 +341,15 @@ public class CaseEditPart extends ShapeNodeEditPart {
 		/**
 		* @generated
 		*/
-		public RectangleFigure getCaseCasesCompartmentFigure() {
-			return fCaseCasesCompartmentFigure;
+		public RectangleFigure getCaseOptionsCompartmentFigure() {
+			return fCaseOptionsCompartmentFigure;
 		}
 
 		/**
 		* @generated
 		*/
-		public RectangleFigure getCaseElseStatementsCompartmentFigure() {
-			return fCaseElseStatementsCompartmentFigure;
+		public RectangleFigure getCaseDefault_statementsCompartmentFigure() {
+			return fCaseDefault_statementsCompartmentFigure;
 		}
 
 	}

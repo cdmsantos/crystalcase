@@ -295,8 +295,6 @@ public class CaseDescription9EditPart extends CompartmentEditPart implements ITe
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Case_3077, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CaseDescription9EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

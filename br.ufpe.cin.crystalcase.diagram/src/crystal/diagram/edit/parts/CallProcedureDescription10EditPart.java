@@ -295,9 +295,6 @@ public class CallProcedureDescription10EditPart extends CompartmentEditPart impl
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.CallProcedure_3050, getParserElement(),
-					CrystalVisualIDRegistry
-							.getType(crystal.diagram.edit.parts.CallProcedureDescription10EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

@@ -60,7 +60,7 @@ public class ExceptionDescription5EditPart extends CompartmentEditPart implement
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5159;
+	public static final int VISUAL_ID = 5281;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class ExceptionDescription5EditPart extends CompartmentEditPart implement
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Exception_3151, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Exception_3283, getParserElement(),
 					CrystalVisualIDRegistry
 							.getType(crystal.diagram.edit.parts.ExceptionDescription5EditPart.VISUAL_ID));
 		}

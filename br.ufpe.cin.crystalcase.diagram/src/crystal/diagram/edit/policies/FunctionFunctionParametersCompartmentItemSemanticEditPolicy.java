@@ -1,23 +1,15 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
 import crystal.diagram.edit.commands.Collections2CreateCommand;
-import crystal.diagram.edit.commands.Collections3CreateCommand;
-import crystal.diagram.edit.commands.Collections4CreateCommand;
 import crystal.diagram.edit.commands.Cursor2CreateCommand;
-import crystal.diagram.edit.commands.Cursor3CreateCommand;
-import crystal.diagram.edit.commands.Cursor4CreateCommand;
 import crystal.diagram.edit.commands.DataType2CreateCommand;
-import crystal.diagram.edit.commands.DataType3CreateCommand;
-import crystal.diagram.edit.commands.DataType4CreateCommand;
 import crystal.diagram.edit.commands.Records2CreateCommand;
-import crystal.diagram.edit.commands.Records3CreateCommand;
-import crystal.diagram.edit.commands.Records4CreateCommand;
 import crystal.diagram.providers.CrystalElementTypes;
 
 /**
@@ -26,27 +18,27 @@ import crystal.diagram.providers.CrystalElementTypes;
 public class FunctionFunctionParametersCompartmentItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public FunctionFunctionParametersCompartmentItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Function_2008);
+		super(CrystalElementTypes.Function_2011);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (CrystalElementTypes.DataType_3022 == req.getElementType()) {
-			return getGEFWrapper(new DataType4CreateCommand(req));
+		if (CrystalElementTypes.DataType_3337 == req.getElementType()) {
+			return getGEFWrapper(new DataType2CreateCommand(req));
 		}
-		if (CrystalElementTypes.Collections_3023 == req.getElementType()) {
-			return getGEFWrapper(new Collections4CreateCommand(req));
+		if (CrystalElementTypes.Collections_3338 == req.getElementType()) {
+			return getGEFWrapper(new Collections2CreateCommand(req));
 		}
-		if (CrystalElementTypes.Records_3024 == req.getElementType()) {
-			return getGEFWrapper(new Records4CreateCommand(req));
+		if (CrystalElementTypes.Records_3339 == req.getElementType()) {
+			return getGEFWrapper(new Records2CreateCommand(req));
 		}
-		if (CrystalElementTypes.Cursor_3025 == req.getElementType()) {
-			return getGEFWrapper(new Cursor4CreateCommand(req));
+		if (CrystalElementTypes.Cursor_3340 == req.getElementType()) {
+			return getGEFWrapper(new Cursor2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

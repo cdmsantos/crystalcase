@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.edit.policies;
 
 import org.eclipse.emf.ecore.EAnnotation;
@@ -19,15 +19,15 @@ import crystal.diagram.providers.CrystalElementTypes;
 public class Records3ItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Records3ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Records_3073);
+		super(CrystalElementTypes.Records_3028);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDestroyElementCommand(DestroyElementRequest req) {
 		View view = (View) getHost().getModel();
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(getEditingDomain(), null);

@@ -17,8 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.Expression;
-import crystal.For;
-import crystal.While;
+import crystal.IterationStructures;
 
 /**
  * @generated
@@ -58,8 +57,8 @@ public class Expression4CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Expression newElement = CrystalFactory.eINSTANCE.createExpression();
 
-		While owner = (While) getElementToEdit();
-		owner.getWhileStatements().add(newElement);
+		IterationStructures owner = (IterationStructures) getElementToEdit();
+		owner.getInterations_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

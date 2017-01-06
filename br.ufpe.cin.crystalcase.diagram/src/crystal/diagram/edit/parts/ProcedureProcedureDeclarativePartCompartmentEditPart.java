@@ -34,7 +34,7 @@ public class ProcedureProcedureDeclarativePartCompartmentEditPart extends ShapeC
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 7015;
+	public static final int VISUAL_ID = 7107;
 
 	/**
 	* @generated
@@ -94,16 +94,16 @@ public class ProcedureProcedureDeclarativePartCompartmentEditPart extends ShapeC
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
-			if (type == CrystalElementTypes.DataType_3052) {
+			if (type == CrystalElementTypes.DataType_3333) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Collections_3053) {
+			if (type == CrystalElementTypes.Collections_3334) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Records_3054) {
+			if (type == CrystalElementTypes.Records_3335) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Cursor_3055) {
+			if (type == CrystalElementTypes.Cursor_3336) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExpressionTest extends StatementsTest {
+public class ExpressionTest extends AdditionalOperationsTest {
 
 	/**
 	 * <!-- begin-user-doc -->

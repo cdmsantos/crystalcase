@@ -295,8 +295,6 @@ public class OpenDescription10EditPart extends CompartmentEditPart implements IT
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Open_3047, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.OpenDescription10EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

@@ -2,17 +2,22 @@
  */
 package crystal.impl;
 
+import crystal.AdditionalOperations;
 import crystal.AnonymousBlock;
+import crystal.CallBlocks;
 import crystal.CallFunction;
 import crystal.CallProcedure;
 import crystal.Case;
 import crystal.Close;
 import crystal.Collections;
+import crystal.ConditionalStructures;
 import crystal.Crystal;
 import crystal.CrystalCase;
 import crystal.CrystalFactory;
 import crystal.CrystalPackage;
 import crystal.Cursor;
+import crystal.CursorOperations;
+import crystal.DataAbstractions;
 import crystal.DataType;
 import crystal.DataTypeOptions;
 import crystal.Delete;
@@ -23,12 +28,18 @@ import crystal.ForCounter;
 import crystal.Function;
 import crystal.If;
 import crystal.Insert;
+import crystal.IterationStructures;
+import crystal.Links;
 import crystal.Loop;
+import crystal.NamedBlocks;
 import crystal.Open;
+import crystal.Options;
+import crystal.OptionsTransition;
 import crystal.ParameterType;
 import crystal.Parameters;
 import crystal.Procedure;
 import crystal.Records;
+import crystal.SQLOperations;
 import crystal.Select;
 import crystal.Selector;
 import crystal.SelectorTransition;
@@ -72,6 +83,13 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass namedBlocksEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass procedureEClass = null;
 
 	/**
@@ -93,7 +111,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parametersEClass = null;
+	private EClass dataAbstractionsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,6 +153,48 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass callBlocksEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cursorOperationsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sqlOperationsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iterationStructuresEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conditionalStructuresEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass additionalOperationsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass exceptionEClass = null;
 
 	/**
@@ -150,6 +210,13 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * @generated
 	 */
 	private EClass caseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass optionsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,13 +245,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * @generated
 	 */
 	private EClass selectEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass selectorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -247,6 +307,13 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass linksEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass transitionEClass = null;
 
 	/**
@@ -254,7 +321,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass selectorTransitionEClass = null;
+	private EClass optionsTransitionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -359,7 +426,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCrystal_Transitions() {
+	public EReference getCrystal_Links() {
 		return (EReference)crystalEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -368,34 +435,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCrystal_Procedures() {
-		return (EReference)crystalEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCrystal_Functions() {
-		return (EReference)crystalEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCrystal_Blocks() {
-		return (EReference)crystalEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCrystal_SelectorTransitions() {
+	public EReference getCrystal_Subprograms() {
 		return (EReference)crystalEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -413,8 +453,44 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSubprograms_Name() {
-		return (EAttribute)subprogramsEClass.getEStructuralFeatures().get(0);
+	public EReference getSubprograms_DeclarativePart() {
+		return (EReference)subprogramsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSubprograms_ExecutablePart() {
+		return (EReference)subprogramsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNamedBlocks() {
+		return namedBlocksEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedBlocks_Name() {
+		return (EAttribute)namedBlocksEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNamedBlocks_Parameters() {
+		return (EReference)namedBlocksEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -431,33 +507,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProcedure_DeclarativePart() {
-		return (EReference)procedureEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProcedure_Parameters() {
-		return (EReference)procedureEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProcedure_ExecutablePart() {
-		return (EReference)procedureEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getFunction() {
 		return functionEClass;
 	}
@@ -467,35 +516,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunction_DeclarativePart() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getFunction_Parameters() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getFunction_ReturnPart() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getFunction_ExecutablePart() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(3);
+		return (EReference)functionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -512,8 +534,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAnonymousBlock_DeclarativePart() {
-		return (EReference)anonymousBlockEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAnonymousBlock_Description() {
+		return (EAttribute)anonymousBlockEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -521,8 +543,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAnonymousBlock_ExecutablePart() {
-		return (EReference)anonymousBlockEClass.getEStructuralFeatures().get(1);
+	public EClass getDataAbstractions() {
+		return dataAbstractionsEClass;
 	}
 
 	/**
@@ -530,8 +552,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameters() {
-		return parametersEClass;
+	public EAttribute getDataAbstractions_Name() {
+		return (EAttribute)dataAbstractionsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -539,17 +561,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getParameters_Name() {
-		return (EAttribute)parametersEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getParameters_Type() {
-		return (EAttribute)parametersEClass.getEStructuralFeatures().get(1);
+	public EAttribute getDataAbstractions_Type() {
+		return (EAttribute)dataAbstractionsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -728,6 +741,96 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCallBlocks() {
+		return callBlocksEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCallBlocks_NameSubroutine() {
+		return (EAttribute)callBlocksEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCursorOperations() {
+		return cursorOperationsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCursorOperations_CursorName() {
+		return (EAttribute)cursorOperationsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSQLOperations() {
+		return sqlOperationsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSQLOperations_Code() {
+		return (EAttribute)sqlOperationsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIterationStructures() {
+		return iterationStructuresEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIterationStructures_Interations_statements() {
+		return (EReference)iterationStructuresEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConditionalStructures() {
+		return conditionalStructuresEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAdditionalOperations() {
+		return additionalOperationsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getException() {
 		return exceptionEClass;
 	}
@@ -782,7 +885,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIf_Ifs() {
+	public EReference getIf_True_statements() {
 		return (EReference)ifEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -791,7 +894,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIf_Elses() {
+	public EReference getIf_False_statements() {
 		return (EReference)ifEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -818,7 +921,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCase_Cases() {
+	public EReference getCase_Options() {
 		return (EReference)caseEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -827,8 +930,53 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCase_ElseStatements() {
+	public EReference getCase_Default_statements() {
 		return (EReference)caseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOptions() {
+		return optionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOptions_ClassName() {
+		return (EAttribute)optionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOptions_Condition() {
+		return (EAttribute)optionsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOptions_Description() {
+		return (EAttribute)optionsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOptions_Case_statements() {
+		return (EReference)optionsEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -854,15 +1002,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getInsert_Code() {
-		return (EAttribute)insertEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getUpdate() {
 		return updateEClass;
 	}
@@ -874,15 +1013,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 */
 	public EAttribute getUpdate_ClassName() {
 		return (EAttribute)updateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getUpdate_Code() {
-		return (EAttribute)updateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -908,15 +1038,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDelete_Code() {
-		return (EAttribute)deleteEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSelect() {
 		return selectEClass;
 	}
@@ -928,60 +1049,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 */
 	public EAttribute getSelect_ClassName() {
 		return (EAttribute)selectEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSelect_Code() {
-		return (EAttribute)selectEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSelector() {
-		return selectorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSelector_ClassName() {
-		return (EAttribute)selectorEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSelector_Condition() {
-		return (EAttribute)selectorEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSelector_CaseStatements() {
-		return (EReference)selectorEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSelector_Description() {
-		return (EAttribute)selectorEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1009,15 +1076,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 */
 	public EAttribute getWhile_Condition() {
 		return (EAttribute)whileEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWhile_WhileStatements() {
-		return (EReference)whileEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1079,15 +1137,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFor_ForStatements() {
-		return (EReference)forEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getLoop() {
 		return loopEClass;
 	}
@@ -1115,15 +1164,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLoop_LoopStatements() {
-		return (EReference)loopEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getOpen() {
 		return openEClass;
 	}
@@ -1135,15 +1175,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 */
 	public EAttribute getOpen_ClassName() {
 		return (EAttribute)openEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getOpen_CursorName() {
-		return (EAttribute)openEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1169,17 +1200,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFetch_CursorName() {
-		return (EAttribute)fetchEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getFetch_VariableName() {
-		return (EAttribute)fetchEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)fetchEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1205,15 +1227,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClose_CursorName() {
-		return (EAttribute)closeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCallProcedure() {
 		return callProcedureEClass;
 	}
@@ -1225,15 +1238,6 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 */
 	public EAttribute getCallProcedure_ClassName() {
 		return (EAttribute)callProcedureEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCallProcedure_NameSubroutine() {
-		return (EAttribute)callProcedureEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1259,8 +1263,17 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCallFunction_NameSubroutine() {
-		return (EAttribute)callFunctionEClass.getEStructuralFeatures().get(1);
+	public EClass getLinks() {
+		return linksEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLinks_Name() {
+		return (EAttribute)linksEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1277,17 +1290,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTransition_Name() {
-		return (EAttribute)transitionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getTransition_Source() {
-		return (EReference)transitionEClass.getEStructuralFeatures().get(1);
+		return (EReference)transitionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1296,7 +1300,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * @generated
 	 */
 	public EReference getTransition_Target() {
-		return (EReference)transitionEClass.getEStructuralFeatures().get(2);
+		return (EReference)transitionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1304,8 +1308,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSelectorTransition() {
-		return selectorTransitionEClass;
+	public EClass getOptionsTransition() {
+		return optionsTransitionEClass;
 	}
 
 	/**
@@ -1313,8 +1317,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSelectorTransition_Name() {
-		return (EAttribute)selectorTransitionEClass.getEStructuralFeatures().get(0);
+	public EReference getOptionsTransition_Source() {
+		return (EReference)optionsTransitionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1322,17 +1326,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSelectorTransition_Source() {
-		return (EReference)selectorTransitionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSelectorTransition_Target() {
-		return (EReference)selectorTransitionEClass.getEStructuralFeatures().get(2);
+	public EReference getOptionsTransition_Target() {
+		return (EReference)optionsTransitionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1418,33 +1413,28 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 
 		// Create classes and their features
 		crystalEClass = createEClass(CRYSTAL);
-		createEReference(crystalEClass, CRYSTAL__TRANSITIONS);
-		createEReference(crystalEClass, CRYSTAL__SELECTOR_TRANSITIONS);
-		createEReference(crystalEClass, CRYSTAL__PROCEDURES);
-		createEReference(crystalEClass, CRYSTAL__FUNCTIONS);
-		createEReference(crystalEClass, CRYSTAL__BLOCKS);
+		createEReference(crystalEClass, CRYSTAL__LINKS);
+		createEReference(crystalEClass, CRYSTAL__SUBPROGRAMS);
 
 		subprogramsEClass = createEClass(SUBPROGRAMS);
-		createEAttribute(subprogramsEClass, SUBPROGRAMS__NAME);
+		createEReference(subprogramsEClass, SUBPROGRAMS__DECLARATIVE_PART);
+		createEReference(subprogramsEClass, SUBPROGRAMS__EXECUTABLE_PART);
+
+		namedBlocksEClass = createEClass(NAMED_BLOCKS);
+		createEAttribute(namedBlocksEClass, NAMED_BLOCKS__NAME);
+		createEReference(namedBlocksEClass, NAMED_BLOCKS__PARAMETERS);
 
 		procedureEClass = createEClass(PROCEDURE);
-		createEReference(procedureEClass, PROCEDURE__DECLARATIVE_PART);
-		createEReference(procedureEClass, PROCEDURE__PARAMETERS);
-		createEReference(procedureEClass, PROCEDURE__EXECUTABLE_PART);
 
 		functionEClass = createEClass(FUNCTION);
-		createEReference(functionEClass, FUNCTION__DECLARATIVE_PART);
-		createEReference(functionEClass, FUNCTION__PARAMETERS);
 		createEReference(functionEClass, FUNCTION__RETURN_PART);
-		createEReference(functionEClass, FUNCTION__EXECUTABLE_PART);
 
 		anonymousBlockEClass = createEClass(ANONYMOUS_BLOCK);
-		createEReference(anonymousBlockEClass, ANONYMOUS_BLOCK__DECLARATIVE_PART);
-		createEReference(anonymousBlockEClass, ANONYMOUS_BLOCK__EXECUTABLE_PART);
+		createEAttribute(anonymousBlockEClass, ANONYMOUS_BLOCK__DESCRIPTION);
 
-		parametersEClass = createEClass(PARAMETERS);
-		createEAttribute(parametersEClass, PARAMETERS__NAME);
-		createEAttribute(parametersEClass, PARAMETERS__TYPE);
+		dataAbstractionsEClass = createEClass(DATA_ABSTRACTIONS);
+		createEAttribute(dataAbstractionsEClass, DATA_ABSTRACTIONS__NAME);
+		createEAttribute(dataAbstractionsEClass, DATA_ABSTRACTIONS__TYPE);
 
 		dataTypeEClass = createEClass(DATA_TYPE);
 		createEAttribute(dataTypeEClass, DATA_TYPE__CLASS_NAME);
@@ -1470,6 +1460,22 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		createEAttribute(statementsEClass, STATEMENTS__DESCRIPTION);
 		createEAttribute(statementsEClass, STATEMENTS__IS_START);
 
+		callBlocksEClass = createEClass(CALL_BLOCKS);
+		createEAttribute(callBlocksEClass, CALL_BLOCKS__NAME_SUBROUTINE);
+
+		cursorOperationsEClass = createEClass(CURSOR_OPERATIONS);
+		createEAttribute(cursorOperationsEClass, CURSOR_OPERATIONS__CURSOR_NAME);
+
+		sqlOperationsEClass = createEClass(SQL_OPERATIONS);
+		createEAttribute(sqlOperationsEClass, SQL_OPERATIONS__CODE);
+
+		iterationStructuresEClass = createEClass(ITERATION_STRUCTURES);
+		createEReference(iterationStructuresEClass, ITERATION_STRUCTURES__INTERATIONS_STATEMENTS);
+
+		conditionalStructuresEClass = createEClass(CONDITIONAL_STRUCTURES);
+
+		additionalOperationsEClass = createEClass(ADDITIONAL_OPERATIONS);
+
 		expressionEClass = createEClass(EXPRESSION);
 		createEAttribute(expressionEClass, EXPRESSION__CLASS_NAME);
 		createEAttribute(expressionEClass, EXPRESSION__VALUE);
@@ -1481,40 +1487,35 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		ifEClass = createEClass(IF);
 		createEAttribute(ifEClass, IF__CLASS_NAME);
 		createEAttribute(ifEClass, IF__CONDITION);
-		createEReference(ifEClass, IF__IFS);
-		createEReference(ifEClass, IF__ELSES);
+		createEReference(ifEClass, IF__TRUE_STATEMENTS);
+		createEReference(ifEClass, IF__FALSE_STATEMENTS);
 
 		caseEClass = createEClass(CASE);
 		createEAttribute(caseEClass, CASE__CLASS_NAME);
-		createEReference(caseEClass, CASE__CASES);
-		createEReference(caseEClass, CASE__ELSE_STATEMENTS);
+		createEReference(caseEClass, CASE__OPTIONS);
+		createEReference(caseEClass, CASE__DEFAULT_STATEMENTS);
 
-		selectorEClass = createEClass(SELECTOR);
-		createEAttribute(selectorEClass, SELECTOR__CLASS_NAME);
-		createEAttribute(selectorEClass, SELECTOR__CONDITION);
-		createEAttribute(selectorEClass, SELECTOR__DESCRIPTION);
-		createEReference(selectorEClass, SELECTOR__CASE_STATEMENTS);
+		optionsEClass = createEClass(OPTIONS);
+		createEAttribute(optionsEClass, OPTIONS__CLASS_NAME);
+		createEAttribute(optionsEClass, OPTIONS__CONDITION);
+		createEAttribute(optionsEClass, OPTIONS__DESCRIPTION);
+		createEReference(optionsEClass, OPTIONS__CASE_STATEMENTS);
 
 		insertEClass = createEClass(INSERT);
 		createEAttribute(insertEClass, INSERT__CLASS_NAME);
-		createEAttribute(insertEClass, INSERT__CODE);
 
 		updateEClass = createEClass(UPDATE);
 		createEAttribute(updateEClass, UPDATE__CLASS_NAME);
-		createEAttribute(updateEClass, UPDATE__CODE);
 
 		deleteEClass = createEClass(DELETE);
 		createEAttribute(deleteEClass, DELETE__CLASS_NAME);
-		createEAttribute(deleteEClass, DELETE__CODE);
 
 		selectEClass = createEClass(SELECT);
 		createEAttribute(selectEClass, SELECT__CLASS_NAME);
-		createEAttribute(selectEClass, SELECT__CODE);
 
 		whileEClass = createEClass(WHILE);
 		createEAttribute(whileEClass, WHILE__CLASS_NAME);
 		createEAttribute(whileEClass, WHILE__CONDITION);
-		createEReference(whileEClass, WHILE__WHILE_STATEMENTS);
 
 		forEClass = createEClass(FOR);
 		createEAttribute(forEClass, FOR__CLASS_NAME);
@@ -1522,43 +1523,37 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		createEAttribute(forEClass, FOR__TYPE_COUNTER);
 		createEAttribute(forEClass, FOR__LOWEST_NUMBER);
 		createEAttribute(forEClass, FOR__HIGHEST_NUMBER);
-		createEReference(forEClass, FOR__FOR_STATEMENTS);
 
 		loopEClass = createEClass(LOOP);
 		createEAttribute(loopEClass, LOOP__CLASS_NAME);
 		createEAttribute(loopEClass, LOOP__BREAK_CONDITION);
-		createEReference(loopEClass, LOOP__LOOP_STATEMENTS);
 
 		openEClass = createEClass(OPEN);
 		createEAttribute(openEClass, OPEN__CLASS_NAME);
-		createEAttribute(openEClass, OPEN__CURSOR_NAME);
 
 		fetchEClass = createEClass(FETCH);
 		createEAttribute(fetchEClass, FETCH__CLASS_NAME);
-		createEAttribute(fetchEClass, FETCH__CURSOR_NAME);
 		createEAttribute(fetchEClass, FETCH__VARIABLE_NAME);
 
 		closeEClass = createEClass(CLOSE);
 		createEAttribute(closeEClass, CLOSE__CLASS_NAME);
-		createEAttribute(closeEClass, CLOSE__CURSOR_NAME);
 
 		callProcedureEClass = createEClass(CALL_PROCEDURE);
 		createEAttribute(callProcedureEClass, CALL_PROCEDURE__CLASS_NAME);
-		createEAttribute(callProcedureEClass, CALL_PROCEDURE__NAME_SUBROUTINE);
 
 		callFunctionEClass = createEClass(CALL_FUNCTION);
 		createEAttribute(callFunctionEClass, CALL_FUNCTION__CLASS_NAME);
-		createEAttribute(callFunctionEClass, CALL_FUNCTION__NAME_SUBROUTINE);
+
+		linksEClass = createEClass(LINKS);
+		createEAttribute(linksEClass, LINKS__NAME);
 
 		transitionEClass = createEClass(TRANSITION);
-		createEAttribute(transitionEClass, TRANSITION__NAME);
 		createEReference(transitionEClass, TRANSITION__SOURCE);
 		createEReference(transitionEClass, TRANSITION__TARGET);
 
-		selectorTransitionEClass = createEClass(SELECTOR_TRANSITION);
-		createEAttribute(selectorTransitionEClass, SELECTOR_TRANSITION__NAME);
-		createEReference(selectorTransitionEClass, SELECTOR_TRANSITION__SOURCE);
-		createEReference(selectorTransitionEClass, SELECTOR_TRANSITION__TARGET);
+		optionsTransitionEClass = createEClass(OPTIONS_TRANSITION);
+		createEReference(optionsTransitionEClass, OPTIONS_TRANSITION__SOURCE);
+		createEReference(optionsTransitionEClass, OPTIONS_TRANSITION__TARGET);
 
 		// Create enums
 		parameterTypeEEnum = createEEnum(PARAMETER_TYPE);
@@ -1594,173 +1589,182 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		procedureEClass.getESuperTypes().add(this.getSubprograms());
-		functionEClass.getESuperTypes().add(this.getSubprograms());
+		namedBlocksEClass.getESuperTypes().add(this.getSubprograms());
+		procedureEClass.getESuperTypes().add(this.getNamedBlocks());
+		functionEClass.getESuperTypes().add(this.getNamedBlocks());
 		anonymousBlockEClass.getESuperTypes().add(this.getSubprograms());
-		dataTypeEClass.getESuperTypes().add(this.getParameters());
-		collectionsEClass.getESuperTypes().add(this.getParameters());
-		recordsEClass.getESuperTypes().add(this.getParameters());
-		cursorEClass.getESuperTypes().add(this.getParameters());
-		expressionEClass.getESuperTypes().add(this.getStatements());
-		exceptionEClass.getESuperTypes().add(this.getStatements());
-		ifEClass.getESuperTypes().add(this.getStatements());
-		caseEClass.getESuperTypes().add(this.getStatements());
-		insertEClass.getESuperTypes().add(this.getStatements());
-		updateEClass.getESuperTypes().add(this.getStatements());
-		deleteEClass.getESuperTypes().add(this.getStatements());
-		selectEClass.getESuperTypes().add(this.getStatements());
-		whileEClass.getESuperTypes().add(this.getStatements());
-		forEClass.getESuperTypes().add(this.getStatements());
-		loopEClass.getESuperTypes().add(this.getStatements());
-		openEClass.getESuperTypes().add(this.getStatements());
-		fetchEClass.getESuperTypes().add(this.getStatements());
-		closeEClass.getESuperTypes().add(this.getStatements());
-		callProcedureEClass.getESuperTypes().add(this.getStatements());
-		callFunctionEClass.getESuperTypes().add(this.getStatements());
+		dataTypeEClass.getESuperTypes().add(this.getDataAbstractions());
+		collectionsEClass.getESuperTypes().add(this.getDataAbstractions());
+		recordsEClass.getESuperTypes().add(this.getDataAbstractions());
+		cursorEClass.getESuperTypes().add(this.getDataAbstractions());
+		callBlocksEClass.getESuperTypes().add(this.getStatements());
+		cursorOperationsEClass.getESuperTypes().add(this.getStatements());
+		sqlOperationsEClass.getESuperTypes().add(this.getStatements());
+		iterationStructuresEClass.getESuperTypes().add(this.getStatements());
+		conditionalStructuresEClass.getESuperTypes().add(this.getStatements());
+		additionalOperationsEClass.getESuperTypes().add(this.getStatements());
+		expressionEClass.getESuperTypes().add(this.getAdditionalOperations());
+		exceptionEClass.getESuperTypes().add(this.getAdditionalOperations());
+		ifEClass.getESuperTypes().add(this.getConditionalStructures());
+		caseEClass.getESuperTypes().add(this.getConditionalStructures());
+		insertEClass.getESuperTypes().add(this.getSQLOperations());
+		updateEClass.getESuperTypes().add(this.getSQLOperations());
+		deleteEClass.getESuperTypes().add(this.getSQLOperations());
+		selectEClass.getESuperTypes().add(this.getSQLOperations());
+		whileEClass.getESuperTypes().add(this.getIterationStructures());
+		forEClass.getESuperTypes().add(this.getIterationStructures());
+		loopEClass.getESuperTypes().add(this.getIterationStructures());
+		openEClass.getESuperTypes().add(this.getCursorOperations());
+		fetchEClass.getESuperTypes().add(this.getCursorOperations());
+		closeEClass.getESuperTypes().add(this.getCursorOperations());
+		callProcedureEClass.getESuperTypes().add(this.getCallBlocks());
+		callFunctionEClass.getESuperTypes().add(this.getCallBlocks());
+		transitionEClass.getESuperTypes().add(this.getLinks());
+		optionsTransitionEClass.getESuperTypes().add(this.getLinks());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(crystalEClass, Crystal.class, "Crystal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCrystal_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, Crystal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCrystal_SelectorTransitions(), this.getSelectorTransition(), null, "selectorTransitions", null, 0, -1, Crystal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCrystal_Procedures(), this.getProcedure(), null, "procedures", null, 0, -1, Crystal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCrystal_Functions(), this.getFunction(), null, "functions", null, 0, -1, Crystal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCrystal_Blocks(), this.getAnonymousBlock(), null, "blocks", null, 0, -1, Crystal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCrystal_Links(), this.getLinks(), null, "links", null, 0, -1, Crystal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCrystal_Subprograms(), this.getSubprograms(), null, "subprograms", null, 0, -1, Crystal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(subprogramsEClass, Subprograms.class, "Subprograms", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSubprograms_Name(), ecorePackage.getEString(), "name", null, 0, 1, Subprograms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubprograms_DeclarativePart(), this.getDataAbstractions(), null, "declarativePart", null, 0, -1, Subprograms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubprograms_ExecutablePart(), this.getStatements(), null, "executablePart", null, 0, -1, Subprograms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(namedBlocksEClass, NamedBlocks.class, "NamedBlocks", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNamedBlocks_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedBlocks.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNamedBlocks_Parameters(), this.getDataAbstractions(), null, "parameters", null, 0, -1, NamedBlocks.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(procedureEClass, Procedure.class, "Procedure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProcedure_DeclarativePart(), this.getParameters(), null, "declarativePart", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcedure_Parameters(), this.getParameters(), null, "parameters", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcedure_ExecutablePart(), this.getStatements(), null, "executablePart", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFunction_DeclarativePart(), this.getParameters(), null, "declarativePart", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_Parameters(), this.getParameters(), null, "parameters", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_ReturnPart(), this.getParameters(), null, "returnPart", null, 1, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_ExecutablePart(), this.getStatements(), null, "executablePart", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunction_ReturnPart(), this.getDataAbstractions(), null, "returnPart", null, 1, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(anonymousBlockEClass, AnonymousBlock.class, "AnonymousBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAnonymousBlock_DeclarativePart(), this.getParameters(), null, "declarativePart", null, 0, -1, AnonymousBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAnonymousBlock_ExecutablePart(), this.getStatements(), null, "executablePart", null, 0, -1, AnonymousBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAnonymousBlock_Description(), ecorePackage.getEString(), "description", null, 0, 1, AnonymousBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(parametersEClass, Parameters.class, "Parameters", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParameters_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getParameters_Type(), this.getParameterType(), "type", null, 0, 1, Parameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dataAbstractionsEClass, DataAbstractions.class, "DataAbstractions", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDataAbstractions_Name(), ecorePackage.getEString(), "name", null, 0, 1, DataAbstractions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataAbstractions_Type(), this.getParameterType(), "type", null, 0, 1, DataAbstractions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDataType_ClassName(), ecorePackage.getEString(), "className", "DataType", 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataType_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataType_Options(), this.getDataTypeOptions(), "options", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDataType_Precision(), ecorePackage.getEInt(), "precision", "1", 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDataType_Scale(), ecorePackage.getEInt(), "scale", "0", 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataType_Precision(), ecorePackage.getEInt(), "precision", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataType_Scale(), ecorePackage.getEInt(), "scale", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(collectionsEClass, Collections.class, "Collections", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCollections_ClassName(), ecorePackage.getEString(), "className", "Collection", 0, 1, Collections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollections_Code(), ecorePackage.getEString(), "code", "TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)", 0, 1, Collections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollections_TypeName(), ecorePackage.getEString(), "typeName", "collectionTypeName", 0, 1, Collections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollections_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Collections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollections_Code(), ecorePackage.getEString(), "code", null, 0, 1, Collections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollections_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, Collections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(recordsEClass, Records.class, "Records", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRecords_ClassName(), ecorePackage.getEString(), "className", "Record", 0, 1, Records.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRecords_Code(), ecorePackage.getEString(), "code", "TYPE recordType IS RECORD (id number(5), name varchar2(25), lastName tableA.last_name%type)", 0, 1, Records.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRecords_TypeName(), ecorePackage.getEString(), "typeName", "recordTypeName", 0, 1, Records.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecords_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Records.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecords_Code(), ecorePackage.getEString(), "code", null, 0, 1, Records.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecords_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, Records.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cursorEClass, Cursor.class, "Cursor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCursor_ClassName(), ecorePackage.getEString(), "className", "Cursor", 0, 1, Cursor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCursor_CursorQuery(), ecorePackage.getEString(), "cursorQuery", "selectStatement", 0, 1, Cursor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCursor_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Cursor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCursor_CursorQuery(), ecorePackage.getEString(), "cursorQuery", null, 0, 1, Cursor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statementsEClass, Statements.class, "Statements", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStatements_Description(), ecorePackage.getEString(), "description", "Description", 0, 1, Statements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatements_Description(), ecorePackage.getEString(), "description", null, 0, 1, Statements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStatements_IsStart(), ecorePackage.getEBoolean(), "isStart", null, 0, 1, Statements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(callBlocksEClass, CallBlocks.class, "CallBlocks", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCallBlocks_NameSubroutine(), ecorePackage.getEString(), "nameSubroutine", null, 0, 1, CallBlocks.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cursorOperationsEClass, CursorOperations.class, "CursorOperations", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCursorOperations_CursorName(), ecorePackage.getEString(), "cursorName", null, 0, 1, CursorOperations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sqlOperationsEClass, SQLOperations.class, "SQLOperations", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSQLOperations_Code(), ecorePackage.getEString(), "code", null, 0, 1, SQLOperations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(iterationStructuresEClass, IterationStructures.class, "IterationStructures", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIterationStructures_Interations_statements(), this.getStatements(), null, "interations_statements", null, 0, -1, IterationStructures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(conditionalStructuresEClass, ConditionalStructures.class, "ConditionalStructures", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(additionalOperationsEClass, AdditionalOperations.class, "AdditionalOperations", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExpression_ClassName(), ecorePackage.getEString(), "className", "Expression", 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExpression_Value(), ecorePackage.getEString(), "value", "Type the expression here", 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExpression_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExpression_Value(), ecorePackage.getEString(), "value", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(exceptionEClass, crystal.Exception.class, "Exception", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getException_ClassName(), ecorePackage.getEString(), "className", "Exception", 0, 1, crystal.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getException_Code(), ecorePackage.getEString(), "code", "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There isnt data registered\')", 0, 1, crystal.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getException_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, crystal.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getException_Code(), ecorePackage.getEString(), "code", null, 0, 1, crystal.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ifEClass, If.class, "If", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIf_ClassName(), ecorePackage.getEString(), "className", "If", 0, 1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIf_Condition(), ecorePackage.getEString(), "condition", "Type the IF condition", 0, 1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIf_Ifs(), this.getStatements(), null, "ifs", null, 0, -1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIf_Elses(), this.getStatements(), null, "elses", null, 0, -1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIf_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIf_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIf_True_statements(), this.getStatements(), null, "true_statements", null, 0, -1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIf_False_statements(), this.getStatements(), null, "false_statements", null, 0, -1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCase_ClassName(), ecorePackage.getEString(), "className", "Case", 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCase_Cases(), this.getSelector(), null, "cases", null, 0, -1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCase_ElseStatements(), this.getStatements(), null, "elseStatements", null, 0, -1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCase_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCase_Options(), this.getOptions(), null, "options", null, 0, -1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCase_Default_statements(), this.getStatements(), null, "default_statements", null, 0, -1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(selectorEClass, Selector.class, "Selector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSelector_ClassName(), ecorePackage.getEString(), "className", "Selector", 0, 1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSelector_Condition(), ecorePackage.getEString(), "condition", "Type the condition for this Selector", 0, 1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSelector_Description(), ecorePackage.getEString(), "description", "Description", 0, 1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelector_CaseStatements(), this.getStatements(), null, "caseStatements", null, 0, -1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(optionsEClass, Options.class, "Options", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOptions_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Options.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOptions_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Options.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOptions_Description(), ecorePackage.getEString(), "description", null, 0, 1, Options.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOptions_Case_statements(), this.getStatements(), null, "case_statements", null, 0, -1, Options.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(insertEClass, Insert.class, "Insert", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInsert_ClassName(), ecorePackage.getEString(), "className", "Insert", 0, 1, Insert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInsert_Code(), ecorePackage.getEString(), "code", "INSERT INTO tableA (id, name) VALUES (1, \'example\')", 0, 1, Insert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInsert_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Insert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(updateEClass, Update.class, "Update", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUpdate_ClassName(), ecorePackage.getEString(), "className", "Update", 0, 1, Update.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUpdate_Code(), ecorePackage.getEString(), "code", "UPDATE tableA SET name = \'example\' WHERE id = 1", 0, 1, Update.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdate_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Update.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deleteEClass, Delete.class, "Delete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDelete_ClassName(), ecorePackage.getEString(), "className", "Delete", 0, 1, Delete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDelete_Code(), ecorePackage.getEString(), "code", "DELETE FROM tableA WHERE ID = 1", 0, 1, Delete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDelete_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Delete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(selectEClass, Select.class, "Select", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSelect_ClassName(), ecorePackage.getEString(), "className", "Select", 0, 1, Select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSelect_Code(), ecorePackage.getEString(), "code", "SELECT * FROM tableA WHERE id = 1", 0, 1, Select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSelect_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(whileEClass, While.class, "While", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getWhile_ClassName(), ecorePackage.getEString(), "className", "While", 0, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWhile_Condition(), ecorePackage.getEString(), "condition", "Type the WHILE condition", 0, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWhile_WhileStatements(), this.getStatements(), null, "whileStatements", null, 0, -1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWhile_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWhile_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(forEClass, For.class, "For", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFor_ClassName(), ecorePackage.getEString(), "className", "For", 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFor_Counter(), ecorePackage.getEString(), "counter", "Type the name of the FOR counter", 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFor_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFor_Counter(), ecorePackage.getEString(), "counter", null, 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFor_TypeCounter(), this.getForCounter(), "typeCounter", null, 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFor_LowestNumber(), ecorePackage.getEInt(), "lowestNumber", "0", 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFor_HighestNumber(), ecorePackage.getEInt(), "highestNumber", "0", 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFor_ForStatements(), this.getStatements(), null, "forStatements", null, 0, -1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFor_LowestNumber(), ecorePackage.getEInt(), "lowestNumber", null, 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFor_HighestNumber(), ecorePackage.getEInt(), "highestNumber", null, 0, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(loopEClass, Loop.class, "Loop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLoop_ClassName(), ecorePackage.getEString(), "className", "Loop", 0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoop_BreakCondition(), ecorePackage.getEString(), "breakCondition", "Type the break condition for LOOP", 0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoop_LoopStatements(), this.getStatements(), null, "loopStatements", null, 0, -1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_BreakCondition(), ecorePackage.getEString(), "breakCondition", null, 0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(openEClass, Open.class, "Open", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOpen_ClassName(), ecorePackage.getEString(), "className", "Open", 0, 1, Open.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOpen_CursorName(), ecorePackage.getEString(), "cursorName", "cursorName", 0, 1, Open.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOpen_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Open.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fetchEClass, Fetch.class, "Fetch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFetch_ClassName(), ecorePackage.getEString(), "className", "Fetch", 0, 1, Fetch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFetch_CursorName(), ecorePackage.getEString(), "cursorName", "cursorName", 0, 1, Fetch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFetch_VariableName(), ecorePackage.getEString(), "variableName", "variableCursor", 0, 1, Fetch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFetch_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Fetch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFetch_VariableName(), ecorePackage.getEString(), "variableName", null, 0, 1, Fetch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(closeEClass, Close.class, "Close", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getClose_ClassName(), ecorePackage.getEString(), "className", "Close", 0, 1, Close.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClose_CursorName(), ecorePackage.getEString(), "cursorName", "cursorName", 0, 1, Close.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClose_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Close.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(callProcedureEClass, CallProcedure.class, "CallProcedure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCallProcedure_ClassName(), ecorePackage.getEString(), "className", "CallProcedure", 0, 1, CallProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCallProcedure_NameSubroutine(), ecorePackage.getEString(), "nameSubroutine", null, 0, 1, CallProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCallProcedure_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, CallProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(callFunctionEClass, CallFunction.class, "CallFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCallFunction_ClassName(), ecorePackage.getEString(), "className", "CallFunction", 0, 1, CallFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCallFunction_NameSubroutine(), ecorePackage.getEString(), "nameSubroutine", null, 0, 1, CallFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCallFunction_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, CallFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(linksEClass, Links.class, "Links", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLinks_Name(), ecorePackage.getEString(), "name", null, 0, 1, Links.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTransition_Name(), ecorePackage.getEString(), "name", "Statement Connection", 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_Source(), this.getStatements(), null, "source", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_Target(), this.getStatements(), null, "target", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(selectorTransitionEClass, SelectorTransition.class, "SelectorTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSelectorTransition_Name(), ecorePackage.getEString(), "name", "Case Connection", 0, 1, SelectorTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelectorTransition_Source(), this.getSelector(), null, "source", null, 0, 1, SelectorTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelectorTransition_Target(), this.getSelector(), null, "target", null, 0, 1, SelectorTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(optionsTransitionEClass, OptionsTransition.class, "OptionsTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOptionsTransition_Source(), this.getOptions(), null, "source", null, 0, 1, OptionsTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOptionsTransition_Target(), this.getOptions(), null, "target", null, 0, 1, OptionsTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(parameterTypeEEnum, ParameterType.class, "ParameterType");
@@ -1852,6 +1856,14 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 			 "label.readOnly", "true"
 		   });	
 		addAnnotation
+		  (namedBlocksEClass, 
+		   source, 
+		   new String[] {
+			 "figure", "rectangle",
+			 "border.width", "1",
+			 "label.readOnly", "true"
+		   });	
+		addAnnotation
 		  (procedureEClass, 
 		   source, 
 		   new String[] {
@@ -1871,13 +1883,13 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		  (anonymousBlockEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name",
+			 "label", "description",
 			 "label.text", "Anonymous Block",
 			 "border.color", "43,106,215",
 			 "border.style", "dash"
 		   });	
 		addAnnotation
-		  (parametersEClass, 
+		  (dataAbstractionsEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name",
@@ -1920,6 +1932,42 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 			 "label.placement", "internal"
 		   });	
 		addAnnotation
+		  (callBlocksEClass, 
+		   source, 
+		   new String[] {
+			 "figure", "rectangle"
+		   });	
+		addAnnotation
+		  (cursorOperationsEClass, 
+		   source, 
+		   new String[] {
+			 "figure", "rectangle"
+		   });	
+		addAnnotation
+		  (sqlOperationsEClass, 
+		   source, 
+		   new String[] {
+			 "figure", "rectangle"
+		   });	
+		addAnnotation
+		  (iterationStructuresEClass, 
+		   source, 
+		   new String[] {
+			 "figure", "rectangle"
+		   });	
+		addAnnotation
+		  (conditionalStructuresEClass, 
+		   source, 
+		   new String[] {
+			 "figure", "rectangle"
+		   });	
+		addAnnotation
+		  (additionalOperationsEClass, 
+		   source, 
+		   new String[] {
+			 "figure", "rectangle"
+		   });	
+		addAnnotation
 		  (expressionEClass, 
 		   source, 
 		   new String[] {
@@ -1944,7 +1992,7 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 			 "figure", "rectangle"
 		   });	
 		addAnnotation
-		  (selectorEClass, 
+		  (optionsEClass, 
 		   source, 
 		   new String[] {
 			 "figure", "rectangle",
@@ -2035,27 +2083,17 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	protected void createGmf_2Annotations() {
 		String source = "gmf.compartment";	
 		addAnnotation
-		  (getProcedure_DeclarativePart(), 
+		  (getSubprograms_DeclarativePart(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getProcedure_Parameters(), 
+		  (getSubprograms_ExecutablePart(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getProcedure_ExecutablePart(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getFunction_DeclarativePart(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getFunction_Parameters(), 
+		  (getNamedBlocks_Parameters(), 
 		   source, 
 		   new String[] {
 		   });	
@@ -2065,57 +2103,32 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getFunction_ExecutablePart(), 
+		  (getIterationStructures_Interations_statements(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getAnonymousBlock_DeclarativePart(), 
+		  (getIf_True_statements(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getAnonymousBlock_ExecutablePart(), 
+		  (getIf_False_statements(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getIf_Ifs(), 
+		  (getCase_Options(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getIf_Elses(), 
+		  (getCase_Default_statements(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getCase_Cases(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getCase_ElseStatements(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getSelector_CaseStatements(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getWhile_WhileStatements(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getFor_ForStatements(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getLoop_LoopStatements(), 
+		  (getOptions_Case_statements(), 
 		   source, 
 		   new String[] {
 		   });
@@ -2144,13 +2157,14 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 			 "label.icon", "true"
 		   });	
 		addAnnotation
-		  (selectorTransitionEClass, 
+		  (optionsTransitionEClass, 
 		   source, 
 		   new String[] {
 			 "source", "source",
 			 "target", "target",
 			 "incoming", "true",
 			 "target.decoration", "arrow",
+			 "style", "dash",
 			 "color", "0,0,0",
 			 "width", "1",
 			 "label", "name",

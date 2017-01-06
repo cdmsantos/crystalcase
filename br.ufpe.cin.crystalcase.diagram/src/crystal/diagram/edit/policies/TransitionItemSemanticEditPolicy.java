@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
@@ -15,15 +15,15 @@ import crystal.diagram.providers.CrystalElementTypes;
 public class TransitionItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public TransitionItemSemanticEditPolicy() {
 		super(CrystalElementTypes.Transition_4001);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDestroyElementCommand(DestroyElementRequest req) {
 		return getGEFWrapper(new DestroyElementCommand(req));
 	}

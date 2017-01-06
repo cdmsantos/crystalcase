@@ -19,22 +19,22 @@ import org.eclipse.ui.IWorkbenchPage;
 public class CrystalDiagramActionBarContributor extends DiagramActionBarContributor {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Class getEditorClass() {
 		return CrystalDiagramEditor.class;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected String getEditorId() {
 		return CrystalDiagramEditor.ID;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void init(IActionBars bars, IWorkbenchPage page) {
 		super.init(bars, page);
 		// print preview

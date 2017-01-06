@@ -60,7 +60,7 @@ public class ForDescription2EditPart extends CompartmentEditPart implements ITex
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5240;
+	public static final int VISUAL_ID = 5270;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class ForDescription2EditPart extends CompartmentEditPart implements ITex
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.For_3229, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.For_3267, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.ForDescription2EditPart.VISUAL_ID));
 		}
 		return parser;

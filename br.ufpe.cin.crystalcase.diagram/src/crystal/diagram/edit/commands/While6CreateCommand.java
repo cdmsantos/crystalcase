@@ -16,9 +16,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
-import crystal.Function;
-import crystal.Loop;
-import crystal.Selector;
+import crystal.Subprograms;
 import crystal.While;
 
 /**
@@ -59,8 +57,8 @@ public class While6CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		While newElement = CrystalFactory.eINSTANCE.createWhile();
 
-		Loop owner = (Loop) getElementToEdit();
-		owner.getLoopStatements().add(newElement);
+		Subprograms owner = (Subprograms) getElementToEdit();
+		owner.getExecutablePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

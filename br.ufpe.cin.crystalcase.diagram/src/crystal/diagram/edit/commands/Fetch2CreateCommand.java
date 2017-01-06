@@ -18,9 +18,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.Case;
 import crystal.CrystalFactory;
 import crystal.Fetch;
-import crystal.Function;
-import crystal.Procedure;
-import crystal.While;
 
 /**
  * @generated
@@ -61,7 +58,7 @@ public class Fetch2CreateCommand extends EditElementCommand {
 		Fetch newElement = CrystalFactory.eINSTANCE.createFetch();
 
 		Case owner = (Case) getElementToEdit();
-		owner.getElseStatements().add(newElement);
+		owner.getDefault_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

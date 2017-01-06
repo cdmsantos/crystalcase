@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LoopTest extends StatementsTest {
+public class LoopTest extends IterationStructuresTest {
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -17,9 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.Delete;
-import crystal.For;
-import crystal.Loop;
-import crystal.Procedure;
+import crystal.Options;
 
 /**
  * @generated
@@ -59,8 +57,8 @@ public class Delete5CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Delete newElement = CrystalFactory.eINSTANCE.createDelete();
 
-		For owner = (For) getElementToEdit();
-		owner.getForStatements().add(newElement);
+		Options owner = (Options) getElementToEdit();
+		owner.getCase_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

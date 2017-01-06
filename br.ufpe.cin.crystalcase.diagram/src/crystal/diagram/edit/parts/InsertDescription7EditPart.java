@@ -295,8 +295,6 @@ public class InsertDescription7EditPart extends CompartmentEditPart implements I
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Insert_3139, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.InsertDescription7EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

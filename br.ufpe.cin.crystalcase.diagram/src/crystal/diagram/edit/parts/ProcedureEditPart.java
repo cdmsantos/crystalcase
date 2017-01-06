@@ -41,7 +41,7 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2007;
+	public static final int VISUAL_ID = 2010;
 
 	/**
 	 * @generated
@@ -126,16 +126,16 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 			pane.add(((ProcedureProcedureDeclarativePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getProcedureParametersCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((ProcedureProcedureParametersCompartmentEditPart) childEditPart).getFigure());
-			return true;
-		}
 		if (childEditPart instanceof ProcedureProcedureExecutablePartCompartmentEditPart) {
 			IFigure pane = getPrimaryShape().getProcedureExecutablePartCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(((ProcedureProcedureExecutablePartCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getProcedureParametersCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((ProcedureProcedureParametersCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -153,14 +153,14 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 			pane.remove(((ProcedureProcedureDeclarativePartCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getProcedureParametersCompartmentFigure();
-			pane.remove(((ProcedureProcedureParametersCompartmentEditPart) childEditPart).getFigure());
-			return true;
-		}
 		if (childEditPart instanceof ProcedureProcedureExecutablePartCompartmentEditPart) {
 			IFigure pane = getPrimaryShape().getProcedureExecutablePartCompartmentFigure();
 			pane.remove(((ProcedureProcedureExecutablePartCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getProcedureParametersCompartmentFigure();
+			pane.remove(((ProcedureProcedureParametersCompartmentEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -193,11 +193,11 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 		if (editPart instanceof ProcedureProcedureDeclarativePartCompartmentEditPart) {
 			return getPrimaryShape().getProcedureDeclarativePartCompartmentFigure();
 		}
-		if (editPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
-			return getPrimaryShape().getProcedureParametersCompartmentFigure();
-		}
 		if (editPart instanceof ProcedureProcedureExecutablePartCompartmentEditPart) {
 			return getPrimaryShape().getProcedureExecutablePartCompartmentFigure();
+		}
+		if (editPart instanceof ProcedureProcedureParametersCompartmentEditPart) {
+			return getPrimaryShape().getProcedureParametersCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -359,17 +359,17 @@ public class ProcedureEditPart extends ShapeNodeEditPart {
 
 			this.add(fProcedureDeclarativePartCompartmentFigure);
 
-			fProcedureParametersCompartmentFigure = new RectangleFigure();
-
-			fProcedureParametersCompartmentFigure.setOutline(false);
-
-			this.add(fProcedureParametersCompartmentFigure);
-
 			fProcedureExecutablePartCompartmentFigure = new RectangleFigure();
 
 			fProcedureExecutablePartCompartmentFigure.setOutline(false);
 
 			this.add(fProcedureExecutablePartCompartmentFigure);
+
+			fProcedureParametersCompartmentFigure = new RectangleFigure();
+
+			fProcedureParametersCompartmentFigure.setOutline(false);
+
+			this.add(fProcedureParametersCompartmentFigure);
 
 		}
 

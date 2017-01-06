@@ -18,9 +18,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.CallProcedure;
 import crystal.Case;
 import crystal.CrystalFactory;
-import crystal.Function;
-import crystal.Procedure;
-import crystal.While;
 
 /**
  * @generated
@@ -61,7 +58,7 @@ public class CallProcedure2CreateCommand extends EditElementCommand {
 		CallProcedure newElement = CrystalFactory.eINSTANCE.createCallProcedure();
 
 		Case owner = (Case) getElementToEdit();
-		owner.getElseStatements().add(newElement);
+		owner.getDefault_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -121,6 +121,15 @@ public interface CrystalFactory extends EFactory {
 	Case createCase();
 
 	/**
+	 * Returns a new object of class '<em>Options</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Options</em>'.
+	 * @generated
+	 */
+	Options createOptions();
+
+	/**
 	 * Returns a new object of class '<em>Insert</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -155,15 +164,6 @@ public interface CrystalFactory extends EFactory {
 	 * @generated
 	 */
 	Select createSelect();
-
-	/**
-	 * Returns a new object of class '<em>Selector</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Selector</em>'.
-	 * @generated
-	 */
-	Selector createSelector();
 
 	/**
 	 * Returns a new object of class '<em>While</em>'.
@@ -247,13 +247,13 @@ public interface CrystalFactory extends EFactory {
 	Transition createTransition();
 
 	/**
-	 * Returns a new object of class '<em>Selector Transition</em>'.
+	 * Returns a new object of class '<em>Options Transition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Selector Transition</em>'.
+	 * @return a new object of class '<em>Options Transition</em>'.
 	 * @generated
 	 */
-	SelectorTransition createSelectorTransition();
+	OptionsTransition createOptionsTransition();
 
 	/**
 	 * Returns a new object of class '<em>Expression</em>'.

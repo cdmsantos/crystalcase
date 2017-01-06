@@ -16,7 +16,6 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.Crystal;
-import crystal.CrystalCase;
 import crystal.CrystalFactory;
 import crystal.Procedure;
 
@@ -26,16 +25,16 @@ import crystal.Procedure;
 public class ProcedureCreateCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ProcedureCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
 	/**
-	 * FIXME: replace with setElementToEdit()
-	 * @generated
-	 */
+	* FIXME: replace with setElementToEdit()
+	* @generated
+	*/
 	protected EObject getElementToEdit() {
 		EObject container = ((CreateElementRequest) getRequest()).getContainer();
 		if (container instanceof View) {
@@ -45,21 +44,21 @@ public class ProcedureCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
 		return true;
 
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Procedure newElement = CrystalFactory.eINSTANCE.createProcedure();
 
 		Crystal owner = (Crystal) getElementToEdit();
-		owner.getProcedures().add(newElement);
+		owner.getSubprograms().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 
@@ -68,8 +67,8 @@ public class ProcedureCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void doConfigure(Procedure newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();

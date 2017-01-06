@@ -36,7 +36,7 @@ public class Expression6EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3213;
+	public static final int VISUAL_ID = 3291;
 
 	/**
 	* @generated

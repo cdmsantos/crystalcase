@@ -22,10 +22,9 @@ package crystal;
  * @model annotation="gmf.node label.text='Data Type'"
  * @generated
  */
-public interface DataType extends Parameters { 
+public interface DataType extends DataAbstractions { 
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
-	 * The default value is <code>"DataType"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -35,7 +34,7 @@ public interface DataType extends Parameters {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getDataType_ClassName()
-	 * @model default="DataType"
+	 * @model
 	 * @generated
 	 */
 	String getClassName();
@@ -81,7 +80,6 @@ public interface DataType extends Parameters {
 
 	/**
 	 * Returns the value of the '<em><b>Precision</b></em>' attribute.
-	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Precision</em>' attribute isn't clear,
@@ -91,7 +89,7 @@ public interface DataType extends Parameters {
 	 * @return the value of the '<em>Precision</em>' attribute.
 	 * @see #setPrecision(int)
 	 * @see crystal.CrystalPackage#getDataType_Precision()
-	 * @model default="1"
+	 * @model
 	 * @generated
 	 */
 	int getPrecision();
@@ -108,7 +106,6 @@ public interface DataType extends Parameters {
 
 	/**
 	 * Returns the value of the '<em><b>Scale</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scale</em>' attribute isn't clear,
@@ -118,7 +115,7 @@ public interface DataType extends Parameters {
 	 * @return the value of the '<em>Scale</em>' attribute.
 	 * @see #setScale(int)
 	 * @see crystal.CrystalPackage#getDataType_Scale()
-	 * @model default="0"
+	 * @model
 	 * @generated
 	 */
 	int getScale();

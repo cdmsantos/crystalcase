@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CloseTest extends StatementsTest {
+public class CloseTest extends CursorOperationsTest {
 
 	/**
 	 * <!-- begin-user-doc -->

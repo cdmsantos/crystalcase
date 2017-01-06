@@ -60,7 +60,7 @@ public class ExpressionDescription6EditPart extends CompartmentEditPart implemen
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5221;
+	public static final int VISUAL_ID = 5288;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class ExpressionDescription6EditPart extends CompartmentEditPart implemen
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3213, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3291, getParserElement(),
 					CrystalVisualIDRegistry
 							.getType(crystal.diagram.edit.parts.ExpressionDescription6EditPart.VISUAL_ID));
 		}

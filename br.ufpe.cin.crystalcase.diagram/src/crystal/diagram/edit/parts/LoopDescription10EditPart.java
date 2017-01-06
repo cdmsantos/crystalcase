@@ -295,8 +295,6 @@ public class LoopDescription10EditPart extends CompartmentEditPart implements IT
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Loop_3046, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.LoopDescription10EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

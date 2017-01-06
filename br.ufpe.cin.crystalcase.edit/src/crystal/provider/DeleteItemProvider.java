@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DeleteItemProvider extends StatementsItemProvider {
+public class DeleteItemProvider extends SQLOperationsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,7 +46,6 @@ public class DeleteItemProvider extends StatementsItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassNamePropertyDescriptor(object);
-			addCodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -65,28 +64,6 @@ public class DeleteItemProvider extends StatementsItemProvider {
 				 getString("_UI_Delete_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Delete_className_feature", "_UI_Delete_type"),
 				 CrystalPackage.Literals.DELETE__CLASS_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Code feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCodePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Delete_code_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Delete_code_feature", "_UI_Delete_type"),
-				 CrystalPackage.Literals.DELETE__CODE,
 				 true,
 				 false,
 				 false,
@@ -134,7 +111,6 @@ public class DeleteItemProvider extends StatementsItemProvider {
 
 		switch (notification.getFeatureID(Delete.class)) {
 			case CrystalPackage.DELETE__CLASS_NAME:
-			case CrystalPackage.DELETE__CODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

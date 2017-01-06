@@ -35,7 +35,7 @@ public class FunctionFunctionExecutablePartCompartmentEditPart extends ShapeComp
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 7023;
+	public static final int VISUAL_ID = 7154;
 
 	/**
 	* @generated
@@ -95,52 +95,52 @@ public class FunctionFunctionExecutablePartCompartmentEditPart extends ShapeComp
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
-			if (type == CrystalElementTypes.Expression_3218) {
+			if (type == CrystalElementTypes.Expression_3236) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Exception_3075) {
+			if (type == CrystalElementTypes.Exception_3237) {
 				return this;
 			}
-			if (type == CrystalElementTypes.If_3076) {
+			if (type == CrystalElementTypes.If_3238) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Case_3077) {
+			if (type == CrystalElementTypes.Case_3320) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Insert_3078) {
+			if (type == CrystalElementTypes.Insert_3321) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Update_3079) {
+			if (type == CrystalElementTypes.Update_3322) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Delete_3080) {
+			if (type == CrystalElementTypes.Delete_3323) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Select_3081) {
+			if (type == CrystalElementTypes.Select_3324) {
 				return this;
 			}
-			if (type == CrystalElementTypes.While_3082) {
+			if (type == CrystalElementTypes.While_3325) {
 				return this;
 			}
-			if (type == CrystalElementTypes.For_3083) {
+			if (type == CrystalElementTypes.For_3326) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Loop_3084) {
+			if (type == CrystalElementTypes.Loop_3327) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Open_3085) {
+			if (type == CrystalElementTypes.Open_3328) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Fetch_3086) {
+			if (type == CrystalElementTypes.Fetch_3329) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Close_3087) {
+			if (type == CrystalElementTypes.Close_3330) {
 				return this;
 			}
-			if (type == CrystalElementTypes.CallProcedure_3088) {
+			if (type == CrystalElementTypes.CallProcedure_3331) {
 				return this;
 			}
-			if (type == CrystalElementTypes.CallFunction_3089) {
+			if (type == CrystalElementTypes.CallFunction_3332) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

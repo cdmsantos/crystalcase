@@ -21,10 +21,9 @@ package crystal;
  * @model annotation="gmf.node label.text='Record'"
  * @generated
  */
-public interface Records extends Parameters {
+public interface Records extends DataAbstractions {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
-	 * The default value is <code>"Record"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -34,7 +33,7 @@ public interface Records extends Parameters {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getRecords_ClassName()
-	 * @model default="Record"
+	 * @model
 	 * @generated
 	 */
 	String getClassName();
@@ -51,7 +50,6 @@ public interface Records extends Parameters {
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"TYPE recordType IS RECORD (id number(5), name varchar2(25), lastName tableA.last_name%type)"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
@@ -61,7 +59,7 @@ public interface Records extends Parameters {
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(String)
 	 * @see crystal.CrystalPackage#getRecords_Code()
-	 * @model default="TYPE recordType IS RECORD (id number(5), name varchar2(25), lastName tableA.last_name%type)"
+	 * @model
 	 * @generated
 	 */
 	String getCode();
@@ -78,7 +76,6 @@ public interface Records extends Parameters {
 
 	/**
 	 * Returns the value of the '<em><b>Type Name</b></em>' attribute.
-	 * The default value is <code>"recordTypeName"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type Name</em>' attribute isn't clear,
@@ -88,7 +85,7 @@ public interface Records extends Parameters {
 	 * @return the value of the '<em>Type Name</em>' attribute.
 	 * @see #setTypeName(String)
 	 * @see crystal.CrystalPackage#getRecords_TypeName()
-	 * @model default="recordTypeName"
+	 * @model
 	 * @generated
 	 */
 	String getTypeName();

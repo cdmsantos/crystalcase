@@ -20,13 +20,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link crystal.impl.FetchImpl#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.impl.FetchImpl#getCursorName <em>Cursor Name</em>}</li>
  *   <li>{@link crystal.impl.FetchImpl#getVariableName <em>Variable Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FetchImpl extends StatementsImpl implements Fetch {
+public class FetchImpl extends CursorOperationsImpl implements Fetch {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -35,7 +34,7 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "Fetch";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -48,26 +47,6 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 	protected String className = CLASS_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCursorName() <em>Cursor Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCursorName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CURSOR_NAME_EDEFAULT = "cursorName";
-
-	/**
-	 * The cached value of the '{@link #getCursorName() <em>Cursor Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCursorName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String cursorName = CURSOR_NAME_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getVariableName() <em>Variable Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,7 +54,7 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VARIABLE_NAME_EDEFAULT = "variableCursor";
+	protected static final String VARIABLE_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVariableName() <em>Variable Name</em>}' attribute.
@@ -132,27 +111,6 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCursorName() {
-		return cursorName;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCursorName(String newCursorName) {
-		String oldCursorName = cursorName;
-		cursorName = newCursorName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.FETCH__CURSOR_NAME, oldCursorName, cursorName));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getVariableName() {
 		return variableName;
 	}
@@ -179,8 +137,6 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 		switch (featureID) {
 			case CrystalPackage.FETCH__CLASS_NAME:
 				return getClassName();
-			case CrystalPackage.FETCH__CURSOR_NAME:
-				return getCursorName();
 			case CrystalPackage.FETCH__VARIABLE_NAME:
 				return getVariableName();
 		}
@@ -197,9 +153,6 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 		switch (featureID) {
 			case CrystalPackage.FETCH__CLASS_NAME:
 				setClassName((String)newValue);
-				return;
-			case CrystalPackage.FETCH__CURSOR_NAME:
-				setCursorName((String)newValue);
 				return;
 			case CrystalPackage.FETCH__VARIABLE_NAME:
 				setVariableName((String)newValue);
@@ -219,9 +172,6 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 			case CrystalPackage.FETCH__CLASS_NAME:
 				setClassName(CLASS_NAME_EDEFAULT);
 				return;
-			case CrystalPackage.FETCH__CURSOR_NAME:
-				setCursorName(CURSOR_NAME_EDEFAULT);
-				return;
 			case CrystalPackage.FETCH__VARIABLE_NAME:
 				setVariableName(VARIABLE_NAME_EDEFAULT);
 				return;
@@ -239,8 +189,6 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 		switch (featureID) {
 			case CrystalPackage.FETCH__CLASS_NAME:
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
-			case CrystalPackage.FETCH__CURSOR_NAME:
-				return CURSOR_NAME_EDEFAULT == null ? cursorName != null : !CURSOR_NAME_EDEFAULT.equals(cursorName);
 			case CrystalPackage.FETCH__VARIABLE_NAME:
 				return VARIABLE_NAME_EDEFAULT == null ? variableName != null : !VARIABLE_NAME_EDEFAULT.equals(variableName);
 		}
@@ -259,8 +207,6 @@ public class FetchImpl extends StatementsImpl implements Fetch {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (className: ");
 		result.append(className);
-		result.append(", cursorName: ");
-		result.append(cursorName);
 		result.append(", variableName: ");
 		result.append(variableName);
 		result.append(')');

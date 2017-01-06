@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ForTest extends StatementsTest {
+public class ForTest extends IterationStructuresTest {
 
 	/**
 	 * <!-- begin-user-doc -->

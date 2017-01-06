@@ -15,12 +15,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
-import crystal.For;
-import crystal.Loop;
+import crystal.If;
 import crystal.Open;
-import crystal.Selector;
 
 /**
  * @generated
@@ -60,8 +57,8 @@ public class Open4CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Open newElement = CrystalFactory.eINSTANCE.createOpen();
 
-		Loop owner = (Loop) getElementToEdit();
-		owner.getLoopStatements().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getFalse_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

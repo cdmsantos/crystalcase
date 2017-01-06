@@ -15,10 +15,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
 import crystal.Exception;
-import crystal.While;
+import crystal.IterationStructures;
 
 /**
  * @generated
@@ -58,8 +57,8 @@ public class Exception4CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Exception newElement = CrystalFactory.eINSTANCE.createException();
 
-		While owner = (While) getElementToEdit();
-		owner.getWhileStatements().add(newElement);
+		IterationStructures owner = (IterationStructures) getElementToEdit();
+		owner.getInterations_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -25,32 +25,30 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link crystal.impl.AnonymousBlockImpl#getDeclarativePart <em>Declarative Part</em>}</li>
- *   <li>{@link crystal.impl.AnonymousBlockImpl#getExecutablePart <em>Executable Part</em>}</li>
+ *   <li>{@link crystal.impl.AnonymousBlockImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AnonymousBlockImpl extends SubprogramsImpl implements AnonymousBlock {
 	/**
-	 * The cached value of the '{@link #getDeclarativePart() <em>Declarative Part</em>}' containment reference list.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDeclarativePart()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Parameters> declarativePart;
+	protected static final String DESCRIPTION_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getExecutablePart() <em>Executable Part</em>}' containment reference list.
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExecutablePart()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Statements> executablePart;
-
+	protected String description = DESCRIPTION_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,11 +73,8 @@ public class AnonymousBlockImpl extends SubprogramsImpl implements AnonymousBloc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parameters> getDeclarativePart() {
-		if (declarativePart == null) {
-			declarativePart = new EObjectContainmentEList<Parameters>(Parameters.class, this, CrystalPackage.ANONYMOUS_BLOCK__DECLARATIVE_PART);
-		}
-		return declarativePart;
+	public String getDescription() {
+		return description;
 	}
 
 	/**
@@ -87,27 +82,11 @@ public class AnonymousBlockImpl extends SubprogramsImpl implements AnonymousBloc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Statements> getExecutablePart() {
-		if (executablePart == null) {
-			executablePart = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.ANONYMOUS_BLOCK__EXECUTABLE_PART);
-		}
-		return executablePart;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CrystalPackage.ANONYMOUS_BLOCK__DECLARATIVE_PART:
-				return ((InternalEList<?>)getDeclarativePart()).basicRemove(otherEnd, msgs);
-			case CrystalPackage.ANONYMOUS_BLOCK__EXECUTABLE_PART:
-				return ((InternalEList<?>)getExecutablePart()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.ANONYMOUS_BLOCK__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -118,10 +97,8 @@ public class AnonymousBlockImpl extends SubprogramsImpl implements AnonymousBloc
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CrystalPackage.ANONYMOUS_BLOCK__DECLARATIVE_PART:
-				return getDeclarativePart();
-			case CrystalPackage.ANONYMOUS_BLOCK__EXECUTABLE_PART:
-				return getExecutablePart();
+			case CrystalPackage.ANONYMOUS_BLOCK__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -135,13 +112,8 @@ public class AnonymousBlockImpl extends SubprogramsImpl implements AnonymousBloc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.ANONYMOUS_BLOCK__DECLARATIVE_PART:
-				getDeclarativePart().clear();
-				getDeclarativePart().addAll((Collection<? extends Parameters>)newValue);
-				return;
-			case CrystalPackage.ANONYMOUS_BLOCK__EXECUTABLE_PART:
-				getExecutablePart().clear();
-				getExecutablePart().addAll((Collection<? extends Statements>)newValue);
+			case CrystalPackage.ANONYMOUS_BLOCK__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -155,11 +127,8 @@ public class AnonymousBlockImpl extends SubprogramsImpl implements AnonymousBloc
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.ANONYMOUS_BLOCK__DECLARATIVE_PART:
-				getDeclarativePart().clear();
-				return;
-			case CrystalPackage.ANONYMOUS_BLOCK__EXECUTABLE_PART:
-				getExecutablePart().clear();
+			case CrystalPackage.ANONYMOUS_BLOCK__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -173,12 +142,26 @@ public class AnonymousBlockImpl extends SubprogramsImpl implements AnonymousBloc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.ANONYMOUS_BLOCK__DECLARATIVE_PART:
-				return declarativePart != null && !declarativePart.isEmpty();
-			case CrystalPackage.ANONYMOUS_BLOCK__EXECUTABLE_PART:
-				return executablePart != null && !executablePart.isEmpty();
+			case CrystalPackage.ANONYMOUS_BLOCK__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (description: ");
+		result.append(description);
+		result.append(')');
+		return result.toString();
 	}
 
 } //AnonymousBlockImpl

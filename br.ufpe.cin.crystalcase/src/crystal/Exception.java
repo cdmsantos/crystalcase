@@ -20,10 +20,9 @@ package crystal;
  * @model annotation="gmf.node figure='rectangle'"
  * @generated
  */
-public interface Exception extends Statements {
+public interface Exception extends AdditionalOperations {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
-	 * The default value is <code>"Exception"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -33,7 +32,7 @@ public interface Exception extends Statements {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getException_ClassName()
-	 * @model default="Exception"
+	 * @model
 	 * @generated
 	 */
 	String getClassName();
@@ -50,7 +49,6 @@ public interface Exception extends Statements {
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There isnt data registered\')"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
@@ -60,7 +58,7 @@ public interface Exception extends Statements {
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(String)
 	 * @see crystal.CrystalPackage#getException_Code()
-	 * @model default="EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There isnt data registered\')"
+	 * @model
 	 * @generated
 	 */
 	String getCode();

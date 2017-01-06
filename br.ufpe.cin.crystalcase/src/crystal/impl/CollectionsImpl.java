@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class CollectionsImpl extends ParametersImpl implements Collections {
+public class CollectionsImpl extends DataAbstractionsImpl implements Collections {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public class CollectionsImpl extends ParametersImpl implements Collections {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "Collection";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -55,7 +55,7 @@ public class CollectionsImpl extends ParametersImpl implements Collections {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)";
+	protected static final String CODE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -75,7 +75,7 @@ public class CollectionsImpl extends ParametersImpl implements Collections {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_NAME_EDEFAULT = "collectionTypeName";
+	protected static final String TYPE_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.

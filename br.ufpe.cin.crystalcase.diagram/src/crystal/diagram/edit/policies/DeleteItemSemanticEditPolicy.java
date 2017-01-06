@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.edit.policies;
 
 import java.util.Iterator;
@@ -28,15 +28,15 @@ import crystal.diagram.providers.CrystalElementTypes;
 public class DeleteItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public DeleteItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Delete_3186);
+		super(CrystalElementTypes.Delete_3248);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDestroyElementCommand(DestroyElementRequest req) {
 		View view = (View) getHost().getModel();
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(getEditingDomain(), null);

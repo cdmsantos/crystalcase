@@ -16,9 +16,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
-import crystal.Function;
 import crystal.If;
-import crystal.While;
 
 /**
  * @generated
@@ -59,7 +57,7 @@ public class If2CreateCommand extends EditElementCommand {
 		If newElement = CrystalFactory.eINSTANCE.createIf();
 
 		If owner = (If) getElementToEdit();
-		owner.getIfs().add(newElement);
+		owner.getTrue_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

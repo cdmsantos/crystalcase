@@ -28,12 +28,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link crystal.impl.WhileImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.WhileImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link crystal.impl.WhileImpl#getWhileStatements <em>While Statements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WhileImpl extends StatementsImpl implements While {
+public class WhileImpl extends IterationStructuresImpl implements While {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,7 +41,7 @@ public class WhileImpl extends StatementsImpl implements While {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "While";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -62,7 +61,7 @@ public class WhileImpl extends StatementsImpl implements While {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONDITION_EDEFAULT = "Type the WHILE condition";
+	protected static final String CONDITION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.
@@ -73,16 +72,6 @@ public class WhileImpl extends StatementsImpl implements While {
 	 * @ordered
 	 */
 	protected String condition = CONDITION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getWhileStatements() <em>While Statements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWhileStatements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Statements> whileStatements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -150,32 +139,6 @@ public class WhileImpl extends StatementsImpl implements While {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Statements> getWhileStatements() {
-		if (whileStatements == null) {
-			whileStatements = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.WHILE__WHILE_STATEMENTS);
-		}
-		return whileStatements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CrystalPackage.WHILE__WHILE_STATEMENTS:
-				return ((InternalEList<?>)getWhileStatements()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -183,8 +146,6 @@ public class WhileImpl extends StatementsImpl implements While {
 				return getClassName();
 			case CrystalPackage.WHILE__CONDITION:
 				return getCondition();
-			case CrystalPackage.WHILE__WHILE_STATEMENTS:
-				return getWhileStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,10 +165,6 @@ public class WhileImpl extends StatementsImpl implements While {
 			case CrystalPackage.WHILE__CONDITION:
 				setCondition((String)newValue);
 				return;
-			case CrystalPackage.WHILE__WHILE_STATEMENTS:
-				getWhileStatements().clear();
-				getWhileStatements().addAll((Collection<? extends Statements>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -226,9 +183,6 @@ public class WhileImpl extends StatementsImpl implements While {
 			case CrystalPackage.WHILE__CONDITION:
 				setCondition(CONDITION_EDEFAULT);
 				return;
-			case CrystalPackage.WHILE__WHILE_STATEMENTS:
-				getWhileStatements().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -245,8 +199,6 @@ public class WhileImpl extends StatementsImpl implements While {
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.WHILE__CONDITION:
 				return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
-			case CrystalPackage.WHILE__WHILE_STATEMENTS:
-				return whileStatements != null && !whileStatements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

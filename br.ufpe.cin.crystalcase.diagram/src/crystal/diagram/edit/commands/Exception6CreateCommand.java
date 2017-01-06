@@ -17,8 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.Exception;
-import crystal.Function;
-import crystal.Loop;
+import crystal.If;
 
 /**
  * @generated
@@ -58,8 +57,8 @@ public class Exception6CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Exception newElement = CrystalFactory.eINSTANCE.createException();
 
-		Loop owner = (Loop) getElementToEdit();
-		owner.getLoopStatements().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getFalse_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

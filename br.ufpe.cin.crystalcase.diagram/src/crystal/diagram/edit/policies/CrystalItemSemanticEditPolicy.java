@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.edit.policies;
 
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
@@ -21,44 +21,44 @@ import crystal.diagram.providers.CrystalElementTypes;
 public class CrystalItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalItemSemanticEditPolicy() {
 		super(CrystalElementTypes.Crystal_1000);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (CrystalElementTypes.Procedure_2007 == req.getElementType()) {
+		if (CrystalElementTypes.Procedure_2010 == req.getElementType()) {
 			return getGEFWrapper(new ProcedureCreateCommand(req));
 		}
-		if (CrystalElementTypes.Function_2008 == req.getElementType()) {
+		if (CrystalElementTypes.Function_2011 == req.getElementType()) {
 			return getGEFWrapper(new FunctionCreateCommand(req));
 		}
-		if (CrystalElementTypes.AnonymousBlock_2009 == req.getElementType()) {
+		if (CrystalElementTypes.AnonymousBlock_2012 == req.getElementType()) {
 			return getGEFWrapper(new AnonymousBlockCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDuplicateCommand(DuplicateElementsRequest req) {
 		TransactionalEditingDomain editingDomain = ((IGraphicalEditPart) getHost()).getEditingDomain();
 		return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static class DuplicateAnythingCommand extends DuplicateEObjectsCommand {
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public DuplicateAnythingCommand(TransactionalEditingDomain editingDomain, DuplicateElementsRequest req) {
 			super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
 		}

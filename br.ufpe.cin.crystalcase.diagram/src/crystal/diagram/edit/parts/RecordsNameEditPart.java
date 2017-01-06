@@ -60,7 +60,7 @@ public class RecordsNameEditPart extends CompartmentEditPart implements ITextAwa
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5062;
+	public static final int VISUAL_ID = 5343;
 
 	/**
 	 * @generated
@@ -295,7 +295,7 @@ public class RecordsNameEditPart extends CompartmentEditPart implements ITextAwa
 	 */
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Records_3054, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Records_3335, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.RecordsNameEditPart.VISUAL_ID));
 		}
 		return parser;

@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.part;
 
 import org.eclipse.core.expressions.PropertyTester;
@@ -15,13 +15,13 @@ import crystal.diagram.edit.parts.CrystalEditPart;
 public class CrystalShortcutPropertyTester extends PropertyTester {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected static final String SHORTCUT_PROPERTY = "isShortcut"; //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean test(Object receiver, String method, Object[] args, Object expectedValue) {
 		if (false == receiver instanceof View) {
 			return false;

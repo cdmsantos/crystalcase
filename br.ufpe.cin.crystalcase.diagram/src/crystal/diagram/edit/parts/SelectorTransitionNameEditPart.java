@@ -312,9 +312,6 @@ public class SelectorTransitionNameEditPart extends LabelEditPart implements ITe
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.SelectorTransition_4002, getParserElement(),
-					CrystalVisualIDRegistry
-							.getType(crystal.diagram.edit.parts.SelectorTransitionNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}

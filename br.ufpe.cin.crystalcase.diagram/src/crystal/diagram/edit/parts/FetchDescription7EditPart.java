@@ -295,8 +295,6 @@ public class FetchDescription7EditPart extends CompartmentEditPart implements IT
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Fetch_3147, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FetchDescription7EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

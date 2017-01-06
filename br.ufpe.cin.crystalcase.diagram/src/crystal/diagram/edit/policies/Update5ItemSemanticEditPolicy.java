@@ -31,7 +31,7 @@ public class Update5ItemSemanticEditPolicy extends CrystalBaseItemSemanticEditPo
 	* @generated
 	*/
 	public Update5ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Update_3157);
+		super(CrystalElementTypes.Update_3309);
 	}
 
 	/**

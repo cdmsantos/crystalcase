@@ -295,9 +295,6 @@ public class ExpressionDescription8EditPart extends CompartmentEditPart implemen
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Expression_3216, getParserElement(),
-					CrystalVisualIDRegistry
-							.getType(crystal.diagram.edit.parts.ExpressionDescription8EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

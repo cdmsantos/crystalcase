@@ -21,10 +21,9 @@ package crystal;
  * @model annotation="gmf.node label.text='Collection'"
  * @generated
  */
-public interface Collections extends Parameters {
+public interface Collections extends DataAbstractions {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
-	 * The default value is <code>"Collection"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -34,7 +33,7 @@ public interface Collections extends Parameters {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCollections_ClassName()
-	 * @model default="Collection"
+	 * @model
 	 * @generated
 	 */
 	String getClassName();
@@ -51,7 +50,6 @@ public interface Collections extends Parameters {
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * The default value is <code>"TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
@@ -61,7 +59,7 @@ public interface Collections extends Parameters {
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(String)
 	 * @see crystal.CrystalPackage#getCollections_Code()
-	 * @model default="TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)"
+	 * @model
 	 * @generated
 	 */
 	String getCode();
@@ -78,7 +76,6 @@ public interface Collections extends Parameters {
 
 	/**
 	 * Returns the value of the '<em><b>Type Name</b></em>' attribute.
-	 * The default value is <code>"collectionTypeName"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type Name</em>' attribute isn't clear,
@@ -88,7 +85,7 @@ public interface Collections extends Parameters {
 	 * @return the value of the '<em>Type Name</em>' attribute.
 	 * @see #setTypeName(String)
 	 * @see crystal.CrystalPackage#getCollections_TypeName()
-	 * @model default="collectionTypeName"
+	 * @model
 	 * @generated
 	 */
 	String getTypeName();

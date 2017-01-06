@@ -36,7 +36,7 @@ public class CallProcedure5EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3179;
+	public static final int VISUAL_ID = 3318;
 
 	/**
 	* @generated

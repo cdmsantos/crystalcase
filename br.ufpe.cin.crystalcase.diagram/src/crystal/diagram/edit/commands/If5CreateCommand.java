@@ -16,8 +16,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
-import crystal.For;
 import crystal.If;
+import crystal.Options;
 
 /**
  * @generated
@@ -57,8 +57,8 @@ public class If5CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		If newElement = CrystalFactory.eINSTANCE.createIf();
 
-		For owner = (For) getElementToEdit();
-		owner.getForStatements().add(newElement);
+		Options owner = (Options) getElementToEdit();
+		owner.getCase_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

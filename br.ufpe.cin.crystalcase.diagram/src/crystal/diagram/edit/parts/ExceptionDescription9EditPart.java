@@ -295,9 +295,6 @@ public class ExceptionDescription9EditPart extends CompartmentEditPart implement
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Exception_3075, getParserElement(),
-					CrystalVisualIDRegistry
-							.getType(crystal.diagram.edit.parts.ExceptionDescription9EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

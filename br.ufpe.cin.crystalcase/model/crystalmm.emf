@@ -3,239 +3,239 @@ package crystal;
 
 @gmf.diagram(foo="bar", rcp="false", onefile="true", diagram.extension="crystal")
 class Crystal {
-  val Transition[*] transitions;
-  val SelectorTransition[*] selectorTransitions;
-  val Procedure[*] procedures;
-  val Function[*] functions;
-  val AnonymousBlock[*] blocks;
+  val Links[*] links;
+  val Subprograms[*] subprograms;
 }
 
 @gmf.node(figure="rectangle", border.width="1", label.readOnly="true")
 abstract class Subprograms {
+  @gmf.compartment
+  val DataAbstractions[*] declarativePart;
+
+  @gmf.compartment
+  val Statements[*] executablePart;
+}
+
+@gmf.node(figure="rectangle", border.width="1", label.readOnly="true")
+abstract class NamedBlocks extends Subprograms {
   attr String name;
+  
+  @gmf.compartment
+  val DataAbstractions[*] parameters;
 }
 
 @gmf.node(label="name", label.text="Procedure", border.color="255,13,13")
-class Procedure extends Subprograms {
-
-  @gmf.compartment
-  val Parameters[*] declarativePart;
-
-  @gmf.compartment
-  val Parameters[*] parameters;
-
-  @gmf.compartment
-  val Statements[*] executablePart;
+class Procedure extends NamedBlocks {
 }
 
 @gmf.node(label="name", label.text="Function", border.color="25,191,108")
-class Function extends Subprograms {
+class Function extends NamedBlocks {
 
   @gmf.compartment
-  val Parameters[*] declarativePart;
-
-  @gmf.compartment
-  val Parameters[*] parameters;
-
-  @gmf.compartment
-  val Parameters[1] returnPart;
-
-  @gmf.compartment
-  val Statements[*] executablePart;
+  val DataAbstractions[1] returnPart;
 }
 
-@gmf.node(label="name", label.text="Anonymous Block", border.color="43,106,215", border.style="dash")
+@gmf.node(label="description", label.text="Anonymous Block", border.color="43,106,215", border.style="dash")
 class AnonymousBlock extends Subprograms {
-
-  @gmf.compartment
-  val Parameters[*] declarativePart;
-
-  @gmf.compartment
-  val Statements[*] executablePart;
+  attr String description;
 }
 
 @gmf.node(label="name", figure="rectangle", border.width="1", label.icon="true", label.readOnly="true", label.placement="internal")
-abstract class Parameters {
+abstract class DataAbstractions {
   attr String name;
   attr ParameterType type;
 }
 
 @gmf.node(label.text="Data Type")
-class DataType extends Parameters {
-  attr String className = "DataType";
+class DataType extends DataAbstractions {
+  attr String className;
   attr DataTypeOptions options;
-  attr int precision = 1;
-  attr int scale = 0;
+  attr int precision;
+  attr int scale;
 }
 
 @gmf.node(label.text="Collection")
-class Collections extends Parameters {
-  attr String className = "Collection";
-  attr String code = "TYPE name IS TABLE OF NUMBER INDEX BY VARCHAR2(20)";
-  attr String typeName = "collectionTypeName";
+class Collections extends DataAbstractions {
+  attr String className;
+  attr String code;
+  attr String typeName;
 }
 
 @gmf.node(label.text="Record")
-class Records extends Parameters {
-  attr String className = "Record";
-  attr String code = "TYPE recordType IS RECORD (id number(5), name varchar2(25), lastName tableA.last_name%type)";
-  attr String typeName = "recordTypeName";
+class Records extends DataAbstractions {
+  attr String className;
+  attr String code;
+  attr String typeName;
 }
 
 @gmf.node(label.text="Cursor")
-class Cursor extends Parameters {
-  attr String className = "Cursor";
-  attr String cursorQuery = "selectStatement";
+class Cursor extends DataAbstractions {
+  attr String className;
+  attr String cursorQuery;
 }
 
 @gmf.node(label="description", label.icon="true", label.placement="internal")
 abstract class Statements {
-  attr String description = "Description";
+  attr String description;
   attr boolean isStart;
 }
 
 @gmf.node(figure="rectangle")
-class Expression extends Statements {
-  attr String className = "Expression";
-  attr String value = "Type the expression here";
+abstract class CallBlocks extends Statements {
+  attr String nameSubroutine;
 }
 
 @gmf.node(figure="rectangle")
-class Exception extends Statements {
-  attr String className = "Exception";
-  attr String code = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE('There isnt data registered')";
+abstract class CursorOperations extends Statements {
+  attr String cursorName;
 }
 
 @gmf.node(figure="rectangle")
-class If extends Statements {
-  attr String className = "If";
-  attr String condition = "Type the IF condition";
-
-  @gmf.compartment
-  val Statements[*] ifs;
-
-  @gmf.compartment
-  val Statements[*] elses;
+abstract class SQLOperations extends Statements {
+  attr String code;
 }
 
 @gmf.node(figure="rectangle")
-class Case extends Statements {
-  attr String className = "Case";
+abstract class IterationStructures extends Statements {
 
   @gmf.compartment
-  val Selector[*] cases;
+  val Statements[*] interations_statements;
+}
+
+@gmf.node(figure="rectangle")
+abstract class ConditionalStructures extends Statements {
+}
+
+@gmf.node(figure="rectangle")
+abstract class AdditionalOperations extends Statements {
+}
+
+@gmf.node(figure="rectangle")
+class Expression extends AdditionalOperations {
+  attr String className;
+  attr String value;
+}
+
+@gmf.node(figure="rectangle")
+class Exception extends AdditionalOperations {
+  attr String className;
+  attr String code;
+}
+
+@gmf.node(figure="rectangle")
+class If extends ConditionalStructures {
+  attr String className;
+  attr String condition;
 
   @gmf.compartment
-  val Statements[*] elseStatements;
+  val Statements[*] true_statements;
+
+  @gmf.compartment
+  val Statements[*] false_statements;
+}
+
+@gmf.node(figure="rectangle")
+class Case extends ConditionalStructures {
+  attr String className;
+
+  @gmf.compartment
+  val Options[*] options;
+
+  @gmf.compartment
+  val Statements[*] default_statements;
 }
 
 @gmf.node(figure="rectangle", label="description", label.icon="true", label.placement="internal")
-class Selector {
-  attr String className = "Selector";
-  attr String condition = "Type the condition for this Selector";
-  attr String description = "Description";
+class Options {
+  attr String className;
+  attr String condition;
+  attr String description;
 
   @gmf.compartment
-  val Statements[*] caseStatements;
+  val Statements[*] case_statements;
 }
 
 @gmf.node(figure="rectangle")
-class Insert extends Statements {
-  attr String className = "Insert";
-  attr String code = "INSERT INTO tableA (id, name) VALUES (1, 'example')";
+class Insert extends SQLOperations {
+  attr String className;
 }
 
 @gmf.node(figure="rectangle")
-class Update extends Statements {
-  attr String className = "Update";
-  attr String code = "UPDATE tableA SET name = 'example' WHERE id = 1";
+class Update extends SQLOperations {
+  attr String className;
 }
 
 @gmf.node(figure="rectangle")
-class Delete extends Statements {
-  attr String className = "Delete";
-  attr String code = "DELETE FROM tableA WHERE ID = 1";
+class Delete extends SQLOperations {
+  attr String className;
 }
 
 @gmf.node(figure="rectangle")
-class Select extends Statements {
-  attr String className = "Select";
-  attr String code = "SELECT * FROM tableA WHERE id = 1";
+class Select extends SQLOperations {
+  attr String className;
 }
 
 @gmf.node(figure="rectangle")
-class While extends Statements {
-  attr String className = "While";
-  attr String condition = "Type the WHILE condition";
-
-  @gmf.compartment
-  val Statements[*] whileStatements;
+class While extends IterationStructures {
+  attr String className;
+  attr String condition;
 }
 
 @gmf.node(figure="rectangle")
-class For extends Statements {
-  attr String className = "For";
-  attr String counter = "Type the name of the FOR counter";
+class For extends IterationStructures {
+  attr String className;
+  attr String counter;
   attr ForCounter typeCounter;
-  attr int lowestNumber = 0;
-  attr int highestNumber = 0;
-
-  @gmf.compartment
-  val Statements[*] forStatements;
+  attr int lowestNumber;
+  attr int highestNumber;
 }
 
 @gmf.node(figure="rectangle")
-class Loop extends Statements {
-  attr String className = "Loop";
-  attr String breakCondition = "Type the break condition for LOOP";
-
-  @gmf.compartment
-  val Statements[*] loopStatements;
+class Loop extends IterationStructures {
+  attr String className;
+  attr String breakCondition;
 }
 
 @gmf.node(figure="rectangle")
-class Open extends Statements {
-  attr String className = "Open";
-  attr String cursorName = "cursorName";
+class Open extends CursorOperations {
+  attr String className;
 }
 
 @gmf.node(figure="rectangle")
-class Fetch extends Statements {
-  attr String className = "Fetch";
-  attr String cursorName = "cursorName";
-  attr String variableName = "variableCursor";
+class Fetch extends CursorOperations {
+  attr String className;
+  attr String variableName;
 }
 
 @gmf.node(figure="rectangle")
-class Close extends Statements {
-  attr String className = "Close";
-  attr String cursorName = "cursorName";
+class Close extends CursorOperations {
+  attr String className;
 }
 
 @gmf.node(figure="rectangle")
-class CallProcedure extends Statements {
-  attr String className = "CallProcedure";
-  attr String nameSubroutine;
+class CallProcedure extends CallBlocks {
+  attr String className;
 }
 
 @gmf.node(figure="rectangle")
-class CallFunction extends Statements {
-  attr String className = "CallFunction";
-  attr String nameSubroutine;
+class CallFunction extends CallBlocks {
+  attr String className;
+}
+
+abstract class Links {
+  attr String name;
 }
 
 @gmf.link(source="source", target="target", incoming="true", target.decoration="arrow", color="0,0,0", width="1", label="name", label.text="Statement Connection", label.icon="true")
-class Transition {
-  attr String name = "Statement Connection";
+class Transition extends Links {
   ref Statements source;
   ref Statements target;
 }
 
-@gmf.link(source="source", target="target", incoming="true", target.decoration="arrow", color="0,0,0", width="1", label="name", label.text="Case Connection", label.icon="true")
-class SelectorTransition {
-  attr String name = "Case Connection";
-  ref Selector source;
-  ref Selector target;
+@gmf.link(source="source", target="target", incoming="true", target.decoration="arrow", style="dash", color="0,0,0", width="1", label="name", label.text="Case Connection", label.icon="true")
+class OptionsTransition extends Links {
+  ref Options source;
+  ref Options target;
 }
 
 enum ParameterType {
@@ -279,4 +279,3 @@ enum DataTypeOptions {
   ROWID = 26;
   UROWID = 27;
 }
-

@@ -17,9 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.Case;
 import crystal.CrystalFactory;
-import crystal.Function;
-import crystal.If;
-import crystal.While;
+import crystal.IterationStructures;
 
 /**
  * @generated
@@ -59,8 +57,8 @@ public class Case2CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Case newElement = CrystalFactory.eINSTANCE.createCase();
 
-		If owner = (If) getElementToEdit();
-		owner.getElses().add(newElement);
+		IterationStructures owner = (IterationStructures) getElementToEdit();
+		owner.getInterations_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

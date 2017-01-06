@@ -8,7 +8,7 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="crystalmm.ecore#//Crystal/procedures"/>
+        href="crystalmm.ecore#//Crystal/subprograms"/>
     <ownedChild
         relatedDiagrams="//@diagram">
       <domainMetaElement
@@ -19,129 +19,17 @@
         <diagramLabel
             href="crystalmm.gmfgraph#ProcedureLabel"/>
         <features
-            href="crystalmm.ecore#//Subprograms/name"/>
+            href="crystalmm.ecore#//NamedBlocks/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="crystalmm.gmftool#//@palette/@tools.2/@tools.0"/>
+          href="crystalmm.gmftool#//@palette/@tools.0/@tools.19"/>
       <diagramNode
           href="crystalmm.gmfgraph#Procedure"/>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/declarativePart"/>
-        <ownedChild>
-          <domainMetaElement
-              href="crystalmm.ecore#//DataType"/>
-          <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping"
-              readOnly="true">
-            <diagramLabel
-                href="crystalmm.gmfgraph#DataTypeLabel"/>
-            <features
-                href="crystalmm.ecore#//Parameters/name"/>
-          </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.3/@tools.0"/>
-          <diagramNode
-              href="crystalmm.gmfgraph#DataType"/>
-        </ownedChild>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
-        <containmentFeature
-            href="crystalmm.ecore#//Procedure/declarativePart"/>
-        <ownedChild>
-          <domainMetaElement
-              href="crystalmm.ecore#//Collections"/>
-          <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping"
-              readOnly="true">
-            <diagramLabel
-                href="crystalmm.gmfgraph#CollectionsLabel"/>
-            <features
-                href="crystalmm.ecore#//Parameters/name"/>
-          </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.3/@tools.1"/>
-          <diagramNode
-              href="crystalmm.gmfgraph#Collections"/>
-        </ownedChild>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
-        <containmentFeature
-            href="crystalmm.ecore#//Procedure/declarativePart"/>
-        <ownedChild>
-          <domainMetaElement
-              href="crystalmm.ecore#//Records"/>
-          <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping"
-              readOnly="true">
-            <diagramLabel
-                href="crystalmm.gmfgraph#RecordsLabel"/>
-            <features
-                href="crystalmm.ecore#//Parameters/name"/>
-          </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.3/@tools.2"/>
-          <diagramNode
-              href="crystalmm.gmfgraph#Records"/>
-        </ownedChild>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
-        <containmentFeature
-            href="crystalmm.ecore#//Procedure/declarativePart"/>
-        <ownedChild>
-          <domainMetaElement
-              href="crystalmm.ecore#//Cursor"/>
-          <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping"
-              readOnly="true">
-            <diagramLabel
-                href="crystalmm.gmfgraph#CursorLabel"/>
-            <features
-                href="crystalmm.ecore#//Parameters/name"/>
-          </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.3/@tools.3"/>
-          <diagramNode
-              href="crystalmm.gmfgraph#Cursor"/>
-        </ownedChild>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.1"
-          referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Procedure/parameters"/>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.1"
-          referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Procedure/parameters"/>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.1"
-          referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Procedure/parameters"/>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.1"
-          referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Procedure/parameters"/>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
-        <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//Expression"/>
@@ -154,15 +42,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.4"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.10"/>
           <diagramNode
               href="crystalmm.gmfgraph#Expression"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//Exception"/>
@@ -175,15 +63,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.3"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.9"/>
           <diagramNode
               href="crystalmm.gmfgraph#Exception"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild
             relatedDiagrams="//@diagram">
           <domainMetaElement
@@ -197,217 +85,217 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.4/@tools.0"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.14"/>
           <diagramNode
               href="crystalmm.gmfgraph#If"/>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//If/true_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//If/true_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//If/true_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//If/true_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//If/true_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//If/true_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//If/true_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//If/true_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/true_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/true_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/true_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/true_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/true_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.13/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/true_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.14/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/true_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.15/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/true_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.20/@ownedChild">
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.21/@ownedChild">
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.22/@ownedChild">
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.23/@ownedChild">
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/ifs"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.13/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.14/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.2/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.15/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.20/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.21/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.22/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.23/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//If/elses"/>
+                href="crystalmm.ecore#//If/false_statements"/>
           </children>
           <compartments
-              children="//@nodes.0/@ownedChild/@children.10/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.15">
+              children="//@nodes.0/@ownedChild/@children.2/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.15">
             <compartment
-                href="crystalmm.gmfgraph#IfIfsCompartment"/>
+                href="crystalmm.gmfgraph#IfTrue_statementsCompartment"/>
           </compartments>
           <compartments
-              children="//@nodes.0/@ownedChild/@children.10/@ownedChild/@children.16 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.17 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.18 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.19 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.20 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.21 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.22 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.23 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.24 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.25 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.26 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.27 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.28 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.29 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.30 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.31">
+              children="//@nodes.0/@ownedChild/@children.2/@ownedChild/@children.16 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.17 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.18 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.19 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.20 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.21 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.22 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.23 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.24 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.25 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.26 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.27 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.28 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.29 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.30 //@nodes.0/@ownedChild/@children.2/@ownedChild/@children.31">
             <compartment
-                href="crystalmm.gmfgraph#IfElsesCompartment"/>
+                href="crystalmm.gmfgraph#IfFalse_statementsCompartment"/>
           </compartments>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild
             relatedDiagrams="//@diagram">
           <domainMetaElement
@@ -421,244 +309,244 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.4/@tools.1"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.3"/>
           <diagramNode
               href="crystalmm.gmfgraph#Case"/>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//Case/default_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//Case/default_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//Case/default_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//Case/default_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//Case/default_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//Case/default_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//Case/default_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
+              referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//Case/default_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
+                href="crystalmm.ecore#//Case/default_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
+                href="crystalmm.ecore#//Case/default_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
+                href="crystalmm.ecore#//Case/default_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
+                href="crystalmm.ecore#//Case/default_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
+                href="crystalmm.ecore#//Case/default_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.13/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
+                href="crystalmm.ecore#//Case/default_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.14/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
+                href="crystalmm.ecore#//Case/default_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.1"
               referencedChild="//@nodes.0/@ownedChild/@children.15/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
+                href="crystalmm.ecore#//Case/default_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.0">
             <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.20/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.21/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.22/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.1"
-              referencedChild="//@nodes.0/@ownedChild/@children.23/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Case/elseStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@compartments.0">
-            <containmentFeature
-                href="crystalmm.ecore#//Case/cases"/>
+                href="crystalmm.ecore#//Case/options"/>
             <ownedChild
                 relatedDiagrams="//@diagram">
               <domainMetaElement
-                  href="crystalmm.ecore#//Selector"/>
+                  href="crystalmm.ecore#//Options"/>
               <labelMappings
                   xsi:type="gmfmap:FeatureLabelMapping">
                 <diagramLabel
-                    href="crystalmm.gmfgraph#SelectorLabel"/>
+                    href="crystalmm.gmfgraph#OptionsLabel"/>
                 <features
-                    href="crystalmm.ecore#//Selector/description"/>
+                    href="crystalmm.ecore#//Options/description"/>
               </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="crystalmm.gmftool#//@palette/@tools.4/@tools.2"/>
+                  href="crystalmm.gmftool#//@palette/@tools.0/@tools.18"/>
               <diagramNode
-                  href="crystalmm.gmfgraph#Selector"/>
+                  href="crystalmm.gmfgraph#Options"/>
               <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
+                <containmentFeature
+                    href="crystalmm.ecore#//Options/case_statements"/>
+              </children>
+              <children
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
+                <containmentFeature
+                    href="crystalmm.ecore#//Options/case_statements"/>
+              </children>
+              <children
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
+                <containmentFeature
+                    href="crystalmm.ecore#//Options/case_statements"/>
+              </children>
+              <children
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
+                <containmentFeature
+                    href="crystalmm.ecore#//Options/case_statements"/>
+              </children>
+              <children
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
+                <containmentFeature
+                    href="crystalmm.ecore#//Options/case_statements"/>
+              </children>
+              <children
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
+                <containmentFeature
+                    href="crystalmm.ecore#//Options/case_statements"/>
+              </children>
+              <children
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
+                <containmentFeature
+                    href="crystalmm.ecore#//Options/case_statements"/>
+              </children>
+              <children
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
+                <containmentFeature
+                    href="crystalmm.ecore#//Options/case_statements"/>
+              </children>
+              <children
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
                   referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
                 <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
+                    href="crystalmm.ecore#//Options/case_statements"/>
               </children>
               <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
                   referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
                 <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
+                    href="crystalmm.ecore#//Options/case_statements"/>
               </children>
               <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
                   referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
                 <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
+                    href="crystalmm.ecore#//Options/case_statements"/>
               </children>
               <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
                   referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
                 <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
+                    href="crystalmm.ecore#//Options/case_statements"/>
               </children>
               <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
                   referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
                 <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
+                    href="crystalmm.ecore#//Options/case_statements"/>
               </children>
               <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
                   referencedChild="//@nodes.0/@ownedChild/@children.13/@ownedChild">
                 <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
+                    href="crystalmm.ecore#//Options/case_statements"/>
               </children>
               <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
                   referencedChild="//@nodes.0/@ownedChild/@children.14/@ownedChild">
                 <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
+                    href="crystalmm.ecore#//Options/case_statements"/>
               </children>
               <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
+                  compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@compartments.0"
                   referencedChild="//@nodes.0/@ownedChild/@children.15/@ownedChild">
                 <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
-              </children>
-              <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
-                  referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
-                <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
-              </children>
-              <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
-                  referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
-                <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
-              </children>
-              <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
-                  referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
-                <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
-              </children>
-              <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
-                  referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
-                <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
-              </children>
-              <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
-                  referencedChild="//@nodes.0/@ownedChild/@children.20/@ownedChild">
-                <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
-              </children>
-              <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
-                  referencedChild="//@nodes.0/@ownedChild/@children.21/@ownedChild">
-                <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
-              </children>
-              <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
-                  referencedChild="//@nodes.0/@ownedChild/@children.22/@ownedChild">
-                <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
-              </children>
-              <children
-                  compartment="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@compartments.0"
-                  referencedChild="//@nodes.0/@ownedChild/@children.23/@ownedChild">
-                <containmentFeature
-                    href="crystalmm.ecore#//Selector/caseStatements"/>
+                    href="crystalmm.ecore#//Options/case_statements"/>
               </children>
               <compartments
-                  children="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16/@ownedChild/@children.15">
+                  children="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16/@ownedChild/@children.15">
                 <compartment
-                    href="crystalmm.gmfgraph#SelectorCaseStatementsCompartment"/>
+                    href="crystalmm.gmfgraph#OptionsCase_statementsCompartment"/>
               </compartments>
             </ownedChild>
           </children>
           <compartments
-              children="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.16">
+              children="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.16">
             <compartment
-                href="crystalmm.gmfgraph#CaseCasesCompartment"/>
+                href="crystalmm.gmfgraph#CaseOptionsCompartment"/>
           </compartments>
           <compartments
-              children="//@nodes.0/@ownedChild/@children.11/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.11/@ownedChild/@children.15">
+              children="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.3/@ownedChild/@children.15">
             <compartment
-                href="crystalmm.gmfgraph#CaseElseStatementsCompartment"/>
+                href="crystalmm.gmfgraph#CaseDefault_statementsCompartment"/>
           </compartments>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//Insert"/>
@@ -671,15 +559,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.5"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.15"/>
           <diagramNode
               href="crystalmm.gmfgraph#Insert"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//Update"/>
@@ -692,15 +580,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.7"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.22"/>
           <diagramNode
               href="crystalmm.gmfgraph#Update"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//Delete"/>
@@ -713,15 +601,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.2"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.8"/>
           <diagramNode
               href="crystalmm.gmfgraph#Delete"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//Select"/>
@@ -734,15 +622,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.6"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.21"/>
           <diagramNode
               href="crystalmm.gmfgraph#Select"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild
             relatedDiagrams="//@diagram">
           <domainMetaElement
@@ -756,116 +644,116 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.5/@tools.0"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.23"/>
           <diagramNode
               href="crystalmm.gmfgraph#While"/>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.13/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.14/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.8/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.15/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.20/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.21/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.22/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.16/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.23/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//While/whileStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <compartments
-              children="//@nodes.0/@ownedChild/@children.16/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.16/@ownedChild/@children.15">
+              children="//@nodes.0/@ownedChild/@children.8/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.8/@ownedChild/@children.15">
             <compartment
-                href="crystalmm.gmfgraph#WhileWhileStatementsCompartment"/>
+                href="crystalmm.gmfgraph#WhileInterations_statementsCompartment"/>
           </compartments>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild
             relatedDiagrams="//@diagram">
           <domainMetaElement
@@ -879,116 +767,116 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.5/@tools.2"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.12"/>
           <diagramNode
               href="crystalmm.gmfgraph#For"/>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.13/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.14/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.15/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.20/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.21/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.22/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.17/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.23/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//For/forStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <compartments
-              children="//@nodes.0/@ownedChild/@children.17/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.17/@ownedChild/@children.15">
+              children="//@nodes.0/@ownedChild/@children.9/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.15">
             <compartment
-                href="crystalmm.gmfgraph#ForForStatementsCompartment"/>
+                href="crystalmm.gmfgraph#ForInterations_statementsCompartment"/>
           </compartments>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild
             relatedDiagrams="//@diagram">
           <domainMetaElement
@@ -1002,116 +890,116 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.5/@tools.1"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.16"/>
           <diagramNode
               href="crystalmm.gmfgraph#Loop"/>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
+            <containmentFeature
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.13/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.14/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.10/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.15/@ownedChild">
             <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.20/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.21/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.22/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.18/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.23/@ownedChild">
-            <containmentFeature
-                href="crystalmm.ecore#//Loop/loopStatements"/>
+                href="crystalmm.ecore#//IterationStructures/interations_statements"/>
           </children>
           <compartments
-              children="//@nodes.0/@ownedChild/@children.18/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.18/@ownedChild/@children.15">
+              children="//@nodes.0/@ownedChild/@children.10/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.10/@ownedChild/@children.15">
             <compartment
-                href="crystalmm.gmfgraph#LoopLoopStatementsCompartment"/>
+                href="crystalmm.gmfgraph#LoopInterations_statementsCompartment"/>
           </compartments>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//Open"/>
@@ -1124,15 +1012,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.6/@tools.0"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.17"/>
           <diagramNode
               href="crystalmm.gmfgraph#Open"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//Fetch"/>
@@ -1145,15 +1033,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.6/@tools.1"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.11"/>
           <diagramNode
               href="crystalmm.gmfgraph#Fetch"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//Close"/>
@@ -1166,15 +1054,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.6/@tools.2"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.4"/>
           <diagramNode
               href="crystalmm.gmfgraph#Close"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//CallProcedure"/>
@@ -1187,15 +1075,15 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.1"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
               href="crystalmm.gmfgraph#CallProcedure"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.2">
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="crystalmm.ecore#//Procedure/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
         <ownedChild>
           <domainMetaElement
               href="crystalmm.ecore#//CallFunction"/>
@@ -1208,31 +1096,143 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.0"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.1"/>
           <diagramNode
               href="crystalmm.gmfgraph#CallFunction"/>
         </ownedChild>
       </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
+        <ownedChild>
+          <domainMetaElement
+              href="crystalmm.ecore#//DataType"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping"
+              readOnly="true">
+            <diagramLabel
+                href="crystalmm.gmfgraph#DataTypeLabel"/>
+            <features
+                href="crystalmm.ecore#//DataAbstractions/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.7"/>
+          <diagramNode
+              href="crystalmm.gmfgraph#DataType"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
+        <ownedChild>
+          <domainMetaElement
+              href="crystalmm.ecore#//Collections"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping"
+              readOnly="true">
+            <diagramLabel
+                href="crystalmm.gmfgraph#CollectionsLabel"/>
+            <features
+                href="crystalmm.ecore#//DataAbstractions/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.5"/>
+          <diagramNode
+              href="crystalmm.gmfgraph#Collections"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
+        <ownedChild>
+          <domainMetaElement
+              href="crystalmm.ecore#//Records"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping"
+              readOnly="true">
+            <diagramLabel
+                href="crystalmm.gmfgraph#RecordsLabel"/>
+            <features
+                href="crystalmm.ecore#//DataAbstractions/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.20"/>
+          <diagramNode
+              href="crystalmm.gmfgraph#Records"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
+        <ownedChild>
+          <domainMetaElement
+              href="crystalmm.ecore#//Cursor"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping"
+              readOnly="true">
+            <diagramLabel
+                href="crystalmm.gmfgraph#CursorLabel"/>
+            <features
+                href="crystalmm.ecore#//DataAbstractions/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.6"/>
+          <diagramNode
+              href="crystalmm.gmfgraph#Cursor"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.2"
+          referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//NamedBlocks/parameters"/>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.2"
+          referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//NamedBlocks/parameters"/>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.2"
+          referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//NamedBlocks/parameters"/>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.2"
+          referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//NamedBlocks/parameters"/>
+      </children>
       <compartments
-          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3">
+          children="//@nodes.0/@ownedChild/@children.16 //@nodes.0/@ownedChild/@children.17 //@nodes.0/@ownedChild/@children.18 //@nodes.0/@ownedChild/@children.19">
         <compartment
             href="crystalmm.gmfgraph#ProcedureDeclarativePartCompartment"/>
       </compartments>
       <compartments
-          children="//@nodes.0/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.7">
-        <compartment
-            href="crystalmm.gmfgraph#ProcedureParametersCompartment"/>
-      </compartments>
-      <compartments
-          children="//@nodes.0/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.15 //@nodes.0/@ownedChild/@children.16 //@nodes.0/@ownedChild/@children.17 //@nodes.0/@ownedChild/@children.18 //@nodes.0/@ownedChild/@children.19 //@nodes.0/@ownedChild/@children.20 //@nodes.0/@ownedChild/@children.21 //@nodes.0/@ownedChild/@children.22 //@nodes.0/@ownedChild/@children.23">
+          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.13 //@nodes.0/@ownedChild/@children.14 //@nodes.0/@ownedChild/@children.15">
         <compartment
             href="crystalmm.gmfgraph#ProcedureExecutablePartCompartment"/>
+      </compartments>
+      <compartments
+          children="//@nodes.0/@ownedChild/@children.20 //@nodes.0/@ownedChild/@children.21 //@nodes.0/@ownedChild/@children.22 //@nodes.0/@ownedChild/@children.23">
+        <compartment
+            href="crystalmm.gmfgraph#ProcedureParametersCompartment"/>
       </compartments>
     </ownedChild>
   </nodes>
   <nodes>
     <containmentFeature
-        href="crystalmm.ecore#//Crystal/functions"/>
+        href="crystalmm.ecore#//Crystal/subprograms"/>
     <ownedChild
         relatedDiagrams="//@diagram">
       <domainMetaElement
@@ -1243,206 +1243,206 @@
         <diagramLabel
             href="crystalmm.gmfgraph#FunctionLabel"/>
         <features
-            href="crystalmm.ecore#//Subprograms/name"/>
+            href="crystalmm.ecore#//NamedBlocks/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="crystalmm.gmftool#//@palette/@tools.2/@tools.1"/>
+          href="crystalmm.gmftool#//@palette/@tools.0/@tools.13"/>
       <diagramNode
           href="crystalmm.gmfgraph#Function"/>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Function/declarativePart"/>
-      </children>
-      <children
-          compartment="//@nodes.1/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Function/declarativePart"/>
-      </children>
-      <children
-          compartment="//@nodes.1/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Function/declarativePart"/>
-      </children>
-      <children
-          compartment="//@nodes.1/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Function/declarativePart"/>
-      </children>
-      <children
           compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/parameters"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/parameters"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/parameters"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/parameters"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.2"
-          referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/returnPart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.2"
-          referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/returnPart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.2"
-          referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/returnPart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.2"
-          referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/returnPart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.13/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.14/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
+          compartment="//@nodes.1/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.15/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
+      </children>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
+      </children>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
+      </children>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
+      </children>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
+      </children>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.2"
+          referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//NamedBlocks/parameters"/>
+      </children>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.2"
+          referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//NamedBlocks/parameters"/>
+      </children>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.2"
+          referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//NamedBlocks/parameters"/>
+      </children>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.2"
+          referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//NamedBlocks/parameters"/>
       </children>
       <children
           compartment="//@nodes.1/@ownedChild/@compartments.3"
           referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Function/returnPart"/>
       </children>
       <children
           compartment="//@nodes.1/@ownedChild/@compartments.3"
           referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Function/returnPart"/>
       </children>
       <children
           compartment="//@nodes.1/@ownedChild/@compartments.3"
           referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Function/returnPart"/>
       </children>
       <children
           compartment="//@nodes.1/@ownedChild/@compartments.3"
           referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
-      </children>
-      <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
-          referencedChild="//@nodes.0/@ownedChild/@children.20/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
-      </children>
-      <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
-          referencedChild="//@nodes.0/@ownedChild/@children.21/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
-      </children>
-      <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
-          referencedChild="//@nodes.0/@ownedChild/@children.22/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
-      </children>
-      <children
-          compartment="//@nodes.1/@ownedChild/@compartments.3"
-          referencedChild="//@nodes.0/@ownedChild/@children.23/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//Function/executablePart"/>
+            href="crystalmm.ecore#//Function/returnPart"/>
       </children>
       <compartments
-          children="//@nodes.1/@ownedChild/@children.0 //@nodes.1/@ownedChild/@children.1 //@nodes.1/@ownedChild/@children.2 //@nodes.1/@ownedChild/@children.3">
+          children="//@nodes.1/@ownedChild/@children.16 //@nodes.1/@ownedChild/@children.17 //@nodes.1/@ownedChild/@children.18 //@nodes.1/@ownedChild/@children.19">
         <compartment
             href="crystalmm.gmfgraph#FunctionDeclarativePartCompartment"/>
       </compartments>
       <compartments
-          children="//@nodes.1/@ownedChild/@children.4 //@nodes.1/@ownedChild/@children.5 //@nodes.1/@ownedChild/@children.6 //@nodes.1/@ownedChild/@children.7">
+          children="//@nodes.1/@ownedChild/@children.0 //@nodes.1/@ownedChild/@children.1 //@nodes.1/@ownedChild/@children.2 //@nodes.1/@ownedChild/@children.3 //@nodes.1/@ownedChild/@children.4 //@nodes.1/@ownedChild/@children.5 //@nodes.1/@ownedChild/@children.6 //@nodes.1/@ownedChild/@children.7 //@nodes.1/@ownedChild/@children.8 //@nodes.1/@ownedChild/@children.9 //@nodes.1/@ownedChild/@children.10 //@nodes.1/@ownedChild/@children.11 //@nodes.1/@ownedChild/@children.12 //@nodes.1/@ownedChild/@children.13 //@nodes.1/@ownedChild/@children.14 //@nodes.1/@ownedChild/@children.15">
+        <compartment
+            href="crystalmm.gmfgraph#FunctionExecutablePartCompartment"/>
+      </compartments>
+      <compartments
+          children="//@nodes.1/@ownedChild/@children.20 //@nodes.1/@ownedChild/@children.21 //@nodes.1/@ownedChild/@children.22 //@nodes.1/@ownedChild/@children.23">
         <compartment
             href="crystalmm.gmfgraph#FunctionParametersCompartment"/>
       </compartments>
       <compartments
-          children="//@nodes.1/@ownedChild/@children.8 //@nodes.1/@ownedChild/@children.9 //@nodes.1/@ownedChild/@children.10 //@nodes.1/@ownedChild/@children.11">
+          children="//@nodes.1/@ownedChild/@children.24 //@nodes.1/@ownedChild/@children.25 //@nodes.1/@ownedChild/@children.26 //@nodes.1/@ownedChild/@children.27">
         <compartment
             href="crystalmm.gmfgraph#FunctionReturnPartCompartment"/>
-      </compartments>
-      <compartments
-          children="//@nodes.1/@ownedChild/@children.12 //@nodes.1/@ownedChild/@children.13 //@nodes.1/@ownedChild/@children.14 //@nodes.1/@ownedChild/@children.15 //@nodes.1/@ownedChild/@children.16 //@nodes.1/@ownedChild/@children.17 //@nodes.1/@ownedChild/@children.18 //@nodes.1/@ownedChild/@children.19 //@nodes.1/@ownedChild/@children.20 //@nodes.1/@ownedChild/@children.21 //@nodes.1/@ownedChild/@children.22 //@nodes.1/@ownedChild/@children.23 //@nodes.1/@ownedChild/@children.24 //@nodes.1/@ownedChild/@children.25 //@nodes.1/@ownedChild/@children.26 //@nodes.1/@ownedChild/@children.27">
-        <compartment
-            href="crystalmm.gmfgraph#FunctionExecutablePartCompartment"/>
       </compartments>
     </ownedChild>
   </nodes>
   <nodes>
     <containmentFeature
-        href="crystalmm.ecore#//Crystal/blocks"/>
+        href="crystalmm.ecore#//Crystal/subprograms"/>
     <ownedChild
         relatedDiagrams="//@diagram">
       <domainMetaElement
@@ -1453,140 +1453,140 @@
         <diagramLabel
             href="crystalmm.gmfgraph#AnonymousBlockLabel"/>
         <features
-            href="crystalmm.ecore#//Subprograms/name"/>
+            href="crystalmm.ecore#//AnonymousBlock/description"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="crystalmm.gmftool#//@palette/@tools.2/@tools.2"/>
+          href="crystalmm.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
           href="crystalmm.gmfgraph#AnonymousBlock"/>
       <children
-          compartment="//@nodes.2/@ownedChild/@compartments.0"
+          compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/declarativePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.2/@ownedChild/@compartments.0"
+          compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/declarativePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.2/@ownedChild/@compartments.0"
+          compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/declarativePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.2/@ownedChild/@compartments.0"
+          compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/declarativePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.1"
+          referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
+        <containmentFeature
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.13/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.14/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
           compartment="//@nodes.2/@ownedChild/@compartments.1"
           referencedChild="//@nodes.0/@ownedChild/@children.15/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/executablePart"/>
       </children>
       <children
-          compartment="//@nodes.2/@ownedChild/@compartments.1"
+          compartment="//@nodes.2/@ownedChild/@compartments.0"
           referencedChild="//@nodes.0/@ownedChild/@children.16/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
       </children>
       <children
-          compartment="//@nodes.2/@ownedChild/@compartments.1"
+          compartment="//@nodes.2/@ownedChild/@compartments.0"
           referencedChild="//@nodes.0/@ownedChild/@children.17/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
       </children>
       <children
-          compartment="//@nodes.2/@ownedChild/@compartments.1"
+          compartment="//@nodes.2/@ownedChild/@compartments.0"
           referencedChild="//@nodes.0/@ownedChild/@children.18/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
       </children>
       <children
-          compartment="//@nodes.2/@ownedChild/@compartments.1"
+          compartment="//@nodes.2/@ownedChild/@compartments.0"
           referencedChild="//@nodes.0/@ownedChild/@children.19/@ownedChild">
         <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
-      </children>
-      <children
-          compartment="//@nodes.2/@ownedChild/@compartments.1"
-          referencedChild="//@nodes.0/@ownedChild/@children.20/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
-      </children>
-      <children
-          compartment="//@nodes.2/@ownedChild/@compartments.1"
-          referencedChild="//@nodes.0/@ownedChild/@children.21/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
-      </children>
-      <children
-          compartment="//@nodes.2/@ownedChild/@compartments.1"
-          referencedChild="//@nodes.0/@ownedChild/@children.22/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
-      </children>
-      <children
-          compartment="//@nodes.2/@ownedChild/@compartments.1"
-          referencedChild="//@nodes.0/@ownedChild/@children.23/@ownedChild">
-        <containmentFeature
-            href="crystalmm.ecore#//AnonymousBlock/executablePart"/>
+            href="crystalmm.ecore#//Subprograms/declarativePart"/>
       </children>
       <compartments
-          children="//@nodes.2/@ownedChild/@children.0 //@nodes.2/@ownedChild/@children.1 //@nodes.2/@ownedChild/@children.2 //@nodes.2/@ownedChild/@children.3">
+          children="//@nodes.2/@ownedChild/@children.16 //@nodes.2/@ownedChild/@children.17 //@nodes.2/@ownedChild/@children.18 //@nodes.2/@ownedChild/@children.19">
         <compartment
             href="crystalmm.gmfgraph#AnonymousBlockDeclarativePartCompartment"/>
       </compartments>
       <compartments
-          children="//@nodes.2/@ownedChild/@children.4 //@nodes.2/@ownedChild/@children.5 //@nodes.2/@ownedChild/@children.6 //@nodes.2/@ownedChild/@children.7 //@nodes.2/@ownedChild/@children.8 //@nodes.2/@ownedChild/@children.9 //@nodes.2/@ownedChild/@children.10 //@nodes.2/@ownedChild/@children.11 //@nodes.2/@ownedChild/@children.12 //@nodes.2/@ownedChild/@children.13 //@nodes.2/@ownedChild/@children.14 //@nodes.2/@ownedChild/@children.15 //@nodes.2/@ownedChild/@children.16 //@nodes.2/@ownedChild/@children.17 //@nodes.2/@ownedChild/@children.18 //@nodes.2/@ownedChild/@children.19">
+          children="//@nodes.2/@ownedChild/@children.0 //@nodes.2/@ownedChild/@children.1 //@nodes.2/@ownedChild/@children.2 //@nodes.2/@ownedChild/@children.3 //@nodes.2/@ownedChild/@children.4 //@nodes.2/@ownedChild/@children.5 //@nodes.2/@ownedChild/@children.6 //@nodes.2/@ownedChild/@children.7 //@nodes.2/@ownedChild/@children.8 //@nodes.2/@ownedChild/@children.9 //@nodes.2/@ownedChild/@children.10 //@nodes.2/@ownedChild/@children.11 //@nodes.2/@ownedChild/@children.12 //@nodes.2/@ownedChild/@children.13 //@nodes.2/@ownedChild/@children.14 //@nodes.2/@ownedChild/@children.15">
         <compartment
             href="crystalmm.gmfgraph#AnonymousBlockExecutablePartCompartment"/>
       </compartments>
@@ -1600,10 +1600,10 @@
       <diagramLabel
           href="crystalmm.gmfgraph#TransitionLabel"/>
       <features
-          href="crystalmm.ecore#//Transition/name"/>
+          href="crystalmm.ecore#//Links/name"/>
     </labelMappings>
     <containmentFeature
-        href="crystalmm.ecore#//Crystal/transitions"/>
+        href="crystalmm.ecore#//Crystal/links"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="crystalmm.gmftool#//@palette/@tools.1/@tools.1"/>
@@ -1618,27 +1618,27 @@
   </links>
   <links>
     <domainMetaElement
-        href="crystalmm.ecore#//SelectorTransition"/>
+        href="crystalmm.ecore#//OptionsTransition"/>
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
-          href="crystalmm.gmfgraph#SelectorTransitionLabel"/>
+          href="crystalmm.gmfgraph#OptionsTransitionLabel"/>
       <features
-          href="crystalmm.ecore#//SelectorTransition/name"/>
+          href="crystalmm.ecore#//Links/name"/>
     </labelMappings>
     <containmentFeature
-        href="crystalmm.ecore#//Crystal/selectorTransitions"/>
+        href="crystalmm.ecore#//Crystal/links"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="crystalmm.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="crystalmm.gmfgraph#SelectorTransition"/>
+        href="crystalmm.gmfgraph#OptionsTransition"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="crystalmm.ecore#//SelectorTransition/source"/>
+        href="crystalmm.ecore#//OptionsTransition/source"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="crystalmm.ecore#//SelectorTransition/target"/>
+        href="crystalmm.ecore#//OptionsTransition/target"/>
   </links>
   <diagram>
     <diagramCanvas

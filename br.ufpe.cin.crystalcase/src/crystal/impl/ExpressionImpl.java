@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ExpressionImpl extends StatementsImpl implements Expression {
+public class ExpressionImpl extends AdditionalOperationsImpl implements Expression {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class ExpressionImpl extends StatementsImpl implements Expression {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "Expression";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -54,7 +54,7 @@ public class ExpressionImpl extends StatementsImpl implements Expression {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = "Type the expression here";
+	protected static final String VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.

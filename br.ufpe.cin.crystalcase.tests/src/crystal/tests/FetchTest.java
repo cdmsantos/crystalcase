@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FetchTest extends StatementsTest {
+public class FetchTest extends CursorOperationsTest {
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -41,7 +41,7 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2009;
+	public static final int VISUAL_ID = 2012;
 
 	/**
 	 * @generated
@@ -116,8 +116,8 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof AnonymousBlockNameEditPart) {
-			((AnonymousBlockNameEditPart) childEditPart)
+		if (childEditPart instanceof AnonymousBlockDescriptionEditPart) {
+			((AnonymousBlockDescriptionEditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureAnonymousBlockLabelFigure());
 			return true;
 		}
@@ -140,7 +140,7 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof AnonymousBlockNameEditPart) {
+		if (childEditPart instanceof AnonymousBlockDescriptionEditPart) {
 			return true;
 		}
 		if (childEditPart instanceof AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart) {
@@ -279,7 +279,7 @@ public class AnonymousBlockEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(CrystalVisualIDRegistry.getType(AnonymousBlockNameEditPart.VISUAL_ID));
+		return getChildBySemanticHint(CrystalVisualIDRegistry.getType(AnonymousBlockDescriptionEditPart.VISUAL_ID));
 	}
 
 	/**

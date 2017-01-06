@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CallProcedureItemProvider extends StatementsItemProvider {
+public class CallProcedureItemProvider extends CallBlocksItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,7 +46,6 @@ public class CallProcedureItemProvider extends StatementsItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassNamePropertyDescriptor(object);
-			addNameSubroutinePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -65,28 +64,6 @@ public class CallProcedureItemProvider extends StatementsItemProvider {
 				 getString("_UI_CallProcedure_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CallProcedure_className_feature", "_UI_CallProcedure_type"),
 				 CrystalPackage.Literals.CALL_PROCEDURE__CLASS_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name Subroutine feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNameSubroutinePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CallProcedure_nameSubroutine_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CallProcedure_nameSubroutine_feature", "_UI_CallProcedure_type"),
-				 CrystalPackage.Literals.CALL_PROCEDURE__NAME_SUBROUTINE,
 				 true,
 				 false,
 				 false,
@@ -134,7 +111,6 @@ public class CallProcedureItemProvider extends StatementsItemProvider {
 
 		switch (notification.getFeatureID(CallProcedure.class)) {
 			case CrystalPackage.CALL_PROCEDURE__CLASS_NAME:
-			case CrystalPackage.CALL_PROCEDURE__NAME_SUBROUTINE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

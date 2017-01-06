@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.navigator;
 
 import org.eclipse.jface.viewers.ViewerSorter;
@@ -13,18 +13,18 @@ import crystal.diagram.part.CrystalVisualIDRegistry;
 public class CrystalNavigatorSorter extends ViewerSorter {
 
 	/**
-	 * @generated
-	 */
-	private static final int GROUP_CATEGORY = 7108;
+	* @generated
+	*/
+	private static final int GROUP_CATEGORY = 7160;
 
 	/**
-	 * @generated
-	 */
-	private static final int SHORTCUTS_CATEGORY = 7107;
+	* @generated
+	*/
+	private static final int SHORTCUTS_CATEGORY = 7159;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public int category(Object element) {
 		if (element instanceof CrystalNavigatorItem) {
 			CrystalNavigatorItem item = (CrystalNavigatorItem) element;

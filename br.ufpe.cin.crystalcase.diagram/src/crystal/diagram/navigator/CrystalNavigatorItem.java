@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.navigator;
 
 import org.eclipse.core.runtime.IAdapterFactory;
@@ -15,8 +15,8 @@ import org.eclipse.gmf.runtime.notation.View;
 public class CrystalNavigatorItem extends CrystalAbstractNavigatorItem {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	static {
 		final Class[] supportedTypes = new Class[] { View.class, EObject.class };
 		Platform.getAdapterManager().registerAdapters(new IAdapterFactory() {
@@ -36,18 +36,18 @@ public class CrystalNavigatorItem extends CrystalAbstractNavigatorItem {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private View myView;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private boolean myLeaf = false;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalNavigatorItem(View view, Object parent, boolean isLeaf) {
 		super(parent);
 		myView = view;
@@ -55,22 +55,22 @@ public class CrystalNavigatorItem extends CrystalAbstractNavigatorItem {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public View getView() {
 		return myView;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean isLeaf() {
 		return myLeaf;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean equals(Object obj) {
 		if (obj instanceof crystal.diagram.navigator.CrystalNavigatorItem) {
 			return EcoreUtil.getURI(getView())
@@ -80,8 +80,8 @@ public class CrystalNavigatorItem extends CrystalAbstractNavigatorItem {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public int hashCode() {
 		return EcoreUtil.getURI(getView()).hashCode();
 	}

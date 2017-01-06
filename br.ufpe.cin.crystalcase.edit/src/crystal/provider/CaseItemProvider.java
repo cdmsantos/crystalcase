@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CaseItemProvider extends StatementsItemProvider {
+public class CaseItemProvider extends ConditionalStructuresItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -86,8 +86,8 @@ public class CaseItemProvider extends StatementsItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CrystalPackage.Literals.CASE__CASES);
-			childrenFeatures.add(CrystalPackage.Literals.CASE__ELSE_STATEMENTS);
+			childrenFeatures.add(CrystalPackage.Literals.CASE__OPTIONS);
+			childrenFeatures.add(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -146,8 +146,8 @@ public class CaseItemProvider extends StatementsItemProvider {
 			case CrystalPackage.CASE__CLASS_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CrystalPackage.CASE__CASES:
-			case CrystalPackage.CASE__ELSE_STATEMENTS:
+			case CrystalPackage.CASE__OPTIONS:
+			case CrystalPackage.CASE__DEFAULT_STATEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -167,87 +167,87 @@ public class CaseItemProvider extends StatementsItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__CASES,
-				 CrystalFactory.eINSTANCE.createSelector()));
+				(CrystalPackage.Literals.CASE__OPTIONS,
+				 CrystalFactory.eINSTANCE.createOptions()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createIf()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCase()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createInsert()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createUpdate()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createDelete()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createSelect()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createWhile()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createFor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createLoop()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createOpen()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createFetch()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createClose()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallProcedure()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.CASE__ELSE_STATEMENTS,
+				(CrystalPackage.Literals.CASE__DEFAULT_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
 	}
 

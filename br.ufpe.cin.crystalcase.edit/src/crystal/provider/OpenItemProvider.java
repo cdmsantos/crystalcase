@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class OpenItemProvider extends StatementsItemProvider {
+public class OpenItemProvider extends CursorOperationsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,7 +46,6 @@ public class OpenItemProvider extends StatementsItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassNamePropertyDescriptor(object);
-			addCursorNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -74,28 +73,6 @@ public class OpenItemProvider extends StatementsItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Cursor Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCursorNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Open_cursorName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Open_cursorName_feature", "_UI_Open_type"),
-				 CrystalPackage.Literals.OPEN__CURSOR_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This returns Open.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,7 +91,7 @@ public class OpenItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Open)object).getClassName();
+		String label = ((Open)object).getCursorName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Open_type") :
 			getString("_UI_Open_type") + " " + label;
@@ -134,7 +111,6 @@ public class OpenItemProvider extends StatementsItemProvider {
 
 		switch (notification.getFeatureID(Open.class)) {
 			case CrystalPackage.OPEN__CLASS_NAME:
-			case CrystalPackage.OPEN__CURSOR_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -15,8 +15,8 @@ public class ElementInitializers {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static ElementInitializers getInstance() {
 		ElementInitializers cached = CrystalDiagramEditorPlugin.getInstance().getElementInitializers();
 		if (cached == null) {

@@ -15,13 +15,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import crystal.AnonymousBlock;
 import crystal.Close;
 import crystal.CrystalFactory;
-import crystal.Function;
 import crystal.If;
-import crystal.Loop;
-import crystal.While;
 
 /**
  * @generated
@@ -61,8 +57,8 @@ public class Close3CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Close newElement = CrystalFactory.eINSTANCE.createClose();
 
-		While owner = (While) getElementToEdit();
-		owner.getWhileStatements().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getTrue_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

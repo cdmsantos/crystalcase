@@ -295,8 +295,6 @@ public class DataTypeName6EditPart extends CompartmentEditPart implements ITextA
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.DataType_3033, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DataTypeName6EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

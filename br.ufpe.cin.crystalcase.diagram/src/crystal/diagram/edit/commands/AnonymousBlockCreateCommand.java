@@ -17,7 +17,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.AnonymousBlock;
 import crystal.Crystal;
-import crystal.CrystalCase;
 import crystal.CrystalFactory;
 
 /**
@@ -26,16 +25,16 @@ import crystal.CrystalFactory;
 public class AnonymousBlockCreateCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public AnonymousBlockCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
 	/**
-	 * FIXME: replace with setElementToEdit()
-	 * @generated
-	 */
+	* FIXME: replace with setElementToEdit()
+	* @generated
+	*/
 	protected EObject getElementToEdit() {
 		EObject container = ((CreateElementRequest) getRequest()).getContainer();
 		if (container instanceof View) {
@@ -45,21 +44,21 @@ public class AnonymousBlockCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
 		return true;
 
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		AnonymousBlock newElement = CrystalFactory.eINSTANCE.createAnonymousBlock();
 
 		Crystal owner = (Crystal) getElementToEdit();
-		owner.getBlocks().add(newElement);
+		owner.getSubprograms().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 
@@ -68,8 +67,8 @@ public class AnonymousBlockCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void doConfigure(AnonymousBlock newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();

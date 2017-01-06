@@ -1,18 +1,14 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
-import crystal.diagram.edit.commands.Collections2CreateCommand;
 import crystal.diagram.edit.commands.CollectionsCreateCommand;
-import crystal.diagram.edit.commands.Cursor2CreateCommand;
 import crystal.diagram.edit.commands.CursorCreateCommand;
-import crystal.diagram.edit.commands.DataType2CreateCommand;
 import crystal.diagram.edit.commands.DataTypeCreateCommand;
-import crystal.diagram.edit.commands.Records2CreateCommand;
 import crystal.diagram.edit.commands.RecordsCreateCommand;
 import crystal.diagram.providers.CrystalElementTypes;
 
@@ -23,26 +19,26 @@ public class ProcedureProcedureDeclarativePartCompartmentItemSemanticEditPolicy
 		extends CrystalBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ProcedureProcedureDeclarativePartCompartmentItemSemanticEditPolicy() {
-		super(CrystalElementTypes.Procedure_2007);
+		super(CrystalElementTypes.Procedure_2010);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (CrystalElementTypes.DataType_3052 == req.getElementType()) {
+		if (CrystalElementTypes.DataType_3333 == req.getElementType()) {
 			return getGEFWrapper(new DataTypeCreateCommand(req));
 		}
-		if (CrystalElementTypes.Collections_3053 == req.getElementType()) {
+		if (CrystalElementTypes.Collections_3334 == req.getElementType()) {
 			return getGEFWrapper(new CollectionsCreateCommand(req));
 		}
-		if (CrystalElementTypes.Records_3054 == req.getElementType()) {
+		if (CrystalElementTypes.Records_3335 == req.getElementType()) {
 			return getGEFWrapper(new RecordsCreateCommand(req));
 		}
-		if (CrystalElementTypes.Cursor_3055 == req.getElementType()) {
+		if (CrystalElementTypes.Cursor_3336 == req.getElementType()) {
 			return getGEFWrapper(new CursorCreateCommand(req));
 		}
 		return super.getCreateCommand(req);

@@ -15,8 +15,8 @@ import crystal.diagram.part.CrystalVisualIDRegistry;
 public class CrystalEditPartProvider extends DefaultEditPartProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalEditPartProvider() {
 		super(new CrystalEditPartFactory(), CrystalVisualIDRegistry.TYPED_INSTANCE, CrystalEditPart.MODEL_ID);
 	}

@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IfItemProvider extends StatementsItemProvider {
+public class IfItemProvider extends ConditionalStructuresItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -109,8 +109,8 @@ public class IfItemProvider extends StatementsItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CrystalPackage.Literals.IF__IFS);
-			childrenFeatures.add(CrystalPackage.Literals.IF__ELSES);
+			childrenFeatures.add(CrystalPackage.Literals.IF__TRUE_STATEMENTS);
+			childrenFeatures.add(CrystalPackage.Literals.IF__FALSE_STATEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -170,8 +170,8 @@ public class IfItemProvider extends StatementsItemProvider {
 			case CrystalPackage.IF__CONDITION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CrystalPackage.IF__IFS:
-			case CrystalPackage.IF__ELSES:
+			case CrystalPackage.IF__TRUE_STATEMENTS:
+			case CrystalPackage.IF__FALSE_STATEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -191,162 +191,162 @@ public class IfItemProvider extends StatementsItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createIf()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCase()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createInsert()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createUpdate()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createDelete()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createSelect()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createWhile()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createFor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createLoop()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createOpen()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createFetch()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createClose()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallProcedure()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__IFS,
+				(CrystalPackage.Literals.IF__TRUE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createException()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createIf()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCase()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createInsert()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createUpdate()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createDelete()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createSelect()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createWhile()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createFor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createLoop()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createOpen()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createFetch()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createClose()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallProcedure()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CrystalPackage.Literals.IF__ELSES,
+				(CrystalPackage.Literals.IF__FALSE_STATEMENTS,
 				 CrystalFactory.eINSTANCE.createCallFunction()));
 	}
 
@@ -362,8 +362,8 @@ public class IfItemProvider extends StatementsItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == CrystalPackage.Literals.IF__IFS ||
-			childFeature == CrystalPackage.Literals.IF__ELSES;
+			childFeature == CrystalPackage.Literals.IF__TRUE_STATEMENTS ||
+			childFeature == CrystalPackage.Literals.IF__FALSE_STATEMENTS;
 
 		if (qualify) {
 			return getString

@@ -31,7 +31,7 @@ public class CallProcedure5ItemSemanticEditPolicy extends CrystalBaseItemSemanti
 	* @generated
 	*/
 	public CallProcedure5ItemSemanticEditPolicy() {
-		super(CrystalElementTypes.CallProcedure_3179);
+		super(CrystalElementTypes.CallProcedure_3318);
 	}
 
 	/**

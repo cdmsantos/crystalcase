@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.edit.policies;
 
 import java.util.ArrayList;
@@ -25,98 +25,22 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
-import crystal.diagram.edit.parts.CallFunction10EditPart;
-import crystal.diagram.edit.parts.CallFunction3EditPart;
-import crystal.diagram.edit.parts.CallFunction4EditPart;
-import crystal.diagram.edit.parts.CallFunction7EditPart;
-import crystal.diagram.edit.parts.CallFunction9EditPart;
-import crystal.diagram.edit.parts.CallFunctionEditPart;
-import crystal.diagram.edit.parts.CallProcedure10EditPart;
-import crystal.diagram.edit.parts.CallProcedure3EditPart;
-import crystal.diagram.edit.parts.CallProcedure4EditPart;
-import crystal.diagram.edit.parts.CallProcedure7EditPart;
-import crystal.diagram.edit.parts.CallProcedure9EditPart;
-import crystal.diagram.edit.parts.CallProcedureEditPart;
-import crystal.diagram.edit.parts.Case10EditPart;
-import crystal.diagram.edit.parts.Case3EditPart;
-import crystal.diagram.edit.parts.Case4EditPart;
-import crystal.diagram.edit.parts.Case7EditPart;
-import crystal.diagram.edit.parts.Case9EditPart;
-import crystal.diagram.edit.parts.CaseEditPart;
-import crystal.diagram.edit.parts.Close10EditPart;
-import crystal.diagram.edit.parts.Close3EditPart;
-import crystal.diagram.edit.parts.Close4EditPart;
-import crystal.diagram.edit.parts.Close7EditPart;
-import crystal.diagram.edit.parts.Close9EditPart;
-import crystal.diagram.edit.parts.CloseEditPart;
-import crystal.diagram.edit.parts.Delete10EditPart;
-import crystal.diagram.edit.parts.Delete3EditPart;
-import crystal.diagram.edit.parts.Delete4EditPart;
-import crystal.diagram.edit.parts.Delete7EditPart;
-import crystal.diagram.edit.parts.Delete9EditPart;
-import crystal.diagram.edit.parts.DeleteEditPart;
-import crystal.diagram.edit.parts.Exception10EditPart;
-import crystal.diagram.edit.parts.Exception3EditPart;
-import crystal.diagram.edit.parts.Exception4EditPart;
-import crystal.diagram.edit.parts.Exception7EditPart;
-import crystal.diagram.edit.parts.Exception9EditPart;
+import crystal.diagram.edit.parts.CallFunction6EditPart;
+import crystal.diagram.edit.parts.CallProcedure6EditPart;
+import crystal.diagram.edit.parts.Case6EditPart;
+import crystal.diagram.edit.parts.Close6EditPart;
+import crystal.diagram.edit.parts.Delete6EditPart;
 import crystal.diagram.edit.parts.ExceptionEditPart;
-import crystal.diagram.edit.parts.Expression10EditPart;
-import crystal.diagram.edit.parts.Expression9EditPart;
-import crystal.diagram.edit.parts.Fetch10EditPart;
-import crystal.diagram.edit.parts.Fetch3EditPart;
-import crystal.diagram.edit.parts.Fetch4EditPart;
-import crystal.diagram.edit.parts.Fetch7EditPart;
-import crystal.diagram.edit.parts.Fetch9EditPart;
-import crystal.diagram.edit.parts.FetchEditPart;
-import crystal.diagram.edit.parts.For10EditPart;
-import crystal.diagram.edit.parts.For3EditPart;
-import crystal.diagram.edit.parts.For4EditPart;
-import crystal.diagram.edit.parts.For7EditPart;
-import crystal.diagram.edit.parts.For9EditPart;
-import crystal.diagram.edit.parts.ForEditPart;
-import crystal.diagram.edit.parts.If10EditPart;
-import crystal.diagram.edit.parts.If3EditPart;
-import crystal.diagram.edit.parts.If4EditPart;
-import crystal.diagram.edit.parts.If7EditPart;
-import crystal.diagram.edit.parts.If9EditPart;
+import crystal.diagram.edit.parts.ExpressionEditPart;
+import crystal.diagram.edit.parts.Fetch6EditPart;
+import crystal.diagram.edit.parts.For6EditPart;
 import crystal.diagram.edit.parts.IfEditPart;
-import crystal.diagram.edit.parts.Insert10EditPart;
-import crystal.diagram.edit.parts.Insert3EditPart;
-import crystal.diagram.edit.parts.Insert4EditPart;
-import crystal.diagram.edit.parts.Insert7EditPart;
-import crystal.diagram.edit.parts.Insert9EditPart;
-import crystal.diagram.edit.parts.InsertEditPart;
-import crystal.diagram.edit.parts.Loop10EditPart;
-import crystal.diagram.edit.parts.Loop3EditPart;
-import crystal.diagram.edit.parts.Loop4EditPart;
-import crystal.diagram.edit.parts.Loop7EditPart;
-import crystal.diagram.edit.parts.Loop9EditPart;
-import crystal.diagram.edit.parts.LoopEditPart;
-import crystal.diagram.edit.parts.Open10EditPart;
-import crystal.diagram.edit.parts.Open3EditPart;
-import crystal.diagram.edit.parts.Open4EditPart;
-import crystal.diagram.edit.parts.Open7EditPart;
-import crystal.diagram.edit.parts.Open9EditPart;
-import crystal.diagram.edit.parts.OpenEditPart;
-import crystal.diagram.edit.parts.Select10EditPart;
-import crystal.diagram.edit.parts.Select3EditPart;
-import crystal.diagram.edit.parts.Select4EditPart;
-import crystal.diagram.edit.parts.Select7EditPart;
-import crystal.diagram.edit.parts.Select9EditPart;
-import crystal.diagram.edit.parts.SelectEditPart;
-import crystal.diagram.edit.parts.Update10EditPart;
-import crystal.diagram.edit.parts.Update3EditPart;
-import crystal.diagram.edit.parts.Update4EditPart;
-import crystal.diagram.edit.parts.Update7EditPart;
-import crystal.diagram.edit.parts.Update9EditPart;
-import crystal.diagram.edit.parts.UpdateEditPart;
-import crystal.diagram.edit.parts.While10EditPart;
-import crystal.diagram.edit.parts.While3EditPart;
-import crystal.diagram.edit.parts.While4EditPart;
-import crystal.diagram.edit.parts.While7EditPart;
-import crystal.diagram.edit.parts.While9EditPart;
-import crystal.diagram.edit.parts.WhileEditPart;
+import crystal.diagram.edit.parts.Insert6EditPart;
+import crystal.diagram.edit.parts.Loop6EditPart;
+import crystal.diagram.edit.parts.Open6EditPart;
+import crystal.diagram.edit.parts.Select6EditPart;
+import crystal.diagram.edit.parts.Update6EditPart;
+import crystal.diagram.edit.parts.While6EditPart;
 import crystal.diagram.part.CrystalDiagramUpdater;
 import crystal.diagram.part.CrystalNodeDescriptor;
 import crystal.diagram.part.CrystalVisualIDRegistry;
@@ -127,8 +51,8 @@ import crystal.diagram.part.CrystalVisualIDRegistry;
 public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void refreshOnActivate() {
 		// Need to activate editpart children before invoking the canonical refresh for EditParts to add event listeners
 		List<?> c = getHost().getChildren();
@@ -139,21 +63,22 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return CrystalPackage.eINSTANCE.getAnonymousBlock_ExecutablePart();
+		return CrystalPackage.eINSTANCE.getSubprograms_ExecutablePart();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	@SuppressWarnings("rawtypes")
+
 	protected List getSemanticChildrenList() {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getAnonymousBlockAnonymousBlockExecutablePartCompartment_7019SemanticChildren(viewObject);
+				.getAnonymousBlockAnonymousBlockExecutablePartCompartment_7158SemanticChildren(viewObject);
 		for (CrystalNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -161,49 +86,49 @@ public class AnonymousBlockAnonymousBlockExecutablePartCompartmentCanonicalEditP
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean isOrphaned(Collection<EObject> semanticChildren, final View view) {
 		return isMyDiagramElement(view) && !semanticChildren.contains(view.getElement());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CrystalVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case Expression10EditPart.VISUAL_ID:
-		case Exception10EditPart.VISUAL_ID:
-		case If10EditPart.VISUAL_ID:
-		case Case10EditPart.VISUAL_ID:
-		case Insert10EditPart.VISUAL_ID:
-		case Update10EditPart.VISUAL_ID:
-		case Delete10EditPart.VISUAL_ID:
-		case Select10EditPart.VISUAL_ID:
-		case While10EditPart.VISUAL_ID:
-		case For10EditPart.VISUAL_ID:
-		case Loop10EditPart.VISUAL_ID:
-		case Open10EditPart.VISUAL_ID:
-		case Fetch10EditPart.VISUAL_ID:
-		case Close10EditPart.VISUAL_ID:
-		case CallProcedure10EditPart.VISUAL_ID:
-		case CallFunction10EditPart.VISUAL_ID:
+		case ExpressionEditPart.VISUAL_ID:
+		case ExceptionEditPart.VISUAL_ID:
+		case IfEditPart.VISUAL_ID:
+		case Case6EditPart.VISUAL_ID:
+		case Insert6EditPart.VISUAL_ID:
+		case Update6EditPart.VISUAL_ID:
+		case Delete6EditPart.VISUAL_ID:
+		case Select6EditPart.VISUAL_ID:
+		case While6EditPart.VISUAL_ID:
+		case For6EditPart.VISUAL_ID:
+		case Loop6EditPart.VISUAL_ID:
+		case Open6EditPart.VISUAL_ID:
+		case Fetch6EditPart.VISUAL_ID:
+		case Close6EditPart.VISUAL_ID:
+		case CallProcedure6EditPart.VISUAL_ID:
+		case CallFunction6EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void refreshSemantic() {
 		if (resolveSemanticElement() == null) {
 			return;
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CrystalNodeDescriptor> childDescriptors = CrystalDiagramUpdater
-				.getAnonymousBlockAnonymousBlockExecutablePartCompartment_7019SemanticChildren(
+				.getAnonymousBlockAnonymousBlockExecutablePartCompartment_7158SemanticChildren(
 						(View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

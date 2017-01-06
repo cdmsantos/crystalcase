@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ProcedureTest extends SubprogramsTest {
+public class ProcedureTest extends NamedBlocksTest {
 
 	/**
 	 * <!-- begin-user-doc -->

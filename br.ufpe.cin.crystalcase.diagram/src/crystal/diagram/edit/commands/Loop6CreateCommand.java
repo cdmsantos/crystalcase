@@ -16,10 +16,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
-import crystal.Function;
-import crystal.If;
 import crystal.Loop;
-import crystal.Selector;
+import crystal.Subprograms;
 
 /**
  * @generated
@@ -59,8 +57,8 @@ public class Loop6CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Loop newElement = CrystalFactory.eINSTANCE.createLoop();
 
-		If owner = (If) getElementToEdit();
-		owner.getElses().add(newElement);
+		Subprograms owner = (Subprograms) getElementToEdit();
+		owner.getExecutablePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

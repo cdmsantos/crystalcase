@@ -15,12 +15,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import crystal.Case;
 import crystal.CrystalFactory;
 import crystal.For;
-import crystal.Function;
-import crystal.Procedure;
-import crystal.While;
+import crystal.IterationStructures;
 
 /**
  * @generated
@@ -60,8 +57,8 @@ public class For2CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		For newElement = CrystalFactory.eINSTANCE.createFor();
 
-		Case owner = (Case) getElementToEdit();
-		owner.getElseStatements().add(newElement);
+		IterationStructures owner = (IterationStructures) getElementToEdit();
+		owner.getInterations_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

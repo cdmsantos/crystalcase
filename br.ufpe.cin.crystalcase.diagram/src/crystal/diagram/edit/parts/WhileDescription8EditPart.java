@@ -295,8 +295,6 @@ public class WhileDescription8EditPart extends CompartmentEditPart implements IT
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.While_3063, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.WhileDescription8EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

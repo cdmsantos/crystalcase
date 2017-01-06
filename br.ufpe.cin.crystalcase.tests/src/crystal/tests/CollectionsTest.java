@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CollectionsTest extends ParametersTest {
+public class CollectionsTest extends DataAbstractionsTest {
 
 	/**
 	 * <!-- begin-user-doc -->

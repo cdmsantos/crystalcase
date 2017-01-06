@@ -18,90 +18,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalPackage;
 import crystal.diagram.edit.parts.*;
-import crystal.diagram.edit.parts.AnonymousBlockNameEditPart;
-import crystal.diagram.edit.parts.CallFunctionDescription2EditPart;
-import crystal.diagram.edit.parts.CallFunctionDescription3EditPart;
-import crystal.diagram.edit.parts.CallFunctionDescriptionEditPart;
-import crystal.diagram.edit.parts.CallProcedureDescription2EditPart;
-import crystal.diagram.edit.parts.CallProcedureDescription3EditPart;
-import crystal.diagram.edit.parts.CallProcedureDescriptionEditPart;
-import crystal.diagram.edit.parts.CaseDescription2EditPart;
-import crystal.diagram.edit.parts.CaseDescription3EditPart;
-import crystal.diagram.edit.parts.CaseDescriptionEditPart;
-import crystal.diagram.edit.parts.CloseDescription2EditPart;
-import crystal.diagram.edit.parts.CloseDescription3EditPart;
-import crystal.diagram.edit.parts.CloseDescriptionEditPart;
-import crystal.diagram.edit.parts.CollectionsName2EditPart;
-import crystal.diagram.edit.parts.CollectionsName3EditPart;
-import crystal.diagram.edit.parts.CollectionsName4EditPart;
-import crystal.diagram.edit.parts.CollectionsName5EditPart;
-import crystal.diagram.edit.parts.CollectionsName6EditPart;
-import crystal.diagram.edit.parts.CollectionsNameEditPart;
-import crystal.diagram.edit.parts.CollectionsNameName2EditPart;
-import crystal.diagram.edit.parts.CollectionsNameName3EditPart;
-import crystal.diagram.edit.parts.CollectionsNameName4EditPart;
-import crystal.diagram.edit.parts.CollectionsNameName5EditPart;
-import crystal.diagram.edit.parts.CollectionsNameName6EditPart;
-import crystal.diagram.edit.parts.CollectionsNameNameEditPart;
-import crystal.diagram.edit.parts.CursorName2EditPart;
-import crystal.diagram.edit.parts.CursorName3EditPart;
-import crystal.diagram.edit.parts.CursorName4EditPart;
-import crystal.diagram.edit.parts.CursorName5EditPart;
-import crystal.diagram.edit.parts.CursorName6EditPart;
-import crystal.diagram.edit.parts.CursorNameEditPart;
-import crystal.diagram.edit.parts.DataTypeName2EditPart;
-import crystal.diagram.edit.parts.DataTypeName3EditPart;
-import crystal.diagram.edit.parts.DataTypeName4EditPart;
-import crystal.diagram.edit.parts.DataTypeName5EditPart;
-import crystal.diagram.edit.parts.DataTypeName6EditPart;
-import crystal.diagram.edit.parts.DataTypeNameEditPart;
-import crystal.diagram.edit.parts.DeleteDescription2EditPart;
-import crystal.diagram.edit.parts.DeleteDescription3EditPart;
-import crystal.diagram.edit.parts.DeleteDescriptionEditPart;
-import crystal.diagram.edit.parts.ExceptionDescription2EditPart;
-import crystal.diagram.edit.parts.ExceptionDescription3EditPart;
-import crystal.diagram.edit.parts.ExceptionDescriptionEditPart;
-import crystal.diagram.edit.parts.FetchDescription2EditPart;
-import crystal.diagram.edit.parts.FetchDescription3EditPart;
-import crystal.diagram.edit.parts.FetchDescriptionEditPart;
-import crystal.diagram.edit.parts.ForDescription2EditPart;
-import crystal.diagram.edit.parts.ForDescription3EditPart;
-import crystal.diagram.edit.parts.ForDescriptionEditPart;
-import crystal.diagram.edit.parts.FunctionNameEditPart;
-import crystal.diagram.edit.parts.IfDescription2EditPart;
-import crystal.diagram.edit.parts.IfDescription3EditPart;
-import crystal.diagram.edit.parts.IfDescriptionEditPart;
-import crystal.diagram.edit.parts.InsertDescription2EditPart;
-import crystal.diagram.edit.parts.InsertDescription3EditPart;
-import crystal.diagram.edit.parts.InsertDescriptionEditPart;
-import crystal.diagram.edit.parts.LoopDescription2EditPart;
-import crystal.diagram.edit.parts.LoopDescription3EditPart;
-import crystal.diagram.edit.parts.LoopDescriptionEditPart;
-import crystal.diagram.edit.parts.OpenDescription2EditPart;
-import crystal.diagram.edit.parts.OpenDescription3EditPart;
-import crystal.diagram.edit.parts.OpenDescriptionEditPart;
-import crystal.diagram.edit.parts.ProcedureNameEditPart;
-import crystal.diagram.edit.parts.RecordsName2EditPart;
-import crystal.diagram.edit.parts.RecordsName3EditPart;
-import crystal.diagram.edit.parts.RecordsName4EditPart;
-import crystal.diagram.edit.parts.RecordsName5EditPart;
-import crystal.diagram.edit.parts.RecordsName6EditPart;
-import crystal.diagram.edit.parts.RecordsNameEditPart;
-import crystal.diagram.edit.parts.RecordsNameName2EditPart;
-import crystal.diagram.edit.parts.RecordsNameName3EditPart;
-import crystal.diagram.edit.parts.RecordsNameName4EditPart;
-import crystal.diagram.edit.parts.RecordsNameName5EditPart;
-import crystal.diagram.edit.parts.RecordsNameName6EditPart;
-import crystal.diagram.edit.parts.RecordsNameNameEditPart;
-import crystal.diagram.edit.parts.SelectDescription2EditPart;
-import crystal.diagram.edit.parts.SelectDescription3EditPart;
-import crystal.diagram.edit.parts.SelectDescriptionEditPart;
-import crystal.diagram.edit.parts.UpdateDescription2EditPart;
-import crystal.diagram.edit.parts.UpdateDescription3EditPart;
-import crystal.diagram.edit.parts.UpdateDescriptionEditPart;
-import crystal.diagram.edit.parts.WhileDescription2EditPart;
-import crystal.diagram.edit.parts.WhileDescription3EditPart;
-import crystal.diagram.edit.parts.WhileDescriptionEditPart;
 import crystal.diagram.parsers.MessageFormatParser;
 import crystal.diagram.part.CrystalVisualIDRegistry;
 
@@ -113,2462 +29,1850 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
-	private IParser procedureName_5057Parser;
+	private IParser procedureName_5349Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getProcedureName_5057Parser() {
-		if (procedureName_5057Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getSubprograms_Name() };
+	private IParser getProcedureName_5349Parser() {
+		if (procedureName_5349Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getNamedBlocks_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			procedureName_5057Parser = parser;
+			procedureName_5349Parser = parser;
 		}
-		return procedureName_5057Parser;
+		return procedureName_5349Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser functionName_5058Parser;
+	private IParser functionName_5350Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getFunctionName_5058Parser() {
-		if (functionName_5058Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getSubprograms_Name() };
+	private IParser getFunctionName_5350Parser() {
+		if (functionName_5350Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getNamedBlocks_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			functionName_5058Parser = parser;
+			functionName_5350Parser = parser;
 		}
-		return functionName_5058Parser;
+		return functionName_5350Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser anonymousBlockName_5059Parser;
+	private IParser anonymousBlockDescription_5351Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getAnonymousBlockName_5059Parser() {
-		if (anonymousBlockName_5059Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getSubprograms_Name() };
+	private IParser getAnonymousBlockDescription_5351Parser() {
+		if (anonymousBlockDescription_5351Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getAnonymousBlock_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			anonymousBlockName_5059Parser = parser;
+			anonymousBlockDescription_5351Parser = parser;
 		}
-		return anonymousBlockName_5059Parser;
+		return anonymousBlockDescription_5351Parser;
 	}
 
 	/**
-	 * @generated
-	 */
-	private IParser dataTypeName_5018Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getDataTypeName_5018Parser() {
-		if (dataTypeName_5018Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			dataTypeName_5018Parser = parser;
-		}
-		return dataTypeName_5018Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser collectionsName_5019Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCollectionsName_5019Parser() {
-		if (collectionsName_5019Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			collectionsName_5019Parser = parser;
-		}
-		return collectionsName_5019Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser recordsName_5020Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getRecordsName_5020Parser() {
-		if (recordsName_5020Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			recordsName_5020Parser = parser;
-		}
-		return recordsName_5020Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser cursorName_5021Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getCursorName_5021Parser() {
-		if (cursorName_5021Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			cursorName_5021Parser = parser;
-		}
-		return cursorName_5021Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser dataTypeName_5060Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getDataTypeName_5060Parser() {
-		if (dataTypeName_5060Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			dataTypeName_5060Parser = parser;
-		}
-		return dataTypeName_5060Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser collectionsName_5061Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCollectionsName_5061Parser() {
-		if (collectionsName_5061Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			collectionsName_5061Parser = parser;
-		}
-		return collectionsName_5061Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser recordsName_5062Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getRecordsName_5062Parser() {
-		if (recordsName_5062Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			recordsName_5062Parser = parser;
-		}
-		return recordsName_5062Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser cursorName_5063Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCursorName_5063Parser() {
-		if (cursorName_5063Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			cursorName_5063Parser = parser;
-		}
-		return cursorName_5063Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser exceptionDescription_5064Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getExceptionDescription_5064Parser() {
-		if (exceptionDescription_5064Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5064Parser = parser;
-		}
-		return exceptionDescription_5064Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser ifDescription_5065Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getIfDescription_5065Parser() {
-		if (ifDescription_5065Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5065Parser = parser;
-		}
-		return ifDescription_5065Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser exceptionDescription_5189Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getExceptionDescription_5189Parser() {
-		if (exceptionDescription_5189Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5189Parser = parser;
-		}
-		return exceptionDescription_5189Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser ifDescription_5218Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getIfDescription_5218Parser() {
-		if (ifDescription_5218Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5218Parser = parser;
-		}
-		return ifDescription_5218Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser caseDescription_5217Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCaseDescription_5217Parser() {
-		if (caseDescription_5217Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5217Parser = parser;
-		}
-		return caseDescription_5217Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser expressionDescription_5228Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getExpressionDescription_5228Parser() {
-		if (expressionDescription_5228Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5228Parser = parser;
-		}
-		return expressionDescription_5228Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser exceptionDescription_5229Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getExceptionDescription_5229Parser() {
-		if (exceptionDescription_5229Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5229Parser = parser;
-		}
-		return exceptionDescription_5229Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser ifDescription_5243Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getIfDescription_5243Parser() {
-		if (ifDescription_5243Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5243Parser = parser;
-		}
-		return ifDescription_5243Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser selectorDescription_5156Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getSelectorDescription_5156Parser() {
-		if (selectorDescription_5156Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getSelector_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			selectorDescription_5156Parser = parser;
-		}
-		return selectorDescription_5156Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser exceptionDescription_5114Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getExceptionDescription_5114Parser() {
-		if (exceptionDescription_5114Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5114Parser = parser;
-		}
-		return exceptionDescription_5114Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser ifDescription_5142Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getIfDescription_5142Parser() {
-		if (ifDescription_5142Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5142Parser = parser;
-		}
-		return ifDescription_5142Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser insertDescription_5190Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getInsertDescription_5190Parser() {
-		if (insertDescription_5190Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5190Parser = parser;
-		}
-		return insertDescription_5190Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser updateDescription_5191Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getUpdateDescription_5191Parser() {
-		if (updateDescription_5191Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5191Parser = parser;
-		}
-		return updateDescription_5191Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser deleteDescription_5192Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getDeleteDescription_5192Parser() {
-		if (deleteDescription_5192Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5192Parser = parser;
-		}
-		return deleteDescription_5192Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser selectDescription_5193Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getSelectDescription_5193Parser() {
-		if (selectDescription_5193Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5193Parser = parser;
-		}
-		return selectDescription_5193Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser whileDescription_5216Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getWhileDescription_5216Parser() {
-		if (whileDescription_5216Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5216Parser = parser;
-		}
-		return whileDescription_5216Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser caseDescription_5066Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCaseDescription_5066Parser() {
-		if (caseDescription_5066Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5066Parser = parser;
-		}
-		return caseDescription_5066Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser insertDescription_5067Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getInsertDescription_5067Parser() {
-		if (insertDescription_5067Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5067Parser = parser;
-		}
-		return insertDescription_5067Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser updateDescription_5068Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getUpdateDescription_5068Parser() {
-		if (updateDescription_5068Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5068Parser = parser;
-		}
-		return updateDescription_5068Parser;
-	}
-
-	/**
 	* @generated
 	*/
-	private IParser deleteDescription_5069Parser;
+	private IParser expressionDescription_5244Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getDeleteDescription_5069Parser() {
-		if (deleteDescription_5069Parser == null) {
+	private IParser getExpressionDescription_5244Parser() {
+		if (expressionDescription_5244Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5069Parser = parser;
+			expressionDescription_5244Parser = parser;
 		}
-		return deleteDescription_5069Parser;
+		return expressionDescription_5244Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser selectDescription_5070Parser;
+	private IParser exceptionDescription_5245Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getSelectDescription_5070Parser() {
-		if (selectDescription_5070Parser == null) {
+	private IParser getExceptionDescription_5245Parser() {
+		if (exceptionDescription_5245Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5070Parser = parser;
+			exceptionDescription_5245Parser = parser;
 		}
-		return selectDescription_5070Parser;
+		return exceptionDescription_5245Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser whileDescription_5071Parser;
+	private IParser ifDescription_5327Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getWhileDescription_5071Parser() {
-		if (whileDescription_5071Parser == null) {
+	private IParser getIfDescription_5327Parser() {
+		if (ifDescription_5327Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5071Parser = parser;
+			ifDescription_5327Parser = parser;
 		}
-		return whileDescription_5071Parser;
+		return ifDescription_5327Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser exceptionDescription_5098Parser;
+	private IParser expressionDescription_5246Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExceptionDescription_5098Parser() {
-		if (exceptionDescription_5098Parser == null) {
+	private IParser getExpressionDescription_5246Parser() {
+		if (expressionDescription_5246Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5098Parser = parser;
+			expressionDescription_5246Parser = parser;
 		}
-		return exceptionDescription_5098Parser;
+		return expressionDescription_5246Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser ifDescription_5099Parser;
+	private IParser exceptionDescription_5247Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getIfDescription_5099Parser() {
-		if (ifDescription_5099Parser == null) {
+	private IParser getExceptionDescription_5247Parser() {
+		if (exceptionDescription_5247Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5099Parser = parser;
+			exceptionDescription_5247Parser = parser;
 		}
-		return ifDescription_5099Parser;
+		return exceptionDescription_5247Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser forDescription_5215Parser;
+	private IParser ifDescription_5326Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getForDescription_5215Parser() {
-		if (forDescription_5215Parser == null) {
+	private IParser getIfDescription_5326Parser() {
+		if (ifDescription_5326Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5215Parser = parser;
+			ifDescription_5326Parser = parser;
 		}
-		return forDescription_5215Parser;
+		return ifDescription_5326Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser exceptionDescription_5159Parser;
+	private IParser caseDescription_5325Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExceptionDescription_5159Parser() {
-		if (exceptionDescription_5159Parser == null) {
+	private IParser getCaseDescription_5325Parser() {
+		if (caseDescription_5325Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5159Parser = parser;
+			caseDescription_5325Parser = parser;
 		}
-		return exceptionDescription_5159Parser;
+		return caseDescription_5325Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser ifDescription_5188Parser;
+	private IParser expressionDescription_5248Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getIfDescription_5188Parser() {
-		if (ifDescription_5188Parser == null) {
+	private IParser getExpressionDescription_5248Parser() {
+		if (expressionDescription_5248Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5188Parser = parser;
+			expressionDescription_5248Parser = parser;
 		}
-		return ifDescription_5188Parser;
+		return expressionDescription_5248Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser loopDescription_5214Parser;
+	private IParser exceptionDescription_5249Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getLoopDescription_5214Parser() {
-		if (loopDescription_5214Parser == null) {
+	private IParser getExceptionDescription_5249Parser() {
+		if (exceptionDescription_5249Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5214Parser = parser;
+			exceptionDescription_5249Parser = parser;
 		}
-		return loopDescription_5214Parser;
+		return exceptionDescription_5249Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser exceptionDescription_5160Parser;
+	private IParser ifDescription_5324Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExceptionDescription_5160Parser() {
-		if (exceptionDescription_5160Parser == null) {
+	private IParser getIfDescription_5324Parser() {
+		if (ifDescription_5324Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5160Parser = parser;
+			ifDescription_5324Parser = parser;
 		}
-		return exceptionDescription_5160Parser;
+		return ifDescription_5324Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser ifDescription_5187Parser;
+	private IParser insertDescription_5250Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getIfDescription_5187Parser() {
-		if (ifDescription_5187Parser == null) {
+	private IParser getInsertDescription_5250Parser() {
+		if (insertDescription_5250Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5187Parser = parser;
+			insertDescription_5250Parser = parser;
 		}
-		return ifDescription_5187Parser;
+		return insertDescription_5250Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser openDescription_5194Parser;
+	private IParser updateDescription_5251Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getOpenDescription_5194Parser() {
-		if (openDescription_5194Parser == null) {
+	private IParser getUpdateDescription_5251Parser() {
+		if (updateDescription_5251Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5194Parser = parser;
+			updateDescription_5251Parser = parser;
 		}
-		return openDescription_5194Parser;
+		return updateDescription_5251Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser fetchDescription_5195Parser;
+	private IParser deleteDescription_5252Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getFetchDescription_5195Parser() {
-		if (fetchDescription_5195Parser == null) {
+	private IParser getDeleteDescription_5252Parser() {
+		if (deleteDescription_5252Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5195Parser = parser;
+			deleteDescription_5252Parser = parser;
 		}
-		return fetchDescription_5195Parser;
+		return deleteDescription_5252Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser closeDescription_5196Parser;
+	private IParser selectDescription_5253Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCloseDescription_5196Parser() {
-		if (closeDescription_5196Parser == null) {
+	private IParser getSelectDescription_5253Parser() {
+		if (selectDescription_5253Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5196Parser = parser;
+			selectDescription_5253Parser = parser;
 		}
-		return closeDescription_5196Parser;
+		return selectDescription_5253Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callProcedureDescription_5197Parser;
+	private IParser whileDescription_5323Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallProcedureDescription_5197Parser() {
-		if (callProcedureDescription_5197Parser == null) {
+	private IParser getWhileDescription_5323Parser() {
+		if (whileDescription_5323Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5197Parser = parser;
+			whileDescription_5323Parser = parser;
 		}
-		return callProcedureDescription_5197Parser;
+		return whileDescription_5323Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callFunctionDescription_5198Parser;
+	private IParser expressionDescription_5254Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallFunctionDescription_5198Parser() {
-		if (callFunctionDescription_5198Parser == null) {
+	private IParser getExpressionDescription_5254Parser() {
+		if (expressionDescription_5254Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5198Parser = parser;
+			expressionDescription_5254Parser = parser;
 		}
-		return callFunctionDescription_5198Parser;
+		return expressionDescription_5254Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser expressionDescription_5219Parser;
+	private IParser exceptionDescription_5255Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExpressionDescription_5219Parser() {
-		if (expressionDescription_5219Parser == null) {
+	private IParser getExceptionDescription_5255Parser() {
+		if (exceptionDescription_5255Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5219Parser = parser;
+			exceptionDescription_5255Parser = parser;
 		}
-		return expressionDescription_5219Parser;
+		return exceptionDescription_5255Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser exceptionDescription_5199Parser;
+	private IParser ifDescription_5322Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExceptionDescription_5199Parser() {
-		if (exceptionDescription_5199Parser == null) {
+	private IParser getIfDescription_5322Parser() {
+		if (ifDescription_5322Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5199Parser = parser;
+			ifDescription_5322Parser = parser;
 		}
-		return exceptionDescription_5199Parser;
+		return ifDescription_5322Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser ifDescription_5213Parser;
+	private IParser forDescription_5321Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getIfDescription_5213Parser() {
-		if (ifDescription_5213Parser == null) {
+	private IParser getForDescription_5321Parser() {
+		if (forDescription_5321Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5213Parser = parser;
+			forDescription_5321Parser = parser;
 		}
-		return ifDescription_5213Parser;
+		return forDescription_5321Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser caseDescription_5200Parser;
+	private IParser caseDescription_5320Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCaseDescription_5200Parser() {
-		if (caseDescription_5200Parser == null) {
+	private IParser getCaseDescription_5320Parser() {
+		if (caseDescription_5320Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5200Parser = parser;
+			caseDescription_5320Parser = parser;
 		}
-		return caseDescription_5200Parser;
+		return caseDescription_5320Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser caseDescription_5242Parser;
+	private IParser caseDescription_5319Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCaseDescription_5242Parser() {
-		if (caseDescription_5242Parser == null) {
+	private IParser getCaseDescription_5319Parser() {
+		if (caseDescription_5319Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5242Parser = parser;
+			caseDescription_5319Parser = parser;
 		}
-		return caseDescription_5242Parser;
+		return caseDescription_5319Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser insertDescription_5230Parser;
+	private IParser insertDescription_5256Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getInsertDescription_5230Parser() {
-		if (insertDescription_5230Parser == null) {
+	private IParser getInsertDescription_5256Parser() {
+		if (insertDescription_5256Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5230Parser = parser;
+			insertDescription_5256Parser = parser;
 		}
-		return insertDescription_5230Parser;
+		return insertDescription_5256Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser updateDescription_5231Parser;
+	private IParser updateDescription_5257Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getUpdateDescription_5231Parser() {
-		if (updateDescription_5231Parser == null) {
+	private IParser getUpdateDescription_5257Parser() {
+		if (updateDescription_5257Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5231Parser = parser;
+			updateDescription_5257Parser = parser;
 		}
-		return updateDescription_5231Parser;
+		return updateDescription_5257Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser deleteDescription_5232Parser;
+	private IParser deleteDescription_5258Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getDeleteDescription_5232Parser() {
-		if (deleteDescription_5232Parser == null) {
+	private IParser getDeleteDescription_5258Parser() {
+		if (deleteDescription_5258Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5232Parser = parser;
+			deleteDescription_5258Parser = parser;
 		}
-		return deleteDescription_5232Parser;
+		return deleteDescription_5258Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser selectDescription_5233Parser;
+	private IParser selectDescription_5259Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getSelectDescription_5233Parser() {
-		if (selectDescription_5233Parser == null) {
+	private IParser getSelectDescription_5259Parser() {
+		if (selectDescription_5259Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5233Parser = parser;
+			selectDescription_5259Parser = parser;
 		}
-		return selectDescription_5233Parser;
+		return selectDescription_5259Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser whileDescription_5241Parser;
+	private IParser whileDescription_5272Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getWhileDescription_5241Parser() {
-		if (whileDescription_5241Parser == null) {
+	private IParser getWhileDescription_5272Parser() {
+		if (whileDescription_5272Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5241Parser = parser;
+			whileDescription_5272Parser = parser;
 		}
-		return whileDescription_5241Parser;
+		return whileDescription_5272Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser insertDescription_5201Parser;
+	private IParser insertDescription_5260Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getInsertDescription_5201Parser() {
-		if (insertDescription_5201Parser == null) {
+	private IParser getInsertDescription_5260Parser() {
+		if (insertDescription_5260Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5201Parser = parser;
+			insertDescription_5260Parser = parser;
 		}
-		return insertDescription_5201Parser;
+		return insertDescription_5260Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser updateDescription_5202Parser;
+	private IParser updateDescription_5261Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getUpdateDescription_5202Parser() {
-		if (updateDescription_5202Parser == null) {
+	private IParser getUpdateDescription_5261Parser() {
+		if (updateDescription_5261Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5202Parser = parser;
+			updateDescription_5261Parser = parser;
 		}
-		return updateDescription_5202Parser;
+		return updateDescription_5261Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser deleteDescription_5203Parser;
+	private IParser deleteDescription_5262Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getDeleteDescription_5203Parser() {
-		if (deleteDescription_5203Parser == null) {
+	private IParser getDeleteDescription_5262Parser() {
+		if (deleteDescription_5262Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5203Parser = parser;
+			deleteDescription_5262Parser = parser;
 		}
-		return deleteDescription_5203Parser;
+		return deleteDescription_5262Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser selectDescription_5204Parser;
+	private IParser selectDescription_5263Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getSelectDescription_5204Parser() {
-		if (selectDescription_5204Parser == null) {
+	private IParser getSelectDescription_5263Parser() {
+		if (selectDescription_5263Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5204Parser = parser;
+			selectDescription_5263Parser = parser;
 		}
-		return selectDescription_5204Parser;
+		return selectDescription_5263Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser whileDescription_5205Parser;
+	private IParser whileDescription_5271Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getWhileDescription_5205Parser() {
-		if (whileDescription_5205Parser == null) {
+	private IParser getWhileDescription_5271Parser() {
+		if (whileDescription_5271Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5205Parser = parser;
+			whileDescription_5271Parser = parser;
 		}
-		return whileDescription_5205Parser;
+		return whileDescription_5271Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser caseDescription_5100Parser;
+	private IParser forDescription_5270Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCaseDescription_5100Parser() {
-		if (caseDescription_5100Parser == null) {
+	private IParser getForDescription_5270Parser() {
+		if (forDescription_5270Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5100Parser = parser;
+			forDescription_5270Parser = parser;
 		}
-		return caseDescription_5100Parser;
+		return forDescription_5270Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser forDescription_5240Parser;
+	private IParser loopDescription_5269Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getForDescription_5240Parser() {
-		if (forDescription_5240Parser == null) {
+	private IParser getLoopDescription_5269Parser() {
+		if (loopDescription_5269Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5240Parser = parser;
+			loopDescription_5269Parser = parser;
 		}
-		return forDescription_5240Parser;
+		return loopDescription_5269Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser insertDescription_5101Parser;
+	private IParser openDescription_5264Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getInsertDescription_5101Parser() {
-		if (insertDescription_5101Parser == null) {
+	private IParser getOpenDescription_5264Parser() {
+		if (openDescription_5264Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5101Parser = parser;
+			openDescription_5264Parser = parser;
 		}
-		return insertDescription_5101Parser;
+		return openDescription_5264Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser updateDescription_5102Parser;
+	private IParser fetchDescription_5265Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getUpdateDescription_5102Parser() {
-		if (updateDescription_5102Parser == null) {
+	private IParser getFetchDescription_5265Parser() {
+		if (fetchDescription_5265Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5102Parser = parser;
+			fetchDescription_5265Parser = parser;
 		}
-		return updateDescription_5102Parser;
+		return fetchDescription_5265Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser deleteDescription_5103Parser;
+	private IParser closeDescription_5266Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getDeleteDescription_5103Parser() {
-		if (deleteDescription_5103Parser == null) {
+	private IParser getCloseDescription_5266Parser() {
+		if (closeDescription_5266Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5103Parser = parser;
+			closeDescription_5266Parser = parser;
 		}
-		return deleteDescription_5103Parser;
+		return closeDescription_5266Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser selectDescription_5104Parser;
+	private IParser callProcedureDescription_5267Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getSelectDescription_5104Parser() {
-		if (selectDescription_5104Parser == null) {
+	private IParser getCallProcedureDescription_5267Parser() {
+		if (callProcedureDescription_5267Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5104Parser = parser;
+			callProcedureDescription_5267Parser = parser;
 		}
-		return selectDescription_5104Parser;
+		return callProcedureDescription_5267Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser whileDescription_5112Parser;
+	private IParser callFunctionDescription_5268Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getWhileDescription_5112Parser() {
-		if (whileDescription_5112Parser == null) {
+	private IParser getCallFunctionDescription_5268Parser() {
+		if (callFunctionDescription_5268Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5112Parser = parser;
+			callFunctionDescription_5268Parser = parser;
 		}
-		return whileDescription_5112Parser;
+		return callFunctionDescription_5268Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser forDescription_5105Parser;
+	private IParser forDescription_5273Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getForDescription_5105Parser() {
-		if (forDescription_5105Parser == null) {
+	private IParser getForDescription_5273Parser() {
+		if (forDescription_5273Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5105Parser = parser;
+			forDescription_5273Parser = parser;
 		}
-		return forDescription_5105Parser;
+		return forDescription_5273Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser caseDescription_5161Parser;
+	private IParser loopDescription_5274Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCaseDescription_5161Parser() {
-		if (caseDescription_5161Parser == null) {
+	private IParser getLoopDescription_5274Parser() {
+		if (loopDescription_5274Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5161Parser = parser;
+			loopDescription_5274Parser = parser;
 		}
-		return caseDescription_5161Parser;
+		return loopDescription_5274Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser loopDescription_5239Parser;
+	private IParser openDescription_5275Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getLoopDescription_5239Parser() {
-		if (loopDescription_5239Parser == null) {
+	private IParser getOpenDescription_5275Parser() {
+		if (openDescription_5275Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5239Parser = parser;
+			openDescription_5275Parser = parser;
 		}
-		return loopDescription_5239Parser;
+		return openDescription_5275Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser insertDescription_5162Parser;
+	private IParser fetchDescription_5276Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getInsertDescription_5162Parser() {
-		if (insertDescription_5162Parser == null) {
+	private IParser getFetchDescription_5276Parser() {
+		if (fetchDescription_5276Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5162Parser = parser;
+			fetchDescription_5276Parser = parser;
 		}
-		return insertDescription_5162Parser;
+		return fetchDescription_5276Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser updateDescription_5163Parser;
+	private IParser closeDescription_5277Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getUpdateDescription_5163Parser() {
-		if (updateDescription_5163Parser == null) {
+	private IParser getCloseDescription_5277Parser() {
+		if (closeDescription_5277Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5163Parser = parser;
+			closeDescription_5277Parser = parser;
 		}
-		return updateDescription_5163Parser;
+		return closeDescription_5277Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser deleteDescription_5164Parser;
+	private IParser callProcedureDescription_5278Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getDeleteDescription_5164Parser() {
-		if (deleteDescription_5164Parser == null) {
+	private IParser getCallProcedureDescription_5278Parser() {
+		if (callProcedureDescription_5278Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5164Parser = parser;
+			callProcedureDescription_5278Parser = parser;
 		}
-		return deleteDescription_5164Parser;
+		return callProcedureDescription_5278Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser selectDescription_5165Parser;
+	private IParser callFunctionDescription_5279Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getSelectDescription_5165Parser() {
-		if (selectDescription_5165Parser == null) {
+	private IParser getCallFunctionDescription_5279Parser() {
+		if (callFunctionDescription_5279Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5165Parser = parser;
+			callFunctionDescription_5279Parser = parser;
 		}
-		return selectDescription_5165Parser;
+		return callFunctionDescription_5279Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser whileDescription_5186Parser;
+	private IParser optionsDescription_5318Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getWhileDescription_5186Parser() {
-		if (whileDescription_5186Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5186Parser = parser;
-		}
-		return whileDescription_5186Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser loopDescription_5106Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getLoopDescription_5106Parser() {
-		if (loopDescription_5106Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5106Parser = parser;
-		}
-		return loopDescription_5106Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser caseDescription_5166Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCaseDescription_5166Parser() {
-		if (caseDescription_5166Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5166Parser = parser;
-		}
-		return caseDescription_5166Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser openDescription_5234Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getOpenDescription_5234Parser() {
-		if (openDescription_5234Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5234Parser = parser;
-		}
-		return openDescription_5234Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser fetchDescription_5235Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getFetchDescription_5235Parser() {
-		if (fetchDescription_5235Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5235Parser = parser;
-		}
-		return fetchDescription_5235Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser closeDescription_5236Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCloseDescription_5236Parser() {
-		if (closeDescription_5236Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5236Parser = parser;
-		}
-		return closeDescription_5236Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser callProcedureDescription_5237Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCallProcedureDescription_5237Parser() {
-		if (callProcedureDescription_5237Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+	private IParser getOptionsDescription_5318Parser() {
+		if (optionsDescription_5318Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getOptions_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5237Parser = parser;
+			optionsDescription_5318Parser = parser;
 		}
-		return callProcedureDescription_5237Parser;
+		return optionsDescription_5318Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callFunctionDescription_5238Parser;
+	private IParser expressionDescription_5280Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallFunctionDescription_5238Parser() {
-		if (callFunctionDescription_5238Parser == null) {
+	private IParser getExpressionDescription_5280Parser() {
+		if (expressionDescription_5280Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5238Parser = parser;
+			expressionDescription_5280Parser = parser;
 		}
-		return callFunctionDescription_5238Parser;
+		return expressionDescription_5280Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser insertDescription_5167Parser;
+	private IParser exceptionDescription_5281Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getInsertDescription_5167Parser() {
-		if (insertDescription_5167Parser == null) {
+	private IParser getExceptionDescription_5281Parser() {
+		if (exceptionDescription_5281Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5167Parser = parser;
+			exceptionDescription_5281Parser = parser;
 		}
-		return insertDescription_5167Parser;
+		return exceptionDescription_5281Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser updateDescription_5168Parser;
+	private IParser ifDescription_5304Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getUpdateDescription_5168Parser() {
-		if (updateDescription_5168Parser == null) {
+	private IParser getIfDescription_5304Parser() {
+		if (ifDescription_5304Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5168Parser = parser;
+			ifDescription_5304Parser = parser;
 		}
-		return updateDescription_5168Parser;
+		return ifDescription_5304Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser deleteDescription_5169Parser;
+	private IParser loopDescription_5282Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getDeleteDescription_5169Parser() {
-		if (deleteDescription_5169Parser == null) {
+	private IParser getLoopDescription_5282Parser() {
+		if (loopDescription_5282Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5169Parser = parser;
+			loopDescription_5282Parser = parser;
 		}
-		return deleteDescription_5169Parser;
+		return loopDescription_5282Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser selectDescription_5170Parser;
+	private IParser openDescription_5283Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getSelectDescription_5170Parser() {
-		if (selectDescription_5170Parser == null) {
+	private IParser getOpenDescription_5283Parser() {
+		if (openDescription_5283Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5170Parser = parser;
+			openDescription_5283Parser = parser;
 		}
-		return selectDescription_5170Parser;
+		return openDescription_5283Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser whileDescription_5171Parser;
+	private IParser fetchDescription_5284Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getWhileDescription_5171Parser() {
-		if (whileDescription_5171Parser == null) {
+	private IParser getFetchDescription_5284Parser() {
+		if (fetchDescription_5284Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5171Parser = parser;
+			fetchDescription_5284Parser = parser;
 		}
-		return whileDescription_5171Parser;
+		return fetchDescription_5284Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser openDescription_5107Parser;
+	private IParser closeDescription_5285Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getOpenDescription_5107Parser() {
-		if (openDescription_5107Parser == null) {
+	private IParser getCloseDescription_5285Parser() {
+		if (closeDescription_5285Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5107Parser = parser;
+			closeDescription_5285Parser = parser;
 		}
-		return openDescription_5107Parser;
+		return closeDescription_5285Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser fetchDescription_5108Parser;
+	private IParser callProcedureDescription_5286Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getFetchDescription_5108Parser() {
-		if (fetchDescription_5108Parser == null) {
+	private IParser getCallProcedureDescription_5286Parser() {
+		if (callProcedureDescription_5286Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5108Parser = parser;
+			callProcedureDescription_5286Parser = parser;
 		}
-		return fetchDescription_5108Parser;
+		return callProcedureDescription_5286Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser closeDescription_5109Parser;
+	private IParser callFunctionDescription_5287Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCloseDescription_5109Parser() {
-		if (closeDescription_5109Parser == null) {
+	private IParser getCallFunctionDescription_5287Parser() {
+		if (callFunctionDescription_5287Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5109Parser = parser;
+			callFunctionDescription_5287Parser = parser;
 		}
-		return closeDescription_5109Parser;
+		return callFunctionDescription_5287Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callProcedureDescription_5110Parser;
+	private IParser expressionDescription_5288Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallProcedureDescription_5110Parser() {
-		if (callProcedureDescription_5110Parser == null) {
+	private IParser getExpressionDescription_5288Parser() {
+		if (expressionDescription_5288Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5110Parser = parser;
+			expressionDescription_5288Parser = parser;
 		}
-		return callProcedureDescription_5110Parser;
+		return expressionDescription_5288Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callFunctionDescription_5111Parser;
+	private IParser exceptionDescription_5289Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallFunctionDescription_5111Parser() {
-		if (callFunctionDescription_5111Parser == null) {
+	private IParser getExceptionDescription_5289Parser() {
+		if (exceptionDescription_5289Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5111Parser = parser;
+			exceptionDescription_5289Parser = parser;
 		}
-		return callFunctionDescription_5111Parser;
+		return exceptionDescription_5289Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser expressionDescription_5220Parser;
+	private IParser ifDescription_5303Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExpressionDescription_5220Parser() {
-		if (expressionDescription_5220Parser == null) {
+	private IParser getIfDescription_5303Parser() {
+		if (ifDescription_5303Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5220Parser = parser;
+			ifDescription_5303Parser = parser;
 		}
-		return expressionDescription_5220Parser;
+		return ifDescription_5303Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser forDescription_5185Parser;
+	private IParser caseDescription_5290Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getForDescription_5185Parser() {
-		if (forDescription_5185Parser == null) {
+	private IParser getCaseDescription_5290Parser() {
+		if (caseDescription_5290Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5185Parser = parser;
+			caseDescription_5290Parser = parser;
 		}
-		return forDescription_5185Parser;
+		return caseDescription_5290Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser forDescription_5184Parser;
+	private IParser insertDescription_5291Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getForDescription_5184Parser() {
-		if (forDescription_5184Parser == null) {
+	private IParser getInsertDescription_5291Parser() {
+		if (insertDescription_5291Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5184Parser = parser;
+			insertDescription_5291Parser = parser;
 		}
-		return forDescription_5184Parser;
+		return insertDescription_5291Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser loopDescription_5178Parser;
+	private IParser updateDescription_5292Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getLoopDescription_5178Parser() {
-		if (loopDescription_5178Parser == null) {
+	private IParser getUpdateDescription_5292Parser() {
+		if (updateDescription_5292Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5178Parser = parser;
+			updateDescription_5292Parser = parser;
 		}
-		return loopDescription_5178Parser;
+		return updateDescription_5292Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser loopDescription_5177Parser;
+	private IParser deleteDescription_5293Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getLoopDescription_5177Parser() {
-		if (loopDescription_5177Parser == null) {
+	private IParser getDeleteDescription_5293Parser() {
+		if (deleteDescription_5293Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5177Parser = parser;
+			deleteDescription_5293Parser = parser;
 		}
-		return loopDescription_5177Parser;
+		return deleteDescription_5293Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser openDescription_5172Parser;
+	private IParser selectDescription_5294Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getOpenDescription_5172Parser() {
-		if (openDescription_5172Parser == null) {
+	private IParser getSelectDescription_5294Parser() {
+		if (selectDescription_5294Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5172Parser = parser;
+			selectDescription_5294Parser = parser;
 		}
-		return openDescription_5172Parser;
+		return selectDescription_5294Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser fetchDescription_5173Parser;
+	private IParser whileDescription_5295Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getFetchDescription_5173Parser() {
-		if (fetchDescription_5173Parser == null) {
+	private IParser getWhileDescription_5295Parser() {
+		if (whileDescription_5295Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5173Parser = parser;
+			whileDescription_5295Parser = parser;
 		}
-		return fetchDescription_5173Parser;
+		return whileDescription_5295Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser closeDescription_5174Parser;
+	private IParser forDescription_5296Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCloseDescription_5174Parser() {
-		if (closeDescription_5174Parser == null) {
+	private IParser getForDescription_5296Parser() {
+		if (forDescription_5296Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5174Parser = parser;
+			forDescription_5296Parser = parser;
 		}
-		return closeDescription_5174Parser;
+		return forDescription_5296Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callProcedureDescription_5175Parser;
+	private IParser loopDescription_5297Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallProcedureDescription_5175Parser() {
-		if (callProcedureDescription_5175Parser == null) {
+	private IParser getLoopDescription_5297Parser() {
+		if (loopDescription_5297Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5175Parser = parser;
+			loopDescription_5297Parser = parser;
 		}
-		return callProcedureDescription_5175Parser;
+		return loopDescription_5297Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callFunctionDescription_5176Parser;
+	private IParser openDescription_5298Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallFunctionDescription_5176Parser() {
-		if (callFunctionDescription_5176Parser == null) {
+	private IParser getOpenDescription_5298Parser() {
+		if (openDescription_5298Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5176Parser = parser;
+			openDescription_5298Parser = parser;
 		}
-		return callFunctionDescription_5176Parser;
+		return openDescription_5298Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser expressionDescription_5221Parser;
+	private IParser fetchDescription_5299Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExpressionDescription_5221Parser() {
-		if (expressionDescription_5221Parser == null) {
+	private IParser getFetchDescription_5299Parser() {
+		if (fetchDescription_5299Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5221Parser = parser;
+			fetchDescription_5299Parser = parser;
 		}
-		return expressionDescription_5221Parser;
+		return fetchDescription_5299Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser openDescription_5179Parser;
+	private IParser closeDescription_5300Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getOpenDescription_5179Parser() {
-		if (openDescription_5179Parser == null) {
+	private IParser getCloseDescription_5300Parser() {
+		if (closeDescription_5300Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5179Parser = parser;
+			closeDescription_5300Parser = parser;
 		}
-		return openDescription_5179Parser;
+		return closeDescription_5300Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser fetchDescription_5180Parser;
+	private IParser callProcedureDescription_5301Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getFetchDescription_5180Parser() {
-		if (fetchDescription_5180Parser == null) {
+	private IParser getCallProcedureDescription_5301Parser() {
+		if (callProcedureDescription_5301Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5180Parser = parser;
+			callProcedureDescription_5301Parser = parser;
 		}
-		return fetchDescription_5180Parser;
+		return callProcedureDescription_5301Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser closeDescription_5181Parser;
+	private IParser callFunctionDescription_5302Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCloseDescription_5181Parser() {
-		if (closeDescription_5181Parser == null) {
+	private IParser getCallFunctionDescription_5302Parser() {
+		if (callFunctionDescription_5302Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5181Parser = parser;
+			callFunctionDescription_5302Parser = parser;
 		}
-		return closeDescription_5181Parser;
+		return callFunctionDescription_5302Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callProcedureDescription_5182Parser;
+	private IParser caseDescription_5305Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallProcedureDescription_5182Parser() {
-		if (callProcedureDescription_5182Parser == null) {
+	private IParser getCaseDescription_5305Parser() {
+		if (caseDescription_5305Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5182Parser = parser;
+			caseDescription_5305Parser = parser;
 		}
-		return callProcedureDescription_5182Parser;
+		return caseDescription_5305Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callFunctionDescription_5183Parser;
+	private IParser insertDescription_5306Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallFunctionDescription_5183Parser() {
-		if (callFunctionDescription_5183Parser == null) {
+	private IParser getInsertDescription_5306Parser() {
+		if (insertDescription_5306Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5183Parser = parser;
+			insertDescription_5306Parser = parser;
 		}
-		return callFunctionDescription_5183Parser;
+		return insertDescription_5306Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser expressionDescription_5222Parser;
+	private IParser updateDescription_5307Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExpressionDescription_5222Parser() {
-		if (expressionDescription_5222Parser == null) {
+	private IParser getUpdateDescription_5307Parser() {
+		if (updateDescription_5307Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5222Parser = parser;
+			updateDescription_5307Parser = parser;
 		}
-		return expressionDescription_5222Parser;
+		return updateDescription_5307Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser forDescription_5206Parser;
+	private IParser deleteDescription_5308Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getForDescription_5206Parser() {
-		if (forDescription_5206Parser == null) {
+	private IParser getDeleteDescription_5308Parser() {
+		if (deleteDescription_5308Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5206Parser = parser;
+			deleteDescription_5308Parser = parser;
 		}
-		return forDescription_5206Parser;
+		return deleteDescription_5308Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser loopDescription_5207Parser;
+	private IParser selectDescription_5309Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getLoopDescription_5207Parser() {
-		if (loopDescription_5207Parser == null) {
+	private IParser getSelectDescription_5309Parser() {
+		if (selectDescription_5309Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5207Parser = parser;
+			selectDescription_5309Parser = parser;
 		}
-		return loopDescription_5207Parser;
+		return selectDescription_5309Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser openDescription_5208Parser;
+	private IParser whileDescription_5310Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getOpenDescription_5208Parser() {
-		if (openDescription_5208Parser == null) {
+	private IParser getWhileDescription_5310Parser() {
+		if (whileDescription_5310Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5208Parser = parser;
+			whileDescription_5310Parser = parser;
 		}
-		return openDescription_5208Parser;
+		return whileDescription_5310Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser fetchDescription_5209Parser;
+	private IParser forDescription_5311Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getFetchDescription_5209Parser() {
-		if (fetchDescription_5209Parser == null) {
+	private IParser getForDescription_5311Parser() {
+		if (forDescription_5311Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5209Parser = parser;
+			forDescription_5311Parser = parser;
 		}
-		return fetchDescription_5209Parser;
+		return forDescription_5311Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser closeDescription_5210Parser;
+	private IParser loopDescription_5312Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCloseDescription_5210Parser() {
-		if (closeDescription_5210Parser == null) {
+	private IParser getLoopDescription_5312Parser() {
+		if (loopDescription_5312Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5210Parser = parser;
+			loopDescription_5312Parser = parser;
 		}
-		return closeDescription_5210Parser;
+		return loopDescription_5312Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callProcedureDescription_5211Parser;
+	private IParser openDescription_5313Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallProcedureDescription_5211Parser() {
-		if (callProcedureDescription_5211Parser == null) {
+	private IParser getOpenDescription_5313Parser() {
+		if (openDescription_5313Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5211Parser = parser;
+			openDescription_5313Parser = parser;
 		}
-		return callProcedureDescription_5211Parser;
+		return openDescription_5313Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callFunctionDescription_5212Parser;
+	private IParser fetchDescription_5314Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallFunctionDescription_5212Parser() {
-		if (callFunctionDescription_5212Parser == null) {
+	private IParser getFetchDescription_5314Parser() {
+		if (fetchDescription_5314Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5212Parser = parser;
+			fetchDescription_5314Parser = parser;
 		}
-		return callFunctionDescription_5212Parser;
+		return fetchDescription_5314Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser expressionDescription_5223Parser;
+	private IParser closeDescription_5315Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExpressionDescription_5223Parser() {
-		if (expressionDescription_5223Parser == null) {
+	private IParser getCloseDescription_5315Parser() {
+		if (closeDescription_5315Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5223Parser = parser;
+			closeDescription_5315Parser = parser;
 		}
-		return expressionDescription_5223Parser;
+		return closeDescription_5315Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser caseDescription_5143Parser;
+	private IParser callProcedureDescription_5316Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCaseDescription_5143Parser() {
-		if (caseDescription_5143Parser == null) {
+	private IParser getCallProcedureDescription_5316Parser() {
+		if (callProcedureDescription_5316Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5143Parser = parser;
+			callProcedureDescription_5316Parser = parser;
 		}
-		return caseDescription_5143Parser;
+		return callProcedureDescription_5316Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser insertDescription_5144Parser;
+	private IParser callFunctionDescription_5317Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getInsertDescription_5144Parser() {
-		if (insertDescription_5144Parser == null) {
+	private IParser getCallFunctionDescription_5317Parser() {
+		if (callFunctionDescription_5317Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5144Parser = parser;
+			callFunctionDescription_5317Parser = parser;
 		}
-		return insertDescription_5144Parser;
+		return callFunctionDescription_5317Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser updateDescription_5145Parser;
+	private IParser caseDescription_5328Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getUpdateDescription_5145Parser() {
-		if (updateDescription_5145Parser == null) {
+	private IParser getCaseDescription_5328Parser() {
+		if (caseDescription_5328Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5145Parser = parser;
+			caseDescription_5328Parser = parser;
 		}
-		return updateDescription_5145Parser;
+		return caseDescription_5328Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser deleteDescription_5146Parser;
+	private IParser insertDescription_5329Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getDeleteDescription_5146Parser() {
-		if (deleteDescription_5146Parser == null) {
+	private IParser getInsertDescription_5329Parser() {
+		if (insertDescription_5329Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5146Parser = parser;
+			insertDescription_5329Parser = parser;
 		}
-		return deleteDescription_5146Parser;
+		return insertDescription_5329Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser selectDescription_5147Parser;
+	private IParser updateDescription_5330Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getSelectDescription_5147Parser() {
-		if (selectDescription_5147Parser == null) {
+	private IParser getUpdateDescription_5330Parser() {
+		if (updateDescription_5330Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5147Parser = parser;
+			updateDescription_5330Parser = parser;
 		}
-		return selectDescription_5147Parser;
+		return updateDescription_5330Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser whileDescription_5148Parser;
+	private IParser deleteDescription_5331Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getWhileDescription_5148Parser() {
-		if (whileDescription_5148Parser == null) {
+	private IParser getDeleteDescription_5331Parser() {
+		if (deleteDescription_5331Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5148Parser = parser;
+			deleteDescription_5331Parser = parser;
 		}
-		return whileDescription_5148Parser;
+		return deleteDescription_5331Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser forDescription_5149Parser;
+	private IParser selectDescription_5332Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getForDescription_5149Parser() {
-		if (forDescription_5149Parser == null) {
+	private IParser getSelectDescription_5332Parser() {
+		if (selectDescription_5332Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5149Parser = parser;
+			selectDescription_5332Parser = parser;
 		}
-		return forDescription_5149Parser;
+		return selectDescription_5332Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser loopDescription_5150Parser;
+	private IParser whileDescription_5333Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getLoopDescription_5150Parser() {
-		if (loopDescription_5150Parser == null) {
+	private IParser getWhileDescription_5333Parser() {
+		if (whileDescription_5333Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5150Parser = parser;
+			whileDescription_5333Parser = parser;
 		}
-		return loopDescription_5150Parser;
+		return whileDescription_5333Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser openDescription_5151Parser;
+	private IParser forDescription_5334Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getOpenDescription_5151Parser() {
-		if (openDescription_5151Parser == null) {
+	private IParser getForDescription_5334Parser() {
+		if (forDescription_5334Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5151Parser = parser;
+			forDescription_5334Parser = parser;
 		}
-		return openDescription_5151Parser;
+		return forDescription_5334Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser fetchDescription_5152Parser;
+	private IParser loopDescription_5335Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getFetchDescription_5152Parser() {
-		if (fetchDescription_5152Parser == null) {
+	private IParser getLoopDescription_5335Parser() {
+		if (loopDescription_5335Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5152Parser = parser;
+			loopDescription_5335Parser = parser;
 		}
-		return fetchDescription_5152Parser;
+		return loopDescription_5335Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser closeDescription_5153Parser;
+	private IParser openDescription_5336Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCloseDescription_5153Parser() {
-		if (closeDescription_5153Parser == null) {
+	private IParser getOpenDescription_5336Parser() {
+		if (openDescription_5336Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5153Parser = parser;
+			openDescription_5336Parser = parser;
 		}
-		return closeDescription_5153Parser;
+		return openDescription_5336Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callProcedureDescription_5154Parser;
+	private IParser fetchDescription_5337Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallProcedureDescription_5154Parser() {
-		if (callProcedureDescription_5154Parser == null) {
+	private IParser getFetchDescription_5337Parser() {
+		if (fetchDescription_5337Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5154Parser = parser;
+			fetchDescription_5337Parser = parser;
 		}
-		return callProcedureDescription_5154Parser;
+		return fetchDescription_5337Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callFunctionDescription_5155Parser;
+	private IParser closeDescription_5338Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallFunctionDescription_5155Parser() {
-		if (callFunctionDescription_5155Parser == null) {
+	private IParser getCloseDescription_5338Parser() {
+		if (closeDescription_5338Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5155Parser = parser;
+			closeDescription_5338Parser = parser;
 		}
-		return callFunctionDescription_5155Parser;
+		return closeDescription_5338Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser expressionDescription_5224Parser;
+	private IParser callProcedureDescription_5339Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExpressionDescription_5224Parser() {
-		if (expressionDescription_5224Parser == null) {
+	private IParser getCallProcedureDescription_5339Parser() {
+		if (callProcedureDescription_5339Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5224Parser = parser;
+			callProcedureDescription_5339Parser = parser;
 		}
-		return expressionDescription_5224Parser;
+		return callProcedureDescription_5339Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser forDescription_5072Parser;
+	private IParser callFunctionDescription_5340Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getForDescription_5072Parser() {
-		if (forDescription_5072Parser == null) {
+	private IParser getCallFunctionDescription_5340Parser() {
+		if (callFunctionDescription_5340Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5072Parser = parser;
+			callFunctionDescription_5340Parser = parser;
 		}
-		return forDescription_5072Parser;
+		return callFunctionDescription_5340Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser loopDescription_5073Parser;
+	private IParser dataTypeName_5341Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getLoopDescription_5073Parser() {
-		if (loopDescription_5073Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+	private IParser getDataTypeName_5341Parser() {
+		if (dataTypeName_5341Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5073Parser = parser;
+			dataTypeName_5341Parser = parser;
 		}
-		return loopDescription_5073Parser;
+		return dataTypeName_5341Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser openDescription_5074Parser;
+	private IParser collectionsName_5342Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getOpenDescription_5074Parser() {
-		if (openDescription_5074Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+	private IParser getCollectionsName_5342Parser() {
+		if (collectionsName_5342Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5074Parser = parser;
+			collectionsName_5342Parser = parser;
 		}
-		return openDescription_5074Parser;
+		return collectionsName_5342Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser fetchDescription_5075Parser;
+	private IParser recordsName_5343Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getFetchDescription_5075Parser() {
-		if (fetchDescription_5075Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+	private IParser getRecordsName_5343Parser() {
+		if (recordsName_5343Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5075Parser = parser;
+			recordsName_5343Parser = parser;
 		}
-		return fetchDescription_5075Parser;
+		return recordsName_5343Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser closeDescription_5076Parser;
+	private IParser cursorName_5344Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCloseDescription_5076Parser() {
-		if (closeDescription_5076Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+	private IParser getCursorName_5344Parser() {
+		if (cursorName_5344Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5076Parser = parser;
+			cursorName_5344Parser = parser;
 		}
-		return closeDescription_5076Parser;
+		return cursorName_5344Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callProcedureDescription_5077Parser;
+	private IParser dataTypeName_5345Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallProcedureDescription_5077Parser() {
-		if (callProcedureDescription_5077Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+	private IParser getDataTypeName_5345Parser() {
+		if (dataTypeName_5345Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5077Parser = parser;
+			dataTypeName_5345Parser = parser;
 		}
-		return callProcedureDescription_5077Parser;
+		return dataTypeName_5345Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser callFunctionDescription_5078Parser;
+	private IParser collectionsName_5346Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCallFunctionDescription_5078Parser() {
-		if (callFunctionDescription_5078Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
+	private IParser getCollectionsName_5346Parser() {
+		if (collectionsName_5346Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5078Parser = parser;
+			collectionsName_5346Parser = parser;
 		}
-		return callFunctionDescription_5078Parser;
+		return collectionsName_5346Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser expressionDescription_5225Parser;
+	private IParser recordsName_5347Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getExpressionDescription_5225Parser() {
-		if (expressionDescription_5225Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5225Parser = parser;
-		}
-		return expressionDescription_5225Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser dataTypeName_5023Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getDataTypeName_5023Parser() {
-		if (dataTypeName_5023Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
+	private IParser getRecordsName_5347Parser() {
+		if (recordsName_5347Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			dataTypeName_5023Parser = parser;
+			recordsName_5347Parser = parser;
 		}
-		return dataTypeName_5023Parser;
+		return recordsName_5347Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser collectionsName_5024Parser;
+	private IParser cursorName_5348Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getCollectionsName_5024Parser() {
-		if (collectionsName_5024Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
+	private IParser getCursorName_5348Parser() {
+		if (cursorName_5348Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			collectionsName_5024Parser = parser;
+			cursorName_5348Parser = parser;
 		}
-		return collectionsName_5024Parser;
+		return cursorName_5348Parser;
 	}
-
-	/**
-	* @generated
-	*/
-	private IParser recordsName_5025Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getRecordsName_5025Parser() {
-		if (recordsName_5025Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			recordsName_5025Parser = parser;
-		}
-		return recordsName_5025Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser cursorName_5026Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getCursorName_5026Parser() {
-		if (cursorName_5026Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			cursorName_5026Parser = parser;
-		}
-		return cursorName_5026Parser;
-	}
-
-	/**
-	 * @generated
-	 */
 	private IParser dataTypeName_5027Parser;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser getDataTypeName_5027Parser() {
 		if (dataTypeName_5027Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			dataTypeName_5027Parser = parser;
 		}
@@ -2585,7 +1889,7 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	*/
 	private IParser getCollectionsName_5028Parser() {
 		if (collectionsName_5028Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			collectionsName_5028Parser = parser;
 		}
@@ -2602,7 +1906,7 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	*/
 	private IParser getRecordsName_5029Parser() {
 		if (recordsName_5029Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			recordsName_5029Parser = parser;
 		}
@@ -2610,700 +1914,20 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser cursorName_5030Parser;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser getCursorName_5030Parser() {
 		if (cursorName_5030Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getDataAbstractions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			cursorName_5030Parser = parser;
 		}
 		return cursorName_5030Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser dataTypeName_5079Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getDataTypeName_5079Parser() {
-		if (dataTypeName_5079Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			dataTypeName_5079Parser = parser;
-		}
-		return dataTypeName_5079Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser collectionsName_5080Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCollectionsName_5080Parser() {
-		if (collectionsName_5080Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			collectionsName_5080Parser = parser;
-		}
-		return collectionsName_5080Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser recordsName_5081Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getRecordsName_5081Parser() {
-		if (recordsName_5081Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			recordsName_5081Parser = parser;
-		}
-		return recordsName_5081Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser cursorName_5082Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCursorName_5082Parser() {
-		if (cursorName_5082Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			cursorName_5082Parser = parser;
-		}
-		return cursorName_5082Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser exceptionDescription_5083Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getExceptionDescription_5083Parser() {
-		if (exceptionDescription_5083Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5083Parser = parser;
-		}
-		return exceptionDescription_5083Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser ifDescription_5084Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getIfDescription_5084Parser() {
-		if (ifDescription_5084Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5084Parser = parser;
-		}
-		return ifDescription_5084Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser caseDescription_5085Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCaseDescription_5085Parser() {
-		if (caseDescription_5085Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5085Parser = parser;
-		}
-		return caseDescription_5085Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser insertDescription_5086Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getInsertDescription_5086Parser() {
-		if (insertDescription_5086Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5086Parser = parser;
-		}
-		return insertDescription_5086Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser updateDescription_5087Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getUpdateDescription_5087Parser() {
-		if (updateDescription_5087Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5087Parser = parser;
-		}
-		return updateDescription_5087Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser deleteDescription_5088Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getDeleteDescription_5088Parser() {
-		if (deleteDescription_5088Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5088Parser = parser;
-		}
-		return deleteDescription_5088Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser selectDescription_5089Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getSelectDescription_5089Parser() {
-		if (selectDescription_5089Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5089Parser = parser;
-		}
-		return selectDescription_5089Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser whileDescription_5090Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getWhileDescription_5090Parser() {
-		if (whileDescription_5090Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5090Parser = parser;
-		}
-		return whileDescription_5090Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser forDescription_5091Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getForDescription_5091Parser() {
-		if (forDescription_5091Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5091Parser = parser;
-		}
-		return forDescription_5091Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser loopDescription_5092Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getLoopDescription_5092Parser() {
-		if (loopDescription_5092Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5092Parser = parser;
-		}
-		return loopDescription_5092Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser openDescription_5093Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getOpenDescription_5093Parser() {
-		if (openDescription_5093Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5093Parser = parser;
-		}
-		return openDescription_5093Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser fetchDescription_5094Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getFetchDescription_5094Parser() {
-		if (fetchDescription_5094Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5094Parser = parser;
-		}
-		return fetchDescription_5094Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser closeDescription_5095Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCloseDescription_5095Parser() {
-		if (closeDescription_5095Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5095Parser = parser;
-		}
-		return closeDescription_5095Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser callProcedureDescription_5096Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCallProcedureDescription_5096Parser() {
-		if (callProcedureDescription_5096Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5096Parser = parser;
-		}
-		return callProcedureDescription_5096Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser callFunctionDescription_5097Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCallFunctionDescription_5097Parser() {
-		if (callFunctionDescription_5097Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5097Parser = parser;
-		}
-		return callFunctionDescription_5097Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser expressionDescription_5226Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getExpressionDescription_5226Parser() {
-		if (expressionDescription_5226Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5226Parser = parser;
-		}
-		return expressionDescription_5226Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser dataTypeName_5037Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getDataTypeName_5037Parser() {
-		if (dataTypeName_5037Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			dataTypeName_5037Parser = parser;
-		}
-		return dataTypeName_5037Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser collectionsName_5038Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCollectionsName_5038Parser() {
-		if (collectionsName_5038Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			collectionsName_5038Parser = parser;
-		}
-		return collectionsName_5038Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser recordsName_5039Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getRecordsName_5039Parser() {
-		if (recordsName_5039Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			recordsName_5039Parser = parser;
-		}
-		return recordsName_5039Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser cursorName_5040Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCursorName_5040Parser() {
-		if (cursorName_5040Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getParameters_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			cursorName_5040Parser = parser;
-		}
-		return cursorName_5040Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser exceptionDescription_5041Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getExceptionDescription_5041Parser() {
-		if (exceptionDescription_5041Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			exceptionDescription_5041Parser = parser;
-		}
-		return exceptionDescription_5041Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser ifDescription_5042Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getIfDescription_5042Parser() {
-		if (ifDescription_5042Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			ifDescription_5042Parser = parser;
-		}
-		return ifDescription_5042Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser caseDescription_5043Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCaseDescription_5043Parser() {
-		if (caseDescription_5043Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			caseDescription_5043Parser = parser;
-		}
-		return caseDescription_5043Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser insertDescription_5044Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getInsertDescription_5044Parser() {
-		if (insertDescription_5044Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			insertDescription_5044Parser = parser;
-		}
-		return insertDescription_5044Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser updateDescription_5045Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getUpdateDescription_5045Parser() {
-		if (updateDescription_5045Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			updateDescription_5045Parser = parser;
-		}
-		return updateDescription_5045Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser deleteDescription_5046Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getDeleteDescription_5046Parser() {
-		if (deleteDescription_5046Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			deleteDescription_5046Parser = parser;
-		}
-		return deleteDescription_5046Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser selectDescription_5047Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getSelectDescription_5047Parser() {
-		if (selectDescription_5047Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			selectDescription_5047Parser = parser;
-		}
-		return selectDescription_5047Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser whileDescription_5048Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getWhileDescription_5048Parser() {
-		if (whileDescription_5048Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			whileDescription_5048Parser = parser;
-		}
-		return whileDescription_5048Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser forDescription_5049Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getForDescription_5049Parser() {
-		if (forDescription_5049Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			forDescription_5049Parser = parser;
-		}
-		return forDescription_5049Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser loopDescription_5050Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getLoopDescription_5050Parser() {
-		if (loopDescription_5050Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			loopDescription_5050Parser = parser;
-		}
-		return loopDescription_5050Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser openDescription_5051Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getOpenDescription_5051Parser() {
-		if (openDescription_5051Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			openDescription_5051Parser = parser;
-		}
-		return openDescription_5051Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser fetchDescription_5052Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getFetchDescription_5052Parser() {
-		if (fetchDescription_5052Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			fetchDescription_5052Parser = parser;
-		}
-		return fetchDescription_5052Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser closeDescription_5053Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCloseDescription_5053Parser() {
-		if (closeDescription_5053Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			closeDescription_5053Parser = parser;
-		}
-		return closeDescription_5053Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser callProcedureDescription_5054Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCallProcedureDescription_5054Parser() {
-		if (callProcedureDescription_5054Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			callProcedureDescription_5054Parser = parser;
-		}
-		return callProcedureDescription_5054Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser callFunctionDescription_5055Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getCallFunctionDescription_5055Parser() {
-		if (callFunctionDescription_5055Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			callFunctionDescription_5055Parser = parser;
-		}
-		return callFunctionDescription_5055Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser expressionDescription_5227Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getExpressionDescription_5227Parser() {
-		if (expressionDescription_5227Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getStatements_Description() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			expressionDescription_5227Parser = parser;
-		}
-		return expressionDescription_5227Parser;
 	}
 
 	/**
@@ -3316,7 +1940,7 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	*/
 	private IParser getTransitionName_6001Parser() {
 		if (transitionName_6001Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getTransition_Name() };
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getLinks_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			transitionName_6001Parser = parser;
 		}
@@ -3326,420 +1950,268 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	/**
 	* @generated
 	*/
-	private IParser selectorTransitionName_6002Parser;
+	private IParser optionsTransitionName_6003Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getSelectorTransitionName_6002Parser() {
-		if (selectorTransitionName_6002Parser == null) {
-			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getSelectorTransition_Name() };
+	private IParser getOptionsTransitionName_6003Parser() {
+		if (optionsTransitionName_6003Parser == null) {
+			EAttribute[] features = new EAttribute[] { CrystalPackage.eINSTANCE.getLinks_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			selectorTransitionName_6002Parser = parser;
+			optionsTransitionName_6003Parser = parser;
 		}
-		return selectorTransitionName_6002Parser;
+		return optionsTransitionName_6003Parser;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case ProcedureNameEditPart.VISUAL_ID:
-			return getProcedureName_5057Parser();
+			return getProcedureName_5349Parser();
 		case FunctionNameEditPart.VISUAL_ID:
-			return getFunctionName_5058Parser();
-		case AnonymousBlockNameEditPart.VISUAL_ID:
-			return getAnonymousBlockName_5059Parser();
-		case DataTypeNameEditPart.VISUAL_ID:
-			return getDataTypeName_5060Parser();
-		case CollectionsNameEditPart.VISUAL_ID:
-			return getCollectionsName_5061Parser();
-		case RecordsNameEditPart.VISUAL_ID:
-			return getRecordsName_5062Parser();
-		case CursorNameEditPart.VISUAL_ID:
-			return getCursorName_5063Parser();
-		case DataTypeName2EditPart.VISUAL_ID:
-			return getDataTypeName_5018Parser();
-		case CollectionsName2EditPart.VISUAL_ID:
-			return getCollectionsName_5019Parser();
-		case RecordsName2EditPart.VISUAL_ID:
-			return getRecordsName_5020Parser();
-		case CursorName2EditPart.VISUAL_ID:
-			return getCursorName_5021Parser();
+			return getFunctionName_5350Parser();
+		case AnonymousBlockDescriptionEditPart.VISUAL_ID:
+			return getAnonymousBlockDescription_5351Parser();
 		case ExpressionDescriptionEditPart.VISUAL_ID:
-			return getExpressionDescription_5225Parser();
+			return getExpressionDescription_5244Parser();
 		case ExceptionDescriptionEditPart.VISUAL_ID:
-			return getExceptionDescription_5064Parser();
+			return getExceptionDescription_5245Parser();
 		case IfDescriptionEditPart.VISUAL_ID:
-			return getIfDescription_5065Parser();
+			return getIfDescription_5327Parser();
 		case ExpressionDescription2EditPart.VISUAL_ID:
-			return getExpressionDescription_5219Parser();
+			return getExpressionDescription_5246Parser();
 		case ExceptionDescription2EditPart.VISUAL_ID:
-			return getExceptionDescription_5189Parser();
+			return getExceptionDescription_5247Parser();
 		case IfDescription2EditPart.VISUAL_ID:
-			return getIfDescription_5218Parser();
+			return getIfDescription_5326Parser();
 		case CaseDescriptionEditPart.VISUAL_ID:
-			return getCaseDescription_5217Parser();
+			return getCaseDescription_5325Parser();
 		case ExpressionDescription3EditPart.VISUAL_ID:
-			return getExpressionDescription_5228Parser();
+			return getExpressionDescription_5248Parser();
 		case ExceptionDescription3EditPart.VISUAL_ID:
-			return getExceptionDescription_5229Parser();
+			return getExceptionDescription_5249Parser();
 		case IfDescription3EditPart.VISUAL_ID:
-			return getIfDescription_5243Parser();
+			return getIfDescription_5324Parser();
 		case InsertDescriptionEditPart.VISUAL_ID:
-			return getInsertDescription_5190Parser();
+			return getInsertDescription_5250Parser();
 		case UpdateDescriptionEditPart.VISUAL_ID:
-			return getUpdateDescription_5191Parser();
+			return getUpdateDescription_5251Parser();
 		case DeleteDescriptionEditPart.VISUAL_ID:
-			return getDeleteDescription_5192Parser();
+			return getDeleteDescription_5252Parser();
 		case SelectDescriptionEditPart.VISUAL_ID:
-			return getSelectDescription_5193Parser();
+			return getSelectDescription_5253Parser();
 		case WhileDescriptionEditPart.VISUAL_ID:
-			return getWhileDescription_5216Parser();
+			return getWhileDescription_5323Parser();
 		case ExpressionDescription4EditPart.VISUAL_ID:
-			return getExpressionDescription_5220Parser();
+			return getExpressionDescription_5254Parser();
 		case ExceptionDescription4EditPart.VISUAL_ID:
-			return getExceptionDescription_5098Parser();
+			return getExceptionDescription_5255Parser();
 		case IfDescription4EditPart.VISUAL_ID:
-			return getIfDescription_5099Parser();
+			return getIfDescription_5322Parser();
 		case ForDescriptionEditPart.VISUAL_ID:
-			return getForDescription_5215Parser();
-		case ExpressionDescription5EditPart.VISUAL_ID:
-			return getExpressionDescription_5222Parser();
-		case ExceptionDescription5EditPart.VISUAL_ID:
-			return getExceptionDescription_5159Parser();
-		case IfDescription5EditPart.VISUAL_ID:
-			return getIfDescription_5188Parser();
-		case LoopDescriptionEditPart.VISUAL_ID:
-			return getLoopDescription_5214Parser();
-		case ExpressionDescription6EditPart.VISUAL_ID:
-			return getExpressionDescription_5221Parser();
-		case ExceptionDescription6EditPart.VISUAL_ID:
-			return getExceptionDescription_5160Parser();
-		case IfDescription6EditPart.VISUAL_ID:
-			return getIfDescription_5187Parser();
-		case OpenDescriptionEditPart.VISUAL_ID:
-			return getOpenDescription_5194Parser();
-		case FetchDescriptionEditPart.VISUAL_ID:
-			return getFetchDescription_5195Parser();
-		case CloseDescriptionEditPart.VISUAL_ID:
-			return getCloseDescription_5196Parser();
-		case CallProcedureDescriptionEditPart.VISUAL_ID:
-			return getCallProcedureDescription_5197Parser();
-		case CallFunctionDescriptionEditPart.VISUAL_ID:
-			return getCallFunctionDescription_5198Parser();
-		case ExpressionDescription7EditPart.VISUAL_ID:
-			return getExpressionDescription_5223Parser();
-		case ExceptionDescription7EditPart.VISUAL_ID:
-			return getExceptionDescription_5199Parser();
-		case IfDescription7EditPart.VISUAL_ID:
-			return getIfDescription_5213Parser();
+			return getForDescription_5321Parser();
 		case CaseDescription2EditPart.VISUAL_ID:
-			return getCaseDescription_5200Parser();
+			return getCaseDescription_5320Parser();
 		case CaseDescription3EditPart.VISUAL_ID:
-			return getCaseDescription_5242Parser();
+			return getCaseDescription_5319Parser();
 		case InsertDescription2EditPart.VISUAL_ID:
-			return getInsertDescription_5230Parser();
+			return getInsertDescription_5256Parser();
 		case UpdateDescription2EditPart.VISUAL_ID:
-			return getUpdateDescription_5231Parser();
+			return getUpdateDescription_5257Parser();
 		case DeleteDescription2EditPart.VISUAL_ID:
-			return getDeleteDescription_5232Parser();
+			return getDeleteDescription_5258Parser();
 		case SelectDescription2EditPart.VISUAL_ID:
-			return getSelectDescription_5233Parser();
+			return getSelectDescription_5259Parser();
 		case WhileDescription2EditPart.VISUAL_ID:
-			return getWhileDescription_5241Parser();
-		case CaseDescription4EditPart.VISUAL_ID:
-			return getCaseDescription_5100Parser();
-		case ForDescription2EditPart.VISUAL_ID:
-			return getForDescription_5240Parser();
-		case CaseDescription5EditPart.VISUAL_ID:
-			return getCaseDescription_5161Parser();
-		case LoopDescription2EditPart.VISUAL_ID:
-			return getLoopDescription_5239Parser();
-		case CaseDescription6EditPart.VISUAL_ID:
-			return getCaseDescription_5166Parser();
-		case OpenDescription2EditPart.VISUAL_ID:
-			return getOpenDescription_5234Parser();
-		case FetchDescription2EditPart.VISUAL_ID:
-			return getFetchDescription_5235Parser();
-		case CloseDescription2EditPart.VISUAL_ID:
-			return getCloseDescription_5236Parser();
-		case CallProcedureDescription2EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5237Parser();
-		case CallFunctionDescription2EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5238Parser();
-		case SelectorDescriptionEditPart.VISUAL_ID:
-			return getSelectorDescription_5156Parser();
-		case ExpressionDescription8EditPart.VISUAL_ID:
-			return getExpressionDescription_5224Parser();
-		case ExceptionDescription8EditPart.VISUAL_ID:
-			return getExceptionDescription_5114Parser();
-		case IfDescription8EditPart.VISUAL_ID:
-			return getIfDescription_5142Parser();
+			return getWhileDescription_5272Parser();
 		case InsertDescription3EditPart.VISUAL_ID:
-			return getInsertDescription_5201Parser();
+			return getInsertDescription_5260Parser();
 		case UpdateDescription3EditPart.VISUAL_ID:
-			return getUpdateDescription_5202Parser();
+			return getUpdateDescription_5261Parser();
 		case DeleteDescription3EditPart.VISUAL_ID:
-			return getDeleteDescription_5203Parser();
+			return getDeleteDescription_5262Parser();
 		case SelectDescription3EditPart.VISUAL_ID:
-			return getSelectDescription_5204Parser();
+			return getSelectDescription_5263Parser();
 		case WhileDescription3EditPart.VISUAL_ID:
-			return getWhileDescription_5205Parser();
-		case InsertDescription4EditPart.VISUAL_ID:
-			return getInsertDescription_5101Parser();
-		case UpdateDescription4EditPart.VISUAL_ID:
-			return getUpdateDescription_5102Parser();
-		case DeleteDescription4EditPart.VISUAL_ID:
-			return getDeleteDescription_5103Parser();
-		case SelectDescription4EditPart.VISUAL_ID:
-			return getSelectDescription_5104Parser();
-		case WhileDescription4EditPart.VISUAL_ID:
-			return getWhileDescription_5112Parser();
+			return getWhileDescription_5271Parser();
+		case ForDescription2EditPart.VISUAL_ID:
+			return getForDescription_5270Parser();
+		case LoopDescriptionEditPart.VISUAL_ID:
+			return getLoopDescription_5269Parser();
+		case OpenDescriptionEditPart.VISUAL_ID:
+			return getOpenDescription_5264Parser();
+		case FetchDescriptionEditPart.VISUAL_ID:
+			return getFetchDescription_5265Parser();
+		case CloseDescriptionEditPart.VISUAL_ID:
+			return getCloseDescription_5266Parser();
+		case CallProcedureDescriptionEditPart.VISUAL_ID:
+			return getCallProcedureDescription_5267Parser();
+		case CallFunctionDescriptionEditPart.VISUAL_ID:
+			return getCallFunctionDescription_5268Parser();
 		case ForDescription3EditPart.VISUAL_ID:
-			return getForDescription_5105Parser();
-		case InsertDescription5EditPart.VISUAL_ID:
-			return getInsertDescription_5162Parser();
-		case UpdateDescription5EditPart.VISUAL_ID:
-			return getUpdateDescription_5163Parser();
-		case DeleteDescription5EditPart.VISUAL_ID:
-			return getDeleteDescription_5164Parser();
-		case SelectDescription5EditPart.VISUAL_ID:
-			return getSelectDescription_5165Parser();
-		case WhileDescription5EditPart.VISUAL_ID:
-			return getWhileDescription_5186Parser();
+			return getForDescription_5273Parser();
+		case LoopDescription2EditPart.VISUAL_ID:
+			return getLoopDescription_5274Parser();
+		case OpenDescription2EditPart.VISUAL_ID:
+			return getOpenDescription_5275Parser();
+		case FetchDescription2EditPart.VISUAL_ID:
+			return getFetchDescription_5276Parser();
+		case CloseDescription2EditPart.VISUAL_ID:
+			return getCloseDescription_5277Parser();
+		case CallProcedureDescription2EditPart.VISUAL_ID:
+			return getCallProcedureDescription_5278Parser();
+		case CallFunctionDescription2EditPart.VISUAL_ID:
+			return getCallFunctionDescription_5279Parser();
+		case OptionsDescriptionEditPart.VISUAL_ID:
+			return getOptionsDescription_5318Parser();
+		case ExpressionDescription5EditPart.VISUAL_ID:
+			return getExpressionDescription_5280Parser();
+		case ExceptionDescription5EditPart.VISUAL_ID:
+			return getExceptionDescription_5281Parser();
+		case IfDescription5EditPart.VISUAL_ID:
+			return getIfDescription_5304Parser();
 		case LoopDescription3EditPart.VISUAL_ID:
-			return getLoopDescription_5106Parser();
-		case InsertDescription6EditPart.VISUAL_ID:
-			return getInsertDescription_5167Parser();
-		case UpdateDescription6EditPart.VISUAL_ID:
-			return getUpdateDescription_5168Parser();
-		case DeleteDescription6EditPart.VISUAL_ID:
-			return getDeleteDescription_5169Parser();
-		case SelectDescription6EditPart.VISUAL_ID:
-			return getSelectDescription_5170Parser();
-		case WhileDescription6EditPart.VISUAL_ID:
-			return getWhileDescription_5171Parser();
+			return getLoopDescription_5282Parser();
 		case OpenDescription3EditPart.VISUAL_ID:
-			return getOpenDescription_5107Parser();
+			return getOpenDescription_5283Parser();
 		case FetchDescription3EditPart.VISUAL_ID:
-			return getFetchDescription_5108Parser();
+			return getFetchDescription_5284Parser();
 		case CloseDescription3EditPart.VISUAL_ID:
-			return getCloseDescription_5109Parser();
+			return getCloseDescription_5285Parser();
 		case CallProcedureDescription3EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5110Parser();
+			return getCallProcedureDescription_5286Parser();
 		case CallFunctionDescription3EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5111Parser();
+			return getCallFunctionDescription_5287Parser();
+		case ExpressionDescription6EditPart.VISUAL_ID:
+			return getExpressionDescription_5288Parser();
+		case ExceptionDescription6EditPart.VISUAL_ID:
+			return getExceptionDescription_5289Parser();
+		case IfDescription6EditPart.VISUAL_ID:
+			return getIfDescription_5303Parser();
+		case CaseDescription4EditPart.VISUAL_ID:
+			return getCaseDescription_5290Parser();
+		case InsertDescription4EditPart.VISUAL_ID:
+			return getInsertDescription_5291Parser();
+		case UpdateDescription4EditPart.VISUAL_ID:
+			return getUpdateDescription_5292Parser();
+		case DeleteDescription4EditPart.VISUAL_ID:
+			return getDeleteDescription_5293Parser();
+		case SelectDescription4EditPart.VISUAL_ID:
+			return getSelectDescription_5294Parser();
+		case WhileDescription4EditPart.VISUAL_ID:
+			return getWhileDescription_5295Parser();
 		case ForDescription4EditPart.VISUAL_ID:
-			return getForDescription_5185Parser();
-		case ForDescription5EditPart.VISUAL_ID:
-			return getForDescription_5184Parser();
+			return getForDescription_5296Parser();
 		case LoopDescription4EditPart.VISUAL_ID:
-			return getLoopDescription_5178Parser();
-		case LoopDescription5EditPart.VISUAL_ID:
-			return getLoopDescription_5177Parser();
+			return getLoopDescription_5297Parser();
 		case OpenDescription4EditPart.VISUAL_ID:
-			return getOpenDescription_5172Parser();
+			return getOpenDescription_5298Parser();
 		case FetchDescription4EditPart.VISUAL_ID:
-			return getFetchDescription_5173Parser();
+			return getFetchDescription_5299Parser();
 		case CloseDescription4EditPart.VISUAL_ID:
-			return getCloseDescription_5174Parser();
+			return getCloseDescription_5300Parser();
 		case CallProcedureDescription4EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5175Parser();
+			return getCallProcedureDescription_5301Parser();
 		case CallFunctionDescription4EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5176Parser();
+			return getCallFunctionDescription_5302Parser();
+		case CaseDescription5EditPart.VISUAL_ID:
+			return getCaseDescription_5305Parser();
+		case InsertDescription5EditPart.VISUAL_ID:
+			return getInsertDescription_5306Parser();
+		case UpdateDescription5EditPart.VISUAL_ID:
+			return getUpdateDescription_5307Parser();
+		case DeleteDescription5EditPart.VISUAL_ID:
+			return getDeleteDescription_5308Parser();
+		case SelectDescription5EditPart.VISUAL_ID:
+			return getSelectDescription_5309Parser();
+		case WhileDescription5EditPart.VISUAL_ID:
+			return getWhileDescription_5310Parser();
+		case ForDescription5EditPart.VISUAL_ID:
+			return getForDescription_5311Parser();
+		case LoopDescription5EditPart.VISUAL_ID:
+			return getLoopDescription_5312Parser();
 		case OpenDescription5EditPart.VISUAL_ID:
-			return getOpenDescription_5179Parser();
+			return getOpenDescription_5313Parser();
 		case FetchDescription5EditPart.VISUAL_ID:
-			return getFetchDescription_5180Parser();
+			return getFetchDescription_5314Parser();
 		case CloseDescription5EditPart.VISUAL_ID:
-			return getCloseDescription_5181Parser();
+			return getCloseDescription_5315Parser();
 		case CallProcedureDescription5EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5182Parser();
+			return getCallProcedureDescription_5316Parser();
 		case CallFunctionDescription5EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5183Parser();
+			return getCallFunctionDescription_5317Parser();
+		case CaseDescription6EditPart.VISUAL_ID:
+			return getCaseDescription_5328Parser();
+		case InsertDescription6EditPart.VISUAL_ID:
+			return getInsertDescription_5329Parser();
+		case UpdateDescription6EditPart.VISUAL_ID:
+			return getUpdateDescription_5330Parser();
+		case DeleteDescription6EditPart.VISUAL_ID:
+			return getDeleteDescription_5331Parser();
+		case SelectDescription6EditPart.VISUAL_ID:
+			return getSelectDescription_5332Parser();
+		case WhileDescription6EditPart.VISUAL_ID:
+			return getWhileDescription_5333Parser();
 		case ForDescription6EditPart.VISUAL_ID:
-			return getForDescription_5206Parser();
+			return getForDescription_5334Parser();
 		case LoopDescription6EditPart.VISUAL_ID:
-			return getLoopDescription_5207Parser();
+			return getLoopDescription_5335Parser();
 		case OpenDescription6EditPart.VISUAL_ID:
-			return getOpenDescription_5208Parser();
+			return getOpenDescription_5336Parser();
 		case FetchDescription6EditPart.VISUAL_ID:
-			return getFetchDescription_5209Parser();
+			return getFetchDescription_5337Parser();
 		case CloseDescription6EditPart.VISUAL_ID:
-			return getCloseDescription_5210Parser();
+			return getCloseDescription_5338Parser();
 		case CallProcedureDescription6EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5211Parser();
+			return getCallProcedureDescription_5339Parser();
 		case CallFunctionDescription6EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5212Parser();
-		case CaseDescription7EditPart.VISUAL_ID:
-			return getCaseDescription_5143Parser();
-		case InsertDescription7EditPart.VISUAL_ID:
-			return getInsertDescription_5144Parser();
-		case UpdateDescription7EditPart.VISUAL_ID:
-			return getUpdateDescription_5145Parser();
-		case DeleteDescription7EditPart.VISUAL_ID:
-			return getDeleteDescription_5146Parser();
-		case SelectDescription7EditPart.VISUAL_ID:
-			return getSelectDescription_5147Parser();
-		case WhileDescription7EditPart.VISUAL_ID:
-			return getWhileDescription_5148Parser();
-		case ForDescription7EditPart.VISUAL_ID:
-			return getForDescription_5149Parser();
-		case LoopDescription7EditPart.VISUAL_ID:
-			return getLoopDescription_5150Parser();
-		case OpenDescription7EditPart.VISUAL_ID:
-			return getOpenDescription_5151Parser();
-		case FetchDescription7EditPart.VISUAL_ID:
-			return getFetchDescription_5152Parser();
-		case CloseDescription7EditPart.VISUAL_ID:
-			return getCloseDescription_5153Parser();
-		case CallProcedureDescription7EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5154Parser();
-		case CallFunctionDescription7EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5155Parser();
-		case CaseDescription8EditPart.VISUAL_ID:
-			return getCaseDescription_5066Parser();
-		case InsertDescription8EditPart.VISUAL_ID:
-			return getInsertDescription_5067Parser();
-		case UpdateDescription8EditPart.VISUAL_ID:
-			return getUpdateDescription_5068Parser();
-		case DeleteDescription8EditPart.VISUAL_ID:
-			return getDeleteDescription_5069Parser();
-		case SelectDescription8EditPart.VISUAL_ID:
-			return getSelectDescription_5070Parser();
-		case WhileDescription8EditPart.VISUAL_ID:
-			return getWhileDescription_5071Parser();
-		case ForDescription8EditPart.VISUAL_ID:
-			return getForDescription_5072Parser();
-		case LoopDescription8EditPart.VISUAL_ID:
-			return getLoopDescription_5073Parser();
-		case OpenDescription8EditPart.VISUAL_ID:
-			return getOpenDescription_5074Parser();
-		case FetchDescription8EditPart.VISUAL_ID:
-			return getFetchDescription_5075Parser();
-		case CloseDescription8EditPart.VISUAL_ID:
-			return getCloseDescription_5076Parser();
-		case CallProcedureDescription8EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5077Parser();
-		case CallFunctionDescription8EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5078Parser();
+			return getCallFunctionDescription_5340Parser();
+		case DataTypeNameEditPart.VISUAL_ID:
+			return getDataTypeName_5341Parser();
+		case CollectionsNameEditPart.VISUAL_ID:
+			return getCollectionsName_5342Parser();
+		case RecordsNameEditPart.VISUAL_ID:
+			return getRecordsName_5343Parser();
+		case CursorNameEditPart.VISUAL_ID:
+			return getCursorName_5344Parser();
+		case DataTypeName2EditPart.VISUAL_ID:
+			return getDataTypeName_5345Parser();
+		case CollectionsName2EditPart.VISUAL_ID:
+			return getCollectionsName_5346Parser();
+		case RecordsName2EditPart.VISUAL_ID:
+			return getRecordsName_5347Parser();
+		case CursorName2EditPart.VISUAL_ID:
+			return getCursorName_5348Parser();
 		case DataTypeName3EditPart.VISUAL_ID:
-			return getDataTypeName_5079Parser();
-		case CollectionsName3EditPart.VISUAL_ID:
-			return getCollectionsName_5080Parser();
-		case RecordsName3EditPart.VISUAL_ID:
-			return getRecordsName_5081Parser();
-		case CursorName3EditPart.VISUAL_ID:
-			return getCursorName_5082Parser();
-		case DataTypeName4EditPart.VISUAL_ID:
-			return getDataTypeName_5023Parser();
-		case CollectionsName4EditPart.VISUAL_ID:
-			return getCollectionsName_5024Parser();
-		case RecordsName4EditPart.VISUAL_ID:
-			return getRecordsName_5025Parser();
-		case CursorName4EditPart.VISUAL_ID:
-			return getCursorName_5026Parser();
-		case DataTypeName5EditPart.VISUAL_ID:
 			return getDataTypeName_5027Parser();
-		case CollectionsName5EditPart.VISUAL_ID:
+		case CollectionsName3EditPart.VISUAL_ID:
 			return getCollectionsName_5028Parser();
-		case RecordsName5EditPart.VISUAL_ID:
+		case RecordsName3EditPart.VISUAL_ID:
 			return getRecordsName_5029Parser();
-		case CursorName5EditPart.VISUAL_ID:
+		case CursorName3EditPart.VISUAL_ID:
 			return getCursorName_5030Parser();
-		case ExpressionDescription9EditPart.VISUAL_ID:
-			return getExpressionDescription_5226Parser();
-		case ExceptionDescription9EditPart.VISUAL_ID:
-			return getExceptionDescription_5083Parser();
-		case IfDescription9EditPart.VISUAL_ID:
-			return getIfDescription_5084Parser();
-		case CaseDescription9EditPart.VISUAL_ID:
-			return getCaseDescription_5085Parser();
-		case InsertDescription9EditPart.VISUAL_ID:
-			return getInsertDescription_5086Parser();
-		case UpdateDescription9EditPart.VISUAL_ID:
-			return getUpdateDescription_5087Parser();
-		case DeleteDescription9EditPart.VISUAL_ID:
-			return getDeleteDescription_5088Parser();
-		case SelectDescription9EditPart.VISUAL_ID:
-			return getSelectDescription_5089Parser();
-		case WhileDescription9EditPart.VISUAL_ID:
-			return getWhileDescription_5090Parser();
-		case ForDescription9EditPart.VISUAL_ID:
-			return getForDescription_5091Parser();
-		case LoopDescription9EditPart.VISUAL_ID:
-			return getLoopDescription_5092Parser();
-		case OpenDescription9EditPart.VISUAL_ID:
-			return getOpenDescription_5093Parser();
-		case FetchDescription9EditPart.VISUAL_ID:
-			return getFetchDescription_5094Parser();
-		case CloseDescription9EditPart.VISUAL_ID:
-			return getCloseDescription_5095Parser();
-		case CallProcedureDescription9EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5096Parser();
-		case CallFunctionDescription9EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5097Parser();
-		case DataTypeName6EditPart.VISUAL_ID:
-			return getDataTypeName_5037Parser();
-		case CollectionsName6EditPart.VISUAL_ID:
-			return getCollectionsName_5038Parser();
-		case RecordsName6EditPart.VISUAL_ID:
-			return getRecordsName_5039Parser();
-		case CursorName6EditPart.VISUAL_ID:
-			return getCursorName_5040Parser();
-		case ExpressionDescription10EditPart.VISUAL_ID:
-			return getExpressionDescription_5227Parser();
-		case ExceptionDescription10EditPart.VISUAL_ID:
-			return getExceptionDescription_5041Parser();
-		case IfDescription10EditPart.VISUAL_ID:
-			return getIfDescription_5042Parser();
-		case CaseDescription10EditPart.VISUAL_ID:
-			return getCaseDescription_5043Parser();
-		case InsertDescription10EditPart.VISUAL_ID:
-			return getInsertDescription_5044Parser();
-		case UpdateDescription10EditPart.VISUAL_ID:
-			return getUpdateDescription_5045Parser();
-		case DeleteDescription10EditPart.VISUAL_ID:
-			return getDeleteDescription_5046Parser();
-		case SelectDescription10EditPart.VISUAL_ID:
-			return getSelectDescription_5047Parser();
-		case WhileDescription10EditPart.VISUAL_ID:
-			return getWhileDescription_5048Parser();
-		case ForDescription10EditPart.VISUAL_ID:
-			return getForDescription_5049Parser();
-		case LoopDescription10EditPart.VISUAL_ID:
-			return getLoopDescription_5050Parser();
-		case OpenDescription10EditPart.VISUAL_ID:
-			return getOpenDescription_5051Parser();
-		case FetchDescription10EditPart.VISUAL_ID:
-			return getFetchDescription_5052Parser();
-		case CloseDescription10EditPart.VISUAL_ID:
-			return getCloseDescription_5053Parser();
-		case CallProcedureDescription10EditPart.VISUAL_ID:
-			return getCallProcedureDescription_5054Parser();
-		case CallFunctionDescription10EditPart.VISUAL_ID:
-			return getCallFunctionDescription_5055Parser();
 		case TransitionNameEditPart.VISUAL_ID:
 			return getTransitionName_6001Parser();
-		case SelectorTransitionNameEditPart.VISUAL_ID:
-			return getSelectorTransitionName_6002Parser();
+		case OptionsTransitionNameEditPart.VISUAL_ID:
+			return getOptionsTransitionName_6003Parser();
 		}
 		return null;
 	}
 
 	/**
-	 * Utility method that consults ParserService
-	 * @generated
-	 */
+	* Utility method that consults ParserService
+	* @generated
+	*/
 	public static IParser getParser(IElementType type, EObject object, String parserHint) {
 		return ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public IParser getParser(IAdaptable hint) {
 		String vid = (String) hint.getAdapter(String.class);
 		if (vid != null) {
@@ -3753,8 +2225,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean provides(IOperation operation) {
 		if (operation instanceof GetParserOperation) {
 			IAdaptable hint = ((GetParserOperation) operation).getHint();
@@ -3767,18 +2239,18 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static class HintAdapter extends ParserHintAdapter {
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		private final IElementType elementType;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public HintAdapter(IElementType type, EObject object, String parserHint) {
 			super(object, parserHint);
 			assert type != null;
@@ -3786,8 +2258,8 @@ public class CrystalParserProvider extends AbstractProvider implements IParserPr
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public Object getAdapter(Class adapter) {
 			if (IElementType.class.equals(adapter)) {
 				return elementType;

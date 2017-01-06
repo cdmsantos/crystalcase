@@ -17,10 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.Case;
 import crystal.CrystalFactory;
-import crystal.Function;
-import crystal.If;
 import crystal.Insert;
-import crystal.While;
 
 /**
  * @generated
@@ -61,7 +58,7 @@ public class Insert2CreateCommand extends EditElementCommand {
 		Insert newElement = CrystalFactory.eINSTANCE.createInsert();
 
 		Case owner = (Case) getElementToEdit();
-		owner.getElseStatements().add(newElement);
+		owner.getDefault_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

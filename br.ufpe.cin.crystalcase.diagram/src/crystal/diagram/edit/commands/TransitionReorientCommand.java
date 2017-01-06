@@ -12,7 +12,6 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
 import crystal.Crystal;
-import crystal.CrystalCase;
 import crystal.Statements;
 import crystal.Transition;
 import crystal.diagram.edit.policies.CrystalBaseItemSemanticEditPolicy;
@@ -23,23 +22,23 @@ import crystal.diagram.edit.policies.CrystalBaseItemSemanticEditPolicy;
 public class TransitionReorientCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final int reorientDirection;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject oldEnd;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject newEnd;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public TransitionReorientCommand(ReorientRelationshipRequest request) {
 		super(request.getLabel(), request.getRelationship(), request);
 		reorientDirection = request.getDirection();
@@ -48,8 +47,8 @@ public class TransitionReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
 		if (false == getElementToEdit() instanceof Transition) {
 			return false;
@@ -64,8 +63,8 @@ public class TransitionReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean canReorientSource() {
 		if (!(oldEnd instanceof Statements && newEnd instanceof Statements)) {
 			return false;
@@ -80,8 +79,8 @@ public class TransitionReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean canReorientTarget() {
 		if (!(oldEnd instanceof Statements && newEnd instanceof Statements)) {
 			return false;
@@ -96,8 +95,8 @@ public class TransitionReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		if (!canExecute()) {
 			throw new ExecutionException("Invalid arguments in reorient link command"); //$NON-NLS-1$
@@ -112,52 +111,52 @@ public class TransitionReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult reorientSource() throws ExecutionException {
 		getLink().setSource(getNewSource());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
 		getLink().setTarget(getNewTarget());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Transition getLink() {
 		return (Transition) getElementToEdit();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Statements getOldSource() {
 		return (Statements) oldEnd;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Statements getNewSource() {
 		return (Statements) newEnd;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Statements getOldTarget() {
 		return (Statements) oldEnd;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Statements getNewTarget() {
 		return (Statements) newEnd;
 	}

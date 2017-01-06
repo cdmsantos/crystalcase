@@ -60,7 +60,7 @@ public class OpenDescription5EditPart extends CompartmentEditPart implements ITe
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5179;
+	public static final int VISUAL_ID = 5313;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class OpenDescription5EditPart extends CompartmentEditPart implements ITe
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Open_3176, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Open_3315, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.OpenDescription5EditPart.VISUAL_ID));
 		}
 		return parser;

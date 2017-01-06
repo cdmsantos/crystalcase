@@ -295,9 +295,7 @@ public class AnonymousBlockNameEditPart extends CompartmentEditPart implements I
 	 */
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.AnonymousBlock_2009, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.AnonymousBlockNameEditPart.VISUAL_ID));
-		}
+					}
 		return parser;
 	}
 

@@ -34,7 +34,7 @@ public class ProcedureProcedureParametersCompartmentEditPart extends ShapeCompar
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7020;
+	public static final int VISUAL_ID = 7109;
 
 	/**
 	 * @generated
@@ -94,16 +94,16 @@ public class ProcedureProcedureParametersCompartmentEditPart extends ShapeCompar
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
-			if (type == CrystalElementTypes.DataType_3018) {
+			if (type == CrystalElementTypes.DataType_3337) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Collections_3019) {
+			if (type == CrystalElementTypes.Collections_3338) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Records_3020) {
+			if (type == CrystalElementTypes.Records_3339) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Cursor_3021) {
+			if (type == CrystalElementTypes.Cursor_3340) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

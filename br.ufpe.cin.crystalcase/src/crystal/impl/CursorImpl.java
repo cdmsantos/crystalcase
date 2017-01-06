@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class CursorImpl extends ParametersImpl implements Cursor {
+public class CursorImpl extends DataAbstractionsImpl implements Cursor {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "Cursor";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -54,7 +54,7 @@ public class CursorImpl extends ParametersImpl implements Cursor {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CURSOR_QUERY_EDEFAULT = "selectStatement";
+	protected static final String CURSOR_QUERY_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCursorQuery() <em>Cursor Query</em>}' attribute.

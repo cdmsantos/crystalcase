@@ -19,17 +19,15 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link crystal.For#getTypeCounter <em>Type Counter</em>}</li>
  *   <li>{@link crystal.For#getLowestNumber <em>Lowest Number</em>}</li>
  *   <li>{@link crystal.For#getHighestNumber <em>Highest Number</em>}</li>
- *   <li>{@link crystal.For#getForStatements <em>For Statements</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getFor()
  * @model annotation="gmf.node figure='rectangle'"
  * @generated
  */
-public interface For extends Statements {
+public interface For extends IterationStructures {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
-	 * The default value is <code>"For"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -39,7 +37,7 @@ public interface For extends Statements {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getFor_ClassName()
-	 * @model default="For"
+	 * @model
 	 * @generated
 	 */
 	String getClassName();
@@ -56,7 +54,6 @@ public interface For extends Statements {
 
 	/**
 	 * Returns the value of the '<em><b>Counter</b></em>' attribute.
-	 * The default value is <code>"Type the name of the FOR counter"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Counter</em>' attribute isn't clear,
@@ -66,7 +63,7 @@ public interface For extends Statements {
 	 * @return the value of the '<em>Counter</em>' attribute.
 	 * @see #setCounter(String)
 	 * @see crystal.CrystalPackage#getFor_Counter()
-	 * @model default="Type the name of the FOR counter"
+	 * @model
 	 * @generated
 	 */
 	String getCounter();
@@ -112,7 +109,6 @@ public interface For extends Statements {
 
 	/**
 	 * Returns the value of the '<em><b>Lowest Number</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Lowest Number</em>' attribute isn't clear,
@@ -122,7 +118,7 @@ public interface For extends Statements {
 	 * @return the value of the '<em>Lowest Number</em>' attribute.
 	 * @see #setLowestNumber(int)
 	 * @see crystal.CrystalPackage#getFor_LowestNumber()
-	 * @model default="0"
+	 * @model
 	 * @generated
 	 */
 	int getLowestNumber();
@@ -139,7 +135,6 @@ public interface For extends Statements {
 
 	/**
 	 * Returns the value of the '<em><b>Highest Number</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Highest Number</em>' attribute isn't clear,
@@ -149,7 +144,7 @@ public interface For extends Statements {
 	 * @return the value of the '<em>Highest Number</em>' attribute.
 	 * @see #setHighestNumber(int)
 	 * @see crystal.CrystalPackage#getFor_HighestNumber()
-	 * @model default="0"
+	 * @model
 	 * @generated
 	 */
 	int getHighestNumber();
@@ -163,21 +158,5 @@ public interface For extends Statements {
 	 * @generated
 	 */
 	void setHighestNumber(int value);
-
-	/**
-	 * Returns the value of the '<em><b>For Statements</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.Statements}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>For Statements</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>For Statements</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getFor_ForStatements()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Statements> getForStatements();
 
 } // For

@@ -295,8 +295,6 @@ public class RecordsNameName3EditPart extends CompartmentEditPart implements ITe
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Records_3024, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.RecordsNameName3EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

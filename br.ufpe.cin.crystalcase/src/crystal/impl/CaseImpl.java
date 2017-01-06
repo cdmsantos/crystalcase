@@ -5,6 +5,7 @@ package crystal.impl;
 import crystal.Case;
 import crystal.CrystalPackage;
 
+import crystal.Options;
 import crystal.Selector;
 import crystal.Statements;
 import java.util.Collection;
@@ -28,13 +29,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link crystal.impl.CaseImpl#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.impl.CaseImpl#getCases <em>Cases</em>}</li>
- *   <li>{@link crystal.impl.CaseImpl#getElseStatements <em>Else Statements</em>}</li>
+ *   <li>{@link crystal.impl.CaseImpl#getOptions <em>Options</em>}</li>
+ *   <li>{@link crystal.impl.CaseImpl#getDefault_statements <em>Default statements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CaseImpl extends StatementsImpl implements Case {
+public class CaseImpl extends ConditionalStructuresImpl implements Case {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,7 @@ public class CaseImpl extends StatementsImpl implements Case {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "Case";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -56,24 +57,24 @@ public class CaseImpl extends StatementsImpl implements Case {
 	protected String className = CLASS_NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCases() <em>Cases</em>}' containment reference list.
+	 * The cached value of the '{@link #getOptions() <em>Options</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCases()
+	 * @see #getOptions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Selector> cases;
+	protected EList<Options> options;
 
 	/**
-	 * The cached value of the '{@link #getElseStatements() <em>Else Statements</em>}' containment reference list.
+	 * The cached value of the '{@link #getDefault_statements() <em>Default statements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getElseStatements()
+	 * @see #getDefault_statements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Statements> elseStatements;
+	protected EList<Statements> default_statements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,11 +121,11 @@ public class CaseImpl extends StatementsImpl implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Selector> getCases() {
-		if (cases == null) {
-			cases = new EObjectContainmentEList<Selector>(Selector.class, this, CrystalPackage.CASE__CASES);
+	public EList<Options> getOptions() {
+		if (options == null) {
+			options = new EObjectContainmentEList<Options>(Options.class, this, CrystalPackage.CASE__OPTIONS);
 		}
-		return cases;
+		return options;
 	}
 
 	/**
@@ -132,11 +133,11 @@ public class CaseImpl extends StatementsImpl implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Statements> getElseStatements() {
-		if (elseStatements == null) {
-			elseStatements = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.CASE__ELSE_STATEMENTS);
+	public EList<Statements> getDefault_statements() {
+		if (default_statements == null) {
+			default_statements = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.CASE__DEFAULT_STATEMENTS);
 		}
-		return elseStatements;
+		return default_statements;
 	}
 
 	/**
@@ -147,10 +148,10 @@ public class CaseImpl extends StatementsImpl implements Case {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CrystalPackage.CASE__CASES:
-				return ((InternalEList<?>)getCases()).basicRemove(otherEnd, msgs);
-			case CrystalPackage.CASE__ELSE_STATEMENTS:
-				return ((InternalEList<?>)getElseStatements()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CASE__OPTIONS:
+				return ((InternalEList<?>)getOptions()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CASE__DEFAULT_STATEMENTS:
+				return ((InternalEList<?>)getDefault_statements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -165,10 +166,10 @@ public class CaseImpl extends StatementsImpl implements Case {
 		switch (featureID) {
 			case CrystalPackage.CASE__CLASS_NAME:
 				return getClassName();
-			case CrystalPackage.CASE__CASES:
-				return getCases();
-			case CrystalPackage.CASE__ELSE_STATEMENTS:
-				return getElseStatements();
+			case CrystalPackage.CASE__OPTIONS:
+				return getOptions();
+			case CrystalPackage.CASE__DEFAULT_STATEMENTS:
+				return getDefault_statements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -185,13 +186,13 @@ public class CaseImpl extends StatementsImpl implements Case {
 			case CrystalPackage.CASE__CLASS_NAME:
 				setClassName((String)newValue);
 				return;
-			case CrystalPackage.CASE__CASES:
-				getCases().clear();
-				getCases().addAll((Collection<? extends Selector>)newValue);
+			case CrystalPackage.CASE__OPTIONS:
+				getOptions().clear();
+				getOptions().addAll((Collection<? extends Options>)newValue);
 				return;
-			case CrystalPackage.CASE__ELSE_STATEMENTS:
-				getElseStatements().clear();
-				getElseStatements().addAll((Collection<? extends Statements>)newValue);
+			case CrystalPackage.CASE__DEFAULT_STATEMENTS:
+				getDefault_statements().clear();
+				getDefault_statements().addAll((Collection<? extends Statements>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -208,11 +209,11 @@ public class CaseImpl extends StatementsImpl implements Case {
 			case CrystalPackage.CASE__CLASS_NAME:
 				setClassName(CLASS_NAME_EDEFAULT);
 				return;
-			case CrystalPackage.CASE__CASES:
-				getCases().clear();
+			case CrystalPackage.CASE__OPTIONS:
+				getOptions().clear();
 				return;
-			case CrystalPackage.CASE__ELSE_STATEMENTS:
-				getElseStatements().clear();
+			case CrystalPackage.CASE__DEFAULT_STATEMENTS:
+				getDefault_statements().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -228,10 +229,10 @@ public class CaseImpl extends StatementsImpl implements Case {
 		switch (featureID) {
 			case CrystalPackage.CASE__CLASS_NAME:
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
-			case CrystalPackage.CASE__CASES:
-				return cases != null && !cases.isEmpty();
-			case CrystalPackage.CASE__ELSE_STATEMENTS:
-				return elseStatements != null && !elseStatements.isEmpty();
+			case CrystalPackage.CASE__OPTIONS:
+				return options != null && !options.isEmpty();
+			case CrystalPackage.CASE__DEFAULT_STATEMENTS:
+				return default_statements != null && !default_statements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

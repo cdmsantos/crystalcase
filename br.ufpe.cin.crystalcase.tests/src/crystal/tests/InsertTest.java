@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InsertTest extends StatementsTest {
+public class InsertTest extends SQLOperationsTest {
 
 	/**
 	 * <!-- begin-user-doc -->

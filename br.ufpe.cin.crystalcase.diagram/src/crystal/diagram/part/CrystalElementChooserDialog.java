@@ -17,84 +17,88 @@ import org.eclipse.ui.model.BaseWorkbenchContentProvider;
 public class CrystalElementChooserDialog extends DefaultElementChooserDialog {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalElementChooserDialog(Shell parentShell, View view) {
 		this(parentShell, view, false);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalElementChooserDialog(Shell parentShell, View view, boolean allowMultiSelection) {
 		super(parentShell, view, new CrystalElementChooserDialogContextImpl(allowMultiSelection));
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static class CrystalElementChooserDialogContextImpl implements DefaultElementChooserDialog.Context {
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		private static final String[] FILE_EXTENSIONS = new String[] { "crystal" };
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		private final boolean myAllowMultiSelection;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		private CrystalElementChooserDialogContextImpl(boolean allowMultiSelection) {
 			myAllowMultiSelection = allowMultiSelection;
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		@Override
+
 		public AdapterFactory getAdapterFactory() {
 			return CrystalDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory();
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		@Override
+
 		public PreferencesHint getPreferenceHint() {
 			return CrystalDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		@Override
+
 		public String[] getFileExtesions() {
 			return FILE_EXTENSIONS.clone();
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		@Override
+
 		public String getDialogTitle() {
 			return Messages.CrystalElementChooserDialog_SelectModelElementTitle;
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		@Override
 		public ITreeContentProvider getTreeContentProvider() {
 			return new BaseWorkbenchContentProvider();
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public boolean allowMultiSelection() {
 			return myAllowMultiSelection;
 		}

@@ -38,7 +38,7 @@ public class Loop3EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3099;
+	public static final int VISUAL_ID = 3285;
 
 	/**
 	* @generated
@@ -115,10 +115,10 @@ public class Loop3EditPart extends ShapeNodeEditPart {
 			((LoopDescription3EditPart) childEditPart).setLabel(getPrimaryShape().getFigureLoopLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof LoopLoopLoopStatementsCompartment3EditPart) {
-			IFigure pane = getPrimaryShape().getLoopLoopStatementsCompartmentFigure();
+		if (childEditPart instanceof LoopLoopInterations_statementsCompartment3EditPart) {
+			IFigure pane = getPrimaryShape().getLoopInterations_statementsCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((LoopLoopLoopStatementsCompartment3EditPart) childEditPart).getFigure());
+			pane.add(((LoopLoopInterations_statementsCompartment3EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -131,9 +131,9 @@ public class Loop3EditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof LoopDescription3EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof LoopLoopLoopStatementsCompartment3EditPart) {
-			IFigure pane = getPrimaryShape().getLoopLoopStatementsCompartmentFigure();
-			pane.remove(((LoopLoopLoopStatementsCompartment3EditPart) childEditPart).getFigure());
+		if (childEditPart instanceof LoopLoopInterations_statementsCompartment3EditPart) {
+			IFigure pane = getPrimaryShape().getLoopInterations_statementsCompartmentFigure();
+			pane.remove(((LoopLoopInterations_statementsCompartment3EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -163,8 +163,8 @@ public class Loop3EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof LoopLoopLoopStatementsCompartment3EditPart) {
-			return getPrimaryShape().getLoopLoopStatementsCompartmentFigure();
+		if (editPart instanceof LoopLoopInterations_statementsCompartment3EditPart) {
+			return getPrimaryShape().getLoopInterations_statementsCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -275,11 +275,11 @@ public class Loop3EditPart extends ShapeNodeEditPart {
 		/**
 		* @generated
 		*/
-		private RectangleFigure fLoopLoopStatementsCompartmentFigure;
+		private RectangleFigure fLoopInterations_statementsCompartmentFigure;
 
 		/**
-			 * @generated
-			 */
+				 * @generated
+				 */
 		public LoopFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -298,11 +298,11 @@ public class Loop3EditPart extends ShapeNodeEditPart {
 
 			this.add(fFigureLoopLabelFigure);
 
-			fLoopLoopStatementsCompartmentFigure = new RectangleFigure();
+			fLoopInterations_statementsCompartmentFigure = new RectangleFigure();
 
-			fLoopLoopStatementsCompartmentFigure.setOutline(false);
+			fLoopInterations_statementsCompartmentFigure.setOutline(false);
 
-			this.add(fLoopLoopStatementsCompartmentFigure);
+			this.add(fLoopInterations_statementsCompartmentFigure);
 
 		}
 
@@ -316,8 +316,8 @@ public class Loop3EditPart extends ShapeNodeEditPart {
 		/**
 		* @generated
 		*/
-		public RectangleFigure getLoopLoopStatementsCompartmentFigure() {
-			return fLoopLoopStatementsCompartmentFigure;
+		public RectangleFigure getLoopInterations_statementsCompartmentFigure() {
+			return fLoopInterations_statementsCompartmentFigure;
 		}
 
 	}

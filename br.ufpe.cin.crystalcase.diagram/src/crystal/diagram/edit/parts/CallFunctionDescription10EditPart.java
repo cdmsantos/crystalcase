@@ -295,10 +295,7 @@ public class CallFunctionDescription10EditPart extends CompartmentEditPart imple
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.CallFunction_3051, getParserElement(),
-					CrystalVisualIDRegistry
-							.getType(crystal.diagram.edit.parts.CallFunctionDescription10EditPart.VISUAL_ID));
-		}
+					}
 		return parser;
 	}
 

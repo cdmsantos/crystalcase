@@ -295,8 +295,6 @@ public class IfDescription7EditPart extends CompartmentEditPart implements IText
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.If_3197, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.IfDescription7EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

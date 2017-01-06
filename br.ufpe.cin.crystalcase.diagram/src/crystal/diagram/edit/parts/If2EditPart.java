@@ -38,7 +38,7 @@ public class If2EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3182;
+	public static final int VISUAL_ID = 3241;
 
 	/**
 	* @generated
@@ -115,16 +115,16 @@ public class If2EditPart extends ShapeNodeEditPart {
 			((IfDescription2EditPart) childEditPart).setLabel(getPrimaryShape().getFigureIfLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof IfIfIfsCompartment2EditPart) {
-			IFigure pane = getPrimaryShape().getIfIfsCompartmentFigure();
+		if (childEditPart instanceof IfIfTrue_statementsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getIfTrue_statementsCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((IfIfIfsCompartment2EditPart) childEditPart).getFigure());
+			pane.add(((IfIfTrue_statementsCompartment2EditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof IfIfElsesCompartment2EditPart) {
-			IFigure pane = getPrimaryShape().getIfElsesCompartmentFigure();
+		if (childEditPart instanceof IfIfFalse_statementsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getIfFalse_statementsCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((IfIfElsesCompartment2EditPart) childEditPart).getFigure());
+			pane.add(((IfIfFalse_statementsCompartment2EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -137,14 +137,14 @@ public class If2EditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof IfDescription2EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof IfIfIfsCompartment2EditPart) {
-			IFigure pane = getPrimaryShape().getIfIfsCompartmentFigure();
-			pane.remove(((IfIfIfsCompartment2EditPart) childEditPart).getFigure());
+		if (childEditPart instanceof IfIfTrue_statementsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getIfTrue_statementsCompartmentFigure();
+			pane.remove(((IfIfTrue_statementsCompartment2EditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof IfIfElsesCompartment2EditPart) {
-			IFigure pane = getPrimaryShape().getIfElsesCompartmentFigure();
-			pane.remove(((IfIfElsesCompartment2EditPart) childEditPart).getFigure());
+		if (childEditPart instanceof IfIfFalse_statementsCompartment2EditPart) {
+			IFigure pane = getPrimaryShape().getIfFalse_statementsCompartmentFigure();
+			pane.remove(((IfIfFalse_statementsCompartment2EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -174,11 +174,11 @@ public class If2EditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof IfIfIfsCompartment2EditPart) {
-			return getPrimaryShape().getIfIfsCompartmentFigure();
+		if (editPart instanceof IfIfTrue_statementsCompartment2EditPart) {
+			return getPrimaryShape().getIfTrue_statementsCompartmentFigure();
 		}
-		if (editPart instanceof IfIfElsesCompartment2EditPart) {
-			return getPrimaryShape().getIfElsesCompartmentFigure();
+		if (editPart instanceof IfIfFalse_statementsCompartment2EditPart) {
+			return getPrimaryShape().getIfFalse_statementsCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -286,17 +286,17 @@ public class If2EditPart extends ShapeNodeEditPart {
 		 */
 		private WrappingLabel fFigureIfLabelFigure;
 		/**
-		 * @generated
-		 */
-		private RectangleFigure fIfIfsCompartmentFigure;
+		* @generated
+		*/
+		private RectangleFigure fIfTrue_statementsCompartmentFigure;
 		/**
-		 * @generated
-		 */
-		private RectangleFigure fIfElsesCompartmentFigure;
+		* @generated
+		*/
+		private RectangleFigure fIfFalse_statementsCompartmentFigure;
 
 		/**
-		 * @generated
-		 */
+			 * @generated
+			 */
 		public IfFigure() {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -315,17 +315,17 @@ public class If2EditPart extends ShapeNodeEditPart {
 
 			this.add(fFigureIfLabelFigure);
 
-			fIfIfsCompartmentFigure = new RectangleFigure();
+			fIfTrue_statementsCompartmentFigure = new RectangleFigure();
 
-			fIfIfsCompartmentFigure.setOutline(false);
+			fIfTrue_statementsCompartmentFigure.setOutline(false);
 
-			this.add(fIfIfsCompartmentFigure);
+			this.add(fIfTrue_statementsCompartmentFigure);
 
-			fIfElsesCompartmentFigure = new RectangleFigure();
+			fIfFalse_statementsCompartmentFigure = new RectangleFigure();
 
-			fIfElsesCompartmentFigure.setOutline(false);
+			fIfFalse_statementsCompartmentFigure.setOutline(false);
 
-			this.add(fIfElsesCompartmentFigure);
+			this.add(fIfFalse_statementsCompartmentFigure);
 
 		}
 
@@ -337,17 +337,17 @@ public class If2EditPart extends ShapeNodeEditPart {
 		}
 
 		/**
-		 * @generated
-		 */
-		public RectangleFigure getIfIfsCompartmentFigure() {
-			return fIfIfsCompartmentFigure;
+		* @generated
+		*/
+		public RectangleFigure getIfTrue_statementsCompartmentFigure() {
+			return fIfTrue_statementsCompartmentFigure;
 		}
 
 		/**
-		 * @generated
-		 */
-		public RectangleFigure getIfElsesCompartmentFigure() {
-			return fIfElsesCompartmentFigure;
+		* @generated
+		*/
+		public RectangleFigure getIfFalse_statementsCompartmentFigure() {
+			return fIfFalse_statementsCompartmentFigure;
 		}
 
 	}

@@ -17,8 +17,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.Case;
 import crystal.CrystalFactory;
-import crystal.Function;
-import crystal.If;
 import crystal.While;
 
 /**
@@ -60,7 +58,7 @@ public class While2CreateCommand extends EditElementCommand {
 		While newElement = CrystalFactory.eINSTANCE.createWhile();
 
 		Case owner = (Case) getElementToEdit();
-		owner.getElseStatements().add(newElement);
+		owner.getDefault_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

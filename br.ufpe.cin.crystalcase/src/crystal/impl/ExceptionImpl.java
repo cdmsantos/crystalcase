@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
+public class ExceptionImpl extends AdditionalOperationsImpl implements crystal.Exception {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "Exception";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -53,7 +53,7 @@ public class ExceptionImpl extends StatementsImpl implements crystal.Exception {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "EXCEPTION WHEN no_data_found THEN DBMS_OUTPUT.PUT_LINE(\'There isnt data registered\')";
+	protected static final String CODE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.

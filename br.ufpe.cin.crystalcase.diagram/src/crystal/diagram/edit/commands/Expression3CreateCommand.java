@@ -18,8 +18,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.Case;
 import crystal.CrystalFactory;
 import crystal.Expression;
-import crystal.Loop;
-import crystal.Selector;
 
 /**
  * @generated
@@ -60,7 +58,7 @@ public class Expression3CreateCommand extends EditElementCommand {
 		Expression newElement = CrystalFactory.eINSTANCE.createExpression();
 
 		Case owner = (Case) getElementToEdit();
-		owner.getElseStatements().add(newElement);
+		owner.getDefault_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -2,16 +2,21 @@
  */
 package crystal.util;
 
+import crystal.AdditionalOperations;
 import crystal.AnonymousBlock;
+import crystal.CallBlocks;
 import crystal.CallFunction;
 import crystal.CallProcedure;
 import crystal.Case;
 import crystal.Close;
 import crystal.Collections;
+import crystal.ConditionalStructures;
 import crystal.Crystal;
 import crystal.CrystalCase;
 import crystal.CrystalPackage;
 import crystal.Cursor;
+import crystal.CursorOperations;
+import crystal.DataAbstractions;
 import crystal.DataType;
 import crystal.Delete;
 import crystal.Expression;
@@ -20,11 +25,17 @@ import crystal.For;
 import crystal.Function;
 import crystal.If;
 import crystal.Insert;
+import crystal.IterationStructures;
+import crystal.Links;
 import crystal.Loop;
+import crystal.NamedBlocks;
 import crystal.Open;
+import crystal.Options;
+import crystal.OptionsTransition;
 import crystal.Parameters;
 import crystal.Procedure;
 import crystal.Records;
+import crystal.SQLOperations;
 import crystal.Select;
 import crystal.Selector;
 import crystal.SelectorTransition;
@@ -106,6 +117,10 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 				return createSubprogramsAdapter();
 			}
 			@Override
+			public Adapter caseNamedBlocks(NamedBlocks object) {
+				return createNamedBlocksAdapter();
+			}
+			@Override
 			public Adapter caseProcedure(Procedure object) {
 				return createProcedureAdapter();
 			}
@@ -118,8 +133,8 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 				return createAnonymousBlockAdapter();
 			}
 			@Override
-			public Adapter caseParameters(Parameters object) {
-				return createParametersAdapter();
+			public Adapter caseDataAbstractions(DataAbstractions object) {
+				return createDataAbstractionsAdapter();
 			}
 			@Override
 			public Adapter caseDataType(DataType object) {
@@ -142,6 +157,30 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 				return createStatementsAdapter();
 			}
 			@Override
+			public Adapter caseCallBlocks(CallBlocks object) {
+				return createCallBlocksAdapter();
+			}
+			@Override
+			public Adapter caseCursorOperations(CursorOperations object) {
+				return createCursorOperationsAdapter();
+			}
+			@Override
+			public Adapter caseSQLOperations(SQLOperations object) {
+				return createSQLOperationsAdapter();
+			}
+			@Override
+			public Adapter caseIterationStructures(IterationStructures object) {
+				return createIterationStructuresAdapter();
+			}
+			@Override
+			public Adapter caseConditionalStructures(ConditionalStructures object) {
+				return createConditionalStructuresAdapter();
+			}
+			@Override
+			public Adapter caseAdditionalOperations(AdditionalOperations object) {
+				return createAdditionalOperationsAdapter();
+			}
+			@Override
 			public Adapter caseExpression(Expression object) {
 				return createExpressionAdapter();
 			}
@@ -158,8 +197,8 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 				return createCaseAdapter();
 			}
 			@Override
-			public Adapter caseSelector(Selector object) {
-				return createSelectorAdapter();
+			public Adapter caseOptions(Options object) {
+				return createOptionsAdapter();
 			}
 			@Override
 			public Adapter caseInsert(Insert object) {
@@ -210,12 +249,16 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 				return createCallFunctionAdapter();
 			}
 			@Override
+			public Adapter caseLinks(Links object) {
+				return createLinksAdapter();
+			}
+			@Override
 			public Adapter caseTransition(Transition object) {
 				return createTransitionAdapter();
 			}
 			@Override
-			public Adapter caseSelectorTransition(SelectorTransition object) {
-				return createSelectorTransitionAdapter();
+			public Adapter caseOptionsTransition(OptionsTransition object) {
+				return createOptionsTransitionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -266,6 +309,20 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link crystal.NamedBlocks <em>Named Blocks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.NamedBlocks
+	 * @generated
+	 */
+	public Adapter createNamedBlocksAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link crystal.Procedure <em>Procedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -308,16 +365,16 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link crystal.Parameters <em>Parameters</em>}'.
+	 * Creates a new adapter for an object of class '{@link crystal.DataAbstractions <em>Data Abstractions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see crystal.Parameters
+	 * @see crystal.DataAbstractions
 	 * @generated
 	 */
-	public Adapter createParametersAdapter() {
+	public Adapter createDataAbstractionsAdapter() {
 		return null;
 	}
 
@@ -392,6 +449,90 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link crystal.CallBlocks <em>Call Blocks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.CallBlocks
+	 * @generated
+	 */
+	public Adapter createCallBlocksAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link crystal.CursorOperations <em>Cursor Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.CursorOperations
+	 * @generated
+	 */
+	public Adapter createCursorOperationsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link crystal.SQLOperations <em>SQL Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.SQLOperations
+	 * @generated
+	 */
+	public Adapter createSQLOperationsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link crystal.IterationStructures <em>Iteration Structures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.IterationStructures
+	 * @generated
+	 */
+	public Adapter createIterationStructuresAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link crystal.ConditionalStructures <em>Conditional Structures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.ConditionalStructures
+	 * @generated
+	 */
+	public Adapter createConditionalStructuresAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link crystal.AdditionalOperations <em>Additional Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.AdditionalOperations
+	 * @generated
+	 */
+	public Adapter createAdditionalOperationsAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link crystal.Exception <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -430,6 +571,20 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCaseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link crystal.Options <em>Options</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.Options
+	 * @generated
+	 */
+	public Adapter createOptionsAdapter() {
 		return null;
 	}
 
@@ -486,20 +641,6 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSelectAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link crystal.Selector <em>Selector</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see crystal.Selector
-	 * @generated
-	 */
-	public Adapter createSelectorAdapter() {
 		return null;
 	}
 
@@ -616,6 +757,20 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link crystal.Links <em>Links</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crystal.Links
+	 * @generated
+	 */
+	public Adapter createLinksAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link crystal.Transition <em>Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -630,16 +785,16 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link crystal.SelectorTransition <em>Selector Transition</em>}'.
+	 * Creates a new adapter for an object of class '{@link crystal.OptionsTransition <em>Options Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see crystal.SelectorTransition
+	 * @see crystal.OptionsTransition
 	 * @generated
 	 */
-	public Adapter createSelectorTransitionAdapter() {
+	public Adapter createOptionsTransitionAdapter() {
 		return null;
 	}
 

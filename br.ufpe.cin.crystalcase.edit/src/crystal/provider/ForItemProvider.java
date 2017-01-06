@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ForItemProvider extends StatementsItemProvider {
+public class ForItemProvider extends IterationStructuresItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -167,36 +167,6 @@ public class ForItemProvider extends StatementsItemProvider {
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(CrystalPackage.Literals.FOR__FOR_STATEMENTS);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
 	 * This returns For.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -241,9 +211,6 @@ public class ForItemProvider extends StatementsItemProvider {
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CrystalPackage.FOR__FOR_STATEMENTS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -258,86 +225,6 @@ public class ForItemProvider extends StatementsItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createExpression()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createException()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createIf()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createCase()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createInsert()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createUpdate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createDelete()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createSelect()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createWhile()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createFor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createLoop()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createOpen()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createFetch()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createClose()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createCallProcedure()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CrystalPackage.Literals.FOR__FOR_STATEMENTS,
-				 CrystalFactory.eINSTANCE.createCallFunction()));
 	}
 
 }

@@ -20,10 +20,9 @@ package crystal;
  * @model annotation="gmf.node label.text='Cursor'"
  * @generated
  */
-public interface Cursor extends Parameters {
+public interface Cursor extends DataAbstractions {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
-	 * The default value is <code>"Cursor"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -33,7 +32,7 @@ public interface Cursor extends Parameters {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCursor_ClassName()
-	 * @model default="Cursor"
+	 * @model
 	 * @generated
 	 */
 	String getClassName();
@@ -50,7 +49,6 @@ public interface Cursor extends Parameters {
 
 	/**
 	 * Returns the value of the '<em><b>Cursor Query</b></em>' attribute.
-	 * The default value is <code>"selectStatement"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cursor Query</em>' attribute isn't clear,
@@ -60,7 +58,7 @@ public interface Cursor extends Parameters {
 	 * @return the value of the '<em>Cursor Query</em>' attribute.
 	 * @see #setCursorQuery(String)
 	 * @see crystal.CrystalPackage#getCursor_CursorQuery()
-	 * @model default="selectStatement"
+	 * @model
 	 * @generated
 	 */
 	String getCursorQuery();

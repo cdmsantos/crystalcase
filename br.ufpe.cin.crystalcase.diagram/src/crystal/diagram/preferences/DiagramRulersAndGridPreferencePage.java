@@ -13,8 +13,8 @@ import crystal.diagram.part.CrystalDiagramEditorPlugin;
 public class DiagramRulersAndGridPreferencePage extends RulerGridPreferencePage {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public DiagramRulersAndGridPreferencePage() {
 		setPreferenceStore(CrystalDiagramEditorPlugin.getInstance().getPreferenceStore());
 	}

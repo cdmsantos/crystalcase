@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CallProcedureTest extends StatementsTest {
+public class CallProcedureTest extends CallBlocksTest {
 
 	/**
 	 * <!-- begin-user-doc -->

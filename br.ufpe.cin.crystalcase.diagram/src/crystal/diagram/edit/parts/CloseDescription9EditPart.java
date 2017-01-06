@@ -295,8 +295,6 @@ public class CloseDescription9EditPart extends CompartmentEditPart implements IT
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Close_3087, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CloseDescription9EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

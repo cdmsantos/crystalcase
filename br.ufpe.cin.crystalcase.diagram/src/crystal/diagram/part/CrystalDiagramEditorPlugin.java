@@ -32,54 +32,54 @@ import crystal.provider.CrystalItemProviderAdapterFactory;
 public class CrystalDiagramEditorPlugin extends AbstractUIPlugin {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final String ID = "br.ufpe.cin.crystalcase.diagram"; //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private LogHelper myLogHelper;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final PreferencesHint DIAGRAM_PREFERENCES_HINT = new PreferencesHint(ID);
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static CrystalDiagramEditorPlugin instance;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private ComposedAdapterFactory adapterFactory;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private CrystalDocumentProvider documentProvider;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private CrystalBaseItemSemanticEditPolicy.LinkConstraints linkConstraints;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private ElementInitializers initializers;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalDiagramEditorPlugin() {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		instance = this;
@@ -89,8 +89,8 @@ public class CrystalDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void stop(BundleContext context) throws Exception {
 		adapterFactory.dispose();
 		adapterFactory = null;
@@ -101,15 +101,15 @@ public class CrystalDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static CrystalDiagramEditorPlugin getInstance() {
 		return instance;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected ComposedAdapterFactory createAdapterFactory() {
 		ArrayList<AdapterFactory> factories = new ArrayList<AdapterFactory>();
 		fillItemProviderFactories(factories);
@@ -117,8 +117,8 @@ public class CrystalDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void fillItemProviderFactories(List<AdapterFactory> factories) {
 		factories.add(new CrystalItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
@@ -126,15 +126,15 @@ public class CrystalDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public AdapterFactory getItemProvidersAdapterFactory() {
 		return adapterFactory;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ImageDescriptor getItemImageDescriptor(Object item) {
 		IItemLabelProvider labelProvider = (IItemLabelProvider) adapterFactory.adapt(item, IItemLabelProvider.class);
 		if (labelProvider != null) {
@@ -201,8 +201,8 @@ public class CrystalDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalDocumentProvider getDocumentProvider() {
 		if (documentProvider == null) {
 			documentProvider = new CrystalDocumentProvider();
@@ -211,64 +211,64 @@ public class CrystalDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalBaseItemSemanticEditPolicy.LinkConstraints getLinkConstraints() {
 		return linkConstraints;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void setLinkConstraints(CrystalBaseItemSemanticEditPolicy.LinkConstraints lc) {
 		this.linkConstraints = lc;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ElementInitializers getElementInitializers() {
 		return initializers;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void setElementInitializers(ElementInitializers i) {
 		this.initializers = i;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void logError(String error) {
 		getLogHelper().logError(error, null);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void logError(String error, Throwable throwable) {
 		getLogHelper().logError(error, throwable);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void logInfo(String message) {
 		getLogHelper().logInfo(message, null);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void logInfo(String message, Throwable throwable) {
 		getLogHelper().logInfo(message, throwable);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public LogHelper getLogHelper() {
 		return myLogHelper;
 	}

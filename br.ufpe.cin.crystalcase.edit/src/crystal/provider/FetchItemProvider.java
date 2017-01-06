@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FetchItemProvider extends StatementsItemProvider {
+public class FetchItemProvider extends CursorOperationsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,7 +46,6 @@ public class FetchItemProvider extends StatementsItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassNamePropertyDescriptor(object);
-			addCursorNamePropertyDescriptor(object);
 			addVariableNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -66,28 +65,6 @@ public class FetchItemProvider extends StatementsItemProvider {
 				 getString("_UI_Fetch_className_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Fetch_className_feature", "_UI_Fetch_type"),
 				 CrystalPackage.Literals.FETCH__CLASS_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Cursor Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCursorNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Fetch_cursorName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Fetch_cursorName_feature", "_UI_Fetch_type"),
-				 CrystalPackage.Literals.FETCH__CURSOR_NAME,
 				 true,
 				 false,
 				 false,
@@ -137,7 +114,7 @@ public class FetchItemProvider extends StatementsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Fetch)object).getClassName();
+		String label = ((Fetch)object).getCursorName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Fetch_type") :
 			getString("_UI_Fetch_type") + " " + label;
@@ -157,7 +134,6 @@ public class FetchItemProvider extends StatementsItemProvider {
 
 		switch (notification.getFeatureID(Fetch.class)) {
 			case CrystalPackage.FETCH__CLASS_NAME:
-			case CrystalPackage.FETCH__CURSOR_NAME:
 			case CrystalPackage.FETCH__VARIABLE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

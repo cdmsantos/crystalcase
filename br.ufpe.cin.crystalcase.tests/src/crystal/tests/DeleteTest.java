@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DeleteTest extends StatementsTest {
+public class DeleteTest extends SQLOperationsTest {
 
 	/**
 	 * <!-- begin-user-doc -->

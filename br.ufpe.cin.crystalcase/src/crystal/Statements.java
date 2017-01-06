@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.EObject;
 public interface Statements extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * The default value is <code>"Description"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
@@ -35,7 +34,7 @@ public interface Statements extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see crystal.CrystalPackage#getStatements_Description()
-	 * @model default="Description"
+	 * @model
 	 * @generated
 	 */
 	String getDescription();

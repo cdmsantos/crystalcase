@@ -18,9 +18,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.Case;
 import crystal.CrystalFactory;
 import crystal.Delete;
-import crystal.Function;
-import crystal.If;
-import crystal.While;
 
 /**
  * @generated
@@ -61,7 +58,7 @@ public class Delete2CreateCommand extends EditElementCommand {
 		Delete newElement = CrystalFactory.eINSTANCE.createDelete();
 
 		Case owner = (Case) getElementToEdit();
-		owner.getElseStatements().add(newElement);
+		owner.getDefault_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

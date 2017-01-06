@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.part;
 
 import java.util.ArrayList;
@@ -70,37 +70,37 @@ import crystal.diagram.navigator.CrystalNavigatorItem;
 public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGotoMarker {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final String ID = "crystal.diagram.part.CrystalDiagramEditorID"; //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final String CONTEXT_ID = "crystal.diagram.ui.diagramContext"; //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private LastClickPositionProvider myLastClickPositionProvider;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalDiagramEditor() {
 		super(true);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected String getContextID() {
 		return CONTEXT_ID;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected PaletteRoot createPaletteRoot(PaletteRoot existingPaletteRoot) {
 		PaletteRoot root = super.createPaletteRoot(existingPaletteRoot);
 		new CrystalPaletteFactory().fillPalette(root);
@@ -108,15 +108,15 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected PreferencesHint getPreferencesHint() {
 		return CrystalDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public String getContributorId() {
 		return CrystalDiagramEditorPlugin.ID;
 	}
@@ -137,8 +137,8 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected IDocumentProvider getDocumentProvider(IEditorInput input) {
 		if (input instanceof IFileEditorInput || input instanceof URIEditorInput) {
 			return CrystalDiagramEditorPlugin.getInstance().getDocumentProvider();
@@ -147,8 +147,8 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public TransactionalEditingDomain getEditingDomain() {
 		IDocument document = getEditorInput() != null ? getDocumentProvider().getDocument(getEditorInput()) : null;
 		if (document instanceof IDiagramDocument) {
@@ -158,8 +158,8 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void setDocumentProvider(IEditorInput input) {
 		if (input instanceof IFileEditorInput || input instanceof URIEditorInput) {
 			setDocumentProvider(CrystalDiagramEditorPlugin.getInstance().getDocumentProvider());
@@ -169,29 +169,29 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void gotoMarker(IMarker marker) {
 		MarkerNavigationService.getInstance().gotoMarker(this, marker);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean isSaveAsAllowed() {
 		return true;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void doSaveAs() {
 		performSaveAs(new NullProgressMonitor());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void performSaveAs(IProgressMonitor progressMonitor) {
 		Shell shell = getSite().getShell();
 		IEditorInput input = getEditorInput();
@@ -262,15 +262,15 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ShowInContext getShowInContext() {
 		return new ShowInContext(getEditorInput(), getNavigatorSelection());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private ISelection getNavigatorSelection() {
 		IDiagramDocument document = getDiagramDocument();
 		if (document == null) {
@@ -289,8 +289,8 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void configureGraphicalViewer() {
 		super.configureGraphicalViewer();
 		DiagramEditorContextMenuProvider provider = new DiagramEditorContextMenuProvider(this,
@@ -300,8 +300,8 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void initializeGraphicalViewer() {
 		super.initializeGraphicalViewer();
 		getDiagramGraphicalViewer().addDropTargetListener(
@@ -324,8 +324,8 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void startupLastClickPositionProvider() {
 		if (myLastClickPositionProvider == null) {
 			myLastClickPositionProvider = new LastClickPositionProvider(this);
@@ -334,8 +334,8 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void shutDownLastClickPositionProvider() {
 		if (myLastClickPositionProvider != null) {
 			myLastClickPositionProvider.detachFromService();
@@ -345,8 +345,8 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	@Override
 	public void dispose() {
 		shutDownLastClickPositionProvider();
@@ -354,20 +354,20 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private abstract class DropTargetListener extends DiagramDropTargetListener {
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public DropTargetListener(EditPartViewer viewer, Transfer xfer) {
 			super(viewer, xfer);
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		protected List getObjectsBeingDropped() {
 			TransferData data = getCurrentEvent().currentDataType;
 			HashSet<URI> uris = new HashSet<URI>();
@@ -401,8 +401,8 @@ public class CrystalDiagramEditor extends DiagramDocumentEditor implements IGoto
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		protected abstract Object getJavaObject(TransferData data);
 
 	}

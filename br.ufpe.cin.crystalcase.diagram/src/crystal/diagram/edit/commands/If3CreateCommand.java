@@ -15,12 +15,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import crystal.AnonymousBlock;
 import crystal.Case;
 import crystal.CrystalFactory;
-import crystal.Function;
 import crystal.If;
-import crystal.Selector;
 
 /**
  * @generated
@@ -61,7 +58,7 @@ public class If3CreateCommand extends EditElementCommand {
 		If newElement = CrystalFactory.eINSTANCE.createIf();
 
 		Case owner = (Case) getElementToEdit();
-		owner.getElseStatements().add(newElement);
+		owner.getDefault_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

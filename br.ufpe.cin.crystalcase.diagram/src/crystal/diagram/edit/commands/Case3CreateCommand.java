@@ -15,11 +15,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import crystal.AnonymousBlock;
 import crystal.Case;
 import crystal.CrystalFactory;
-import crystal.Function;
-import crystal.While;
 
 /**
  * @generated
@@ -60,7 +57,7 @@ public class Case3CreateCommand extends EditElementCommand {
 		Case newElement = CrystalFactory.eINSTANCE.createCase();
 
 		Case owner = (Case) getElementToEdit();
-		owner.getElseStatements().add(newElement);
+		owner.getDefault_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

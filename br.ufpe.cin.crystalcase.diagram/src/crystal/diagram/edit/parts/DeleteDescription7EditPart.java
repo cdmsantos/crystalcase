@@ -295,8 +295,6 @@ public class DeleteDescription7EditPart extends CompartmentEditPart implements I
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Delete_3141, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.DeleteDescription7EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

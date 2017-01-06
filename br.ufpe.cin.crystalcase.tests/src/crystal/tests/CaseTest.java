@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CaseTest extends StatementsTest {
+public class CaseTest extends ConditionalStructuresTest {
 
 	/**
 	 * <!-- begin-user-doc -->

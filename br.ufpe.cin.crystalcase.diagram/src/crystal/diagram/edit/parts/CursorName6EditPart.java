@@ -295,8 +295,6 @@ public class CursorName6EditPart extends CompartmentEditPart implements ITextAwa
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Cursor_3036, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CursorName6EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

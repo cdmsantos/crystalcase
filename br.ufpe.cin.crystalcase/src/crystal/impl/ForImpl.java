@@ -32,12 +32,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link crystal.impl.ForImpl#getTypeCounter <em>Type Counter</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getLowestNumber <em>Lowest Number</em>}</li>
  *   <li>{@link crystal.impl.ForImpl#getHighestNumber <em>Highest Number</em>}</li>
- *   <li>{@link crystal.impl.ForImpl#getForStatements <em>For Statements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ForImpl extends StatementsImpl implements For {
+public class ForImpl extends IterationStructuresImpl implements For {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,7 +45,7 @@ public class ForImpl extends StatementsImpl implements For {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "For";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -66,7 +65,7 @@ public class ForImpl extends StatementsImpl implements For {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COUNTER_EDEFAULT = "Type the name of the FOR counter";
+	protected static final String COUNTER_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCounter() <em>Counter</em>}' attribute.
@@ -137,16 +136,6 @@ public class ForImpl extends StatementsImpl implements For {
 	 * @ordered
 	 */
 	protected int highestNumber = HIGHEST_NUMBER_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getForStatements() <em>For Statements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getForStatements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Statements> forStatements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -277,32 +266,6 @@ public class ForImpl extends StatementsImpl implements For {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Statements> getForStatements() {
-		if (forStatements == null) {
-			forStatements = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.FOR__FOR_STATEMENTS);
-		}
-		return forStatements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CrystalPackage.FOR__FOR_STATEMENTS:
-				return ((InternalEList<?>)getForStatements()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -316,8 +279,6 @@ public class ForImpl extends StatementsImpl implements For {
 				return getLowestNumber();
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				return getHighestNumber();
-			case CrystalPackage.FOR__FOR_STATEMENTS:
-				return getForStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -346,10 +307,6 @@ public class ForImpl extends StatementsImpl implements For {
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				setHighestNumber((Integer)newValue);
 				return;
-			case CrystalPackage.FOR__FOR_STATEMENTS:
-				getForStatements().clear();
-				getForStatements().addAll((Collection<? extends Statements>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -377,9 +334,6 @@ public class ForImpl extends StatementsImpl implements For {
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				setHighestNumber(HIGHEST_NUMBER_EDEFAULT);
 				return;
-			case CrystalPackage.FOR__FOR_STATEMENTS:
-				getForStatements().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -402,8 +356,6 @@ public class ForImpl extends StatementsImpl implements For {
 				return lowestNumber != LOWEST_NUMBER_EDEFAULT;
 			case CrystalPackage.FOR__HIGHEST_NUMBER:
 				return highestNumber != HIGHEST_NUMBER_EDEFAULT;
-			case CrystalPackage.FOR__FOR_STATEMENTS:
-				return forStatements != null && !forStatements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

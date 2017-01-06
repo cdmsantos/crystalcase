@@ -12,8 +12,8 @@ import org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider;
 public class CrystalIconProvider extends DefaultElementTypeIconProvider implements IIconProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalIconProvider() {
 		super(CrystalElementTypes.TYPED_INSTANCE);
 	}

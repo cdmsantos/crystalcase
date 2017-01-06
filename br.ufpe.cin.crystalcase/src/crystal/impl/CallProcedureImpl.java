@@ -18,12 +18,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link crystal.impl.CallProcedureImpl#getClassName <em>Class Name</em>}</li>
- *   <li>{@link crystal.impl.CallProcedureImpl#getNameSubroutine <em>Name Subroutine</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
+public class CallProcedureImpl extends CallBlocksImpl implements CallProcedure {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -32,7 +31,7 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "CallProcedure";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -43,24 +42,6 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 	 */
 	protected String className = CLASS_NAME_EDEFAULT;
 
-	/**
-	 * The default value of the '{@link #getNameSubroutine() <em>Name Subroutine</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNameSubroutine()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_SUBROUTINE_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getNameSubroutine() <em>Name Subroutine</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNameSubroutine()
-	 * @generated
-	 * @ordered
-	 */
-	protected String nameSubroutine = NAME_SUBROUTINE_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,34 +87,11 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNameSubroutine() {
-		return nameSubroutine;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNameSubroutine(String newNameSubroutine) {
-		String oldNameSubroutine = nameSubroutine;
-		nameSubroutine = newNameSubroutine;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.CALL_PROCEDURE__NAME_SUBROUTINE, oldNameSubroutine, nameSubroutine));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CrystalPackage.CALL_PROCEDURE__CLASS_NAME:
 				return getClassName();
-			case CrystalPackage.CALL_PROCEDURE__NAME_SUBROUTINE:
-				return getNameSubroutine();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -148,9 +106,6 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 		switch (featureID) {
 			case CrystalPackage.CALL_PROCEDURE__CLASS_NAME:
 				setClassName((String)newValue);
-				return;
-			case CrystalPackage.CALL_PROCEDURE__NAME_SUBROUTINE:
-				setNameSubroutine((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -167,9 +122,6 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 			case CrystalPackage.CALL_PROCEDURE__CLASS_NAME:
 				setClassName(CLASS_NAME_EDEFAULT);
 				return;
-			case CrystalPackage.CALL_PROCEDURE__NAME_SUBROUTINE:
-				setNameSubroutine(NAME_SUBROUTINE_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -184,8 +136,6 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 		switch (featureID) {
 			case CrystalPackage.CALL_PROCEDURE__CLASS_NAME:
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
-			case CrystalPackage.CALL_PROCEDURE__NAME_SUBROUTINE:
-				return NAME_SUBROUTINE_EDEFAULT == null ? nameSubroutine != null : !NAME_SUBROUTINE_EDEFAULT.equals(nameSubroutine);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -202,8 +152,6 @@ public class CallProcedureImpl extends StatementsImpl implements CallProcedure {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (className: ");
 		result.append(className);
-		result.append(", nameSubroutine: ");
-		result.append(nameSubroutine);
 		result.append(')');
 		return result.toString();
 	}

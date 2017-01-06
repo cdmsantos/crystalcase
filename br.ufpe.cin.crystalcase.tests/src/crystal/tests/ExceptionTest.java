@@ -12,7 +12,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExceptionTest extends StatementsTest {
+public class ExceptionTest extends AdditionalOperationsTest {
 
 	/**
 	 * <!-- begin-user-doc -->

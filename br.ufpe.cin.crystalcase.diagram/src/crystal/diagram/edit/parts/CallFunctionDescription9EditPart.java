@@ -295,9 +295,6 @@ public class CallFunctionDescription9EditPart extends CompartmentEditPart implem
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.CallFunction_3089, getParserElement(),
-					CrystalVisualIDRegistry
-							.getType(crystal.diagram.edit.parts.CallFunctionDescription9EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

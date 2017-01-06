@@ -34,7 +34,7 @@ public class FunctionFunctionParametersCompartmentEditPart extends ShapeCompartm
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7017;
+	public static final int VISUAL_ID = 7155;
 
 	/**
 	 * @generated
@@ -94,16 +94,16 @@ public class FunctionFunctionParametersCompartmentEditPart extends ShapeCompartm
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
-			if (type == CrystalElementTypes.DataType_3022) {
+			if (type == CrystalElementTypes.DataType_3337) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Collections_3023) {
+			if (type == CrystalElementTypes.Collections_3338) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Records_3024) {
+			if (type == CrystalElementTypes.Records_3339) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Cursor_3025) {
+			if (type == CrystalElementTypes.Cursor_3340) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

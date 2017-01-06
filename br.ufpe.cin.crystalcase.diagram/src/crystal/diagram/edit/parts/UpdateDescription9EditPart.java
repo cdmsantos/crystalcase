@@ -295,8 +295,6 @@ public class UpdateDescription9EditPart extends CompartmentEditPart implements I
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Update_3079, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.UpdateDescription9EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

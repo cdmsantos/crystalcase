@@ -16,7 +16,6 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
 import crystal.Crystal;
-import crystal.CrystalCase;
 import crystal.CrystalFactory;
 import crystal.Statements;
 import crystal.Transition;
@@ -28,23 +27,23 @@ import crystal.diagram.edit.policies.CrystalBaseItemSemanticEditPolicy;
 public class TransitionCreateCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject source;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject target;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final Crystal container;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public TransitionCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
@@ -53,8 +52,8 @@ public class TransitionCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
 		if (source == null && target == null) {
 			return false;
@@ -77,15 +76,15 @@ public class TransitionCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		if (!canExecute()) {
 			throw new ExecutionException("Invalid arguments in create link command"); //$NON-NLS-1$
 		}
 
 		Transition newElement = CrystalFactory.eINSTANCE.createTransition();
-		getContainer().getTransitions().add(newElement);
+		getContainer().getLinks().add(newElement);
 		newElement.setSource(getSource());
 		newElement.setTarget(getTarget());
 		doConfigure(newElement, monitor, info);
@@ -95,8 +94,8 @@ public class TransitionCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void doConfigure(Transition newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();
@@ -112,38 +111,38 @@ public class TransitionCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void setElementToEdit(EObject element) {
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Statements getSource() {
 		return (Statements) source;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Statements getTarget() {
 		return (Statements) target;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Crystal getContainer() {
 		return container;
 	}
 
 	/**
-	 * Default approach is to traverse ancestors of the source to find instance of container.
-	 * Modify with appropriate logic.
-	 * @generated
-	 */
+	* Default approach is to traverse ancestors of the source to find instance of container.
+	* Modify with appropriate logic.
+	* @generated
+	*/
 	private static Crystal deduceContainer(EObject source, EObject target) {
 		// Find container element for the new link.
 		// Climb up by containment hierarchy starting from the source

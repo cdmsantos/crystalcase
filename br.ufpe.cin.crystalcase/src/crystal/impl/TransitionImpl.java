@@ -22,34 +22,13 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link crystal.impl.TransitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link crystal.impl.TransitionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link crystal.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TransitionImpl extends EObjectImpl implements Transition {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = "Statement Connection";
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
+public class TransitionImpl extends LinksImpl implements Transition {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -87,27 +66,6 @@ public class TransitionImpl extends EObjectImpl implements Transition {
 	@Override
 	protected EClass eStaticClass() {
 		return CrystalPackage.Literals.TRANSITION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CrystalPackage.TRANSITION__NAME, oldName, name));
 	}
 
 	/**
@@ -194,8 +152,6 @@ public class TransitionImpl extends EObjectImpl implements Transition {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CrystalPackage.TRANSITION__NAME:
-				return getName();
 			case CrystalPackage.TRANSITION__SOURCE:
 				if (resolve) return getSource();
 				return basicGetSource();
@@ -214,9 +170,6 @@ public class TransitionImpl extends EObjectImpl implements Transition {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.TRANSITION__NAME:
-				setName((String)newValue);
-				return;
 			case CrystalPackage.TRANSITION__SOURCE:
 				setSource((Statements)newValue);
 				return;
@@ -235,9 +188,6 @@ public class TransitionImpl extends EObjectImpl implements Transition {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.TRANSITION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case CrystalPackage.TRANSITION__SOURCE:
 				setSource((Statements)null);
 				return;
@@ -256,30 +206,12 @@ public class TransitionImpl extends EObjectImpl implements Transition {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.TRANSITION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CrystalPackage.TRANSITION__SOURCE:
 				return source != null;
 			case CrystalPackage.TRANSITION__TARGET:
 				return target != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TransitionImpl

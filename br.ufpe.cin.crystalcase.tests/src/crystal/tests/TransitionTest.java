@@ -15,15 +15,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TransitionTest extends TestCase {
-
-	/**
-	 * The fixture for this Transition test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Transition fixture = null;
+public class TransitionTest extends LinksTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +37,14 @@ public class TransitionTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Transition test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Transition fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Transition test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Transition getFixture() {
-		return fixture;
+		return (Transition)fixture;
 	}
 
 	/**

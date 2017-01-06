@@ -60,7 +60,7 @@ public class LoopDescriptionEditPart extends CompartmentEditPart implements ITex
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5214;
+	public static final int VISUAL_ID = 5269;
 
 	/**
 	 * @generated
@@ -295,7 +295,7 @@ public class LoopDescriptionEditPart extends CompartmentEditPart implements ITex
 	 */
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Loop_3190, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Loop_3268, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.LoopDescriptionEditPart.VISUAL_ID));
 		}
 		return parser;

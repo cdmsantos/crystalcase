@@ -25,16 +25,16 @@ import crystal.Function;
 public class DataType3CreateCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public DataType3CreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
 	/**
-	 * FIXME: replace with setElementToEdit()
-	 * @generated
-	 */
+	* FIXME: replace with setElementToEdit()
+	* @generated
+	*/
 	protected EObject getElementToEdit() {
 		EObject container = ((CreateElementRequest) getRequest()).getContainer();
 		if (container instanceof View) {
@@ -44,21 +44,25 @@ public class DataType3CreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
+		Function container = (Function) getElementToEdit();
+		if (container.getReturnPart() != null) {
+			return false;
+		}
 		return true;
 
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		DataType newElement = CrystalFactory.eINSTANCE.createDataType();
 
 		Function owner = (Function) getElementToEdit();
-		owner.getDeclarativePart().add(newElement);
+		owner.setReturnPart(newElement);
 
 		doConfigure(newElement, monitor, info);
 
@@ -67,8 +71,8 @@ public class DataType3CreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void doConfigure(DataType newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();

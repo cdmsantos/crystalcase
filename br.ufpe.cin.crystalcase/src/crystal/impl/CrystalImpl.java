@@ -6,8 +6,10 @@ import crystal.AnonymousBlock;
 import crystal.Crystal;
 import crystal.CrystalPackage;
 import crystal.Function;
+import crystal.Links;
 import crystal.Procedure;
 import crystal.SelectorTransition;
+import crystal.Subprograms;
 import crystal.Transition;
 
 import java.util.Collection;
@@ -32,65 +34,32 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link crystal.impl.CrystalImpl#getTransitions <em>Transitions</em>}</li>
- *   <li>{@link crystal.impl.CrystalImpl#getSelectorTransitions <em>Selector Transitions</em>}</li>
- *   <li>{@link crystal.impl.CrystalImpl#getProcedures <em>Procedures</em>}</li>
- *   <li>{@link crystal.impl.CrystalImpl#getFunctions <em>Functions</em>}</li>
- *   <li>{@link crystal.impl.CrystalImpl#getBlocks <em>Blocks</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getLinks <em>Links</em>}</li>
+ *   <li>{@link crystal.impl.CrystalImpl#getSubprograms <em>Subprograms</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class CrystalImpl extends EObjectImpl implements Crystal {
 	/**
-	 * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
+	 * The cached value of the '{@link #getLinks() <em>Links</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTransitions()
+	 * @see #getLinks()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Transition> transitions;
+	protected EList<Links> links;
 
 	/**
-	 * The cached value of the '{@link #getSelectorTransitions() <em>Selector Transitions</em>}' containment reference list.
+	 * The cached value of the '{@link #getSubprograms() <em>Subprograms</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSelectorTransitions()
+	 * @see #getSubprograms()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SelectorTransition> selectorTransitions;
-
-	/**
-	 * The cached value of the '{@link #getProcedures() <em>Procedures</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProcedures()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Procedure> procedures;
-
-	/**
-	 * The cached value of the '{@link #getFunctions() <em>Functions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFunctions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Function> functions;
-
-	/**
-	 * The cached value of the '{@link #getBlocks() <em>Blocks</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBlocks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<AnonymousBlock> blocks;
+	protected EList<Subprograms> subprograms;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,11 +85,11 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Transition> getTransitions() {
-		if (transitions == null) {
-			transitions = new EObjectContainmentEList<Transition>(Transition.class, this, CrystalPackage.CRYSTAL__TRANSITIONS);
+	public EList<Links> getLinks() {
+		if (links == null) {
+			links = new EObjectContainmentEList<Links>(Links.class, this, CrystalPackage.CRYSTAL__LINKS);
 		}
-		return transitions;
+		return links;
 	}
 
 	/**
@@ -128,47 +97,11 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Procedure> getProcedures() {
-		if (procedures == null) {
-			procedures = new EObjectContainmentEList<Procedure>(Procedure.class, this, CrystalPackage.CRYSTAL__PROCEDURES);
+	public EList<Subprograms> getSubprograms() {
+		if (subprograms == null) {
+			subprograms = new EObjectContainmentEList<Subprograms>(Subprograms.class, this, CrystalPackage.CRYSTAL__SUBPROGRAMS);
 		}
-		return procedures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Function> getFunctions() {
-		if (functions == null) {
-			functions = new EObjectContainmentEList<Function>(Function.class, this, CrystalPackage.CRYSTAL__FUNCTIONS);
-		}
-		return functions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<AnonymousBlock> getBlocks() {
-		if (blocks == null) {
-			blocks = new EObjectContainmentEList<AnonymousBlock>(AnonymousBlock.class, this, CrystalPackage.CRYSTAL__BLOCKS);
-		}
-		return blocks;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SelectorTransition> getSelectorTransitions() {
-		if (selectorTransitions == null) {
-			selectorTransitions = new EObjectContainmentEList<SelectorTransition>(SelectorTransition.class, this, CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS);
-		}
-		return selectorTransitions;
+		return subprograms;
 	}
 
 	/**
@@ -179,16 +112,10 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CrystalPackage.CRYSTAL__TRANSITIONS:
-				return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
-			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
-				return ((InternalEList<?>)getSelectorTransitions()).basicRemove(otherEnd, msgs);
-			case CrystalPackage.CRYSTAL__PROCEDURES:
-				return ((InternalEList<?>)getProcedures()).basicRemove(otherEnd, msgs);
-			case CrystalPackage.CRYSTAL__FUNCTIONS:
-				return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
-			case CrystalPackage.CRYSTAL__BLOCKS:
-				return ((InternalEList<?>)getBlocks()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CRYSTAL__LINKS:
+				return ((InternalEList<?>)getLinks()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.CRYSTAL__SUBPROGRAMS:
+				return ((InternalEList<?>)getSubprograms()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -201,16 +128,10 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CrystalPackage.CRYSTAL__TRANSITIONS:
-				return getTransitions();
-			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
-				return getSelectorTransitions();
-			case CrystalPackage.CRYSTAL__PROCEDURES:
-				return getProcedures();
-			case CrystalPackage.CRYSTAL__FUNCTIONS:
-				return getFunctions();
-			case CrystalPackage.CRYSTAL__BLOCKS:
-				return getBlocks();
+			case CrystalPackage.CRYSTAL__LINKS:
+				return getLinks();
+			case CrystalPackage.CRYSTAL__SUBPROGRAMS:
+				return getSubprograms();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -224,25 +145,13 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.CRYSTAL__TRANSITIONS:
-				getTransitions().clear();
-				getTransitions().addAll((Collection<? extends Transition>)newValue);
+			case CrystalPackage.CRYSTAL__LINKS:
+				getLinks().clear();
+				getLinks().addAll((Collection<? extends Links>)newValue);
 				return;
-			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
-				getSelectorTransitions().clear();
-				getSelectorTransitions().addAll((Collection<? extends SelectorTransition>)newValue);
-				return;
-			case CrystalPackage.CRYSTAL__PROCEDURES:
-				getProcedures().clear();
-				getProcedures().addAll((Collection<? extends Procedure>)newValue);
-				return;
-			case CrystalPackage.CRYSTAL__FUNCTIONS:
-				getFunctions().clear();
-				getFunctions().addAll((Collection<? extends Function>)newValue);
-				return;
-			case CrystalPackage.CRYSTAL__BLOCKS:
-				getBlocks().clear();
-				getBlocks().addAll((Collection<? extends AnonymousBlock>)newValue);
+			case CrystalPackage.CRYSTAL__SUBPROGRAMS:
+				getSubprograms().clear();
+				getSubprograms().addAll((Collection<? extends Subprograms>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -256,20 +165,11 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.CRYSTAL__TRANSITIONS:
-				getTransitions().clear();
+			case CrystalPackage.CRYSTAL__LINKS:
+				getLinks().clear();
 				return;
-			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
-				getSelectorTransitions().clear();
-				return;
-			case CrystalPackage.CRYSTAL__PROCEDURES:
-				getProcedures().clear();
-				return;
-			case CrystalPackage.CRYSTAL__FUNCTIONS:
-				getFunctions().clear();
-				return;
-			case CrystalPackage.CRYSTAL__BLOCKS:
-				getBlocks().clear();
+			case CrystalPackage.CRYSTAL__SUBPROGRAMS:
+				getSubprograms().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -283,16 +183,10 @@ public class CrystalImpl extends EObjectImpl implements Crystal {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.CRYSTAL__TRANSITIONS:
-				return transitions != null && !transitions.isEmpty();
-			case CrystalPackage.CRYSTAL__SELECTOR_TRANSITIONS:
-				return selectorTransitions != null && !selectorTransitions.isEmpty();
-			case CrystalPackage.CRYSTAL__PROCEDURES:
-				return procedures != null && !procedures.isEmpty();
-			case CrystalPackage.CRYSTAL__FUNCTIONS:
-				return functions != null && !functions.isEmpty();
-			case CrystalPackage.CRYSTAL__BLOCKS:
-				return blocks != null && !blocks.isEmpty();
+			case CrystalPackage.CRYSTAL__LINKS:
+				return links != null && !links.isEmpty();
+			case CrystalPackage.CRYSTAL__SUBPROGRAMS:
+				return subprograms != null && !subprograms.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

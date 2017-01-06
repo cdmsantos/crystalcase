@@ -60,7 +60,7 @@ public class FunctionNameEditPart extends CompartmentEditPart implements ITextAw
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5058;
+	public static final int VISUAL_ID = 5350;
 
 	/**
 	 * @generated
@@ -295,7 +295,7 @@ public class FunctionNameEditPart extends CompartmentEditPart implements ITextAw
 	 */
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Function_2008, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Function_2011, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.FunctionNameEditPart.VISUAL_ID));
 		}
 		return parser;

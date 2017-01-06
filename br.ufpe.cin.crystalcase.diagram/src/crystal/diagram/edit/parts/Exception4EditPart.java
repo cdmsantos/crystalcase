@@ -36,7 +36,7 @@ public class Exception4EditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3090;
+	public static final int VISUAL_ID = 3252;
 
 	/**
 	* @generated

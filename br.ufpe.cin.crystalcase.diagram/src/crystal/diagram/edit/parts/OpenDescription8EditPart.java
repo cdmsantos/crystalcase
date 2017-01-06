@@ -295,8 +295,6 @@ public class OpenDescription8EditPart extends CompartmentEditPart implements ITe
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Open_3066, getParserElement(),
-					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.OpenDescription8EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

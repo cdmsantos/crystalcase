@@ -3,6 +3,7 @@
 package crystal.impl;
 
 import crystal.CrystalPackage;
+import crystal.DataAbstractions;
 import crystal.Function;
 import crystal.Parameters;
 
@@ -29,35 +30,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link crystal.impl.FunctionImpl#getDeclarativePart <em>Declarative Part</em>}</li>
- *   <li>{@link crystal.impl.FunctionImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link crystal.impl.FunctionImpl#getReturnPart <em>Return Part</em>}</li>
- *   <li>{@link crystal.impl.FunctionImpl#getExecutablePart <em>Executable Part</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FunctionImpl extends SubprogramsImpl implements Function {
-	/**
-	 * The cached value of the '{@link #getDeclarativePart() <em>Declarative Part</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDeclarativePart()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Parameters> declarativePart;
-
-	/**
-	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParameters()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Parameters> parameters;
-
+public class FunctionImpl extends NamedBlocksImpl implements Function {
 	/**
 	 * The cached value of the '{@link #getReturnPart() <em>Return Part</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -66,17 +44,7 @@ public class FunctionImpl extends SubprogramsImpl implements Function {
 	 * @generated
 	 * @ordered
 	 */
-	protected Parameters returnPart;
-
-	/**
-	 * The cached value of the '{@link #getExecutablePart() <em>Executable Part</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExecutablePart()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Statements> executablePart;
+	protected DataAbstractions returnPart;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,31 +70,7 @@ public class FunctionImpl extends SubprogramsImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parameters> getDeclarativePart() {
-		if (declarativePart == null) {
-			declarativePart = new EObjectContainmentEList<Parameters>(Parameters.class, this, CrystalPackage.FUNCTION__DECLARATIVE_PART);
-		}
-		return declarativePart;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Parameters> getParameters() {
-		if (parameters == null) {
-			parameters = new EObjectContainmentEList<Parameters>(Parameters.class, this, CrystalPackage.FUNCTION__PARAMETERS);
-		}
-		return parameters;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Parameters getReturnPart() {
+	public DataAbstractions getReturnPart() {
 		return returnPart;
 	}
 
@@ -135,8 +79,8 @@ public class FunctionImpl extends SubprogramsImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetReturnPart(Parameters newReturnPart, NotificationChain msgs) {
-		Parameters oldReturnPart = returnPart;
+	public NotificationChain basicSetReturnPart(DataAbstractions newReturnPart, NotificationChain msgs) {
+		DataAbstractions oldReturnPart = returnPart;
 		returnPart = newReturnPart;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CrystalPackage.FUNCTION__RETURN_PART, oldReturnPart, newReturnPart);
@@ -150,7 +94,7 @@ public class FunctionImpl extends SubprogramsImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReturnPart(Parameters newReturnPart) {
+	public void setReturnPart(DataAbstractions newReturnPart) {
 		if (newReturnPart != returnPart) {
 			NotificationChain msgs = null;
 			if (returnPart != null)
@@ -169,29 +113,11 @@ public class FunctionImpl extends SubprogramsImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Statements> getExecutablePart() {
-		if (executablePart == null) {
-			executablePart = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.FUNCTION__EXECUTABLE_PART);
-		}
-		return executablePart;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CrystalPackage.FUNCTION__DECLARATIVE_PART:
-				return ((InternalEList<?>)getDeclarativePart()).basicRemove(otherEnd, msgs);
-			case CrystalPackage.FUNCTION__PARAMETERS:
-				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 			case CrystalPackage.FUNCTION__RETURN_PART:
 				return basicSetReturnPart(null, msgs);
-			case CrystalPackage.FUNCTION__EXECUTABLE_PART:
-				return ((InternalEList<?>)getExecutablePart()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -204,14 +130,8 @@ public class FunctionImpl extends SubprogramsImpl implements Function {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CrystalPackage.FUNCTION__DECLARATIVE_PART:
-				return getDeclarativePart();
-			case CrystalPackage.FUNCTION__PARAMETERS:
-				return getParameters();
 			case CrystalPackage.FUNCTION__RETURN_PART:
 				return getReturnPart();
-			case CrystalPackage.FUNCTION__EXECUTABLE_PART:
-				return getExecutablePart();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -225,20 +145,8 @@ public class FunctionImpl extends SubprogramsImpl implements Function {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CrystalPackage.FUNCTION__DECLARATIVE_PART:
-				getDeclarativePart().clear();
-				getDeclarativePart().addAll((Collection<? extends Parameters>)newValue);
-				return;
-			case CrystalPackage.FUNCTION__PARAMETERS:
-				getParameters().clear();
-				getParameters().addAll((Collection<? extends Parameters>)newValue);
-				return;
 			case CrystalPackage.FUNCTION__RETURN_PART:
-				setReturnPart((Parameters)newValue);
-				return;
-			case CrystalPackage.FUNCTION__EXECUTABLE_PART:
-				getExecutablePart().clear();
-				getExecutablePart().addAll((Collection<? extends Statements>)newValue);
+				setReturnPart((DataAbstractions)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -252,17 +160,8 @@ public class FunctionImpl extends SubprogramsImpl implements Function {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.FUNCTION__DECLARATIVE_PART:
-				getDeclarativePart().clear();
-				return;
-			case CrystalPackage.FUNCTION__PARAMETERS:
-				getParameters().clear();
-				return;
 			case CrystalPackage.FUNCTION__RETURN_PART:
-				setReturnPart((Parameters)null);
-				return;
-			case CrystalPackage.FUNCTION__EXECUTABLE_PART:
-				getExecutablePart().clear();
+				setReturnPart((DataAbstractions)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -276,14 +175,8 @@ public class FunctionImpl extends SubprogramsImpl implements Function {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CrystalPackage.FUNCTION__DECLARATIVE_PART:
-				return declarativePart != null && !declarativePart.isEmpty();
-			case CrystalPackage.FUNCTION__PARAMETERS:
-				return parameters != null && !parameters.isEmpty();
 			case CrystalPackage.FUNCTION__RETURN_PART:
 				return returnPart != null;
-			case CrystalPackage.FUNCTION__EXECUTABLE_PART:
-				return executablePart != null && !executablePart.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

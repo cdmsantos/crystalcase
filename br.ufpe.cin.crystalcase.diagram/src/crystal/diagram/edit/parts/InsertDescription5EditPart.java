@@ -60,7 +60,7 @@ public class InsertDescription5EditPart extends CompartmentEditPart implements I
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5162;
+	public static final int VISUAL_ID = 5306;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class InsertDescription5EditPart extends CompartmentEditPart implements I
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Insert_3156, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Insert_3308, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.InsertDescription5EditPart.VISUAL_ID));
 		}
 		return parser;

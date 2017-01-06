@@ -28,13 +28,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link crystal.impl.IfImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link crystal.impl.IfImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link crystal.impl.IfImpl#getIfs <em>Ifs</em>}</li>
- *   <li>{@link crystal.impl.IfImpl#getElses <em>Elses</em>}</li>
+ *   <li>{@link crystal.impl.IfImpl#getTrue_statements <em>True statements</em>}</li>
+ *   <li>{@link crystal.impl.IfImpl#getFalse_statements <em>False statements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IfImpl extends StatementsImpl implements If {
+public class IfImpl extends ConditionalStructuresImpl implements If {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public class IfImpl extends StatementsImpl implements If {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "If";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -63,7 +63,7 @@ public class IfImpl extends StatementsImpl implements If {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONDITION_EDEFAULT = "Type the IF condition";
+	protected static final String CONDITION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.
@@ -76,24 +76,24 @@ public class IfImpl extends StatementsImpl implements If {
 	protected String condition = CONDITION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getIfs() <em>Ifs</em>}' containment reference list.
+	 * The cached value of the '{@link #getTrue_statements() <em>True statements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIfs()
+	 * @see #getTrue_statements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Statements> ifs;
+	protected EList<Statements> true_statements;
 
 	/**
-	 * The cached value of the '{@link #getElses() <em>Elses</em>}' containment reference list.
+	 * The cached value of the '{@link #getFalse_statements() <em>False statements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getElses()
+	 * @see #getFalse_statements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Statements> elses;
+	protected EList<Statements> false_statements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,11 +161,11 @@ public class IfImpl extends StatementsImpl implements If {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Statements> getIfs() {
-		if (ifs == null) {
-			ifs = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.IF__IFS);
+	public EList<Statements> getTrue_statements() {
+		if (true_statements == null) {
+			true_statements = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.IF__TRUE_STATEMENTS);
 		}
-		return ifs;
+		return true_statements;
 	}
 
 	/**
@@ -173,11 +173,11 @@ public class IfImpl extends StatementsImpl implements If {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Statements> getElses() {
-		if (elses == null) {
-			elses = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.IF__ELSES);
+	public EList<Statements> getFalse_statements() {
+		if (false_statements == null) {
+			false_statements = new EObjectContainmentEList<Statements>(Statements.class, this, CrystalPackage.IF__FALSE_STATEMENTS);
 		}
-		return elses;
+		return false_statements;
 	}
 
 	/**
@@ -188,10 +188,10 @@ public class IfImpl extends StatementsImpl implements If {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CrystalPackage.IF__IFS:
-				return ((InternalEList<?>)getIfs()).basicRemove(otherEnd, msgs);
-			case CrystalPackage.IF__ELSES:
-				return ((InternalEList<?>)getElses()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.IF__TRUE_STATEMENTS:
+				return ((InternalEList<?>)getTrue_statements()).basicRemove(otherEnd, msgs);
+			case CrystalPackage.IF__FALSE_STATEMENTS:
+				return ((InternalEList<?>)getFalse_statements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -208,10 +208,10 @@ public class IfImpl extends StatementsImpl implements If {
 				return getClassName();
 			case CrystalPackage.IF__CONDITION:
 				return getCondition();
-			case CrystalPackage.IF__IFS:
-				return getIfs();
-			case CrystalPackage.IF__ELSES:
-				return getElses();
+			case CrystalPackage.IF__TRUE_STATEMENTS:
+				return getTrue_statements();
+			case CrystalPackage.IF__FALSE_STATEMENTS:
+				return getFalse_statements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -231,13 +231,13 @@ public class IfImpl extends StatementsImpl implements If {
 			case CrystalPackage.IF__CONDITION:
 				setCondition((String)newValue);
 				return;
-			case CrystalPackage.IF__IFS:
-				getIfs().clear();
-				getIfs().addAll((Collection<? extends Statements>)newValue);
+			case CrystalPackage.IF__TRUE_STATEMENTS:
+				getTrue_statements().clear();
+				getTrue_statements().addAll((Collection<? extends Statements>)newValue);
 				return;
-			case CrystalPackage.IF__ELSES:
-				getElses().clear();
-				getElses().addAll((Collection<? extends Statements>)newValue);
+			case CrystalPackage.IF__FALSE_STATEMENTS:
+				getFalse_statements().clear();
+				getFalse_statements().addAll((Collection<? extends Statements>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -257,11 +257,11 @@ public class IfImpl extends StatementsImpl implements If {
 			case CrystalPackage.IF__CONDITION:
 				setCondition(CONDITION_EDEFAULT);
 				return;
-			case CrystalPackage.IF__IFS:
-				getIfs().clear();
+			case CrystalPackage.IF__TRUE_STATEMENTS:
+				getTrue_statements().clear();
 				return;
-			case CrystalPackage.IF__ELSES:
-				getElses().clear();
+			case CrystalPackage.IF__FALSE_STATEMENTS:
+				getFalse_statements().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -279,10 +279,10 @@ public class IfImpl extends StatementsImpl implements If {
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 			case CrystalPackage.IF__CONDITION:
 				return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
-			case CrystalPackage.IF__IFS:
-				return ifs != null && !ifs.isEmpty();
-			case CrystalPackage.IF__ELSES:
-				return elses != null && !elses.isEmpty();
+			case CrystalPackage.IF__TRUE_STATEMENTS:
+				return true_statements != null && !true_statements.isEmpty();
+			case CrystalPackage.IF__FALSE_STATEMENTS:
+				return false_statements != null && !false_statements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

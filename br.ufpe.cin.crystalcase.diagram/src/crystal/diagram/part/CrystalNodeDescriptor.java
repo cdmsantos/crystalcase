@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package crystal.diagram.part;
 
 import org.eclipse.emf.ecore.EObject;
@@ -11,8 +11,8 @@ import org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor;
  */
 public class CrystalNodeDescriptor extends UpdaterNodeDescriptor {
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CrystalNodeDescriptor(EObject modelElement, int visualID) {
 		super(modelElement, visualID);
 	}

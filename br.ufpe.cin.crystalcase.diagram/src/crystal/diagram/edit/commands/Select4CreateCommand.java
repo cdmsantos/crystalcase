@@ -15,12 +15,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import crystal.AnonymousBlock;
 import crystal.CrystalFactory;
-import crystal.For;
+import crystal.If;
 import crystal.Select;
-import crystal.Selector;
-import crystal.While;
 
 /**
  * @generated
@@ -60,8 +57,8 @@ public class Select4CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Select newElement = CrystalFactory.eINSTANCE.createSelect();
 
-		While owner = (While) getElementToEdit();
-		owner.getWhileStatements().add(newElement);
+		If owner = (If) getElementToEdit();
+		owner.getFalse_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

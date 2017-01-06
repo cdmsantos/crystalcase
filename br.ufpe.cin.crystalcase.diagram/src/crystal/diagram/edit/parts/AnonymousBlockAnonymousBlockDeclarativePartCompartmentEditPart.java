@@ -34,7 +34,7 @@ public class AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart exte
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7018;
+	public static final int VISUAL_ID = 7157;
 
 	/**
 	 * @generated
@@ -94,16 +94,16 @@ public class AnonymousBlockAnonymousBlockDeclarativePartCompartmentEditPart exte
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
-			if (type == CrystalElementTypes.DataType_3033) {
+			if (type == CrystalElementTypes.DataType_3333) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Collections_3034) {
+			if (type == CrystalElementTypes.Collections_3334) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Records_3035) {
+			if (type == CrystalElementTypes.Records_3335) {
 				return this;
 			}
-			if (type == CrystalElementTypes.Cursor_3036) {
+			if (type == CrystalElementTypes.Cursor_3336) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

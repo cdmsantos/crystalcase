@@ -17,8 +17,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.Collections;
 import crystal.CrystalFactory;
-import crystal.Function;
-import crystal.Procedure;
+import crystal.NamedBlocks;
 
 /**
  * @generated
@@ -26,16 +25,16 @@ import crystal.Procedure;
 public class Collections2CreateCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Collections2CreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
 	/**
-	 * FIXME: replace with setElementToEdit()
-	 * @generated
-	 */
+	* FIXME: replace with setElementToEdit()
+	* @generated
+	*/
 	protected EObject getElementToEdit() {
 		EObject container = ((CreateElementRequest) getRequest()).getContainer();
 		if (container instanceof View) {
@@ -45,20 +44,20 @@ public class Collections2CreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
 		return true;
 
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Collections newElement = CrystalFactory.eINSTANCE.createCollections();
 
-		Procedure owner = (Procedure) getElementToEdit();
+		NamedBlocks owner = (NamedBlocks) getElementToEdit();
 		owner.getParameters().add(newElement);
 
 		doConfigure(newElement, monitor, info);
@@ -68,8 +67,8 @@ public class Collections2CreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void doConfigure(Collections newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();

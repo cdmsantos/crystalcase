@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class WhileTest extends StatementsTest {
+public class WhileTest extends IterationStructuresTest {
 
 	/**
 	 * <!-- begin-user-doc -->

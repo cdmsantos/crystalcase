@@ -18,7 +18,6 @@ import org.eclipse.gmf.runtime.notation.View;
 import crystal.CrystalFactory;
 import crystal.Expression;
 import crystal.If;
-import crystal.While;
 
 /**
  * @generated
@@ -59,7 +58,7 @@ public class Expression2CreateCommand extends EditElementCommand {
 		Expression newElement = CrystalFactory.eINSTANCE.createExpression();
 
 		If owner = (If) getElementToEdit();
-		owner.getIfs().add(newElement);
+		owner.getTrue_statements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

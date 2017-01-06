@@ -60,7 +60,7 @@ public class CloseDescriptionEditPart extends CompartmentEditPart implements ITe
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5196;
+	public static final int VISUAL_ID = 5266;
 
 	/**
 	 * @generated
@@ -295,7 +295,7 @@ public class CloseDescriptionEditPart extends CompartmentEditPart implements ITe
 	 */
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CrystalParserProvider.getParser(CrystalElementTypes.Close_3193, getParserElement(),
+			parser = CrystalParserProvider.getParser(CrystalElementTypes.Close_3271, getParserElement(),
 					CrystalVisualIDRegistry.getType(crystal.diagram.edit.parts.CloseDescriptionEditPart.VISUAL_ID));
 		}
 		return parser;

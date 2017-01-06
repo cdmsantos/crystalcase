@@ -17,7 +17,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import crystal.CrystalFactory;
 import crystal.DataType;
-import crystal.Procedure;
 import crystal.Subprograms;
 
 /**
@@ -26,16 +25,16 @@ import crystal.Subprograms;
 public class DataTypeCreateCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public DataTypeCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
 	/**
-	 * FIXME: replace with setElementToEdit()
-	 * @generated
-	 */
+	* FIXME: replace with setElementToEdit()
+	* @generated
+	*/
 	protected EObject getElementToEdit() {
 		EObject container = ((CreateElementRequest) getRequest()).getContainer();
 		if (container instanceof View) {
@@ -45,20 +44,20 @@ public class DataTypeCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
 		return true;
 
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		DataType newElement = CrystalFactory.eINSTANCE.createDataType();
 
-		Procedure owner = (Procedure) getElementToEdit();
+		Subprograms owner = (Subprograms) getElementToEdit();
 		owner.getDeclarativePart().add(newElement);
 
 		doConfigure(newElement, monitor, info);
@@ -68,8 +67,8 @@ public class DataTypeCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void doConfigure(DataType newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();

@@ -14,45 +14,38 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link crystal.AnonymousBlock#getDeclarativePart <em>Declarative Part</em>}</li>
- *   <li>{@link crystal.AnonymousBlock#getExecutablePart <em>Executable Part</em>}</li>
+ *   <li>{@link crystal.AnonymousBlock#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getAnonymousBlock()
- * @model annotation="gmf.node label='name' label.text='Anonymous Block' border.color='43,106,215' border.style='dash'"
+ * @model annotation="gmf.node label='description' label.text='Anonymous Block' border.color='43,106,215' border.style='dash'"
  * @generated
  */
 public interface AnonymousBlock extends Subprograms {
 
 	/**
-	 * Returns the value of the '<em><b>Declarative Part</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.Parameters}.
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Declarative Part</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Declarative Part</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getAnonymousBlock_DeclarativePart()
-	 * @model containment="true"
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see crystal.CrystalPackage#getAnonymousBlock_Description()
+	 * @model
 	 * @generated
 	 */
-	EList<Parameters> getDeclarativePart();
+	String getDescription();
 
 	/**
-	 * Returns the value of the '<em><b>Executable Part</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.Statements}.
+	 * Sets the value of the '{@link crystal.AnonymousBlock#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Executable Part</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Executable Part</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getAnonymousBlock_ExecutablePart()
-	 * @model containment="true"
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
 	 * @generated
 	 */
-	EList<Statements> getExecutablePart();
+	void setDescription(String value);
 } // AnonymousBlock

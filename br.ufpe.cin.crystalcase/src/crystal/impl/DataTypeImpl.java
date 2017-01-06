@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class DataTypeImpl extends ParametersImpl implements DataType {
+public class DataTypeImpl extends DataAbstractionsImpl implements DataType {
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = "DataType";
+	protected static final String CLASS_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
@@ -77,7 +77,7 @@ public class DataTypeImpl extends ParametersImpl implements DataType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int PRECISION_EDEFAULT = 1;
+	protected static final int PRECISION_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getPrecision() <em>Precision</em>}' attribute.

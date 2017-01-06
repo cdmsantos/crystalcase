@@ -15,11 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link crystal.Crystal#getTransitions <em>Transitions</em>}</li>
- *   <li>{@link crystal.Crystal#getSelectorTransitions <em>Selector Transitions</em>}</li>
- *   <li>{@link crystal.Crystal#getProcedures <em>Procedures</em>}</li>
- *   <li>{@link crystal.Crystal#getFunctions <em>Functions</em>}</li>
- *   <li>{@link crystal.Crystal#getBlocks <em>Blocks</em>}</li>
+ *   <li>{@link crystal.Crystal#getLinks <em>Links</em>}</li>
+ *   <li>{@link crystal.Crystal#getSubprograms <em>Subprograms</em>}</li>
  * </ul>
  *
  * @see crystal.CrystalPackage#getCrystal()
@@ -28,83 +25,35 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Crystal extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.Transition}.
+	 * Returns the value of the '<em><b>Links</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.Links}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Transitions</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Links</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transitions</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getCrystal_Transitions()
+	 * @return the value of the '<em>Links</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getCrystal_Links()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Transition> getTransitions();
+	EList<Links> getLinks();
 
 	/**
-	 * Returns the value of the '<em><b>Procedures</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.Procedure}.
+	 * Returns the value of the '<em><b>Subprograms</b></em>' containment reference list.
+	 * The list contents are of type {@link crystal.Subprograms}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Procedures</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Subprograms</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Procedures</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getCrystal_Procedures()
+	 * @return the value of the '<em>Subprograms</em>' containment reference list.
+	 * @see crystal.CrystalPackage#getCrystal_Subprograms()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Procedure> getProcedures();
-
-	/**
-	 * Returns the value of the '<em><b>Functions</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.Function}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Functions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Functions</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getCrystal_Functions()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Function> getFunctions();
-
-	/**
-	 * Returns the value of the '<em><b>Blocks</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.AnonymousBlock}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Blocks</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Blocks</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getCrystal_Blocks()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<AnonymousBlock> getBlocks();
-
-	/**
-	 * Returns the value of the '<em><b>Selector Transitions</b></em>' containment reference list.
-	 * The list contents are of type {@link crystal.SelectorTransition}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Selector Transitions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Selector Transitions</em>' containment reference list.
-	 * @see crystal.CrystalPackage#getCrystal_SelectorTransitions()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<SelectorTransition> getSelectorTransitions();
+	EList<Subprograms> getSubprograms();
 
 } // Crystal
