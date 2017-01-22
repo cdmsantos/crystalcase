@@ -52,11 +52,14 @@ public class IfIfTrue_statementsCompartment5EditPart extends ShapeCompartmentEdi
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated not
+	 * Crystal Santos
+	 * 20/01/2017
+	 */
 	public IFigure createFigure() {
 		ResizableCompartmentFigure result = (ResizableCompartmentFigure) super.createFigure();
-		result.setTitleVisibility(false);
+		result.setTitleVisibility(true);
+		result.setTitle("True Statements");
 		return result;
 	}
 

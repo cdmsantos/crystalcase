@@ -52,11 +52,14 @@ public class ForForInterations_statementsCompartment4EditPart extends ShapeCompa
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated not
+	 * Crystal Santos
+	 * 20/01/2017
+	 */
 	public IFigure createFigure() {
 		ResizableCompartmentFigure result = (ResizableCompartmentFigure) super.createFigure();
-		result.setTitleVisibility(false);
+		result.setTitleVisibility(true);
+		result.setTitle("Iteration Statements");
 		return result;
 	}
 

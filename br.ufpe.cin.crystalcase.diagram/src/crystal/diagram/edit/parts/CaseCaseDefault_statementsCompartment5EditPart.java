@@ -52,11 +52,14 @@ public class CaseCaseDefault_statementsCompartment5EditPart extends ShapeCompart
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated not
+	 * Crystal Santos
+	 * 20/01/2017
+	 */
 	public IFigure createFigure() {
 		ResizableCompartmentFigure result = (ResizableCompartmentFigure) super.createFigure();
-		result.setTitleVisibility(false);
+		result.setTitleVisibility(true);
+		result.setTitle("Default Statements");
 		return result;
 	}
 

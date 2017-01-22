@@ -370,4 +370,10 @@
     <eLiterals name="ROWID" value="26"/>
     <eLiterals name="UROWID" value="27"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass39"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass40">
+    <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+      <details key="archetype" value="Role"/>
+    </eAnnotations>
+  </eClassifiers>
 </ecore:EPackage>
