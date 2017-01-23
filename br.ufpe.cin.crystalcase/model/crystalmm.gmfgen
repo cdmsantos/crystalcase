@@ -2207,34 +2207,44 @@
     </compartments>
     <palette>
       <groups title="Objects" collapse="true">
-        <entries xsi:type="gmfgen:ToolEntry" title="AnonymousBlock" description="Create new AnonymousBlock" genNodes="//@diagram/@topLevelNodes.2"/>
         <entries xsi:type="gmfgen:ToolEntry" title="CallFunction" description="Create new CallFunction" genNodes="//@diagram/@childNodes.37 //@diagram/@childNodes.44 //@diagram/@childNodes.54 //@diagram/@childNodes.70 //@diagram/@childNodes.83 //@diagram/@childNodes.96"/>
         <entries xsi:type="gmfgen:ToolEntry" title="CallProcedure" description="Create new CallProcedure" genNodes="//@diagram/@childNodes.36 //@diagram/@childNodes.43 //@diagram/@childNodes.53 //@diagram/@childNodes.69 //@diagram/@childNodes.82 //@diagram/@childNodes.95"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Case" description="Create new Case" genNodes="//@diagram/@childNodes.6 //@diagram/@childNodes.19 //@diagram/@childNodes.20 //@diagram/@childNodes.58 //@diagram/@childNodes.71 //@diagram/@childNodes.84"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Close" description="Create new Close" genNodes="//@diagram/@childNodes.35 //@diagram/@childNodes.42 //@diagram/@childNodes.52 //@diagram/@childNodes.68 //@diagram/@childNodes.81 //@diagram/@childNodes.94"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Collections" description="Create new Collections" genNodes="//@diagram/@childNodes.98 //@diagram/@childNodes.102 //@diagram/@childNodes.106"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Cursor" description="Create new Cursor" genNodes="//@diagram/@childNodes.100 //@diagram/@childNodes.104 //@diagram/@childNodes.108"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="DataType" description="Create new DataType" genNodes="//@diagram/@childNodes.97 //@diagram/@childNodes.101 //@diagram/@childNodes.105"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Delete" description="Create new Delete" genNodes="//@diagram/@childNodes.12 //@diagram/@childNodes.23 //@diagram/@childNodes.28 //@diagram/@childNodes.61 //@diagram/@childNodes.74 //@diagram/@childNodes.87"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Exception" description="Create new Exception" genNodes="//@diagram/@childNodes.1 //@diagram/@childNodes.4 //@diagram/@childNodes.8 //@diagram/@childNodes.16 //@diagram/@childNodes.47 //@diagram/@childNodes.56"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Expression" description="Create new Expression" genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.3 //@diagram/@childNodes.7 //@diagram/@childNodes.15 //@diagram/@childNodes.46 //@diagram/@childNodes.55"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Fetch" description="Create new Fetch" genNodes="//@diagram/@childNodes.34 //@diagram/@childNodes.41 //@diagram/@childNodes.51 //@diagram/@childNodes.67 //@diagram/@childNodes.80 //@diagram/@childNodes.93"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="For" description="Create new For" genNodes="//@diagram/@childNodes.18 //@diagram/@childNodes.31 //@diagram/@childNodes.38 //@diagram/@childNodes.64 //@diagram/@childNodes.77 //@diagram/@childNodes.90"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Function" description="Create new Function" genNodes="//@diagram/@topLevelNodes.1"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="If" description="Create new If" genNodes="//@diagram/@childNodes.2 //@diagram/@childNodes.5 //@diagram/@childNodes.9 //@diagram/@childNodes.17 //@diagram/@childNodes.48 //@diagram/@childNodes.57"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Insert" description="Create new Insert" genNodes="//@diagram/@childNodes.10 //@diagram/@childNodes.21 //@diagram/@childNodes.26 //@diagram/@childNodes.59 //@diagram/@childNodes.72 //@diagram/@childNodes.85"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Loop" description="Create new Loop" genNodes="//@diagram/@childNodes.32 //@diagram/@childNodes.39 //@diagram/@childNodes.49 //@diagram/@childNodes.65 //@diagram/@childNodes.78 //@diagram/@childNodes.91"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Open" description="Create new Open" genNodes="//@diagram/@childNodes.33 //@diagram/@childNodes.40 //@diagram/@childNodes.50 //@diagram/@childNodes.66 //@diagram/@childNodes.79 //@diagram/@childNodes.92"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Options" description="Create new Options" genNodes="//@diagram/@childNodes.45"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Procedure" description="Create new Procedure" genNodes="//@diagram/@topLevelNodes.0"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Records" description="Create new Records" genNodes="//@diagram/@childNodes.99 //@diagram/@childNodes.103 //@diagram/@childNodes.107"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Select" description="Create new Select" genNodes="//@diagram/@childNodes.13 //@diagram/@childNodes.24 //@diagram/@childNodes.29 //@diagram/@childNodes.62 //@diagram/@childNodes.75 //@diagram/@childNodes.88"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Update" description="Create new Update" genNodes="//@diagram/@childNodes.11 //@diagram/@childNodes.22 //@diagram/@childNodes.27 //@diagram/@childNodes.60 //@diagram/@childNodes.73 //@diagram/@childNodes.86"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="While" description="Create new While" genNodes="//@diagram/@childNodes.14 //@diagram/@childNodes.25 //@diagram/@childNodes.30 //@diagram/@childNodes.63 //@diagram/@childNodes.76 //@diagram/@childNodes.89"/>
       </groups>
       <groups title="Connections" collapse="true">
         <entries xsi:type="gmfgen:ToolEntry" title="OptionsTransition" description="Create new OptionsTransition" genLinks="//@diagram/@links.1"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Transition" description="Create new Transition" genLinks="//@diagram/@links.0"/>
+      </groups>
+      <groups title="Subprograms" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="Procedure" description="Create new Procedure" genNodes="//@diagram/@topLevelNodes.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Function" description="Create new Function" genNodes="//@diagram/@topLevelNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="AnonymousBlock" description="Create new AnonymousBlock" genNodes="//@diagram/@topLevelNodes.2"/>
+      </groups>
+      <groups title="Parameters" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="DataType" description="Create new DataType" genNodes="//@diagram/@childNodes.97 //@diagram/@childNodes.101 //@diagram/@childNodes.105"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Collections" description="Create new Collections" genNodes="//@diagram/@childNodes.98 //@diagram/@childNodes.102 //@diagram/@childNodes.106"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Records" description="Create new Records" genNodes="//@diagram/@childNodes.99 //@diagram/@childNodes.103 //@diagram/@childNodes.107"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Cursor" description="Create new Cursor" genNodes="//@diagram/@childNodes.100 //@diagram/@childNodes.104 //@diagram/@childNodes.108"/>
+      </groups>
+      <groups title="Conditional Structures" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="If" description="Create new If" genNodes="//@diagram/@childNodes.2 //@diagram/@childNodes.5 //@diagram/@childNodes.9 //@diagram/@childNodes.17 //@diagram/@childNodes.48 //@diagram/@childNodes.57"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Case" description="Create new Case" genNodes="//@diagram/@childNodes.6 //@diagram/@childNodes.19 //@diagram/@childNodes.20 //@diagram/@childNodes.58 //@diagram/@childNodes.71 //@diagram/@childNodes.84"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Options" description="Create new Options" genNodes="//@diagram/@childNodes.45"/>
+      </groups>
+      <groups title="Repetition Structures" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="While" description="Create new While" genNodes="//@diagram/@childNodes.14 //@diagram/@childNodes.25 //@diagram/@childNodes.30 //@diagram/@childNodes.63 //@diagram/@childNodes.76 //@diagram/@childNodes.89"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Loop" description="Create new Loop" genNodes="//@diagram/@childNodes.32 //@diagram/@childNodes.39 //@diagram/@childNodes.49 //@diagram/@childNodes.65 //@diagram/@childNodes.78 //@diagram/@childNodes.91"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="For" description="Create new For" genNodes="//@diagram/@childNodes.18 //@diagram/@childNodes.31 //@diagram/@childNodes.38 //@diagram/@childNodes.64 //@diagram/@childNodes.77 //@diagram/@childNodes.90"/>
+      </groups>
+      <groups title="Cursor Manipulation" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="Open" description="Create new Open" genNodes="//@diagram/@childNodes.33 //@diagram/@childNodes.40 //@diagram/@childNodes.50 //@diagram/@childNodes.66 //@diagram/@childNodes.79 //@diagram/@childNodes.92"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Fetch" description="Create new Fetch" genNodes="//@diagram/@childNodes.34 //@diagram/@childNodes.41 //@diagram/@childNodes.51 //@diagram/@childNodes.67 //@diagram/@childNodes.80 //@diagram/@childNodes.93"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Close" description="Create new Close" genNodes="//@diagram/@childNodes.35 //@diagram/@childNodes.42 //@diagram/@childNodes.52 //@diagram/@childNodes.68 //@diagram/@childNodes.81 //@diagram/@childNodes.94"/>
       </groups>
     </palette>
     <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="br.ufpe.cin.crystalcase.diagram.general" name="Crystal Diagram">

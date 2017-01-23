@@ -32,6 +32,8 @@ import crystal.IterationStructures;
 import crystal.Links;
 import crystal.Loop;
 import crystal.NamedBlocks;
+import crystal.NewEClass39;
+import crystal.NewEClass40;
 import crystal.Open;
 import crystal.Options;
 import crystal.OptionsTransition;
@@ -322,6 +324,20 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * @generated
 	 */
 	private EClass optionsTransitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass newEClass39EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass newEClass40EClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1335,6 +1351,24 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getNewEClass39() {
+		return newEClass39EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNewEClass40() {
+		return newEClass40EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getExpression() {
 		return expressionEClass;
 	}
@@ -1555,6 +1589,10 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		createEReference(optionsTransitionEClass, OPTIONS_TRANSITION__SOURCE);
 		createEReference(optionsTransitionEClass, OPTIONS_TRANSITION__TARGET);
 
+		newEClass39EClass = createEClass(NEW_ECLASS39);
+
+		newEClass40EClass = createEClass(NEW_ECLASS40);
+
 		// Create enums
 		parameterTypeEEnum = createEEnum(PARAMETER_TYPE);
 		forCounterEEnum = createEEnum(FOR_COUNTER);
@@ -1766,6 +1804,10 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		initEReference(getOptionsTransition_Source(), this.getOptions(), null, "source", null, 0, 1, OptionsTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOptionsTransition_Target(), this.getOptions(), null, "target", null, 0, 1, OptionsTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(newEClass39EClass, NewEClass39.class, "NewEClass39", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(newEClass40EClass, NewEClass40.class, "NewEClass40", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(parameterTypeEEnum, ParameterType.class, "ParameterType");
 		addEEnumLiteral(parameterTypeEEnum, ParameterType.IN);
@@ -1818,6 +1860,8 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 		createGmf_2Annotations();
 		// gmf.link
 		createGmf_3Annotations();
+		// http://www.obeo.fr/dsl/dnc/archetype
+		createArchetypeAnnotations();
 	}
 
 	/**
@@ -2170,6 +2214,22 @@ public class CrystalPackageImpl extends EPackageImpl implements CrystalPackage {
 			 "label", "name",
 			 "label.text", "Case Connection",
 			 "label.icon", "true"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.obeo.fr/dsl/dnc/archetype</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createArchetypeAnnotations() {
+		String source = "http://www.obeo.fr/dsl/dnc/archetype";	
+		addAnnotation
+		  (newEClass40EClass, 
+		   source, 
+		   new String[] {
+			 "archetype", "Role"
 		   });
 	}
 

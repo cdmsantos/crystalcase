@@ -23,7 +23,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="crystalmm.gmftool#//@palette/@tools.0/@tools.19"/>
+          href="crystalmm.gmftool#//@palette/@tools.2/@tools.0"/>
       <diagramNode
           href="crystalmm.gmfgraph#Procedure"/>
       <children
@@ -42,7 +42,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.10"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.4"/>
           <diagramNode
               href="crystalmm.gmfgraph#Expression"/>
         </ownedChild>
@@ -63,7 +63,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.9"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.3"/>
           <diagramNode
               href="crystalmm.gmfgraph#Exception"/>
         </ownedChild>
@@ -85,7 +85,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.14"/>
+              href="crystalmm.gmftool#//@palette/@tools.4/@tools.0"/>
           <diagramNode
               href="crystalmm.gmfgraph#If"/>
           <children
@@ -309,7 +309,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.3"/>
+              href="crystalmm.gmftool#//@palette/@tools.4/@tools.1"/>
           <diagramNode
               href="crystalmm.gmfgraph#Case"/>
           <children
@@ -425,7 +425,7 @@
               </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="crystalmm.gmftool#//@palette/@tools.0/@tools.18"/>
+                  href="crystalmm.gmftool#//@palette/@tools.4/@tools.2"/>
               <diagramNode
                   href="crystalmm.gmfgraph#Options"/>
               <children
@@ -559,7 +559,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.15"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.5"/>
           <diagramNode
               href="crystalmm.gmfgraph#Insert"/>
         </ownedChild>
@@ -580,7 +580,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.22"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.7"/>
           <diagramNode
               href="crystalmm.gmfgraph#Update"/>
         </ownedChild>
@@ -601,7 +601,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.8"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
               href="crystalmm.gmfgraph#Delete"/>
         </ownedChild>
@@ -622,7 +622,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.21"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.6"/>
           <diagramNode
               href="crystalmm.gmfgraph#Select"/>
         </ownedChild>
@@ -644,7 +644,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.23"/>
+              href="crystalmm.gmftool#//@palette/@tools.5/@tools.0"/>
           <diagramNode
               href="crystalmm.gmfgraph#While"/>
           <children
@@ -767,7 +767,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.12"/>
+              href="crystalmm.gmftool#//@palette/@tools.5/@tools.2"/>
           <diagramNode
               href="crystalmm.gmfgraph#For"/>
           <children
@@ -890,7 +890,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.16"/>
+              href="crystalmm.gmftool#//@palette/@tools.5/@tools.1"/>
           <diagramNode
               href="crystalmm.gmfgraph#Loop"/>
           <children
@@ -1012,7 +1012,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.17"/>
+              href="crystalmm.gmftool#//@palette/@tools.6/@tools.0"/>
           <diagramNode
               href="crystalmm.gmfgraph#Open"/>
         </ownedChild>
@@ -1033,7 +1033,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.11"/>
+              href="crystalmm.gmftool#//@palette/@tools.6/@tools.1"/>
           <diagramNode
               href="crystalmm.gmfgraph#Fetch"/>
         </ownedChild>
@@ -1054,7 +1054,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.4"/>
+              href="crystalmm.gmftool#//@palette/@tools.6/@tools.2"/>
           <diagramNode
               href="crystalmm.gmfgraph#Close"/>
         </ownedChild>
@@ -1075,7 +1075,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.2"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.1"/>
           <diagramNode
               href="crystalmm.gmfgraph#CallProcedure"/>
         </ownedChild>
@@ -1096,7 +1096,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.1"/>
+              href="crystalmm.gmftool#//@palette/@tools.0/@tools.0"/>
           <diagramNode
               href="crystalmm.gmfgraph#CallFunction"/>
         </ownedChild>
@@ -1118,7 +1118,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.7"/>
+              href="crystalmm.gmftool#//@palette/@tools.3/@tools.0"/>
           <diagramNode
               href="crystalmm.gmfgraph#DataType"/>
         </ownedChild>
@@ -1140,7 +1140,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.5"/>
+              href="crystalmm.gmftool#//@palette/@tools.3/@tools.1"/>
           <diagramNode
               href="crystalmm.gmfgraph#Collections"/>
         </ownedChild>
@@ -1162,7 +1162,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.20"/>
+              href="crystalmm.gmftool#//@palette/@tools.3/@tools.2"/>
           <diagramNode
               href="crystalmm.gmfgraph#Records"/>
         </ownedChild>
@@ -1184,7 +1184,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="crystalmm.gmftool#//@palette/@tools.0/@tools.6"/>
+              href="crystalmm.gmftool#//@palette/@tools.3/@tools.3"/>
           <diagramNode
               href="crystalmm.gmfgraph#Cursor"/>
         </ownedChild>
@@ -1247,7 +1247,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="crystalmm.gmftool#//@palette/@tools.0/@tools.13"/>
+          href="crystalmm.gmftool#//@palette/@tools.2/@tools.1"/>
       <diagramNode
           href="crystalmm.gmfgraph#Function"/>
       <children
@@ -1457,7 +1457,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="crystalmm.gmftool#//@palette/@tools.0/@tools.0"/>
+          href="crystalmm.gmftool#//@palette/@tools.2/@tools.2"/>
       <diagramNode
           href="crystalmm.gmfgraph#AnonymousBlock"/>
       <children

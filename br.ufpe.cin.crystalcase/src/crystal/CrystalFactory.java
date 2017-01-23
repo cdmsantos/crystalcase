@@ -256,6 +256,24 @@ public interface CrystalFactory extends EFactory {
 	OptionsTransition createOptionsTransition();
 
 	/**
+	 * Returns a new object of class '<em>New EClass39</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>New EClass39</em>'.
+	 * @generated
+	 */
+	NewEClass39 createNewEClass39();
+
+	/**
+	 * Returns a new object of class '<em>New EClass40</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>New EClass40</em>'.
+	 * @generated
+	 */
+	NewEClass40 createNewEClass40();
+
+	/**
 	 * Returns a new object of class '<em>Expression</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -24,6 +24,8 @@ import crystal.Function;
 import crystal.If;
 import crystal.Insert;
 import crystal.Loop;
+import crystal.NewEClass39;
+import crystal.NewEClass40;
 import crystal.Open;
 import crystal.Options;
 import crystal.OptionsTransition;
@@ -117,6 +119,8 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 			case CrystalPackage.CALL_FUNCTION: return createCallFunction();
 			case CrystalPackage.TRANSITION: return createTransition();
 			case CrystalPackage.OPTIONS_TRANSITION: return createOptionsTransition();
+			case CrystalPackage.NEW_ECLASS39: return createNewEClass39();
+			case CrystalPackage.NEW_ECLASS40: return createNewEClass40();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -418,6 +422,26 @@ public class CrystalFactoryImpl extends EFactoryImpl implements CrystalFactory {
 	public OptionsTransition createOptionsTransition() {
 		OptionsTransitionImpl optionsTransition = new OptionsTransitionImpl();
 		return optionsTransition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NewEClass39 createNewEClass39() {
+		NewEClass39Impl newEClass39 = new NewEClass39Impl();
+		return newEClass39;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NewEClass40 createNewEClass40() {
+		NewEClass40Impl newEClass40 = new NewEClass40Impl();
+		return newEClass40;
 	}
 
 	/**

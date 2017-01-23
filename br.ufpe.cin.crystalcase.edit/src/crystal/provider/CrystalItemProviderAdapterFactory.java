@@ -670,6 +670,52 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link crystal.NewEClass39} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewEClass39ItemProvider newEClass39ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link crystal.NewEClass39}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNewEClass39Adapter() {
+		if (newEClass39ItemProvider == null) {
+			newEClass39ItemProvider = new NewEClass39ItemProvider(this);
+		}
+
+		return newEClass39ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link crystal.NewEClass40} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewEClass40ItemProvider newEClass40ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link crystal.NewEClass40}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNewEClass40Adapter() {
+		if (newEClass40ItemProvider == null) {
+			newEClass40ItemProvider = new NewEClass40ItemProvider(this);
+		}
+
+		return newEClass40ItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link crystal.Expression} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -818,6 +864,8 @@ public class CrystalItemProviderAdapterFactory extends CrystalAdapterFactory imp
 		if (callFunctionItemProvider != null) callFunctionItemProvider.dispose();
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
 		if (optionsTransitionItemProvider != null) optionsTransitionItemProvider.dispose();
+		if (newEClass39ItemProvider != null) newEClass39ItemProvider.dispose();
+		if (newEClass40ItemProvider != null) newEClass40ItemProvider.dispose();
 	}
 
 }

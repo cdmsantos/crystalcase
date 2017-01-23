@@ -246,242 +246,107 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String AnonymousBlock1CreationTool_title;
+	public static String Subprograms3Group_title;
 
 	/**
 	* @generated
 	*/
-	public static String AnonymousBlock1CreationTool_desc;
+	public static String Parameters4Group_title;
 
 	/**
 	* @generated
 	*/
-	public static String CallFunction2CreationTool_title;
+	public static String ConditionalStructures5Group_title;
 
 	/**
 	* @generated
 	*/
-	public static String CallFunction2CreationTool_desc;
+	public static String RepetitionStructures6Group_title;
 
 	/**
 	* @generated
 	*/
-	public static String CallProcedure3CreationTool_title;
+	public static String CursorManipulation7Group_title;
 
 	/**
 	* @generated
 	*/
-	public static String CallProcedure3CreationTool_desc;
+	public static String CallFunction1CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Case4CreationTool_title;
+	public static String CallFunction1CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Case4CreationTool_desc;
+	public static String CallProcedure2CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Close5CreationTool_title;
+	public static String CallProcedure2CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Close5CreationTool_desc;
+	public static String Delete3CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Collections6CreationTool_title;
+	public static String Delete3CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Collections6CreationTool_desc;
+	public static String Exception4CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Cursor7CreationTool_title;
+	public static String Exception4CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Cursor7CreationTool_desc;
+	public static String Expression5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String DataType8CreationTool_title;
+	public static String Expression5CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String DataType8CreationTool_desc;
+	public static String Insert6CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Delete9CreationTool_title;
+	public static String Insert6CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Delete9CreationTool_desc;
+	public static String Select7CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Exception10CreationTool_title;
+	public static String Select7CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Exception10CreationTool_desc;
+	public static String Update8CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Expression11CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Expression11CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Fetch12CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Fetch12CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String For13CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String For13CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Function14CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Function14CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String If15CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String If15CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Insert16CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Insert16CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Loop17CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Loop17CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Open18CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Open18CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Options19CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Options19CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Procedure20CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Procedure20CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Records21CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Records21CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Select22CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Select22CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Update23CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Update23CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String While24CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String While24CreationTool_desc;
+	public static String Update8CreationTool_desc;
 
 	/**
 	* @generated
@@ -502,6 +367,166 @@ public class Messages extends NLS {
 	* @generated
 	*/
 	public static String Transition2CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Procedure1CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Procedure1CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Function2CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Function2CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String AnonymousBlock3CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String AnonymousBlock3CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String DataType1CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String DataType1CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Collections2CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Collections2CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Records3CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Records3CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Cursor4CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Cursor4CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String If1CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String If1CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Case2CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Case2CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Options3CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Options3CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String While1CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String While1CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Loop2CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Loop2CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String For3CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String For3CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Open1CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Open1CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Fetch2CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Fetch2CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Close3CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Close3CreationTool_desc;
 
 	/**
 	* @generated
