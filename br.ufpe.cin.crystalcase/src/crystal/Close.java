@@ -22,6 +22,7 @@ package crystal;
 public interface Close extends CursorOperations {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"Close"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -31,7 +32,7 @@ public interface Close extends CursorOperations {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getClose_ClassName()
-	 * @model
+	 * @model default="Close"
 	 * @generated
 	 */
 	String getClassName();

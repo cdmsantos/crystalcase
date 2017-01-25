@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Options extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"Options"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -37,7 +38,7 @@ public interface Options extends EObject {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getOptions_ClassName()
-	 * @model
+	 * @model default="Options"
 	 * @generated
 	 */
 	String getClassName();

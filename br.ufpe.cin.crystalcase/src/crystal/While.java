@@ -25,6 +25,7 @@ import org.eclipse.emf.common.util.EList;
 public interface While extends IterationStructures {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"While"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -34,7 +35,7 @@ public interface While extends IterationStructures {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getWhile_ClassName()
-	 * @model
+	 * @model default="While"
 	 * @generated
 	 */
 	String getClassName();

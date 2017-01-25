@@ -23,6 +23,7 @@ public interface CallProcedure extends CallBlocks {
 
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"CallProcedure"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -32,7 +33,7 @@ public interface CallProcedure extends CallBlocks {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCallProcedure_ClassName()
-	 * @model
+	 * @model default="CallProcedure"
 	 * @generated
 	 */
 	String getClassName();

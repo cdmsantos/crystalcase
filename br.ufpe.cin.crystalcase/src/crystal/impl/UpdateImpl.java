@@ -33,7 +33,7 @@ public class UpdateImpl extends SQLOperationsImpl implements Update {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = null;
+	protected static final String CLASS_NAME_EDEFAULT = "Update";
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.

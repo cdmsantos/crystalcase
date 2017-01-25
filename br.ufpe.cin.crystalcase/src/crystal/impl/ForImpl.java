@@ -45,7 +45,7 @@ public class ForImpl extends IterationStructuresImpl implements For {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_NAME_EDEFAULT = null;
+	protected static final String CLASS_NAME_EDEFAULT = "For";
 
 	/**
 	 * The cached value of the '{@link #getClassName() <em>Class Name</em>}' attribute.

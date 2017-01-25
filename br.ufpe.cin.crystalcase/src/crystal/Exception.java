@@ -23,6 +23,7 @@ package crystal;
 public interface Exception extends AdditionalOperations {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"Exception"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -32,7 +33,7 @@ public interface Exception extends AdditionalOperations {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getException_ClassName()
-	 * @model
+	 * @model default="Exception"
 	 * @generated
 	 */
 	String getClassName();

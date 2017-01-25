@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Case extends ConditionalStructures {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"Case"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -35,7 +36,7 @@ public interface Case extends ConditionalStructures {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getCase_ClassName()
-	 * @model
+	 * @model default="Case"
 	 * @generated
 	 */
 	String getClassName();

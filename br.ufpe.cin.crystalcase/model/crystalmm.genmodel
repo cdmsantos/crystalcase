@@ -184,7 +184,5 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//OptionsTransition/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crystalmm.ecore#//OptionsTransition/target"/>
     </genClasses>
-    <genClasses ecoreClass="crystalmm.ecore#//NewEClass39"/>
-    <genClasses ecoreClass="crystalmm.ecore#//NewEClass40"/>
   </genPackages>
 </genmodel:GenModel>

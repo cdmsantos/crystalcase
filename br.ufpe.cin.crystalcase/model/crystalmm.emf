@@ -48,7 +48,7 @@ abstract class DataAbstractions {
 
 @gmf.node(label.text="Data Type")
 class DataType extends DataAbstractions {
-  attr String className;
+  attr String className = "DataType";
   attr DataTypeOptions options;
   attr int precision;
   attr int scale;
@@ -56,21 +56,21 @@ class DataType extends DataAbstractions {
 
 @gmf.node(label.text="Collection")
 class Collections extends DataAbstractions {
-  attr String className;
+  attr String className = "Collections";
   attr String code;
   attr String typeName;
 }
 
 @gmf.node(label.text="Record")
 class Records extends DataAbstractions {
-  attr String className;
+  attr String className = "Records";
   attr String code;
   attr String typeName;
 }
 
 @gmf.node(label.text="Cursor")
 class Cursor extends DataAbstractions {
-  attr String className;
+  attr String className = "Cursor";
   attr String cursorQuery;
 }
 
@@ -112,19 +112,19 @@ abstract class AdditionalOperations extends Statements {
 
 @gmf.node(figure="rectangle")
 class Expression extends AdditionalOperations {
-  attr String className;
+  attr String className = "Expression";
   attr String value;
 }
 
 @gmf.node(figure="rectangle")
 class Exception extends AdditionalOperations {
-  attr String className;
+  attr String className = "Exception";
   attr String code;
 }
 
 @gmf.node(figure="rectangle")
 class If extends ConditionalStructures {
-  attr String className;
+  attr String className = "If";
   attr String condition;
 
   @gmf.compartment
@@ -136,7 +136,7 @@ class If extends ConditionalStructures {
 
 @gmf.node(figure="rectangle")
 class Case extends ConditionalStructures {
-  attr String className;
+  attr String className = "Case";
 
   @gmf.compartment
   val Options[*] options;
@@ -147,7 +147,7 @@ class Case extends ConditionalStructures {
 
 @gmf.node(figure="rectangle", label="description", label.icon="true", label.placement="internal")
 class Options {
-  attr String className;
+  attr String className = "Options";
   attr String condition;
   attr String description;
 
@@ -157,33 +157,33 @@ class Options {
 
 @gmf.node(figure="rectangle")
 class Insert extends SQLOperations {
-  attr String className;
+  attr String className = "Insert";
 }
 
 @gmf.node(figure="rectangle")
 class Update extends SQLOperations {
-  attr String className;
+  attr String className = "Update";
 }
 
 @gmf.node(figure="rectangle")
 class Delete extends SQLOperations {
-  attr String className;
+  attr String className = "Delete";
 }
 
 @gmf.node(figure="rectangle")
 class Select extends SQLOperations {
-  attr String className;
+  attr String className = "Select";
 }
 
 @gmf.node(figure="rectangle")
 class While extends IterationStructures {
-  attr String className;
+  attr String className = "While";
   attr String condition;
 }
 
 @gmf.node(figure="rectangle")
 class For extends IterationStructures {
-  attr String className;
+  attr String className = "For";
   attr String counter;
   attr ForCounter typeCounter;
   attr int lowestNumber;
@@ -192,34 +192,34 @@ class For extends IterationStructures {
 
 @gmf.node(figure="rectangle")
 class Loop extends IterationStructures {
-  attr String className;
+  attr String className = "Loop";
   attr String breakCondition;
 }
 
 @gmf.node(figure="rectangle")
 class Open extends CursorOperations {
-  attr String className;
+  attr String className = "Open";
 }
 
 @gmf.node(figure="rectangle")
 class Fetch extends CursorOperations {
-  attr String className;
+  attr String className = "Fetch";
   attr String variableName;
 }
 
 @gmf.node(figure="rectangle")
 class Close extends CursorOperations {
-  attr String className;
+  attr String className = "Close";
 }
 
 @gmf.node(figure="rectangle")
 class CallProcedure extends CallBlocks {
-  attr String className;
+  attr String className = "CallProcedure";
 }
 
 @gmf.node(figure="rectangle")
 class CallFunction extends CallBlocks {
-  attr String className;
+  attr String className = "CallFunction";
 }
 
 abstract class Links {

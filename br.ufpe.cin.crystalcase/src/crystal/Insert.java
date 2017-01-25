@@ -22,6 +22,7 @@ package crystal;
 public interface Insert extends SQLOperations {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"Insert"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -31,7 +32,7 @@ public interface Insert extends SQLOperations {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getInsert_ClassName()
-	 * @model
+	 * @model default="Insert"
 	 * @generated
 	 */
 	String getClassName();

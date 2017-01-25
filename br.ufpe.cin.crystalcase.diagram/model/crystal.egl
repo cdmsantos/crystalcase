@@ -23,7 +23,7 @@ for(element in AnonymousBlock.allInstances()) {
 for(element in Procedure.allInstances()) {
 
 	out.println("CREATE OR REPLACE PROCEDURE "+element.name); --static
-	
+
 	//PARAMETROS
 	printParametersPart(element);
 	
@@ -147,15 +147,15 @@ operation printCase(object) {
 
 operation printIf(object) {
 	out.println("   " + "IF " + object.condition + " THEN");
-	for(statement in object.ifs) {
+	for(statement in object.true_statements) {
 		printStatements(statement);
 	}
 	//var firstElement = getFirstElement(object.ifs);
 	//printStatements(firstElement);
 	//printElementsByTransition(firstElement);
-	if(not isEmpty(object.elses)) {
+	if(not isEmpty(object.false_statements)) {
 		out.println("   " + "ELSE"); --static
-		for(statement in object.elses) {
+		for(statement in object.false_statements) {
 			printStatements(statement);
 		}
 		//var firstElement = getFirstElement(object.elses);
@@ -168,7 +168,7 @@ operation printIf(object) {
 operation printWhile(object) {
 	out.println("   " + "WHILE " + object.condition);
 	out.println("   " + "LOOP");
-	for(statement in object.whileStatements) {
+	for(statement in object.interations_statements) {
 		printStatements(statement);
 	}
 	//var firstElement = getFirstElement(object.whileStatements);
@@ -180,7 +180,7 @@ operation printWhile(object) {
 
 operation printLoop(object) {
 	out.println("   " + "LOOP"); --static
-	for(statement in object.loopStatements) {
+	for(statement in object.interations_statements) {
 		printStatements(statement);
 	}
 	//var firstElement = getFirstElement(object.loopStatements);
@@ -194,7 +194,7 @@ operation printFor(object) {
 	out.println("   " + "FOR " + object.counter + " IN " + object.typeCounter + " " + object.lowestNumber + ".." + object.highestNumber);
 	out.println("   " + "LOOP"); --static
 	
-	for(statement in object.forStatements) {
+	for(statement in object.interations_statements) {
 		printStatements(statement);
 	}
 	

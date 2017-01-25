@@ -22,6 +22,7 @@ package crystal;
 public interface Open extends CursorOperations {
 	/**
 	 * Returns the value of the '<em><b>Class Name</b></em>' attribute.
+	 * The default value is <code>"Open"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Name</em>' attribute isn't clear,
@@ -31,7 +32,7 @@ public interface Open extends CursorOperations {
 	 * @return the value of the '<em>Class Name</em>' attribute.
 	 * @see #setClassName(String)
 	 * @see crystal.CrystalPackage#getOpen_ClassName()
-	 * @model
+	 * @model default="Open"
 	 * @generated
 	 */
 	String getClassName();

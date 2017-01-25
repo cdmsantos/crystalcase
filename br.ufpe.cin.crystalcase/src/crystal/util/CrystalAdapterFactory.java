@@ -263,14 +263,6 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 				return createOptionsTransitionAdapter();
 			}
 			@Override
-			public Adapter caseNewEClass39(NewEClass39 object) {
-				return createNewEClass39Adapter();
-			}
-			@Override
-			public Adapter caseNewEClass40(NewEClass40 object) {
-				return createNewEClass40Adapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -805,34 +797,6 @@ public class CrystalAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOptionsTransitionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link crystal.NewEClass39 <em>New EClass39</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see crystal.NewEClass39
-	 * @generated
-	 */
-	public Adapter createNewEClass39Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link crystal.NewEClass40 <em>New EClass40</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see crystal.NewEClass40
-	 * @generated
-	 */
-	public Adapter createNewEClass40Adapter() {
 		return null;
 	}
 

@@ -2103,44 +2103,6 @@ public interface CrystalPackage extends EPackage {
 	int OPTIONS_TRANSITION_FEATURE_COUNT = LINKS_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link crystal.impl.NewEClass39Impl <em>New EClass39</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see crystal.impl.NewEClass39Impl
-	 * @see crystal.impl.CrystalPackageImpl#getNewEClass39()
-	 * @generated
-	 */
-	int NEW_ECLASS39 = 38;
-
-	/**
-	 * The number of structural features of the '<em>New EClass39</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_ECLASS39_FEATURE_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link crystal.impl.NewEClass40Impl <em>New EClass40</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see crystal.impl.NewEClass40Impl
-	 * @see crystal.impl.CrystalPackageImpl#getNewEClass40()
-	 * @generated
-	 */
-	int NEW_ECLASS40 = 39;
-
-	/**
-	 * The number of structural features of the '<em>New EClass40</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_ECLASS40_FEATURE_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link crystal.ParameterType <em>Parameter Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2148,7 +2110,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 40;
+	int PARAMETER_TYPE = 38;
 
 	/**
 	 * The meta object id for the '{@link crystal.ForCounter <em>For Counter</em>}' enum.
@@ -2158,7 +2120,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getForCounter()
 	 * @generated
 	 */
-	int FOR_COUNTER = 41;
+	int FOR_COUNTER = 39;
 
 	/**
 	 * The meta object id for the '{@link crystal.DataTypeOptions <em>Data Type Options</em>}' enum.
@@ -2168,7 +2130,7 @@ public interface CrystalPackage extends EPackage {
 	 * @see crystal.impl.CrystalPackageImpl#getDataTypeOptions()
 	 * @generated
 	 */
-	int DATA_TYPE_OPTIONS = 42;
+	int DATA_TYPE_OPTIONS = 40;
 
 
 	/**
@@ -3257,26 +3219,6 @@ public interface CrystalPackage extends EPackage {
 	EReference getOptionsTransition_Target();
 
 	/**
-	 * Returns the meta object for class '{@link crystal.NewEClass39 <em>New EClass39</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>New EClass39</em>'.
-	 * @see crystal.NewEClass39
-	 * @generated
-	 */
-	EClass getNewEClass39();
-
-	/**
-	 * Returns the meta object for class '{@link crystal.NewEClass40 <em>New EClass40</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>New EClass40</em>'.
-	 * @see crystal.NewEClass40
-	 * @generated
-	 */
-	EClass getNewEClass40();
-
-	/**
 	 * Returns the meta object for class '{@link crystal.Expression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4249,26 +4191,6 @@ public interface CrystalPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPTIONS_TRANSITION__TARGET = eINSTANCE.getOptionsTransition_Target();
-
-		/**
-		 * The meta object literal for the '{@link crystal.impl.NewEClass39Impl <em>New EClass39</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see crystal.impl.NewEClass39Impl
-		 * @see crystal.impl.CrystalPackageImpl#getNewEClass39()
-		 * @generated
-		 */
-		EClass NEW_ECLASS39 = eINSTANCE.getNewEClass39();
-
-		/**
-		 * The meta object literal for the '{@link crystal.impl.NewEClass40Impl <em>New EClass40</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see crystal.impl.NewEClass40Impl
-		 * @see crystal.impl.CrystalPackageImpl#getNewEClass40()
-		 * @generated
-		 */
-		EClass NEW_ECLASS40 = eINSTANCE.getNewEClass40();
 
 		/**
 		 * The meta object literal for the '{@link crystal.impl.ExpressionImpl <em>Expression</em>}' class.

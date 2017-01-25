@@ -387,18 +387,6 @@ public class CrystalSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CrystalPackage.NEW_ECLASS39: {
-				NewEClass39 newEClass39 = (NewEClass39)theEObject;
-				T result = caseNewEClass39(newEClass39);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CrystalPackage.NEW_ECLASS40: {
-				NewEClass40 newEClass40 = (NewEClass40)theEObject;
-				T result = caseNewEClass40(newEClass40);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -955,36 +943,6 @@ public class CrystalSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOptionsTransition(OptionsTransition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>New EClass39</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New EClass39</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNewEClass39(NewEClass39 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>New EClass40</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New EClass40</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNewEClass40(NewEClass40 object) {
 		return null;
 	}
 
