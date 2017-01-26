@@ -108,9 +108,12 @@ operation printDeclarativePart(object) {
 				out.println("   " + declaration.name + " " + declaration.options + ";");
 			} else if(declaration.className == "Cursor") {
 				out.println("   " + "CURSOR " + declaration.name + " IS " + declaration.cursorQuery + ";");
-			} else {
-				out.println("   " + declaration.code + ";"); //Collections and Records
-				out.println("   " + declaration.name + " " + declaration.typeName + ";");
+			} else if(declaration.className == "Records") {
+				out.println("   " + declaration.name + " " + declaration.typeName + "%rowtype;");
+			} 
+			else {
+				out.println("   TYPE " + declaration.typeName + " " + declaration.code + ";");
+				out.println("   " + declaration.name + " " + declaration.typeName + ";"); //Collections
 			}
 		}
 	}
@@ -131,78 +134,63 @@ operation printElementsByTransition(object) {
 }
 
 operation printCase(object) {
-	out.println("   " + "CASE");
-	for(selector in object.cases){
-		out.println("      " + "WHEN " + selector.condition + " THEN ");
-		for(statement in object.caseStatements) {
+	out.println("      " + "CASE");
+	for(option in object.options){
+		out.println("         " + "WHEN " + option.condition + " THEN ");
+		for(statement in option.case_statements) {
 			printStatements(statement);
 		}
-		//var firstElement = getFirstElement(selector.caseStatements);
-		//out.println(selector);
-		//printStatements(firstElement);
-		//printElementsByTransition(firstElement);
 	}
-	out.println("   " + "END;");
+	if(not isEmpty(object.default_statements)) {
+		out.println("      " + "ELSE"); --static
+		for(statement in object.default_statements) {
+			printStatements(statement);
+		}
+	}
+	out.println("      " + "END;");
 }
 
 operation printIf(object) {
-	out.println("   " + "IF " + object.condition + " THEN");
+	out.println("      " + "IF " + object.condition + " THEN");
 	for(statement in object.true_statements) {
 		printStatements(statement);
 	}
-	//var firstElement = getFirstElement(object.ifs);
-	//printStatements(firstElement);
-	//printElementsByTransition(firstElement);
 	if(not isEmpty(object.false_statements)) {
-		out.println("   " + "ELSE"); --static
+		out.println("      " + "ELSE"); --static
 		for(statement in object.false_statements) {
 			printStatements(statement);
 		}
-		//var firstElement = getFirstElement(object.elses);
-		//printStatements(firstElement);
-		//printElementsByTransition(firstElement);
 	}
-	out.println("   " + "END IF;"); --static
+	out.println("      " + "END IF;"); --static
 }
 
 operation printWhile(object) {
-	out.println("   " + "WHILE " + object.condition);
-	out.println("   " + "LOOP");
+	out.println("      " + "WHILE " + object.condition);
+	out.println("      " + "LOOP");
 	for(statement in object.interations_statements) {
 		printStatements(statement);
 	}
-	//var firstElement = getFirstElement(object.whileStatements);
-	//printStatements(firstElement);
-	//printElementsByTransition(firstElement);
 	
-	out.println("   " + "END LOOP;"); --static
+	out.println("      " + "END LOOP;"); --static
 }
 
 operation printLoop(object) {
-	out.println("   " + "LOOP"); --static
+	out.println("      " + "LOOP"); --static
 	for(statement in object.interations_statements) {
 		printStatements(statement);
 	}
-	//var firstElement = getFirstElement(object.loopStatements);
-	//printStatements(firstElement);
-	//printElementsByTransition(firstElement);
-	out.println("   " + "EXIT WHEN " + object.breakCondition + ";");
-	out.println("   " + "END LOOP;"); --static
+	out.println("      " + "EXIT WHEN " + object.breakCondition + ";");
+	out.println("      " + "END LOOP;"); --static
 }
 
 operation printFor(object) {
-	out.println("   " + "FOR " + object.counter + " IN " + object.typeCounter + " " + object.lowestNumber + ".." + object.highestNumber);
-	out.println("   " + "LOOP"); --static
+	out.println("      " + "FOR " + object.counter + " IN " + object.typeCounter + " " + object.lowestNumber + ".." + object.highestNumber);
+	out.println("      " + "LOOP"); --static
 	
 	for(statement in object.interations_statements) {
 		printStatements(statement);
 	}
-	
-	//var firstElement = getFirstElement(object.forStatements);
-	//printStatements(firstElement);
-	//printElementsByTransition(firstElement);
-	
-	out.println("   " + "END LOOP;"); --static
+	out.println("      " + "END LOOP;"); --static
 }
 
 operation printStatements(object) {
@@ -225,9 +213,7 @@ operation printStatements(object) {
 			out.println("      " + "FETCH " + object.cursorName + " INTO " + object.variableName + ";");
 		} else if(object.className == "Close") {
 			out.println("      " + "CLOSE " + object.cursorName + ";");
-		} else if (object.className == "Selector") {
-			out.println("SELECTOR"); 
-		} else if (object.className == "Expression") {
+		}else if (object.className == "Expression") {
 			out.println("      " + object.value); 
 		} else {
 			out.println("      " + object.code + ";");	
