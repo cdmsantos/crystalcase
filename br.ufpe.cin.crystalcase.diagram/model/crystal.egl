@@ -29,6 +29,8 @@ for(element in Procedure.allInstances()) {
 	
 	out.println("AS"); --static
 
+	out.println("DECLARE"); --static
+
 	//DECLARAÇÃO DE VARIÁVEIS
 	printDeclarativePart(element);
 	
@@ -58,9 +60,11 @@ for(element in Function.allInstances()) {
 		for(backStatement in element.returnPart) {
 			returnStatement = backStatement;
 			out.println("RETURN " + backStatement.options);
-			out.println("IS " + backStatement.name + " " + backStatement.options + ";");
+			out.println("   IS " + backStatement.name + " " + backStatement.options + ";");
 		}
 	}
+	
+	out.println("DECLARE"); --static
 	
 	//DECLARAÇÃO DE VARIÁVEIS
 	printDeclarativePart(element);
@@ -109,11 +113,11 @@ operation printDeclarativePart(object) {
 			} else if(declaration.className == "Cursor") {
 				out.println("   " + "CURSOR " + declaration.name + " IS " + declaration.cursorQuery + ";");
 			} else if(declaration.className == "Records") {
-				out.println("   " + declaration.name + " " + declaration.typeName + "%rowtype;");
+				out.println("   " + declaration.name + " " + declaration.typeName + "%rowtype; --Record");
 			} 
 			else {
-				out.println("   TYPE " + declaration.typeName + " " + declaration.code + ";");
-				out.println("   " + declaration.name + " " + declaration.typeName + ";"); //Collections
+				out.println("   TYPE " + declaration.typeName + " " + declaration.code + "; --Collection");
+				out.println("   " + declaration.name + " " + declaration.typeName + "; --Collection"); //Collections
 			}
 		}
 	}
@@ -127,9 +131,15 @@ operation printElementsByTransition(object) {
 			element = object.getNext();
 			i = 1;
 		} else{
-			element = element.first().getNext();
+			if(not element.isEmpty()){
+				element = element.first().getNext();
+			} else {
+				i = 2;
+			}
 		}
-		printStatements(element.first());
+		if(i <> 2) {
+			printStatements(element.first());
+		}
 	}
 }
 
@@ -213,9 +223,11 @@ operation printStatements(object) {
 			out.println("      " + "FETCH " + object.cursorName + " INTO " + object.variableName + ";");
 		} else if(object.className == "Close") {
 			out.println("      " + "CLOSE " + object.cursorName + ";");
-		}else if (object.className == "Expression") {
-			out.println("      " + object.value); 
-		} else {
+		}else if (object.className == "Exception") {
+			out.println("      EXCEPTION " + object.code + ";"); 
+		} else if(object.className == "Expression") {
+			out.println("      " + object.value + ";"); 
+		}else {
 			out.println("      " + object.code + ";");	
 		}
 	}
